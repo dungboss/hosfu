@@ -6,25 +6,25 @@
         "hero_check_1": {
           "type": "hero_check",
           "settings": {
-            "text": "Supports daily pelvic floor activation in just 20 minutes."
+            "text": "4 training modes for a guided at-home routine."
           }
         },
         "hero_check_2": {
           "type": "hero_check",
           "settings": {
-            "text": "Helps you feel more prepared for coughs, laughs, workouts, and long days."
+            "text": "Rechargeable design with convenient Type-C charging."
           }
         },
         "hero_check_3": {
           "type": "hero_check",
           "settings": {
-            "text": "Built for comfort-first use at home, even on busy schedules."
+            "text": "Compact, private, and easy to use at home."
           }
         },
         "hero_check_4": {
           "type": "hero_check",
           "settings": {
-            "text": "Easy to pair with your usual reset, stretch, or recovery routine."
+            "text": "Built for repeatable sessions instead of guesswork."
           }
         },
         "featured_logo_1": {
@@ -60,43 +60,43 @@
         "problem_note_1": {
           "type": "problem_note",
           "settings": {
-            "text": "Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel connected to your deep core and pelvic floor."
+            "text": "Long desk hours, stress, aging, inconsistent training, and poor body awareness can all make pelvic floor activation harder to feel."
           }
         },
         "problem_note_2": {
           "type": "problem_note",
           "settings": {
-            "text": "When those building blocks are missing, women often notice less confidence during movement, exercise, or sudden pressure moments like laughing and sneezing."
+            "text": "When these muscles are ignored, men may notice less control, weaker connection, and less confidence during workouts or daily life."
           }
         },
         "problem_note_3": {
           "type": "problem_note",
           "settings": {
-            "text": "A gentler, guided rhythm can be easier to stick with than trying to force results from willpower alone."
+            "text": "A structured device-led routine can be easier to repeat than trying to remember isolated exercises on your own."
           }
         },
         "intro_side_1": {
           "type": "intro_side_feature",
           "settings": {
             "badge": "1",
-            "heading": "At-home friendly",
-            "text": "Quiet, compact, and made to fit into a routine you can actually repeat."
+            "heading": "4-mode training",
+            "text": "Switch between modes to find a rhythm that feels manageable and consistent."
           }
         },
         "intro_side_2": {
           "type": "intro_side_feature",
           "settings": {
             "badge": "2",
-            "heading": "Comfort-first rhythm",
-            "text": "Built to feel approachable, even if you've struggled to stay consistent before."
+            "heading": "Recharge and repeat",
+            "text": "Type-C charging makes it easy to keep ready for regular home sessions."
           }
         },
         "intro_feature_a": {
           "type": "intro_feature",
           "settings": {
             "badge": "A",
-            "heading": "Guided consistency",
-            "text": "Turns pelvic floor work into a repeatable routine instead of a guesswork reminder."
+            "heading": "Male-focused routine",
+            "text": "Built for men who want a more direct and repeatable pelvic floor exercise habit."
           }
         },
         "intro_feature_b": {
@@ -104,119 +104,119 @@
           "settings": {
             "badge": "B",
             "heading": "Home-based privacy",
-            "text": "Use it on your own schedule, without needing a clinic visit to get started."
+            "text": "Train on your own schedule without appointments or complicated setup."
           }
         },
         "intro_feature_c": {
           "type": "intro_feature",
           "settings": {
             "badge": "C",
-            "heading": "Gentle daily support",
-            "text": "Easy to pair with recovery, stretching, breathwork, or a simple evening reset."
+            "heading": "Rechargeable design",
+            "text": "Type-C charging helps keep the device ready when you want to use it."
           }
         },
         "intro_feature_d": {
           "type": "intro_feature",
           "settings": {
             "badge": "D",
-            "heading": "Confidence that compounds",
-            "text": "Small, repeated sessions help you build momentum you can actually feel over time."
+            "heading": "Consistency over guesswork",
+            "text": "Four modes give you a clearer routine than trying to wing it."
           }
         },
         "expect_1": {
           "type": "expect_card",
           "settings": {
             "kicker": "Week 1",
-            "heading": "Reconnect with the routine",
-            "text": "Short sessions help you build awareness and make the habit feel easy to repeat."
+            "heading": "Get familiar with the device",
+            "text": "Start short sessions and learn which mode and rhythm feel right for you."
           }
         },
         "expect_2": {
           "type": "expect_card",
           "settings": {
             "kicker": "Week 2",
-            "heading": "Feel steadier through the day",
-            "text": "Consistency starts turning into better control during movement, errands, and workdays."
+            "heading": "Build a repeatable habit",
+            "text": "Regular use helps the routine feel easier to fit into mornings or evenings."
           }
         },
         "expect_3": {
           "type": "expect_card",
           "settings": {
             "kicker": "Week 4+",
-            "heading": "Build confidence you can trust",
-            "text": "Many women notice the biggest shift when they stop skipping the routine and start stacking wins."
+            "heading": "Notice better awareness and control",
+            "text": "Consistency is where most users start to feel the biggest shift."
           }
         },
         "result_1": {
           "type": "result_metric",
           "settings": {
-            "text": "Feel more supported during daily pressure moments like coughing or laughing."
+            "text": "Supports stronger awareness of pelvic floor activation."
           }
         },
         "result_2": {
           "type": "result_metric",
           "settings": {
-            "text": "Improve body awareness so consistency feels easier and less forced."
+            "text": "Helps build a more consistent at-home training habit."
           }
         },
         "result_3": {
           "type": "result_metric",
           "settings": {
-            "text": "Pair better with movement, posture work, walking, and gentle strength training."
+            "text": "Fits alongside workouts, recovery, and daily routines."
           }
         },
         "result_4": {
           "type": "result_metric",
           "settings": {
-            "text": "Build quiet confidence from the comfort and privacy of home."
+            "text": "Designed for private use with compact rechargeable convenience."
           }
         },
         "journey_1": {
           "type": "journey_card",
           "settings": {
             "kicker": "10 min",
-            "heading": "Wake up your deep core",
-            "text": "Start with a short routine that helps you reconnect with the muscles most women lose track of first."
+            "heading": "Set up and start",
+            "text": "Choose your mode, get comfortable, and begin a short focused session."
           }
         },
         "journey_2": {
           "type": "journey_card",
           "settings": {
             "kicker": "15 min",
-            "heading": "Build steadier control",
-            "text": "Consistency starts showing up in errands, workouts, and the little moments where support matters most."
+            "heading": "Stay consistent",
+            "text": "Make it part of a repeatable home routine instead of something you keep putting off."
           }
         },
         "journey_3": {
           "type": "journey_card",
           "settings": {
             "kicker": "20 min",
-            "heading": "Move with confidence",
-            "text": "Stack small sessions over time and give yourself a more supported, less stressful day-to-day rhythm."
+            "heading": "Stack better sessions",
+            "text": "Small sessions done regularly are usually more useful than occasional all-or-nothing effort."
           }
         },
         "testimonial_1": {
           "type": "testimonial",
           "settings": {
             "meta": "Verified customer",
-            "heading": "\"I finally felt supported again.\"",
-            "text": "\"I wanted something I could use privately, consistently, and without overthinking it. This made the routine feel manageable, and that changed everything.\""
+            "heading": "\"I finally had a routine I could follow.\"",
+            "text": "\"I had tried doing pelvic floor work on my own, but this gave me a more structured way to stay consistent at home.\""
           }
         },
         "testimonial_2": {
           "type": "testimonial",
           "settings": {
             "meta": "Verified customer",
-            "heading": "\"I can laugh harder and worry less.\"",
-            "text": "\"The biggest shift wasn't overnight. It was realizing that 20 minutes a day was finally something I could keep doing.\""
+            "heading": "\"Simple enough to keep using.\"",
+            "text": "\"The biggest difference was how manageable it felt. I could fit it into my evenings without turning it into a big project.\""
           }
         },
         "testimonial_3": {
           "type": "testimonial",
           "settings": {
             "meta": "Verified customer",
-            "heading": "\"The routine finally clicked.\"",
-            "text": "\"I had tried to piece everything together on my own. This made the process feel clear, calm, and worth sticking with.\""
+            "heading": "\"It made the process clearer.\"",
+            "text": "\"The device and modes gave me more structure than trying to guess my way through exercises on my own.\""
           }
         }
       },
@@ -257,8 +257,34 @@
         "padding_top": 28,
         "padding_bottom": 44,
         "hero_eyebrow": "",
+        "hero_heading": "4-mode rechargeable pelvic floor training for men who want better control.",
+        "hero_lead": "Built for men who want a guided at-home routine for pelvic floor training. Four modes, Type-C charging, and repeatable sessions make it easier to stay consistent without complicated setup.",
+        "hero_primary_label": "Start my training routine",
+        "hero_primary_link": "#MainProduct-offer_main",
+        "hero_secondary_label": "See how it works",
+        "hero_secondary_link": "#epf-what-to-expect",
+        "hero_proof_copy": "4.8/5 from customers using simple home sessions to build better awareness, control, and consistency.",
         "featured_image_url": "https://cdn.shopify.com/s/files/1/0738/4645/6536/files/gempages_556819636071433409-eee4c20b-012f-40cc-bfcb-d24ebfbfbe76.jpg?width=2183",
         "featured_image_alt": "As seen in logos",
+        "featured_label": "As seen in",
+        "problem_heading": "Pelvic Floor Training Gets Ignored Until Control Starts Slipping.",
+        "problem_body": "Many men focus on abs, cardio, and strength, but rarely train the muscles that support bladder control, core stability, and everyday confidence. Consistency matters more than intensity.",
+        "problem_bar_label_1": "Control",
+        "problem_bar_label_2": "Stamina",
+        "problem_bar_label_3": "Confidence",
+        "problem_tendon_heading": "Targeted muscle training",
+        "problem_tendon_copy": "Short, repeatable sessions help you build awareness, control, and routine around muscles most men never train directly.",
+        "intro_heading": "Meet the 4-mode rechargeable men's trainer",
+        "intro_body": "This home-use trainer gives men a more structured way to work pelvic floor muscles with four modes, rechargeable power, and a routine that fits into real schedules.",
+        "expect_heading": "What to Expect",
+        "expect_cta_label": "Start your training routine",
+        "expect_cta_link": "#MainProduct-offer_main",
+        "results_heading": "Why Men Use It",
+        "results_body": "The goal is a practical routine you can keep doing: better awareness, more control, and more confidence during workouts, long drives, desk days, and everyday life.",
+        "journey_heading": "A Simple Routine You Can Actually Stick To",
+        "journey_cta_label": "See common questions",
+        "journey_cta_link": "#epf-questions",
+        "testimonials_heading": "Men Like You Are Building Better Control",
         "hero_chip_top": "",
         "hero_chip_bottom": ""
       }
@@ -269,7 +295,7 @@
         "package_badge": {
           "type": "custombannertext",
           "settings": {
-            "customerbannertext": "Complete At-Home Package",
+            "customerbannertext": "Men's At-Home Pelvic Floor Trainer",
             "backgroundcustomerbannertext": "#8d184d",
             "colorcustomerbannertext": "#ffffff",
             "fontsizecustomerbannertext": 14,
@@ -298,7 +324,7 @@
             "star_color": "#ffcc00",
             "bg_stars_style": "full",
             "bg_star_color": "#ececec",
-            "label": "(Loved by women rebuilding confidence at home)",
+            "label": "(Trusted by men building better control at home)",
             "size": 15,
             "alignment": "flex-start",
             "scroll_id": "",
@@ -342,11 +368,11 @@
         "benefits": {
           "type": "key-benefits",
           "settings": {
-            "key1": "Quiet, guided pelvic floor support",
-            "key2": "Comfort-first design for home use",
-            "key3": "Great for postpartum or busy routines",
+            "key1": "4 training modes for guided sessions",
+            "key2": "Rechargeable with Type-C charging",
+            "key3": "Compact design for discreet home use",
             "key4": "Discreet shipping and easy storage",
-            "key5": "Pairs naturally with your daily reset",
+            "key5": "Easy to fit into workouts or recovery",
             "checkmarkcolorbackground": "#f8eee8",
             "checkmarkcolor": "#8d184d",
             "keybenefitsborderradius": 14,
@@ -364,7 +390,7 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "atc_custom_label": "Lock In Your Routine",
+            "atc_custom_label": "Start My Training Routine",
             "display_price": false,
             "price_position": "left",
             "price_separator": "|",
@@ -424,7 +450,7 @@
             "custom_btn_color": "#8d184d",
             "color_scheme": "background-1",
             "star_color": "#ffcc00",
-            "stars_label": "(Trusted by women)",
+            "stars_label": "(Trusted by men)",
             "picker_type": "combined",
             "desktop_show_image": true,
             "desktop_show_title": true,
@@ -525,8 +551,8 @@
           "type": "support_point",
           "settings": {
             "icon_text": "✓",
-            "title": "Postpartum-friendly mindset",
-            "text": "Designed around gentler, consistency-first use instead of intensity."
+            "title": "4-mode guided training",
+            "text": "Built around repeatable home sessions instead of guesswork."
           }
         },
         "support_point_3": {
@@ -541,15 +567,15 @@
           "type": "support_point",
           "settings": {
             "icon_text": "✓",
-            "title": "Made for real schedules",
-            "text": "Simple 20-minute sessions that fit mornings, evenings, or reset windows."
+            "title": "Rechargeable and ready",
+            "text": "Type-C charging makes it easier to keep the device ready for regular use."
           }
         },
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "I've tried Kegels before. How is this different?",
-            "answer": "Most women don't need more reminders. They need a routine that feels easier to repeat. [product_title] is designed to make the habit feel more approachable, structured, and realistic at home.",
+            "question": "How is this different from doing Kegels on my own?",
+            "answer": "Many men struggle with consistency because the routine feels vague. [product_title] gives you a more structured, device-led way to build a repeatable home habit.",
             "open_by_default": false
           }
         },
@@ -564,8 +590,8 @@
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use it after childbirth?",
-            "answer": "Many women look for pelvic floor support after childbirth, but recovery is personal. If you're postpartum, we recommend following your provider's guidance on when to begin any new routine.",
+            "question": "Who is this trainer designed for?",
+            "answer": "This product is positioned for men who want a private at-home pelvic floor training routine with guided modes and rechargeable convenience.",
             "open_by_default": false
           }
         },
@@ -580,16 +606,16 @@
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "question": "Will it be discreet?",
-            "answer": "Yes. The routine is designed for private, at-home use, and orders are shipped discreetly so you can start without extra friction.",
+            "question": "Is it rechargeable?",
+            "answer": "Yes. It uses Type-C charging, so it's easy to power up and keep ready for regular sessions at home.",
             "open_by_default": false
           }
         },
         "faq_6": {
           "type": "faq_item",
           "settings": {
-            "question": "What if I've felt disconnected from this area for years?",
-            "answer": "That's exactly why consistency-first routines matter. Many women aren't starting from a lack of effort. They're starting from a lack of clarity, structure, and support.",
+            "question": "Will it be discreet?",
+            "answer": "Yes. The device is intended for private home use, and discreet shipping helps reduce extra friction when getting started.",
             "open_by_default": false
           }
         },
@@ -615,7 +641,7 @@
             "stars": "★★★★★",
             "title": "\"It finally felt easy to stay consistent.\"",
             "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
-            "author": "Maria L.",
+            "author": "Mark T.",
             "meta": "Verified customer"
           }
         },
@@ -625,7 +651,7 @@
             "stars": "★★★★★",
             "title": "\"I feel calmer and more in control.\"",
             "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
-            "author": "Angela R.",
+            "author": "Jason R.",
             "meta": "Verified customer"
           }
         },
@@ -635,7 +661,7 @@
             "stars": "★★★★★",
             "title": "\"Private, simple, and actually realistic.\"",
             "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
-            "author": "Denise T.",
+            "author": "Daniel S.",
             "meta": "Verified customer"
           }
         }
@@ -660,8 +686,10 @@
       "settings": {
         "padding_top": 24,
         "padding_bottom": 48,
-        "reviews_heading": "Reviews from Women Like You",
-        "reviews_description": "Real words from women building steadier routines and more everyday confidence with [product_title]."
+        "faq_heading": "Questions Men Ask Before Starting",
+        "faq_description": "Short answers to common questions men ask before starting a home pelvic floor training routine.",
+        "reviews_heading": "Reviews from Men Like You",
+        "reviews_description": "Real words from men using [product_title] to build a steadier, more consistent home routine."
       }
     }
   },
