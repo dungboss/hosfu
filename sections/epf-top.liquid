@@ -1,0 +1,1037 @@
+{% liquid
+  assign product_media = product.featured_media
+  assign product_image = section.settings.product_image
+  if product_image == blank and product_media != blank
+    assign product_image = product_media.preview_image
+  endif
+%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --epf-top-bg: #f7f8fb;
+    --epf-top-card: #ffffff;
+    --epf-top-line: rgba(22, 35, 58, 0.12);
+    --epf-top-text: #16233a;
+    --epf-top-muted: #5e697d;
+    --epf-top-blue: #2459c8;
+    --epf-top-blue-dark: #173d98;
+    --epf-top-gold: #ca9d2f;
+    --epf-top-green: #1f8c57;
+    --epf-top-red: #cf5f5f;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+    background: linear-gradient(180deg, #ffffff 0%, var(--epf-top-bg) 100%);
+    color: var(--epf-top-text);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__shell {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__hero {
+    padding: 2rem;
+    border: 1px solid var(--epf-top-line);
+    border-radius: 2.8rem;
+    background: var(--epf-top-card);
+    box-shadow: 0 18px 38px rgba(22, 35, 58, 0.08);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: rgba(36, 89, 200, 0.1);
+    color: var(--epf-top-blue-dark);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__headline {
+    margin: 1.1rem auto 0;
+    max-width: 82rem;
+    font-family: var(--font-heading-family);
+    font-size: clamp(3rem, 5vw, 5.6rem);
+    line-height: 1.03;
+    letter-spacing: -0.03em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__lead {
+    margin: 1.1rem auto 0;
+    max-width: 70rem;
+    font-size: 1.55rem;
+    line-height: 1.75;
+    color: var(--epf-top-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 3.8rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    border: 1px solid var(--epf-top-line);
+    background: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 28rem) minmax(0, 1fr);
+    gap: 1.4rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro-media,
+  #shopify-section-{{ section.id }} .epf-top__podium-media,
+  #shopify-section-{{ section.id }} .epf-top__rank-media {
+    border-radius: 2rem;
+    overflow: hidden;
+    background: #eef2f8;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro-media img,
+  #shopify-section-{{ section.id }} .epf-top__podium-media img,
+  #shopify-section-{{ section.id }} .epf-top__rank-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro-copy {
+    text-align: left;
+    padding: 1.6rem;
+    border: 1px solid var(--epf-top-line);
+    border-radius: 2.2rem;
+    background: #fff;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro-copy h2,
+  #shopify-section-{{ section.id }} .epf-top__section-title {
+    margin: 0;
+    font-family: var(--font-heading-family);
+    font-size: clamp(2.2rem, 3vw, 3.4rem);
+    line-height: 1.08;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__intro-copy p,
+  #shopify-section-{{ section.id }} .epf-top__rank-copy,
+  #shopify-section-{{ section.id }} .epf-top__compare-value,
+  #shopify-section-{{ section.id }} .epf-top__disclaimer,
+  #shopify-section-{{ section.id }} .epf-top__cta-text {
+    margin: 0.95rem 0 0;
+    font-size: 1.45rem;
+    line-height: 1.72;
+    color: var(--epf-top-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium-card,
+  #shopify-section-{{ section.id }} .epf-top__rank-card,
+  #shopify-section-{{ section.id }} .epf-top__compare,
+  #shopify-section-{{ section.id }} .epf-top__cta {
+    border: 1px solid var(--epf-top-line);
+    border-radius: 2.6rem;
+    background: var(--epf-top-card);
+    box-shadow: 0 18px 38px rgba(22, 35, 58, 0.06);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium-card {
+    padding: 1.4rem;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium-card--best,
+  #shopify-section-{{ section.id }} .epf-top__rank-card--best {
+    border-color: rgba(202, 157, 47, 0.38);
+    background: linear-gradient(180deg, rgba(202, 157, 47, 0.08) 0%, #ffffff 32%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__rank,
+  #shopify-section-{{ section.id }} .epf-top__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: 0.4rem 0.95rem;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__rank {
+    background: rgba(36, 89, 200, 0.1);
+    color: var(--epf-top-blue-dark);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__badge {
+    background: rgba(202, 157, 47, 0.12);
+    color: #8e6813;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium-title,
+  #shopify-section-{{ section.id }} .epf-top__rank-title {
+    margin: 1rem 0 0;
+    font-family: var(--font-heading-family);
+    line-height: 1.1;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__podium-title {
+    font-size: clamp(2rem, 2.6vw, 2.8rem);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__rank-title {
+    font-size: clamp(2.2rem, 2.8vw, 3.2rem);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__score,
+  #shopify-section-{{ section.id }} .epf-top__grade {
+    margin-top: 0.8rem;
+    font-weight: 900;
+    color: var(--epf-top-blue-dark);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__score {
+    font-size: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__grade {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7.6rem;
+    min-height: 7.6rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, var(--epf-top-blue) 0%, var(--epf-top-blue-dark) 100%);
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__ranks {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__rank-card {
+    display: grid;
+    grid-template-columns: 24rem minmax(0, 1fr) 9rem;
+    gap: 1.4rem;
+    align-items: start;
+    padding: 1.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__rank-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__proscons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list-box {
+    padding: 1.2rem;
+    border-radius: 1.8rem;
+    background: #f7f8fb;
+    border: 1px solid var(--epf-top-line);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list-box h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list-box--pros h4 {
+    color: var(--epf-top-green);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list-box--cons h4 {
+    color: var(--epf-top-red);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list {
+    list-style: none;
+    padding: 0;
+    margin: 0.85rem 0 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 1.32rem;
+    line-height: 1.58;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    margin-top: 0.05rem;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__bullet--pros {
+    background: rgba(31, 140, 87, 0.12);
+    color: var(--epf-top-green);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__bullet--cons {
+    background: rgba(207, 95, 95, 0.12);
+    color: var(--epf-top-red);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.6rem;
+    padding: 0 1.5rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--epf-top-green) 0%, #167345 100%);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1.14rem;
+    font-weight: 800;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__compare {
+    margin-top: 2rem;
+    padding: 1.6rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__compare-grid {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.3rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__compare-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 1.8rem;
+    background: #f7f8fb;
+    border: 1px solid var(--epf-top-line);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__compare-row > div {
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__compare-feature {
+    font-weight: 800;
+    color: var(--epf-top-text);
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__cta {
+    margin-top: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-top__disclaimer {
+    margin-top: 1.6rem;
+    text-align: center;
+    font-size: 1.18rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .epf-top {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .epf-top__intro,
+    #shopify-section-{{ section.id }} .epf-top__podium,
+    #shopify-section-{{ section.id }} .epf-top__rank-card,
+    #shopify-section-{{ section.id }} .epf-top__compare-row,
+    #shopify-section-{{ section.id }} .epf-top__proscons {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-top__hero,
+    #shopify-section-{{ section.id }} .epf-top__podium-card,
+    #shopify-section-{{ section.id }} .epf-top__rank-card,
+    #shopify-section-{{ section.id }} .epf-top__compare,
+    #shopify-section-{{ section.id }} .epf-top__cta {
+      padding: 1.35rem;
+      border-radius: 2rem;
+    }
+  }
+{%- endstyle -%}
+
+<section class="epf-top">
+  <div class="page-width epf-top__shell">
+    <div class="epf-top__hero">
+      {% if section.settings.eyebrow != blank %}
+        <div class="epf-top__eyebrow">{{ section.settings.eyebrow | replace: '[product_title]', product.title }}</div>
+      {% endif %}
+
+      <h1 class="epf-top__headline">{{ section.settings.headline | replace: '[product_title]', product.title }}</h1>
+
+      {% if section.settings.lead != blank %}
+        <div class="epf-top__lead">{{ section.settings.lead | replace: '[product_title]', product.title | newline_to_br }}</div>
+      {% endif %}
+
+      <div class="epf-top__chips">
+        {% if section.settings.top_chip_1 != blank %}
+          <span class="epf-top__chip">{{ section.settings.top_chip_1 | replace: '[product_title]', product.title }}</span>
+        {% endif %}
+        {% if section.settings.top_chip_2 != blank %}
+          <span class="epf-top__chip">{{ section.settings.top_chip_2 | replace: '[product_title]', product.title }}</span>
+        {% endif %}
+        {% if section.settings.top_chip_3 != blank %}
+          <span class="epf-top__chip">{{ section.settings.top_chip_3 | replace: '[product_title]', product.title }}</span>
+        {% endif %}
+      </div>
+
+      <div class="epf-top__intro">
+        <div class="epf-top__intro-media">
+          {% if product_image != blank %}
+            {{
+              product_image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                widths: '320, 480, 640, 900',
+                sizes: '(min-width: 990px) 28rem, 92vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-top__placeholder' }}
+          {% endif %}
+        </div>
+
+        <div class="epf-top__intro-copy">
+          {% if section.settings.intro_heading != blank %}
+            <h2>{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+          {% endif %}
+          {% if section.settings.intro_copy != blank %}
+            <p>{{ section.settings.intro_copy | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="epf-top__podium">
+      {% for block in section.blocks %}
+        {% if block.type == 'podium_item' %}
+          {% assign block_image = block.settings.image %}
+          {% if block.settings.use_product_image and product_image != blank %}
+            {% assign block_image = product_image %}
+          {% endif %}
+          <div class="epf-top__podium-card{% if block.settings.highlight %} epf-top__podium-card--best{% endif %}" {{ block.shopify_attributes }}>
+            {% if block.settings.rank != blank %}
+              <span class="epf-top__rank">{{ block.settings.rank }}</span>
+            {% endif %}
+            <div class="epf-top__podium-media">
+              {% if block_image != blank %}
+                {{
+                  block_image
+                  | image_url: width: 700
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '240, 360, 540, 700',
+                    sizes: '(min-width: 990px) 30vw, 92vw',
+                    alt: block.settings.title
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'epf-top__placeholder' }}
+              {% endif %}
+            </div>
+            {% if block.settings.label != blank %}
+              <div class="epf-top__badge">{{ block.settings.label | replace: '[product_title]', product.title }}</div>
+            {% endif %}
+            <h2 class="epf-top__podium-title">{{ block.settings.title | replace: '[product_title]', product.title }}</h2>
+            {% if block.settings.score != blank %}
+              <div class="epf-top__score">{{ block.settings.score }}</div>
+            {% endif %}
+            {% if block.settings.note != blank %}
+              <div class="epf-top__rank-copy">{{ block.settings.note | replace: '[product_title]', product.title | newline_to_br }}</div>
+            {% endif %}
+            {% if block.settings.button_label != blank %}
+              <div style="margin-top: 1rem;">
+                <a class="epf-top__button" href="{{ block.settings.button_link | default: '#MainProduct-offer_main' }}">
+                  {{ block.settings.button_label | replace: '[product_title]', product.title }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="epf-top__ranks">
+      {% for block in section.blocks %}
+        {% if block.type == 'ranked_product' %}
+          {% assign block_image = block.settings.image %}
+          {% if block.settings.use_product_image and product_image != blank %}
+            {% assign block_image = product_image %}
+          {% endif %}
+          <div class="epf-top__rank-card{% if block.settings.highlight %} epf-top__rank-card--best{% endif %}" {{ block.shopify_attributes }}>
+            <div class="epf-top__rank-media">
+              {% if block_image != blank %}
+                {{
+                  block_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '280, 420, 640, 800',
+                    sizes: '(min-width: 990px) 24rem, 92vw',
+                    alt: block.settings.title
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'epf-top__placeholder' }}
+              {% endif %}
+            </div>
+
+            <div>
+              <div class="epf-top__rank-head">
+                {% if block.settings.rank != blank %}
+                  <span class="epf-top__rank">{{ block.settings.rank | replace: '[product_title]', product.title }}</span>
+                {% endif %}
+                {% if block.settings.badge != blank %}
+                  <span class="epf-top__badge">{{ block.settings.badge | replace: '[product_title]', product.title }}</span>
+                {% endif %}
+              </div>
+
+              <h2 class="epf-top__rank-title">{{ block.settings.title | replace: '[product_title]', product.title }}</h2>
+
+              {% if block.settings.review_title != blank %}
+                <div class="epf-top__section-title" style="margin-top: 1rem; font-size: 1.8rem;">
+                  {{ block.settings.review_title | replace: '[product_title]', product.title }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.review_copy != blank %}
+                <div class="epf-top__rank-copy">{{ block.settings.review_copy | replace: '[product_title]', product.title | newline_to_br }}</div>
+              {% endif %}
+
+              <div class="epf-top__proscons">
+                <div class="epf-top__list-box epf-top__list-box--pros">
+                  <h4>Pros</h4>
+                  <ul class="epf-top__list">
+                    {% assign pros_items = block.settings.pros | newline_to_br | split: '<br />' %}
+                    {% for item in pros_items %}
+                      {% assign clean_item = item | strip %}
+                      {% if clean_item != blank %}
+                        <li>
+                          <span class="epf-top__bullet epf-top__bullet--pros">&#10003;</span>
+                          <span>{{ clean_item | replace: '[product_title]', product.title }}</span>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+
+                <div class="epf-top__list-box epf-top__list-box--cons">
+                  <h4>Cons</h4>
+                  <ul class="epf-top__list">
+                    {% assign cons_items = block.settings.cons | newline_to_br | split: '<br />' %}
+                    {% for item in cons_items %}
+                      {% assign clean_item = item | strip %}
+                      {% if clean_item != blank %}
+                        <li>
+                          <span class="epf-top__bullet epf-top__bullet--cons">&#10005;</span>
+                          <span>{{ clean_item | replace: '[product_title]', product.title }}</span>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+
+              {% if block.settings.button_label != blank %}
+                <div style="margin-top: 1rem;">
+                  <a class="epf-top__button" href="{{ block.settings.button_link | default: '#MainProduct-offer_main' }}">
+                    {{ block.settings.button_label | replace: '[product_title]', product.title }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+
+            <div>
+              {% if block.settings.grade != blank %}
+                <div class="epf-top__grade">{{ block.settings.grade }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="epf-top__compare">
+      {% if section.settings.comparison_heading != blank %}
+        <h2 class="epf-top__section-title">{{ section.settings.comparison_heading | replace: '[product_title]', product.title }}</h2>
+      {% endif %}
+      {% if section.settings.comparison_copy != blank %}
+        <div class="epf-top__rank-copy">{{ section.settings.comparison_copy | replace: '[product_title]', product.title | newline_to_br }}</div>
+      {% endif %}
+
+      <div class="epf-top__compare-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'compare_row' %}
+            <div class="epf-top__compare-row" {{ block.shopify_attributes }}>
+              <div class="epf-top__compare-feature">{{ block.settings.feature | replace: '[product_title]', product.title }}</div>
+              <div class="epf-top__compare-value">{{ block.settings.col_1 | replace: '[product_title]', product.title | newline_to_br }}</div>
+              <div class="epf-top__compare-value">{{ block.settings.col_2 | replace: '[product_title]', product.title | newline_to_br }}</div>
+              <div class="epf-top__compare-value">{{ block.settings.col_3 | replace: '[product_title]', product.title | newline_to_br }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {% for block in section.blocks %}
+      {% if block.type == 'cta_band' %}
+        <div class="epf-top__cta" {{ block.shopify_attributes }}>
+          {% if block.settings.heading != blank %}
+            <h2 class="epf-top__section-title">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="epf-top__cta-text">{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</div>
+          {% endif %}
+          {% if block.settings.button_label != blank %}
+            <div style="margin-top: 1rem;">
+              <a class="epf-top__button" href="{{ block.settings.button_link | default: '#MainProduct-offer_main' }}">
+                {{ block.settings.button_label | replace: '[product_title]', product.title }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% if section.settings.disclaimer != blank %}
+      <div class="epf-top__disclaimer">{{ section.settings.disclaimer | replace: '[product_title]', product.title | newline_to_br }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "EPF Top Story",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 44
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Featured product image"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Editor's choice"
+    },
+    {
+      "type": "textarea",
+      "id": "headline",
+      "label": "Headline",
+      "default": "The best men's pelvic floor trainer for discreet at-home use."
+    },
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "Lead",
+      "default": "We compared app-only routines, passive gadgets, and rechargeable trainers. For men who want a simple, repeatable home setup, [product_title] stands out as the strongest overall option."
+    },
+    {
+      "type": "text",
+      "id": "top_chip_1",
+      "label": "Top chip 1",
+      "default": "Best overall"
+    },
+    {
+      "type": "text",
+      "id": "top_chip_2",
+      "label": "Top chip 2",
+      "default": "Best for home use"
+    },
+    {
+      "type": "text",
+      "id": "top_chip_3",
+      "label": "Top chip 3",
+      "default": "Best rechargeable pick"
+    },
+    {
+      "type": "header",
+      "content": "Intro"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Intro heading",
+      "default": "Why the top pick wins"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_copy",
+      "label": "Intro copy",
+      "default": "Most men do not need the flashiest gadget. They need the option that makes consistent home training easiest to repeat. That is where [product_title] separates itself: four guided modes, Type-C charging, and a compact format that feels realistic to keep using."
+    },
+    {
+      "type": "header",
+      "content": "Comparison table"
+    },
+    {
+      "type": "text",
+      "id": "comparison_heading",
+      "label": "Comparison heading",
+      "default": "Quick comparison"
+    },
+    {
+      "type": "textarea",
+      "id": "comparison_copy",
+      "label": "Comparison copy",
+      "default": "This snapshot compares the kind of structure, convenience, and long-term practicality men usually care about most."
+    },
+    {
+      "type": "text",
+      "id": "compare_col_1",
+      "label": "Compare column 1",
+      "default": "Patch kit"
+    },
+    {
+      "type": "text",
+      "id": "compare_col_2",
+      "label": "Compare column 2",
+      "default": "[product_title]"
+    },
+    {
+      "type": "text",
+      "id": "compare_col_3",
+      "label": "Compare column 3",
+      "default": "App-only trainer"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "Review-style content for general product information. [product_title] is presented as a home-use wellness device and is not medical treatment or medical advice."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "podium_item",
+      "name": "Podium Item",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "use_product_image",
+          "label": "Use featured product image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight item",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "rank",
+          "label": "Rank",
+          "default": "#1"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Best overall"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "[product_title]"
+        },
+        {
+          "type": "text",
+          "id": "score",
+          "label": "Score",
+          "default": "9.8/10"
+        },
+        {
+          "type": "textarea",
+          "id": "note",
+          "label": "Note",
+          "default": "4 guided modes, Type-C charging, and the strongest mix of privacy, structure, and repeatable home use."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "Button link",
+          "default": "#MainProduct-offer_main"
+        }
+      ]
+    },
+    {
+      "type": "ranked_product",
+      "name": "Rank Card",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "use_product_image",
+          "label": "Use featured product image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight item",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "rank",
+          "label": "Rank",
+          "default": "#1 overall"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "Editor's choice"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "[product_title]"
+        },
+        {
+          "type": "text",
+          "id": "grade",
+          "label": "Grade",
+          "default": "A+"
+        },
+        {
+          "type": "textarea",
+          "id": "review_title",
+          "label": "Review title",
+          "default": "Best overall for men who want a repeatable at-home routine."
+        },
+        {
+          "type": "textarea",
+          "id": "review_copy",
+          "label": "Review copy",
+          "default": "[product_title] earned the top spot because it balances guided training, rechargeable convenience, and a format that feels realistic to use consistently at home."
+        },
+        {
+          "type": "textarea",
+          "id": "pros",
+          "label": "Pros",
+          "default": "4 guided modes\nRechargeable with Type-C\nCompact for discreet home use\nEasy to fit into real schedules\nBuilt for repeatable sessions"
+        },
+        {
+          "type": "textarea",
+          "id": "cons",
+          "label": "Cons",
+          "default": "Needs consistent use\nCosts more than entry-level gadgets"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "Button link",
+          "default": "#MainProduct-offer_main"
+        }
+      ]
+    },
+    {
+      "type": "compare_row",
+      "name": "Compare Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature",
+          "default": "Structured modes"
+        },
+        {
+          "type": "text",
+          "id": "col_1",
+          "label": "Column 1",
+          "default": "Basic"
+        },
+        {
+          "type": "text",
+          "id": "col_2",
+          "label": "Column 2",
+          "default": "Excellent"
+        },
+        {
+          "type": "text",
+          "id": "col_3",
+          "label": "Column 3",
+          "default": "Mixed"
+        }
+      ]
+    },
+    {
+      "type": "cta_band",
+      "name": "CTA Band",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "See why the top pick is getting attention"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Jump to the live product section to check pricing, availability, and the current package for [product_title]."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Check availability"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "Button link",
+          "default": "#MainProduct-offer_main"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "EPF Top Story",
+      "blocks": [
+        {
+          "type": "podium_item"
+        },
+        {
+          "type": "podium_item"
+        },
+        {
+          "type": "podium_item"
+        },
+        {
+          "type": "ranked_product"
+        },
+        {
+          "type": "ranked_product"
+        },
+        {
+          "type": "ranked_product"
+        },
+        {
+          "type": "compare_row"
+        },
+        {
+          "type": "compare_row"
+        },
+        {
+          "type": "compare_row"
+        },
+        {
+          "type": "cta_band"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
