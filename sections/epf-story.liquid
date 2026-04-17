@@ -1,0 +1,1273 @@
+{% liquid
+  assign hero_media = product.featured_media
+  assign problem_media = product.media | slice: 1, 1 | first
+  assign expect_media_1 = product.media | slice: 2, 1 | first
+  assign expect_media_2 = product.media | slice: 3, 1 | first
+  assign expect_media_3 = product.media | slice: 4, 1 | first
+  assign journey_media_1 = product.media | slice: 5, 1 | first
+  assign journey_media_2 = product.media | slice: 6, 1 | first
+  assign journey_media_3 = product.media | slice: 7, 1 | first
+  assign voice_media_1 = product.media | slice: 8, 1 | first
+  assign voice_media_2 = product.media | slice: 9, 1 | first
+  assign voice_media_3 = product.media | slice: 10, 1 | first
+
+  if problem_media == blank
+    assign problem_media = hero_media
+  endif
+  if expect_media_1 == blank
+    assign expect_media_1 = hero_media
+  endif
+  if expect_media_2 == blank
+    assign expect_media_2 = problem_media
+  endif
+  if expect_media_3 == blank
+    assign expect_media_3 = hero_media
+  endif
+  if journey_media_1 == blank
+    assign journey_media_1 = expect_media_1
+  endif
+  if journey_media_2 == blank
+    assign journey_media_2 = expect_media_2
+  endif
+  if journey_media_3 == blank
+    assign journey_media_3 = expect_media_3
+  endif
+  if voice_media_1 == blank
+    assign voice_media_1 = hero_media
+  endif
+  if voice_media_2 == blank
+    assign voice_media_2 = problem_media
+  endif
+  if voice_media_3 == blank
+    assign voice_media_3 = expect_media_1
+  endif
+%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --epf-wine: #8d184d;
+    --epf-wine-dark: #6c103b;
+    --epf-rose: #f8eee8;
+    --epf-cream: #fcf8f4;
+    --epf-sand: #eadacb;
+    --epf-text: #231815;
+    --epf-muted: #6d5a53;
+    --epf-line: rgba(141, 24, 77, 0.14);
+    --epf-shadow: 0 18px 42px rgba(35, 24, 21, 0.08);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story {
+    background:
+      radial-gradient(circle at top left, rgba(141, 24, 77, 0.06), transparent 34%),
+      linear-gradient(180deg, #fffdfb 0%, var(--epf-cream) 100%);
+    color: var(--epf-text);
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__shell {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__brand {
+    text-align: center;
+    font-family: var(--font-heading-family);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 2rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 3.2rem;
+    box-shadow: var(--epf-shadow);
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__hero::after {
+    content: "";
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(141, 24, 77, 0.06);
+    border-radius: 999px;
+    top: -9rem;
+    right: -6rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(141, 24, 77, 0.08);
+    color: var(--epf-wine);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__heading {
+    font-family: var(--font-heading-family);
+    font-size: clamp(3rem, 5vw, 5.4rem);
+    line-height: 1.02;
+    margin: 0;
+    max-width: 13ch;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__lead {
+    font-size: 1.65rem;
+    line-height: 1.72;
+    color: var(--epf-muted);
+    margin: 1.4rem 0 0;
+    max-width: 58ch;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__checks {
+    list-style: none;
+    padding: 0;
+    margin: 1.8rem 0 0;
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__checks li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 1.5rem;
+    line-height: 1.55;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__checkmark,
+  #shopify-section-{{ section.id }} .epf-support__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: var(--epf-wine);
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+    flex: 0 0 auto;
+    margin-top: 0.12rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.9rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.2rem;
+    padding: 0 2rem;
+    border-radius: 999px;
+    border: 1px solid var(--epf-wine);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(141, 24, 77, 0.18);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__button--primary {
+    background: var(--epf-wine);
+    color: #fff;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__button--secondary {
+    background: transparent;
+    color: var(--epf-wine);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__proof {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.8rem;
+    padding: 1.2rem 1.35rem;
+    border-radius: 2rem;
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.06);
+    max-width: 54rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__stars {
+    color: #f2b731;
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__proof-copy {
+    font-size: 1.35rem;
+    line-height: 1.55;
+    color: var(--epf-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__visual {
+    position: relative;
+    min-height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__visual-ring {
+    position: absolute;
+    inset: 8% 12% 8% 12%;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(141, 24, 77, 0.14) 0%, rgba(141, 24, 77, 0.03) 58%, transparent 76%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__figure {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    border-radius: 2.8rem;
+    background: linear-gradient(180deg, #fff 0%, #f9f0e9 100%);
+    box-shadow: 0 24px 50px rgba(35, 24, 21, 0.12);
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__figure img,
+  #shopify-section-{{ section.id }} .epf-story__card-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 24rem;
+    display: block;
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.1) 0%, rgba(234, 218, 203, 0.4) 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip {
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1.8rem;
+    box-shadow: 0 14px 28px rgba(35, 24, 21, 0.12);
+    padding: 1rem 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    max-width: 17rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip--top {
+    top: 1.3rem;
+    right: -0.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip--bottom {
+    left: -0.6rem;
+    bottom: 1.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__featured {
+    margin-top: 2.4rem;
+    padding: 1.25rem 1.5rem;
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    border-radius: 999px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 22px rgba(35, 24, 21, 0.05);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__featured-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--epf-muted);
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__logo-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6.2rem;
+    min-height: 4rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: var(--epf-rose);
+    color: var(--epf-text);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    font-size: 1.15rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__section {
+    margin-top: 5rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__section-header {
+    max-width: 64rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__section-header h2,
+  #shopify-section-{{ section.id }} .epf-story__content h2 {
+    font-family: var(--font-heading-family);
+    font-size: clamp(2.6rem, 4vw, 4.4rem);
+    line-height: 1.08;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__content p,
+  #shopify-section-{{ section.id }} .epf-story__metric-copy,
+  #shopify-section-{{ section.id }} .epf-story__journey-card p,
+  #shopify-section-{{ section.id }} .epf-story__voice-card p {
+    color: var(--epf-muted);
+    font-size: 1.5rem;
+    line-height: 1.72;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__note-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__note {
+    padding: 1.1rem 1.2rem;
+    border-radius: 1.8rem;
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    box-shadow: 0 12px 28px rgba(35, 24, 21, 0.04);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__problem-card,
+  #shopify-section-{{ section.id }} .epf-story__results-card {
+    background: linear-gradient(180deg, #fff 0%, #f8efe9 100%);
+    border: 1px solid rgba(141, 24, 77, 0.08);
+    border-radius: 3rem;
+    box-shadow: var(--epf-shadow);
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 1.4rem;
+    padding: 1.8rem;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__diagram {
+    display: grid;
+    gap: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__diagram-bars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: end;
+    min-height: 18rem;
+    padding: 1.6rem;
+    border-radius: 2.2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 238, 232, 0.82) 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--epf-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill {
+    border-radius: 999px 999px 1rem 1rem;
+    min-height: 7rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--rose {
+    height: 11rem;
+    background: linear-gradient(180deg, #c87fa1 0%, #8d184d 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--sand {
+    height: 13.5rem;
+    background: linear-gradient(180deg, #d8c0ae 0%, #8c5f45 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--sage {
+    height: 9rem;
+    background: linear-gradient(180deg, #9db493 0%, #58745a 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__tendon-card {
+    padding: 1.4rem 1.6rem;
+    border-radius: 2.2rem;
+    color: #fff;
+    background:
+      linear-gradient(135deg, rgba(141, 24, 77, 0.95), rgba(108, 16, 59, 0.9)),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__tendon-card strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card {
+    padding: 1.4rem;
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    border-radius: 2rem;
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.05);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card h3,
+  #shopify-section-{{ section.id }} .epf-story__journey-card h3,
+  #shopify-section-{{ section.id }} .epf-story__voice-card h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.7rem;
+    line-height: 1.35;
+    font-family: var(--font-heading-family);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card p,
+  #shopify-section-{{ section.id }} .epf-story__voice-card p {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__feature-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 999px;
+    background: rgba(141, 24, 77, 0.12);
+    color: var(--epf-wine);
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__expect-grid,
+  #shopify-section-{{ section.id }} .epf-story__journey-grid,
+  #shopify-section-{{ section.id }} .epf-story__voice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__card,
+  #shopify-section-{{ section.id }} .epf-story__journey-card,
+  #shopify-section-{{ section.id }} .epf-story__voice-card {
+    background: #fff;
+    border-radius: 2.4rem;
+    border: 1px solid var(--epf-line);
+    box-shadow: var(--epf-shadow);
+    overflow: hidden;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__card-media,
+  #shopify-section-{{ section.id }} .epf-story__journey-media,
+  #shopify-section-{{ section.id }} .epf-story__voice-media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.1) 0%, rgba(234, 218, 203, 0.45) 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__card-body,
+  #shopify-section-{{ section.id }} .epf-story__journey-body,
+  #shopify-section-{{ section.id }} .epf-story__voice-body {
+    padding: 1.6rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__step-kicker,
+  #shopify-section-{{ section.id }} .epf-story__journey-kicker {
+    color: var(--epf-wine);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin: 0 0 0.7rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__expect-cta,
+  #shopify-section-{{ section.id }} .epf-story__journey-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__results {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, #fff 0%, #f8efe7 100%);
+    border-radius: 3rem;
+    border: 1px solid rgba(141, 24, 77, 0.08);
+    box-shadow: var(--epf-shadow);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__results-visual {
+    position: relative;
+    border-radius: 2.6rem;
+    overflow: hidden;
+    min-height: 30rem;
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.12) 0%, rgba(248, 238, 232, 0.6) 100%);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__results-glow {
+    position: absolute;
+    inset: auto 1.6rem 1.6rem auto;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 111, 61, 0.62) 0%, rgba(255, 111, 61, 0.1) 52%, transparent 74%);
+    pointer-events: none;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__metric-list {
+    display: grid;
+    gap: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__metric {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    border-radius: 1.8rem;
+    border: 1px solid var(--epf-line);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__metric-copy {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__metric-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(141, 24, 77, 0.12);
+    color: var(--epf-wine);
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__voice-media::after {
+    content: "";
+    position: absolute;
+    inset: auto auto 1.4rem 1.4rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.14);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__voice-media::before {
+    content: "";
+    position: absolute;
+    inset: auto auto 2.65rem 3.15rem;
+    z-index: 1;
+    border-top: 0.85rem solid transparent;
+    border-bottom: 0.85rem solid transparent;
+    border-left: 1.35rem solid var(--epf-wine);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__voice-meta {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--epf-wine);
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .epf-story {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .epf-story__hero,
+    #shopify-section-{{ section.id }} .epf-story__split,
+    #shopify-section-{{ section.id }} .epf-story__results,
+    #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+      grid-template-columns: 1fr;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__feature-grid,
+    #shopify-section-{{ section.id }} .epf-story__expect-grid,
+    #shopify-section-{{ section.id }} .epf-story__journey-grid,
+    #shopify-section-{{ section.id }} .epf-story__voice-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__hero-chip--top {
+      right: 0.6rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__hero-chip--bottom {
+      left: 0.6rem;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-story__brand {
+      font-size: 1.25rem;
+      margin-bottom: 1.2rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__hero {
+      padding: 1.45rem;
+      border-radius: 2.4rem;
+      gap: 1.35rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__heading {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      max-width: none;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__lead,
+    #shopify-section-{{ section.id }} .epf-story__content p,
+    #shopify-section-{{ section.id }} .epf-story__metric-copy,
+    #shopify-section-{{ section.id }} .epf-story__journey-card p,
+    #shopify-section-{{ section.id }} .epf-story__voice-card p,
+    #shopify-section-{{ section.id }} .epf-story__checks li {
+      font-size: 1.4rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__proof {
+      padding: 1rem;
+      gap: 0.8rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__actions {
+      flex-direction: column;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__button {
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__featured {
+      border-radius: 2.2rem;
+      padding: 1rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__section {
+      margin-top: 3.6rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-story__results,
+    #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+      padding: 1.3rem;
+    }
+  }
+{%- endstyle -%}
+
+<section class="epf-story">
+  <div class="page-width epf-story__shell">
+    <div class="epf-story__brand">{{ shop.name }}</div>
+
+    <div class="epf-story__hero">
+      <div class="epf-story__content">
+        <p class="epf-story__eyebrow">Clinically inspired home wellness</p>
+        <h1 class="epf-story__heading">Electric pelvic floor support for women who want confidence back.</h1>
+        <p class="epf-story__lead">
+          Designed for women rebuilding confidence after stress, childbirth, or years of feeling disconnected from
+          their core. This quiet at-home routine helps you stay consistent without adding another complicated habit.
+        </p>
+
+        <ul class="epf-story__checks">
+          <li><span class="epf-story__checkmark">&#10003;</span><span>Supports daily pelvic floor activation in just 20 minutes.</span></li>
+          <li><span class="epf-story__checkmark">&#10003;</span><span>Helps you feel more prepared for coughs, laughs, workouts, and long days.</span></li>
+          <li><span class="epf-story__checkmark">&#10003;</span><span>Built for comfort-first use at home, even on busy schedules.</span></li>
+          <li><span class="epf-story__checkmark">&#10003;</span><span>Easy to pair with your usual reset, stretch, or recovery routine.</span></li>
+        </ul>
+
+        <div class="epf-story__actions">
+          <a class="epf-story__button epf-story__button--primary" href="#MainProduct-offer_main">
+            Try your pelvic floor routine today
+          </a>
+          <a class="epf-story__button epf-story__button--secondary" href="#epf-what-to-expect">
+            See what to expect
+          </a>
+        </div>
+
+        <div class="epf-story__proof">
+          <div class="epf-story__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="epf-story__proof-copy">
+            4.8/5 from women using at-home support to rebuild consistency, tone awareness, and everyday confidence.
+          </div>
+        </div>
+      </div>
+
+      <div class="epf-story__visual">
+        <div class="epf-story__visual-ring"></div>
+        <figure class="epf-story__figure">
+          {% if hero_media != blank %}
+            {{
+              hero_media.preview_image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                widths: '360, 540, 720, 900',
+                sizes: '(min-width: 990px) 38vw, 90vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+          {% endif %}
+        </figure>
+        <div class="epf-story__hero-chip epf-story__hero-chip--top">Quiet 20-minute sessions that fit real life.</div>
+        <div class="epf-story__hero-chip epf-story__hero-chip--bottom">Comfort-first design for everyday confidence.</div>
+      </div>
+    </div>
+
+    <div class="epf-story__featured" aria-label="Featured on">
+      <div class="epf-story__featured-label">As seen in</div>
+      <div class="epf-story__featured-grid">
+        <span class="epf-story__logo-pill">NBC</span>
+        <span class="epf-story__logo-pill">ABC</span>
+        <span class="epf-story__logo-pill">CBS</span>
+        <span class="epf-story__logo-pill">FOX</span>
+        <span class="epf-story__logo-pill">Wellness</span>
+      </div>
+    </div>
+
+    <div class="epf-story__section epf-story__split">
+      <div class="epf-story__content">
+        <h2>The Problem Isn't Your Age. It's the Missing Building Blocks.</h2>
+        <p>
+          Most women are told to "just do Kegels," then left to guess whether anything is actually changing. But tone,
+          coordination, and consistency are built together, not one cue at a time.
+        </p>
+        <div class="epf-story__note-list">
+          <div class="epf-story__note">
+            Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel
+            connected to your deep core and pelvic floor.
+          </div>
+          <div class="epf-story__note">
+            When those building blocks are missing, women often notice less confidence during movement, exercise, or
+            sudden pressure moments like laughing and sneezing.
+          </div>
+          <div class="epf-story__note">
+            A gentler, guided rhythm can be easier to stick with than trying to force results from willpower alone.
+          </div>
+        </div>
+      </div>
+
+      <div class="epf-story__problem-card">
+        <div class="epf-story__problem-card-inner">
+          <div class="epf-story__card-media">
+            {% if problem_media != blank %}
+              {{
+                problem_media.preview_image
+                | image_url: width: 780
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '320, 480, 640, 780',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__diagram">
+            <div class="epf-story__diagram-bars">
+              <div class="epf-story__bar">
+                <div class="epf-story__bar-fill epf-story__bar-fill--rose"></div>
+                <span>Tone</span>
+              </div>
+              <div class="epf-story__bar">
+                <div class="epf-story__bar-fill epf-story__bar-fill--sand"></div>
+                <span>Control</span>
+              </div>
+              <div class="epf-story__bar">
+                <div class="epf-story__bar-fill epf-story__bar-fill--sage"></div>
+                <span>Confidence</span>
+              </div>
+            </div>
+            <div class="epf-story__tendon-card">
+              <strong>Deep core support</strong>
+              Better routines happen when awareness, consistency, and comfort build together instead of competing with
+              each other.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="epf-story__section epf-story__split">
+      <div class="epf-story__problem-card">
+        <div class="epf-story__problem-card-inner">
+          <div class="epf-story__card-media">
+            {% if hero_media != blank %}
+              {{
+                hero_media.preview_image
+                | image_url: width: 780
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '320, 480, 640, 780',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__note-list">
+            <div class="epf-story__feature-card">
+              <div class="epf-story__feature-pill">1</div>
+              <h3>At-home friendly</h3>
+              <p>Quiet, compact, and made to fit into a routine you can actually repeat.</p>
+            </div>
+            <div class="epf-story__feature-card">
+              <div class="epf-story__feature-pill">2</div>
+              <h3>Comfort-first rhythm</h3>
+              <p>Built to feel approachable, even if you've struggled to stay consistent before.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="epf-story__content">
+        <h2>Introducing the {{ product.title }}</h2>
+        <p>
+          Our routine is designed to help women reconnect with the support system behind better bladder confidence,
+          steadier movement, and more trust in their body.
+        </p>
+        <div class="epf-story__feature-grid">
+          <article class="epf-story__feature-card">
+            <div class="epf-story__feature-pill">A</div>
+            <h3>Guided consistency</h3>
+            <p>Turns pelvic floor work into a repeatable routine instead of a guesswork reminder.</p>
+          </article>
+          <article class="epf-story__feature-card">
+            <div class="epf-story__feature-pill">B</div>
+            <h3>Home-based privacy</h3>
+            <p>Use it on your own schedule, without needing a clinic visit to get started.</p>
+          </article>
+          <article class="epf-story__feature-card">
+            <div class="epf-story__feature-pill">C</div>
+            <h3>Gentle daily support</h3>
+            <p>Easy to pair with recovery, stretching, breathwork, or a simple evening reset.</p>
+          </article>
+          <article class="epf-story__feature-card">
+            <div class="epf-story__feature-pill">D</div>
+            <h3>Confidence that compounds</h3>
+            <p>Small, repeated sessions help you build momentum you can actually feel over time.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="epf-story__section" id="epf-what-to-expect">
+      <div class="epf-story__section-header">
+        <h2>What to Expect</h2>
+      </div>
+
+      <div class="epf-story__expect-grid">
+        <article class="epf-story__card">
+          <div class="epf-story__card-media">
+            {% if expect_media_1 != blank %}
+              {{
+                expect_media_1.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__card-body">
+            <p class="epf-story__step-kicker">Week 1</p>
+            <h3>Reconnect with the routine</h3>
+            <p>Short sessions help you build awareness and make the habit feel easy to repeat.</p>
+          </div>
+        </article>
+
+        <article class="epf-story__card">
+          <div class="epf-story__card-media">
+            {% if expect_media_2 != blank %}
+              {{
+                expect_media_2.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__card-body">
+            <p class="epf-story__step-kicker">Week 2</p>
+            <h3>Feel steadier through the day</h3>
+            <p>Consistency starts turning into better control during movement, errands, and workdays.</p>
+          </div>
+        </article>
+
+        <article class="epf-story__card">
+          <div class="epf-story__card-media">
+            {% if expect_media_3 != blank %}
+              {{
+                expect_media_3.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__card-body">
+            <p class="epf-story__step-kicker">Week 4+</p>
+            <h3>Build confidence you can trust</h3>
+            <p>Many women notice the biggest shift when they stop skipping the routine and start stacking wins.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="epf-story__expect-cta">
+        <a class="epf-story__button epf-story__button--primary" href="#MainProduct-offer_main">
+          Start your confidence routine now
+        </a>
+      </div>
+    </div>
+
+    <div class="epf-story__section">
+      <div class="epf-story__results">
+        <div class="epf-story__results-visual">
+          {% if hero_media != blank %}
+            {{
+              hero_media.preview_image
+              | image_url: width: 900
+              | image_tag:
+                loading: 'lazy',
+                widths: '320, 480, 640, 900',
+                sizes: '(min-width: 990px) 28vw, 90vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+          {% endif %}
+          <div class="epf-story__results-glow"></div>
+        </div>
+
+        <div class="epf-story__content">
+          <h2>Results That Matter</h2>
+          <p>
+            The goal isn't perfection. It's building the kind of support that helps you move, laugh, train, travel,
+            and show up without constantly thinking about it.
+          </p>
+
+          <div class="epf-story__metric-list">
+            <div class="epf-story__metric">
+              <span class="epf-story__metric-icon">&#10003;</span>
+              <p class="epf-story__metric-copy">Feel more supported during daily pressure moments like coughing or laughing.</p>
+            </div>
+            <div class="epf-story__metric">
+              <span class="epf-story__metric-icon">&#10003;</span>
+              <p class="epf-story__metric-copy">Improve body awareness so consistency feels easier and less forced.</p>
+            </div>
+            <div class="epf-story__metric">
+              <span class="epf-story__metric-icon">&#10003;</span>
+              <p class="epf-story__metric-copy">Pair better with movement, posture work, walking, and gentle strength training.</p>
+            </div>
+            <div class="epf-story__metric">
+              <span class="epf-story__metric-icon">&#10003;</span>
+              <p class="epf-story__metric-copy">Build quiet confidence from the comfort and privacy of home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="epf-story__section">
+      <div class="epf-story__section-header">
+        <h2>20 Minutes a Day to Get Your Confidence Back</h2>
+      </div>
+
+      <div class="epf-story__journey-grid">
+        <article class="epf-story__journey-card">
+          <div class="epf-story__journey-media">
+            {% if journey_media_1 != blank %}
+              {{
+                journey_media_1.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__journey-body">
+            <p class="epf-story__journey-kicker">10 min</p>
+            <h3>Wake up your deep core</h3>
+            <p>Start with a short routine that helps you reconnect with the muscles most women lose track of first.</p>
+          </div>
+        </article>
+
+        <article class="epf-story__journey-card">
+          <div class="epf-story__journey-media">
+            {% if journey_media_2 != blank %}
+              {{
+                journey_media_2.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__journey-body">
+            <p class="epf-story__journey-kicker">15 min</p>
+            <h3>Build steadier control</h3>
+            <p>Consistency starts showing up in errands, workouts, and the little moments where support matters most.</p>
+          </div>
+        </article>
+
+        <article class="epf-story__journey-card">
+          <div class="epf-story__journey-media">
+            {% if journey_media_3 != blank %}
+              {{
+                journey_media_3.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__journey-body">
+            <p class="epf-story__journey-kicker">20 min</p>
+            <h3>Move with confidence</h3>
+            <p>Stack small sessions over time and give yourself a more supported, less stressful day-to-day rhythm.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="epf-story__journey-cta">
+        <a class="epf-story__button epf-story__button--secondary" href="#epf-questions">Still have questions?</a>
+      </div>
+    </div>
+
+    <div class="epf-story__section">
+      <div class="epf-story__section-header">
+        <h2>Women Just Like You Are Getting Their Lives Back</h2>
+      </div>
+
+      <div class="epf-story__voice-grid">
+        <article class="epf-story__voice-card">
+          <div class="epf-story__voice-media">
+            {% if voice_media_1 != blank %}
+              {{
+                voice_media_1.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: 'Review image 1'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__voice-body">
+            <div class="epf-story__voice-meta">Verified customer</div>
+            <h3>"I finally felt supported again."</h3>
+            <p>
+              "I wanted something I could use privately, consistently, and without overthinking it. This made the
+              routine feel manageable, and that changed everything."
+            </p>
+          </div>
+        </article>
+
+        <article class="epf-story__voice-card">
+          <div class="epf-story__voice-media">
+            {% if voice_media_2 != blank %}
+              {{
+                voice_media_2.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: 'Review image 2'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__voice-body">
+            <div class="epf-story__voice-meta">Verified customer</div>
+            <h3>"I can laugh harder and worry less."</h3>
+            <p>
+              "The biggest shift wasn't overnight. It was realizing that 20 minutes a day was finally something I could
+              keep doing."
+            </p>
+          </div>
+        </article>
+
+        <article class="epf-story__voice-card">
+          <div class="epf-story__voice-media">
+            {% if voice_media_3 != blank %}
+              {{
+                voice_media_3.preview_image
+                | image_url: width: 720
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '260, 360, 540, 720',
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+                  alt: 'Review image 3'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+          <div class="epf-story__voice-body">
+            <div class="epf-story__voice-meta">Verified customer</div>
+            <h3>"The routine finally clicked."</h3>
+            <p>
+              "I had tried to piece everything together on my own. This made the process feel clear, calm, and worth
+              sticking with."
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pelvic Floor Story",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 44
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pelvic Floor Story"
+    }
+  ]
+}
+{% endschema %}

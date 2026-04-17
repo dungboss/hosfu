@@ -1,0 +1,342 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --epf-wine: #8d184d;
+    --epf-wine-dark: #6c103b;
+    --epf-rose: #f8eee8;
+    --epf-cream: #fcf8f4;
+    --epf-text: #231815;
+    --epf-muted: #6d5a53;
+    --epf-line: rgba(141, 24, 77, 0.14);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+    background:
+      linear-gradient(180deg, var(--epf-cream) 0%, #fffdfb 42%, #f7efe8 100%);
+    color: var(--epf-text);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__band {
+    background: linear-gradient(135deg, var(--epf-wine) 0%, var(--epf-wine-dark) 100%);
+    border-radius: 3rem;
+    color: #fff;
+    padding: 1.4rem;
+    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.12);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__band-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__band-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.9rem;
+    align-items: start;
+    padding: 1rem 1.1rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__band-card strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__band-card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq {
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.84);
+    border-radius: 3rem;
+    padding: 2rem;
+    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.08);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__heading {
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto 1.8rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__heading h2 {
+    margin: 0;
+    font-family: var(--font-heading-family);
+    font-size: clamp(2.6rem, 4vw, 4.4rem);
+    line-height: 1.08;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__heading p {
+    margin: 1rem 0 0;
+    font-size: 1.55rem;
+    line-height: 1.7;
+    color: var(--epf-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__items {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item {
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    border-radius: 1.9rem;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1.4rem 4.6rem 1.4rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item summary::before,
+  #shopify-section-{{ section.id }} .epf-support__faq-item summary::after {
+    content: "";
+    position: absolute;
+    right: 1.8rem;
+    top: 50%;
+    width: 1.6rem;
+    height: 0.2rem;
+    background: var(--epf-wine);
+    transform: translateY(-50%);
+    border-radius: 999px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item summary::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-item[open] summary::after {
+    opacity: 0;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--epf-muted);
+    font-size: 1.45rem;
+    line-height: 1.75;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__note {
+    margin-top: 1.6rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--epf-muted);
+    text-align: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .epf-support {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .epf-support__band-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-support__band,
+    #shopify-section-{{ section.id }} .epf-support__faq {
+      border-radius: 2.2rem;
+      padding: 1.3rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-support__band-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #shopify-section-{{ section.id }} .epf-support__heading p,
+    #shopify-section-{{ section.id }} .epf-support__faq-answer,
+    #shopify-section-{{ section.id }} .epf-support__faq-item summary {
+      font-size: 1.4rem;
+    }
+  }
+{%- endstyle -%}
+
+<section class="epf-support" id="epf-questions">
+  <div class="page-width">
+    <div class="epf-support__band">
+      <div class="epf-support__band-grid">
+        <div class="epf-support__band-card">
+          <span class="epf-support__icon">&#10003;</span>
+          <div>
+            <strong>30-day confidence promise</strong>
+            <p>Try it in your home routine and make sure it feels right for you.</p>
+          </div>
+        </div>
+        <div class="epf-support__band-card">
+          <span class="epf-support__icon">&#10003;</span>
+          <div>
+            <strong>Postpartum-friendly mindset</strong>
+            <p>Designed around gentler, consistency-first use instead of intensity.</p>
+          </div>
+        </div>
+        <div class="epf-support__band-card">
+          <span class="epf-support__icon">&#10003;</span>
+          <div>
+            <strong>Discreet shipping</strong>
+            <p>Your order arrives privately so you can start with confidence.</p>
+          </div>
+        </div>
+        <div class="epf-support__band-card">
+          <span class="epf-support__icon">&#10003;</span>
+          <div>
+            <strong>Made for real schedules</strong>
+            <p>Simple 20-minute sessions that fit mornings, evenings, or reset windows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="epf-support__faq">
+      <div class="epf-support__heading">
+        <h2>Questions from Women Just Like You</h2>
+        <p>Short answers to the things women ask before starting an at-home pelvic floor support routine.</p>
+      </div>
+
+      <div class="epf-support__items">
+        <details class="epf-support__faq-item">
+          <summary>I've tried Kegels before. How is this different?</summary>
+          <div class="epf-support__faq-answer">
+            Most women don't need more reminders. They need a routine that feels easier to repeat. {{ product.title }}
+            is designed to make the habit feel more approachable, structured, and realistic at home.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>Is this a medical treatment?</summary>
+          <div class="epf-support__faq-answer">
+            No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute
+            for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>Can I use it after childbirth?</summary>
+          <div class="epf-support__faq-answer">
+            Many women look for pelvic floor support after childbirth, but recovery is personal. If you're postpartum,
+            we recommend following your provider's guidance on when to begin any new routine.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>How often should I use it?</summary>
+          <div class="epf-support__faq-answer">
+            The strongest results usually come from consistency, not marathon sessions. A simple, repeatable 20-minute
+            rhythm tends to be easier to maintain than an all-or-nothing plan.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>Will it be discreet?</summary>
+          <div class="epf-support__faq-answer">
+            Yes. The routine is designed for private, at-home use, and orders are shipped discreetly so you can start
+            without extra friction.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>What if I've felt disconnected from this area for years?</summary>
+          <div class="epf-support__faq-answer">
+            That's exactly why consistency-first routines matter. Many women aren't starting from a lack of effort.
+            They're starting from a lack of clarity, structure, and support.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>Is {{ product.title }} hard to fit into a busy schedule?</summary>
+          <div class="epf-support__faq-answer">
+            It shouldn't be. The routine is built around short, manageable sessions so you can fit it into mornings,
+            evenings, or any reset window that already exists in your day.
+          </div>
+        </details>
+
+        <details class="epf-support__faq-item">
+          <summary>What if it doesn't feel like the right fit for me?</summary>
+          <div class="epf-support__faq-answer">
+            Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel
+            aligned with your routine, you have a 30-day confidence promise to lean on.
+          </div>
+        </details>
+      </div>
+
+      <p class="epf-support__note">
+        Wellness note: this page is intended for general product information only and should not replace individualized
+        medical advice.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pelvic Floor Support",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pelvic Floor Support"
+    }
+  ]
+}
+{% endschema %}
