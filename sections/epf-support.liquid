@@ -193,117 +193,50 @@
   }
 {%- endstyle -%}
 
-<section class="epf-support" id="epf-questions">
+<section class="epf-support" id="{{ section.settings.section_anchor | default: 'epf-questions' }}">
   <div class="page-width">
     <div class="epf-support__band">
       <div class="epf-support__band-grid">
-        <div class="epf-support__band-card">
-          <span class="epf-support__icon">&#10003;</span>
-          <div>
-            <strong>30-day confidence promise</strong>
-            <p>Try it in your home routine and make sure it feels right for you.</p>
-          </div>
-        </div>
-        <div class="epf-support__band-card">
-          <span class="epf-support__icon">&#10003;</span>
-          <div>
-            <strong>Postpartum-friendly mindset</strong>
-            <p>Designed around gentler, consistency-first use instead of intensity.</p>
-          </div>
-        </div>
-        <div class="epf-support__band-card">
-          <span class="epf-support__icon">&#10003;</span>
-          <div>
-            <strong>Discreet shipping</strong>
-            <p>Your order arrives privately so you can start with confidence.</p>
-          </div>
-        </div>
-        <div class="epf-support__band-card">
-          <span class="epf-support__icon">&#10003;</span>
-          <div>
-            <strong>Made for real schedules</strong>
-            <p>Simple 20-minute sessions that fit mornings, evenings, or reset windows.</p>
-          </div>
-        </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'support_point' %}
+            <div class="epf-support__band-card" {{ block.shopify_attributes }}>
+              <span class="epf-support__icon">{{ block.settings.icon_text | default: '✓' }}</span>
+              <div>
+                <strong>{{ block.settings.title | replace: '[product_title]', product.title }}</strong>
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
     <div class="epf-support__faq">
       <div class="epf-support__heading">
-        <h2>Questions from Women Just Like You</h2>
-        <p>Short answers to the things women ask before starting an at-home pelvic floor support routine.</p>
+        <h2>{{ section.settings.faq_heading | replace: '[product_title]', product.title }}</h2>
+        {% if section.settings.faq_description != blank %}
+          <p>{{ section.settings.faq_description | replace: '[product_title]', product.title | newline_to_br }}</p>
+        {% endif %}
       </div>
 
       <div class="epf-support__items">
-        <details class="epf-support__faq-item">
-          <summary>I've tried Kegels before. How is this different?</summary>
-          <div class="epf-support__faq-answer">
-            Most women don't need more reminders. They need a routine that feels easier to repeat. {{ product.title }}
-            is designed to make the habit feel more approachable, structured, and realistic at home.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>Is this a medical treatment?</summary>
-          <div class="epf-support__faq-answer">
-            No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute
-            for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>Can I use it after childbirth?</summary>
-          <div class="epf-support__faq-answer">
-            Many women look for pelvic floor support after childbirth, but recovery is personal. If you're postpartum,
-            we recommend following your provider's guidance on when to begin any new routine.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>How often should I use it?</summary>
-          <div class="epf-support__faq-answer">
-            The strongest results usually come from consistency, not marathon sessions. A simple, repeatable 20-minute
-            rhythm tends to be easier to maintain than an all-or-nothing plan.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>Will it be discreet?</summary>
-          <div class="epf-support__faq-answer">
-            Yes. The routine is designed for private, at-home use, and orders are shipped discreetly so you can start
-            without extra friction.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>What if I've felt disconnected from this area for years?</summary>
-          <div class="epf-support__faq-answer">
-            That's exactly why consistency-first routines matter. Many women aren't starting from a lack of effort.
-            They're starting from a lack of clarity, structure, and support.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>Is {{ product.title }} hard to fit into a busy schedule?</summary>
-          <div class="epf-support__faq-answer">
-            It shouldn't be. The routine is built around short, manageable sessions so you can fit it into mornings,
-            evenings, or any reset window that already exists in your day.
-          </div>
-        </details>
-
-        <details class="epf-support__faq-item">
-          <summary>What if it doesn't feel like the right fit for me?</summary>
-          <div class="epf-support__faq-answer">
-            Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel
-            aligned with your routine, you have a 30-day confidence promise to lean on.
-          </div>
-        </details>
+        {% for block in section.blocks %}
+          {% if block.type == 'faq_item' %}
+            <details class="epf-support__faq-item" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.question | replace: '[product_title]', product.title }}</summary>
+              <div class="epf-support__faq-answer">
+                {{ block.settings.answer | replace: '[product_title]', product.title | newline_to_br }}
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
       </div>
 
-      <p class="epf-support__note">
-        Wellness note: this page is intended for general product information only and should not replace individualized
-        medical advice.
-      </p>
+      {% if section.settings.wellness_note != blank %}
+        <p class="epf-support__note">
+          {{ section.settings.wellness_note | replace: '[product_title]', product.title | newline_to_br }}
+        </p>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -331,11 +264,117 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 48
+    },
+    {
+      "type": "text",
+      "id": "section_anchor",
+      "label": "Section anchor",
+      "default": "epf-questions"
+    },
+    {
+      "type": "header",
+      "content": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "faq_heading",
+      "label": "Heading",
+      "default": "Questions from Women Just Like You"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_description",
+      "label": "Description",
+      "default": "Short answers to the things women ask before starting an at-home pelvic floor support routine."
+    },
+    {
+      "type": "textarea",
+      "id": "wellness_note",
+      "label": "Wellness note",
+      "default": "Wellness note: this page is intended for general product information only and should not replace individualized medical advice."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "support_point",
+      "name": "Support Point",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Icon text",
+          "default": "✓"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "30-day confidence promise"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Try it in your home routine and make sure it feels right for you."
+        }
+      ]
+    },
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "limit": 16,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "I've tried Kegels before. How is this different?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Most women don't need more reminders. They need a routine that feels easier to repeat. [product_title] is designed to make the habit feel more approachable, structured, and realistic at home."
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": false
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Pelvic Floor Support"
+      "name": "Pelvic Floor Support",
+      "blocks": [
+        {
+          "type": "support_point"
+        },
+        {
+          "type": "support_point"
+        },
+        {
+          "type": "support_point"
+        },
+        {
+          "type": "support_point"
+        },
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        }
+      ]
     }
   ]
 }

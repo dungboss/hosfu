@@ -41,6 +41,26 @@
   if voice_media_3 == blank
     assign voice_media_3 = expect_media_1
   endif
+
+  assign hero_image = section.settings.hero_image
+  if hero_image == blank and hero_media != blank
+    assign hero_image = hero_media.preview_image
+  endif
+
+  assign problem_image = section.settings.problem_image
+  if problem_image == blank and problem_media != blank
+    assign problem_image = problem_media.preview_image
+  endif
+
+  assign intro_image = section.settings.intro_image
+  if intro_image == blank and hero_media != blank
+    assign intro_image = hero_media.preview_image
+  endif
+
+  assign results_image = section.settings.results_image
+  if results_image == blank and hero_media != blank
+    assign results_image = hero_media.preview_image
+  endif
 %}
 
 {%- style -%}
@@ -730,43 +750,56 @@
   <div class="page-width epf-story__shell">
     <div class="epf-story__hero">
       <div class="epf-story__content">
-        <p class="epf-story__eyebrow">Clinically inspired home wellness</p>
-        <h1 class="epf-story__heading">Electric pelvic floor support for women who want confidence back.</h1>
-        <p class="epf-story__lead">
-          Designed for women rebuilding confidence after stress, childbirth, or years of feeling disconnected from
-          their core. This quiet at-home routine helps you stay consistent without adding another complicated habit.
-        </p>
+        {% if section.settings.hero_eyebrow != blank %}
+          <p class="epf-story__eyebrow">{{ section.settings.hero_eyebrow | replace: '[product_title]', product.title }}</p>
+        {% endif %}
+        <h1 class="epf-story__heading">{{ section.settings.hero_heading | replace: '[product_title]', product.title }}</h1>
+        {% if section.settings.hero_lead != blank %}
+          <p class="epf-story__lead">
+            {{ section.settings.hero_lead | replace: '[product_title]', product.title | newline_to_br }}
+          </p>
+        {% endif %}
 
         <ul class="epf-story__checks">
-          <li><span class="epf-story__checkmark">&#10003;</span><span>Supports daily pelvic floor activation in just 20 minutes.</span></li>
-          <li><span class="epf-story__checkmark">&#10003;</span><span>Helps you feel more prepared for coughs, laughs, workouts, and long days.</span></li>
-          <li><span class="epf-story__checkmark">&#10003;</span><span>Built for comfort-first use at home, even on busy schedules.</span></li>
-          <li><span class="epf-story__checkmark">&#10003;</span><span>Easy to pair with your usual reset, stretch, or recovery routine.</span></li>
+          {% for block in section.blocks %}
+            {% if block.type == 'hero_check' %}
+              <li {{ block.shopify_attributes }}>
+                <span class="epf-story__checkmark">&#10003;</span>
+                <span>{{ block.settings.text | replace: '[product_title]', product.title }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
 
         <div class="epf-story__actions">
-          <a class="epf-story__button epf-story__button--primary" href="#MainProduct-offer_main">
-            Try your pelvic floor routine today
-          </a>
-          <a class="epf-story__button epf-story__button--secondary" href="#epf-what-to-expect">
-            See what to expect
-          </a>
+          {% if section.settings.hero_primary_label != blank %}
+            <a class="epf-story__button epf-story__button--primary" href="{{ section.settings.hero_primary_link | default: '#MainProduct-offer_main' }}">
+              {{ section.settings.hero_primary_label | replace: '[product_title]', product.title }}
+            </a>
+          {% endif %}
+          {% if section.settings.hero_secondary_label != blank %}
+            <a class="epf-story__button epf-story__button--secondary" href="{{ section.settings.hero_secondary_link | default: '#epf-what-to-expect' }}">
+              {{ section.settings.hero_secondary_label | replace: '[product_title]', product.title }}
+            </a>
+          {% endif %}
         </div>
 
-        <div class="epf-story__proof">
-          <div class="epf-story__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="epf-story__proof-copy">
-            4.8/5 from women using at-home support to rebuild consistency, tone awareness, and everyday confidence.
+        {% if section.settings.hero_proof_copy != blank %}
+          <div class="epf-story__proof">
+            <div class="epf-story__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="epf-story__proof-copy">
+              {{ section.settings.hero_proof_copy | replace: '[product_title]', product.title | newline_to_br }}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
 
       <div class="epf-story__visual">
         <div class="epf-story__visual-ring"></div>
         <figure class="epf-story__figure">
-          {% if hero_media != blank %}
+          {% if hero_image != blank %}
             {{
-              hero_media.preview_image
+              hero_image
               | image_url: width: 900
               | image_tag:
                 loading: 'lazy',
@@ -778,50 +811,55 @@
             {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
           {% endif %}
         </figure>
-        <div class="epf-story__hero-chip epf-story__hero-chip--top">Quiet 20-minute sessions that fit real life.</div>
-        <div class="epf-story__hero-chip epf-story__hero-chip--bottom">Comfort-first design for everyday confidence.</div>
+        {% if section.settings.hero_chip_top != blank %}
+          <div class="epf-story__hero-chip epf-story__hero-chip--top">
+            {{ section.settings.hero_chip_top | replace: '[product_title]', product.title }}
+          </div>
+        {% endif %}
+        {% if section.settings.hero_chip_bottom != blank %}
+          <div class="epf-story__hero-chip epf-story__hero-chip--bottom">
+            {{ section.settings.hero_chip_bottom | replace: '[product_title]', product.title }}
+          </div>
+        {% endif %}
       </div>
     </div>
 
     <div class="epf-story__featured" aria-label="Featured on">
-      <div class="epf-story__featured-label">As seen in</div>
+      <div class="epf-story__featured-label">{{ section.settings.featured_label | replace: '[product_title]', product.title }}</div>
       <div class="epf-story__featured-grid">
-        <span class="epf-story__logo-pill">NBC</span>
-        <span class="epf-story__logo-pill">ABC</span>
-        <span class="epf-story__logo-pill">CBS</span>
-        <span class="epf-story__logo-pill">FOX</span>
-        <span class="epf-story__logo-pill">Wellness</span>
+        {% for block in section.blocks %}
+          {% if block.type == 'featured_logo' %}
+            <span class="epf-story__logo-pill" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
     <div class="epf-story__section epf-story__split">
       <div class="epf-story__content">
-        <h2>The Problem Isn't Your Age. It's the Missing Building Blocks.</h2>
-        <p>
-          Most women are told to "just do Kegels," then left to guess whether anything is actually changing. But tone,
-          coordination, and consistency are built together, not one cue at a time.
-        </p>
+        <h2>{{ section.settings.problem_heading | replace: '[product_title]', product.title }}</h2>
+        {% if section.settings.problem_body != blank %}
+          <p>
+            {{ section.settings.problem_body | replace: '[product_title]', product.title | newline_to_br }}
+          </p>
+        {% endif %}
         <div class="epf-story__note-list">
-          <div class="epf-story__note">
-            Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel
-            connected to your deep core and pelvic floor.
-          </div>
-          <div class="epf-story__note">
-            When those building blocks are missing, women often notice less confidence during movement, exercise, or
-            sudden pressure moments like laughing and sneezing.
-          </div>
-          <div class="epf-story__note">
-            A gentler, guided rhythm can be easier to stick with than trying to force results from willpower alone.
-          </div>
+          {% for block in section.blocks %}
+            {% if block.type == 'problem_note' %}
+              <div class="epf-story__note" {{ block.shopify_attributes }}>
+                {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
 
       <div class="epf-story__problem-card">
         <div class="epf-story__problem-card-inner">
           <div class="epf-story__card-media">
-            {% if problem_media != blank %}
+            {% if problem_image != blank %}
               {{
-                problem_media.preview_image
+                problem_image
                 | image_url: width: 780
                 | image_tag:
                   loading: 'lazy',
@@ -837,21 +875,20 @@
             <div class="epf-story__diagram-bars">
               <div class="epf-story__bar">
                 <div class="epf-story__bar-fill epf-story__bar-fill--rose"></div>
-                <span>Tone</span>
+                <span>{{ section.settings.problem_bar_label_1 }}</span>
               </div>
               <div class="epf-story__bar">
                 <div class="epf-story__bar-fill epf-story__bar-fill--sand"></div>
-                <span>Control</span>
+                <span>{{ section.settings.problem_bar_label_2 }}</span>
               </div>
               <div class="epf-story__bar">
                 <div class="epf-story__bar-fill epf-story__bar-fill--sage"></div>
-                <span>Confidence</span>
+                <span>{{ section.settings.problem_bar_label_3 }}</span>
               </div>
             </div>
             <div class="epf-story__tendon-card">
-              <strong>Deep core support</strong>
-              Better routines happen when awareness, consistency, and comfort build together instead of competing with
-              each other.
+              <strong>{{ section.settings.problem_tendon_heading | replace: '[product_title]', product.title }}</strong>
+              {{ section.settings.problem_tendon_copy | replace: '[product_title]', product.title | newline_to_br }}
             </div>
           </div>
         </div>
@@ -862,9 +899,9 @@
       <div class="epf-story__problem-card">
         <div class="epf-story__problem-card-inner">
           <div class="epf-story__card-media">
-            {% if hero_media != blank %}
+            {% if intro_image != blank %}
               {{
-                hero_media.preview_image
+                intro_image
                 | image_url: width: 780
                 | image_tag:
                   loading: 'lazy',
@@ -877,140 +914,102 @@
             {% endif %}
           </div>
           <div class="epf-story__note-list">
-            <div class="epf-story__feature-card">
-              <div class="epf-story__feature-pill">1</div>
-              <h3>At-home friendly</h3>
-              <p>Quiet, compact, and made to fit into a routine you can actually repeat.</p>
-            </div>
-            <div class="epf-story__feature-card">
-              <div class="epf-story__feature-pill">2</div>
-              <h3>Comfort-first rhythm</h3>
-              <p>Built to feel approachable, even if you've struggled to stay consistent before.</p>
-            </div>
+            {% for block in section.blocks %}
+              {% if block.type == 'intro_side_feature' %}
+                <div class="epf-story__feature-card" {{ block.shopify_attributes }}>
+                  <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
+                  <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+                  <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>
 
       <div class="epf-story__content">
-        <h2>Introducing the {{ product.title }}</h2>
-        <p>
-          Our routine is designed to help women reconnect with the support system behind better bladder confidence,
-          steadier movement, and more trust in their body.
-        </p>
+        <h2>{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+        {% if section.settings.intro_body != blank %}
+          <p>
+            {{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}
+          </p>
+        {% endif %}
         <div class="epf-story__feature-grid">
-          <article class="epf-story__feature-card">
-            <div class="epf-story__feature-pill">A</div>
-            <h3>Guided consistency</h3>
-            <p>Turns pelvic floor work into a repeatable routine instead of a guesswork reminder.</p>
-          </article>
-          <article class="epf-story__feature-card">
-            <div class="epf-story__feature-pill">B</div>
-            <h3>Home-based privacy</h3>
-            <p>Use it on your own schedule, without needing a clinic visit to get started.</p>
-          </article>
-          <article class="epf-story__feature-card">
-            <div class="epf-story__feature-pill">C</div>
-            <h3>Gentle daily support</h3>
-            <p>Easy to pair with recovery, stretching, breathwork, or a simple evening reset.</p>
-          </article>
-          <article class="epf-story__feature-card">
-            <div class="epf-story__feature-pill">D</div>
-            <h3>Confidence that compounds</h3>
-            <p>Small, repeated sessions help you build momentum you can actually feel over time.</p>
-          </article>
+          {% for block in section.blocks %}
+            {% if block.type == 'intro_feature' %}
+              <article class="epf-story__feature-card" {{ block.shopify_attributes }}>
+                <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+              </article>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
 
     <div class="epf-story__section" id="epf-what-to-expect">
       <div class="epf-story__section-header">
-        <h2>What to Expect</h2>
+        <h2>{{ section.settings.expect_heading | replace: '[product_title]', product.title }}</h2>
       </div>
 
       <div class="epf-story__expect-grid">
-        <article class="epf-story__card">
-          <div class="epf-story__card-media">
-            {% if expect_media_1 != blank %}
-              {{
-                expect_media_1.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+        {% assign expect_index = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'expect_card' %}
+            {% assign expect_index = expect_index | plus: 1 %}
+            {% assign expect_image = block.settings.image %}
+            {% if expect_image == blank %}
+              {% case expect_index %}
+                {% when 1 %}
+                  {% if expect_media_1 != blank %}{% assign expect_image = expect_media_1.preview_image %}{% endif %}
+                {% when 2 %}
+                  {% if expect_media_2 != blank %}{% assign expect_image = expect_media_2.preview_image %}{% endif %}
+                {% when 3 %}
+                  {% if expect_media_3 != blank %}{% assign expect_image = expect_media_3.preview_image %}{% endif %}
+              {% endcase %}
             {% endif %}
-          </div>
-          <div class="epf-story__card-body">
-            <p class="epf-story__step-kicker">Week 1</p>
-            <h3>Reconnect with the routine</h3>
-            <p>Short sessions help you build awareness and make the habit feel easy to repeat.</p>
-          </div>
-        </article>
-
-        <article class="epf-story__card">
-          <div class="epf-story__card-media">
-            {% if expect_media_2 != blank %}
-              {{
-                expect_media_2.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__card-body">
-            <p class="epf-story__step-kicker">Week 2</p>
-            <h3>Feel steadier through the day</h3>
-            <p>Consistency starts turning into better control during movement, errands, and workdays.</p>
-          </div>
-        </article>
-
-        <article class="epf-story__card">
-          <div class="epf-story__card-media">
-            {% if expect_media_3 != blank %}
-              {{
-                expect_media_3.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__card-body">
-            <p class="epf-story__step-kicker">Week 4+</p>
-            <h3>Build confidence you can trust</h3>
-            <p>Many women notice the biggest shift when they stop skipping the routine and start stacking wins.</p>
-          </div>
-        </article>
+            <article class="epf-story__card" {{ block.shopify_attributes }}>
+              <div class="epf-story__card-media">
+                {% if expect_image != blank %}
+                  {{
+                    expect_image
+                    | image_url: width: 720
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '260, 360, 540, 720',
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+                      alt: block.settings.heading
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+                {% endif %}
+              </div>
+              <div class="epf-story__card-body">
+                <p class="epf-story__step-kicker">{{ block.settings.kicker }}</p>
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
 
-      <div class="epf-story__expect-cta">
-        <a class="epf-story__button epf-story__button--primary" href="#MainProduct-offer_main">
-          Start your confidence routine now
-        </a>
-      </div>
+      {% if section.settings.expect_cta_label != blank %}
+        <div class="epf-story__expect-cta">
+          <a class="epf-story__button epf-story__button--primary" href="{{ section.settings.expect_cta_link | default: '#MainProduct-offer_main' }}">
+            {{ section.settings.expect_cta_label | replace: '[product_title]', product.title }}
+          </a>
+        </div>
+      {% endif %}
     </div>
 
     <div class="epf-story__section">
       <div class="epf-story__results">
         <div class="epf-story__results-visual">
-          {% if hero_media != blank %}
+          {% if results_image != blank %}
             {{
-              hero_media.preview_image
+              results_image
               | image_url: width: 900
               | image_tag:
                 loading: 'lazy',
@@ -1025,29 +1024,24 @@
         </div>
 
         <div class="epf-story__content">
-          <h2>Results That Matter</h2>
-          <p>
-            The goal isn't perfection. It's building the kind of support that helps you move, laugh, train, travel,
-            and show up without constantly thinking about it.
-          </p>
+          <h2>{{ section.settings.results_heading | replace: '[product_title]', product.title }}</h2>
+          {% if section.settings.results_body != blank %}
+            <p>
+              {{ section.settings.results_body | replace: '[product_title]', product.title | newline_to_br }}
+            </p>
+          {% endif %}
 
           <div class="epf-story__metric-list">
-            <div class="epf-story__metric">
-              <span class="epf-story__metric-icon">&#10003;</span>
-              <p class="epf-story__metric-copy">Feel more supported during daily pressure moments like coughing or laughing.</p>
-            </div>
-            <div class="epf-story__metric">
-              <span class="epf-story__metric-icon">&#10003;</span>
-              <p class="epf-story__metric-copy">Improve body awareness so consistency feels easier and less forced.</p>
-            </div>
-            <div class="epf-story__metric">
-              <span class="epf-story__metric-icon">&#10003;</span>
-              <p class="epf-story__metric-copy">Pair better with movement, posture work, walking, and gentle strength training.</p>
-            </div>
-            <div class="epf-story__metric">
-              <span class="epf-story__metric-icon">&#10003;</span>
-              <p class="epf-story__metric-copy">Build quiet confidence from the comfort and privacy of home.</p>
-            </div>
+            {% for block in section.blocks %}
+              {% if block.type == 'result_metric' %}
+                <div class="epf-story__metric" {{ block.shopify_attributes }}>
+                  <span class="epf-story__metric-icon">&#10003;</span>
+                  <p class="epf-story__metric-copy">
+                    {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
+                  </p>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -1055,168 +1049,105 @@
 
     <div class="epf-story__section">
       <div class="epf-story__section-header">
-        <h2>20 Minutes a Day to Get Your Confidence Back</h2>
+        <h2>{{ section.settings.journey_heading | replace: '[product_title]', product.title }}</h2>
       </div>
 
       <div class="epf-story__journey-grid">
-        <article class="epf-story__journey-card">
-          <div class="epf-story__journey-media">
-            {% if journey_media_1 != blank %}
-              {{
-                journey_media_1.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+        {% assign journey_index = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'journey_card' %}
+            {% assign journey_index = journey_index | plus: 1 %}
+            {% assign journey_image = block.settings.image %}
+            {% if journey_image == blank %}
+              {% case journey_index %}
+                {% when 1 %}
+                  {% if journey_media_1 != blank %}{% assign journey_image = journey_media_1.preview_image %}{% endif %}
+                {% when 2 %}
+                  {% if journey_media_2 != blank %}{% assign journey_image = journey_media_2.preview_image %}{% endif %}
+                {% when 3 %}
+                  {% if journey_media_3 != blank %}{% assign journey_image = journey_media_3.preview_image %}{% endif %}
+              {% endcase %}
             {% endif %}
-          </div>
-          <div class="epf-story__journey-body">
-            <p class="epf-story__journey-kicker">10 min</p>
-            <h3>Wake up your deep core</h3>
-            <p>Start with a short routine that helps you reconnect with the muscles most women lose track of first.</p>
-          </div>
-        </article>
-
-        <article class="epf-story__journey-card">
-          <div class="epf-story__journey-media">
-            {% if journey_media_2 != blank %}
-              {{
-                journey_media_2.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__journey-body">
-            <p class="epf-story__journey-kicker">15 min</p>
-            <h3>Build steadier control</h3>
-            <p>Consistency starts showing up in errands, workouts, and the little moments where support matters most.</p>
-          </div>
-        </article>
-
-        <article class="epf-story__journey-card">
-          <div class="epf-story__journey-media">
-            {% if journey_media_3 != blank %}
-              {{
-                journey_media_3.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__journey-body">
-            <p class="epf-story__journey-kicker">20 min</p>
-            <h3>Move with confidence</h3>
-            <p>Stack small sessions over time and give yourself a more supported, less stressful day-to-day rhythm.</p>
-          </div>
-        </article>
+            <article class="epf-story__journey-card" {{ block.shopify_attributes }}>
+              <div class="epf-story__journey-media">
+                {% if journey_image != blank %}
+                  {{
+                    journey_image
+                    | image_url: width: 720
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '260, 360, 540, 720',
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+                      alt: block.settings.heading
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+                {% endif %}
+              </div>
+              <div class="epf-story__journey-body">
+                <p class="epf-story__journey-kicker">{{ block.settings.kicker }}</p>
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
 
-      <div class="epf-story__journey-cta">
-        <a class="epf-story__button epf-story__button--secondary" href="#epf-questions">Still have questions?</a>
-      </div>
+      {% if section.settings.journey_cta_label != blank %}
+        <div class="epf-story__journey-cta">
+          <a class="epf-story__button epf-story__button--secondary" href="{{ section.settings.journey_cta_link | default: '#epf-questions' }}">
+            {{ section.settings.journey_cta_label | replace: '[product_title]', product.title }}
+          </a>
+        </div>
+      {% endif %}
     </div>
 
     <div class="epf-story__section">
       <div class="epf-story__section-header">
-        <h2>Women Just Like You Are Getting Their Lives Back</h2>
+        <h2>{{ section.settings.testimonials_heading | replace: '[product_title]', product.title }}</h2>
       </div>
 
       <div class="epf-story__voice-grid">
-        <article class="epf-story__voice-card">
-          <div class="epf-story__voice-media">
-            {% if voice_media_1 != blank %}
-              {{
-                voice_media_1.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: 'Review image 1'
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+        {% assign testimonial_index = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'testimonial' %}
+            {% assign testimonial_index = testimonial_index | plus: 1 %}
+            {% assign testimonial_image = block.settings.image %}
+            {% if testimonial_image == blank %}
+              {% case testimonial_index %}
+                {% when 1 %}
+                  {% if voice_media_1 != blank %}{% assign testimonial_image = voice_media_1.preview_image %}{% endif %}
+                {% when 2 %}
+                  {% if voice_media_2 != blank %}{% assign testimonial_image = voice_media_2.preview_image %}{% endif %}
+                {% when 3 %}
+                  {% if voice_media_3 != blank %}{% assign testimonial_image = voice_media_3.preview_image %}{% endif %}
+              {% endcase %}
             {% endif %}
-          </div>
-          <div class="epf-story__voice-body">
-            <div class="epf-story__voice-meta">Verified customer</div>
-            <h3>"I finally felt supported again."</h3>
-            <p>
-              "I wanted something I could use privately, consistently, and without overthinking it. This made the
-              routine feel manageable, and that changed everything."
-            </p>
-          </div>
-        </article>
-
-        <article class="epf-story__voice-card">
-          <div class="epf-story__voice-media">
-            {% if voice_media_2 != blank %}
-              {{
-                voice_media_2.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: 'Review image 2'
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__voice-body">
-            <div class="epf-story__voice-meta">Verified customer</div>
-            <h3>"I can laugh harder and worry less."</h3>
-            <p>
-              "The biggest shift wasn't overnight. It was realizing that 20 minutes a day was finally something I could
-              keep doing."
-            </p>
-          </div>
-        </article>
-
-        <article class="epf-story__voice-card">
-          <div class="epf-story__voice-media">
-            {% if voice_media_3 != blank %}
-              {{
-                voice_media_3.preview_image
-                | image_url: width: 720
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '260, 360, 540, 720',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: 'Review image 3'
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__voice-body">
-            <div class="epf-story__voice-meta">Verified customer</div>
-            <h3>"The routine finally clicked."</h3>
-            <p>
-              "I had tried to piece everything together on my own. This made the process feel clear, calm, and worth
-              sticking with."
-            </p>
-          </div>
-        </article>
+            <article class="epf-story__voice-card" {{ block.shopify_attributes }}>
+              <div class="epf-story__voice-media">
+                {% if testimonial_image != blank %}
+                  {{
+                    testimonial_image
+                    | image_url: width: 720
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '260, 360, 540, 720',
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+                      alt: block.settings.heading
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+                {% endif %}
+              </div>
+              <div class="epf-story__voice-body">
+                <div class="epf-story__voice-meta">{{ block.settings.meta | replace: '[product_title]', product.title }}</div>
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -1245,6 +1176,426 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 44
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Eyebrow",
+      "default": "Clinically inspired home wellness"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Heading",
+      "default": "Electric pelvic floor support for women who want confidence back."
+    },
+    {
+      "type": "textarea",
+      "id": "hero_lead",
+      "label": "Lead",
+      "default": "Designed for women rebuilding confidence after stress, childbirth, or years of feeling disconnected from their core. This quiet at-home routine helps you stay consistent without adding another complicated habit."
+    },
+    {
+      "type": "text",
+      "id": "hero_primary_label",
+      "label": "Primary button label",
+      "default": "Try your pelvic floor routine today"
+    },
+    {
+      "type": "text",
+      "id": "hero_primary_link",
+      "label": "Primary button link",
+      "default": "#MainProduct-offer_main"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_label",
+      "label": "Secondary button label",
+      "default": "See what to expect"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_link",
+      "label": "Secondary button link",
+      "default": "#epf-what-to-expect"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_proof_copy",
+      "label": "Proof copy",
+      "default": "4.8/5 from women using at-home support to rebuild consistency, tone awareness, and everyday confidence."
+    },
+    {
+      "type": "text",
+      "id": "hero_chip_top",
+      "label": "Top image chip",
+      "default": "Quiet 20-minute sessions that fit real life."
+    },
+    {
+      "type": "text",
+      "id": "hero_chip_bottom",
+      "label": "Bottom image chip",
+      "default": "Comfort-first design for everyday confidence."
+    },
+    {
+      "type": "header",
+      "content": "Featured Logos"
+    },
+    {
+      "type": "text",
+      "id": "featured_label",
+      "label": "Featured label",
+      "default": "As seen in"
+    },
+    {
+      "type": "header",
+      "content": "Problem"
+    },
+    {
+      "type": "image_picker",
+      "id": "problem_image",
+      "label": "Problem image"
+    },
+    {
+      "type": "textarea",
+      "id": "problem_heading",
+      "label": "Heading",
+      "default": "The Problem Isn't Your Age. It's the Missing Building Blocks."
+    },
+    {
+      "type": "textarea",
+      "id": "problem_body",
+      "label": "Body",
+      "default": "Most women are told to \"just do Kegels,\" then left to guess whether anything is actually changing. But tone, coordination, and consistency are built together, not one cue at a time."
+    },
+    {
+      "type": "text",
+      "id": "problem_bar_label_1",
+      "label": "Bar label 1",
+      "default": "Tone"
+    },
+    {
+      "type": "text",
+      "id": "problem_bar_label_2",
+      "label": "Bar label 2",
+      "default": "Control"
+    },
+    {
+      "type": "text",
+      "id": "problem_bar_label_3",
+      "label": "Bar label 3",
+      "default": "Confidence"
+    },
+    {
+      "type": "text",
+      "id": "problem_tendon_heading",
+      "label": "Support card heading",
+      "default": "Deep core support"
+    },
+    {
+      "type": "textarea",
+      "id": "problem_tendon_copy",
+      "label": "Support card copy",
+      "default": "Better routines happen when awareness, consistency, and comfort build together instead of competing with each other."
+    },
+    {
+      "type": "header",
+      "content": "Introduction"
+    },
+    {
+      "type": "image_picker",
+      "id": "intro_image",
+      "label": "Introduction image"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_heading",
+      "label": "Heading",
+      "default": "Introducing the [product_title]"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_body",
+      "label": "Body",
+      "default": "Our routine is designed to help women reconnect with the support system behind better bladder confidence, steadier movement, and more trust in their body."
+    },
+    {
+      "type": "header",
+      "content": "What To Expect"
+    },
+    {
+      "type": "text",
+      "id": "expect_heading",
+      "label": "Heading",
+      "default": "What to Expect"
+    },
+    {
+      "type": "text",
+      "id": "expect_cta_label",
+      "label": "Button label",
+      "default": "Start your confidence routine now"
+    },
+    {
+      "type": "text",
+      "id": "expect_cta_link",
+      "label": "Button link",
+      "default": "#MainProduct-offer_main"
+    },
+    {
+      "type": "header",
+      "content": "Results"
+    },
+    {
+      "type": "image_picker",
+      "id": "results_image",
+      "label": "Results image"
+    },
+    {
+      "type": "text",
+      "id": "results_heading",
+      "label": "Heading",
+      "default": "Results That Matter"
+    },
+    {
+      "type": "textarea",
+      "id": "results_body",
+      "label": "Body",
+      "default": "The goal isn't perfection. It's building the kind of support that helps you move, laugh, train, travel, and show up without constantly thinking about it."
+    },
+    {
+      "type": "header",
+      "content": "Journey"
+    },
+    {
+      "type": "textarea",
+      "id": "journey_heading",
+      "label": "Heading",
+      "default": "20 Minutes a Day to Get Your Confidence Back"
+    },
+    {
+      "type": "text",
+      "id": "journey_cta_label",
+      "label": "Button label",
+      "default": "Still have questions?"
+    },
+    {
+      "type": "text",
+      "id": "journey_cta_link",
+      "label": "Button link",
+      "default": "#epf-questions"
+    },
+    {
+      "type": "header",
+      "content": "Testimonials"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonials_heading",
+      "label": "Heading",
+      "default": "Women Just Like You Are Getting Their Lives Back"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero_check",
+      "name": "Hero Check",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Supports daily pelvic floor activation in just 20 minutes."
+        }
+      ]
+    },
+    {
+      "type": "featured_logo",
+      "name": "Featured Logo",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "NBC"
+        }
+      ]
+    },
+    {
+      "type": "problem_note",
+      "name": "Problem Note",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel connected to your deep core and pelvic floor."
+        }
+      ]
+    },
+    {
+      "type": "intro_side_feature",
+      "name": "Intro Side Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "At-home friendly"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Quiet, compact, and made to fit into a routine you can actually repeat."
+        }
+      ]
+    },
+    {
+      "type": "intro_feature",
+      "name": "Intro Feature",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "A"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Guided consistency"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Turns pelvic floor work into a repeatable routine instead of a guesswork reminder."
+        }
+      ]
+    },
+    {
+      "type": "expect_card",
+      "name": "Expect Card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Kicker",
+          "default": "Week 1"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Reconnect with the routine"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Short sessions help you build awareness and make the habit feel easy to repeat."
+        }
+      ]
+    },
+    {
+      "type": "result_metric",
+      "name": "Result Metric",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Feel more supported during daily pressure moments like coughing or laughing."
+        }
+      ]
+    },
+    {
+      "type": "journey_card",
+      "name": "Journey Card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Kicker",
+          "default": "10 min"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Wake up your deep core"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Start with a short routine that helps you reconnect with the muscles most women lose track of first."
+        }
+      ]
+    },
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "meta",
+          "label": "Meta",
+          "default": "Verified customer"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "\"I finally felt supported again.\""
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "\"I wanted something I could use privately, consistently, and without overthinking it. This made the routine feel manageable, and that changed everything.\""
+        }
+      ]
     }
   ],
   "presets": [

@@ -2,6 +2,257 @@
   "sections": {
     "epf_story": {
       "type": "epf-story",
+      "blocks": {
+        "hero_check_1": {
+          "type": "hero_check",
+          "settings": {
+            "text": "Supports daily pelvic floor activation in just 20 minutes."
+          }
+        },
+        "hero_check_2": {
+          "type": "hero_check",
+          "settings": {
+            "text": "Helps you feel more prepared for coughs, laughs, workouts, and long days."
+          }
+        },
+        "hero_check_3": {
+          "type": "hero_check",
+          "settings": {
+            "text": "Built for comfort-first use at home, even on busy schedules."
+          }
+        },
+        "hero_check_4": {
+          "type": "hero_check",
+          "settings": {
+            "text": "Easy to pair with your usual reset, stretch, or recovery routine."
+          }
+        },
+        "featured_logo_1": {
+          "type": "featured_logo",
+          "settings": {
+            "label": "NBC"
+          }
+        },
+        "featured_logo_2": {
+          "type": "featured_logo",
+          "settings": {
+            "label": "ABC"
+          }
+        },
+        "featured_logo_3": {
+          "type": "featured_logo",
+          "settings": {
+            "label": "CBS"
+          }
+        },
+        "featured_logo_4": {
+          "type": "featured_logo",
+          "settings": {
+            "label": "FOX"
+          }
+        },
+        "featured_logo_5": {
+          "type": "featured_logo",
+          "settings": {
+            "label": "Wellness"
+          }
+        },
+        "problem_note_1": {
+          "type": "problem_note",
+          "settings": {
+            "text": "Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel connected to your deep core and pelvic floor."
+          }
+        },
+        "problem_note_2": {
+          "type": "problem_note",
+          "settings": {
+            "text": "When those building blocks are missing, women often notice less confidence during movement, exercise, or sudden pressure moments like laughing and sneezing."
+          }
+        },
+        "problem_note_3": {
+          "type": "problem_note",
+          "settings": {
+            "text": "A gentler, guided rhythm can be easier to stick with than trying to force results from willpower alone."
+          }
+        },
+        "intro_side_1": {
+          "type": "intro_side_feature",
+          "settings": {
+            "badge": "1",
+            "heading": "At-home friendly",
+            "text": "Quiet, compact, and made to fit into a routine you can actually repeat."
+          }
+        },
+        "intro_side_2": {
+          "type": "intro_side_feature",
+          "settings": {
+            "badge": "2",
+            "heading": "Comfort-first rhythm",
+            "text": "Built to feel approachable, even if you've struggled to stay consistent before."
+          }
+        },
+        "intro_feature_a": {
+          "type": "intro_feature",
+          "settings": {
+            "badge": "A",
+            "heading": "Guided consistency",
+            "text": "Turns pelvic floor work into a repeatable routine instead of a guesswork reminder."
+          }
+        },
+        "intro_feature_b": {
+          "type": "intro_feature",
+          "settings": {
+            "badge": "B",
+            "heading": "Home-based privacy",
+            "text": "Use it on your own schedule, without needing a clinic visit to get started."
+          }
+        },
+        "intro_feature_c": {
+          "type": "intro_feature",
+          "settings": {
+            "badge": "C",
+            "heading": "Gentle daily support",
+            "text": "Easy to pair with recovery, stretching, breathwork, or a simple evening reset."
+          }
+        },
+        "intro_feature_d": {
+          "type": "intro_feature",
+          "settings": {
+            "badge": "D",
+            "heading": "Confidence that compounds",
+            "text": "Small, repeated sessions help you build momentum you can actually feel over time."
+          }
+        },
+        "expect_1": {
+          "type": "expect_card",
+          "settings": {
+            "kicker": "Week 1",
+            "heading": "Reconnect with the routine",
+            "text": "Short sessions help you build awareness and make the habit feel easy to repeat."
+          }
+        },
+        "expect_2": {
+          "type": "expect_card",
+          "settings": {
+            "kicker": "Week 2",
+            "heading": "Feel steadier through the day",
+            "text": "Consistency starts turning into better control during movement, errands, and workdays."
+          }
+        },
+        "expect_3": {
+          "type": "expect_card",
+          "settings": {
+            "kicker": "Week 4+",
+            "heading": "Build confidence you can trust",
+            "text": "Many women notice the biggest shift when they stop skipping the routine and start stacking wins."
+          }
+        },
+        "result_1": {
+          "type": "result_metric",
+          "settings": {
+            "text": "Feel more supported during daily pressure moments like coughing or laughing."
+          }
+        },
+        "result_2": {
+          "type": "result_metric",
+          "settings": {
+            "text": "Improve body awareness so consistency feels easier and less forced."
+          }
+        },
+        "result_3": {
+          "type": "result_metric",
+          "settings": {
+            "text": "Pair better with movement, posture work, walking, and gentle strength training."
+          }
+        },
+        "result_4": {
+          "type": "result_metric",
+          "settings": {
+            "text": "Build quiet confidence from the comfort and privacy of home."
+          }
+        },
+        "journey_1": {
+          "type": "journey_card",
+          "settings": {
+            "kicker": "10 min",
+            "heading": "Wake up your deep core",
+            "text": "Start with a short routine that helps you reconnect with the muscles most women lose track of first."
+          }
+        },
+        "journey_2": {
+          "type": "journey_card",
+          "settings": {
+            "kicker": "15 min",
+            "heading": "Build steadier control",
+            "text": "Consistency starts showing up in errands, workouts, and the little moments where support matters most."
+          }
+        },
+        "journey_3": {
+          "type": "journey_card",
+          "settings": {
+            "kicker": "20 min",
+            "heading": "Move with confidence",
+            "text": "Stack small sessions over time and give yourself a more supported, less stressful day-to-day rhythm."
+          }
+        },
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "meta": "Verified customer",
+            "heading": "\"I finally felt supported again.\"",
+            "text": "\"I wanted something I could use privately, consistently, and without overthinking it. This made the routine feel manageable, and that changed everything.\""
+          }
+        },
+        "testimonial_2": {
+          "type": "testimonial",
+          "settings": {
+            "meta": "Verified customer",
+            "heading": "\"I can laugh harder and worry less.\"",
+            "text": "\"The biggest shift wasn't overnight. It was realizing that 20 minutes a day was finally something I could keep doing.\""
+          }
+        },
+        "testimonial_3": {
+          "type": "testimonial",
+          "settings": {
+            "meta": "Verified customer",
+            "heading": "\"The routine finally clicked.\"",
+            "text": "\"I had tried to piece everything together on my own. This made the process feel clear, calm, and worth sticking with.\""
+          }
+        }
+      },
+      "block_order": [
+        "hero_check_1",
+        "hero_check_2",
+        "hero_check_3",
+        "hero_check_4",
+        "featured_logo_1",
+        "featured_logo_2",
+        "featured_logo_3",
+        "featured_logo_4",
+        "featured_logo_5",
+        "problem_note_1",
+        "problem_note_2",
+        "problem_note_3",
+        "intro_side_1",
+        "intro_side_2",
+        "intro_feature_a",
+        "intro_feature_b",
+        "intro_feature_c",
+        "intro_feature_d",
+        "expect_1",
+        "expect_2",
+        "expect_3",
+        "result_1",
+        "result_2",
+        "result_3",
+        "result_4",
+        "journey_1",
+        "journey_2",
+        "journey_3",
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 44
@@ -256,6 +507,118 @@
     },
     "epf_support": {
       "type": "epf-support",
+      "blocks": {
+        "support_point_1": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "30-day confidence promise",
+            "text": "Try it in your home routine and make sure it feels right for you."
+          }
+        },
+        "support_point_2": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "Postpartum-friendly mindset",
+            "text": "Designed around gentler, consistency-first use instead of intensity."
+          }
+        },
+        "support_point_3": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "Discreet shipping",
+            "text": "Your order arrives privately so you can start with confidence."
+          }
+        },
+        "support_point_4": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "Made for real schedules",
+            "text": "Simple 20-minute sessions that fit mornings, evenings, or reset windows."
+          }
+        },
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "I've tried Kegels before. How is this different?",
+            "answer": "Most women don't need more reminders. They need a routine that feels easier to repeat. [product_title] is designed to make the habit feel more approachable, structured, and realistic at home.",
+            "open_by_default": false
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this a medical treatment?",
+            "answer": "No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.",
+            "open_by_default": false
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use it after childbirth?",
+            "answer": "Many women look for pelvic floor support after childbirth, but recovery is personal. If you're postpartum, we recommend following your provider's guidance on when to begin any new routine.",
+            "open_by_default": false
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How often should I use it?",
+            "answer": "The strongest results usually come from consistency, not marathon sessions. A simple, repeatable 20-minute rhythm tends to be easier to maintain than an all-or-nothing plan.",
+            "open_by_default": false
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it be discreet?",
+            "answer": "Yes. The routine is designed for private, at-home use, and orders are shipped discreetly so you can start without extra friction.",
+            "open_by_default": false
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if I've felt disconnected from this area for years?",
+            "answer": "That's exactly why consistency-first routines matter. Many women aren't starting from a lack of effort. They're starting from a lack of clarity, structure, and support.",
+            "open_by_default": false
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is [product_title] hard to fit into a busy schedule?",
+            "answer": "It shouldn't be. The routine is built around short, manageable sessions so you can fit it into mornings, evenings, or any reset window that already exists in your day.",
+            "open_by_default": false
+          }
+        },
+        "faq_8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if it doesn't feel like the right fit for me?",
+            "answer": "Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel aligned with your routine, you have a 30-day confidence promise to lean on.",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "support_point_1",
+        "support_point_2",
+        "support_point_3",
+        "support_point_4",
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
       "settings": {
         "padding_top": 24,
         "padding_bottom": 48
