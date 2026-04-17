@@ -1,0 +1,162 @@
+<div
+  {{ block.shopify_attributes }}
+  class="product__text-container product__text-container--left product__text-container--horizontal product__text-container--100% product__text-container--styling-container product__text-container--multiple product__text-container--grid-2x2 always-display product-benefits-grid {% if block.settings.enable_border %}product-benefits-grid--dashed{% endif %}{% if block.settings.precise_dashed %} product-benefits-grid--precise{% endif %}"
+  style="
+    --item-count: {{ block.settings.items_count }};
+    --mobile-text-size: {{ block.settings.mobile_text_size | divided_by: 10.0 }}rem;
+    --desktop-text-size: {{ block.settings.desktop_text_size | divided_by: 10.0 }}rem;
+    --icon-scale: {{ block.settings.icon_scale | default: 1 }};
+    --column-gap: {{ block.settings.column_gap | divided_by: 10.0 }}em;
+    --row-gap: {{ block.settings.row_gap | divided_by: 10.0 }}em;
+    --padding: {{ block.settings.container_padding | divided_by: 10.0 }}em;
+    --bg-color: {{ block.settings.bg_color }};
+    --corner-radius: {{ block.settings.corner_radius | divided_by: 10.0 }}em;
+    --border-size: {% if block.settings.enable_border %}{{ block.settings.border_width }}px{% else %}0px{% endif %};
+    --border-color: {{ block.settings.border_color }};
+    --dash-length: {{ block.settings.dash_length }}px;
+    --dash-gap: {{ block.settings.dash_gap }}px;
+    --margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;
+    --margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;
+  "
+>
+
+  {% assign text_color = block.settings.text_color %}
+  {% assign icon_color = block.settings.icon_color %}
+
+  {% if block.settings.items_count >= 1 %}
+    <p class="product__text product__text-left" style="--text-color:{{ text_color }};--icon-color:{{ icon_color }};">
+      <span class="material-icon material-symbols-outlined">{{ block.settings.icon_1 }}</span>
+      <span>{{ block.settings.text_1 }}</span>
+    </p>
+  {% endif %}
+
+  {% if block.settings.items_count >= 2 %}
+    <p class="product__text product__text-left" style="--text-color:{{ text_color }};--icon-color:{{ icon_color }};">
+      <span class="material-icon material-symbols-outlined">{{ block.settings.icon_2 }}</span>
+      <span>{{ block.settings.text_2 }}</span>
+    </p>
+  {% endif %}
+
+  {% if block.settings.items_count >= 3 %}
+    <p class="product__text product__text-left" style="--text-color:{{ text_color }};--icon-color:{{ icon_color }};">
+      <span class="material-icon material-symbols-outlined">{{ block.settings.icon_3 }}</span>
+      <span>{{ block.settings.text_3 }}</span>
+    </p>
+  {% endif %}
+
+  {% if block.settings.items_count >= 4 %}
+    <p class="product__text product__text-left" style="--text-color:{{ text_color }};--icon-color:{{ icon_color }};">
+      <span class="material-icon material-symbols-outlined">{{ block.settings.icon_4 }}</span>
+      <span>{{ block.settings.text_4 }}</span>
+    </p>
+  {% endif %}
+</div>
+
+<style>
+  .product-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--row-gap, 0.6em) var(--column-gap, 1.5em);
+    padding: calc(var(--padding, 0.6em));
+    background: var(--bg-color, transparent);
+    border-width: var(--border-size, 0px);
+    border-style: solid;
+    border-color: var(--border-color, transparent);
+    border-radius: calc(var(--corner-radius, 0px));
+    margin-top: var(--margin-top, 1.5rem);
+    margin-bottom: var(--margin-bottom, 1.5rem);
+  }
+  .product-benefits-grid--dashed {
+    border-style: dashed !important;
+  }
+  .product-benefits-grid--precise {
+    /* Gives control over dash length and gap via border-image */
+    border-style: solid !important;
+    border-image-slice: 1;
+    border-image-repeat: round;
+    border-image-source: repeating-linear-gradient(
+      90deg,
+      var(--border-color) 0,
+      var(--border-color) var(--dash-length),
+      transparent var(--dash-length),
+      transparent calc(var(--dash-length) + var(--dash-gap))
+    );
+  }
+  .product-benefits-grid .product__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    font-size: var(--mobile-text-size, 1.5rem);
+    color: var(--text-color, #121212);
+    margin: 0;
+  }
+  .product-benefits-grid .material-icon.material-symbols-outlined {
+    font-size: calc(var(--mobile-text-size, 1.5rem) * var(--icon-scale, 1));
+    line-height: 1;
+    color: var(--icon-color, #121212);
+  }
+  @media screen and (min-width: 990px) {
+    .product-benefits-grid .product__text {
+      font-size: var(--desktop-text-size, 1.6rem);
+    }
+    .product-benefits-grid .material-icon.material-symbols-outlined {
+      font-size: calc(var(--desktop-text-size, 1.6rem) * var(--icon-scale, 1));
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product benefits grid",
+  "settings": [
+    { "type": "range", "id": "items_count", "label": "Items count", "min": 1, "max": 4, "step": 1, "default": 4 },
+
+    { "type": "header", "content": "Item #1" },
+    { "type": "text", "id": "icon_1", "label": "Icon name", "default": "verified" },
+    { "type": "text", "id": "text_1", "label": "Text", "default": "Benefit/Feature 1" },
+
+    { "type": "header", "content": "Item #2" },
+    { "type": "text", "id": "icon_2", "label": "Icon name", "default": "self_care" },
+    { "type": "text", "id": "text_2", "label": "Text", "default": "Benefit/Feature 2" },
+
+    { "type": "header", "content": "Item #3" },
+    { "type": "text", "id": "icon_3", "label": "Icon name", "default": "spa" },
+    { "type": "text", "id": "text_3", "label": "Text", "default": "Benefit/Feature 3" },
+
+    { "type": "header", "content": "Item #4" },
+    { "type": "text", "id": "icon_4", "label": "Icon name", "default": "mood" },
+    { "type": "text", "id": "text_4", "label": "Text", "default": "Benefit/Feature 4" },
+
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#121212" },
+    { "type": "color", "id": "icon_color", "label": "Icon color", "default": "#121212" },
+    { "type": "color", "id": "bg_color", "label": "Background color", "default": "#f3f3f3" },
+
+    { "type": "header", "content": "Border" },
+    { "type": "checkbox", "id": "enable_border", "label": "Enable dashed border", "default": false },
+    { "type": "color", "id": "border_color", "label": "Border color", "default": "#b7b7b7" },
+    { "type": "range", "id": "border_width", "label": "Border width", "min": 0, "max": 10, "step": 1, "unit": "px", "default": 1 },
+    { "type": "range", "id": "corner_radius", "label": "Corner radius", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 6 },
+    { "type": "checkbox", "id": "precise_dashed", "label": "Use precise dashed control", "default": false },
+    { "type": "range", "id": "dash_length", "label": "Dash length", "min": 1, "max": 20, "step": 1, "unit": "px", "default": 6 },
+    { "type": "range", "id": "dash_gap", "label": "Dash gap", "min": 1, "max": 20, "step": 1, "unit": "px", "default": 6 },
+
+    { "type": "header", "content": "Typography & layout" },
+    { "type": "range", "id": "mobile_text_size", "label": "Mobile text size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "desktop_text_size", "label": "Desktop text size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "icon_scale", "label": "Icon scale", "min": 0.5, "max": 2.5, "step": 0.1, "default": 1.5 },
+    { "type": "range", "id": "column_gap", "label": "Column gap", "min": 5, "max": 30, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "row_gap", "label": "Row gap", "min": 5, "max": 30, "step": 1, "unit": "px", "default": 6 },
+    { "type": "range", "id": "container_padding", "label": "Container padding", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 6 },
+
+    { "type": "header", "content": "Margins" },
+    { "type": "range", "id": "margin_top", "label": "Top", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "margin_bottom", "label": "Bottom", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 15 }
+  ],
+  "presets": [
+    { "name": "Product benefits grid", "category": "Product" }
+  ]
+}
+{% endschema %}
+
+

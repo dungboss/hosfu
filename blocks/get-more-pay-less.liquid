@@ -1,0 +1,187 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div class="get-more-offer-product__block get-more-offer-product__block-discount get-more-offer-product-discount" style="--PBB:12px;">
+  <div class="get-more-offer-product-discount__line get-more-offer-product-discount__line-top">
+
+    <h3 class="get-more-offer-product-discount__line-title">{{block.settings.headline }}</h3>
+
+    <p class="get-more-offer-product-discount__line-price get-more-offer-discount-line__price">
+
+      <span class="get-more-offer-discount-line__price-regular">{{block.settings.regprice }}</span>
+
+      <span class="get-more-offer-discount-line__price-compare">{{block.settings.compareprice }}</span>
+
+    </p>
+
+  </div>
+  <div class="get-more-offer-product-discount__line product-discount__line-bottom">
+
+    <p class="get-more-offer-product-discount__line-subtitle">{{block.settings.subheadline }}</p>
+
+    <p class="get-more-offer-product-discount__line-save">{{block.settings.savetext }}</p>
+
+  </div>
+</div>
+</div>
+
+
+<style>
+.get-more-offer-product-discount {
+    padding: 12px 8px;  
+    width: auto;
+    background: {{block.settings.paylessbackground }};  
+    border-radius: 8px; 
+    margin-top: 20px;  
+    margin-bottom: 20px;  
+}
+.get-more-offer-product-discount__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.get-more-offer-product-discount__line-title {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;  
+    font-weight: 600;  
+    line-height: 22px; 
+}
+.get-more-offer-discount-line__price {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;  
+    font-size: 15px;  
+    line-height: 22px;  
+}
+.get-more-offer-discount-line__price-regular {
+    font-weight: 700;
+    color: {{block.settings.paylesspricecolor }};  
+}
+.get-more-offer-discount-line__price-compare {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #9e9e9e;
+}
+.get-more-offer-discount-line__price-compare {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #9e9e9e;
+}
+.get-more-offer-product-discount__line-subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: {{block.settings.subheadlinetext }};  
+}
+.get-more-offer-product-discount__line-save {
+    margin: 0;
+    padding: 0;
+    color: #292929;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "Get More Pay Less",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Buy 2 Get 1 FREE"
+    },
+    {
+      "type": "text",
+      "id": "regprice",
+      "label": "Regular price",
+      "default": "$29.99"
+    },
+    {
+      "type": "text",
+      "id": "compareprice",
+      "label": "Compare price",
+      "default": "$39.99"
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "Sub headline",
+      "default": "Limited time offer"
+    },
+    {
+      "type": "text",
+      "id": "savetext",
+      "label": "Save text",
+      "default": "Save $10"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "paylessbackground",
+      "label": "Background color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "paylesspricecolor",
+      "label": "Price color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "subheadlinetext",
+      "label": "Sub headline text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Get More Pay Less",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

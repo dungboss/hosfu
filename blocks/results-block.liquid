@@ -1,0 +1,194 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+  <div class="results__row" style="border: 0px!important;">
+                <div class="results__percentage2 results_block" style="--percentage: {{ block.settings.percentage }}%">
+                  <p>{{ block.settings.percentage }}%</p>
+                </div>
+                <div class="results__text">
+                  {{ block.settings.row_text }}
+                </div>
+              </div>
+
+              </div>
+
+
+<style>
+.results__percentage2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  z-index: -2;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgb(var(--color-base-accent-2)) 0%,
+    rgb(var(--color-base-accent-2)) var(--percentage),
+    rgb(var(--color-background)) var(--percentage),
+    rgb(var(--color-background)) 100%
+  );
+}
+.color-accent-1 .results__percentage2::before,
+.color-accent-2 .results__percentage2::before {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgb(var(--color-foreground)) 0%,
+    rgb(var(--color-foreground)) var(--percentage),
+    rgb(var(--color-background)) var(--percentage),
+    rgb(var(--color-background)) 100%
+  );
+}
+  .percentages-and-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+.percentages-and-content--no-content {
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (max-width: 899px) {
+  .percentages-and-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .percentages-and-content--results-first .results-container {
+    order: -1;
+  }
+}
+.results-container .title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.percentages-and-content .content-container {
+  width: 100%;
+}
+.percentages-and-content__image {
+  max-width: 60rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.results__rows-container {
+  margin-bottom: 1rem;
+}
+.results__percentage2 {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  --border-width: 0.7rem;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  z-index: 0;
+}
+
+.results__percentage2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  bottom: var(--border-width);
+  right: var(--border-width);
+  border-radius: 50%;
+  z-index: -1;
+  background: rgb(var(--color-background));
+}
+.results__percentage2 p {
+  margin: 0;
+  color: rgb(var(--color-base-accent-1));
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.color-accent-1 .results__percentage2 p,
+.color-accent-2 .results__percentage2 p {
+  color: rgb(var(--color-foreground));
+}
+.results__row {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(var(--color-foreground), 0.05);
+}
+.results__row:first-of-type {
+  border-top: 2px solid rgba(var(--color-foreground), 0.05);
+}
+.results__text p {
+  margin: 0;
+}
+.results__caption p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Results Block",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "range",
+      "id": "percentage",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Percentage",
+      "default": 95
+    },
+    {
+      "type": "richtext",
+      "id": "row_text",
+      "label": "Result text",
+      "default": "<p>Customer satisfaction rate</p>"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Results Block",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

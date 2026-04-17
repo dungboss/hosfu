@@ -1,0 +1,51 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem; --margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div class="customproductStats" style="margin-top:15px;">
+  <div class="customproductStatsLeft">
+    <img src="{{ block.settings.image_url | img_url: '300x' }}" style="max-width: {{ block.settings.image_width }}px;">
+  </div>
+  <div class="customproductStatsRight" style="font-weight: {{ block.settings.font_weight | escape }}; font-size: {{ block.settings.font_size }}px;">
+    {{ block.settings.stats_text }}
+  </div>
+</div>
+
+</div>
+
+
+<style>
+.customproductStatsLeft {
+  margin-right: 16px;
+}
+.customproductStatsLeft img {
+  display: block;
+}
+.customproductStatsRight {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.customproductStats {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+}
+
+
+
+
+  @media screen and (max-width: 849px) {
+
+.customproductStats {
+  justify-content: center;
+}
+
+}
+</style>
+
+

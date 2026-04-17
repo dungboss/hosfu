@@ -1,0 +1,123 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+  <div class="quote-info">
+    <p>{{ block.settings.quotetext }}</p>
+    <img src="{{block.settings.quoteimage | img_url: 'master'}}" width="200">
+  </div>
+</div>
+
+<style>
+  .quote-info img {
+    max-width: {{block.settings.quoteimagewidth}}px;
+  }
+  .quote-info {
+    display: flex;
+    align-items: center;
+  }
+  .quote-info p {
+    margin: 0;
+  }
+  .quote-info p {
+    flex: 1;
+    font-size: 15px;
+    color: #000;
+  }
+  .quote-info {
+    align-items: center;
+  }
+  @media screen and (min-width: 750px) {
+    body .quote-info p {
+      font-size: 15px;
+      color: #000;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+  }
+  @media (max-width: 767px) {
+    body .quote-info p {
+      flex: 1;
+      font-size: 15px;
+      color: #000;
+      font-style: italic;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+    body .quote-info img {
+      max-width: {{block.settings.quoteimagewidth}}px;
+    }
+    body .quote-info {
+      display: flex;
+      align-items: center;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Social Proof Quote",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "quotetext",
+      "label": "Quote text",
+      "default": "<p>\"This product changed my life! Highly recommend to everyone.\"</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "quoteimage",
+      "label": "Quote image"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "range",
+      "id": "quoteimagewidth",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Image width",
+      "default": 200
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Proof Quote",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

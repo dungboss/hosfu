@@ -1,0 +1,263 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div id="locationinfop" class="free-shipping" style="text-align:center;font-size:{{block.settings.geolocationtextsize}}px;"></div>
+
+</div>
+
+<script>
+
+
+  // A mapping of country codes to flag emojis (using Unicode flag characters)
+const countryFlags = {
+    'US': '🇺🇸',
+    'CA': '🇨🇦',
+    'FR': '🇫🇷',
+    'NL': '🇳🇱',
+    'DE': '🇩🇪',
+    'GB': '🇬🇧',
+    'IT': '🇮🇹',
+    'ES': '🇪🇸',
+    'CN': '🇨🇳',
+    'JP': '🇯🇵',
+    'BR': '🇧🇷',
+    'IN': '🇮🇳',
+    'RU': '🇷🇺',
+    'ZA': '🇿🇦',
+    'AU': '🇦🇺',
+    'NZ': '🇳🇿',
+    'MX': '🇲🇽',
+    'AR': '🇦🇷',
+    'CL': '🇨🇱',
+    'CO': '🇨🇴',
+    'PE': '🇵🇪',
+    'VE': '🇻🇪',
+    'EC': '🇪🇨',
+    'GT': '🇬🇹',
+    'HN': '🇭🇳',
+    'SA': '🇸🇦',
+    'AE': '🇦🇪',
+    'TR': '🇹🇷',
+    'TH': '🇹🇭',
+    'MY': '🇲🇾',
+    'SG': '🇸🇬',
+    'ID': '🇮🇩',
+    'PH': '🇵🇭',
+    'VN': '🇻🇳',
+    'KR': '🇰🇷',
+    'KP': '🇰🇵',
+    'SE': '🇸🇪',
+    'NO': '🇳🇴',
+    'FI': '🇫🇮',
+    'DK': '🇩🇰',
+    'IS': '🇮🇸',
+    'IE': '🇮🇪',
+    'CH': '🇨🇭',
+    'PT': '🇵🇹',
+    'BE': '🇧🇪',
+    'LU': '🇱🇺',
+    'PL': '🇵🇱',
+    'CZ': '🇨🇿',
+    'SK': '🇸🇰',
+    'HU': '🇭🇺',
+    'AT': '🇦🇹',
+    'LI': '🇱🇮',
+    'GR': '🇬🇷',
+    'BG': '🇧🇬',
+    'RO': '🇷🇴',
+    'UA': '🇺🇦',
+    'BY': '🇧🇾',
+    'LT': '🇱🇹',
+    'LV': '🇱🇻',
+    'EE': '🇪🇪',
+    'MD': '🇲🇩',
+    'AM': '🇦🇲',
+    'GE': '🇬🇪',
+    'AZ': '🇦🇿',
+    'IR': '🇮🇷',
+    'IQ': '🇮🇶',
+    'SY': '🇸🇾',
+    'LB': '🇱🇧',
+    'JO': '🇯🇴',
+    'IL': '🇮🇱',
+    'EG': '🇪🇬',
+    'MA': '🇲🇦',
+    'DZ': '🇩🇿',
+    'TN': '🇹🇳',
+    'LY': '🇱🇾',
+    'GM': '🇬🇲',
+    'SN': '🇸🇳',
+    'MR': '🇲🇷',
+    'ML': '🇲🇱',
+    'GN': '🇬🇳',
+    'CI': '🇨🇮',
+    'BF': '🇧🇫',
+    'NE': '🇳🇪',
+    'TG': '🇹🇬',
+    'BJ': '🇧🇯',
+    'NG': '🇳🇬',
+    'CM': '🇨🇲',
+    'GA': '🇬🇦',
+    'CG': '🇨🇬',
+    'CD': '🇨🇩',
+    'AO': '🇦🇴',
+    'GW': '🇬🇼',
+    'SC': '🇸🇨',
+    'SD': '🇸🇩',
+    'RW': '🇷🇼',
+    'ET': '🇪🇹',
+    'SO': '🇸🇴',
+    'DJ': '🇩🇯',
+    'KE': '🇰🇪',
+    'TZ': '🇹🇿',
+    'UG': '🇺🇬',
+    'BI': '🇧🇮',
+    'MZ': '🇲🇿',
+    'ZM': '🇿🇲',
+    'MW': '🇲🇼',
+    'LS': '🇱🇸',
+    'BW': '🇧🇼',
+    'NA': '🇳🇦',
+    'ZA': '🇿🇦',
+    'SZ': '🇸🇿',
+    'HK': '🇭🇰',
+    'PK': '🇵🇰'
+    // Add more country code mappings here
+};
+
+function setLocationInfo(countryCode, countryName) {
+    const flagEmoji = countryFlags[countryCode]; // Get the flag emoji using the country code
+    const locationInfoP = document.getElementById('locationinfop');
+    const locationInfoCart = document.getElementById('locationinfocart');
+
+    // Check if the flagEmoji exists. If it does, prepend it to the message
+    const shippingMessage = flagEmoji
+        ? `${flagEmoji} | <span>{{block.settings.geolocationtext}}</span> <span style="text-decoration: {{block.settings.geolocationtextdecoration}}; color: black;font-weight:bold;">${countryName}</span>`
+        : `📦 | <span>{{block.settings.geolocationtext}}</span> <span style="text-decoration: {{block.settings.geolocationtextdecoration}}; color: black;font-weight:bold;">${countryName}</span>`;
+
+    const shippingMessageCart = flagEmoji
+        ? `to ${flagEmoji} ${countryCode}`
+        : `to ${countryCode}`;
+
+    if (locationInfoP) {
+        locationInfoP.innerHTML = shippingMessage;
+    }
+    if (locationInfoCart) {
+      //  locationInfoCart.innerHTML = shippingMessageCart;
+    }
+}
+
+// This function fetches the browsing context suggestions and updates the p tag
+async function fetchLocationInfo() {
+    try {
+        const response = await fetch('/browsing_context_suggestions.json');
+        const data = await response.json();
+        // Use the detected country code and country name from the response
+        const countryCode = data.detected_values.country.handle;
+        const countryName = data.detected_values.country.name;
+        
+        // Update the location info p tag with the country name and flag emoji
+        setLocationInfo(countryCode, countryName);
+    } catch (error) {
+        console.error('Error fetching location info:', error);
+    }
+}
+
+// Call the function to fetch location info on DOM content load
+document.addEventListener('DOMContentLoaded', (event) => {
+    fetchLocationInfo();
+});
+
+document.addEventListener('cart:change', function(event) {
+    fetchLocationInfo();
+});
+
+
+
+  
+</script>
+
+{% schema %}
+{
+  "name": "Geo Location Flag",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "geolocationtext",
+      "label": "Location text",
+      "default": "Shipping to"
+    },
+    {
+      "type": "select",
+      "id": "geolocationtextdecoration",
+      "label": "Text decoration",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "underline",
+          "label": "Underline"
+        },
+        {
+          "value": "line-through",
+          "label": "Line through"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "range",
+      "id": "geolocationtextsize",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Geo Location Flag",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

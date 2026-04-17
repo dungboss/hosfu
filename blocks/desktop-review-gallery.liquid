@@ -1,0 +1,215 @@
+<div class="no-mobile" style="margin-top:20px;">
+<div class="review-container" style="background-color: {{ block.settings.review_background_color }}; border-color: {{ block.settings.review_border_color }};">
+  <div class="review-header">
+    <div class="star-icons">
+      {% for i in (1..5) %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="{{ block.settings.star_color }}" class="r-1k4iehc" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+        </svg>
+      {% endfor %}
+    </div>
+    <div class="reviewer-info">
+      <div class="username" style="color: {{ block.settings.username_color }};">{{ block.settings.username }}</div>
+      {% if block.settings.verified_customer %}
+        <div class="verified-badge">
+          <svg class="verified-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="{{ block.settings.verified_icon_color }}">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </svg>
+          <span class="verified-text" style="color: {{ block.settings.verified_text_color }};">{{ block.settings.verified_text }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="review-text" style="color: {{ block.settings.review_text_color }};">{{ block.settings.review_text }}</div>
+</div>
+</div>
+
+
+<style>
+/* Review Container */
+.review-container {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  max-width: 100%;
+  align-self: stretch;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: {{ block.settings.review_background_color }};
+  border: 1px solid {{ block.settings.review_border_color }};
+}
+
+/* Review Header */
+.review-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Star Icons */
+.star-icons {
+  display: flex;
+  gap: 2px;
+}
+
+.star-icon {
+  fill: {{ block.settings.star_color }};
+  width: 18px;
+  height: 18px;
+}
+
+/* Reviewer Info */
+.reviewer-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Username */
+.username {
+  color: {{ block.settings.username_color }};
+  font-size: 16px;
+}
+
+/* Verified Badge */
+.verified-badge {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.verified-icon {
+  color: {{ block.settings.verified_icon_color }};
+  width: 13px;
+  height: 13px;
+}
+
+.verified-text {
+  color: {{ block.settings.verified_text_color }};
+  font-size: 12px;
+}
+
+/* Review Text */
+.review-text {
+  color: {{ block.settings.review_text_color }};
+  font-size: 17px;
+  line-height: 130%;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Desktop Review Gallery",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "username",
+      "label": "Username",
+      "default": "Sarah M."
+    },
+    {
+      "type": "richtext",
+      "id": "review_text",
+      "label": "Review text",
+      "default": "<p>Amazing product! Highly recommend it to everyone.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "verified_customer",
+      "label": "Show verified customer badge",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "verified_text",
+      "label": "Verified text",
+      "default": "Verified Purchase",
+      "visible_if": "{{ block.settings.verified_customer == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "review_background_color",
+      "label": "Background color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "review_border_color",
+      "label": "Border color",
+      "default": "#e9ecef"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#ffc107"
+    },
+    {
+      "type": "color",
+      "id": "username_color",
+      "label": "Username color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "verified_icon_color",
+      "label": "Verified icon color",
+      "default": "#28a745",
+      "visible_if": "{{ block.settings.verified_customer == true }}"
+    },
+    {
+      "type": "color",
+      "id": "verified_text_color",
+      "label": "Verified text color",
+      "default": "#28a745",
+      "visible_if": "{{ block.settings.verified_customer == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Desktop Review Gallery",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

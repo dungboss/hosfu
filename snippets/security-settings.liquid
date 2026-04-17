@@ -1,0 +1,325 @@
+{% comment %}
+  Security Settings Snippet
+  
+  This snippet handles all security-related functionality including:
+  - Country blocking/whitelisting
+  - Error message display for blocked countries
+  
+  Note: Disable inspect functionality is handled by the theme's built-in code
+  Usage: {% render 'security-settings' %}
+{% endcomment %}
+
+{% comment %} Country Blocker Functionality {% endcomment %}
+{% if settings.enable_country_blocker %}
+  <script>
+    (function() {
+      console.log('🔒 SECURITY SNIPPET LOADED - Country blocker initialized');
+      
+      // Debug: Log settings
+      console.log('Country blocker enabled:', {{ settings.enable_country_blocker | json }});
+      console.log('Country list function:', {{ settings.country_list_function | json }});
+      console.log('Country list:', {{ settings.country_list | strip | json }});
+      console.log('Error message:', {{ settings.country_invalid_error_msg | strip | json }});
+      console.log('Redirect URL:', {{ settings.country_redirect_url | json }});
+      console.log('Redirect delay:', {{ settings.country_redirect_delay | json }});
+      
+      // Function to get country code from IP
+      function getCountryCode() {
+        return new Promise((resolve, reject) => {
+          console.log('Fetching country code...');
+          
+          // Try multiple APIs for better reliability
+          const apis = [
+            'https://ipapi.co/json/',
+            'https://ipinfo.io/json',
+            'https://api.country.is/'
+          ];
+          
+          let currentApiIndex = 0;
+          
+          function tryNextApi() {
+            if (currentApiIndex >= apis.length) {
+              console.log('All APIs failed, allowing access');
+              resolve(null);
+              return;
+            }
+            
+            const apiUrl = apis[currentApiIndex];
+            console.log('Trying API:', apiUrl);
+            
+            fetch(apiUrl)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                console.log('API response:', data);
+                
+                // Handle different API response formats
+                let countryCode = null;
+                if (data.country_code) {
+                  countryCode = data.country_code;
+                } else if (data.country) {
+                  countryCode = data.country;
+                } else if (data.countryCode) {
+                  countryCode = data.countryCode;
+                }
+                
+                console.log('Detected country code:', countryCode);
+                resolve(countryCode);
+              })
+              .catch(error => {
+                console.error('API error:', error);
+                currentApiIndex++;
+                tryNextApi();
+              });
+          }
+          
+          tryNextApi();
+        });
+      }
+
+      // Function to check if country is blocked/allowed
+      function checkCountryAccess(countryCode) {
+        console.log('Checking access for country:', countryCode);
+        
+        if (!countryCode) {
+          console.log('No country code detected, allowing access');
+          return true; // Allow if no country detected
+        }
+        
+        const countryList = {{ settings.country_list | strip | json }};
+        console.log('Configured country list:', countryList);
+        
+        if (!countryList) {
+          console.log('No countries specified, allowing access');
+          return true; // Allow if no countries specified
+        }
+        
+        const countries = countryList.split(',').map(country => country.trim().toUpperCase());
+        const functionType = {{ settings.country_list_function | json }};
+        
+        console.log('Countries array:', countries);
+        console.log('Function type:', functionType);
+        
+        const countryCodeUpper = countryCode.toUpperCase();
+        console.log('Checking country:', countryCodeUpper);
+        
+        let hasAccess = true;
+        
+        if (functionType === 'block') {
+          // Block countries in the list
+          hasAccess = !countries.includes(countryCodeUpper);
+          console.log('Block mode - has access:', hasAccess);
+        } else if (functionType === 'whitelist') {
+          // Only allow countries in the list
+          hasAccess = countries.includes(countryCodeUpper);
+          console.log('Whitelist mode - has access:', hasAccess);
+        }
+        
+        return hasAccess;
+      }
+
+      // Function to show blocked message or redirect
+      function showBlockedMessage() {
+        console.log('Showing blocked message or redirecting');
+        
+        const redirectUrl = {{ settings.country_redirect_url | json }};
+        const redirectDelay = {{ settings.country_redirect_delay | json }} || 3;
+        
+        console.log('Redirect URL:', redirectUrl);
+        console.log('Redirect delay:', redirectDelay);
+        
+        // If redirect URL is provided, redirect immediately or after delay
+        if (redirectUrl && redirectUrl.trim() !== '') {
+          console.log('Redirecting to:', redirectUrl);
+          
+          if (redirectDelay === 0) {
+            // Immediate redirect
+            window.location.href = redirectUrl;
+            return;
+          } else {
+            // Show countdown message and redirect after delay
+            showRedirectCountdown(redirectUrl, redirectDelay);
+            return;
+          }
+        }
+        
+        // No redirect URL, show error message
+        console.log('No redirect URL, showing error message');
+        const errorMessage = {{ settings.country_invalid_error_msg | strip | json }};
+        console.log('Error message:', errorMessage);
+        
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'country-blocker-overlay';
+        overlay.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.95);
+          z-index: 999999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: Arial, sans-serif;
+        `;
+        
+        // Create message container
+        const messageContainer = document.createElement('div');
+        messageContainer.style.cssText = `
+          text-align: center;
+          max-width: 600px;
+          padding: 40px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        `;
+        
+        messageContainer.innerHTML = errorMessage;
+        overlay.appendChild(messageContainer);
+        
+        // Add to page
+        document.body.appendChild(overlay);
+        
+        // Prevent scrolling
+        document.body.style.overflow = 'hidden';
+        
+        // Prevent all interactions
+        overlay.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+        });
+        
+        overlay.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+        });
+        
+        console.log('Blocked message displayed');
+      }
+      
+      // Function to show countdown and redirect
+      function showRedirectCountdown(redirectUrl, delay) {
+        console.log('Showing redirect countdown');
+        
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'country-blocker-overlay';
+        overlay.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.95);
+          z-index: 999999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-family: Arial, sans-serif;
+        `;
+        
+        // Create countdown container
+        const countdownContainer = document.createElement('div');
+        countdownContainer.style.cssText = `
+          text-align: center;
+          max-width: 600px;
+          padding: 40px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        `;
+        
+        // Create countdown message
+        const countdownMessage = document.createElement('div');
+        countdownMessage.innerHTML = `
+          <h2>Redirecting...</h2>
+          <p>You will be redirected in <span id="countdown-timer">${delay}</span> seconds</p>
+          <p><a href="${redirectUrl}" style="color: #4CAF50; text-decoration: underline;">Click here to redirect now</a></p>
+        `;
+        
+        countdownContainer.appendChild(countdownMessage);
+        overlay.appendChild(countdownContainer);
+        
+        // Add to page
+        document.body.appendChild(overlay);
+        
+        // Prevent scrolling
+        document.body.style.overflow = 'hidden';
+        
+        // Start countdown
+        let remainingTime = delay;
+        const timerElement = document.getElementById('countdown-timer');
+        
+        const countdownInterval = setInterval(() => {
+          remainingTime--;
+          if (timerElement) {
+            timerElement.textContent = remainingTime;
+          }
+          
+          if (remainingTime <= 0) {
+            clearInterval(countdownInterval);
+            console.log('Countdown finished, redirecting to:', redirectUrl);
+            window.location.href = redirectUrl;
+          }
+        }, 1000);
+        
+        console.log('Redirect countdown started');
+      }
+
+      // Initialize country blocking
+      async function initCountryBlocker() {
+        try {
+          console.log('Initializing country blocker...');
+          
+          const countryCode = await getCountryCode();
+          const hasAccess = checkCountryAccess(countryCode);
+          
+          console.log('Final access decision:', hasAccess);
+          
+          if (!hasAccess) {
+            console.log('Access denied, showing blocked message');
+            showBlockedMessage();
+          } else {
+            console.log('Access granted');
+          }
+        } catch (error) {
+          console.error('Country blocker error:', error);
+          // Allow access if there's an error
+          console.log('Error occurred, allowing access');
+        }
+      }
+
+      // Run when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCountryBlocker);
+      } else {
+        initCountryBlocker();
+      }
+    })();
+  </script>
+{% else %}
+  <script>
+    console.log('🔒 SECURITY SNIPPET LOADED - Country blocker is disabled in theme settings');
+  </script>
+{% endif %}
+
+{% comment %} Additional Security Headers (for reference) {% endcomment %}
+{% comment %}
+  Add these headers to your theme's layout/theme.liquid file:
+  
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+{% endcomment %}

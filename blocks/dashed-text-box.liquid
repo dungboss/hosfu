@@ -1,0 +1,101 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+  
+<div class="sale-banner">
+  <p><strong>{{block.settings.headline}}</strong></p>
+  <p>{{block.settings.subheadline}}</p>
+</div>
+</div>
+<style>
+.sale-banner {
+  border: 2px dashed {{block.settings.bordercolor}};
+  padding: 14px;
+  background-color: {{block.settings.backgroundcolor}};
+  width: fit-content;
+  border-radius: 6px;
+}
+
+.sale-banner p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.sale-banner p strong {
+  font-size: 16px;
+  color: black;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Dashed Text Box",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "LIMITED TIME OFFER"
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "Sub headline",
+      "default": "Get 20% off your order today!"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "backgroundcolor",
+      "label": "Background color",
+      "default": "#fff3cd"
+    },
+    {
+      "type": "color",
+      "id": "bordercolor",
+      "label": "Border color",
+      "default": "#ffc107"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dashed Text Box",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

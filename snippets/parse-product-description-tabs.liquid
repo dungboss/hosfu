@@ -1,0 +1,65 @@
+{% comment %}
+  解析产品描述中的tabs内容 - JavaScript版本
+{% endcomment %}
+
+{% if product.description != blank %}
+  {% assign description = product.description %}
+  
+  {% comment %} 使用JavaScript解析 {% endcomment %}
+  <script>
+    (function() {
+      // 获取产品描述
+      var description = {{ description | json }};
+      
+      // 解析函数
+      function parseTabContent(description, tabTag) {
+        var startTag = '[' + tabTag + ']';
+        var endTag = '[/' + tabTag + ']';
+        
+        var startIndex = description.indexOf(startTag);
+        if (startIndex === -1) return '';
+        
+        var contentStart = startIndex + startTag.length;
+        var endIndex = description.indexOf(endTag, contentStart);
+        if (endIndex === -1) return '';
+        
+        return description.substring(contentStart, endIndex).trim();
+      }
+      
+      // 解析各个tab的内容
+      var tab1Content = parseTabContent(description, 'TAB1');
+      var tab2Content = parseTabContent(description, 'TAB2');
+      var tab3Content = parseTabContent(description, 'TAB3');
+      var tab4Content = parseTabContent(description, 'TAB4');
+      var tab5Content = parseTabContent(description, 'TAB5');
+      
+      // 更新tab内容
+      setTimeout(function() {
+        var tab1Element = document.getElementById('tab1');
+        var tab2Element = document.getElementById('tab2');
+        var tab3Element = document.getElementById('tab3');
+        var tab4Element = document.getElementById('tab4');
+        var tab5Element = document.getElementById('tab5');
+        
+        if (tab1Element && tab1Content) {
+          tab1Element.innerHTML = tab1Content;
+        }
+        if (tab2Element && tab2Content) {
+          tab2Element.innerHTML = tab2Content;
+        }
+        if (tab3Element && tab3Content) {
+          tab3Element.innerHTML = tab3Content;
+        }
+        if (tab4Element && tab4Content) {
+          tab4Element.innerHTML = tab4Content;
+        }
+        if (tab5Element && tab5Content) {
+          tab5Element.innerHTML = tab5Content;
+        }
+      }, 100);
+    })();
+  </script>
+{% endif %}
+
+
+

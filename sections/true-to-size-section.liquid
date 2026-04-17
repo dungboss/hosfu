@@ -1,0 +1,249 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+<div class="page-width fit-score-container section-{{ section.id }}-padding">
+  <div class="fit-score-chart">
+    <div class="fit-score-wrapper">
+      <p class="fit-score-title" style="font-size:{{ section.settings.titlesize }}px;">{{ section.settings.title }}</p>
+      <div class="fit-score-ruler">
+        <div class="ruler-line">
+          <div class="ruler-marking ruler-marking-left"><p></p></div>
+          <div class="ruler-marking ruler-marking-center"><p></p></div>
+          <div class="ruler-marking ruler-marking-right"><p></p></div>
+        </div>
+        <p class="fit-score-ruler-legend fit-score-ruler-legend-left">{{ section.settings.small }}</p>
+        <p class="fit-score-ruler-legend fit-score-ruler-legend-center">{{ section.settings.truetosize }}</p>
+        <p class="fit-score-ruler-legend fit-score-ruler-legend-right">{{ section.settings.large }}</p>
+        <div class="fit-score-knob" style="left: {{ section.settings.percentage }}%;"><p></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "True To Size Fit",
+    "settings": [
+
+
+
+       {
+      "type": "text",
+      "id": "title",
+      "default": "Size",
+      "label": "Heading title"
+    },
+       {
+      "type": "header",
+      "content": "Size fit percentage"
+    },
+       {
+          "type": "range",
+          "id": "percentage",
+          "min": 0,
+          "max": 100,
+          "default": 50,
+          "step": 5,
+          "label": "Size fit"
+        },
+
+ {
+          "type": "range",
+          "id": "titlesize",
+          "min": 15,
+          "max": 30,
+          "default": 20,
+          "step": 1,
+          "label": "Title font size"
+        },
+
+          {
+      "type": "text",
+      "id": "small",
+      "default": "Runs Small",
+      "label": "Small text"
+    },
+
+    {
+      "type": "text",
+      "id": "truetosize",
+      "default": "True to Size",
+      "label": "True to Size"
+    },
+
+          {
+      "type": "text",
+      "id": "large",
+      "default": "Runs Large",
+      "label": "Runs Large"
+    },
+          {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+
+],
+      "presets": [
+    {
+      "name": "True To Size Fit",
+      "blocks": [
+       
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+  }
+{% endschema %}
+
+
+
+
+<style>
+.typography-tertiary-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+  margin: 0px;
+  padding: 0px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .typography-tertiary-heading {
+    font-size: 22px;
+    line-height: 1.32;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .typography-tertiary-heading {
+    font-size: 22px;
+    line-height: 1.32;
+  }
+}
+.fit-score {
+  display: block;
+  padding-bottom: 42px;
+}
+.fit-score-ruler {
+  position: relative;
+}
+.ruler-line {
+  background-color: rgb(33, 42, 47);
+  height: 3px;
+  opacity: 0.15;
+}
+.ruler-marking {
+  background-color: rgb(33, 42, 47);
+  width: 3px;
+  height: 18px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+.ruler-marking-left {
+  left: 0%;
+}
+.ruler-marking-center {
+  left: 50%;
+}
+.ruler-marking-right {
+  left: 100%;
+}
+.fit-score-knob {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgb(33, 42, 47);
+  transform: translate(-50%, -50%);
+}
+.fit-score-title {
+  margin-bottom: 18px;
+}
+.fit-score-ruler-legend {
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 24px;
+}
+.fit-score-ruler-legend-left {
+  left: 0%;
+  text-align: left;
+}
+.fit-score-ruler-legend-center {
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+.fit-score-ruler-legend-right {
+  right: 0%;
+  text-align: right;
+}
+.fit-score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+.fit-score-chart {
+  width: 100%;
+  padding: 18px 24px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .fit-score-chart {
+    padding: 18px 280px 24px;
+  }
+}
+  
+  
+
+
+</style>

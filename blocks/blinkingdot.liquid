@@ -1,0 +1,144 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+<div class="sfrom_text text-center">
+ {{ block.settings.dot_text }}
+</div>
+</div>
+
+<style>
+.sfrom_text p:before {
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    margin-right: 5px;
+    animation: blink 1.5s infinite;
+}
+
+.sfrom_text p {
+    display: flex;
+    align-items: center;
+   justify-content: {{ block.settings.blinktext_align }};
+    gap: 5px;
+    line-height: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    position: relative;
+    font-size: {{ block.settings.dot_textsize }}px;
+    font-weight: 400;
+    color: {{ block.settings.dot_textcolor }};
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Blinking Dot",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "dot_text",
+      "label": "Text with blinking dot",
+      "default": "<p>Text with blinking dot</p>"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "dot_textcolor",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "dot_textsize",
+      "min": 12,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "blinktext_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blinking Dot",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

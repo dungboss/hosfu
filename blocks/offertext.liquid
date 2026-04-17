@@ -1,0 +1,142 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+
+<div class="offer-full__code flex-box flex-box--ai--center flex-box--jc--center">
+  <div class="offer-full__code__text" style="color: black;">
+    <p>{{block.settings.offertext1}} <strong>{{block.settings.offertext2}}</strong><br></p>
+  </div>
+  <div class="offer-full__code__button flex-box--inline flex-box--ai--center flex-box--jc--center offertext offer-btn--small" >{{block.settings.offertext3}}
+
+  </div>
+</div>
+
+</div>
+
+
+
+
+<style>
+  .offertext {
+    background-color: #fff;
+    color: #161616;
+    border: 2px solid black;
+    color: #161616 !important;
+    height: 29px;
+    padding: 0 11px;
+    border-radius: 24px;
+    font-size: 13px;
+  }
+  .offer-full__code.flex-box.flex-box--ai--center.flex-box--jc--center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: {{ block.settings.offertext_align }};
+    gap: 1rem;
+    align-items: center;
+    margin-top: 10px;
+    ackground: #eee;
+    border-radius: 24px;
+     font-size: {{ block.settings.offertextfontsize }}px;
+  }
+
+
+
+</style>
+
+{% schema %}
+{
+  "name": "Offer Text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "offertext1",
+      "label": "Offer text 1",
+      "default": "Use code"
+    },
+    {
+      "type": "text",
+      "id": "offertext2",
+      "label": "Offer text 2 (bold)",
+      "default": "SAVE20"
+    },
+    {
+      "type": "text",
+      "id": "offertext3",
+      "label": "Button text",
+      "default": "Copy"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "select",
+      "id": "offertext_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "offertextfontsize",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Offer Text",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

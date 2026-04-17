@@ -1,0 +1,185 @@
+<style>
+  #section-{{ section.id }}.countdown-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 8px 16px;
+  }
+
+  .countdown-bar p {
+    margin: 0;
+    line-height: normal;
+  }
+
+  #section-{{ section.id }} .countdown-bar-text {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #section-{{ section.id }} .countdown-bar-time-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  #section-{{ section.id }} .countdown-bar-time-cell {
+    min-width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    background-color: {{ section.settings.time_bg_color }};
+    color: {{ section.settings.time_text_color }};
+    border-radius: 2px;
+    padding: 3px;
+    line-height: normal;
+  }
+
+  #section-{{ section.id }} .countdown-bar-time-number {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  #section-{{ section.id }} .countdown-bar-time-label {
+    font-size: 8px;
+  }
+
+  #section-{{ section.id }} .countdown-bar-time-separator {
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 700px) {
+    #section-{{ section.id }} .countdown-bar-text {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div id="section-{{ section.id }}" class="countdown-bar">
+  {% if section.settings.text != blank %}
+    <div class="countdown-bar-text">{{ section.settings.text }}</div>
+  {% endif %}
+  <div id="cbt-clock" class="countdown-bar-time-container">
+    <div class="countdown-bar-time-cell">
+      <p id="days" class="countdown-bar-time-number"></p>
+      <p class="countdown-bar-time-label">DAYS</p>
+    </div>
+
+    <p id="cbt-clock-days-separator" class="countdown-bar-time-separator">:</p>
+
+    <div class="countdown-bar-time-cell">
+      <p id="hours" class="countdown-bar-time-number"></p>
+      <p class="countdown-bar-time-label">HRS</p>
+    </div>
+
+    <p id="cbt-clock-hours-separator" class="countdown-bar-time-separator">:</p>
+
+    <div class="countdown-bar-time-cell">
+      <p id="minutes" class="countdown-bar-time-number"></p>
+      <p class="countdown-bar-time-label">MIN</p>
+    </div>
+
+    <p id="cbt-clock-min-separator" class="countdown-bar-time-separator">:</p>
+
+    <div class="countdown-bar-time-cell">
+      <p id="seconds" class="countdown-bar-time-number"></p>
+      <p class="countdown-bar-time-label">SEC</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Set the date for the countdown
+    var countDownDate = new Date("{{ section.settings.end_date }} {{ section.settings.end_time }}").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the respective elements
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      // If the countdown is over, display "EXPIRED"
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Countdown Timer Bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "time_bg_color",
+      "label": "Time background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "time_text_color",
+      "label": "Time text color",
+      "default": "#000"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p><strong>FLASH SALE ENDS SOON</strong></p>"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "End Date",
+      "default": "2024-09-30",
+      "info": "Format: yyyy-mm-dd - Example: 2024-09-30"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End Time",
+      "default": "12:00",
+      "info": "Format: hh:mm - Example: 12:00"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer Bar"
+    }
+  ]
+}
+{% endschema %}

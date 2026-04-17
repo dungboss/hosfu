@@ -1,0 +1,283 @@
+{% schema %}
+{
+  "name": "Custom Search",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "custom_menu",
+      "label": "Select Menu"
+    },
+    {
+      "type": "text",
+      "id": "level1_title",
+      "label": "Level 1 Title",
+      "default": "Category"
+    },
+    {
+      "type": "text",
+      "id": "level2_title",
+      "label": "Level 2 Title",
+      "default": "Subcategory"
+    },
+    {
+      "type": "text",
+      "id": "level3_title",
+      "label": "Level 3 Title",
+      "default": "Type"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Search",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .search-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+  }
+
+  .search-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    background: white;
+  }
+
+  .arrow-buttons {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  .buttons-group {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+  }
+
+  .search-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .reset-btn {
+    background: #e0e0e0;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .custom-search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .search-group {
+      flex: none;
+      margin-bottom: -10px;
+    }
+
+    .buttons-group {
+      align-self: stretch;
+      justify-content: space-between;
+    }
+
+    .search-btn,
+    .reset-btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="custom-search-container">
+  <!-- Level 1 Search -->
+  <div class="search-group">
+    <label class="search-label">{{ section.settings.level1_title }}</label>
+    <div class="search-wrapper">
+      <select class="search-select" id="level1" onchange="updateLevel2()">
+        {% for link in linklists[section.settings.custom_menu].links %}
+          <option value="{{ link.handle }}">{{ link.title }}</option>
+        {% endfor %}
+      </select>
+      <div class="arrow-buttons">
+        <button class="arrow-btn" onclick="moveSelect('level1', -1); updateLevel2()">▲</button>
+        <button class="arrow-btn" onclick="moveSelect('level1', 1); updateLevel2()">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Level 2 Search -->
+  <div class="search-group">
+    <label class="search-label">{{ section.settings.level2_title }}</label>
+    <div class="search-wrapper">
+      <select class="search-select" id="level2" onchange="updateLevel3()">
+        <!-- Populated dynamically via JavaScript -->
+      </select>
+      <div class="arrow-buttons">
+        <button class="arrow-btn" onclick="moveSelect('level2', -1); updateLevel3()">▲</button>
+        <button class="arrow-btn" onclick="moveSelect('level2', 1); updateLevel3()">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Level 3 Search -->
+  <div class="search-group">
+    <label class="search-label">{{ section.settings.level3_title }}</label>
+    <div class="search-wrapper">
+      <select class="search-select" id="level3">
+        <!-- Populated dynamically via JavaScript -->
+      </select>
+      <div class="arrow-buttons">
+        <button class="arrow-btn" onclick="moveSelect('level3', -1)">▲</button>
+        <button class="arrow-btn" onclick="moveSelect('level3', 1)">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons-group">
+    <button class="search-btn" onclick="performSearch()">SEARCH</button>
+    <button class="reset-btn" onclick="resetSearch()">RESET</button>
+  </div>
+</div>
+
+<script>
+  // Menu data from Shopify Liquid
+  const menuData = {
+    {% for link in linklists[section.settings.custom_menu].links %}
+      "{{ link.handle }}": {
+        title: "{{ link.title }}",
+        sublinks: {
+          {% if link.links %}
+            {% for sublink in link.links %}
+              "{{ sublink.handle }}": {
+                title: "{{ sublink.title }}",
+                subsublinks: {
+                  {% if sublink.links %}
+                    {% for subsublink in sublink.links %}
+                      "{{ subsublink.handle }}": "{{ subsublink.title }}"{% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                  {% endif %}
+                }
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  // Initialize Level 2 based on Level 1 selection
+  function updateLevel2() {
+    const level1 = document.getElementById('level1').value;
+    const level2Select = document.getElementById('level2');
+    level2Select.innerHTML = '';
+
+    const sublinks = menuData[level1]?.sublinks || {};
+    for (const handle in sublinks) {
+      const option = document.createElement('option');
+      option.value = handle;
+      option.text = sublinks[handle].title;
+      level2Select.appendChild(option);
+    }
+    updateLevel3(); // Update Level 3 after updating Level 2
+  }
+
+  // Initialize Level 3 based on Level 2 selection
+  function updateLevel3() {
+    const level1 = document.getElementById('level1').value;
+    const level2 = document.getElementById('level2').value;
+    const level3Select = document.getElementById('level3');
+    level3Select.innerHTML = '';
+
+    const subsublinks = menuData[level1]?.sublinks[level2]?.subsublinks || {};
+    for (const handle in subsublinks) {
+      const option = document.createElement('option');
+      option.value = handle;
+      option.text = subsublinks[handle];
+      level3Select.appendChild(option);
+    }
+  }
+
+  // Move select options with arrow buttons
+  function moveSelect(selectId, direction) {
+    const select = document.getElementById(selectId);
+    const currentIndex = select.selectedIndex;
+    const newIndex = currentIndex + direction;
+
+    if (newIndex >= 0 && newIndex < select.options.length) {
+      select.selectedIndex = newIndex;
+    }
+  }
+
+  // Perform search using only Level 3 value
+  function performSearch() {
+    const level3 = document.getElementById('level3').value;
+
+    // Use only the Level 3 value for search
+    const searchUrl = `/search?q=${level3}`;
+    window.location.href = searchUrl;
+  }
+
+  // Reset search
+  function resetSearch() {
+    document.getElementById('level1').selectedIndex = 0;
+    updateLevel2();
+    document.getElementById('level2').selectedIndex = 0;
+    updateLevel3();
+    document.getElementById('level3').selectedIndex = 0;
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateLevel2();
+    updateLevel3();
+  });
+</script>

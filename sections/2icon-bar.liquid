@@ -1,0 +1,196 @@
+<div style="background-color:{{ section.settings.custombarcolor }}!important;" class="announcement_bottom_blocks">
+  <div class="icon-text-wrap">
+    <div class="icon">
+      {% unless section.settings.custom_icon == blank and section.settings.icon == blank %}
+        {% if section.settings.custom_icon != blank %}
+          <img
+            src="{{ section.settings.custom_icon | image_url: width: 150 }}"
+            width="auto"
+            height="auto"
+            loading="lazy"
+          >
+        {% else %}
+          {% render 'material-icon', icon: section.settings.icon, filled: section.settings.filled_icon %}
+        {% endif %}
+      {% endunless %}
+    </div>
+    <div class="text">
+      <p style="font-size:{{ section.settings.iconbarfont }}px!important;">{{ section.settings.custom_top_bar1 }}</p>
+    </div>
+  </div>
+
+  <div class="icon-text-wrap">
+    <div class="icon">
+      {% unless section.settings.custom_icon2 == blank and section.settings.icon2 == blank %}
+        {% if section.settings.custom_icon2 != blank %}
+          <img
+            src="{{ section.settings.custom_icon2 | image_url: width: 150 }}"
+            width="auto"
+            height="auto"
+            loading="lazy"
+          >
+        {% else %}
+          {% render 'material-icon', icon: section.settings.icon2, filled: section.settings.filled_icon2 %}
+        {% endif %}
+      {% endunless %}
+    </div>
+    <div class="text">
+      <p style="font-size:{{ section.settings.iconbarfont }}px!important;">{{ section.settings.custom_top_bar2 }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "2 Icon Top Bar",
+    "settings": [
+
+{
+          "type": "header",
+          "content": "Icon #1"
+        },
+       {
+          "type": "text",
+          "id": "icon",
+          "default": "local_shipping",
+          "label": "Icon",
+          "info": "[View all available icons](https:\/\/fonts.google.com\/icons?icon.set=Material+Symbols&icon.platform=web)."
+        },
+        {
+          "type": "checkbox",
+          "id": "filled_icon",
+          "default": false,
+          "label": "Filled icon"
+        },
+       {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon"
+        },
+
+
+{
+          "type": "header",
+          "content": "Icon #2"
+        },
+
+
+       {
+          "type": "text",
+          "id": "icon2",
+          "default": "favorite",
+          "label": "Icon",
+          "info": "[View all available icons](https:\/\/fonts.google.com\/icons?icon.set=Material+Symbols&icon.platform=web)."
+        },
+        {
+          "type": "checkbox",
+          "id": "filled_icon2",
+          "default": false,
+          "label": "Filled icon"
+        },
+
+
+     {
+          "type": "image_picker",
+          "id": "custom_icon2",
+          "label": "Custom icon"
+        },
+
+
+ {
+                  "type": "text",
+                  "id": "custom_top_bar1",
+                  "label": "Text",
+                 "default": "Free shipping"
+  },
+
+
+
+ {
+                  "type": "text",
+                  "id": "custom_top_bar2",
+                  "label": "Text",
+             "default": "10,000+ Happy Customers"
+  },
+      {
+        "type": "color",
+        "id": "iconcolors",
+        "label": "Icon Color",
+        "default": "#FFFFFF"
+      },
+
+      {
+        "type": "color",
+        "id": "iconstextcolor",
+        "label": "Text Color",
+        "default": "#FFFFFF"
+      },
+
+  {
+        "type": "color",
+        "id": "custombarcolor",
+        "label": "Bar Color",
+        "default": "#000000"
+      },
+    {
+      "type": "range",
+      "id": "iconbarfont",
+      "min": 13,
+      "max": 19,
+      "step": 1,
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" },
+        { "value": "space-between", "label": "Spread (Left & Right)" }
+      ],
+      "default": "center"
+    }
+],
+
+     "presets": [
+    {
+      "name": "2 Icon Bar"
+    }
+  ],
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+<style>
+  .announcement_bottom_blocks {
+    display: flex;
+    align-items: center;
+    justify-content: {{ section.settings.alignment }};
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .announcement_bottom_blocks .icon-text-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .icon .material-icon.material-symbols-outlined {
+      color: {{section.settings.iconcolors }};
+  }
+
+      .announcement_bottom_blocks .text p {
+      margin: 10px 10px 10px 5px;
+      color: {{section.settings.iconstextcolor }};
+  }
+</style>

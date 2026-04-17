@@ -1,0 +1,52 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+
+>
+<div class="sfrom_text text-center">
+ {{ block.settings.dot_text }}
+</div>
+</div>
+
+<style>
+.sfrom_text p:before {
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    margin-right: 5px;
+    animation: blink 1.5s infinite;
+}
+
+.sfrom_text p {
+    display: flex;
+    align-items: center;
+   justify-content: {{ block.settings.blinktext_align }};
+    gap: 5px;
+    line-height: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    position: relative;
+    font-size: {{ block.settings.dot_textsize }}px;
+    font-weight: 400;
+    color: {{ block.settings.dot_textcolor }};
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+</style>

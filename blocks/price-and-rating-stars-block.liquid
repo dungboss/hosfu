@@ -1,0 +1,376 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div class="priceandratingstars animate--hidden {{ block.settings.visibility }}">
+  <div class="text1">
+    <div
+      class="no-js-hidden product-page-price"
+      id="price-{{ section.id }}"
+      role="status"
+      {{ block.shopify_attributes }}
+     
+    >
+      {% liquid
+        assign price_second = false
+        if block.settings.layout == 'price_second'
+          assign price_second = true
+        endif
+      %}
+      {%- render 'price',
+        product: product,
+        block: block,
+        use_variant: true,
+        show_badges: true,
+        hide_sale_badge: block.settings.hide_sale_badge,
+        price_class: 'price--large',
+        price_second: price_second,
+        main_price: true
+      -%}
+    </div>
+  </div>
+
+  <div class="text2">
+{% if block.settings.enable_ratingstars %}
+    {% render 'rating-stars-block', block: block, margins: true, block_attributes: true %}
+ {% endif %}  
+{% if block.settings.enable_lowstock2 %}
+
+<div class="sfrom_text3 text-center">
+ {{ block.settings.dot_text }}
+</div> 
+  {% endif %}  
+
+
+    {% if block.settings.enable_sizechart %}
+  {% render 'sizing-chart', block: block %}
+  {% endif %}  
+
+    {% if block.settings.enable_socialproof %}
+        {% if block.settings.scroll_idsocial != blank %}<a href="{{ block.settings.scroll_idsocial }}">{% endif %}
+        <div class="customproductStats">
+          <div class="customproductStatsLeft">
+            <img src="{{ block.settings.socialproof_image_url | img_url: '300x' }}" style="max-width: {{ block.settings.socialproof_image_width }}px;" alt="Social proof">
+          </div>
+          <div class="customproductStatsRight" style="font-weight: {{ block.settings.socialproof_font_weight | escape }}; font-size: {{ block.settings.socialproof_font_size }}px;">
+            {{ block.settings.socialproof_stats_text }}
+          </div>
+        </div>
+        {% if block.settings.scroll_idsocial != blank %}</a>{% endif %}
+  {% endif %}  
+
+
+  </div>
+</div>
+
+</div>
+
+<style>
+  .priceandratingstars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .text1 {
+
+  }
+
+  .text2 {
+    margin-left: 20px;
+
+  }
+
+
+
+  .sfrom_text3 p:before {
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    margin-right: 5px;
+    animation: blink 1.5s infinite;
+}
+
+.sfrom_text3 p {
+    display: flex;
+    align-items: center;
+   justify-content: {{ block.settings.blinktext_align }};
+    gap: 5px;
+    line-height: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    position: relative;
+    font-size: {{ block.settings.dot_textsize }}px;
+    font-weight: 400;
+    color: {{ block.settings.dot_textcolor }};
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.customproductStatsLeft {
+  margin-right: 16px;
+}
+.customproductStatsLeft img {
+  display: block;
+}
+.customproductStatsRight {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.customproductStats {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Price & Rating Stars",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Price Settings"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Price layout",
+      "options": [
+        {
+          "value": "price_first",
+          "label": "Price first"
+        },
+        {
+          "value": "price_second",
+          "label": "Price second"
+        }
+      ],
+      "default": "price_first"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_sale_badge",
+      "label": "Hide sale badge",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Rating Stars"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_ratingstars",
+      "label": "Enable rating stars",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Low Stock Alert"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_lowstock2",
+      "label": "Enable low stock alert",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "dot_text",
+      "label": "Low stock text",
+      "default": "Only 3 left in stock!",
+      "visible_if": "{{ block.settings.enable_lowstock2 == true }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#ff0000",
+      "visible_if": "{{ block.settings.enable_lowstock2 == true }}"
+    },
+    {
+      "type": "range",
+      "id": "dot_textsize",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Text size",
+      "default": 14,
+      "visible_if": "{{ block.settings.enable_lowstock2 == true }}"
+    },
+    {
+      "type": "color",
+      "id": "dot_textcolor",
+      "label": "Text color",
+      "default": "#000000",
+      "visible_if": "{{ block.settings.enable_lowstock2 == true }}"
+    },
+    {
+      "type": "select",
+      "id": "blinktext_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "visible_if": "{{ block.settings.enable_lowstock2 == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Size Chart"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sizechart",
+      "label": "Enable size chart",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Social Proof"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_socialproof",
+      "label": "Enable social proof",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "scroll_idsocial",
+      "label": "Scroll to ID",
+      "info": "Optional: Link to scroll to a specific section",
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "socialproof_image_url",
+      "label": "Social proof image",
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "range",
+      "id": "socialproof_image_width",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Image width",
+      "default": 80,
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "text",
+      "id": "socialproof_stats_text",
+      "label": "Stats text",
+      "default": "1000+ Happy Customers",
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "range",
+      "id": "socialproof_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14,
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "range",
+      "id": "socialproof_font_weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "label": "Font weight",
+      "default": 400,
+      "visible_if": "{{ block.settings.enable_socialproof == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "Visibility",
+      "options": [
+        {
+          "value": "show",
+          "label": "Show"
+        },
+        {
+          "value": "hide",
+          "label": "Hide"
+        }
+      ],
+      "default": "show"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Price & Rating Stars",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

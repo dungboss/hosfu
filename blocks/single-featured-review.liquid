@@ -1,0 +1,88 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+
+<li class="flex justify-between">
+    <div class="img_box" style="width:45%"><img style="border-radius:100%;width:80px;" 
+
+src="{{block.settings.reviewimage | img_url: 'master'}}"></div>
+   
+
+ <div class="content_box rte" style="margin-left:20px">
+      <p style="font-size:13px;text-align: left;" class="prod__description"> {{block.settings.reviewtext}} <i class="fa-solid fa-star" style="color:#ffd200"> </i><i class="fa-solid fa-star" style="color:#ffd200"> </i><i class="fa-solid fa-star" style="color:#ffd200"> </i><i class="fa-solid fa-star" style="color:#ffd200"> </i><i class="fa-solid fa-star" style="color:#ffd200"> </i><br><strong>– <i class="fa-solid fa-circle-check" style="color: {{block.settings.reviewcheckmark}};">&nbsp;</i><i>{{block.settings.reviewname}}</i></strong></p>
+    </div>
+  </li>
+
+  </div>
+
+{% schema %}
+{
+  "name": "Single Featured Review",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "reviewimage",
+      "label": "Reviewer image"
+    },
+    {
+      "type": "richtext",
+      "id": "reviewtext",
+      "label": "Review text",
+      "default": "<p>Amazing product! Highly recommend it to everyone.</p>"
+    },
+    {
+      "type": "text",
+      "id": "reviewname",
+      "label": "Reviewer name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "reviewcheckmark",
+      "label": "Checkmark color",
+      "default": "#28a745"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Featured Review",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

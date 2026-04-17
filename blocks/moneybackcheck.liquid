@@ -1,0 +1,60 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+  
+<div class="money-back">
+				<img src="https://cdn.shopify.com/s/files/1/0459/2494/1987/t/42/assets/CircleWavyCheck.svg?v=51402375465626629131674184945" class="money-back-img" alt="img">
+				<span class="money-back-text">{{ block.settings.moneybackguarantee }}</span>
+			</div>
+
+   </div>
+
+{% schema %}
+{
+  "name": "Money Back Check",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "moneybackguarantee",
+      "label": "Money back guarantee text",
+      "default": "30-Day Money Back Guarantee"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Money Back Check",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

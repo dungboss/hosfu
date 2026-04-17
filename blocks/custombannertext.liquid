@@ -1,0 +1,136 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+
+
+<p class="custom__banner__text inline-richtext"><strong>{{block.settings.customerbannertext}}</strong></p>
+</div>
+
+
+<style>
+                  .custom__banner__text {
+                    display: inline-block;
+                    border-radius: {{block.settings.bordercustomerbannertext}}px;
+                    margin: 0;
+                    padding: 5px 20px;
+                    background-color: {{block.settings.backgroundcustomerbannertext}};
+                    color: {{block.settings.colorcustomerbannertext}};
+                    font-size: {{block.settings.fontsizecustomerbannertext}}px;
+                    font-weight: {{block.settings.weightcustomerbannertext}};
+                  }
+                </style>
+
+{% schema %}
+{
+  "name": "Custom Banner Text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "customerbannertext",
+      "label": "Banner text",
+      "default": "Special Offer!"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "backgroundcustomerbannertext",
+      "label": "Background color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "colorcustomerbannertext",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "fontsizecustomerbannertext",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "weightcustomerbannertext",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "bordercustomerbannertext",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner Text",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

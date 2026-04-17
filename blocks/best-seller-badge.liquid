@@ -1,0 +1,123 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div style="background-color: {{block.settings.background}}; padding: 0; border-radius: {{block.settings.bestsellerborderradius}}px; display: flex; align-items: center; margin-top: 15px;">
+  
+  <span style="background-color: {{block.settings.numberbackground}}; padding: 10px 20px; border-radius: {{block.settings.bestsellerborderradius}}px 0 0 {{block.settings.bestsellerborderradius}}px; font-size: 22px; font-weight: bold; color: {{block.settings.numbercolor}}; margin-right: 18px;">{{block.settings.bestsellernumber}}</span>
+  
+  
+  <div style="color: {{block.settings.textcolor}};">
+
+       {%- if block.settings.bestsellerheadline != blank -%}
+    <div style="font-size: 17px; font-weight: bold; line-height: 1.4;">{{block.settings.bestsellerheadline}}</div>
+              {%- endif -%}
+
+       {%- if block.settings.bestsellersubheadline != blank -%}
+    <div style="font-size: 14px; line-height: 1.3;">{{block.settings.bestsellersubheadline}}</div>
+           {%- endif -%}
+  </div>
+  
+</div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Best Seller Badge",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "bestsellernumber",
+      "label": "Best seller number",
+      "default": "#1"
+    },
+    {
+      "type": "text",
+      "id": "bestsellerheadline",
+      "label": "Headline",
+      "default": "BEST SELLER"
+    },
+    {
+      "type": "text",
+      "id": "bestsellersubheadline",
+      "label": "Sub headline",
+      "default": "This product is our top seller"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "numberbackground",
+      "label": "Number background color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "numbercolor",
+      "label": "Number text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "textcolor",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "bestsellerborderradius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Best Seller Badge",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

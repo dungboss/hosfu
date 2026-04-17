@@ -1,0 +1,231 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+<section class="questions section-{{ section.id }}-padding animate-section animate--hidden" id="questions">
+    {% if section.settings.display_id %}
+    <copy-button class='section-id-btn button' data-content="#shopify-section-{{ section.id }}" data-success="false">
+      <span class="copy-text">Click to copy section ID</span>
+      <span class="copy-success">ID copied successfully!</span>
+    </copy-button>
+  {% endif %}
+    <div class="page-width">
+        <div class="questions_inner animate-item animate-item">
+            <div class="questions__title text-center">
+                <h3 style="font-size: {{ section.settings.title_font_size }}px;">{{ section.settings.title }}</h3>
+            </div>
+            <div class="omega">
+                <div class="questions__wrapper">
+                    <div class="question-body">
+                        {% for block in section.blocks %}
+                            <div class="questions__item_row">
+                                <h4 style="font-size: {{ section.settings.title2_font_size }}px;" class="ques-heading">{{ block.settings.title }}</h4>
+                                <div class="ques-desc">
+                                    <div class="questions__item">
+                                        <div class="questions-item__text">
+                                            {{ block.settings.content | richtext }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faqs",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+        {
+      "type": "checkbox",
+      "id": "display_id",
+      "label": "Display section ID",
+      "info": "ID is used in the Sections group section to merge 2 sections. ID can also be put inside any button link and the button will scroll to this section.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Questions? We’ve Got You Covered"
+    },
+      {
+        "type": "color",
+        "id": "faqsbackgroundcolor",
+        "label": "Background Color",
+        "default": "#fafafa"
+      },
+
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title Font Size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+ {
+      "type": "range",
+      "id": "title2_font_size",
+      "label": "Question Font Size",
+      "min": 15,
+      "max": 20,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Faq",
+      "name": "Faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Enter your question"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Enter your answer here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faqs"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+
+{% endschema %}
+
+<style>
+.questions {
+  background-color: {{section.settings.faqsbackgroundcolor }};
+
+}
+.questions__title h3 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+.questions__item_row {
+  margin-bottom: 10px;
+}
+.questions__item_row h4.ques-heading {
+  font-size: 20px;
+  padding: 25px 20px;
+  margin: 0;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+.questions__item_row h4.ques-heading:before {
+  content: "";
+  width: 17px;
+  height: 3px;
+  position: absolute;
+  right: 20px;
+  top: 36px;
+  background-color: #000;
+}
+.questions__item_row h4.ques-heading:after {
+  content: "";
+  width: 3px;
+  height: 17px;
+  position: absolute;
+  right: 27px;
+  top: 29px;
+  background-color: #000;
+}
+.ques-desc {
+  padding: 0 20px 20px;
+  background-color: #fff;
+}
+.ques-desc p {
+  color: #000;
+  font-size: 16px;
+}
+.questions__item_row h4.ques-heading.active:after {
+  display: none;
+}
+.ques-desc {
+  display: none;
+}
+
+
+</style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+  $(function () {
+    $(".ques-heading").click(function (e) {
+      var $targetDesc = $(this).closest(".questions__item_row").find(".ques-desc");
+      $(".ques-desc").not($targetDesc).slideUp();
+      
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+      } else {
+        $(".ques-heading.active").removeClass("active");
+        $(this).addClass("active");
+      }
+      
+      $targetDesc.stop(false, true).slideToggle();
+      e.preventDefault();
+    });
+  });
+</script>

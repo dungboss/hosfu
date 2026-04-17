@@ -1,0 +1,97 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+
+<div class="inventory-warning" ><p class="message"> <strong> {{ block.settings.warningmessagetextfirst }}</strong> {{ block.settings.warningmessagetext }}</p></div>
+
+   </div>
+
+
+<style>
+.inventory-warning {
+  display: flex;
+  background:  {{block.settings.warningbackground}};
+  padding: 4px 8px;
+  align-items: center;
+  margin: 10px auto;
+  justify-content: flex-start;
+}
+
+.inventory-warning .message {
+  font-weight: 500;
+  font-size: 15px;
+  color: #000 !important;
+  letter-spacing: normal !important;
+  margin: 0;
+  text-transform: none !important;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Warning Message",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "warningmessagetextfirst",
+      "label": "Warning message (bold part)",
+      "default": "⚠️ WARNING:"
+    },
+    {
+      "type": "text",
+      "id": "warningmessagetext",
+      "label": "Warning message (normal text)",
+      "default": "Limited stock available. Order now to avoid disappointment!"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "warningbackground",
+      "label": "Background color",
+      "default": "#fff3cd"
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warning Message",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,162 @@
+<div
+  {{ block.shopify_attributes }}
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
+
+<div class="key_points font--text-xs" style="background-color: {{block.settings.checkmarkcolorbackground}}; border-radius:{{block.settings.keybenefitsborderradius}}px;">
+
+  {%- if block.settings.key1 != blank -%}
+	<div class="key_points-line_item">
+	<div class="key_points_line_item_parent">
+		<div class="key_points_line_item_icon"> <i class="fa-regular fa-circle-check" style="color:{{block.settings.checkmarkcolor}}"></i> </div>
+			<div class="key_points_line_item_text"> <strong class="font--text-xs-regular">  {{block.settings.key1}}
+
+</strong></div> </div> </div> 
+       {%- endif -%}
+
+  {%- if block.settings.key2 != blank -%}
+<div class="key_points-line_item">
+	<div class="key_points_line_item_parent">
+		<div class="key_points_line_item_icon"> <i class="fa-regular fa-circle-check" style="color:{{block.settings.checkmarkcolor}}"></i> </div>
+			<div class="key_points_line_item_text"> <strong class="font--text-xs-regular">{{block.settings.key2}}
+
+
+</strong></div> </div> </div>
+      {%- endif -%}
+
+      {%- if block.settings.key3 != blank -%}
+  <div class="key_points-line_item">
+	<div class="key_points_line_item_parent">
+		<div class="key_points_line_item_icon"> <i class="fa-regular fa-circle-check" style="color:{{block.settings.checkmarkcolor}}"></i> </div>
+			<div class="key_points_line_item_text"> <strong class="font--text-xs-regular">{{block.settings.key3}}
+
+
+</strong></div> </div> </div>
+          {%- endif -%}
+
+        
+  {%- if block.settings.key4 != blank -%}
+    <div class="key_points-line_item">
+	<div class="key_points_line_item_parent">
+		<div class="key_points_line_item_icon"> <i class="fa-regular fa-circle-check" style="color:{{block.settings.checkmarkcolor}}"></i> </div>
+			<div class="key_points_line_item_text"> <strong class="font--text-xs-regular">{{block.settings.key4}}
+
+
+</strong></div> </div> </div>
+    {%- endif -%}
+    
+
+  {%- if block.settings.key5 != blank -%}
+      <div class="key_points-line_item">
+	<div class="key_points_line_item_parent">
+		<div class="key_points_line_item_icon"> <i class="fa-regular fa-circle-check" style="color:{{block.settings.checkmarkcolor}}"></i> </div>
+			<div class="key_points_line_item_text"> <strong class="font--text-xs-regular">{{block.settings.key5}}
+
+
+</strong></div> </div> </div>
+      {%- endif -%}
+
+
+
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Key Benefits",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "key1",
+      "label": "Key benefit 1",
+      "default": "Premium Quality Materials"
+    },
+    {
+      "type": "text",
+      "id": "key2",
+      "label": "Key benefit 2",
+      "default": "Fast & Free Shipping"
+    },
+    {
+      "type": "text",
+      "id": "key3",
+      "label": "Key benefit 3",
+      "default": "30-Day Money Back Guarantee"
+    },
+    {
+      "type": "text",
+      "id": "key4",
+      "label": "Key benefit 4",
+      "default": "24/7 Customer Support"
+    },
+    {
+      "type": "text",
+      "id": "key5",
+      "label": "Key benefit 5",
+      "default": "Eco-Friendly Packaging"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "checkmarkcolorbackground",
+      "label": "Background color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "checkmarkcolor",
+      "label": "Checkmark color",
+      "default": "#28a745"
+    },
+    {
+      "type": "range",
+      "id": "keybenefitsborderradius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom",
+      "min": 0,
+      "max": 45,
+      "step": 3,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Key Benefits",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
