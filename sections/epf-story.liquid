@@ -104,6 +104,15 @@
     position: relative;
   }
 
+  #shopify-section-{{ section.id }} .epf-story__hero-head {
+    grid-column: 1 / -1;
+    position: relative;
+    z-index: 1;
+    max-width: none;
+    margin: 0;
+    text-align: center;
+  }
+
   #shopify-section-{{ section.id }} .epf-story__hero::after {
     content: "";
     position: absolute;
@@ -135,14 +144,16 @@
     font-size: clamp(3rem, 5vw, 5.4rem);
     line-height: 1.02;
     margin: 0;
-    max-width: 13ch;
+    max-width: none;
+    margin-inline: 0;
+    text-align: center;
   }
 
   #shopify-section-{{ section.id }} .epf-story__lead {
     font-size: 1.65rem;
     line-height: 1.72;
     color: var(--epf-muted);
-    margin: 1.4rem 0 0;
+    margin: 0;
     max-width: 58ch;
   }
 
@@ -310,7 +321,7 @@
     border: 1px solid var(--epf-line);
     border-radius: 999px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
     align-items: center;
     justify-content: center;
@@ -330,6 +341,19 @@
     flex-wrap: wrap;
     gap: 0.75rem;
     justify-content: center;
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__featured-media {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__featured-image {
+    display: block;
+    width: min(100%, 96rem);
+    height: auto;
   }
 
   #shopify-section-{{ section.id }} .epf-story__logo-pill {
@@ -703,6 +727,10 @@
       gap: 1.35rem;
     }
 
+    #shopify-section-{{ section.id }} .epf-story__hero > .epf-story__visual {
+      order: -1;
+    }
+
     #shopify-section-{{ section.id }} .epf-story__heading {
       font-size: clamp(2.5rem, 10vw, 4rem);
       max-width: none;
@@ -749,11 +777,14 @@
 <section class="epf-story">
   <div class="page-width epf-story__shell">
     <div class="epf-story__hero">
-      <div class="epf-story__content">
+      <div class="epf-story__hero-head">
         {% if section.settings.hero_eyebrow != blank %}
           <p class="epf-story__eyebrow">{{ section.settings.hero_eyebrow | replace: '[product_title]', product.title }}</p>
         {% endif %}
         <h1 class="epf-story__heading">{{ section.settings.hero_heading | replace: '[product_title]', product.title }}</h1>
+      </div>
+
+      <div class="epf-story__content">
         {% if section.settings.hero_lead != blank %}
           <p class="epf-story__lead">
             {{ section.settings.hero_lead | replace: '[product_title]', product.title | newline_to_br }}
@@ -826,13 +857,24 @@
 
     <div class="epf-story__featured" aria-label="Featured on">
       <div class="epf-story__featured-label">{{ section.settings.featured_label | replace: '[product_title]', product.title }}</div>
-      <div class="epf-story__featured-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'featured_logo' %}
-            <span class="epf-story__logo-pill" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
-          {% endif %}
-        {% endfor %}
-      </div>
+      {% if section.settings.featured_image_url != blank %}
+        <div class="epf-story__featured-media">
+          <img
+            class="epf-story__featured-image"
+            src="{{ section.settings.featured_image_url | escape }}"
+            alt="{{ section.settings.featured_image_alt | default: section.settings.featured_label | escape }}"
+            loading="lazy"
+          >
+        </div>
+      {% else %}
+        <div class="epf-story__featured-grid">
+          {% for block in section.blocks %}
+            {% if block.type == 'featured_logo' %}
+              <span class="epf-story__logo-pill" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
     <div class="epf-story__section epf-story__split">
@@ -1255,6 +1297,17 @@
       "id": "featured_label",
       "label": "Featured label",
       "default": "As seen in"
+    },
+    {
+      "type": "text",
+      "id": "featured_image_url",
+      "label": "Featured image URL"
+    },
+    {
+      "type": "text",
+      "id": "featured_image_alt",
+      "label": "Featured image alt",
+      "default": "Featured on logos"
     },
     {
       "type": "header",

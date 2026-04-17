@@ -1,4 +1,39 @@
 {%- style -%}
+  {% assign review_blocks_count = 0 %}
+  {% assign review_image_1 = blank %}
+  {% assign review_image_2 = blank %}
+  {% assign review_image_3 = blank %}
+
+  {% assign review_media_1 = product.media | slice: 8, 1 | first %}
+  {% assign review_media_2 = product.media | slice: 9, 1 | first %}
+  {% assign review_media_3 = product.media | slice: 10, 1 | first %}
+
+  {% if review_media_1 != blank %}
+    {% assign review_image_1 = review_media_1.preview_image %}
+  {% endif %}
+  {% if review_media_2 != blank %}
+    {% assign review_image_2 = review_media_2.preview_image %}
+  {% endif %}
+  {% if review_media_3 != blank %}
+    {% assign review_image_3 = review_media_3.preview_image %}
+  {% endif %}
+
+  {% if review_image_1 == blank and product.featured_media != blank %}
+    {% assign review_image_1 = product.featured_media.preview_image %}
+  {% endif %}
+  {% if review_image_2 == blank and product.featured_media != blank %}
+    {% assign review_image_2 = product.featured_media.preview_image %}
+  {% endif %}
+  {% if review_image_3 == blank and product.featured_media != blank %}
+    {% assign review_image_3 = product.featured_media.preview_image %}
+  {% endif %}
+
+  {% for block in section.blocks %}
+    {% if block.type == 'review_item' %}
+      {% assign review_blocks_count = review_blocks_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
   #shopify-section-{{ section.id }} {
     --epf-wine: #8d184d;
     --epf-wine-dark: #6c103b;
@@ -161,6 +196,85 @@
     text-align: center;
   }
 
+  #shopify-section-{{ section.id }} .epf-support__reviews {
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.84);
+    border-radius: 3rem;
+    padding: 2rem;
+    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.08);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-card {
+    background: #fff;
+    border: 1px solid var(--epf-line);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 28px rgba(35, 24, 21, 0.04);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-media {
+    margin-bottom: 1rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #f4ece6;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-stars {
+    color: #e2a300;
+    font-size: 1.45rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.9rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-card h3 {
+    margin: 0;
+    font-family: var(--font-heading-family);
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-copy {
+    margin: 1rem 0 0;
+    font-size: 1.42rem;
+    line-height: 1.72;
+    color: var(--epf-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-author {
+    margin-top: 1.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(141, 24, 77, 0.12);
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-author strong {
+    display: block;
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+
+  #shopify-section-{{ section.id }} .epf-support__review-author span {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--epf-muted);
+  }
+
   @media screen and (min-width: 750px) {
     #shopify-section-{{ section.id }} .epf-support {
       padding-top: {{ section.settings.padding_top }}px;
@@ -172,11 +286,16 @@
     #shopify-section-{{ section.id }} .epf-support__band-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    #shopify-section-{{ section.id }} .epf-support__reviews-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .epf-support__band,
-    #shopify-section-{{ section.id }} .epf-support__faq {
+    #shopify-section-{{ section.id }} .epf-support__faq,
+    #shopify-section-{{ section.id }} .epf-support__reviews {
       border-radius: 2.2rem;
       padding: 1.3rem;
     }
@@ -187,7 +306,8 @@
 
     #shopify-section-{{ section.id }} .epf-support__heading p,
     #shopify-section-{{ section.id }} .epf-support__faq-answer,
-    #shopify-section-{{ section.id }} .epf-support__faq-item summary {
+    #shopify-section-{{ section.id }} .epf-support__faq-item summary,
+    #shopify-section-{{ section.id }} .epf-support__review-copy {
       font-size: 1.4rem;
     }
   }
@@ -238,6 +358,70 @@
         </p>
       {% endif %}
     </div>
+
+    {% if review_blocks_count > 0 %}
+      <div class="epf-support__reviews">
+        <div class="epf-support__heading">
+          <h2>{{ section.settings.reviews_heading | replace: '[product_title]', product.title }}</h2>
+          {% if section.settings.reviews_description != blank %}
+            <p>{{ section.settings.reviews_description | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+        </div>
+
+        <div class="epf-support__reviews-grid">
+          {% assign review_index = 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'review_item' %}
+              {% assign review_index = review_index | plus: 1 %}
+              {% assign review_image = block.settings.image %}
+              {% if review_image == blank %}
+                {% case review_index %}
+                  {% when 1 %}
+                    {% assign review_image = review_image_1 %}
+                  {% when 2 %}
+                    {% assign review_image = review_image_2 %}
+                  {% when 3 %}
+                    {% assign review_image = review_image_3 %}
+                {% endcase %}
+              {% endif %}
+              <article class="epf-support__review-card" {{ block.shopify_attributes }}>
+                {% if review_image != blank %}
+                  <div class="epf-support__review-media">
+                    {{
+                      review_image
+                      | image_url: width: 720
+                      | image_tag:
+                        class: 'epf-support__review-image',
+                        loading: 'lazy',
+                        widths: '240, 360, 540, 720',
+                        sizes: '(min-width: 990px) 22vw, 90vw',
+                        alt: block.settings.author | default: block.settings.title
+                    }}
+                  </div>
+                {% endif %}
+                {% if block.settings.stars != blank %}
+                  <div class="epf-support__review-stars">{{ block.settings.stars }}</div>
+                {% endif %}
+                <h3>{{ block.settings.title | replace: '[product_title]', product.title }}</h3>
+                <div class="epf-support__review-copy">
+                  {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
+                </div>
+                {% if block.settings.author != blank or block.settings.meta != blank %}
+                  <div class="epf-support__review-author">
+                    {% if block.settings.author != blank %}
+                      <strong>{{ block.settings.author }}</strong>
+                    {% endif %}
+                    {% if block.settings.meta != blank %}
+                      <span>{{ block.settings.meta }}</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -292,6 +476,22 @@
       "id": "wellness_note",
       "label": "Wellness note",
       "default": "Wellness note: this page is intended for general product information only and should not replace individualized medical advice."
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "text",
+      "id": "reviews_heading",
+      "label": "Heading",
+      "default": "Reviews from Women Like You"
+    },
+    {
+      "type": "textarea",
+      "id": "reviews_description",
+      "label": "Description",
+      "default": "Real words from women building steadier routines and more everyday confidence with [product_title]."
     }
   ],
   "blocks": [
@@ -344,6 +544,48 @@
           "default": false
         }
       ]
+    },
+    {
+      "type": "review_item",
+      "name": "Review Item",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "stars",
+          "label": "Stars",
+          "default": "★★★★★"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "\"It finally felt easy to stay consistent.\""
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\""
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Maria L."
+        },
+        {
+          "type": "text",
+          "id": "meta",
+          "label": "Meta",
+          "default": "Verified customer"
+        }
+      ]
     }
   ],
   "presets": [
@@ -373,6 +615,15 @@
         },
         {
           "type": "faq_item"
+        },
+        {
+          "type": "review_item"
+        },
+        {
+          "type": "review_item"
+        },
+        {
+          "type": "review_item"
         }
       ]
     }

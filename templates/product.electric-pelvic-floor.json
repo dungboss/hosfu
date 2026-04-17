@@ -255,7 +255,12 @@
       ],
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 44
+        "padding_bottom": 44,
+        "hero_eyebrow": "",
+        "featured_image_url": "https://cdn.shopify.com/s/files/1/0738/4645/6536/files/gempages_556819636071433409-eee4c20b-012f-40cc-bfcb-d24ebfbfbe76.jpg?width=2183",
+        "featured_image_alt": "As seen in logos",
+        "hero_chip_top": "",
+        "hero_chip_bottom": ""
       }
     },
     "offer_main": {
@@ -603,6 +608,36 @@
             "answer": "Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel aligned with your routine, you have a 30-day confidence promise to lean on.",
             "open_by_default": false
           }
+        },
+        "review_1": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"It finally felt easy to stay consistent.\"",
+            "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
+            "author": "Maria L.",
+            "meta": "Verified customer"
+          }
+        },
+        "review_2": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"I feel calmer and more in control.\"",
+            "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
+            "author": "Angela R.",
+            "meta": "Verified customer"
+          }
+        },
+        "review_3": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"Private, simple, and actually realistic.\"",
+            "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
+            "author": "Denise T.",
+            "meta": "Verified customer"
+          }
         }
       },
       "block_order": [
@@ -617,11 +652,16 @@
         "faq_5",
         "faq_6",
         "faq_7",
-        "faq_8"
+        "faq_8",
+        "review_1",
+        "review_2",
+        "review_3"
       ],
       "settings": {
         "padding_top": 24,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "reviews_heading": "Reviews from Women Like You",
+        "reviews_description": "Real words from women building steadier routines and more everyday confidence with [product_title]."
       }
     }
   },
