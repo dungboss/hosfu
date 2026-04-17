@@ -1,0 +1,496 @@
+{
+  "sections": {
+    "news_story": {
+      "type": "epf-news-story",
+      "blocks": {
+        "story_1": {
+          "type": "story_section",
+          "settings": {
+            "heading": "This trainer gives men a simpler way to build consistency at home.",
+            "body": "Pelvic floor routines often fail because they feel vague or easy to forget. [product_title] gives men a more guided setup with four modes and short sessions that are easier to repeat."
+          }
+        },
+        "compare_1": {
+          "type": "compare_section",
+          "settings": {
+            "heading": "Why random Kegels often turn into guesswork",
+            "body": "Advice without structure usually leads to inconsistent effort. A device-led routine can feel clearer, easier to repeat, and easier to keep part of your week.",
+            "left_title": "Generic reminders",
+            "left_copy": "Hard to measure, easy to skip, and often dropped after a few days.",
+            "right_title": "[product_title]",
+            "right_copy": "4 modes, Type-C charging, and a more practical home routine."
+          }
+        },
+        "story_2": {
+          "type": "story_section",
+          "settings": {
+            "heading": "Private home sessions fit real schedules better.",
+            "body": "A lot of men are more likely to stay consistent when the routine stays private, compact, and easy to fit into evenings, recovery blocks, or quiet time at home."
+          }
+        },
+        "checks_1": {
+          "type": "check_columns",
+          "settings": {
+            "heading": "Why this format feels easier to keep using",
+            "copy": "A good routine reduces friction. It should be simple to charge, simple to use, and simple to keep coming back to.",
+            "left_title": "What men usually want",
+            "left_items": "A more structured routine\nPrivate home use\nEasy charging\nShort manageable sessions",
+            "right_title": "What this device offers",
+            "right_items": "4 guided training modes\nType-C rechargeable design\nCompact and discreet storage\nA format built for repeat use"
+          }
+        },
+        "story_3": {
+          "type": "story_section",
+          "settings": {
+            "heading": "It is not about doing more. It is about doing it regularly.",
+            "body": "The biggest advantage of a guided device is usually not intensity. It is consistency. Men who keep the routine simple are more likely to stay with it long enough to actually notice a difference."
+          }
+        },
+        "cta_1": {
+          "type": "cta_band",
+          "settings": {
+            "heading": "See the current offer for the men's trainer",
+            "text": "Use the button below to jump to the live product section and check current pricing, availability, and package details for [product_title].",
+            "button_label": "Check availability",
+            "button_link": "#MainProduct-offer_main"
+          }
+        }
+      },
+      "block_order": [
+        "story_1",
+        "compare_1",
+        "story_2",
+        "checks_1",
+        "story_3",
+        "cta_1"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 44,
+        "eyebrow": "Special report",
+        "headline": "The at-home device men are using to train one overlooked muscle more consistently.",
+        "author_name": "By Editorial Desk",
+        "author_meta": "Updated today",
+        "intro_paragraph_1": "For a lot of men, pelvic floor training gets pushed aside until control, awareness, or confidence starts to feel less automatic. The issue usually is not effort. It is the lack of a routine that feels clear enough to keep doing.",
+        "intro_paragraph_2": "[product_title] is positioned as a simpler home-use option: four modes, rechargeable Type-C power, and sessions that are easier to repeat than trying to remember isolated exercises on your own.",
+        "intro_paragraph_3": "That combination is why this kind of device is getting attention from men who want something more structured, private, and realistic for everyday use.",
+        "sidebar_kicker": "Recommended today",
+        "sidebar_title": "4-mode rechargeable men's pelvic floor trainer",
+        "sidebar_copy": "A more guided home routine with four training modes, Type-C charging, and a compact design built for private repeat use.",
+        "sidebar_bullets": "4 guided training modes\nRechargeable with Type-C charging\nCompact for discreet home use\nDesigned for repeatable sessions",
+        "sidebar_button_label": "Check availability",
+        "sidebar_button_link": "#MainProduct-offer_main",
+        "sidebar_note": "Pricing and stock can change. Use the button above to view the live product offer.",
+        "bottom_note": "Wellness note: [product_title] is presented here as a home-use wellness device. This page is for general product information only and is not medical advice."
+      }
+    },
+    "offer_main": {
+      "type": "main-product",
+      "blocks": {
+        "package_badge": {
+          "type": "custombannertext",
+          "settings": {
+            "customerbannertext": "Men's At-Home Pelvic Floor Trainer",
+            "backgroundcustomerbannertext": "#8d184d",
+            "colorcustomerbannertext": "#ffffff",
+            "fontsizecustomerbannertext": 14,
+            "weightcustomerbannertext": "700",
+            "bordercustomerbannertext": 20,
+            "margin_top": 0,
+            "margin_bottom": 12
+          }
+        },
+        "title": {
+          "type": "product_title",
+          "settings": {
+            "uppercase_title": false,
+            "desktop_size": 36,
+            "alignment": "left",
+            "mobile_size": 28,
+            "mobile_alignment": "mobile-left",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "rating": {
+          "type": "rating-stars",
+          "settings": {
+            "rating": 4.8,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "(Trusted by men building better control at home)",
+            "size": 15,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 6,
+            "margin_bottom": 12
+          }
+        },
+        "price": {
+          "type": "product_price",
+          "settings": {
+            "price_layout": "price-first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "regular_price_size": 24,
+            "sale_price_size": 20,
+            "compare_price_size": 15,
+            "displayed_badge": "sale",
+            "sale_badge_color": "accent-2",
+            "custom_badge_text": "SAVE TODAY",
+            "icon_scale": 100,
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 0,
+            "margin_bottom": 15
+          }
+        },
+        "variant_picker": {
+          "type": "product_product-variant-picker-block",
+          "settings": {
+            "picker_types": "dropdown, dropdown, dropdown",
+            "custom_labels": "[name] - [selected]",
+            "skip_unavailable": false,
+            "swatches_size": "medium",
+            "full_width_dropdowns": true,
+            "margin_top": 0,
+            "margin_bottom": 15
+          }
+        },
+        "benefits": {
+          "type": "key-benefits",
+          "settings": {
+            "key1": "4 training modes for guided sessions",
+            "key2": "Rechargeable with Type-C charging",
+            "key3": "Compact design for discreet home use",
+            "key4": "Discreet shipping and easy storage",
+            "key5": "Easy to fit into workouts or recovery",
+            "checkmarkcolorbackground": "#f8eee8",
+            "checkmarkcolor": "#8d184d",
+            "keybenefitsborderradius": 14,
+            "margin_top": 0,
+            "margin_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "product_buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "atc_append": "left",
+            "atc_append_heights": "stretch-quantity",
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "Start My Training Routine",
+            "display_price": false,
+            "price_position": "left",
+            "price_separator": "|",
+            "enable_custom_color": false,
+            "custom_color": "#8d184d",
+            "custom_text_color": "#ffffff",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#8d184d",
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "shipping": {
+          "type": "product_shipping-checkpoints",
+          "settings": {
+            "top_text_1": "<strong>Today</strong>",
+            "bottom_text_1": "Secure order",
+            "icon_1": "add_shopping_cart",
+            "filled_icon_1": false,
+            "min_days_1": 0,
+            "max_days_1": 0,
+            "top_text_2": "<strong>24-48 hrs</strong>",
+            "bottom_text_2": "Packed discreetly",
+            "icon_2": "local_shipping",
+            "filled_icon_2": false,
+            "min_days_2": 1,
+            "max_days_2": 2,
+            "top_text_3": "<strong>Estimated delivery</strong>",
+            "bottom_text_3": "Fast tracked shipping",
+            "icon_3": "redeem",
+            "filled_icon_3": false,
+            "min_days_3": 4,
+            "max_days_3": 7,
+            "top_text_4": "",
+            "bottom_text_4": "",
+            "icon_4": "",
+            "filled_icon_4": false,
+            "date_format": "mm_dd",
+            "days_labels": "Mon, Tue, Wed, Thu, Fri, Sat, Sun",
+            "months_labels": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
+            "days_to_skip": "",
+            "dates_to_skip": "",
+            "color_scheme": "inverse",
+            "margin_top": 12,
+            "margin_bottom": 9
+          }
+        },
+        "sticky": {
+          "type": "product_sticky-atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "Buy now",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#8d184d",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "(Trusted by men)",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": false,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "package_badge",
+        "title",
+        "rating",
+        "price",
+        "variant_picker",
+        "benefits",
+        "buy_buttons",
+        "shipping",
+        "sticky"
+      ],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": false,
+        "color_scheme": "background-1",
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "small",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 4,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 18,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 8,
+        "desktop_padding_top": 24,
+        "desktop_padding_bottom": 24
+      }
+    },
+    "epf_support": {
+      "type": "epf-support",
+      "blocks": {
+        "support_point_1": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "30-day confidence promise",
+            "text": "Try it in your home routine and make sure it feels right for you."
+          }
+        },
+        "support_point_2": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "4-mode guided training",
+            "text": "Built around repeatable home sessions instead of guesswork."
+          }
+        },
+        "support_point_3": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "Discreet shipping",
+            "text": "Your order arrives privately so you can start with confidence."
+          }
+        },
+        "support_point_4": {
+          "type": "support_point",
+          "settings": {
+            "icon_text": "✓",
+            "title": "Rechargeable and ready",
+            "text": "Type-C charging makes it easier to keep the device ready for regular use."
+          }
+        },
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is this different from doing Kegels on my own?",
+            "answer": "Many men struggle with consistency because the routine feels vague. [product_title] gives you a more structured, device-led way to build a repeatable home habit.",
+            "open_by_default": false
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this a medical treatment?",
+            "answer": "No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.",
+            "open_by_default": false
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is this trainer designed for?",
+            "answer": "This product is positioned for men who want a private at-home pelvic floor training routine with guided modes and rechargeable convenience.",
+            "open_by_default": false
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How often should I use it?",
+            "answer": "The strongest results usually come from consistency, not marathon sessions. A simple, repeatable 20-minute rhythm tends to be easier to maintain than an all-or-nothing plan.",
+            "open_by_default": false
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it rechargeable?",
+            "answer": "Yes. It uses Type-C charging, so it's easy to power up and keep ready for regular sessions at home.",
+            "open_by_default": false
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it be discreet?",
+            "answer": "Yes. The device is intended for private home use, and discreet shipping helps reduce extra friction when getting started.",
+            "open_by_default": false
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is [product_title] hard to fit into a busy schedule?",
+            "answer": "It shouldn't be. The routine is built around short, manageable sessions so you can fit it into mornings, evenings, or any reset window that already exists in your day.",
+            "open_by_default": false
+          }
+        },
+        "faq_8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if it doesn't feel like the right fit for me?",
+            "answer": "Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel aligned with your routine, you have a 30-day confidence promise to lean on.",
+            "open_by_default": false
+          }
+        },
+        "review_1": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"It finally felt easy to stay consistent.\"",
+            "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
+            "author": "Mark T.",
+            "meta": "Verified customer"
+          }
+        },
+        "review_2": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"I feel calmer and more in control.\"",
+            "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
+            "author": "Jason R.",
+            "meta": "Verified customer"
+          }
+        },
+        "review_3": {
+          "type": "review_item",
+          "settings": {
+            "stars": "★★★★★",
+            "title": "\"Private, simple, and actually realistic.\"",
+            "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
+            "author": "Daniel S.",
+            "meta": "Verified customer"
+          }
+        }
+      },
+      "block_order": [
+        "support_point_1",
+        "support_point_2",
+        "support_point_3",
+        "support_point_4",
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 48,
+        "faq_heading": "Questions Men Ask Before Starting",
+        "faq_description": "Short answers to common questions men ask before starting a home pelvic floor training routine.",
+        "reviews_heading": "Reviews from Men Like You",
+        "reviews_description": "Real words from men using [product_title] to build a steadier, more consistent home routine."
+      }
+    }
+  },
+  "order": [
+    "news_story",
+    "offer_main",
+    "epf_support"
+  ]
+}

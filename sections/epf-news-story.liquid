@@ -1,0 +1,1049 @@
+{% liquid
+  assign hero_media = product.featured_media
+  assign hero_image = section.settings.hero_image
+  if hero_image == blank and hero_media != blank
+    assign hero_image = hero_media.preview_image
+  endif
+
+  assign sidebar_image = section.settings.sidebar_image
+  if sidebar_image == blank and hero_media != blank
+    assign sidebar_image = hero_media.preview_image
+  endif
+
+  assign story_media_1 = product.media | slice: 1, 1 | first
+  assign story_media_2 = product.media | slice: 2, 1 | first
+  assign story_media_3 = product.media | slice: 3, 1 | first
+  assign story_media_4 = product.media | slice: 4, 1 | first
+  assign story_media_5 = product.media | slice: 5, 1 | first
+  assign story_media_6 = product.media | slice: 6, 1 | first
+  assign story_media_7 = product.media | slice: 7, 1 | first
+  assign story_media_8 = product.media | slice: 8, 1 | first
+
+  if story_media_1 == blank and hero_media != blank
+    assign story_media_1 = hero_media
+  endif
+  if story_media_2 == blank and story_media_1 != blank
+    assign story_media_2 = story_media_1
+  endif
+  if story_media_3 == blank and story_media_2 != blank
+    assign story_media_3 = story_media_2
+  endif
+  if story_media_4 == blank and story_media_3 != blank
+    assign story_media_4 = story_media_3
+  endif
+  if story_media_5 == blank and story_media_4 != blank
+    assign story_media_5 = story_media_4
+  endif
+  if story_media_6 == blank and story_media_5 != blank
+    assign story_media_6 = story_media_5
+  endif
+  if story_media_7 == blank and story_media_6 != blank
+    assign story_media_7 = story_media_6
+  endif
+  if story_media_8 == blank and story_media_7 != blank
+    assign story_media_8 = story_media_7
+  endif
+%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --news-blue: #0f69d7;
+    --news-blue-dark: #0a4da0;
+    --news-ink: #122235;
+    --news-muted: #5c6d81;
+    --news-line: rgba(18, 34, 53, 0.12);
+    --news-surface: #ffffff;
+    --news-surface-soft: #f4f7fb;
+    --news-shadow: 0 18px 36px rgba(18, 34, 53, 0.08);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news {
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f7fafe 100%);
+    color: var(--news-ink);
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__shell {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30rem;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__article,
+  #shopify-section-{{ section.id }} .epf-news__sidebar-card {
+    background: var(--news-surface);
+    border: 1px solid var(--news-line);
+    border-radius: 2.4rem;
+    box-shadow: var(--news-shadow);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__article {
+    padding: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: rgba(15, 105, 215, 0.1);
+    color: var(--news-blue-dark);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__headline {
+    margin: 0;
+    font-family: var(--font-heading-family);
+    font-size: clamp(3rem, 4.8vw, 5.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: center;
+    margin-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid var(--news-line);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__author-image {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #dde8f5;
+    flex: 0 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__author-name {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__author-meta {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--news-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__hero {
+    margin-top: 1.6rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: #edf3fa;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__hero img,
+  #shopify-section-{{ section.id }} .epf-news__story-image img,
+  #shopify-section-{{ section.id }} .epf-news__compare-image img,
+  #shopify-section-{{ section.id }} .epf-news__sidebar-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__copy {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.6rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__copy p,
+  #shopify-section-{{ section.id }} .epf-news__story-body,
+  #shopify-section-{{ section.id }} .epf-news__compare-body,
+  #shopify-section-{{ section.id }} .epf-news__checks-copy,
+  #shopify-section-{{ section.id }} .epf-news__sidebar-copy,
+  #shopify-section-{{ section.id }} .epf-news__note {
+    margin: 0;
+    font-size: 1.55rem;
+    line-height: 1.78;
+    color: var(--news-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar {
+    position: sticky;
+    top: 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-card {
+    padding: 1.35rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-kicker {
+    margin: 0 0 0.8rem;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--news-blue-dark);
+    font-weight: 800;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-media {
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background: #edf3fa;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-title {
+    margin: 1.1rem 0 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: var(--font-heading-family);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__price {
+    display: flex;
+    gap: 0.7rem;
+    align-items: baseline;
+    margin-top: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__price-current {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    font-weight: 900;
+    color: var(--news-ink);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__price-compare {
+    font-size: 1.45rem;
+    color: var(--news-muted);
+    text-decoration: line-through;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-copy {
+    margin-top: 0.9rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-list,
+  #shopify-section-{{ section.id }} .epf-news__checks-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-list li,
+  #shopify-section-{{ section.id }} .epf-news__checks-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1.35rem;
+    line-height: 1.55;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__tick {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background: rgba(15, 105, 215, 0.12);
+    color: var(--news-blue);
+    font-size: 1.1rem;
+    font-weight: 800;
+    flex: 0 0 auto;
+    margin-top: 0.05rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 5rem;
+    padding: 0 1.6rem;
+    margin-top: 1.2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--news-blue) 0%, var(--news-blue-dark) 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 14px 28px rgba(15, 105, 215, 0.24);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__sidebar-note {
+    margin-top: 0.8rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--news-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__block {
+    margin-top: 2.6rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__story-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    background: #edf3fa;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__story-heading,
+  #shopify-section-{{ section.id }} .epf-news__compare-heading,
+  #shopify-section-{{ section.id }} .epf-news__checks-heading,
+  #shopify-section-{{ section.id }} .epf-news__cta-heading {
+    margin: 1.2rem 0 0;
+    font-family: var(--font-heading-family);
+    font-size: clamp(2.4rem, 3vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--news-blue);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__story-body,
+  #shopify-section-{{ section.id }} .epf-news__compare-body {
+    margin-top: 1rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__compare-card,
+  #shopify-section-{{ section.id }} .epf-news__checks-card {
+    background: var(--news-surface-soft);
+    border: 1px solid var(--news-line);
+    border-radius: 2rem;
+    padding: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__compare-image {
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__compare-title,
+  #shopify-section-{{ section.id }} .epf-news__checks-title {
+    margin: 1rem 0 0;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-weight: 800;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__compare-copy {
+    margin-top: 0.6rem;
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: var(--news-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__checks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__cta {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2.4rem;
+    background: linear-gradient(135deg, #eaf4ff 0%, #f7fbff 100%);
+    border: 1px solid rgba(15, 105, 215, 0.14);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__cta-text {
+    margin: 0.9rem auto 0;
+    max-width: 62rem;
+    font-size: 1.5rem;
+    line-height: 1.72;
+    color: var(--news-muted);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__cta .epf-news__button {
+    width: auto;
+    min-width: 24rem;
+    margin-top: 1.3rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__footnote {
+    margin-top: 2.4rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--news-line);
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: var(--news-muted);
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .epf-news {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    #shopify-section-{{ section.id }} .epf-news__layout,
+    #shopify-section-{{ section.id }} .epf-news__compare-grid,
+    #shopify-section-{{ section.id }} .epf-news__checks-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #shopify-section-{{ section.id }} .epf-news__sidebar {
+      position: static;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-news__article,
+    #shopify-section-{{ section.id }} .epf-news__sidebar-card,
+    #shopify-section-{{ section.id }} .epf-news__cta {
+      border-radius: 2rem;
+      padding: 1.35rem;
+    }
+
+    #shopify-section-{{ section.id }} .epf-news__headline {
+      font-size: clamp(2.6rem, 8vw, 4rem);
+    }
+
+    #shopify-section-{{ section.id }} .epf-news__copy p,
+    #shopify-section-{{ section.id }} .epf-news__story-body,
+    #shopify-section-{{ section.id }} .epf-news__compare-body,
+    #shopify-section-{{ section.id }} .epf-news__checks-copy,
+    #shopify-section-{{ section.id }} .epf-news__sidebar-copy {
+      font-size: 1.4rem;
+    }
+  }
+{%- endstyle -%}
+
+<section class="epf-news">
+  <div class="page-width epf-news__shell">
+    <div class="epf-news__layout">
+      <article class="epf-news__article">
+        {% if section.settings.eyebrow != blank %}
+          <p class="epf-news__eyebrow">{{ section.settings.eyebrow | replace: '[product_title]', product.title }}</p>
+        {% endif %}
+
+        <h1 class="epf-news__headline">{{ section.settings.headline | replace: '[product_title]', product.title }}</h1>
+
+        <div class="epf-news__byline">
+          {% if section.settings.author_image != blank %}
+            <div class="epf-news__author-image">
+              {{
+                section.settings.author_image
+                | image_url: width: 120
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '60, 90, 120',
+                  sizes: '48px',
+                  alt: section.settings.author_name
+              }}
+            </div>
+          {% endif %}
+
+          <div>
+            {% if section.settings.author_name != blank %}
+              <span class="epf-news__author-name">{{ section.settings.author_name }}</span>
+            {% endif %}
+            {% if section.settings.author_meta != blank %}
+              <span class="epf-news__author-meta">{{ section.settings.author_meta }}</span>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="epf-news__hero">
+          {% if hero_image != blank %}
+            {{
+              hero_image
+              | image_url: width: 1400
+              | image_tag:
+                loading: 'lazy',
+                widths: '480, 720, 960, 1200, 1400',
+                sizes: '(min-width: 990px) 68vw, 92vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+          {% endif %}
+        </div>
+
+        <div class="epf-news__copy">
+          {% if section.settings.intro_paragraph_1 != blank %}
+            <p>{{ section.settings.intro_paragraph_1 | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+          {% if section.settings.intro_paragraph_2 != blank %}
+            <p>{{ section.settings.intro_paragraph_2 | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+          {% if section.settings.intro_paragraph_3 != blank %}
+            <p>{{ section.settings.intro_paragraph_3 | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+        </div>
+
+        {% for block in section.blocks %}
+          {% assign fallback_image = blank %}
+          {% case forloop.index %}
+            {% when 1 %}
+              {% if story_media_1 != blank %}{% assign fallback_image = story_media_1.preview_image %}{% endif %}
+            {% when 2 %}
+              {% if story_media_2 != blank %}{% assign fallback_image = story_media_2.preview_image %}{% endif %}
+            {% when 3 %}
+              {% if story_media_3 != blank %}{% assign fallback_image = story_media_3.preview_image %}{% endif %}
+            {% when 4 %}
+              {% if story_media_4 != blank %}{% assign fallback_image = story_media_4.preview_image %}{% endif %}
+            {% when 5 %}
+              {% if story_media_5 != blank %}{% assign fallback_image = story_media_5.preview_image %}{% endif %}
+            {% when 6 %}
+              {% if story_media_6 != blank %}{% assign fallback_image = story_media_6.preview_image %}{% endif %}
+            {% when 7 %}
+              {% if story_media_7 != blank %}{% assign fallback_image = story_media_7.preview_image %}{% endif %}
+            {% else %}
+              {% if story_media_8 != blank %}{% assign fallback_image = story_media_8.preview_image %}{% endif %}
+          {% endcase %}
+
+          {% case block.type %}
+            {% when 'story_section' %}
+              {% assign block_image = block.settings.image %}
+              {% if block_image == blank %}
+                {% assign block_image = fallback_image %}
+              {% endif %}
+              <section class="epf-news__block" {{ block.shopify_attributes }}>
+                {% if block_image != blank %}
+                  <div class="epf-news__story-image">
+                    {{
+                      block_image
+                      | image_url: width: 1200
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '420, 640, 860, 1200',
+                        sizes: '(min-width: 990px) 68vw, 92vw',
+                        alt: block.settings.heading
+                    }}
+                  </div>
+                {% endif %}
+                <h2 class="epf-news__story-heading">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+                <div class="epf-news__story-body">
+                  {{ block.settings.body | replace: '[product_title]', product.title | newline_to_br }}
+                </div>
+              </section>
+
+            {% when 'compare_section' %}
+              {% assign left_image = block.settings.left_image %}
+              {% assign right_image = block.settings.right_image %}
+              {% if left_image == blank %}
+                {% assign left_image = fallback_image %}
+              {% endif %}
+              {% if right_image == blank %}
+                {% if story_media_6 != blank %}
+                  {% assign right_image = story_media_6.preview_image %}
+                {% else %}
+                  {% assign right_image = fallback_image %}
+                {% endif %}
+              {% endif %}
+              <section class="epf-news__block" {{ block.shopify_attributes }}>
+                <h2 class="epf-news__compare-heading">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+                <div class="epf-news__compare-body">
+                  {{ block.settings.body | replace: '[product_title]', product.title | newline_to_br }}
+                </div>
+                <div class="epf-news__compare-grid">
+                  <div class="epf-news__compare-card">
+                    {% if left_image != blank %}
+                      <div class="epf-news__compare-image">
+                        {{
+                          left_image
+                          | image_url: width: 720
+                          | image_tag:
+                            loading: 'lazy',
+                            widths: '320, 480, 640, 720',
+                            sizes: '(min-width: 990px) 33vw, 92vw',
+                            alt: block.settings.left_title
+                        }}
+                      </div>
+                    {% endif %}
+                    <h3 class="epf-news__compare-title">{{ block.settings.left_title | replace: '[product_title]', product.title }}</h3>
+                    <div class="epf-news__compare-copy">
+                      {{ block.settings.left_copy | replace: '[product_title]', product.title | newline_to_br }}
+                    </div>
+                  </div>
+                  <div class="epf-news__compare-card">
+                    {% if right_image != blank %}
+                      <div class="epf-news__compare-image">
+                        {{
+                          right_image
+                          | image_url: width: 720
+                          | image_tag:
+                            loading: 'lazy',
+                            widths: '320, 480, 640, 720',
+                            sizes: '(min-width: 990px) 33vw, 92vw',
+                            alt: block.settings.right_title
+                        }}
+                      </div>
+                    {% endif %}
+                    <h3 class="epf-news__compare-title">{{ block.settings.right_title | replace: '[product_title]', product.title }}</h3>
+                    <div class="epf-news__compare-copy">
+                      {{ block.settings.right_copy | replace: '[product_title]', product.title | newline_to_br }}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            {% when 'check_columns' %}
+              <section class="epf-news__block" {{ block.shopify_attributes }}>
+                <h2 class="epf-news__checks-heading">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+                {% if block.settings.copy != blank %}
+                  <div class="epf-news__checks-copy">
+                    {{ block.settings.copy | replace: '[product_title]', product.title | newline_to_br }}
+                  </div>
+                {% endif %}
+                <div class="epf-news__checks-grid">
+                  <div class="epf-news__checks-card">
+                    <h3 class="epf-news__checks-title">{{ block.settings.left_title | replace: '[product_title]', product.title }}</h3>
+                    <ul class="epf-news__checks-list">
+                      {% assign left_items = block.settings.left_items | newline_to_br | split: '<br />' %}
+                      {% for item in left_items %}
+                        {% assign clean_item = item | strip %}
+                        {% if clean_item != blank %}
+                          <li><span class="epf-news__tick">+</span><span>{{ clean_item }}</span></li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  <div class="epf-news__checks-card">
+                    <h3 class="epf-news__checks-title">{{ block.settings.right_title | replace: '[product_title]', product.title }}</h3>
+                    <ul class="epf-news__checks-list">
+                      {% assign right_items = block.settings.right_items | newline_to_br | split: '<br />' %}
+                      {% for item in right_items %}
+                        {% assign clean_item = item | strip %}
+                        {% if clean_item != blank %}
+                          <li><span class="epf-news__tick">+</span><span>{{ clean_item }}</span></li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+            {% when 'cta_band' %}
+              <section class="epf-news__block epf-news__cta" {{ block.shopify_attributes }}>
+                <h2 class="epf-news__cta-heading">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+                {% if block.settings.text != blank %}
+                  <p class="epf-news__cta-text">{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+                {% endif %}
+                {% if block.settings.button_label != blank %}
+                  <a class="epf-news__button" href="{{ block.settings.button_link | default: '#MainProduct-offer_main' }}">
+                    {{ block.settings.button_label | replace: '[product_title]', product.title }}
+                  </a>
+                {% endif %}
+              </section>
+          {% endcase %}
+        {% endfor %}
+
+        {% if section.settings.bottom_note != blank %}
+          <div class="epf-news__footnote">
+            {{ section.settings.bottom_note | replace: '[product_title]', product.title | newline_to_br }}
+          </div>
+        {% endif %}
+      </article>
+
+      <aside class="epf-news__sidebar">
+        <div class="epf-news__sidebar-card">
+          {% if section.settings.sidebar_kicker != blank %}
+            <p class="epf-news__sidebar-kicker">{{ section.settings.sidebar_kicker | replace: '[product_title]', product.title }}</p>
+          {% endif %}
+
+          <div class="epf-news__sidebar-media">
+            {% if sidebar_image != blank %}
+              {{
+                sidebar_image
+                | image_url: width: 700
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '240, 360, 540, 700',
+                  sizes: '(min-width: 990px) 30rem, 90vw',
+                  alt: product.title
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+            {% endif %}
+          </div>
+
+          <h2 class="epf-news__sidebar-title">{{ section.settings.sidebar_title | replace: '[product_title]', product.title }}</h2>
+
+          <div class="epf-news__price">
+            <span class="epf-news__price-current">{{ product.price | money }}</span>
+            {% if product.compare_at_price_max > product.price %}
+              <span class="epf-news__price-compare">{{ product.compare_at_price_max | money }}</span>
+            {% endif %}
+          </div>
+
+          {% if section.settings.sidebar_copy != blank %}
+            <div class="epf-news__sidebar-copy">
+              {{ section.settings.sidebar_copy | replace: '[product_title]', product.title | newline_to_br }}
+            </div>
+          {% endif %}
+
+          <ul class="epf-news__sidebar-list">
+            {% assign sidebar_bullets = section.settings.sidebar_bullets | newline_to_br | split: '<br />' %}
+            {% for bullet in sidebar_bullets %}
+              {% assign clean_bullet = bullet | strip %}
+              {% if clean_bullet != blank %}
+                <li><span class="epf-news__tick">&#10003;</span><span>{{ clean_bullet | replace: '[product_title]', product.title }}</span></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          {% if section.settings.sidebar_button_label != blank %}
+            <a class="epf-news__button" href="{{ section.settings.sidebar_button_link | default: '#MainProduct-offer_main' }}">
+              {{ section.settings.sidebar_button_label | replace: '[product_title]', product.title }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.sidebar_note != blank %}
+            <p class="epf-news__sidebar-note">{{ section.settings.sidebar_note | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "EPF News Story",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 44
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Special report"
+    },
+    {
+      "type": "textarea",
+      "id": "headline",
+      "label": "Headline",
+      "default": "The at-home device men are using to train one overlooked muscle more consistently."
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Author image"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author name",
+      "default": "By Editorial Desk"
+    },
+    {
+      "type": "text",
+      "id": "author_meta",
+      "label": "Author meta",
+      "default": "Updated today"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_paragraph_1",
+      "label": "Intro paragraph 1",
+      "default": "For a lot of men, pelvic floor training gets pushed aside until control, awareness, or confidence starts to feel less automatic. The problem usually isn't effort. It's a lack of structure."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_paragraph_2",
+      "label": "Intro paragraph 2",
+      "default": "[product_title] gives men a more guided home routine with four training modes, rechargeable Type-C power, and a compact design that doesn't turn the habit into a project."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_paragraph_3",
+      "label": "Intro paragraph 3",
+      "default": "Instead of relying on reminders or guesswork, the device helps turn short sessions into something easier to repeat."
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "image_picker",
+      "id": "sidebar_image",
+      "label": "Sidebar image"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_kicker",
+      "label": "Sidebar kicker",
+      "default": "Recommended today"
+    },
+    {
+      "type": "textarea",
+      "id": "sidebar_title",
+      "label": "Sidebar title",
+      "default": "4-mode rechargeable men's pelvic floor trainer"
+    },
+    {
+      "type": "textarea",
+      "id": "sidebar_copy",
+      "label": "Sidebar copy",
+      "default": "Private at-home training with four modes, Type-C charging, and a routine that fits real schedules."
+    },
+    {
+      "type": "textarea",
+      "id": "sidebar_bullets",
+      "label": "Sidebar bullets",
+      "default": "4 guided training modes\nRechargeable with Type-C charging\nCompact and discreet for home use\nEasy to fit into a repeatable routine"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_button_label",
+      "label": "Sidebar button label",
+      "default": "Check availability"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_button_link",
+      "label": "Sidebar button link",
+      "default": "#MainProduct-offer_main"
+    },
+    {
+      "type": "textarea",
+      "id": "sidebar_note",
+      "label": "Sidebar note",
+      "default": "Inventory and price can change. Use the button above to view the current offer."
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_note",
+      "label": "Bottom note",
+      "default": "Wellness note: [product_title] is presented here as a home-use wellness device. This page is for general product information only and is not medical advice."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story_section",
+      "name": "Story Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "This trainer gives men a simpler way to build consistency at home."
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Body",
+          "default": "Short sessions are easier to repeat when the routine feels clear. Four modes help reduce guesswork and make the habit feel more concrete."
+        }
+      ]
+    },
+    {
+      "type": "compare_section",
+      "name": "Compare Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Why random pelvic floor advice often turns into guesswork"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Body",
+          "default": "A lot of men are told to just 'do Kegels' and hope for the best. But a repeatable device-led routine usually feels easier to keep using."
+        },
+        {
+          "type": "image_picker",
+          "id": "left_image",
+          "label": "Left image"
+        },
+        {
+          "type": "text",
+          "id": "left_title",
+          "label": "Left title",
+          "default": "Generic advice"
+        },
+        {
+          "type": "textarea",
+          "id": "left_copy",
+          "label": "Left copy",
+          "default": "Easy to forget, hard to measure, and usually inconsistent."
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "right_title",
+          "label": "Right title",
+          "default": "[product_title]"
+        },
+        {
+          "type": "textarea",
+          "id": "right_copy",
+          "label": "Right copy",
+          "default": "Four modes, rechargeable convenience, and a clearer at-home routine."
+        }
+      ]
+    },
+    {
+      "type": "check_columns",
+      "name": "Check Columns",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Why this format feels easier to keep using"
+        },
+        {
+          "type": "textarea",
+          "id": "copy",
+          "label": "Copy",
+          "default": "A good home routine needs less friction, more clarity, and a format you can realistically repeat."
+        },
+        {
+          "type": "text",
+          "id": "left_title",
+          "label": "Left title",
+          "default": "What men want"
+        },
+        {
+          "type": "textarea",
+          "id": "left_items",
+          "label": "Left items",
+          "default": "Private home use\nEasy charging\nSimple sessions\nA more guided structure"
+        },
+        {
+          "type": "text",
+          "id": "right_title",
+          "label": "Right title",
+          "default": "What this device delivers"
+        },
+        {
+          "type": "textarea",
+          "id": "right_items",
+          "label": "Right items",
+          "default": "4 training modes\nType-C rechargeable design\nCompact storage and travel-friendly size\nA routine that feels easier to repeat"
+        }
+      ]
+    },
+    {
+      "type": "cta_band",
+      "name": "CTA Band",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Ready to see the current offer?"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Check the live product section for pricing, availability, and the current package for [product_title]."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Check availability"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "Button link",
+          "default": "#MainProduct-offer_main"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "EPF News Story",
+      "blocks": [
+        {
+          "type": "story_section"
+        },
+        {
+          "type": "compare_section"
+        },
+        {
+          "type": "story_section"
+        },
+        {
+          "type": "check_columns"
+        },
+        {
+          "type": "story_section"
+        },
+        {
+          "type": "cta_band"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
