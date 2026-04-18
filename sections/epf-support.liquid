@@ -1,61 +1,32 @@
 {% liquid
-
   assign hero_media = product.featured_media
-
   assign problem_media = product.media | slice: 1, 1 | first
-
   assign expect_media_1 = product.media | slice: 2, 1 | first
-
   assign expect_media_2 = product.media | slice: 3, 1 | first
-
   assign expect_media_3 = product.media | slice: 4, 1 | first
-
   assign journey_media_1 = product.media | slice: 5, 1 | first
-
   assign journey_media_2 = product.media | slice: 6, 1 | first
-
   assign journey_media_3 = product.media | slice: 7, 1 | first
-
   assign voice_media_1 = product.media | slice: 8, 1 | first
-
   assign voice_media_2 = product.media | slice: 9, 1 | first
-
   assign voice_media_3 = product.media | slice: 10, 1 | first
-
-
-
   if problem_media == blank
-
     assign problem_media = hero_media
-
   endif
-
   if expect_media_1 == blank
 
     assign expect_media_1 = hero_media
-
   endif
-
   if expect_media_2 == blank
-
     assign expect_media_2 = problem_media
-
   endif
-
   if expect_media_3 == blank
-
     assign expect_media_3 = hero_media
-
   endif
-
   if journey_media_1 == blank
-
     assign journey_media_1 = expect_media_1
-
-  endif
-
+ endif
   if journey_media_2 == blank
-
     assign journey_media_2 = expect_media_2
 
   endif
