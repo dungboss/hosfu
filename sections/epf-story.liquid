@@ -782,6 +782,90 @@
       padding: 1.3rem;
     }
   }
+  /* --- BẮT ĐẦU CSS MỚI CHO PHẦN INTRO --- */
+  #shopify-section-{{ section.id }} .epf-story__intro-wrapper {
+    margin-top: 6rem;
+  }
+  
+  #shopify-section-{{ section.id }} .epf-story__intro-main-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: clamp(3rem, 4vw, 4.4rem);
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  /* Hỗ trợ đổi màu chữ đỏ cho các từ nhấn mạnh */
+  #shopify-section-{{ section.id }} .epf-story__intro-main-heading span {
+    color: var(--epf-wine); 
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-lead {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+    color: var(--epf-text) !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-subtext {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    margin-bottom: 3.5rem !important;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-family: inherit; /* Bỏ font heading nếu muốn giống ảnh */
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-item h3 span {
+    color: var(--epf-wine);
+  }
+
+  #shopify-section-{{ section.id }} .epf-story__intro-item p {
+    font-size: 1.35rem !important;
+    line-height: 1.5 !important;
+    color: var(--epf-text) !important;
+  }
+
+  /* Xử lý riêng cho block text cuối cùng không có icon */
+  #shopify-section-{{ section.id }} .epf-story__intro-item.text-only {
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-story__intro-grid {
+      grid-template-columns: 1fr;
+    }
+    #shopify-section-{{ section.id }} .epf-story__intro-wrapper {
+      margin-top: 4rem;
+    }
+  }
+  /* --- KẾT THÚC CSS MỚI --- */
 {%- endstyle -%}
 
 <section class="epf-story">
@@ -924,37 +1008,47 @@
         </div>
       </div>
 
-    <div class="epf-story__section epf-story__split">
-      <div class="epf-story__problem-card">
-        <div class="epf-story__problem-card-inner">
-          <div class="epf-story__card-media">
-            {% if intro_image != blank %}
-              {{
-                intro_image
-                | image_url: width: 780
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '320, 480, 640, 780',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__note-list">
+<div class="epf-story__section epf-story__intro-wrapper" id="epf-intro">
+      <h2 class="epf-story__intro-main-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+
+      <div class="epf-story__split" style="align-items: flex-start;">
+        <div class="epf-story__visual">
+           {% if intro_image != blank %}
+            {{ intro_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'epf-story__featured-image', style: 'border-radius: 2rem;' }}
+           {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+           {% endif %}
+        </div>
+
+        <div class="epf-story__content">
+          {% if section.settings.intro_body != blank %}
+            <p class="epf-story__intro-lead">{{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+
+          {% if section.settings.intro_subtext != blank %}
+            <p class="epf-story__intro-subtext">{{ section.settings.intro_subtext | replace: '[product_title]', product.title }}</p>
+          {% endif %}
+
+          <div class="epf-story__intro-grid">
             {% for block in section.blocks %}
-              {% if block.type == 'intro_side_feature' %}
-                <div class="epf-story__feature-card" {{ block.shopify_attributes }}>
-                  <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
-                  <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
-                  <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
-                </div>
+              {% if block.type == 'intro_feature' %}
+                <article class="epf-story__intro-item {% if block.settings.icon == blank %}text-only{% endif %}" {{ block.shopify_attributes }}>
+                  {% if block.settings.icon != blank %}
+                    <img src="{{ block.settings.icon | image_url: width: 100 }}" alt="" class="epf-story__intro-icon" loading="lazy">
+                  {% endif %}
+
+                  {% if block.settings.heading != blank %}
+                    <h3>{{ block.settings.heading }}</h3>
+                  {% endif %}
+
+                  <p>{{ block.settings.text | newline_to_br }}</p>
+                </article>
               {% endif %}
             {% endfor %}
           </div>
         </div>
       </div>
+    </div>
 
 <div class="epf-story__content">
         <h2 class="epf-story__intro-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
@@ -1317,7 +1411,7 @@
       "label": "Body",
       "default": "Most women are told to \"just do Kegels,\" then left to guess whether anything is actually changing. But tone, coordination, and consistency are built together, not one cue at a time."
     },
-    {
+   {
       "type": "header",
       "content": "Introduction"
     },
@@ -1327,16 +1421,23 @@
       "label": "Introduction image"
     },
     {
-      "type": "textarea",
+      "type": "text",
       "id": "intro_heading",
-      "label": "Heading",
-      "default": "Introducing the [product_title]"
+      "label": "Main Heading",
+      "default": "Introducing <span>Halsten's</span> Red-Light Therapy System",
+      "info": "Dùng thẻ <span> bọc quanh từ bạn muốn để màu đỏ."
     },
     {
       "type": "textarea",
       "id": "intro_body",
-      "label": "Body",
-      "default": "Our routine is designed to help women reconnect with the support system behind better bladder confidence, steadier movement, and more trust in their body."
+      "label": "Lead Text (In đậm)",
+      "default": "Our proprietary triple-wavelength system can restore collagen production even without estrogen."
+    },
+    {
+      "type": "text",
+      "id": "intro_subtext",
+      "label": "Subtext (Dưới chữ in đậm)",
+      "default": "Here's how each wavelength brings the factory back online:"
     },
     {
       "type": "header",
@@ -1479,28 +1580,29 @@
         }
       ]
     },
-    {
+{
       "type": "intro_feature",
       "name": "Intro Feature",
-      "limit": 8,
+      "limit": 4,
       "settings": [
         {
-          "type": "text",
-          "id": "badge",
-          "label": "Badge",
-          "default": "A"
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image",
+          "info": "Upload icon dạng PNG/SVG trong suốt. Nếu bỏ trống, text sẽ tự căn trái."
         },
         {
           "type": "text",
           "id": "heading",
           "label": "Heading",
-          "default": "Guided consistency"
+          "default": "<span>660nm</span> wavelength",
+          "info": "Dùng thẻ <span> bọc quanh chữ để có màu đỏ."
         },
         {
           "type": "textarea",
           "id": "text",
           "label": "Text",
-          "default": "Turns pelvic floor work into a repeatable routine instead of a guesswork reminder."
+          "default": "Improves micro-circulation in skin and fascia..."
         }
       ]
     },
