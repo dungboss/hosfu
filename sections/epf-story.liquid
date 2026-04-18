@@ -1020,7 +1020,35 @@
            {% endif %}
         </div>
 
+        <div class="epf-story__content">
+          {% if section.settings.intro_body != blank %}
+            <p class="epf-story__intro-lead">{{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
 
+          {% if section.settings.intro_subtext != blank %}
+            <p class="epf-story__intro-subtext">{{ section.settings.intro_subtext | replace: '[product_title]', product.title }}</p>
+          {% endif %}
+
+          <div class="epf-story__intro-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'intro_feature' %}
+                <article class="epf-story__intro-item {% if block.settings.icon == blank %}text-only{% endif %}" {{ block.shopify_attributes }}>
+                  {% if block.settings.icon != blank %}
+                    <img src="{{ block.settings.icon | image_url: width: 100 }}" alt="" class="epf-story__intro-icon" loading="lazy">
+                  {% endif %}
+
+                  {% if block.settings.heading != blank %}
+                    <h3>{{ block.settings.heading }}</h3>
+                  {% endif %}
+
+                  <p>{{ block.settings.text | newline_to_br }}</p>
+                </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <div class="epf-story__section epf-story__intro-wrapper" id="epf-intro">
