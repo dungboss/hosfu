@@ -64,6 +64,16 @@
 %}
 
 {%- style -%}
+#shopify-section-{{ section.id }} .epf-story__intro-heading {
+    white-space: nowrap; /* Ép text hiển thị trên 1 dòng ngang */
+  }
+
+  /* Tuỳ chọn: Thu nhỏ font-size trên mobile để tránh chữ bị tràn ra ngoài màn hình */
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .epf-story__intro-heading {
+      font-size: clamp(2rem, 6vw, 3rem); /* Chỉnh nhỏ lại một chút so với mặc định */
+    }
+  }
   #shopify-section-{{ section.id }} {
     --epf-wine: #8d184d;
     --epf-wine-dark: #6c103b;
@@ -946,8 +956,8 @@
         </div>
       </div>
 
-      <div class="epf-story__content">
-        <h2>{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+<div class="epf-story__content">
+        <h2 class="epf-story__intro-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
         {% if section.settings.intro_body != blank %}
           <p>
             {{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}
