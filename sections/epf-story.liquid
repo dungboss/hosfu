@@ -896,46 +896,23 @@
         </div>
       </div>
 
-      <div class="epf-story__problem-card">
-        <div class="epf-story__problem-card-inner">
-          <div class="epf-story__card-media">
-            {% if problem_image != blank %}
-              {{
-                problem_image
-                | image_url: width: 780
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '320, 480, 640, 780',
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-                  alt: product.title
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-            {% endif %}
-          </div>
-          <div class="epf-story__diagram">
-            <div class="epf-story__diagram-bars">
-              <div class="epf-story__bar">
-                <div class="epf-story__bar-fill epf-story__bar-fill--rose"></div>
-                <span>{{ section.settings.problem_bar_label_1 }}</span>
-              </div>
-              <div class="epf-story__bar">
-                <div class="epf-story__bar-fill epf-story__bar-fill--sand"></div>
-                <span>{{ section.settings.problem_bar_label_2 }}</span>
-              </div>
-              <div class="epf-story__bar">
-                <div class="epf-story__bar-fill epf-story__bar-fill--sage"></div>
-                <span>{{ section.settings.problem_bar_label_3 }}</span>
-              </div>
-            </div>
-            <div class="epf-story__tendon-card">
-              <strong>{{ section.settings.problem_tendon_heading | replace: '[product_title]', product.title }}</strong>
-              {{ section.settings.problem_tendon_copy | replace: '[product_title]', product.title | newline_to_br }}
-            </div>
-          </div>
+<div class="epf-story__problem-card">
+        <div class="epf-story__problem-media-full">
+          {% if problem_image != blank %}
+            {{
+              problem_image
+              | image_url: width: 1200
+              | image_tag:
+                loading: 'lazy',
+                widths: '320, 480, 640, 780, 1200',
+                sizes: '(min-width: 990px) 50vw, 90vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+          {% endif %}
         </div>
       </div>
-    </div>
 
     <div class="epf-story__section epf-story__split">
       <div class="epf-story__problem-card">
@@ -1329,36 +1306,6 @@
       "id": "problem_body",
       "label": "Body",
       "default": "Most women are told to \"just do Kegels,\" then left to guess whether anything is actually changing. But tone, coordination, and consistency are built together, not one cue at a time."
-    },
-    {
-      "type": "text",
-      "id": "problem_bar_label_1",
-      "label": "Bar label 1",
-      "default": "Tone"
-    },
-    {
-      "type": "text",
-      "id": "problem_bar_label_2",
-      "label": "Bar label 2",
-      "default": "Control"
-    },
-    {
-      "type": "text",
-      "id": "problem_bar_label_3",
-      "label": "Bar label 3",
-      "default": "Confidence"
-    },
-    {
-      "type": "text",
-      "id": "problem_tendon_heading",
-      "label": "Support card heading",
-      "default": "Deep core support"
-    },
-    {
-      "type": "textarea",
-      "id": "problem_tendon_copy",
-      "label": "Support card copy",
-      "default": "Better routines happen when awareness, consistency, and comfort build together instead of competing with each other."
     },
     {
       "type": "header",
