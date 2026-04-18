@@ -1,207 +1,225 @@
-{% liquid
-  assign hero_media = product.featured_media
-  assign problem_media = product.media | slice: 1, 1 | first
-  assign expect_media_1 = product.media | slice: 2, 1 | first
-  assign expect_media_2 = product.media | slice: 3, 1 | first
-  assign expect_media_3 = product.media | slice: 4, 1 | first
-  assign journey_media_1 = product.media | slice: 5, 1 | first
-  assign journey_media_2 = product.media | slice: 6, 1 | first
-  assign journey_media_3 = product.media | slice: 7, 1 | first
-  assign voice_media_1 = product.media | slice: 8, 1 | first
-  assign voice_media_2 = product.media | slice: 9, 1 | first
-  assign voice_media_3 = product.media | slice: 10, 1 | first
-
-  if problem_media == blank
-    assign problem_media = hero_media
-  endif
-
-  assign hero_image = section.settings.hero_image | default: hero_media.preview_image
-  assign problem_image = section.settings.problem_image | default: problem_media.preview_image
-  assign intro_image = section.settings.intro_image | default: hero_media.preview_image
-  assign results_image = section.settings.results_image | default: hero_media.preview_image
-%}
-
-{%- style -%}
-  #shopify-section-{{ section.id }} {
-    --epf-wine: #8d184d;
-    --epf-wine-dark: #6c103b;
-    --epf-rose: #f8eee8;
-    --epf-cream: #fcf8f4;
-    --epf-sand: #eadacb;
-    --epf-text: #231815;
-    --epf-muted: #6d5a53;
-    --epf-line: rgba(141, 24, 77, 0.14);
-    --epf-shadow: 0 18px 42px rgba(35, 24, 21, 0.08);
+<style>
+  /* CSS Cơ bản cho toàn bộ Landing Page */
+  .halsten-wrapper {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  #shopify-section-{{ section.id }} .epf-story {
-    background: linear-gradient(180deg, #fffdfb 0%, var(--epf-cream) 100%);
-    color: var(--epf-text);
-    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  .halsten-wrapper * {
+    box-sizing: border-box;
   }
-
-  #shopify-section-{{ section.id }} .epf-story__shell { max-width: 1180px; margin: 0 auto; }
-
-  /* Grid System */
-  #shopify-section-{{ section.id }} .epf-story__split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+  .halsten-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-
-  /* Introduction Style (Halsten) */
-  #shopify-section-{{ section.id }} .epf-story__intro-wrapper { margin-top: 6rem; }
-  #shopify-section-{{ section.id }} .epf-story__intro-main-heading { 
-    text-align: center; 
-    margin-bottom: 5rem; 
-    font-size: clamp(3rem, 5vw, 4.8rem);
-    line-height: 1.1;
-  }
-  #shopify-section-{{ section.id }} .epf-story__intro-main-heading span { color: var(--epf-wine); font-weight: 800; }
   
-  #shopify-section-{{ section.id }} .epf-story__intro-lead { font-size: 1.9rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.4; }
-  #shopify-section-{{ section.id }} .epf-story__intro-subtext { font-size: 1.45rem; font-weight: 600; margin-bottom: 3.5rem; color: var(--epf-muted); }
-
-  #shopify-section-{{ section.id }} .epf-story__intro-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 3rem 2rem; 
+  /* Phần Hero Banner (Đầu trang) */
+  .halsten-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fcf9f5; /* Màu nền be nhạt giống web mẫu */
+    border-radius: 12px;
+    margin-bottom: 50px;
   }
-  #shopify-section-{{ section.id }} .epf-story__intro-item { text-align: left; }
-  #shopify-section-{{ section.id }} .epf-story__intro-icon { width: 48px; height: 48px; margin-bottom: 1.2rem; object-fit: contain; }
-  #shopify-section-{{ section.id }} .epf-story__intro-item h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.8rem; }
-  #shopify-section-{{ section.id }} .epf-story__intro-item h3 span { color: var(--epf-wine); }
-  #shopify-section-{{ section.id }} .epf-story__intro-item p { font-size: 1.35rem; line-height: 1.6; color: var(--epf-muted); margin: 0; }
-
-  /* Các phần khác kế thừa từ code cũ */
-  .epf-story__hero { 
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; padding: 2rem; 
-    background: #fff; border-radius: 3rem; box-shadow: var(--epf-shadow); 
+  .halsten-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
-  .epf-story__visual img { width: 100%; height: auto; border-radius: 2rem; display: block; }
-  .epf-story__button--primary { 
-    background: var(--epf-wine); color: #fff; padding: 1.5rem 3rem; 
-    border-radius: 999px; text-decoration: none; font-weight: 800; display: inline-block; 
+  .halsten-hero p.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+  }
+  
+  /* Nút Mua Hàng */
+  .halsten-btn {
+    display: inline-block;
+    background-color: #b71c1c; /* Màu đỏ nổi bật */
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .halsten-btn:hover {
+    background-color: #d32f2f;
+  }
+  .trust-badges {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #444;
   }
 
-  @media screen and (max-width: 749px) {
-    #shopify-section-{{ section.id }} .epf-story__split,
-    #shopify-section-{{ section.id }} .epf-story__intro-grid { grid-template-columns: 1fr; }
-    #shopify-section-{{ section.id }} .epf-story__intro-wrapper { margin-top: 4rem; }
+  /* Phần Nội dung Khoa học / Lợi ích */
+  .halsten-benefits {
+    padding: 40px 0;
+    text-align: center;
   }
-{%- endstyle -%}
+  .halsten-benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .benefit-card {
+    flex: 1 1 300px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .benefit-card h3 {
+    color: #b71c1c;
+    margin-bottom: 15px;
+  }
 
-<section class="epf-story">
-  <div class="page-width epf-story__shell">
+  /* Phần FAQ (Câu hỏi thường gặp) */
+  .halsten-faq {
+    background-color: #fff;
+    padding: 50px 20px;
+    border-top: 1px solid #eee;
+  }
+  .halsten-faq h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+  }
+  .faq-answer {
+    display: none; /* Ẩn mặc định */
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+    padding-right: 20px;
+  }
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  /* Responsive cho Mobile */
+  @media (max-width: 768px) {
+    .halsten-hero h1 { font-size: 2rem; }
+    .halsten-btn { width: 100%; padding: 15px 20px; }
+  }
+</style>
+
+<div class="halsten-wrapper">
+  
+  <section class="halsten-hero halsten-container">
+    <h1>Liệu pháp Ánh sáng Đỏ được Chứng minh Lâm sàng dành cho Đau Khớp</h1>
+    <p class="subtitle">Giảm đau tự nhiên, phục hồi sụn khớp và lấy lại giấc ngủ ngon của bạn mà không cần dùng thuốc hay phẫu thuật.</p>
     
-    {% comment %} 1. Hero Section {% endcomment %}
-    <div class="epf-story__hero">
-      <div class="epf-story__content">
-        <h1 class="epf-story__heading" style="margin-bottom: 2rem;">{{ section.settings.hero_heading | replace: '[product_title]', product.title }}</h1>
-        <p class="epf-story__lead" style="margin-bottom: 2rem;">{{ section.settings.hero_lead | newline_to_br }}</p>
-        <a class="epf-story__button--primary" href="{{ section.settings.hero_primary_link }}">{{ section.settings.hero_primary_label }}</a>
+    <a href="/cart" class="halsten-btn">DÙNG THỬ HALSTEN NGAY HÔM NAY</a>
+    
+    <div class="trust-badges">
+      <p>⭐⭐⭐⭐⭐ (127+ Đánh giá từ khách hàng) <br> Không bán trên Amazon hay Shopee</p>
+    </div>
+  </section>
+
+  <section class="halsten-benefits halsten-container">
+    <h2>Công nghệ 3 Bước Sóng Độc Quyền</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Bước sóng 660nm</h3>
+        <p>Cải thiện vi tuần hoàn ở da và mạc, tạo ra con đường giàu oxy cho các bước sóng chữa lành sâu hơn.</p>
       </div>
-      <div class="epf-story__visual">
-        <img src="{{ hero_image | image_url: width: 800 }}" loading="lazy">
+      <div class="benefit-card">
+        <h3>Bước sóng 830nm</h3>
+        <p>Kích thích hoạt động của ty thể, tăng năng lượng ATP lên đến 150% để kích hoạt quá trình tự xây dựng collagen.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Bước sóng 940nm</h3>
+        <p>Tiếp cận các lớp sâu nhất, làm dịu chứng viêm và giảm đau tận gốc nhanh chóng.</p>
       </div>
     </div>
+    
+    <a href="/cart" class="halsten-btn" style="background-color: #222;">MUA NGAY VỚI ƯU ĐÃI 50%</a>
+  </section>
 
-    {% comment %} 2. Problem Section {% endcomment %}
-    <div class="epf-story__section epf-story__split" style="margin-top: 6rem;">
-      <div class="epf-story__content">
-        <h2 style="font-size: 3rem; margin-bottom: 2rem;">{{ section.settings.problem_heading }}</h2>
-        <p style="font-size: 1.6rem; color: var(--epf-muted);">{{ section.settings.problem_body }}</p>
-      </div>
-      <div class="epf-story__visual">
-        <img src="{{ problem_image | image_url: width: 800 }}" loading="lazy">
-      </div>
-    </div>
-
-    {% comment %} 3. INTRODUCTION (BẢN CHUẨN - KHÔNG NHÂN ĐÔI) {% endcomment %}
-    <div class="epf-story__section epf-story__intro-wrapper" id="epf-intro">
-      <h2 class="epf-story__intro-main-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
-
-      <div class="epf-story__split" style="align-items: flex-start;">
-        <div class="epf-story__visual">
-           {% if intro_image != blank %}
-             <img src="{{ intro_image | image_url: width: 800 }}" loading="lazy">
-           {% else %}
-             {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-           {% endif %}
+  <section class="halsten-faq">
+    <div class="halsten-container">
+      <h2>Câu hỏi từ những người giống bạn</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Tôi đã thử rất nhiều phương pháp. Sản phẩm này khác biệt thế nào?
+          <span class="faq-icon">+</span>
         </div>
-
-        <div class="epf-story__content">
-          {% if section.settings.intro_body != blank %}
-            <p class="epf-story__intro-lead">{{ section.settings.intro_body | newline_to_br }}</p>
-          {% endif %}
-
-          {% if section.settings.intro_subtext != blank %}
-            <p class="epf-story__intro-subtext">{{ section.settings.intro_subtext }}</p>
-          {% endif %}
-
-          <div class="epf-story__intro-grid">
-            {% for block in section.blocks %}
-              {% if block.type == 'intro_feature' %}
-                <article class="epf-story__intro-item" {{ block.shopify_attributes }}>
-                  {% if block.settings.icon != blank %}
-                    <img src="{{ block.settings.icon | image_url: width: 100 }}" class="epf-story__intro-icon" loading="lazy">
-                  {% endif %}
-                  <h3>{{ block.settings.heading }}</h3>
-                  <p>{{ block.settings.text | newline_to_br }}</p>
-                </article>
-              {% endif %}
-            {% endfor %}
-          </div>
+        <div class="faq-answer">
+          Halsten Stride sử dụng hệ thống ba bước sóng độc quyền (660nm, 830nm, 940nm) được tinh chỉnh đặc biệt để phục hồi gân và sụn khớp từ cấp độ tế bào, thay vì chỉ làm tê cơn đau tạm thời như thuốc giảm đau.
         </div>
       </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Sản phẩm có an toàn để sử dụng mỗi ngày không?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Hoàn toàn an toàn. Công nghệ ánh sáng đỏ đã được sử dụng trong các cơ sở y tế trong nhiều thập kỷ mà không có tác dụng phụ. Nó nhẹ nhàng hơn ánh sáng mặt trời nhưng mang lại hiệu quả trị liệu cao hơn.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Chính sách đổi trả như thế nào?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Chúng tôi có chính sách Dùng thử 90 Ngày "Hiệu quả hoặc Miễn phí". Nếu bạn không thấy cải thiện, hãy gửi trả lại và nhận hoàn tiền 100% không hỏi thêm.
+        </div>
+      </div>
     </div>
+  </section>
 
-    {% comment %} 4. Các Section còn lại (What to expect, v.v...) {% endcomment %}
-    <div class="epf-story__section" id="epf-what-to-expect" style="margin-top: 8rem;">
-       <h2 style="text-align: center; margin-bottom: 4rem;">{{ section.settings.expect_heading }}</h2>
-       {% comment %} Code What to expect tiếp tục tại đây... {% endcomment %}
-    </div>
+</div>
 
-  </div>
-</section>
-
-{% schema %}
-{
-  "name": "Pelvic Floor Story",
-  "settings": [
-    { "type": "range", "id": "padding_top", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding top", "default": 28 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "label": "Padding bottom", "default": 44 },
-    { "type": "header", "content": "Hero" },
-    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
-    { "type": "textarea", "id": "hero_heading", "label": "Heading", "default": "Confidence Starts Here" },
-    { "type": "textarea", "id": "hero_lead", "label": "Lead Text" },
-    { "type": "text", "id": "hero_primary_label", "label": "Button Label", "default": "Shop Now" },
-    { "type": "text", "id": "hero_primary_link", "label": "Button Link", "default": "#" },
-    { "type": "header", "content": "Problem" },
-    { "type": "image_picker", "id": "problem_image", "label": "Problem image" },
-    { "type": "textarea", "id": "problem_heading", "label": "Problem Heading" },
-    { "type": "textarea", "id": "problem_body", "label": "Problem Body" },
-    { "type": "header", "content": "Introduction" },
-    { "type": "image_picker", "id": "intro_image", "label": "Introduction image" },
-    { "type": "text", "id": "intro_heading", "label": "Main Heading (Centred)", "default": "Introducing <span>Halsten's</span> System" },
-    { "type": "textarea", "id": "intro_body", "label": "Lead Text (Right Side)", "default": "Our proprietary system can restore collagen..." },
-    { "type": "text", "id": "intro_subtext", "label": "Subtext (Above Grid)", "default": "Here's how it works:" },
-    { "type": "header", "content": "What To Expect" },
-    { "type": "text", "id": "expect_heading", "label": "Heading", "default": "What to Expect" }
-  ],
-  "blocks": [
-    {
-      "type": "intro_feature",
-      "name": "Intro Feature Item",
-      "limit": 4,
-      "settings": [
-        { "type": "image_picker", "id": "icon", "label": "Icon Image" },
-        { "type": "text", "id": "heading", "label": "Heading", "default": "<span>660nm</span> wavelength" },
-        { "type": "textarea", "id": "text", "label": "Description" }
-      ]
+<script>
+  function toggleFaq(element) {
+    // Tìm phần câu trả lời (phần tử anh em kế tiếp của câu hỏi)
+    var answer = element.nextElementSibling;
+    var icon = element.querySelector('.faq-icon');
+    
+    // Nếu đang mở thì đóng lại
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.innerHTML = "+";
+    } else {
+      // Nếu đang đóng thì mở ra
+      answer.style.display = "block";
+      icon.innerHTML = "−";
     }
-  ],
-  "presets": [{ "name": "Pelvic Floor Story" }]
-}
-{% endschema %}
+  }
+</script>
