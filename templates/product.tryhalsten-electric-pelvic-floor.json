@@ -63,19 +63,25 @@
         "problem_note_1": {
           "type": "problem_note",
           "settings": {
-            "text": "Long desk hours, stress, aging, inconsistent training, and poor body awareness can all make pelvic floor activation harder to feel."
+            "text": "Restricting your water intake backfires (It concentrates your urine, irritating the bladder lining and actually making the urge to go worse)."
           }
         },
         "problem_note_2": {
           "type": "problem_note",
           "settings": {
-            "text": "When these muscles are ignored, men may notice less control, weaker connection, and less confidence during workouts or daily life."
+            "text": "Standard gym workouts fail (Lifting weights or doing crunches often pushes down, putting more damaging pressure on an already weak pelvic floor)."
           }
         },
         "problem_note_3": {
           "type": "problem_note",
           "settings": {
-            "text": "A structured device-led routine can be easier to repeat than trying to remember isolated exercises on your own."
+            "text": "Medications fall short (They might temporarily alter nerve signals, but they do absolutely nothing to rebuild the underlying muscle tissue)."
+          }
+        },
+        "problem_note_RiAnnn": {
+          "type": "problem_note",
+          "settings": {
+            "text": "Adult diapers are a surrender, not a solution (They just manage the mess, allowing the muscle to continue deteriorating)."
           }
         },
         "intro_side_1": {
@@ -235,6 +241,7 @@
         "problem_note_1",
         "problem_note_2",
         "problem_note_3",
+        "problem_note_RiAnnn",
         "intro_side_1",
         "intro_side_2",
         "intro_feature_a",
@@ -272,8 +279,8 @@
         "featured_label": "As seen in",
         "featured_image_url": "https://cdn.shopify.com/s/files/1/0738/4645/6536/files/gempages_556819636071433409-eee4c20b-012f-40cc-bfcb-d24ebfbfbe76.jpg?width=2183",
         "featured_image_alt": "As seen in logos",
-        "problem_heading": "Pelvic Floor Training Gets Ignored Until Control Starts Slipping.",
-        "problem_body": "Many men focus on abs, cardio, and strength, but rarely train the muscles that support bladder control, core stability, and everyday confidence. Consistency matters more than intensity.",
+        "problem_heading": "The Problem Isn't Just \"Getting Older.\" It's Your Forgotten Foundation.",
+        "problem_body": "Here's what urologists know that changes everything:\nYour bladder doesn't operate on its own. It relies completely on a hammock of muscles called the pelvic floor.\n\nThese muscles are the actual \"shut-off valves\" that keep you dry when you cough, and the strength that lets you sleep through the night.\n\nWithout targeted exercise, these deep internal muscles slowly atrophy (shrink) over decades.\nWhen your pelvic floor weakens, your bladder literally loses the physical support and pressure it needs to hold urine in.\n\nThat's why:",
         "problem_bar_label_1": "Control",
         "problem_bar_label_2": "Stamina",
         "problem_bar_label_3": "Confidence",
