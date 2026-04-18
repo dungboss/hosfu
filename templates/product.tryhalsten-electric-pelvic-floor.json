@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "epf_story": {
@@ -256,17 +265,20 @@
       "settings": {
         "padding_top": 28,
         "padding_bottom": 44,
+        "hero_image": "shopify://shop_images/D5E54260-C302-42EF-8F89-C3BEE50C26FF_1_201_a.jpg",
         "hero_eyebrow": "",
-        "hero_heading": "4-mode rechargeable pelvic floor training for men who want better control.",
+        "hero_heading": "Clinically Designed Pelvic Floor Training. From Exhausting Nightly Trips to Restful Sleep.",
         "hero_lead": "Built for men who want a guided at-home routine for pelvic floor training. Four modes, Type-C charging, and repeatable sessions make it easier to stay consistent without complicated setup.",
         "hero_primary_label": "Start my training routine",
         "hero_primary_link": "#MainProduct-offer_main",
         "hero_secondary_label": "See how it works",
         "hero_secondary_link": "#epf-what-to-expect",
         "hero_proof_copy": "4.8/5 from customers using simple home sessions to build better awareness, control, and consistency.",
+        "hero_chip_top": "",
+        "hero_chip_bottom": "",
+        "featured_label": "As seen in",
         "featured_image_url": "https://cdn.shopify.com/s/files/1/0738/4645/6536/files/gempages_556819636071433409-eee4c20b-012f-40cc-bfcb-d24ebfbfbe76.jpg?width=2183",
         "featured_image_alt": "As seen in logos",
-        "featured_label": "As seen in",
         "problem_heading": "Pelvic Floor Training Gets Ignored Until Control Starts Slipping.",
         "problem_body": "Many men focus on abs, cardio, and strength, but rarely train the muscles that support bladder control, core stability, and everyday confidence. Consistency matters more than intensity.",
         "problem_bar_label_1": "Control",
@@ -284,9 +296,7 @@
         "journey_heading": "A Simple Routine You Can Actually Stick To",
         "journey_cta_label": "See common questions",
         "journey_cta_link": "#epf-questions",
-        "testimonials_heading": "Men Like You Are Building Better Control",
-        "hero_chip_top": "",
-        "hero_chip_bottom": ""
+        "testimonials_heading": "Men Like You Are Building Better Control"
       }
     },
     "offer_main": {
@@ -303,7 +313,8 @@
             "bordercustomerbannertext": 20,
             "margin_top": 0,
             "margin_bottom": 12
-          }
+          },
+          "blocks": {}
         },
         "title": {
           "type": "product_title",
@@ -315,7 +326,8 @@
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
             "margin_bottom": 0
-          }
+          },
+          "blocks": {}
         },
         "rating": {
           "type": "rating-stars",
@@ -330,7 +342,8 @@
             "scroll_id": "",
             "margin_top": 6,
             "margin_bottom": 12
-          }
+          },
+          "blocks": {}
         },
         "price": {
           "type": "product_price",
@@ -351,7 +364,8 @@
             "filled_icon_2": false,
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "variant_picker": {
           "type": "product_product-variant-picker-block",
@@ -359,11 +373,39 @@
             "picker_types": "dropdown, dropdown, dropdown",
             "custom_labels": "[name] - [selected]",
             "skip_unavailable": false,
+            "append": "option_1_label_container",
             "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #FFFFFF",
             "full_width_dropdowns": true,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_prices_layout": "price-first-vertical",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_vertical_items_align": "flex-start",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "none",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "benefits": {
           "type": "key-benefits",
@@ -378,7 +420,8 @@
             "keybenefitsborderradius": 14,
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "buy_buttons": {
           "type": "product_buy-buttons",
@@ -403,7 +446,8 @@
             "secondary_btn_custom_color": "#8d184d",
             "margin_top": 9,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "shipping": {
           "type": "product_shipping-checkpoints",
@@ -438,7 +482,8 @@
             "color_scheme": "inverse",
             "margin_top": 12,
             "margin_bottom": 9
-          }
+          },
+          "blocks": {}
         },
         "sticky": {
           "type": "product_sticky-atc",
@@ -470,7 +515,8 @@
             "mobile_full_button_width": false,
             "mobile_show_price_in_button": false,
             "mobile_transparent_bg": false
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -533,7 +579,33 @@
         "mobile_padding_top": 8,
         "mobile_padding_bottom": 8,
         "desktop_padding_top": 24,
-        "desktop_padding_bottom": 24
+        "desktop_padding_bottom": 24,
+        "enabledesktopreview": true,
+        "review_background_color": "#ffffff",
+        "review_border_color": "#e9ecef",
+        "star_color": "#ffc107",
+        "username_color": "#000000",
+        "username": "Sarah M.",
+        "verified_customer": true,
+        "verified_icon_color": "#28a745",
+        "verified_text_color": "#28a745",
+        "verified_text": "Verified Purchase",
+        "review_text_color": "#000000",
+        "review_text": "Amazing product! Highly recommend it to everyone.",
+        "enablegallerybottomtext": false,
+        "galleryinnerbackground": "#000000",
+        "galleryinneropacity": 0.8,
+        "galleryinnertextcolor": "#ffffff",
+        "galleryinnerradius": 8,
+        "galleryinnerheight": 80,
+        "galleryinnertext": "5-Star Rated Product",
+        "enablegalleryreviewstars": false,
+        "rating": 4.8,
+        "star_color2": "#ffcc00",
+        "bg_stars_style": "full",
+        "bg_star_color2": "#ececec",
+        "label": "(xxxx Reviews)",
+        "size": 16
       }
     },
     "epf_support": {
@@ -686,8 +758,10 @@
       "settings": {
         "padding_top": 24,
         "padding_bottom": 48,
+        "section_anchor": "epf-questions",
         "faq_heading": "Questions Men Ask Before Starting",
         "faq_description": "Short answers to common questions men ask before starting a home pelvic floor training routine.",
+        "wellness_note": "Wellness note: this page is intended for general product information only and should not replace individualized medical advice.",
         "reviews_heading": "Reviews from Men Like You",
         "reviews_description": "Real words from men using [product_title] to build a steadier, more consistent home routine."
       }
