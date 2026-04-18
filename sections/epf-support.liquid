@@ -1,632 +1,3319 @@
+{% liquid
+
+  assign hero_media = product.featured_media
+
+  assign problem_media = product.media | slice: 1, 1 | first
+
+  assign expect_media_1 = product.media | slice: 2, 1 | first
+
+  assign expect_media_2 = product.media | slice: 3, 1 | first
+
+  assign expect_media_3 = product.media | slice: 4, 1 | first
+
+  assign journey_media_1 = product.media | slice: 5, 1 | first
+
+  assign journey_media_2 = product.media | slice: 6, 1 | first
+
+  assign journey_media_3 = product.media | slice: 7, 1 | first
+
+  assign voice_media_1 = product.media | slice: 8, 1 | first
+
+  assign voice_media_2 = product.media | slice: 9, 1 | first
+
+  assign voice_media_3 = product.media | slice: 10, 1 | first
+
+
+
+  if problem_media == blank
+
+    assign problem_media = hero_media
+
+  endif
+
+  if expect_media_1 == blank
+
+    assign expect_media_1 = hero_media
+
+  endif
+
+  if expect_media_2 == blank
+
+    assign expect_media_2 = problem_media
+
+  endif
+
+  if expect_media_3 == blank
+
+    assign expect_media_3 = hero_media
+
+  endif
+
+  if journey_media_1 == blank
+
+    assign journey_media_1 = expect_media_1
+
+  endif
+
+  if journey_media_2 == blank
+
+    assign journey_media_2 = expect_media_2
+
+  endif
+
+  if journey_media_3 == blank
+
+    assign journey_media_3 = expect_media_3
+
+  endif
+
+  if voice_media_1 == blank
+
+    assign voice_media_1 = hero_media
+
+  endif
+
+  if voice_media_2 == blank
+
+    assign voice_media_2 = problem_media
+
+  endif
+
+  if voice_media_3 == blank
+
+    assign voice_media_3 = expect_media_1
+
+  endif
+
+
+
+  assign hero_image = section.settings.hero_image
+
+  if hero_image == blank and hero_media != blank
+
+    assign hero_image = hero_media.preview_image
+
+  endif
+
+
+
+  assign problem_image = section.settings.problem_image
+
+  if problem_image == blank and problem_media != blank
+
+    assign problem_image = problem_media.preview_image
+
+  endif
+
+
+
+  assign intro_image = section.settings.intro_image
+
+  if intro_image == blank and hero_media != blank
+
+    assign intro_image = hero_media.preview_image
+
+  endif
+
+
+
+  assign results_image = section.settings.results_image
+
+  if results_image == blank and hero_media != blank
+
+    assign results_image = hero_media.preview_image
+
+  endif
+
+%}
+
+
+
 {%- style -%}
-  {% assign review_blocks_count = 0 %}
-  {% assign review_image_1 = blank %}
-  {% assign review_image_2 = blank %}
-  {% assign review_image_3 = blank %}
-
-  {% assign review_media_1 = product.media | slice: 8, 1 | first %}
-  {% assign review_media_2 = product.media | slice: 9, 1 | first %}
-  {% assign review_media_3 = product.media | slice: 10, 1 | first %}
-
-  {% if review_media_1 != blank %}
-    {% assign review_image_1 = review_media_1.preview_image %}
-  {% endif %}
-  {% if review_media_2 != blank %}
-    {% assign review_image_2 = review_media_2.preview_image %}
-  {% endif %}
-  {% if review_media_3 != blank %}
-    {% assign review_image_3 = review_media_3.preview_image %}
-  {% endif %}
-
-  {% if review_image_1 == blank and product.featured_media != blank %}
-    {% assign review_image_1 = product.featured_media.preview_image %}
-  {% endif %}
-  {% if review_image_2 == blank and product.featured_media != blank %}
-    {% assign review_image_2 = product.featured_media.preview_image %}
-  {% endif %}
-  {% if review_image_3 == blank and product.featured_media != blank %}
-    {% assign review_image_3 = product.featured_media.preview_image %}
-  {% endif %}
-
-  {% for block in section.blocks %}
-    {% if block.type == 'review_item' %}
-      {% assign review_blocks_count = review_blocks_count | plus: 1 %}
-    {% endif %}
-  {% endfor %}
 
   #shopify-section-{{ section.id }} {
+
     --epf-wine: #8d184d;
+
     --epf-wine-dark: #6c103b;
+
     --epf-rose: #f8eee8;
+
     --epf-cream: #fcf8f4;
+
+    --epf-sand: #eadacb;
+
     --epf-text: #231815;
+
     --epf-muted: #6d5a53;
+
     --epf-line: rgba(141, 24, 77, 0.14);
+
+    --epf-shadow: 0 18px 42px rgba(35, 24, 21, 0.08);
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+
+
+  #shopify-section-{{ section.id }} .epf-story {
+
     background:
-      linear-gradient(180deg, var(--epf-cream) 0%, #fffdfb 42%, #f7efe8 100%);
+
+      radial-gradient(circle at top left, rgba(141, 24, 77, 0.06), transparent 34%),
+
+      linear-gradient(180deg, #fffdfb 0%, var(--epf-cream) 100%);
+
     color: var(--epf-text);
+
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__band {
-    background: linear-gradient(135deg, var(--epf-wine) 0%, var(--epf-wine-dark) 100%);
-    border-radius: 3rem;
-    color: #fff;
-    padding: 1.4rem;
-    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.12);
+
+
+  #shopify-section-{{ section.id }} .epf-story__shell {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__band-grid {
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero {
+
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
+
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+    gap: 2rem;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.76);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 3.2rem;
+
+    box-shadow: var(--epf-shadow);
+
+    padding: 2rem;
+
+    overflow: hidden;
+
+    position: relative;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__band-card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.9rem;
-    align-items: start;
-    padding: 1rem 1.1rem;
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero-head {
+
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: none;
+
+    margin: 0;
+
+    text-align: center;
+
   }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18rem;
+
+    height: 18rem;
+
+    background: rgba(141, 24, 77, 0.06);
+
+    border-radius: 999px;
+
+    top: -9rem;
+
+    right: -6rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.55rem;
+
+    padding: 0.7rem 1.1rem;
+
+    border-radius: 999px;
+
+    background: rgba(141, 24, 77, 0.08);
+
+    color: var(--epf-wine);
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    margin: 0 0 1rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__heading {
+
+    font-family: var(--font-heading-family);
+
+    font-size: clamp(3rem, 5vw, 5.4rem);
+
+    line-height: 1.02;
+
+    margin: 0;
+
+    max-width: none;
+
+    margin-inline: 0;
+
+    text-align: center;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__lead {
+
+    font-size: 1.65rem;
+
+    line-height: 1.72;
+
+    color: var(--epf-muted);
+
+    margin: 0;
+
+    max-width: 58ch;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__checks {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 1.8rem 0 0;
+
+    display: grid;
+
+    gap: 0.95rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__checks li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.85rem;
+
+    font-size: 1.5rem;
+
+    line-height: 1.55;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__checkmark,
 
   #shopify-section-{{ section.id }} .epf-support__icon {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 2rem;
+
     height: 2rem;
+
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    font-size: 1.05rem;
-    font-weight: 800;
-  }
 
-  #shopify-section-{{ section.id }} .epf-support__band-card strong {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-size: 1.35rem;
-    line-height: 1.4;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__band-card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.84);
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__faq {
-    margin-top: 3rem;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.84);
-    border-radius: 3rem;
-    padding: 2rem;
-    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.08);
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__heading {
-    text-align: center;
-    max-width: 60rem;
-    margin: 0 auto 1.8rem;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__heading h2 {
-    margin: 0;
-    font-family: var(--font-heading-family);
-    font-size: clamp(2.6rem, 4vw, 4.4rem);
-    line-height: 1.08;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__heading p {
-    margin: 1rem 0 0;
-    font-size: 1.55rem;
-    line-height: 1.7;
-    color: var(--epf-muted);
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__items {
-    display: grid;
-    gap: 0.85rem;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__faq-item {
-    background: #fff;
-    border: 1px solid var(--epf-line);
-    border-radius: 1.9rem;
-    overflow: hidden;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__faq-item summary {
-    list-style: none;
-    cursor: pointer;
-    position: relative;
-    padding: 1.4rem 4.6rem 1.4rem 1.5rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: 700;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__faq-item summary::-webkit-details-marker {
-    display: none;
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__faq-item summary::before,
-  #shopify-section-{{ section.id }} .epf-support__faq-item summary::after {
-    content: "";
-    position: absolute;
-    right: 1.8rem;
-    top: 50%;
-    width: 1.6rem;
-    height: 0.2rem;
     background: var(--epf-wine);
-    transform: translateY(-50%);
-    border-radius: 999px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    line-height: 1;
+
+    flex: 0 0 auto;
+
+    margin-top: 0.12rem;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__faq-item summary::after {
-    transform: translateY(-50%) rotate(90deg);
-  }
 
-  #shopify-section-{{ section.id }} .epf-support__faq-item[open] summary::after {
-    opacity: 0;
-  }
 
-  #shopify-section-{{ section.id }} .epf-support__faq-answer {
-    padding: 0 1.5rem 1.5rem;
-    color: var(--epf-muted);
-    font-size: 1.45rem;
-    line-height: 1.75;
-  }
+  #shopify-section-{{ section.id }} .epf-story__actions {
 
-  #shopify-section-{{ section.id }} .epf-support__note {
-    margin-top: 1.6rem;
-    font-size: 1.25rem;
-    line-height: 1.7;
-    color: var(--epf-muted);
-    text-align: center;
-  }
+    display: flex;
 
-  #shopify-section-{{ section.id }} .epf-support__reviews {
-    margin-top: 3rem;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.84);
-    border-radius: 3rem;
-    padding: 2rem;
-    box-shadow: 0 18px 40px rgba(35, 24, 21, 0.08);
-  }
+    flex-wrap: wrap;
 
-  #shopify-section-{{ section.id }} .epf-support__reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+
+    margin-top: 1.9rem;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__review-card {
-    background: #fff;
-    border: 1px solid var(--epf-line);
+
+
+  #shopify-section-{{ section.id }} .epf-story__button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 5.2rem;
+
+    padding: 0 2rem;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--epf-wine);
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__button:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 12px 28px rgba(141, 24, 77, 0.18);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__button--primary {
+
+    background: var(--epf-wine);
+
+    color: #fff;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__button--secondary {
+
+    background: transparent;
+
+    color: var(--epf-wine);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__proof {
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    gap: 1rem;
+
+    align-items: center;
+
+    margin-top: 1.8rem;
+
+    padding: 1.2rem 1.35rem;
+
     border-radius: 2rem;
-    padding: 1.5rem;
-    box-shadow: 0 12px 28px rgba(35, 24, 21, 0.04);
+
+    background: #fff;
+
+    border: 1px solid var(--epf-line);
+
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.06);
+
+    max-width: 54rem;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__review-media {
-    margin-bottom: 1rem;
-    border-radius: 1.6rem;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: #f4ece6;
+
+
+  #shopify-section-{{ section.id }} .epf-story__stars {
+
+    color: #f2b731;
+
+    font-size: 1.6rem;
+
+    letter-spacing: 0.12em;
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__review-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
-  #shopify-section-{{ section.id }} .epf-support__review-stars {
-    color: #e2a300;
-    font-size: 1.45rem;
-    letter-spacing: 0.18em;
-    margin-bottom: 0.9rem;
-  }
 
-  #shopify-section-{{ section.id }} .epf-support__review-card h3 {
-    margin: 0;
-    font-family: var(--font-heading-family);
-    font-size: 2rem;
-    line-height: 1.15;
-  }
+  #shopify-section-{{ section.id }} .epf-story__proof-copy {
 
-  #shopify-section-{{ section.id }} .epf-support__review-copy {
-    margin: 1rem 0 0;
-    font-size: 1.42rem;
-    line-height: 1.72;
-    color: var(--epf-muted);
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__review-author {
-    margin-top: 1.1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(141, 24, 77, 0.12);
-  }
-
-  #shopify-section-{{ section.id }} .epf-support__review-author strong {
-    display: block;
     font-size: 1.35rem;
-    line-height: 1.4;
+
+    line-height: 1.55;
+
+    color: var(--epf-muted);
+
   }
 
-  #shopify-section-{{ section.id }} .epf-support__review-author span {
-    display: block;
-    margin-top: 0.15rem;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: var(--epf-muted);
+
+
+  #shopify-section-{{ section.id }} .epf-story__visual {
+
+    position: relative;
+
+    min-height: 100%;
+
   }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__visual-ring {
+
+    position: absolute;
+
+    inset: 8% 12% 8% 12%;
+
+    border-radius: 999px;
+
+    background: radial-gradient(circle, rgba(141, 24, 77, 0.14) 0%, rgba(141, 24, 77, 0.03) 58%, transparent 76%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__figure {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0;
+
+    border-radius: 2.8rem;
+
+    background: linear-gradient(180deg, #fff 0%, #f9f0e9 100%);
+
+    box-shadow: 0 24px 50px rgba(35, 24, 21, 0.12);
+
+    overflow: hidden;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__figure img,
+
+  #shopify-section-{{ section.id }} .epf-story__card-media img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 24rem;
+
+    display: block;
+
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.1) 0%, rgba(234, 218, 203, 0.4) 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip {
+
+    position: absolute;
+
+    z-index: 2;
+
+    background: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 1.8rem;
+
+    box-shadow: 0 14px 28px rgba(35, 24, 21, 0.12);
+
+    padding: 1rem 1.2rem;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    max-width: 17rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip--top {
+
+    top: 1.3rem;
+
+    right: -0.4rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__hero-chip--bottom {
+
+    left: -0.6rem;
+
+    bottom: 1.4rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__featured {
+
+    margin-top: 2.4rem;
+
+    padding: 1.25rem 1.5rem;
+
+    background: #fff;
+
+    border: 1px solid var(--epf-line);
+
+    border-radius: 999px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 10px 22px rgba(35, 24, 21, 0.05);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__featured-label {
+
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--epf-muted);
+
+    font-weight: 700;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__featured-grid {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    justify-content: center;
+
+    width: 100%;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__featured-media {
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__featured-image {
+
+    display: block;
+
+    width: min(100%, 96rem);
+
+    height: auto;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__logo-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 6.2rem;
+
+    min-height: 4rem;
+
+    padding: 0.45rem 1rem;
+
+    border-radius: 999px;
+
+    background: var(--epf-rose);
+
+    color: var(--epf-text);
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    font-size: 1.15rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__section {
+
+    margin-top: 5rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__split {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 2rem;
+
+    align-items: center;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__section-header {
+
+    max-width: 64rem;
+
+    margin: 0 auto 2rem;
+
+    text-align: center;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__section-header h2,
+
+  #shopify-section-{{ section.id }} .epf-story__content h2 {
+
+    font-family: var(--font-heading-family);
+
+    font-size: clamp(2.6rem, 4vw, 4.4rem);
+
+    line-height: 1.08;
+
+    margin: 0;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__content p,
+
+  #shopify-section-{{ section.id }} .epf-story__metric-copy,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-card p,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-card p {
+
+    color: var(--epf-muted);
+
+    font-size: 1.5rem;
+
+    line-height: 1.72;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__note-list {
+
+    display: grid;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__note {
+
+    padding: 1.1rem 1.2rem;
+
+    border-radius: 1.8rem;
+
+    background: #fff;
+
+    border: 1px solid var(--epf-line);
+
+    box-shadow: 0 12px 28px rgba(35, 24, 21, 0.04);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__problem-card,
+
+  #shopify-section-{{ section.id }} .epf-story__results-card {
+
+    background: linear-gradient(180deg, #fff 0%, #f8efe9 100%);
+
+    border: 1px solid rgba(141, 24, 77, 0.08);
+
+    border-radius: 3rem;
+
+    box-shadow: var(--epf-shadow);
+
+    overflow: hidden;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+    gap: 1.4rem;
+
+    padding: 1.8rem;
+
+    align-items: center;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__diagram {
+
+    display: grid;
+
+    gap: 1rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__diagram-bars {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    align-items: end;
+
+    min-height: 18rem;
+
+    padding: 1.6rem;
+
+    border-radius: 2.2rem;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 238, 232, 0.82) 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__bar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    gap: 0.8rem;
+
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    color: var(--epf-muted);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill {
+
+    border-radius: 999px 999px 1rem 1rem;
+
+    min-height: 7rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--rose {
+
+    height: 11rem;
+
+    background: linear-gradient(180deg, #c87fa1 0%, #8d184d 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--sand {
+
+    height: 13.5rem;
+
+    background: linear-gradient(180deg, #d8c0ae 0%, #8c5f45 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__bar-fill--sage {
+
+    height: 9rem;
+
+    background: linear-gradient(180deg, #9db493 0%, #58745a 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__tendon-card {
+
+    padding: 1.4rem 1.6rem;
+
+    border-radius: 2.2rem;
+
+    color: #fff;
+
+    background:
+
+      linear-gradient(135deg, rgba(141, 24, 77, 0.95), rgba(108, 16, 59, 0.9)),
+
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__tendon-card strong {
+
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-size: 1.4rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    margin-top: 1.8rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card {
+
+    padding: 1.4rem;
+
+    background: #fff;
+
+    border: 1px solid var(--epf-line);
+
+    border-radius: 2rem;
+
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.05);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card h3,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-card h3,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-card h3 {
+
+    margin: 0 0 0.7rem;
+
+    font-size: 1.7rem;
+
+    line-height: 1.35;
+
+    font-family: var(--font-heading-family);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__feature-card p,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-card p {
+
+    margin: 0;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__feature-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 3.4rem;
+
+    height: 3.4rem;
+
+    border-radius: 999px;
+
+    background: rgba(141, 24, 77, 0.12);
+
+    color: var(--epf-wine);
+
+    font-size: 1.55rem;
+
+    font-weight: 800;
+
+    margin-bottom: 1rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__expect-grid,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-grid,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.4rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__card,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-card,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-card {
+
+    background: #fff;
+
+    border-radius: 2.4rem;
+
+    border: 1px solid var(--epf-line);
+
+    box-shadow: var(--epf-shadow);
+
+    overflow: hidden;
+
+    height: 100%;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__card-media,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-media,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-media {
+
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.1) 0%, rgba(234, 218, 203, 0.45) 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__card-body,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-body,
+
+  #shopify-section-{{ section.id }} .epf-story__voice-body {
+
+    padding: 1.6rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__step-kicker,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-kicker {
+
+    color: var(--epf-wine);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    margin: 0 0 0.7rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__expect-cta,
+
+  #shopify-section-{{ section.id }} .epf-story__journey-cta {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 2rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__results {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+
+    gap: 2rem;
+
+    align-items: center;
+
+    padding: 2rem;
+
+    background: linear-gradient(180deg, #fff 0%, #f8efe7 100%);
+
+    border-radius: 3rem;
+
+    border: 1px solid rgba(141, 24, 77, 0.08);
+
+    box-shadow: var(--epf-shadow);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__results-visual {
+
+    position: relative;
+
+    border-radius: 2.6rem;
+
+    overflow: hidden;
+
+    min-height: 30rem;
+
+    background: linear-gradient(180deg, rgba(141, 24, 77, 0.12) 0%, rgba(248, 238, 232, 0.6) 100%);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__results-glow {
+
+    position: absolute;
+
+    inset: auto 1.6rem 1.6rem auto;
+
+    width: 10rem;
+
+    height: 10rem;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle, rgba(255, 111, 61, 0.62) 0%, rgba(255, 111, 61, 0.1) 52%, transparent 74%);
+
+    pointer-events: none;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__metric-list {
+
+    display: grid;
+
+    gap: 0.95rem;
+
+    margin-top: 1.5rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__metric {
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    gap: 1rem;
+
+    align-items: start;
+
+    padding: 1rem 1.1rem;
+
+    background: #fff;
+
+    border-radius: 1.8rem;
+
+    border: 1px solid var(--epf-line);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__metric-copy {
+
+    margin: 0;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__metric-icon {
+
+    width: 2.2rem;
+
+    height: 2.2rem;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(141, 24, 77, 0.12);
+
+    color: var(--epf-wine);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    margin-top: 0.2rem;
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__voice-media::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: auto auto 1.4rem 1.4rem;
+
+    width: 4.8rem;
+
+    height: 4.8rem;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow: 0 10px 24px rgba(35, 24, 21, 0.14);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__voice-media::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: auto auto 2.65rem 3.15rem;
+
+    z-index: 1;
+
+    border-top: 0.85rem solid transparent;
+
+    border-bottom: 0.85rem solid transparent;
+
+    border-left: 1.35rem solid var(--epf-wine);
+
+  }
+
+
+
+  #shopify-section-{{ section.id }} .epf-story__voice-meta {
+
+    font-size: 1.15rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--epf-wine);
+
+    font-weight: 800;
+
+    margin-bottom: 0.8rem;
+
+  }
+
+
 
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .epf-support {
+
+    #shopify-section-{{ section.id }} .epf-story {
+
       padding-top: {{ section.settings.padding_top }}px;
+
       padding-bottom: {{ section.settings.padding_bottom }}px;
+
     }
+
   }
+
+
 
   @media screen and (max-width: 989px) {
-    #shopify-section-{{ section.id }} .epf-support__band-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    #shopify-section-{{ section.id }} .epf-story__hero,
+
+    #shopify-section-{{ section.id }} .epf-story__split,
+
+    #shopify-section-{{ section.id }} .epf-story__results,
+
+    #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+
+      grid-template-columns: 1fr;
+
     }
 
-    #shopify-section-{{ section.id }} .epf-support__reviews-grid {
+
+
+    #shopify-section-{{ section.id }} .epf-story__feature-grid,
+
+    #shopify-section-{{ section.id }} .epf-story__expect-grid,
+
+    #shopify-section-{{ section.id }} .epf-story__journey-grid,
+
+    #shopify-section-{{ section.id }} .epf-story__voice-grid {
+
       grid-template-columns: 1fr;
+
     }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__hero-chip--top {
+
+      right: 0.6rem;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__hero-chip--bottom {
+
+      left: 0.6rem;
+
+    }
+
   }
+
+
 
   @media screen and (max-width: 749px) {
-    #shopify-section-{{ section.id }} .epf-support__band,
-    #shopify-section-{{ section.id }} .epf-support__faq,
-    #shopify-section-{{ section.id }} .epf-support__reviews {
-      border-radius: 2.2rem;
-      padding: 1.3rem;
+
+    #shopify-section-{{ section.id }} .epf-story__hero {
+
+      padding: 1.45rem;
+
+      border-radius: 2.4rem;
+
+      gap: 1.35rem;
+
     }
 
-    #shopify-section-{{ section.id }} .epf-support__band-grid {
-      grid-template-columns: 1fr;
+
+
+    #shopify-section-{{ section.id }} .epf-story__hero > .epf-story__visual {
+
+      order: -1;
+
     }
 
-    #shopify-section-{{ section.id }} .epf-support__heading p,
-    #shopify-section-{{ section.id }} .epf-support__faq-answer,
-    #shopify-section-{{ section.id }} .epf-support__faq-item summary,
-    #shopify-section-{{ section.id }} .epf-support__review-copy {
+
+
+    #shopify-section-{{ section.id }} .epf-story__heading {
+
+      font-size: clamp(2.5rem, 10vw, 4rem);
+
+      max-width: none;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__lead,
+
+    #shopify-section-{{ section.id }} .epf-story__content p,
+
+    #shopify-section-{{ section.id }} .epf-story__metric-copy,
+
+    #shopify-section-{{ section.id }} .epf-story__journey-card p,
+
+    #shopify-section-{{ section.id }} .epf-story__voice-card p,
+
+    #shopify-section-{{ section.id }} .epf-story__checks li {
+
       font-size: 1.4rem;
+
     }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__proof {
+
+      padding: 1rem;
+
+      gap: 0.8rem;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__actions {
+
+      flex-direction: column;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__button {
+
+      width: 100%;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__featured {
+
+      border-radius: 2.2rem;
+
+      padding: 1rem;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__section {
+
+      margin-top: 3.6rem;
+
+    }
+
+
+
+    #shopify-section-{{ section.id }} .epf-story__results,
+
+    #shopify-section-{{ section.id }} .epf-story__problem-card-inner {
+
+      padding: 1.3rem;
+
+    }
+
   }
+
 {%- endstyle -%}
 
-<section class="epf-support" id="{{ section.settings.section_anchor | default: 'epf-questions' }}">
-  <div class="page-width">
-    <div class="epf-support__band">
-      <div class="epf-support__band-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'support_point' %}
-            <div class="epf-support__band-card" {{ block.shopify_attributes }}>
-              <span class="epf-support__icon">{{ block.settings.icon_text | default: '✓' }}</span>
-              <div>
-                <strong>{{ block.settings.title | replace: '[product_title]', product.title }}</strong>
-                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
 
-    <div class="epf-support__faq">
-      <div class="epf-support__heading">
-        <h2>{{ section.settings.faq_heading | replace: '[product_title]', product.title }}</h2>
-        {% if section.settings.faq_description != blank %}
-          <p>{{ section.settings.faq_description | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+<section class="epf-story">
+
+  <div class="page-width epf-story__shell">
+
+    <div class="epf-story__hero">
+
+      <div class="epf-story__hero-head">
+
+        {% if section.settings.hero_eyebrow != blank %}
+
+          <p class="epf-story__eyebrow">{{ section.settings.hero_eyebrow | replace: '[product_title]', product.title }}</p>
+
         {% endif %}
+
+        <h1 class="epf-story__heading">{{ section.settings.hero_heading | replace: '[product_title]', product.title }}</h1>
+
       </div>
 
-      <div class="epf-support__items">
-        {% for block in section.blocks %}
-          {% if block.type == 'faq_item' %}
-            <details class="epf-support__faq-item" {% if block.settings.open_by_default %}open{% endif %} {{ block.shopify_attributes }}>
-              <summary>{{ block.settings.question | replace: '[product_title]', product.title }}</summary>
-              <div class="epf-support__faq-answer">
-                {{ block.settings.answer | replace: '[product_title]', product.title | newline_to_br }}
-              </div>
-            </details>
+
+
+      <div class="epf-story__content">
+
+        {% if section.settings.hero_lead != blank %}
+
+          <p class="epf-story__lead">
+
+            {{ section.settings.hero_lead | replace: '[product_title]', product.title | newline_to_br }}
+
+          </p>
+
+        {% endif %}
+
+
+
+        <ul class="epf-story__checks">
+
+          {% for block in section.blocks %}
+
+            {% if block.type == 'hero_check' %}
+
+              <li {{ block.shopify_attributes }}>
+
+                <span class="epf-story__checkmark">&#10003;</span>
+
+                <span>{{ block.settings.text | replace: '[product_title]', product.title }}</span>
+
+              </li>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </ul>
+
+
+
+        <div class="epf-story__actions">
+
+          {% if section.settings.hero_primary_label != blank %}
+
+            <a class="epf-story__button epf-story__button--primary" href="{{ section.settings.hero_primary_link | default: '#MainProduct-offer_main' }}">
+
+              {{ section.settings.hero_primary_label | replace: '[product_title]', product.title }}
+
+            </a>
+
           {% endif %}
-        {% endfor %}
+
+          {% if section.settings.hero_secondary_label != blank %}
+
+            <a class="epf-story__button epf-story__button--secondary" href="{{ section.settings.hero_secondary_link | default: '#epf-what-to-expect' }}">
+
+              {{ section.settings.hero_secondary_label | replace: '[product_title]', product.title }}
+
+            </a>
+
+          {% endif %}
+
+        </div>
+
+
+
+        {% if section.settings.hero_proof_copy != blank %}
+
+          <div class="epf-story__proof">
+
+            <div class="epf-story__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+            <div class="epf-story__proof-copy">
+
+              {{ section.settings.hero_proof_copy | replace: '[product_title]', product.title | newline_to_br }}
+
+            </div>
+
+          </div>
+
+        {% endif %}
+
       </div>
 
-      {% if section.settings.wellness_note != blank %}
-        <p class="epf-support__note">
-          {{ section.settings.wellness_note | replace: '[product_title]', product.title | newline_to_br }}
-        </p>
-      {% endif %}
+
+
+      <div class="epf-story__visual">
+
+        <div class="epf-story__visual-ring"></div>
+
+        <figure class="epf-story__figure">
+
+          {% if hero_image != blank %}
+
+            {{
+
+              hero_image
+
+              | image_url: width: 900
+
+              | image_tag:
+
+                loading: 'lazy',
+
+                widths: '360, 540, 720, 900',
+
+                sizes: '(min-width: 990px) 38vw, 90vw',
+
+                alt: product.title
+
+            }}
+
+          {% else %}
+
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+          {% endif %}
+
+        </figure>
+
+        {% if section.settings.hero_chip_top != blank %}
+
+          <div class="epf-story__hero-chip epf-story__hero-chip--top">
+
+            {{ section.settings.hero_chip_top | replace: '[product_title]', product.title }}
+
+          </div>
+
+        {% endif %}
+
+        {% if section.settings.hero_chip_bottom != blank %}
+
+          <div class="epf-story__hero-chip epf-story__hero-chip--bottom">
+
+            {{ section.settings.hero_chip_bottom | replace: '[product_title]', product.title }}
+
+          </div>
+
+        {% endif %}
+
+      </div>
+
     </div>
 
-    {% if review_blocks_count > 0 %}
-      <div class="epf-support__reviews">
-        <div class="epf-support__heading">
-          <h2>{{ section.settings.reviews_heading | replace: '[product_title]', product.title }}</h2>
-          {% if section.settings.reviews_description != blank %}
-            <p>{{ section.settings.reviews_description | replace: '[product_title]', product.title | newline_to_br }}</p>
-          {% endif %}
+
+
+    <div class="epf-story__featured" aria-label="Featured on">
+
+      <div class="epf-story__featured-label">{{ section.settings.featured_label | replace: '[product_title]', product.title }}</div>
+
+      {% if section.settings.featured_image_url != blank %}
+
+        <div class="epf-story__featured-media">
+
+          <img
+
+            class="epf-story__featured-image"
+
+            src="{{ section.settings.featured_image_url | escape }}"
+
+            alt="{{ section.settings.featured_image_alt | default: section.settings.featured_label | escape }}"
+
+            loading="lazy"
+
+          >
+
         </div>
 
-        <div class="epf-support__reviews-grid">
-          {% assign review_index = 0 %}
+      {% else %}
+
+        <div class="epf-story__featured-grid">
+
           {% for block in section.blocks %}
-            {% if block.type == 'review_item' %}
-              {% assign review_index = review_index | plus: 1 %}
-              {% assign review_image = block.settings.image %}
-              {% if review_image == blank %}
-                {% case review_index %}
-                  {% when 1 %}
-                    {% assign review_image = review_image_1 %}
-                  {% when 2 %}
-                    {% assign review_image = review_image_2 %}
-                  {% when 3 %}
-                    {% assign review_image = review_image_3 %}
-                {% endcase %}
-              {% endif %}
-              <article class="epf-support__review-card" {{ block.shopify_attributes }}>
-                {% if review_image != blank %}
-                  <div class="epf-support__review-media">
-                    {{
-                      review_image
-                      | image_url: width: 720
-                      | image_tag:
-                        class: 'epf-support__review-image',
-                        loading: 'lazy',
-                        widths: '240, 360, 540, 720',
-                        sizes: '(min-width: 990px) 22vw, 90vw',
-                        alt: block.settings.author | default: block.settings.title
-                    }}
-                  </div>
-                {% endif %}
-                {% if block.settings.stars != blank %}
-                  <div class="epf-support__review-stars">{{ block.settings.stars }}</div>
-                {% endif %}
-                <h3>{{ block.settings.title | replace: '[product_title]', product.title }}</h3>
-                <div class="epf-support__review-copy">
-                  {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
-                </div>
-                {% if block.settings.author != blank or block.settings.meta != blank %}
-                  <div class="epf-support__review-author">
-                    {% if block.settings.author != blank %}
-                      <strong>{{ block.settings.author }}</strong>
-                    {% endif %}
-                    {% if block.settings.meta != blank %}
-                      <span>{{ block.settings.meta }}</span>
-                    {% endif %}
-                  </div>
-                {% endif %}
-              </article>
+
+            {% if block.type == 'featured_logo' %}
+
+              <span class="epf-story__logo-pill" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+
             {% endif %}
+
           {% endfor %}
+
         </div>
+
+      {% endif %}
+
+    </div>
+
+
+
+    <div class="epf-story__section epf-story__split">
+
+      <div class="epf-story__content">
+
+        <h2>{{ section.settings.problem_heading | replace: '[product_title]', product.title }}</h2>
+
+        {% if section.settings.problem_body != blank %}
+
+          <p>
+
+            {{ section.settings.problem_body | replace: '[product_title]', product.title | newline_to_br }}
+
+          </p>
+
+        {% endif %}
+
+        <div class="epf-story__note-list">
+
+          {% for block in section.blocks %}
+
+            {% if block.type == 'problem_note' %}
+
+              <div class="epf-story__note" {{ block.shopify_attributes }}>
+
+                {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
+
+              </div>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
       </div>
-    {% endif %}
+
+
+
+      <div class="epf-story__problem-card">
+
+        <div class="epf-story__problem-card-inner">
+
+          <div class="epf-story__card-media">
+
+            {% if problem_image != blank %}
+
+              {{
+
+                problem_image
+
+                | image_url: width: 780
+
+                | image_tag:
+
+                  loading: 'lazy',
+
+                  widths: '320, 480, 640, 780',
+
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+
+                  alt: product.title
+
+              }}
+
+            {% else %}
+
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+            {% endif %}
+
+          </div>
+
+          <div class="epf-story__diagram">
+
+            <div class="epf-story__diagram-bars">
+
+              <div class="epf-story__bar">
+
+                <div class="epf-story__bar-fill epf-story__bar-fill--rose"></div>
+
+                <span>{{ section.settings.problem_bar_label_1 }}</span>
+
+              </div>
+
+              <div class="epf-story__bar">
+
+                <div class="epf-story__bar-fill epf-story__bar-fill--sand"></div>
+
+                <span>{{ section.settings.problem_bar_label_2 }}</span>
+
+              </div>
+
+              <div class="epf-story__bar">
+
+                <div class="epf-story__bar-fill epf-story__bar-fill--sage"></div>
+
+                <span>{{ section.settings.problem_bar_label_3 }}</span>
+
+              </div>
+
+            </div>
+
+            <div class="epf-story__tendon-card">
+
+              <strong>{{ section.settings.problem_tendon_heading | replace: '[product_title]', product.title }}</strong>
+
+              {{ section.settings.problem_tendon_copy | replace: '[product_title]', product.title | newline_to_br }}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="epf-story__section epf-story__split">
+
+      <div class="epf-story__problem-card">
+
+        <div class="epf-story__problem-card-inner">
+
+          <div class="epf-story__card-media">
+
+            {% if intro_image != blank %}
+
+              {{
+
+                intro_image
+
+                | image_url: width: 780
+
+                | image_tag:
+
+                  loading: 'lazy',
+
+                  widths: '320, 480, 640, 780',
+
+                  sizes: '(min-width: 990px) 24vw, 90vw',
+
+                  alt: product.title
+
+              }}
+
+            {% else %}
+
+              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+            {% endif %}
+
+          </div>
+
+          <div class="epf-story__note-list">
+
+            {% for block in section.blocks %}
+
+              {% if block.type == 'intro_side_feature' %}
+
+                <div class="epf-story__feature-card" {{ block.shopify_attributes }}>
+
+                  <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
+
+                  <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+
+                  <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+                </div>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="epf-story__content">
+
+        <h2>{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+
+        {% if section.settings.intro_body != blank %}
+
+          <p>
+
+            {{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}
+
+          </p>
+
+        {% endif %}
+
+        <div class="epf-story__feature-grid">
+
+          {% for block in section.blocks %}
+
+            {% if block.type == 'intro_feature' %}
+
+              <article class="epf-story__feature-card" {{ block.shopify_attributes }}>
+
+                <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
+
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+              </article>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="epf-story__section" id="epf-what-to-expect">
+
+      <div class="epf-story__section-header">
+
+        <h2>{{ section.settings.expect_heading | replace: '[product_title]', product.title }}</h2>
+
+      </div>
+
+
+
+      <div class="epf-story__expect-grid">
+
+        {% assign expect_index = 0 %}
+
+        {% for block in section.blocks %}
+
+          {% if block.type == 'expect_card' %}
+
+            {% assign expect_index = expect_index | plus: 1 %}
+
+            {% assign expect_image = block.settings.image %}
+
+            {% if expect_image == blank %}
+
+              {% case expect_index %}
+
+                {% when 1 %}
+
+                  {% if expect_media_1 != blank %}{% assign expect_image = expect_media_1.preview_image %}{% endif %}
+
+                {% when 2 %}
+
+                  {% if expect_media_2 != blank %}{% assign expect_image = expect_media_2.preview_image %}{% endif %}
+
+                {% when 3 %}
+
+                  {% if expect_media_3 != blank %}{% assign expect_image = expect_media_3.preview_image %}{% endif %}
+
+              {% endcase %}
+
+            {% endif %}
+
+            <article class="epf-story__card" {{ block.shopify_attributes }}>
+
+              <div class="epf-story__card-media">
+
+                {% if expect_image != blank %}
+
+                  {{
+
+                    expect_image
+
+                    | image_url: width: 720
+
+                    | image_tag:
+
+                      loading: 'lazy',
+
+                      widths: '260, 360, 540, 720',
+
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+
+                      alt: block.settings.heading
+
+                  }}
+
+                {% else %}
+
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+                {% endif %}
+
+              </div>
+
+              <div class="epf-story__card-body">
+
+                <p class="epf-story__step-kicker">{{ block.settings.kicker }}</p>
+
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+              </div>
+
+            </article>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+
+
+      {% if section.settings.expect_cta_label != blank %}
+
+        <div class="epf-story__expect-cta">
+
+          <a class="epf-story__button epf-story__button--primary" href="{{ section.settings.expect_cta_link | default: '#MainProduct-offer_main' }}">
+
+            {{ section.settings.expect_cta_label | replace: '[product_title]', product.title }}
+
+          </a>
+
+        </div>
+
+      {% endif %}
+
+    </div>
+
+
+
+    <div class="epf-story__section">
+
+      <div class="epf-story__results">
+
+        <div class="epf-story__results-visual">
+
+          {% if results_image != blank %}
+
+            {{
+
+              results_image
+
+              | image_url: width: 900
+
+              | image_tag:
+
+                loading: 'lazy',
+
+                widths: '320, 480, 640, 900',
+
+                sizes: '(min-width: 990px) 28vw, 90vw',
+
+                alt: product.title
+
+            }}
+
+          {% else %}
+
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+          {% endif %}
+
+          <div class="epf-story__results-glow"></div>
+
+        </div>
+
+
+
+        <div class="epf-story__content">
+
+          <h2>{{ section.settings.results_heading | replace: '[product_title]', product.title }}</h2>
+
+          {% if section.settings.results_body != blank %}
+
+            <p>
+
+              {{ section.settings.results_body | replace: '[product_title]', product.title | newline_to_br }}
+
+            </p>
+
+          {% endif %}
+
+
+
+          <div class="epf-story__metric-list">
+
+            {% for block in section.blocks %}
+
+              {% if block.type == 'result_metric' %}
+
+                <div class="epf-story__metric" {{ block.shopify_attributes }}>
+
+                  <span class="epf-story__metric-icon">&#10003;</span>
+
+                  <p class="epf-story__metric-copy">
+
+                    {{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}
+
+                  </p>
+
+                </div>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="epf-story__section">
+
+      <div class="epf-story__section-header">
+
+        <h2>{{ section.settings.journey_heading | replace: '[product_title]', product.title }}</h2>
+
+      </div>
+
+
+
+      <div class="epf-story__journey-grid">
+
+        {% assign journey_index = 0 %}
+
+        {% for block in section.blocks %}
+
+          {% if block.type == 'journey_card' %}
+
+            {% assign journey_index = journey_index | plus: 1 %}
+
+            {% assign journey_image = block.settings.image %}
+
+            {% if journey_image == blank %}
+
+              {% case journey_index %}
+
+                {% when 1 %}
+
+                  {% if journey_media_1 != blank %}{% assign journey_image = journey_media_1.preview_image %}{% endif %}
+
+                {% when 2 %}
+
+                  {% if journey_media_2 != blank %}{% assign journey_image = journey_media_2.preview_image %}{% endif %}
+
+                {% when 3 %}
+
+                  {% if journey_media_3 != blank %}{% assign journey_image = journey_media_3.preview_image %}{% endif %}
+
+              {% endcase %}
+
+            {% endif %}
+
+            <article class="epf-story__journey-card" {{ block.shopify_attributes }}>
+
+              <div class="epf-story__journey-media">
+
+                {% if journey_image != blank %}
+
+                  {{
+
+                    journey_image
+
+                    | image_url: width: 720
+
+                    | image_tag:
+
+                      loading: 'lazy',
+
+                      widths: '260, 360, 540, 720',
+
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+
+                      alt: block.settings.heading
+
+                  }}
+
+                {% else %}
+
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+                {% endif %}
+
+              </div>
+
+              <div class="epf-story__journey-body">
+
+                <p class="epf-story__journey-kicker">{{ block.settings.kicker }}</p>
+
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+              </div>
+
+            </article>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+
+
+      {% if section.settings.journey_cta_label != blank %}
+
+        <div class="epf-story__journey-cta">
+
+          <a class="epf-story__button epf-story__button--secondary" href="{{ section.settings.journey_cta_link | default: '#epf-questions' }}">
+
+            {{ section.settings.journey_cta_label | replace: '[product_title]', product.title }}
+
+          </a>
+
+        </div>
+
+      {% endif %}
+
+    </div>
+
+
+
+    <div class="epf-story__section">
+
+      <div class="epf-story__section-header">
+
+        <h2>{{ section.settings.testimonials_heading | replace: '[product_title]', product.title }}</h2>
+
+      </div>
+
+
+
+      <div class="epf-story__voice-grid">
+
+        {% assign testimonial_index = 0 %}
+
+        {% for block in section.blocks %}
+
+          {% if block.type == 'testimonial' %}
+
+            {% assign testimonial_index = testimonial_index | plus: 1 %}
+
+            {% assign testimonial_image = block.settings.image %}
+
+            {% if testimonial_image == blank %}
+
+              {% case testimonial_index %}
+
+                {% when 1 %}
+
+                  {% if voice_media_1 != blank %}{% assign testimonial_image = voice_media_1.preview_image %}{% endif %}
+
+                {% when 2 %}
+
+                  {% if voice_media_2 != blank %}{% assign testimonial_image = voice_media_2.preview_image %}{% endif %}
+
+                {% when 3 %}
+
+                  {% if voice_media_3 != blank %}{% assign testimonial_image = voice_media_3.preview_image %}{% endif %}
+
+              {% endcase %}
+
+            {% endif %}
+
+            <article class="epf-story__voice-card" {{ block.shopify_attributes }}>
+
+              <div class="epf-story__voice-media">
+
+                {% if testimonial_image != blank %}
+
+                  {{
+
+                    testimonial_image
+
+                    | image_url: width: 720
+
+                    | image_tag:
+
+                      loading: 'lazy',
+
+                      widths: '260, 360, 540, 720',
+
+                      sizes: '(min-width: 990px) 24vw, 90vw',
+
+                      alt: block.settings.heading
+
+                  }}
+
+                {% else %}
+
+                  {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+
+                {% endif %}
+
+              </div>
+
+              <div class="epf-story__voice-body">
+
+                <div class="epf-story__voice-meta">{{ block.settings.meta | replace: '[product_title]', product.title }}</div>
+
+                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
+
+                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
+
+              </div>
+
+            </article>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
+
+
 {% schema %}
+
 {
-  "name": "Pelvic Floor Support",
+
+  "name": "Pelvic Floor Story",
+
   "settings": [
+
     {
+
       "type": "range",
+
       "id": "padding_top",
+
       "min": 0,
+
       "max": 120,
+
       "step": 4,
+
       "unit": "px",
+
       "label": "Padding top",
-      "default": 24
+
+      "default": 28
+
     },
+
     {
+
       "type": "range",
+
       "id": "padding_bottom",
+
       "min": 0,
+
       "max": 120,
+
       "step": 4,
+
       "unit": "px",
+
       "label": "Padding bottom",
-      "default": 48
+
+      "default": 44
+
     },
+
     {
-      "type": "text",
-      "id": "section_anchor",
-      "label": "Section anchor",
-      "default": "epf-questions"
-    },
-    {
+
       "type": "header",
-      "content": "FAQ"
+
+      "content": "Hero"
+
     },
+
     {
+
+      "type": "image_picker",
+
+      "id": "hero_image",
+
+      "label": "Hero image"
+
+    },
+
+    {
+
       "type": "text",
-      "id": "faq_heading",
+
+      "id": "hero_eyebrow",
+
+      "label": "Eyebrow",
+
+      "default": "Clinically inspired home wellness"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "hero_heading",
+
       "label": "Heading",
-      "default": "Questions from Women Just Like You"
+
+      "default": "Electric pelvic floor support for women who want confidence back."
+
     },
+
     {
+
       "type": "textarea",
-      "id": "faq_description",
-      "label": "Description",
-      "default": "Short answers to the things women ask before starting an at-home pelvic floor support routine."
+
+      "id": "hero_lead",
+
+      "label": "Lead",
+
+      "default": "Designed for women rebuilding confidence after stress, childbirth, or years of feeling disconnected from their core. This quiet at-home routine helps you stay consistent without adding another complicated habit."
+
     },
+
     {
+
+      "type": "text",
+
+      "id": "hero_primary_label",
+
+      "label": "Primary button label",
+
+      "default": "Try your pelvic floor routine today"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "hero_primary_link",
+
+      "label": "Primary button link",
+
+      "default": "#MainProduct-offer_main"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "hero_secondary_label",
+
+      "label": "Secondary button label",
+
+      "default": "See what to expect"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "hero_secondary_link",
+
+      "label": "Secondary button link",
+
+      "default": "#epf-what-to-expect"
+
+    },
+
+    {
+
       "type": "textarea",
-      "id": "wellness_note",
-      "label": "Wellness note",
-      "default": "Wellness note: this page is intended for general product information only and should not replace individualized medical advice."
+
+      "id": "hero_proof_copy",
+
+      "label": "Proof copy",
+
+      "default": "4.8/5 from women using at-home support to rebuild consistency, tone awareness, and everyday confidence."
+
     },
+
     {
+
+      "type": "text",
+
+      "id": "hero_chip_top",
+
+      "label": "Top image chip",
+
+      "default": "Quiet 20-minute sessions that fit real life."
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "hero_chip_bottom",
+
+      "label": "Bottom image chip",
+
+      "default": "Comfort-first design for everyday confidence."
+
+    },
+
+    {
+
       "type": "header",
-      "content": "Reviews"
+
+      "content": "Featured Logos"
+
     },
+
     {
+
       "type": "text",
-      "id": "reviews_heading",
-      "label": "Heading",
-      "default": "Reviews from Women Like You"
+
+      "id": "featured_label",
+
+      "label": "Featured label",
+
+      "default": "As seen in"
+
     },
+
     {
+
+      "type": "text",
+
+      "id": "featured_image_url",
+
+      "label": "Featured image URL"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "featured_image_alt",
+
+      "label": "Featured image alt",
+
+      "default": "Featured on logos"
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "Problem"
+
+    },
+
+    {
+
+      "type": "image_picker",
+
+      "id": "problem_image",
+
+      "label": "Problem image"
+
+    },
+
+    {
+
       "type": "textarea",
-      "id": "reviews_description",
-      "label": "Description",
-      "default": "Real words from women building steadier routines and more everyday confidence with [product_title]."
+
+      "id": "problem_heading",
+
+      "label": "Heading",
+
+      "default": "The Problem Isn't Your Age. It's the Missing Building Blocks."
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "problem_body",
+
+      "label": "Body",
+
+      "default": "Most women are told to \"just do Kegels,\" then left to guess whether anything is actually changing. But tone, coordination, and consistency are built together, not one cue at a time."
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "problem_bar_label_1",
+
+      "label": "Bar label 1",
+
+      "default": "Tone"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "problem_bar_label_2",
+
+      "label": "Bar label 2",
+
+      "default": "Control"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "problem_bar_label_3",
+
+      "label": "Bar label 3",
+
+      "default": "Confidence"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "problem_tendon_heading",
+
+      "label": "Support card heading",
+
+      "default": "Deep core support"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "problem_tendon_copy",
+
+      "label": "Support card copy",
+
+      "default": "Better routines happen when awareness, consistency, and comfort build together instead of competing with each other."
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "Introduction"
+
+    },
+
+    {
+
+      "type": "image_picker",
+
+      "id": "intro_image",
+
+      "label": "Introduction image"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "intro_heading",
+
+      "label": "Heading",
+
+      "default": "Introducing the [product_title]"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "intro_body",
+
+      "label": "Body",
+
+      "default": "Our routine is designed to help women reconnect with the support system behind better bladder confidence, steadier movement, and more trust in their body."
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "What To Expect"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "expect_heading",
+
+      "label": "Heading",
+
+      "default": "What to Expect"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "expect_cta_label",
+
+      "label": "Button label",
+
+      "default": "Start your confidence routine now"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "expect_cta_link",
+
+      "label": "Button link",
+
+      "default": "#MainProduct-offer_main"
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "Results"
+
+    },
+
+    {
+
+      "type": "image_picker",
+
+      "id": "results_image",
+
+      "label": "Results image"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "results_heading",
+
+      "label": "Heading",
+
+      "default": "Results That Matter"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "results_body",
+
+      "label": "Body",
+
+      "default": "The goal isn't perfection. It's building the kind of support that helps you move, laugh, train, travel, and show up without constantly thinking about it."
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "Journey"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "journey_heading",
+
+      "label": "Heading",
+
+      "default": "20 Minutes a Day to Get Your Confidence Back"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "journey_cta_label",
+
+      "label": "Button label",
+
+      "default": "Still have questions?"
+
+    },
+
+    {
+
+      "type": "text",
+
+      "id": "journey_cta_link",
+
+      "label": "Button link",
+
+      "default": "#epf-questions"
+
+    },
+
+    {
+
+      "type": "header",
+
+      "content": "Testimonials"
+
+    },
+
+    {
+
+      "type": "textarea",
+
+      "id": "testimonials_heading",
+
+      "label": "Heading",
+
+      "default": "Women Just Like You Are Getting Their Lives Back"
+
     }
+
   ],
+
   "blocks": [
+
     {
-      "type": "support_point",
-      "name": "Support Point",
+
+      "type": "hero_check",
+
+      "name": "Hero Check",
+
+      "limit": 6,
+
+      "settings": [
+
+        {
+
+          "type": "text",
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "Supports daily pelvic floor activation in just 20 minutes."
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "type": "featured_logo",
+
+      "name": "Featured Logo",
+
       "limit": 8,
+
       "settings": [
+
         {
+
           "type": "text",
-          "id": "icon_text",
-          "label": "Icon text",
-          "default": "✓"
-        },
+
+          "id": "label",
+
+          "label": "Label",
+
+          "default": "NBC"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "type": "problem_note",
+
+      "name": "Problem Note",
+
+      "limit": 6,
+
+      "settings": [
+
         {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "30-day confidence promise"
-        },
-        {
+
           "type": "textarea",
+
           "id": "text",
+
           "label": "Text",
-          "default": "Try it in your home routine and make sure it feels right for you."
+
+          "default": "Daily stress, long sitting hours, pregnancy, and inconsistent routines can all make it harder to feel connected to your deep core and pelvic floor."
+
         }
+
       ]
+
     },
+
     {
-      "type": "faq_item",
-      "name": "FAQ Item",
-      "limit": 16,
+
+      "type": "intro_side_feature",
+
+      "name": "Intro Side Card",
+
+      "limit": 4,
+
       "settings": [
+
         {
+
           "type": "text",
-          "id": "question",
-          "label": "Question",
-          "default": "I've tried Kegels before. How is this different?"
+
+          "id": "badge",
+
+          "label": "Badge",
+
+          "default": "1"
+
         },
+
         {
+
+          "type": "text",
+
+          "id": "heading",
+
+          "label": "Heading",
+
+          "default": "At-home friendly"
+
+        },
+
+        {
+
           "type": "textarea",
-          "id": "answer",
-          "label": "Answer",
-          "default": "Most women don't need more reminders. They need a routine that feels easier to repeat. [product_title] is designed to make the habit feel more approachable, structured, and realistic at home."
-        },
-        {
-          "type": "checkbox",
-          "id": "open_by_default",
-          "label": "Open by default",
-          "default": false
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "Quiet, compact, and made to fit into a routine you can actually repeat."
+
         }
+
       ]
+
     },
+
     {
-      "type": "review_item",
-      "name": "Review Item",
-      "limit": 12,
+
+      "type": "intro_feature",
+
+      "name": "Intro Feature",
+
+      "limit": 8,
+
       "settings": [
+
         {
+
+          "type": "text",
+
+          "id": "badge",
+
+          "label": "Badge",
+
+          "default": "A"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "heading",
+
+          "label": "Heading",
+
+          "default": "Guided consistency"
+
+        },
+
+        {
+
+          "type": "textarea",
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "Turns pelvic floor work into a repeatable routine instead of a guesswork reminder."
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "type": "expect_card",
+
+      "name": "Expect Card",
+
+      "limit": 6,
+
+      "settings": [
+
+        {
+
           "type": "image_picker",
+
           "id": "image",
+
           "label": "Image"
+
         },
+
         {
+
           "type": "text",
-          "id": "stars",
-          "label": "Stars",
-          "default": "★★★★★"
+
+          "id": "kicker",
+
+          "label": "Kicker",
+
+          "default": "Week 1"
+
         },
+
         {
+
           "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "\"It finally felt easy to stay consistent.\""
+
+          "id": "heading",
+
+          "label": "Heading",
+
+          "default": "Reconnect with the routine"
+
         },
+
         {
+
           "type": "textarea",
+
           "id": "text",
+
           "label": "Text",
-          "default": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\""
-        },
-        {
-          "type": "text",
-          "id": "author",
-          "label": "Author",
-          "default": "Maria L."
-        },
-        {
-          "type": "text",
-          "id": "meta",
-          "label": "Meta",
-          "default": "Verified customer"
+
+          "default": "Short sessions help you build awareness and make the habit feel easy to repeat."
+
         }
+
       ]
-    }
-  ],
-  "presets": [
+
+    },
+
     {
-      "name": "Pelvic Floor Support",
-      "blocks": [
+
+      "type": "result_metric",
+
+      "name": "Result Metric",
+
+      "limit": 8,
+
+      "settings": [
+
         {
-          "type": "support_point"
-        },
-        {
-          "type": "support_point"
-        },
-        {
-          "type": "support_point"
-        },
-        {
-          "type": "support_point"
-        },
-        {
-          "type": "faq_item"
-        },
-        {
-          "type": "faq_item"
-        },
-        {
-          "type": "faq_item"
-        },
-        {
-          "type": "faq_item"
-        },
-        {
-          "type": "review_item"
-        },
-        {
-          "type": "review_item"
-        },
-        {
-          "type": "review_item"
+
+          "type": "textarea",
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "Feel more supported during daily pressure moments like coughing or laughing."
+
         }
+
       ]
+
+    },
+
+    {
+
+      "type": "journey_card",
+
+      "name": "Journey Card",
+
+      "limit": 6,
+
+      "settings": [
+
+        {
+
+          "type": "image_picker",
+
+          "id": "image",
+
+          "label": "Image"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "kicker",
+
+          "label": "Kicker",
+
+          "default": "10 min"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "heading",
+
+          "label": "Heading",
+
+          "default": "Wake up your deep core"
+
+        },
+
+        {
+
+          "type": "textarea",
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "Start with a short routine that helps you reconnect with the muscles most women lose track of first."
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "type": "testimonial",
+
+      "name": "Testimonial",
+
+      "limit": 6,
+
+      "settings": [
+
+        {
+
+          "type": "image_picker",
+
+          "id": "image",
+
+          "label": "Image"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "meta",
+
+          "label": "Meta",
+
+          "default": "Verified customer"
+
+        },
+
+        {
+
+          "type": "text",
+
+          "id": "heading",
+
+          "label": "Heading",
+
+          "default": "\"I finally felt supported again.\""
+
+        },
+
+        {
+
+          "type": "textarea",
+
+          "id": "text",
+
+          "label": "Text",
+
+          "default": "\"I wanted something I could use privately, consistently, and without overthinking it. This made the routine feel manageable, and that changed everything.\""
+
+        }
+
+      ]
+
     }
+
+  ],
+
+  "presets": [
+
+    {
+
+      "name": "Pelvic Floor Story"
+
+    }
+
   ]
+
 }
+
 {% endschema %}
