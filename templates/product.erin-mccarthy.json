@@ -84,26 +84,9 @@
             "text": "Adult diapers are a surrender, not a solution (They just manage the mess, allowing the muscle to continue deteriorating)."
           }
         },
-        "intro_side_1": {
-          "type": "intro_side_feature",
-          "settings": {
-            "badge": "1",
-            "heading": "4-mode training",
-            "text": "Switch between modes to find a rhythm that feels manageable and consistent."
-          }
-        },
-        "intro_side_2": {
-          "type": "intro_side_feature",
-          "settings": {
-            "badge": "2",
-            "heading": "Recharge and repeat",
-            "text": "Type-C charging makes it easy to keep ready for regular home sessions."
-          }
-        },
         "intro_feature_a": {
           "type": "intro_feature",
           "settings": {
-            "badge": "A",
             "heading": "Male-focused routine",
             "text": "Built for men who want a more direct and repeatable pelvic floor exercise habit."
           }
@@ -111,7 +94,6 @@
         "intro_feature_b": {
           "type": "intro_feature",
           "settings": {
-            "badge": "B",
             "heading": "Home-based privacy",
             "text": "Train on your own schedule without appointments or complicated setup."
           }
@@ -119,7 +101,6 @@
         "intro_feature_c": {
           "type": "intro_feature",
           "settings": {
-            "badge": "C",
             "heading": "Rechargeable design",
             "text": "Type-C charging helps keep the device ready when you want to use it."
           }
@@ -127,7 +108,6 @@
         "intro_feature_d": {
           "type": "intro_feature",
           "settings": {
-            "badge": "D",
             "heading": "Consistency over guesswork",
             "text": "Four modes give you a clearer routine than trying to wing it."
           }
@@ -242,8 +222,6 @@
         "problem_note_2",
         "problem_note_3",
         "problem_note_RiAnnn",
-        "intro_side_1",
-        "intro_side_2",
         "intro_feature_a",
         "intro_feature_b",
         "intro_feature_c",
