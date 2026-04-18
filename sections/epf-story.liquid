@@ -1050,26 +1050,49 @@
       </div>
     </div>
 
-<div class="epf-story__content">
-        <h2 class="epf-story__intro-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
-        {% if section.settings.intro_body != blank %}
-          <p>
-            {{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}
-          </p>
-        {% endif %}
-        <div class="epf-story__feature-grid">
-          {% for block in section.blocks %}
-            {% if block.type == 'intro_feature' %}
-              <article class="epf-story__feature-card" {{ block.shopify_attributes }}>
-                <div class="epf-story__feature-pill">{{ block.settings.badge }}</div>
-                <h3>{{ block.settings.heading | replace: '[product_title]', product.title }}</h3>
-                <p>{{ block.settings.text | replace: '[product_title]', product.title | newline_to_br }}</p>
-              </article>
-            {% endif %}
-          {% endfor %}
+{% comment %} --- PHẦN INTRODUCTION MỚI (HALSTEN STYLE) --- {% endcomment %}
+    <div class="epf-story__section epf-story__intro-wrapper" id="epf-intro">
+      <h2 class="epf-story__intro-main-heading">{{ section.settings.intro_heading | replace: '[product_title]', product.title }}</h2>
+
+      <div class="epf-story__split" style="align-items: flex-start;">
+        <div class="epf-story__visual">
+           {% if intro_image != blank %}
+            {{ intro_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'epf-story__featured-image', style: 'border-radius: 2rem;' }}
+           {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+           {% endif %}
+        </div>
+
+        <div class="epf-story__content">
+          {% if section.settings.intro_body != blank %}
+            <p class="epf-story__intro-lead">{{ section.settings.intro_body | replace: '[product_title]', product.title | newline_to_br }}</p>
+          {% endif %}
+
+          {% if section.settings.intro_subtext != blank %}
+            <p class="epf-story__intro-subtext">{{ section.settings.intro_subtext | replace: '[product_title]', product.title }}</p>
+          {% endif %}
+
+          <div class="epf-story__intro-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'intro_feature' %}
+                <article class="epf-story__intro-item {% if block.settings.icon == blank %}text-only{% endif %}" {{ block.shopify_attributes }}>
+                  {% if block.settings.icon != blank %}
+                    <img src="{{ block.settings.icon | image_url: width: 100 }}" alt="" class="epf-story__intro-icon" loading="lazy">
+                  {% endif %}
+
+                  {% if block.settings.heading != blank %}
+                    <h3>{{ block.settings.heading }}</h3>
+                  {% endif %}
+
+                  <p>{{ block.settings.text | newline_to_br }}</p>
+                </article>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
+    {% comment %} --- HẾT PHẦN INTRODUCTION --- {% endcomment %}
 
     <div class="epf-story__section" id="epf-what-to-expect">
       <div class="epf-story__section-header">
