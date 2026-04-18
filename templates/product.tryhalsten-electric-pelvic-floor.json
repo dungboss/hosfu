@@ -15,25 +15,19 @@
         "hero_check_1": {
           "type": "hero_check",
           "settings": {
-            "text": "4 training modes for a guided at-home routine."
+            "text": "😴 Sleep Through the Night"
           }
         },
         "hero_check_2": {
           "type": "hero_check",
           "settings": {
-            "text": "Rechargeable design with convenient Type-C charging."
+            "text": "🚶‍♂️ Leave Home Without Fear"
           }
         },
         "hero_check_3": {
           "type": "hero_check",
           "settings": {
-            "text": "Compact, private, and easy to use at home."
-          }
-        },
-        "hero_check_4": {
-          "type": "hero_check",
-          "settings": {
-            "text": "Built for repeatable sessions instead of guesswork."
+            "text": "🛑 Ditch the Adult Diapers"
           }
         },
         "featured_logo_1": {
@@ -233,7 +227,6 @@
         "hero_check_1",
         "hero_check_2",
         "hero_check_3",
-        "hero_check_4",
         "featured_logo_1",
         "featured_logo_2",
         "featured_logo_3",
@@ -268,8 +261,8 @@
         "hero_image": "shopify://shop_images/D5E54260-C302-42EF-8F89-C3BEE50C26FF_1_201_a.jpg",
         "hero_eyebrow": "",
         "hero_heading": "Clinically Designed Pelvic Floor Training. From Exhausting Nightly Trips to Restful Sleep.",
-        "hero_lead": "Built for men who want a guided at-home routine for pelvic floor training. Four modes, Type-C charging, and repeatable sessions make it easier to stay consistent without complicated setup.",
-        "hero_primary_label": "Start my training routine",
+        "hero_lead": "Time slowly weakened your core muscles. Now endless nightly bathroom trips and the constant fear of leaks are stealing your rest, your confidence, and the active life you deserve.",
+        "hero_primary_label": "TRY HOSFU RISK-FREE TODAY",
         "hero_primary_link": "#MainProduct-offer_main",
         "hero_secondary_label": "See how it works",
         "hero_secondary_link": "#epf-what-to-expect",
