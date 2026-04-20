@@ -393,6 +393,13 @@
     margin-top: 1.3rem;
   }
 
+  #shopify-section-{{ section.id }} .epf-news__cta-urgency {
+    margin: 0.8rem auto 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #c0392b;
+  }
+
   #shopify-section-{{ section.id }} .epf-news__footnote {
     margin-top: 2.4rem;
     padding-top: 1.6rem;
@@ -659,6 +666,7 @@
                   <a class="epf-news__button" href="{{ block.settings.button_link | default: '#MainProduct-offer_main' }}">
                     {{ block.settings.button_label | replace: '[product_title]', product.title }}
                   </a>
+                  <p class="epf-news__cta-urgency">🔥 Only 14 units left at this price!</p>
                 {% endif %}
               </section>
           {% endcase %}
