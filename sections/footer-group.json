@@ -30,43 +30,50 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "fc645871-d789-4cfa-8584-4f8a29b6ce92": {
-          "type": "image",
+        "email_signup_t8nn3Q": {
+          "type": "email_signup",
           "settings": {
-            "image_width": 100,
-            "alignment": "center",
-            "url": "",
-            "width_desktop": 4,
+            "heading": "Join the Hosfu Community",
+            "block_headings_font_size": 1,
+            "subtext": "<p>Get product updates, exclusive offers, and wellness tips delivered to your inbox.</p><p><strong>Need help?</strong></p><p>Reach out anytime through our contact page for support.</p>",
+            "button_type": "solid",
+            "button_label": "Sign up",
+            "button_style_secondary": false,
+            "width_desktop": 5,
             "width_mobile": "2"
           }
         },
-        "text_KU3Twd": {
-          "type": "text",
+        "menu_links_M3vPpr": {
+          "type": "link_list",
           "settings": {
-            "heading": "Heading",
+            "heading": "Menu",
             "block_headings_font_size": 1,
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>",
+            "menu": "footer",
+            "use_store_policies": false,
+            "font_size": 18,
+            "menu_items_font": "body_bold",
             "width_desktop": 3,
             "width_mobile": "2"
           }
         },
-        "1c647602-cc00-4009-a058-976435c8ee9e": {
+        "policy_links_mDg4vV": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Policies",
             "block_headings_font_size": 1,
-            "menu": "footer",
-            "font_size": 14,
-            "menu_items_font": "body",
-            "width_desktop": 4,
-            "width_mobile": "1"
+            "menu": "",
+            "use_store_policies": true,
+            "font_size": 18,
+            "menu_items_font": "body_bold",
+            "width_desktop": 3,
+            "width_mobile": "2"
           }
         }
       },
       "block_order": [
-        "fc645871-d789-4cfa-8584-4f8a29b6ce92",
-        "text_KU3Twd",
-        "1c647602-cc00-4009-a058-976435c8ee9e"
+        "email_signup_t8nn3Q",
+        "menu_links_M3vPpr",
+        "policy_links_mDg4vV"
       ],
       "settings": {
         "color_scheme": "accent-1",
@@ -79,11 +86,11 @@
         "enable_follow_on_shop": false,
         "show_social": false,
         "enable_country_selector": false,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "payment_enable": true,
         "enabled_payment_types": "",
         "show_policy": false,
-        "branding_text": "© 2026, Hosfu Beauty. All Rights Reserved.",
+        "branding_text": "Powered by Hosfu Beauty",
         "margin_top": 0,
         "padding_top": 32,
         "padding_bottom": 20

@@ -577,33 +577,30 @@
           }
         },
         "review_1": {
-          "type": "review_item",
+          "type": "testimonial",
           "settings": {
-            "stars": "★★★★★",
-            "title": "\"It finally felt easy to stay consistent.\"",
+            "meta": "★★★★★ · Mark T. · Verified customer",
+            "heading": "\"It finally felt easy to stay consistent.\"",
             "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
-            "author": "Mark T.",
-            "meta": "Verified customer"
+            "image": null
           }
         },
         "review_2": {
-          "type": "review_item",
+          "type": "testimonial",
           "settings": {
-            "stars": "★★★★★",
-            "title": "\"I feel calmer and more in control.\"",
+            "meta": "★★★★★ · Jason R. · Verified customer",
+            "heading": "\"I feel calmer and more in control.\"",
             "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
-            "author": "Jason R.",
-            "meta": "Verified customer"
+            "image": null
           }
         },
         "review_3": {
-          "type": "review_item",
+          "type": "testimonial",
           "settings": {
-            "stars": "★★★★★",
-            "title": "\"Private, simple, and actually realistic.\"",
+            "meta": "★★★★★ · Daniel S. · Verified customer",
+            "heading": "\"Private, simple, and actually realistic.\"",
             "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
-            "author": "Daniel S.",
-            "meta": "Verified customer"
+            "image": null
           }
         }
       },

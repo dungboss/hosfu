@@ -43,6 +43,158 @@
       }
     }
   {% endif %}
+
+  .footer.color-scheme-{{ section.id }} .footer__content-top {
+    padding-bottom: 7rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer__blocks-wrapper.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4rem;
+    margin: 0;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block.grid__item {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block__heading {
+    margin: 0 0 2.4rem;
+    line-height: 1.1;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup {
+    max-width: 40rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer-block__heading {
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    max-width: 32rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-link-list .footer-block__heading {
+    font-size: clamp(2.4rem, 2.2vw, 3.2rem);
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer-block__details-content {
+    max-width: 38rem;
+    margin: 0 0 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer-block__details-content p {
+    margin: 0 0 1.2rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer-block__details-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer-block__details-content strong {
+    font-weight: var(--font-body-weight-bold);
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .footer__newsletter,
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .newsletter-form__field-wrapper,
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .field {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .field__input {
+    min-height: 5rem;
+    background: rgb(var(--color-base-background-1));
+    color: rgb(var(--color-base-text));
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .field__label {
+    color: rgba(var(--color-base-text), 0.72);
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup .newsletter__solid-btn {
+    min-height: 5rem;
+    margin-top: 1.2rem;
+    border-radius: 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block__details-content--links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block__details-content--links li {
+    margin: 0;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer-block__details-content--links .list-menu__item--link {
+    display: inline-block;
+    padding: 0;
+    line-height: 1.25;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer__content-bottom {
+    padding-top: 3.6rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer__column--info {
+    align-items: center;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer__payment,
+  .footer.color-scheme-{{ section.id }} .list-payment {
+    width: 100%;
+  }
+
+  .footer.color-scheme-{{ section.id }} .list-payment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer.color-scheme-{{ section.id }} .footer__copyright {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .footer.color-scheme-{{ section.id }} .copyright__content {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer.color-scheme-{{ section.id }} .footer__blocks-wrapper.grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5rem 4rem;
+    }
+
+    .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .footer.color-scheme-{{ section.id }} .footer__content-top {
+      padding-bottom: 8rem;
+    }
+
+    .footer.color-scheme-{{ section.id }} .footer__blocks-wrapper.grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .footer.color-scheme-{{ section.id }} .footer-block--type-email-signup {
+      grid-column: auto;
+    }
+  }
 {%- endstyle -%}
 
 <footer
@@ -74,8 +226,28 @@
         {%- if section.blocks.size > 0 -%}
           <div class="footer__blocks-wrapper grid">
             {%- for block in section.blocks -%}
+              {%- liquid
+                assign render_store_policies = false
+                assign render_block = true
+
+                if block.type == 'link_list'
+                  if block.settings.use_store_policies
+                    for policy in shop.policies
+                      if policy != blank
+                        assign render_store_policies = true
+                        break
+                      endif
+                    endfor
+                  endif
+
+                  if block.settings.menu == blank and render_store_policies == false
+                    assign render_block = false
+                  endif
+                endif
+              -%}
+              {%- if render_block -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %} footer-block--desktop-{{ block.settings.width_desktop }} footer-block--mobile-{{ block.settings.width_mobile }} animate-item animate-item--child"
+                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %} footer-block--type-{{ block.type | handleize }}{% if block.type == 'link_list' and render_store_policies %} footer-block--store-policies{% endif %} footer-block--desktop-{{ block.settings.width_desktop }} footer-block--mobile-{{ block.settings.width_mobile }} animate-item animate-item--child"
                 style="--index: {{ forloop.index0 }};"
                 {{ block.shopify_attributes }}
               >
@@ -103,7 +275,7 @@
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
-                    {%- if block.settings.menu != blank -%}
+                    {%- if block.settings.menu != blank or render_store_policies -%}
                       <style>
                         .footer-block__details-content-{{ block.id }} .link {
                           font-size: {{ block.settings.font_size | divided_by: 10.0 }}rem;
@@ -116,17 +288,29 @@
                           {% endif %}
                         }
                       </style>
-                      <ul class="footer-block__details-content footer-block__details-content-{{ block.id }} list-unstyled">
-                        {%- for link in block.settings.menu.links -%}
-                          <li>
-                            <a
-                              href="{{ link.url }}"
-                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
-                            >
-                              {{ link.title }}
-                            </a>
-                          </li>
-                        {%- endfor -%}
+                      <ul class="footer-block__details-content footer-block__details-content--links footer-block__details-content-{{ block.id }} list-unstyled">
+                        {%- if render_store_policies -%}
+                          {%- for policy in shop.policies -%}
+                            {%- if policy != blank -%}
+                              <li>
+                                <a href="{{ policy.url }}" class="link link--text list-menu__item list-menu__item--link">
+                                  {{ policy.title }}
+                                </a>
+                              </li>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        {%- else -%}
+                          {%- for link in block.settings.menu.links -%}
+                            <li>
+                              <a
+                                href="{{ link.url }}"
+                                class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                              >
+                                {{ link.title }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        {%- endif -%}
                       </ul>
                     {%- endif -%}
                   {%- when 'brand_information' -%}
@@ -280,6 +464,7 @@
                     </div>
                 {%- endcase -%}
               </div>
+              {%- endif -%}
             {%- endfor -%}
           </div>
         {%- endif -%}
@@ -530,6 +715,13 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_store_policies",
+          "label": "Use store policies",
+          "info": "Displays the policies created in Shopify settings instead of a navigation menu.",
+          "default": false
         },
         {
           "type": "range",
