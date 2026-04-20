@@ -400,6 +400,64 @@
     color: #c0392b;
   }
 
+  #shopify-section-{{ section.id }} .epf-news__before-after {
+    margin-top: 2.4rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-heading {
+    margin: 0 0 1.4rem;
+    font-family: var(--font-heading-family);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-panel {
+    border-radius: 1.4rem;
+    overflow: hidden;
+    position: relative;
+    background: #edf3fa;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-panel img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(18, 34, 53, 0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  #shopify-section-{{ section.id }} .epf-news__ba-stat {
+    margin: 1.2rem 0 0;
+    padding: 1.2rem 1.4rem;
+    border-left: 3px solid var(--news-blue);
+    background: rgba(15, 105, 215, 0.06);
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1.45rem;
+    line-height: 1.65;
+    color: var(--news-ink);
+    font-style: italic;
+  }
+
   #shopify-section-{{ section.id }} .epf-news__footnote {
     margin-top: 2.4rem;
     padding-top: 1.6rem;
@@ -654,6 +712,50 @@
                     </ul>
                   </div>
                 </div>
+              </section>
+
+            {% when 'before_after' %}
+              <section class="epf-news__block epf-news__before-after" {{ block.shopify_attributes }}>
+                {% if block.settings.heading != blank %}
+                  <h2 class="epf-news__ba-heading">{{ block.settings.heading | replace: '[product_title]', product.title }}</h2>
+                {% endif %}
+                <div class="epf-news__ba-grid">
+                  <div class="epf-news__ba-panel">
+                    {% if block.settings.before_image != blank %}
+                      {{
+                        block.settings.before_image
+                        | image_url: width: 800
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '320, 480, 640, 800',
+                          sizes: '(min-width: 990px) 33vw, 46vw',
+                          alt: 'Before'
+                      }}
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+                    {% endif %}
+                    <span class="epf-news__ba-label">{{ block.settings.before_label | default: 'Day 1' }}</span>
+                  </div>
+                  <div class="epf-news__ba-panel">
+                    {% if block.settings.after_image != blank %}
+                      {{
+                        block.settings.after_image
+                        | image_url: width: 800
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '320, 480, 640, 800',
+                          sizes: '(min-width: 990px) 33vw, 46vw',
+                          alt: 'After'
+                      }}
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+                    {% endif %}
+                    <span class="epf-news__ba-label">{{ block.settings.after_label | default: 'Day 28' }}</span>
+                  </div>
+                </div>
+                {% if block.settings.stat_text != blank %}
+                  <p class="epf-news__ba-stat">{{ block.settings.stat_text | replace: '[product_title]', product.title }}</p>
+                {% endif %}
               </section>
 
             {% when 'cta_band' %}
@@ -994,6 +1096,46 @@
           "id": "right_items",
           "label": "Right items",
           "default": "4 training modes\nType-C rechargeable design\nCompact storage and travel-friendly size\nA routine that feels easier to repeat"
+        }
+      ]
+    },
+    {
+      "type": "before_after",
+      "name": "Before / After",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Real Transformation: Visible Results from Real Users"
+        },
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before image"
+        },
+        {
+          "type": "text",
+          "id": "before_label",
+          "label": "Before label",
+          "default": "Day 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After image"
+        },
+        {
+          "type": "text",
+          "id": "after_label",
+          "label": "After label",
+          "default": "Day 28"
+        },
+        {
+          "type": "textarea",
+          "id": "stat_text",
+          "label": "Stat text",
+          "default": "94% of users reported a noticeable reduction in puffiness and dark circles after 4 weeks of consistent use."
         }
       ]
     },

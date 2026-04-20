@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+
 {
   "sections": {
     "news_story": {
@@ -28,6 +20,15 @@
             "left_copy": "Easy to use, easier to love. Just 10 minutes a day to transform your eye area.",
             "right_title": "Professional Specifications",
             "right_copy": "Precision EMS, constant 42°C heat, and 630nm Red Light therapy. Clinical-grade technology in the palm of your hand."
+          }
+        },
+        "before_after_1": {
+          "type": "before_after",
+          "settings": {
+            "heading": "Real Transformation: Visible Results from Real Users",
+            "before_label": "Day 1",
+            "after_label": "Day 28",
+            "stat_text": "94% of users reported a noticeable reduction in puffiness and dark circles after 4 weeks of consistent use."
           }
         },
         "story_2": {
@@ -68,6 +69,7 @@
       "block_order": [
         "story_1",
         "compare_1",
+        "before_after_1",
         "story_2",
         "checks_1",
         "story_3",
