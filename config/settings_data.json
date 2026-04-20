@@ -1,7 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "animations_type": "jie+cCvD/et4/hVsellNCnlCpm5qEHKcZ4jOt1rSUoEIOocJRPUXg1pLzFcUYe6G6SY7yC2dvonhX2P37dOXcmXECL2sykk7ZHU5+lqwLqp5Sq/kasNq6clzzeUTvtd9wgFn6GFBPvOeFXNstY2zh9aJj1E2w2/VTXDtQUoAx2VUaEBgKfAmpKYArqEXLLj8rMbZn1UqOakzLtvd0q8Erl7Agu3YNvgiOssLVU1reX3Ssfy1UgleQbU3aHmTmoZvlJQTcFbzul0pTIgpw53f03PjGSY1ys0uwljqoPVdtNtUKzM1xPpSWiAcDn/Do0gL7cG/JYCByeSW30EPk8sNVdEqrCv/M2Qp51R74M463ePtSahQEfTVrjoIvTG4+40l2cVQVROug+sfybWfiYd4Li4o501rJKlp2UfihcjUfuw=",
     "disable_inspect": true,
+    "country_list_function": "block",
+    "country_list": "",
     "logo_width": 200,
     "mobile_logo_width": 130,
     "colors_solid_button_labels": "#ffffff",
@@ -167,8 +178,6 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "country_list_function": "block",
-    "country_list": "",
     "cart_icon": "bag_2",
     "swatches_predefined_colors": "Black = #000000,\nWhite = #FFFFFF,\nRed = #FF0000,\nBlue = #0000FF,\nGreen = #008000,\nYellow = #FFFF00,\nOrange = #FFA500,\nPurple = #800080,\nPink = #FFC0CB,\nBrown = #A52A2A,\nGray = #808080,\nNavy = #000080,\nTeal = #008080,\nMaroon = #800000,\nOlive = #808000,\nLime = #00FF00,\nAqua = #00FFFF,\nSilver = #C0C0C0,\nGold = #FFD700,\nBeige = #F5F5DC,",
     "checkout_accent_color": "#dd1d1d",
@@ -192,6 +201,7 @@
     "cart_upsell_2_desc": "",
     "cart_upsell_2_btn_label": "+ Add",
     "section_animation_type": "none",
+    "_shrine_token_injected": "2025-10-15T02:21:07.311Z",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -513,7 +523,6 @@
               "heading": "Menu",
               "block_headings_font_size": 1,
               "menu": "footer",
-              "use_store_policies": false,
               "font_size": 18,
               "menu_items_font": "body_bold",
               "width_desktop": 3,
@@ -526,7 +535,6 @@
               "heading": "Policies",
               "block_headings_font_size": 1,
               "menu": "",
-              "use_store_policies": true,
               "font_size": 18,
               "menu_items_font": "body_bold",
               "width_desktop": 3,
@@ -561,8 +569,7 @@
         }
       }
     },
-    "content_for_index": [],
-    "_shrine_token_injected": "2025-10-15T02:21:07.311Z"
+    "content_for_index": []
   },
   "presets": {
     "Default": {

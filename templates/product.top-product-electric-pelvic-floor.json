@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "top_story": {
@@ -581,8 +590,7 @@
           "settings": {
             "meta": "★★★★★ · Mark T. · Verified customer",
             "heading": "\"It finally felt easy to stay consistent.\"",
-            "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
-            "image": null
+            "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\""
           }
         },
         "review_2": {
@@ -590,8 +598,7 @@
           "settings": {
             "meta": "★★★★★ · Jason R. · Verified customer",
             "heading": "\"I feel calmer and more in control.\"",
-            "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
-            "image": null
+            "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\""
           }
         },
         "review_3": {
@@ -599,8 +606,7 @@
           "settings": {
             "meta": "★★★★★ · Daniel S. · Verified customer",
             "heading": "\"Private, simple, and actually realistic.\"",
-            "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
-            "image": null
+            "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\""
           }
         }
       },

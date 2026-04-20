@@ -61,8 +61,8 @@
           "settings": {
             "heading": "Policies",
             "block_headings_font_size": 1,
-            "menu": "",
-            "use_store_policies": true,
+            "menu": "policies",
+            "use_store_policies": false,
             "font_size": 18,
             "menu_items_font": "body_bold",
             "width_desktop": 3,
