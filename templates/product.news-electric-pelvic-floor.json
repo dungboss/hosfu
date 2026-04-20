@@ -16,7 +16,7 @@
           "type": "story_section",
           "settings": {
             "heading": "This device gives you a professional spa experience at home.",
-            "body": "Standard eye-care routines often fail because manual massage is inconsistent and creams can't reach deep tissues. The 3-in-1 Eye Rejuvenator simplifies everything with guided sessions and advanced tech that ensures you never miss a spot."
+            "body": "Standard eye-care routines often fail because manual massage is inconsistent and creams can't reach deep tissues. EMS & Red Light Eye Massager simplifies everything with guided sessions and advanced tech that ensures you never miss a spot."
           }
         },
         "compare_1": {
@@ -24,10 +24,10 @@
           "settings": {
             "heading": "Why traditional eye creams are no longer enough",
             "body": "Relying on expensive serums alone often leads to guesswork. A device-led routine provides the structured heat and micro-currents needed to actually see a difference in puffiness and fine lines within weeks.",
-            "left_title": "Traditional Methods",
-            "left_copy": "Messy creams, inconsistent pressure, and slow results. Easy to skip when you're tired.",
-            "right_title": "Our Smart Solution",
-            "right_copy": "Precision EMS, constant 42°C heat, and Red Light therapy. A 10-minute automated ritual for real results."
+            "left_title": "Simple 4-Step Routine",
+            "left_copy": "Easy to use, easier to love. Just 10 minutes a day to transform your eye area.",
+            "right_title": "Professional Specifications",
+            "right_copy": "Precision EMS, constant 42°C heat, and 630nm Red Light therapy. Clinical-grade technology in the palm of your hand."
           }
         },
         "story_2": {
@@ -58,7 +58,7 @@
         "cta_1": {
           "type": "cta_band",
           "settings": {
-            "heading": "Check availability for the 3-in-1 Eye Rejuvenator",
+            "heading": "Check availability for the EMS & Red Light Eye Massager",
             "text": "Click the button below to claim our current special offer. Check pricing, availability, and exclusive bundle deals for the EMS & Red Light Eye Massager before the stock runs out",
             "button_label": "Check availability",
             "button_link": "#MainProduct-offer_main"
