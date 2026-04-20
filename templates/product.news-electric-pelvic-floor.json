@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "news_story": {
@@ -6,51 +15,51 @@
         "story_1": {
           "type": "story_section",
           "settings": {
-            "heading": "This trainer gives men a simpler way to build consistency at home.",
-            "body": "Pelvic floor routines often fail because they feel vague or easy to forget. [product_title] gives men a more guided setup with four modes and short sessions that are easier to repeat."
+            "heading": "This device gives you a professional spa experience at home.",
+            "body": "Standard eye-care routines often fail because manual massage is inconsistent and creams can't reach deep tissues. The 3-in-1 Eye Rejuvenator simplifies everything with guided sessions and advanced tech that ensures you never miss a spot."
           }
         },
         "compare_1": {
           "type": "compare_section",
           "settings": {
-            "heading": "Why random Kegels often turn into guesswork",
-            "body": "Advice without structure usually leads to inconsistent effort. A device-led routine can feel clearer, easier to repeat, and easier to keep part of your week.",
-            "left_title": "Generic reminders",
-            "left_copy": "Hard to measure, easy to skip, and often dropped after a few days.",
-            "right_title": "[product_title]",
-            "right_copy": "4 modes, Type-C charging, and a more practical home routine."
+            "heading": "Why traditional eye creams are no longer enough",
+            "body": "Relying on expensive serums alone often leads to guesswork. A device-led routine provides the structured heat and micro-currents needed to actually see a difference in puffiness and fine lines within weeks.",
+            "left_title": "Traditional Methods",
+            "left_copy": "Messy creams, inconsistent pressure, and slow results. Easy to skip when you're tired.",
+            "right_title": "Our Smart Solution",
+            "right_copy": "Precision EMS, constant 42°C heat, and Red Light therapy. A 10-minute automated ritual for real results."
           }
         },
         "story_2": {
           "type": "story_section",
           "settings": {
-            "heading": "Private home sessions fit real schedules better.",
-            "body": "A lot of men are more likely to stay consistent when the routine stays private, compact, and easy to fit into evenings, recovery blocks, or quiet time at home."
+            "heading": "A professional eye-care routine that fits your lifestyle.",
+            "body": "Staying consistent with beauty tech can be hard. That’s why we designed this device to be compact and whisper-quiet, making it the perfect addition to your morning coffee or evening wind-down routine."
           }
         },
         "checks_1": {
           "type": "check_columns",
           "settings": {
-            "heading": "Why this format feels easier to keep using",
-            "copy": "A good routine reduces friction. It should be simple to charge, simple to use, and simple to keep coming back to.",
-            "left_title": "What men usually want",
-            "left_items": "A more structured routine\nPrivate home use\nEasy charging\nShort manageable sessions",
+            "heading": "Why you’ll actually enjoy using this every day",
+            "copy": "A great routine should be effortless. No messy gels, no complicated setups—just simple Type-C charging and a design so intuitive, it becomes the best 10 minutes of your day.",
+            "left_title": "What you usually struggle with",
+            "left_items": "Tired, puffy eyes after screen time\nMessy, expensive eye creams\nForgettable manual massages\nTime-consuming spa visits",
             "right_title": "What this device offers",
-            "right_items": "4 guided training modes\nType-C rechargeable design\nCompact and discreet storage\nA format built for repeat use"
+            "right_items": "Instant 10-minute relief sessions\nAdvanced LED & EMS Technology\nCompact, travel-ready design\nSimple, one-button operation"
           }
         },
         "story_3": {
           "type": "story_section",
           "settings": {
             "heading": "It is not about doing more. It is about doing it regularly.",
-            "body": "The biggest advantage of a guided device is usually not intensity. It is consistency. Men who keep the routine simple are more likely to stay with it long enough to actually notice a difference."
+            "body": "The secret to youthful eyes isn't intensity—it's consistency. By making this simple 10-minute ritual a part of your daily life, you’re giving your skin the regular stimulation it needs to fade dark circles and stay firm for the long run."
           }
         },
         "cta_1": {
           "type": "cta_band",
           "settings": {
-            "heading": "See the current offer for the men's trainer",
-            "text": "Use the button below to jump to the live product section and check current pricing, availability, and package details for [product_title].",
+            "heading": "Check availability for the 3-in-1 Eye Rejuvenator",
+            "text": "Click the button below to claim our current special offer. Check pricing, availability, and exclusive bundle deals for the EMS & Red Light Eye Massager before the stock runs out",
             "button_label": "Check availability",
             "button_link": "#MainProduct-offer_main"
           }
@@ -68,20 +77,20 @@
         "padding_top": 28,
         "padding_bottom": 44,
         "eyebrow": "Special report",
-        "headline": "The at-home device men are using to train one overlooked muscle more consistently.",
-        "author_name": "By Editorial Desk",
+        "headline": "The at-home device Americans are using to erase eye bags and dark circles more consistently",
+        "author_name": "By Sarah Jenkins | Beauty & Tech Contributor",
         "author_meta": "Updated today",
-        "intro_paragraph_1": "For a lot of men, pelvic floor training gets pushed aside until control, awareness, or confidence starts to feel less automatic. The issue usually is not effort. It is the lack of a routine that feels clear enough to keep doing.",
+        "intro_paragraph_1": "For most of us, the stress of daily screen time and lack of sleep shows up first in our eyes. Traditional creams often sit on the surface, failing to address the underlying muscle fatigue and collagen loss that cause puffiness and dark circles.\n\nThe 3-in-1 LED & EMS Eye Rejuvenator offers a smarter, tech-driven solution. By utilizing gentle EMS pulses to stimulate delicate eye muscles and 630nm Red Light to trigger deep-tissue repair, it provides a structured 10-minute ritual that is far more effective than manual massage.\n\nThis combination of clinical-grade technology and portability is why thousands of Americans are ditching expensive spa treatments for this simplified, professional-grade home device.",
         "intro_paragraph_2": "[product_title] is positioned as a simpler home-use option: four modes, rechargeable Type-C power, and sessions that are easier to repeat than trying to remember isolated exercises on your own.",
         "intro_paragraph_3": "That combination is why this kind of device is getting attention from men who want something more structured, private, and realistic for everyday use.",
         "sidebar_kicker": "Recommended today",
-        "sidebar_title": "4-mode rechargeable men's pelvic floor trainer",
-        "sidebar_copy": "A more guided home routine with four training modes, Type-C charging, and a compact design built for private repeat use.",
-        "sidebar_bullets": "4 guided training modes\nRechargeable with Type-C charging\nCompact for discreet home use\nDesigned for repeatable sessions",
-        "sidebar_button_label": "Check availability",
+        "sidebar_title": "3-in-1 LED & EMS Eye Rejuvenator",
+        "sidebar_copy": "Achieve a youthful, refreshed look with a professional eye-care routine at home. Combining advanced EMS micro-currents and Red Light therapy, this compact device is designed to fit your busy lifestyle while delivering visible results for tired eyes.",
+        "sidebar_bullets": "3 Intensity levels for customized eye care.\nSoothing 42°C heat for instant fatigue relief.\nRed light therapy to boost collagen production\nUSB-C fast charging & travel-friendly design.",
+        "sidebar_button_label": "SHOP 50% OFF TODAY",
         "sidebar_button_link": "#MainProduct-offer_main",
         "sidebar_note": "Pricing and stock can change. Use the button above to view the live product offer.",
-        "bottom_note": "Wellness note: [product_title] is presented here as a home-use wellness device. This page is for general product information only and is not medical advice."
+        "bottom_note": "Wellness note: The EMS & Red Light Eye Massager is presented here as a home-use wellness and beauty device. This page is for general product information only and is not medical advice"
       }
     },
     "offer_main": {
@@ -98,7 +107,8 @@
             "bordercustomerbannertext": 20,
             "margin_top": 0,
             "margin_bottom": 12
-          }
+          },
+          "blocks": {}
         },
         "title": {
           "type": "product_title",
@@ -110,7 +120,8 @@
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
             "margin_bottom": 0
-          }
+          },
+          "blocks": {}
         },
         "rating": {
           "type": "rating-stars",
@@ -125,7 +136,8 @@
             "scroll_id": "",
             "margin_top": 6,
             "margin_bottom": 12
-          }
+          },
+          "blocks": {}
         },
         "price": {
           "type": "product_price",
@@ -146,7 +158,8 @@
             "filled_icon_2": false,
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "variant_picker": {
           "type": "product_product-variant-picker-block",
@@ -154,11 +167,39 @@
             "picker_types": "dropdown, dropdown, dropdown",
             "custom_labels": "[name] - [selected]",
             "skip_unavailable": false,
+            "append": "option_1_label_container",
             "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #FFFFFF",
             "full_width_dropdowns": true,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_prices_layout": "price-first-vertical",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_vertical_items_align": "flex-start",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "none",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "benefits": {
           "type": "key-benefits",
@@ -173,7 +214,8 @@
             "keybenefitsborderradius": 14,
             "margin_top": 0,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "buy_buttons": {
           "type": "product_buy-buttons",
@@ -198,7 +240,8 @@
             "secondary_btn_custom_color": "#8d184d",
             "margin_top": 9,
             "margin_bottom": 15
-          }
+          },
+          "blocks": {}
         },
         "shipping": {
           "type": "product_shipping-checkpoints",
@@ -233,7 +276,8 @@
             "color_scheme": "inverse",
             "margin_top": 12,
             "margin_bottom": 9
-          }
+          },
+          "blocks": {}
         },
         "sticky": {
           "type": "product_sticky-atc",
@@ -265,7 +309,8 @@
             "mobile_full_button_width": false,
             "mobile_show_price_in_button": false,
             "mobile_transparent_bg": false
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -328,163 +373,71 @@
         "mobile_padding_top": 8,
         "mobile_padding_bottom": 8,
         "desktop_padding_top": 24,
-        "desktop_padding_bottom": 24
+        "desktop_padding_bottom": 24,
+        "enabledesktopreview": true,
+        "review_background_color": "#ffffff",
+        "review_border_color": "#e9ecef",
+        "star_color": "#ffc107",
+        "username_color": "#000000",
+        "username": "Sarah M.",
+        "verified_customer": true,
+        "verified_icon_color": "#28a745",
+        "verified_text_color": "#28a745",
+        "verified_text": "Verified Purchase",
+        "review_text_color": "#000000",
+        "review_text": "Amazing product! Highly recommend it to everyone.",
+        "enablegallerybottomtext": false,
+        "galleryinnerbackground": "#000000",
+        "galleryinneropacity": 0.8,
+        "galleryinnertextcolor": "#ffffff",
+        "galleryinnerradius": 8,
+        "galleryinnerheight": 80,
+        "galleryinnertext": "5-Star Rated Product",
+        "enablegalleryreviewstars": false,
+        "rating": 4.8,
+        "star_color2": "#ffcc00",
+        "bg_stars_style": "full",
+        "bg_star_color2": "#ececec",
+        "label": "(xxxx Reviews)",
+        "size": 16
       }
     },
     "epf_support": {
       "type": "epf-support",
-      "blocks": {
-        "support_point_1": {
-          "type": "support_point",
-          "settings": {
-            "icon_text": "✓",
-            "title": "30-day confidence promise",
-            "text": "Try it in your home routine and make sure it feels right for you."
-          }
-        },
-        "support_point_2": {
-          "type": "support_point",
-          "settings": {
-            "icon_text": "✓",
-            "title": "4-mode guided training",
-            "text": "Built around repeatable home sessions instead of guesswork."
-          }
-        },
-        "support_point_3": {
-          "type": "support_point",
-          "settings": {
-            "icon_text": "✓",
-            "title": "Discreet shipping",
-            "text": "Your order arrives privately so you can start with confidence."
-          }
-        },
-        "support_point_4": {
-          "type": "support_point",
-          "settings": {
-            "icon_text": "✓",
-            "title": "Rechargeable and ready",
-            "text": "Type-C charging makes it easier to keep the device ready for regular use."
-          }
-        },
-        "faq_1": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How is this different from doing Kegels on my own?",
-            "answer": "Many men struggle with consistency because the routine feels vague. [product_title] gives you a more structured, device-led way to build a repeatable home habit.",
-            "open_by_default": false
-          }
-        },
-        "faq_2": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is this a medical treatment?",
-            "answer": "No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.",
-            "open_by_default": false
-          }
-        },
-        "faq_3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Who is this trainer designed for?",
-            "answer": "This product is positioned for men who want a private at-home pelvic floor training routine with guided modes and rechargeable convenience.",
-            "open_by_default": false
-          }
-        },
-        "faq_4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How often should I use it?",
-            "answer": "The strongest results usually come from consistency, not marathon sessions. A simple, repeatable 20-minute rhythm tends to be easier to maintain than an all-or-nothing plan.",
-            "open_by_default": false
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is it rechargeable?",
-            "answer": "Yes. It uses Type-C charging, so it's easy to power up and keep ready for regular sessions at home.",
-            "open_by_default": false
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Will it be discreet?",
-            "answer": "Yes. The device is intended for private home use, and discreet shipping helps reduce extra friction when getting started.",
-            "open_by_default": false
-          }
-        },
-        "faq_7": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is [product_title] hard to fit into a busy schedule?",
-            "answer": "It shouldn't be. The routine is built around short, manageable sessions so you can fit it into mornings, evenings, or any reset window that already exists in your day.",
-            "open_by_default": false
-          }
-        },
-        "faq_8": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What if it doesn't feel like the right fit for me?",
-            "answer": "Start with the promise that you're simply testing consistency, not chasing perfection. If it doesn't feel aligned with your routine, you have a 30-day confidence promise to lean on.",
-            "open_by_default": false
-          }
-        },
-        "review_1": {
-          "type": "review_item",
-          "settings": {
-            "stars": "★★★★★",
-            "title": "\"It finally felt easy to stay consistent.\"",
-            "text": "\"I had tried on and off routines before, but [product_title] felt simple enough to actually keep using. That made the difference for me.\"",
-            "author": "Mark T.",
-            "meta": "Verified customer"
-          }
-        },
-        "review_2": {
-          "type": "review_item",
-          "settings": {
-            "stars": "★★★★★",
-            "title": "\"I feel calmer and more in control.\"",
-            "text": "\"The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it.\"",
-            "author": "Jason R.",
-            "meta": "Verified customer"
-          }
-        },
-        "review_3": {
-          "type": "review_item",
-          "settings": {
-            "stars": "★★★★★",
-            "title": "\"Private, simple, and actually realistic.\"",
-            "text": "\"I wanted something I could do at home without overthinking it. [product_title] made the process feel clear and much less stressful.\"",
-            "author": "Daniel S.",
-            "meta": "Verified customer"
-          }
-        }
-      },
-      "block_order": [
-        "support_point_1",
-        "support_point_2",
-        "support_point_3",
-        "support_point_4",
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7",
-        "faq_8",
-        "review_1",
-        "review_2",
-        "review_3"
-      ],
       "settings": {
         "padding_top": 24,
         "padding_bottom": 48,
-        "faq_heading": "Questions Men Ask Before Starting",
-        "faq_description": "Short answers to common questions men ask before starting a home pelvic floor training routine.",
-        "reviews_heading": "Reviews from Men Like You",
-        "reviews_description": "Real words from men using [product_title] to build a steadier, more consistent home routine."
+        "hero_eyebrow": "Clinically inspired home wellness",
+        "hero_heading": "Electric pelvic floor support for women who want confidence back.",
+        "hero_lead": "Designed for women rebuilding confidence after stress, childbirth, or years of feeling disconnected from their core. This quiet at-home routine helps you stay consistent without adding another complicated habit.",
+        "hero_primary_label": "Try your pelvic floor routine today",
+        "hero_primary_link": "#MainProduct-offer_main",
+        "hero_secondary_label": "See what to expect",
+        "hero_secondary_link": "#epf-what-to-expect",
+        "hero_proof_copy": "4.8/5 from women using at-home support to rebuild consistency, tone awareness, and everyday confidence.",
+        "hero_chip_top": "Quiet 20-minute sessions that fit real life.",
+        "hero_chip_bottom": "Comfort-first design for everyday confidence.",
+        "featured_label": "As seen in",
+        "featured_image_url": "",
+        "featured_image_alt": "Featured on logos",
+        "problem_heading": "The Problem Isn't Your Age. It's the Missing Building Blocks.",
+        "problem_body": "Most women are told to \"just do Kegels,\" then left to guess whether anything is actually changing. But tone, coordination, and consistency are built together, not one cue at a time.",
+        "problem_bar_label_1": "Tone",
+        "problem_bar_label_2": "Control",
+        "problem_bar_label_3": "Confidence",
+        "problem_tendon_heading": "Deep core support",
+        "problem_tendon_copy": "Better routines happen when awareness, consistency, and comfort build together instead of competing with each other.",
+        "intro_heading": "Introducing the [product_title]",
+        "intro_body": "Our routine is designed to help women reconnect with the support system behind better bladder confidence, steadier movement, and more trust in their body.",
+        "expect_heading": "What to Expect",
+        "expect_cta_label": "Start your confidence routine now",
+        "expect_cta_link": "#MainProduct-offer_main",
+        "results_heading": "Results That Matter",
+        "results_body": "The goal isn't perfection. It's building the kind of support that helps you move, laugh, train, travel, and show up without constantly thinking about it.",
+        "journey_heading": "20 Minutes a Day to Get Your Confidence Back",
+        "journey_cta_label": "Still have questions?",
+        "journey_cta_link": "#epf-questions",
+        "testimonials_heading": "Women Just Like You Are Getting Their Lives Back"
       }
     }
   },
