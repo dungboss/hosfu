@@ -1794,85 +1794,23 @@
 
 
 
-      <div class="epf-story__problem-card">
-
-        <div class="epf-story__problem-card-inner">
-
-          <div class="epf-story__card-media">
-
-            {% if problem_image != blank %}
-
-              {{
-
-                problem_image
-
-                | image_url: width: 780
-
-                | image_tag:
-
-                  loading: 'lazy',
-
-                  widths: '320, 480, 640, 780',
-
-                  sizes: '(min-width: 990px) 24vw, 90vw',
-
-                  alt: product.title
-
-              }}
-
-            {% else %}
-
-              {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
-
-            {% endif %}
-
-          </div>
-
-          <div class="epf-story__diagram">
-
-            <div class="epf-story__diagram-bars">
-
-              <div class="epf-story__bar">
-
-                <div class="epf-story__bar-fill epf-story__bar-fill--rose"></div>
-
-                <span>{{ section.settings.problem_bar_label_1 }}</span>
-
-              </div>
-
-              <div class="epf-story__bar">
-
-                <div class="epf-story__bar-fill epf-story__bar-fill--sand"></div>
-
-                <span>{{ section.settings.problem_bar_label_2 }}</span>
-
-              </div>
-
-              <div class="epf-story__bar">
-
-                <div class="epf-story__bar-fill epf-story__bar-fill--sage"></div>
-
-                <span>{{ section.settings.problem_bar_label_3 }}</span>
-
-              </div>
-
-            </div>
-
-            <div class="epf-story__tendon-card">
-
-              <strong>{{ section.settings.problem_tendon_heading | replace: '[product_title]', product.title }}</strong>
-
-              {{ section.settings.problem_tendon_copy | replace: '[product_title]', product.title | newline_to_br }}
-
-            </div>
-
-          </div>
-
+<div class="epf-story__problem-card">
+        <div class="epf-story__problem-media-full">
+          {% if problem_image != blank %}
+            {{
+              problem_image
+              | image_url: width: 1200
+              | image_tag:
+                loading: 'lazy',
+                widths: '320, 480, 640, 780, 1200',
+                sizes: '(min-width: 990px) 50vw, 90vw',
+                alt: product.title
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'epf-story__placeholder' }}
+          {% endif %}
         </div>
-
       </div>
-
-    </div>
 
 
 
