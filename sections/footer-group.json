@@ -19,8 +19,8 @@
         "shape": "waves_3",
         "flip_horizontal": false,
         "flip_vertical": false,
-        "shape_color": "accent-1",
-        "custom_shape_color": "#dd1d1d",
+        "shape_color": "custom",
+        "custom_shape_color": "#1a237e",
         "background_color": "background-1",
         "custom_background_color": "#ffffff",
         "padding_top": 0,
@@ -76,8 +76,8 @@
         "policy_links_mDg4vV"
       ],
       "settings": {
-        "color_scheme": "accent-1",
-        "custom_colors_background": "#121212",
+        "color_scheme": "custom",
+        "custom_colors_background": "#1a237e",
         "custom_gradient_background": "",
         "custom_colors_text": "#ffffff",
         "custom_colors_solid_button_background": "#ffffff",

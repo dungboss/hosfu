@@ -250,7 +250,9 @@
         "settings": {
           "enable_scroll_btn": true,
           "display_after": 400,
-          "color_scheme": "accent-1",
+          "color_scheme": "custom",
+          "custom_bg_color": "#1a237e",
+          "custom_icon_color": "#ffffff",
           "position": "bottom-right",
           "offset_x": 20,
           "offset_y": 20

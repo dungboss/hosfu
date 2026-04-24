@@ -3,6 +3,14 @@
     --offset-x: {{ section.settings.offset_x | divided_by: 10.0 }}rem;
     --offset-y: {{ section.settings.offset_y | divided_by: 10.0 }}rem;
   }
+  .scroll-to-top-btn-{{ section.id }}.color-custom {
+    --color-background: {{ section.settings.custom_bg_color.red }}, {{ section.settings.custom_bg_color.green }}, {{ section.settings.custom_bg_color.blue }};
+    --gradient-background: {{ section.settings.custom_bg_color }};
+    --color-foreground: {{ section.settings.custom_icon_color.red }}, {{ section.settings.custom_icon_color.green }}, {{ section.settings.custom_icon_color.blue }};
+    --color-button: {{ section.settings.custom_bg_color.red }}, {{ section.settings.custom_bg_color.green }}, {{ section.settings.custom_bg_color.blue }};
+    --color-button-text: {{ section.settings.custom_icon_color.red }}, {{ section.settings.custom_icon_color.green }}, {{ section.settings.custom_icon_color.blue }};
+    --accent-color: {{ section.settings.custom_bg_color.red }}, {{ section.settings.custom_bg_color.green }}, {{ section.settings.custom_bg_color.blue }};
+  }
   @media screen and (max-width: 749px) {
     .scroll-to-top-btn-{{ section.id }} {
       --offset-x: {{ section.settings.offset_x | times: 0.75 | divided_by: 10.0 }}rem;
@@ -107,10 +115,28 @@
         {
           "value": "inverse",
           "label": "Inverse"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
         }
       ],
       "default": "accent-1",
       "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "color",
+      "id": "custom_bg_color",
+      "label": "Custom background color",
+      "default": "#1a237e",
+      "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_icon_color",
+      "label": "Custom icon color",
+      "default": "#ffffff",
+      "visible_if": "{{ section.settings.color_scheme == 'custom' }}"
     },
     {
       "type": "select",

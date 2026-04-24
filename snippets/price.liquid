@@ -51,6 +51,12 @@
     #main-price-{{ block.id }} .price__compare-price .price-item--regular {
       font-size: {{ block.settings.compare_price_size | divided_by: 10.0 }}rem;
     }
+    {% if block.settings.enable_custom_price_color %}
+      #main-price-{{ block.id }} .main-price {
+        color: {{ block.settings.custom_price_color }};
+        --accent-color: {{ block.settings.custom_price_color.red }}, {{ block.settings.custom_price_color.green }}, {{ block.settings.custom_price_color.blue }};
+      }
+    {% endif %}
   </style>
 {% endif %}
 

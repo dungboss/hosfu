@@ -12,6 +12,13 @@
     #sticky-atc-{{ section.id }} .button {
       --color-button: {{ block.settings.custom_btn_color.red }}, {{ block.settings.custom_btn_color.green }}, {{ block.settings.custom_btn_color.blue }};
     }
+
+    #sticky-atc-{{ section.id }} .sticky-atc__price .price__regular .price-item--regular,
+    #sticky-atc-{{ section.id }} .sticky-atc__price .price__sale .price-item--sale,
+    #sticky-atc-{{ section.id }} .sticky-atc__button-price,
+    #sticky-atc-{{ section.id }} .sticky-atc__button-price .main-atc-price-span-{{ section.id }} {
+      color: {{ block.settings.custom_btn_color }};
+    }
   {% endstyle %}
 {% endif %}
 

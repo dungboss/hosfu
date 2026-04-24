@@ -84,6 +84,19 @@
       "default": "accent-1"
     },
     {
+      "type": "checkbox",
+      "id": "enable_custom_price_color",
+      "label": "Enable custom price color",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "custom_price_color",
+      "label": "Custom price color",
+      "default": "#000000",
+      "visible_if": "{{ block.settings.enable_custom_price_color }}"
+    },
+    {
       "type": "select",
       "id": "compare_price_color",
       "label": "Compare price color",
