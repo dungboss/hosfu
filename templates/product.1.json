@@ -903,9 +903,10 @@
     "logo_list_iRtUiA": {
       "type": "logo-list",
       "blocks": {
-        "logo_MQweyJ": {
+        "logo_PQ4Wdk": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/z7759215268782_75a294835c4398e69b737faf3408a5b6.jpg",
             "link": "",
             "target_blank": false
           }
@@ -913,6 +914,7 @@
         "logo_mFEwUm": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/Healthline_Black.jpg",
             "link": "",
             "target_blank": false
           }
@@ -920,13 +922,14 @@
         "logo_j8nYyC": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/images.png",
             "link": "",
             "target_blank": false
           }
         }
       },
       "block_order": [
-        "logo_MQweyJ",
+        "logo_PQ4Wdk",
         "logo_mFEwUm",
         "logo_j8nYyC"
       ],
