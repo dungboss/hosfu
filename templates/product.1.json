@@ -50,7 +50,7 @@
             "mobile_alignment": "mobile-center",
             "text_size": 14,
             "enable_custom_color": false,
-            "custom_text_color": "#FF0000",
+            "custom_text_color": "#ff0000",
             "margin_top": 15,
             "margin_bottom": 15
           },
@@ -598,7 +598,7 @@
             "icon_1": "assured_workload",
             "icon_1_fill": false,
             "heading_1": "30-Day Money-Back Guarantee",
-            "icon_2": "auto_awesome",
+            "icon_2": "add_circle",
             "icon_2_fill": false,
             "heading_2": "Doctor Recommended",
             "icon_3": "lock",
@@ -606,19 +606,6 @@
             "heading_3": "100% Private Delivery",
             "margin_top": 15,
             "margin_bottom": 15
-          },
-          "blocks": {}
-        },
-        "image_c7AM3h": {
-          "type": "image",
-          "name": "Image",
-          "settings": {
-            "width": 100,
-            "alignment": "center",
-            "mobile_alignment": "center",
-            "border_radius": 0,
-            "margin_top": 15,
-            "margin_bottom": 21
           },
           "blocks": {}
         },
@@ -662,7 +649,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Most men do not need the flashiest gadget. They need a routine that feels clear enough to repeat.</p><p>[product_title] combines four guided modes, Type-C charging, and a compact format to make at-home pelvic floor training feel more structured and practical.</p>",
+            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul><h3></h3>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -709,7 +696,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Step 1: Charge the device and choose the mode that best fits your current routine.</p><p>Step 2: Complete a short guided session at home in a private, comfortable setting.</p><p>Step 3: Repeat consistently on a schedule that feels realistic to maintain.</p>",
+            "content": "<p><strong>Step 1:</strong> Sit comfortably on the HOSFU trainer (no undressing required).<br/><strong>Step 2:</strong> Open the HOSFU App and choose your guided 15-minute routine.<br/><strong>Step 3:</strong> Follow the real-time visual cues on your phone to squeeze and relax.<br/><em>Recommended: Use once a day for 4-6 weeks for optimal results.</em></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -756,7 +743,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>The routine is built to feel simple: four guided modes, Type-C charging, compact storage, and sessions that are easier to repeat than vague self-led plans.</p><p>Users also like that the setup feels discreet, private, and realistic to keep using as part of everyday life.</p>",
+            "content": "<p>Because it's not a chore—it’s a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -803,7 +790,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Orders are typically processed in 1-2 business days, followed by standard US delivery windows shown at checkout.</p><p>[product_title] is presented here as a home-use wellness device. This page is for general product information only and is not medical advice.</p>",
+            "content": "<p><strong>Processing:</strong> 1-2 business days (with tracking number provided).</p><p><strong>US Delivery:</strong> 10-14 business days.</p><p><strong>International:</strong> 10-20 business days.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -830,7 +817,6 @@
         "sticky_atc",
         "text_with_icon_DiUgTb",
         "icon_with_text_bGry86",
-        "image_c7AM3h",
         "desc_row_1",
         "desc_row_2",
         "desc_row_3",
@@ -897,7 +883,7 @@
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "A structured home routine that feels realistic to keep using.",
+        "review_text": "I used to wake up 4 times a night. After 3 weeks with HOSFU, I'm finally sleeping through until morning. The app makes it so easy to stay on track. Best investment for my health!",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
@@ -1011,7 +997,7 @@
         "text_cLnqTc": {
           "type": "text",
           "settings": {
-            "title": "4 Guided Modes • Type-C Rechargeable • Compact Design • Discreet Home Use • Easy To Repeat • Packed Discreetly • Short Guided Sessions • Built For Everyday Practicality"
+            "title": "Discreet Shipping & Plain Packaging • Doctor Recommended • 15-Min Daily Sessions • Real-Time App Progress • Non-Invasive Solution • FDA-Grade Material • 30-Day Money-Back Guarantee"
           }
         }
       },
@@ -1054,53 +1040,70 @@
     "eba88da5-80ac-47fc-aa75-997cfe7b2e59": {
       "type": "image-slider",
       "blocks": {
-        "image_slide_1": {
-          "type": "image_slide",
+        "video_slide_JPWi3z": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Built for short guided home sessions that feel easier to repeat than guesswork.</p>",
+            "video": "shopify://files/videos/835fbdda8e344bcf85c16d03f4aa7fd6.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "image_slide_2": {
-          "type": "image_slide",
+        "video_slide_BK4dyH": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Four modes and Type-C charging help keep the routine structured and ready.</p>",
+            "video": "shopify://files/videos/64c6953a5a58475583f012a24bd5e523.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "image_slide_3": {
-          "type": "image_slide",
+        "video_slide_jYP3ND": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Compact sizing and discreet storage make it easier to keep the routine private.</p>",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_4": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "<p>Designed for men who want a realistic home habit, not an overcomplicated setup.</p>",
+            "video": "shopify://files/videos/Vid 1.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         }
       },
       "block_order": [
-        "image_slide_1",
-        "image_slide_2",
-        "image_slide_3",
-        "image_slide_4"
+        "video_slide_JPWi3z",
+        "video_slide_BK4dyH",
+        "video_slide_jYP3ND"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "<strong>How This Routine Fits Real Life</strong>",
+        "title": "Join 5,000+ Men Who Reclaimed Their Freedom",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -1354,12 +1357,23 @@
             "horizontal_mobile_padding": 14
           },
           "blocks": {
-            "image_dTEXhz": {
-              "type": "image",
+            "video_qma9k9": {
+              "type": "video",
+              "name": "Video",
               "settings": {
+                "video": "shopify://files/videos/0424(1).mp4",
+                "loop": true,
+                "muted_autoplay": true,
+                "display_play_btn": false,
+                "btn_animation": false,
+                "btn_color_scheme": "accent-1",
+                "display_sound_btn": false,
+                "sound_btn_color_scheme": "inverse",
+                "display_timeline": false,
+                "timeline_color": "accent-1",
                 "width": 100,
+                "Full_mobile_width": false,
                 "alignment": "center",
-                "mobile_alignment": "center",
                 "border_radius": 0,
                 "margin_top": 15,
                 "margin_bottom": 15
@@ -1368,7 +1382,7 @@
             }
           },
           "block_order": [
-            "image_dTEXhz"
+            "video_qma9k9"
           ]
         },
         "column_rgMUzg": {
@@ -1473,6 +1487,26 @@
     "facebook_testimonials_r6Afm8": {
       "type": "facebook-testimonials",
       "blocks": {
+        "column_WCRMNm": {
+          "type": "column",
+          "settings": {
+            "post_author": "Author name",
+            "post_author_verified": false,
+            "post_time": "2h ago",
+            "post_text": "<p>Shrine theme has made a huge impact on my store's CVR!</p>",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "1.1k",
+            "post_comments_text": "26 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
         "review_1": {
           "type": "column",
           "settings": {
@@ -1535,6 +1569,7 @@
         }
       },
       "block_order": [
+        "column_WCRMNm",
         "review_1",
         "review_2",
         "review_3"
