@@ -32,7 +32,7 @@
             "star_color": "#ffcc00",
             "bg_stars_style": "full",
             "bg_star_color": "#ececec",
-            "label": "<strong>4.8/5 (150+ Reviews)</strong> | 5,000+ Happy Users",
+            "label": "<strong>4.8/5 (150+ Reviews)</strong> | 5,000+ Happy Customers",
             "size": 15,
             "alignment": "flex-start",
             "scroll_id": "",
@@ -45,7 +45,7 @@
           "type": "text",
           "name": "Text",
           "settings": {
-            "text": "<p><em><strong>Restore Bladder Control & Confidence in Just 15 Mins a Day</strong></em></p>",
+            "text": "<p><em><strong>Patella support you can wear through every step</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -79,7 +79,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Medical-Grade Precision: 4 Guided Modes</strong>",
+            "text_1": "<strong>Adjustable Patella Support</strong>",
             "icon_1": "shield",
             "filled_icon_1": false,
             "text_2": "",
@@ -119,7 +119,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Expert-designed routines tailored to your progress. Professional Kegel training made simple and effective at home.",
+            "text_1": "Focused compression helps the strap stay centered below the kneecap so your knee feels steadier during movement.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -159,7 +159,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Discreet & Effortless Training</strong>",
+            "text_1": "<strong>Lightweight & Breathable</strong>",
             "icon_1": "lock",
             "filled_icon_1": false,
             "text_2": "",
@@ -199,7 +199,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Train comfortably while sitting, reading, or watching TV. Ultra-quiet operation for complete privacy anywhere.",
+            "text_1": "Comfortable enough for daily wear and low-profile under clothing, without the bulk of a full brace.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -239,7 +239,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Non-Invasive Solution</strong>",
+            "text_1": "<strong>Easy On, Easy Off</strong>",
             "icon_1": "star",
             "filled_icon_1": false,
             "text_2": "",
@@ -279,7 +279,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Safe, external-use design. No surgery or medication needed—just a natural way to regain bladder control.",
+            "text_1": "A simple strap design makes it quick to put on before a walk, workout, or long day on your feet.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -319,7 +319,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Real-Time App Tracking</strong>",
+            "text_1": "<strong>Built for Active Days</strong>",
             "icon_1": "trending_up",
             "filled_icon_1": false,
             "text_2": "",
@@ -359,7 +359,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Sync with our app to visualize your strength gains. Stay motivated with daily goals and progress reports.",
+            "text_1": "Use it when you want extra knee support for exercise, errands, travel, or everyday movement.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -450,7 +450,7 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "atc_custom_label": "GET MY HOSFU TRAINER",
+            "atc_custom_label": "GET MY PATELLA KNEE STRAP",
             "display_price": false,
             "price_position": "left",
             "price_separator": "•",
@@ -568,7 +568,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Flash Sale:</strong> Up to 30% Off Today! Free & Discreet Shipping on all orders.",
+            "text_1": "<strong>Limited-Time Offer:</strong> Free shipping on Patella Knee Strap today.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -602,7 +602,7 @@
             "heading_1": "30-Day Money-Back Guarantee",
             "icon_2": "add_circle",
             "icon_2_fill": false,
-            "heading_2": "Doctor Recommended",
+            "heading_2": "Adjustable Fit",
             "icon_3": "lock",
             "icon_3_fill": false,
             "heading_3": "100% Private Delivery",
@@ -651,7 +651,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul><h3></h3>",
+            "content": "<p>Patella Knee Strap uses focused compression below the kneecap to help distribute pressure more evenly and support a steadier feel during movement.</p><ul><li><strong>Targeted Support:</strong> Helps keep the strap centered under the patella.</li><li><strong>Everyday Stability:</strong> Adds a more secure feeling for walking, stairs, training, and errands.</li><li><strong>Low-Profile Design:</strong> Designed to feel comfortable under clothing and activewear.</li></ul><h3></h3>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -698,7 +698,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Step 1:</strong> Sit comfortably on the HOSFU trainer (no undressing required).<br/><strong>Step 2:</strong> Open the HOSFU App and choose your guided 15-minute routine.<br/><strong>Step 3:</strong> Follow the real-time visual cues on your phone to squeeze and relax.<br/><em>Recommended: Use once a day for 4-6 weeks for optimal results.</em></p>",
+            "content": "<p><strong>Step 1:</strong> Position the strap just below your kneecap.<br/><strong>Step 2:</strong> Adjust the tension until it feels secure but comfortable.<br/><strong>Step 3:</strong> Wear it during walking, training, hiking, or everyday movement.<br/><em>Tip: Start with shorter sessions and tighten only enough to feel supported.</em></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -745,7 +745,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Because it's not a chore—it’s a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
+            "content": "<p>Because it is simple, quick, and easy to keep using. The low-profile design makes it easier to wear consistently when you want knee support without a bulky brace.</p><ul><li><strong>Fast to Put On:</strong> No complicated setup.</li><li><strong>Comfortable Fit:</strong> Designed to stay usable through normal movement.</li><li><strong>Daily Convenience:</strong> Works for errands, workouts, and long days on your feet.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -792,7 +792,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Processing:</strong> 1-2 business days (with tracking number provided).</p><p><strong>US Delivery:</strong> 10-14 business days.</p><p><strong>International:</strong> 10-20 business days.</p>",
+            "content": "<p><strong>Processing:</strong> 1-2 business days (with tracking number provided).</p><p><strong>US Delivery:</strong> 10-14 business days.</p><p><strong>International:</strong> 10-20 business days.</p><p><strong>Product note:</strong> Patella Knee Strap is a support accessory, not a diagnosis or treatment. If you have persistent knee pain, swelling, or a recent injury, please speak with a qualified clinician.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -885,20 +885,20 @@
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "I used to wake up 4 times a night. After 3 weeks with HOSFU, I'm finally sleeping through until morning. The app makes it so easy to stay on track. Best investment for my health!",
+        "review_text": "I wear it for walks and workouts. The strap feels secure, comfortable, and easy to adjust. It makes long days on my feet much easier.",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
         "galleryinnertextcolor": "#ffffff",
         "galleryinnerradius": 8,
         "galleryinnerheight": 80,
-        "galleryinnertext": "5-Star Rated Product",
+        "galleryinnertext": "5-Star Rated Knee Support",
         "enablegalleryreviewstars": false,
         "rating": 4.8,
         "star_color2": "#ffcc00",
         "bg_stars_style": "full",
         "bg_star_color2": "#ececec",
-        "label": "(Trusted by men)",
+        "label": "(Trusted by active customers)",
         "size": 16
       }
     },
@@ -1002,7 +1002,7 @@
         "text_cLnqTc": {
           "type": "text",
           "settings": {
-            "title": "Discreet Shipping & Plain Packaging • Doctor Recommended • 15-Min Daily Sessions • Real-Time App Progress • Non-Invasive Solution • FDA-Grade Material • 30-Day Money-Back Guarantee"
+            "title": "Adjustable Patella Support • Breathable Comfort • Lightweight Compression • Easy to Wear • Discreet Under Clothing • 30-Day Money-Back Guarantee"
           }
         }
       },
@@ -1108,7 +1108,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Join 5,000+ Men Who Reclaimed Their Freedom",
+        "title": "Move More Comfortably with Patella Knee Strap",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -1209,7 +1209,7 @@
             "heading_CBkdVX": {
               "type": "heading",
               "settings": {
-                "title": "<strong>Why Men Trust HOSFU For Their Recovery</strong>",
+                "title": "<strong>Why Customers Choose Patella Knee Strap</strong>",
                 "title_highlight_1": "solid-color",
                 "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
                 "title_highlight_1_bg-color": "#fce4ec",
@@ -1259,7 +1259,7 @@
             "text_jQj3hy": {
               "type": "text",
               "settings": {
-                "text": "<p><em>Designed for consistency, privacy, and real-world results.</em></p>",
+                "text": "<p><em>Designed for comfort, stability, and real-world movement.</em></p>",
                 "alignment": "center",
                 "mobile_alignment": "mobile-center",
                 "text_size": 14,
@@ -1307,9 +1307,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Guided Professional Routine",
+                "title": "Targeted Patella Support",
                 "icon_heading_size": "h3",
-                "text": "<p>4 pro-designed modes eliminate guesswork. Get the structure of a clinic session from the comfort of your home.</p>",
+                "text": "<p>Focused compression below the kneecap helps the strap stay centered where support matters most.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1328,9 +1328,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Efficiency In Minutes",
+                "title": "Ready in Seconds",
                 "icon_heading_size": "h3",
-                "text": "<p>Just 15 minutes a day. Fits seamlessly into your morning coffee or evening relaxation—no special prep needed.</p>",
+                "text": "<p>Slip it on, adjust the fit, and get moving without a complicated routine.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -1364,6 +1364,7 @@
           "blocks": {
             "video_qma9k9": {
               "type": "video",
+              "disabled": true,
               "name": "Video",
               "settings": {
                 "video": "shopify://files/videos/0424(1).mp4",
@@ -1421,9 +1422,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "100% Confidential Use",
+                "title": "Low-Profile Wear",
                 "icon_heading_size": "h3",
-                "text": "<p>Completely silent and low-profile. Train with total peace of mind, knowing your wellness routine remains your private business.</p><p></p>",
+                "text": "<p>The slim profile keeps it easy to wear under clothing or training gear.</p><p></p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1442,9 +1443,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Always Ready, Always Easy",
+                "title": "Reusable Daily Support",
                 "icon_heading_size": "h3",
-                "text": "<p>USB-C fast charging keeps your HOSFU ready whenever you are. One charge lasts for weeks of consistent progress.</p>",
+                "text": "<p>No charging, no batteries, just a simple strap you can use whenever your knee needs support.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -1499,7 +1500,7 @@
             "post_author_avatar": "shopify://shop_images/t_i_xu_ng_3.png",
             "post_author_verified": false,
             "post_time": "2h ago",
-            "post_text": "<p>I was skeptical at first, but the quality of the HOSFU device is impressive. The case is premium and the setup was a breeze. Already feeling more 'in control' after just 10 days. Highly recommend for anyone on the fence!</p>",
+            "post_text": "<p>I was skeptical at first, but the strap is comfortable and the support around my knee feels steady during long walks. The fit was easy to dial in. Highly recommend if you're on the fence.</p>",
             "post_image": "shopify://shop_images/t_i_xu_ng_2.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "2.3k",
@@ -1521,7 +1522,7 @@
             "post_author_avatar": "shopify://shop_images/t_i_xu_ng.jpg",
             "post_author_verified": false,
             "post_time": "5h ago",
-            "post_text": "<p>Fast shipping and 100% discreet as promised. The unboxing experience was great, and the device is very quiet. I can use it while watching my morning news without any hassle. Finally, a solution that makes sense.</p>",
+            "post_text": "<p>Fast shipping and the strap stayed low-profile as promised. I can wear it under pants without it feeling bulky. Finally, a support option that makes sense.</p>",
             "post_image": "shopify://shop_images/t_i_xu_ng_5.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "658",
@@ -1543,7 +1544,7 @@
             "post_author_avatar": "shopify://shop_images/t_i_xu_ng_1.jpg",
             "post_author_verified": false,
             "post_time": "10h ago",
-            "post_text": "<p>This is so much better than trying to do Kegels on your own. The biofeedback technology actually shows you if you're doing it right. It’s simple, effective, and the app is very easy to navigate even for someone my age.</p>",
+            "post_text": "<p>This is so much better than using a loose wrap. The support feels secure and it is simple to put on even on busy mornings.</p>",
             "post_image": "shopify://shop_images/t_i_xu_ng_4.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "845",
@@ -1564,7 +1565,7 @@
             "post_author": "Michell Alvarez",
             "post_author_verified": false,
             "post_time": "1 day ago",
-            "post_text": "<p>The best investment I've made for my health this year. I've noticed a significant decrease in my nightly bathroom trips. I'm finally getting a full night's sleep again. Thank you, HOSFU!</p>",
+            "post_text": "<p>The best purchase I've made for everyday comfort this year. I can get through stairs and errands without constantly thinking about my knee. Thank you, Patella Knee Strap!</p>",
             "post_image": "shopify://shop_images/t_i_xu_ng.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "1.1k",
@@ -1586,7 +1587,7 @@
             "post_author_avatar": "shopify://shop_images/b27a418cf6849a21dfba046d8db11c34.jpg",
             "post_author_verified": true,
             "post_time": "2 weeks ago",
-            "post_text": "<p>I had tried on-and-off routines before, but this felt simple enough to actually keep using. It fits perfectly into my daily routine. The data on the app keeps me motivated to stay consistent every day.</p>",
+            "post_text": "<p>I had tried a few wraps before, but this felt simple enough to actually keep using. It fits into my routine and gives me the support I wanted.</p>",
             "post_image": "shopify://shop_images/Gemini_Generated_Image_szmtk7szmtk7szmt.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "148",
@@ -1608,7 +1609,7 @@
             "post_author_avatar": "shopify://shop_images/75153-1.jpg",
             "post_author_verified": true,
             "post_time": "1 month ago",
-            "post_text": "<p>The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it. It’s discreet, non-invasive, and it actually delivers real results. Worth every penny.</p>",
+            "post_text": "<p>The biggest shift was how manageable it felt. I could wear it at work and during errands, and it never felt bulky. Worth every penny.</p>",
             "post_image": "shopify://shop_images/t_i_xu_ng_1.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "159",
@@ -1635,7 +1636,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Real Words From Men Using It",
+        "title": "Real Words From Active Customers",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -1722,10 +1723,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
+            "heading": "How is this different from a regular knee wrap?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
+            "row_content": "<p>Patella Knee Strap uses focused compression below the kneecap to help it stay centered and provide a steadier feel than a loose wrap.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1737,7 +1738,7 @@
             "heading": "Is this a medical treatment?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
+            "row_content": "<p>Patella Knee Strap is a support accessory designed for comfort and stability. It is not medical treatment. If you have persistent pain, swelling, or a recent injury, consult a qualified clinician before use.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1746,10 +1747,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Who is this trainer designed for?",
+            "heading": "Who is this strap designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
+            "row_content": "<p>It’s designed for people who want extra knee support while walking, training, hiking, climbing stairs, or spending long days on their feet.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1761,7 +1762,7 @@
             "heading": "How often should I use it?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
+            "row_content": "<p>Use it whenever you want extra support. Many people wear it during activity or any time the knee needs a steadier feeling.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1770,10 +1771,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable?",
+            "heading": "Is it adjustable?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
+            "row_content": "<p>Yes. The strap is designed to be adjusted quickly so you can find a secure but comfortable fit.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1785,7 +1786,7 @@
             "heading": "Will it be discreet?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
+            "row_content": "<p>Absolutely. The low-profile strap is made to fit under clothing without feeling bulky, and orders ship in plain packaging.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1797,7 +1798,7 @@
             "heading": "What if it does not feel like the right fit for me?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We stand by our results. HOSFU comes with a <strong>30-Day Money-Back Guarantee</strong>. If you don’t feel a difference in your strength or aren't satisfied with the experience, simply contact our support team for a hassle-free return.</p>",
+            "row_content": "<p>It includes a <strong>30-Day Money-Back Guarantee</strong>. If it isn't the right fit, contact support for a hassle-free return.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1816,7 +1817,7 @@
         "display_id": false,
         "visibility": "always-display",
         "caption": "Have Questions?",
-        "title": "Questions Men Ask Before Starting",
+        "title": "Questions Customers Ask Before Buying",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
