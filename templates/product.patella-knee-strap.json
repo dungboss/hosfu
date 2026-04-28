@@ -1363,23 +1363,12 @@
           },
           "blocks": {
             "video_qma9k9": {
-              "type": "video",
-              "disabled": true,
-              "name": "Video",
+              "type": "image",
               "settings": {
-                "video": "shopify://files/videos/0424(1).mp4",
-                "loop": true,
-                "muted_autoplay": true,
-                "display_play_btn": false,
-                "btn_animation": false,
-                "btn_color_scheme": "accent-1",
-                "display_sound_btn": false,
-                "sound_btn_color_scheme": "inverse",
-                "display_timeline": false,
-                "timeline_color": "accent-1",
+                "image": "",
                 "width": 100,
-                "Full_mobile_width": false,
                 "alignment": "center",
+                "mobile_alignment": "center",
                 "border_radius": 0,
                 "margin_top": 15,
                 "margin_bottom": 15
