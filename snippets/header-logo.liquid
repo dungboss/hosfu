@@ -6,16 +6,18 @@
       if logo_link == '/'
         assign logo_link = request.locale.root_url
       endif
+
+      assign logo_alt = shop.name | escape
+      if settings.logo != blank
+        assign logo_alt = settings.logo.alt | default: shop.name | escape
+      endif
     %}
     <{% if section.settings.logo_link != blank %}a href="{{ logo_link }}"{% else %}div{% endif %}
-        class="header__heading-link{% if section.settings.logo_link != blank %} link link--text focus-inset{% endif %}{% if settings.logo != blank %} media media--transparent ratio{% endif %}"
-        {%- if settings.logo != blank -%}
-            style="--ratio-percent: {{ 1 | divided_by: settings.logo.aspect_ratio | times: 100 }}%"
-        {% endif %}
+        class="header__heading-link{% if section.settings.logo_link != blank %} link link--text focus-inset{% endif %} media media--transparent ratio"
+        style="--ratio-percent: {% if settings.logo != blank %}{{ 1 | divided_by: settings.logo.aspect_ratio | times: 100 }}%{% else %}56.25%{% endif %}"
     >
         {%- if settings.logo != blank -%}
             {% liquid
-                assign logo_alt = settings.logo.alt | default: shop.name | escape
                 assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio
                 assign mobile_logo_height = settings.mobile_logo_width | divided_by: settings.logo_mobile.aspect_ratio
             %}
@@ -82,7 +84,23 @@
                 {% endif %}
             {%- endif -%}
         {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
+            <img
+                src="{{ 'logo-light.png' | asset_url }}"
+                class="header__heading-logo header__heading-logo--main header__heading-logo--main-desktop"
+                height="{{ settings.logo_width | times: 0.5625 | round }}"
+                width="{{ settings.logo_width }}"
+                alt="{{ logo_alt }}"
+                loading="eager"
+            >
+            <img
+                id="HeaderSecondaryDesktopLogo"
+                src="{{ 'logo-dark.png' | asset_url }}"
+                class="header__heading-logo header__heading-logo--secondary header__heading-logo--secondary-desktop"
+                height="{{ settings.logo_width | times: 0.5625 | round }}"
+                width="{{ settings.logo_width }}"
+                alt="{{ logo_alt }}"
+                loading="eager"
+            >
         {%- endif -%}
     </{% if section.settings.logo_link != blank %}a{% else %}div{% endif %}>
 {%- if request.page_type == 'index' -%}
