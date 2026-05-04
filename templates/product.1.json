@@ -11,6 +11,9 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "custom_css": [
+        ".price__badge-sale { background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important; }"
+      ],
       "blocks": {
         "title": {
           "type": "product_title",
@@ -1706,7 +1709,7 @@
         "comments_bg_color": "#f0f2f5",
         "separators_color": "#a4b0be",
         "post_border_color": "#e7c6d4",
-        "border_width": 1,
+        "border_width": 0,
         "like_label": "Like",
         "comment_label": "Comment",
         "reply_label": "Reply",
@@ -1894,7 +1897,7 @@
         "open_state_collapse_icon": "#1a237e",
         "open_state_collapse_icon_solid": "#ffffff",
         "open_state_collapse_bg": "#1a237e",
-        "open_state_content_bg": "#fefaff",
+        "open_state_content_bg": "#ffffff",
         "open_state_content_text": "#121212",
         "padding_top": 60,
         "padding_bottom": 60
