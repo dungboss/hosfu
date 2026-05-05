@@ -1026,53 +1026,70 @@
     "eba88da5-80ac-47fc-aa75-997cfe7b2e59": {
       "type": "image-slider",
       "blocks": {
-        "image_slide_1": {
-          "type": "image_slide",
+        "video_slide_qyKY9k": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Built for short guided home sessions that feel easier to repeat than guesswork.</p>",
+            "video": "shopify://files/videos/Please stop using ineffective choking prevention device,They only lead to mistakes. Thats why I will choose this Anti-choking device,it gives me peace of mind.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "image_slide_2": {
-          "type": "image_slide",
+        "video_slide_ghcXB9": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Four modes and Type-C charging help keep the routine structured and ready.</p>",
+            "video": "shopify://files/videos/Safe for seniors,Adults & Children 1+,This needs to be in your home.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         },
-        "image_slide_3": {
-          "type": "image_slide",
+        "video_slide_bhNxnj": {
+          "type": "video_slide",
           "settings": {
-            "link": "",
-            "description": "<p>Compact sizing and discreet storage make it easier to keep the routine private.</p>",
-            "desc_alignment": "center",
-            "desc_color_scheme": "background-2"
-          }
-        },
-        "image_slide_4": {
-          "type": "image_slide",
-          "settings": {
-            "link": "",
-            "description": "<p>Designed for men who want a realistic home habit, not an overcomplicated setup.</p>",
+            "video": "shopify://files/videos/When choking happens,every second is critical,So I choose to keep an Anti-choking device with me.mp4",
+            "loop": true,
+            "muted_autoplay": true,
+            "display_play_btn": true,
+            "btn_animation": false,
+            "btn_color_scheme": "accent-1",
+            "display_sound_btn": false,
+            "sound_btn_color_scheme": "inverse",
+            "display_timeline": false,
+            "timeline_color": "accent-1",
+            "description": "",
             "desc_alignment": "center",
             "desc_color_scheme": "background-2"
           }
         }
       },
       "block_order": [
-        "image_slide_1",
-        "image_slide_2",
-        "image_slide_3",
-        "image_slide_4"
+        "video_slide_qyKY9k",
+        "video_slide_ghcXB9",
+        "video_slide_bhNxnj"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "<strong>How This Routine Fits Real Life</strong>",
+        "title": "Essential Protection for Every Household",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
