@@ -1153,7 +1153,7 @@
         "desktop_arrows_position": "sides",
         "mobile_full_page": false,
         "mobile_border_radius": 0,
-        "slides_mobile": 1,
+        "slides_mobile": 2,
         "per_move_mobile": 1,
         "mobile_spacing": 12,
         "mobile_side_padding": 0,
