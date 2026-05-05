@@ -1190,7 +1190,7 @@
             "heading_CBkdVX": {
               "type": "heading",
               "settings": {
-                "title": "Why Men Choose A Structured Home Routine",
+                "title": "Why Every Home Needs Professional Protection",
                 "title_highlight_1": "solid-color",
                 "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
                 "title_highlight_1_bg-color": "#fce4ec",
@@ -1240,7 +1240,7 @@
             "text_jQj3hy": {
               "type": "text",
               "settings": {
-                "text": "<p>What matters most is a routine that feels clear, private, and realistic enough to repeat at home.</p>",
+                "text": "<p>When seconds count, you need a reliable, easy-to-use solution that provides immediate peace of mind for your loved ones.</p>",
                 "alignment": "center",
                 "mobile_alignment": "mobile-center",
                 "text_size": 14,
@@ -1346,6 +1346,7 @@
             "image_dTEXhz": {
               "type": "image",
               "settings": {
+                "image": "shopify://shop_images/Thi_t_k_ch_a_co_ten_11.png",
                 "width": 100,
                 "alignment": "center",
                 "mobile_alignment": "center",
