@@ -553,7 +553,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>SPECIAL BUNDLE PRICING:</strong> Check live pricing, availability, and discreet-shipping bundles before current stock runs out.",
+            "text_1": "<strong>LIMITED STOCK AVAILABLE:</strong> Ensure your home and travel kits are complete. Check live availability for family bundles before our current stock runs out. Every second counts in an emergency.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -636,7 +636,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Most men do not need the flashiest gadget. They need a routine that feels clear enough to repeat.</p><p>[product_title] combines four guided modes, Type-C charging, and a compact format to make at-home pelvic floor training feel more structured and practical.</p>",
+            "content": "<ul><li>Emergency situations require a reliable, scientific approach. Unlike traditional methods, this device utilizes a <strong>Scientific Anti-Reverse Flow Design</strong>. The medical-grade one-way valve ensures that air is only drawn out, preventing the obstruction from being pushed deeper into the airway. Combined with an <strong>Integrated Tongue Depressor</strong>, it keeps the mouth cavity open to ensure maximum suction efficiency when every second counts.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -683,7 +683,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Step 1: Charge the device and choose the mode that best fits your current routine.</p><p>Step 2: Complete a short guided session at home in a private, comfortable setting.</p><p>Step 3: Repeat consistently on a schedule that feels realistic to maintain.</p>",
+            "content": "<p><strong>Step 1: Place</strong> - Lay the person down on a flat surface, tilt their head back slightly, and lift the chin to open the airway.</p><p><strong>Step 2: Seal</strong> - Select the appropriate mask size (Infant, Child, or Adult) and attach it firmly over the nose and mouth.</p><p><strong>Step 3: Press</strong> - Rotate the safety lock to unlock, then press the orange button to activate the powerful suction and clear the obstruction.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -730,7 +730,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>The routine is built to feel simple: four guided modes, Type-C charging, compact storage, and sessions that are easier to repeat than vague self-led plans.</p><p>Users also like that the setup feels discreet, private, and realistic to keep using as part of everyday life.</p>",
+            "content": "<p>Families choose this device for its <strong>instant readiness</strong> and <strong>durability</strong>. It requires no batteries or charging, featuring a high-manganese steel spring tested for thousands of presses without losing elasticity. Having a non-invasive, pediatrician-recommended tool in your home or travel kit provides the ultimate peace of mind for parents and caregivers.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -777,7 +777,7 @@
             "open_state_collapse_bg": "#6d388b",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Orders are typically processed in 1-2 business days, followed by standard US delivery windows shown at checkout.</p><p>[product_title] is presented here as a home-use wellness device. This page is for general product information only and is not medical advice.</p>",
+            "content": "<p><strong>Safety First:</strong> This device is an emergency aid and should be used as part of a comprehensive safety plan. Always call emergency services immediately during a choking incident. <strong>Shipping:</strong> All orders are processed quickly to ensure your family's safety kit is complete as soon as possible. Includes three mask sizes to fit all family members.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -869,7 +869,7 @@
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "A structured home routine that feels realistic to keep using.",
+        "review_text": "Peace of mind for our entire family. The device is high-quality, easy to use, and the different mask sizes fit both my toddler and myself perfectly. A must-have for every household.",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
@@ -882,7 +882,7 @@
         "star_color2": "#ffcc00",
         "bg_stars_style": "full",
         "bg_star_color2": "#ececec",
-        "label": "(Trusted by men)",
+        "label": "(Trusted by 10,000+ Families)",
         "size": 16
       }
     },
@@ -983,7 +983,7 @@
         "text_cLnqTc": {
           "type": "text",
           "settings": {
-            "title": "4 Guided Modes • Type-C Rechargeable • Compact Design • Discreet Home Use • Easy To Repeat • Packed Discreetly • Short Guided Sessions • Built For Everyday Practicality"
+            "title": "Non-Invasive Safety • Pediatrician Recommended • 1-Second Activation • No Batteries Required • Scientific Anti-Reverse Flow • Fits All Ages • Travel-Friendly Design • Life-Saving Essential • Trusted by 10,000+ Families"
           }
         }
       },
