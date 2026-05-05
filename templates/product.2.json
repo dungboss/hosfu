@@ -1279,7 +1279,7 @@
             "icon_with_content_iYEqae": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "auto_awesome",
+                "icon": "verified_user",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1288,9 +1288,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Built For Repeatable Sessions",
+                "title": "Scientific Suction Technology",
                 "icon_heading_size": "h3",
-                "text": "<p>Four guided modes give men more structure than app-only reminders or vague self-led plans.</p>",
+                "text": "<p>Featuring a medical-grade one-way valve that only draws air out, preventing the obstruction from being pushed deeper.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1300,7 +1300,7 @@
             "icon_with_content_8fRmbn": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "nest_clock_farsight_analog",
+                "icon": "emergency",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1309,9 +1309,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Easy To Fit Into Real Life",
+                "title": "Integrated Tongue Depressor",
                 "icon_heading_size": "h3",
-                "text": "<p>Short sessions are easier to keep up with around mornings, evenings, workouts, or recovery windows.</p>",
+                "text": "<p>Specifically designed to keep the airway open and the tongue flat, ensuring maximum suction efficiency during a crisis.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -1383,7 +1383,7 @@
             "icon_with_content_MrnXLK": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "auto_awesome",
+                "icon": "bolt",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1392,9 +1392,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Discreet By Design",
+                "title": "Instant One-Touch Action",
                 "icon_heading_size": "h3",
-                "text": "<p>Compact sizing and private home use make the routine feel easier to start and easier to keep to yourself.</p>",
+                "text": "<p>No batteries or charging required. The high-manganese steel spring is always ready for immediate, powerful activation.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1404,7 +1404,7 @@
             "icon_with_content_Yk6MEy": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "battery_charging_full",
+                "icon": "family_restroom",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1413,9 +1413,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Rechargeable Convenience",
+                "title": "Universal Family Fit",
                 "icon_heading_size": "h3",
-                "text": "<p>Type-C charging helps keep the device ready without adding extra friction to the habit.</p>",
+                "text": "<p>Each kit comes with three distinct mask sizes to provide a secure, airtight seal for infants, children, and adults.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
