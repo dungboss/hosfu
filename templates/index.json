@@ -464,10 +464,20 @@
             "others_3": false
           }
         },
+        "row_i77Mq8": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Benefit</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
         "row_a9Qa8J": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>100% Non-invasive (Clothes-on)</strong>",
+            "benefit": "<strong>100% Non-invasive </strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -498,6 +508,7 @@
       "block_order": [
         "row_frqit4",
         "row_NAEbjV",
+        "row_i77Mq8",
         "row_a9Qa8J",
         "row_McckJ6",
         "row_7XDzgE"
