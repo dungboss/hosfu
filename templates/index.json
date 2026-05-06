@@ -15,6 +15,7 @@
         "slide_4CCQyx": {
           "type": "slide",
           "settings": {
+            "desktop_bg_image": "shopify://shop_images/T_o_l_i_hinh__nh_v_i_202605061136.jpg",
             "desktop_overlay_color": "#000000",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_color": "#000000",
