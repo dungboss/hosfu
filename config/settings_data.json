@@ -571,7 +571,14 @@
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "4684129713794663398": {
+        "type": "shopify://apps/onepixel/blocks/one-pixel/fbbf7f1f-cacf-481b-802e-aa7043758c9c",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Default": {
