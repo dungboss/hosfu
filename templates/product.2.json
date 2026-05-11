@@ -1637,10 +1637,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
+            "heading": "How is this different from the Heimlich maneuver?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Many men struggle with consistency because the routine feels vague. [product_title] gives you a more structured, device-led way to build a repeatable home habit.</p>",
+            "row_content": "<p><br/> While the Heimlich maneuver is the standard first step in a choking emergency, it may not always be effective—especially if you are alone, physically unable to perform it, or dealing with a stubborn obstruction. This device uses a powerful, targeted suction mechanism to safely dislodge objects in seconds when traditional methods fail.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1649,10 +1649,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is this a medical treatment?",
+            "heading": "Is this a professional medical device?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>No. This is an at-home wellness routine meant to support consistency and comfort. It is not a substitute for medical diagnosis or treatment. If you have specific concerns, speak with a qualified clinician.</p>",
+            "row_content": "<p><br/>This is a non-prescription, household first-aid device. It is designed to be completely safe and easy for anyone to operate in an emergency. However, it is an emergency backup tool and does not replace the need to call emergency services immediately.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1661,10 +1661,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Who is this trainer designed for?",
+            "heading": "Who is this device designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>This product is positioned for men who want a private at-home pelvic floor training routine with guided modes and rechargeable convenience.</p>",
+            "row_content": "<p><br/> It is designed to protect your entire family! Every kit comes with three different mask sizes (Small, Medium, Large), making it perfectly suitable for young children, adults, and seniors.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1673,10 +1673,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How often should I use it?",
+            "heading": "Does it require batteries or charging?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>The strongest results usually come from consistency, not marathon sessions. A simple, repeatable rhythm tends to be easier to maintain than an all-or-nothing plan.</p>",
+            "row_content": "<p><br/>Not at all. The device is 100% manual and mechanically operated. You never have to worry about dead batteries or finding a charger in a critical, life-threatening moment. Just place the mask and press the button to activate the suction.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1685,10 +1685,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable?",
+            "heading": "Can it accidentally push the object further down?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes. It uses Type-C charging, so it is easy to power up and keep ready for regular sessions at home.</p>",
+            "row_content": "<p><br/>No, it is built with a specially designed bidirectional anti-backflow valve. Pushing down on the handle forces air out of the side vents—not into the patient's airway. The pulling motion is what creates the powerful suction to pull the object out safely.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1697,22 +1697,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will it be discreet?",
+            "heading": "Can the device be reused after an emergency?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes. The device is intended for private home use, and discreet shipping helps reduce extra friction when getting started.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_7": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "What if it does not feel like the right fit for me?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Start with the promise that you are simply testing consistency, not chasing perfection. If it does not feel aligned with your routine, you have a 30-day confidence promise to lean on.</p>",
+            "row_content": "<p><br/>The main suction body is durable and reusable. However, for sanitary reasons and to ensure maximum effectiveness, we strongly recommend replacing the masks after they have been used in a real emergency situation.<br/><br/></p>",
             "page": ""
           },
           "blocks": {}
@@ -1724,14 +1712,13 @@
         "faq_3",
         "faq_4",
         "faq_5",
-        "faq_6",
-        "faq_7"
+        "faq_6"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
         "caption": "Have Questions?",
-        "title": "Questions Men Ask Before Starting",
+        "title": "Questions Customers Ask Before Buying",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
