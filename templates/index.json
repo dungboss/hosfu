@@ -64,7 +64,7 @@
         "mobile_pixels_height": 400,
         "transparent_header": false,
         "transparent_header_text_color": "text",
-        "transparent_header_highlighted_link_color": "background-1",
+        "transparent_header_highlighted_link_color": "background-2",
         "transparent_header_hover_link_color": "accent-1",
         "transparent_header_logo": "main",
         "hide_announcement_bars": false,
