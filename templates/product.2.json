@@ -1574,7 +1574,7 @@
         "margin_bottom": 15,
         "text": "",
         "color_scheme": "custom",
-        "custom_colors_background": "#ffffff",
+        "custom_colors_background": "#e9e9e9",
         "custom_gradient_background": "",
         "custom_colors_text": "#000000",
         "type": "slide",
