@@ -1,5 +1,12 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 
+{%- liquid
+  assign is_anti_choking_product = false
+  if template.name == 'product' and template.suffix == '2'
+    assign is_anti_choking_product = true
+  endif
+-%}
+
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
@@ -387,9 +394,15 @@
                       %}
                     </div>
                   {% when 'email_signup' %}
+                    {%- assign footer_signup_subtext = block.settings.subtext -%}
+                    {%- if is_anti_choking_product -%}
+                      {%- capture footer_signup_subtext -%}
+                        <p>Join 5,000+ parents receiving expert wellness tips and exclusive offers.</p><p><strong>Need help?</strong></p><p>Reach out anytime through our contact page for support.</p><p>Support@hosfu.com</p>
+                      {%- endcapture -%}
+                    {%- endif -%}
                     <div>
                       <div class="footer-block__details-content footer-block__details-content-mb rte">
-                        {{ block.settings.subtext }}
+                        {{ footer_signup_subtext }}
                       </div>
                       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                         <input type="hidden" name="contact[tags]" value="newsletter">
