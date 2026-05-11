@@ -11,9 +11,6 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "custom_css": [
-        ".price__badge-sale { background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important; }"
-      ],
       "blocks": {
         "title": {
           "type": "product_title",
@@ -593,7 +590,7 @@
           "name": "Icons with text",
           "settings": {
             "layout": "horizontal",
-            "icon_color": "#1a237e",
+            "icon_color": "accent-1",
             "desktop_icon_size": 48,
             "desktop_spacing": 12,
             "desktop_text_size": 18,
@@ -826,6 +823,9 @@
         "desc_row_2",
         "desc_row_3",
         "desc_row_4"
+      ],
+      "custom_css": [
+        ".price__badge-sale {background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important;}"
       ],
       "settings": {
         "display_id": false,
