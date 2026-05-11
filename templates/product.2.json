@@ -1467,6 +1467,7 @@
           "type": "column",
           "settings": {
             "post_author": "Mark T. Roberts",
+            "post_author_avatar": "shopify://shop_images/Screenshot_2026-05-11_101458.png",
             "post_author_verified": true,
             "post_time": "2 weeks ago",
             "post_text": "<p><br/>The device looks exactly like the pictures and feels very well-made. Shipping was surprisingly fast, and it arrived carefully packaged. I got it on a promotional offer, but honestly, it’s a small price to pay for the peace of mind it brings to my family. Highly recommend!<br/><br/></p>",
@@ -1487,7 +1488,8 @@
         "review_2": {
           "type": "column",
           "settings": {
-            "post_author": "Jason R.",
+            "post_author": "Jessica Miller",
+            "post_author_avatar": "shopify://shop_images/Gemini_Generated_Image_6a70ma6a70ma6a70.png",
             "post_author_verified": true,
             "post_time": "1 month ago",
             "post_text": "<p><br/>Purchased this as a precaution against choking hazards for my child. I tested the suction, and it works incredibly well! An essential safety backup for any household, but remember to pair it with proper first aid knowledge.<br/><br/></p>",
@@ -1508,7 +1510,7 @@
         "review_3": {
           "type": "column",
           "settings": {
-            "post_author": "Daniel S.",
+            "post_author": "Linda O'Connor",
             "post_author_verified": true,
             "post_time": "3 days ago",
             "post_text": "<p><br/>The build quality of this device is fantastic—it feels very sturdy and durable, not cheap at all. I tested out the suction power on an adult to be sure, and it’s surprisingly powerful. Gives me great peace of mind.<br/><br/></p>",
