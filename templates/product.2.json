@@ -1621,7 +1621,7 @@
         "comments_bg_color": "#f0f2f5",
         "separators_color": "#a4b0be",
         "post_border_color": "#e7c6d4",
-        "border_width": 1,
+        "border_width": 0,
         "like_label": "Like",
         "comment_label": "Comment",
         "reply_label": "Reply",
