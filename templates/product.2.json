@@ -892,6 +892,15 @@
         "logo_MQweyJ": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/d2c0114a-617b-4fc8-8319-bc3c9bbaee91.jpg",
+            "link": "",
+            "target_blank": false
+          }
+        },
+        "logo_Y78YKr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/8aebf99b-e70a-458e-9e40-e1fd87cc694c.jpg",
             "link": "",
             "target_blank": false
           }
@@ -899,6 +908,7 @@
         "logo_mFEwUm": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/b16598ae-0e87-491e-8fda-4584d3f3aa01.jpg",
             "link": "",
             "target_blank": false
           }
@@ -906,6 +916,7 @@
         "logo_j8nYyC": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/eb4a5be4-4763-4d99-86b9-2cc2b64f3229.jpg",
             "link": "",
             "target_blank": false
           }
@@ -913,6 +924,7 @@
       },
       "block_order": [
         "logo_MQweyJ",
+        "logo_Y78YKr",
         "logo_mFEwUm",
         "logo_j8nYyC"
       ],
