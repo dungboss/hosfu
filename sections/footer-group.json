@@ -75,6 +75,7 @@
         "menu_links_M3vPpr",
         "policy_links_mDg4vV"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "custom",
         "custom_colors_background": "#1a237e",
