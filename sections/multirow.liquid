@@ -68,7 +68,15 @@
     </copy-button>
   {% endif %}
   <div class="multirow__inner page-width">
-    {%- for block in section.blocks -%}
+{%- for block in section.blocks -%}
+      {%- liquid
+        assign effective_image = block.settings.image
+        if effective_image == blank and block.settings.video == blank and template contains 'product' and product.media.size > 0
+          assign start_index = section.settings.product_media_start_index | plus: 0 | at_least: 0
+          assign media_index = start_index | plus: forloop.index0 | modulo: product.media.size
+          assign effective_image = product.media[media_index]
+        endif
+      -%}
       <div
         class="image-with-text image-with-text--mobile-{{ section.settings.mobile_direction }} isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if same_bgs %} same-colors{% else %} different-colors{% endif %} animate-item animate-item--child"
         style="--index:{{ forloop.index }};"
@@ -77,11 +85,11 @@
         <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }}{% if section.settings.mobile_full_media_width %} image-with-text__media--mobile-full{% endif %} grid__item">
             <div
-              class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} color-scheme-{{ section.id }} color-{{ section.settings.row_color_scheme }} gradient global-media-settings{% if block.settings.image != blank or block.settings.video != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
+              class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} color-scheme-{{ section.id }} color-{{ section.settings.row_color_scheme }} gradient global-media-settings{% if effective_image != blank or block.settings.video != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
               {% if section.settings.image_height == 'adapt' and block.settings.video != blank %}
                 style="padding-bottom: {{ 1 | divided_by: block.settings.video.aspect_ratio | times: 100 }}%;"
-              {% elsif section.settings.image_height == 'adapt' and block.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+              {% elsif section.settings.image_height == 'adapt' and effective_image != blank %}
+                style="padding-bottom: {{ 1 | divided_by: effective_image.aspect_ratio | times: 100 }}%;"
               {% endif %}
             >
               {%- if block.settings.video != blank -%}
@@ -124,13 +132,13 @@
                     </div>
                   </button>
                 </internal-video>
-              {%- elsif block.settings.image != blank -%}
+              {%- elsif effective_image != blank -%}
                 {%- capture sizes -%}
                   (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
                   (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
                 {%- endcapture -%}
                 {{
-                  block.settings.image
+                  effective_image
                   | image_url: width: 1500
                   | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
                 }}
@@ -268,6 +276,17 @@
       ],
       "default": "medium",
       "label": "t:sections.multirow.settings.image_height.label"
+    },
+    {
+      "type": "header",
+      "content": "Product image fallback"
+    },
+    {
+      "type": "text",
+      "id": "product_media_start_index",
+      "label": "Product media start index",
+      "info": "When no custom image is set on a product page, rows will cycle through product images starting from this index (0 = first image).",
+      "default": "0"
     },
     {
       "type": "select",

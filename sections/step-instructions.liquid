@@ -509,12 +509,20 @@
         <div class="steps-slider-{{ section.id }} swiper">
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
+              {%- liquid
+                assign effective_image = block.settings.image
+                if effective_image == blank and template contains 'product' and product.media.size > 0
+                  assign start_index = section.settings.product_media_start_index | plus: 0 | at_least: 0
+                  assign media_index = start_index | plus: forloop.index0 | modulo: product.media.size
+                  assign effective_image = product.media[media_index]
+                endif
+              -%}
               <div class="steps-item-{{ section.id }} swiper-slide">
                 <div class="steps-image-wrapper-{{ section.id }}">
                   <div class="steps-number-{{ section.id }}">{{ forloop.index }}</div>
                   <div class="steps-image-{{ section.id }}">
-                    {% if block.settings.image != blank %}
-                      <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
+                    {% if effective_image != blank %}
+                      <img src="{{ effective_image | image_url }}" alt="{{ effective_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
                     {% else %}
                       {{ 'image' | placeholder_svg_tag }}
                     {% endif %}
@@ -533,12 +541,20 @@
       
       <div class="steps-body-{{ section.id }}">
         {% for block in section.blocks %}
+          {%- liquid
+            assign effective_image = block.settings.image
+            if effective_image == blank and template contains 'product' and product.media.size > 0
+              assign start_index = section.settings.product_media_start_index | plus: 0 | at_least: 0
+              assign media_index = start_index | plus: forloop.index0 | modulo: product.media.size
+              assign effective_image = product.media[media_index]
+            endif
+          -%}
           <div class="steps-item-{{ section.id }}">
             <div class="steps-image-wrapper-{{ section.id }}">
               <div class="steps-number-{{ section.id }}">{{ forloop.index }}</div>
               <div class="steps-image-{{ section.id }}">
-                {% if block.settings.image != blank %}
-                  <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
+                {% if effective_image != blank %}
+                  <img src="{{ effective_image | image_url }}" alt="{{ effective_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
                 {% else %}
                   {{ 'image' | placeholder_svg_tag }}
                 {% endif %}
@@ -830,6 +846,17 @@
             "value": "original"
           }
         ]
+      },
+      {
+        "type": "header",
+        "content": "Product image fallback"
+      },
+      {
+        "type": "text",
+        "id": "product_media_start_index",
+        "label": "Product media start index",
+        "info": "When no custom image is set on a product page, steps will cycle through product images starting from this index (0 = first image).",
+        "default": "0"
       },
       {
         "type": "header",
