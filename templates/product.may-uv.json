@@ -1726,10 +1726,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
+            "heading": "Is the UV light safe for me and my family?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
+            "row_content": "<p>Absolutely. Safety is our top priority. The UV sterilization mode is intelligently designed to activate <strong>only</strong> when the toilet lid is fully closed. This ensures zero exposure to your skin or eyes. The moment you open the lid, the UV light instantly turns off and switches to the gentle motion-sensor night light.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1738,10 +1738,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is this a medical treatment?",
+            "heading": "How does the UV sterilization actually work?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
+            "row_content": "<p>Our device uses professional-grade UVC technology to safely break down the DNA of unseen bacteria and viruses lingering in the toilet bowl. This automated process eliminates up to 99.9% of germs daily, reducing odors and keeping your bathroom fresh without relying on harsh, toxic cleaning chemicals.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1750,10 +1750,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Who is this trainer designed for?",
+            "heading": "Will this fit my current toilet?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
+            "row_content": "<p>Yes! The sleek, compact design makes it universally compatible with almost all standard toilet shapes and sizes. The flat mounting base easily adheres to the inner surface of your toilet lid.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1762,10 +1762,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How often should I use it?",
+            "heading": "Is it rechargeable, and how long does the battery last?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
+            "row_content": "<p>Yes, it is 100% rechargeable via the included USB cable. Thanks to the energy-efficient smart sensor—which ensures the light only activates in the dark—a single charge typically lasts for weeks. When it’s time to recharge, simply unclip the device from its magnetic/snap-on base, charge it, and snap it right back.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1774,10 +1774,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable?",
+            "heading": "Will the adhesive tape damage my toilet lid?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
+            "row_content": "<p>Not at all. The device uses a specialized, premium double-sided tape designed for bathroom environments (handling moisture). It holds the device firmly in place but can be removed later without leaving sticky residue or damaging the lid's surface. No tools or drilling required.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1786,16 +1786,17 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will it be discreet?",
+            "heading": "What if it isn't the right fit for my bathroom?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
+            "row_content": "<p>We are confident you’ll love this smart upgrade to your daily routine. However, if you are not completely satisfied, we offer a hassle-free <strong>[Điền số ngày, ví dụ: 30-Day]</strong> money-back guarantee. Simply reach out to our customer support team, and we will take care of your return quickly and quietly.</p>",
             "page": ""
           },
           "blocks": {}
         },
         "faq_7": {
           "type": "collapsible-row-content",
+          "disabled": true,
           "settings": {
             "open": false,
             "heading": "What if it does not feel like the right fit for me?",
@@ -1820,7 +1821,7 @@
         "display_id": false,
         "visibility": "always-display",
         "caption": "Have Questions?",
-        "title": "<strong>Questions Men Ask Before Starting</strong>",
+        "title": "<strong>Questions Customers Ask Before Buying</strong>",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
