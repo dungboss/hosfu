@@ -1263,7 +1263,7 @@
             "text_jQj3hy": {
               "type": "text",
               "settings": {
-                "text": "<p><em>Designed for consistency, privacy, and real-world results.</em></p>",
+                "text": "<p>Designed for automated cleanliness, better sleep, and absolute safety.</p>",
                 "alignment": "center",
                 "mobile_alignment": "mobile-center",
                 "text_size": 14,
@@ -1302,7 +1302,7 @@
             "icon_with_content_iYEqae": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "assignment_turned_in",
+                "icon": "shield icon",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1311,9 +1311,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Guided Professional Routine",
+                "title": "Advanced UV Protection",
                 "icon_heading_size": "h3",
-                "text": "<p>4 pro-designed modes eliminate guesswork. Get the structure of a clinic session from the comfort of your home.</p>",
+                "text": "<p>Eliminates 99.9% of unseen germs and bacteria from your toilet bowl daily. Get a fresher, cleaner bathroom without relying on harsh, toxic chemicals.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1323,7 +1323,7 @@
             "icon_with_content_8fRmbn": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "nest_clock_farsight_analog",
+                "icon": "footprint navigation",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1332,9 +1332,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Efficiency In Minutes",
+                "title": "Smart Motion Navigation",
                 "icon_heading_size": "h3",
-                "text": "<p>Just 15 minutes a day. Fits seamlessly into your morning coffee or evening relaxation—no special prep needed.</p>",
+                "text": "<p>A 120° sensor detects you up to 4 meters away. It casts a gentle, warm glow that safely guides you in the dark without blinding your eyes during midnight trips.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -1416,7 +1416,7 @@
             "icon_with_content_MrnXLK": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "visibility_off",
+                "icon": "lock icon",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1425,9 +1425,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "100% Confidential Use",
+                "title": "100% Safe & Intelligent",
                 "icon_heading_size": "h3",
-                "text": "<p>Completely silent and low-profile. Train with total peace of mind, knowing your wellness routine remains your private business.</p><p></p>",
+                "text": "<p>Total peace of mind for your entire household. The powerful UV sterilizer is strictly programmed to activate <strong>only</strong> when the toilet lid is fully closed.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -1437,7 +1437,7 @@
             "icon_with_content_Yk6MEy": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "battery_charging_full",
+                "icon": "check",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -1446,9 +1446,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Always Ready, Always Easy",
+                "title": "Zero-Damage Setup",
                 "icon_heading_size": "h3",
-                "text": "<p>USB-C fast charging keeps your HOSFU ready whenever you are. One charge lasts for weeks of consistent progress.</p>",
+                "text": "<p>UInstall in under 30 seconds with our secure snap-on base and premium double-sided tape. The device easily detaches for quick, hassle-free recharging.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
