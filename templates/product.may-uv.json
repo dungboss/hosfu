@@ -44,6 +44,7 @@
         "text_qjjK8L": {
           "type": "text",
           "name": "Text",
+          "disabled": true,
           "settings": {
             "text": "<p><em><strong>Restore Bladder Control & Confidence in Just 15 Mins a Day</strong></em></p>",
             "alignment": "left",
