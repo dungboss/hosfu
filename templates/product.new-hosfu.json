@@ -30,9 +30,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "announcement_sale"
-      ],
+      "block_order": ["announcement_sale"],
       "settings": {
         "visibility": "always-display",
         "columns_desktop": 1,
@@ -49,75 +47,250 @@
         "type": "loop",
         "autoplay": false,
         "autoplay_speed": 3,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "hero_media_section": {
-      "type": "custom-liquid",
+    "hero_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "hero_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Sick of the Dribbles, Pads, and 3AM Toilet Trips? Meet The PelviDex™ Pelvic Floor Trainer",
+            "heading_size": "h1",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "hero_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The smart, at-home device that helps men <strong>stop bladder leaks</strong> for good.</p>",
+            "alignment": "left",
+            "text_size": 18,
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "hero_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
+          },
+          "blocks": {}
+        },
+        "hero_note": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Note: Not Available on Amazon or eBay</em></p>",
+            "alignment": "left",
+            "text_size": 13,
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["hero_heading", "hero_text", "hero_button", "hero_note"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap\" rel=\"stylesheet\">\n<style>\n  .hosfu-blog * { box-sizing: border-box; }\n  .hosfu-blog { font-family: 'Inter', sans-serif; background-color: #fcfbf7; color: #1f2937; }\n  .hosfu-blog .heading-font { font-family: 'Montserrat', sans-serif; }\n  .hosfu-blog .hero-section { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }\n  .hosfu-blog .hero-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }\n  @media (min-width: 768px) { .hosfu-blog .hero-grid { grid-template-columns: 7fr 5fr; } }\n  .hosfu-blog .hero-content { display: flex; flex-direction: column; gap: 1.5rem; }\n  .hosfu-blog .hero-heading { font-size: 2rem; font-weight: 800; line-height: 1.2; color: #111827; margin: 0; font-family: 'Montserrat', sans-serif; }\n  @media (min-width: 768px) { .hosfu-blog .hero-heading { font-size: 2.5rem; } }\n  @media (min-width: 1024px) { .hosfu-blog .hero-heading { font-size: 3rem; } }\n  .hosfu-blog .hero-highlight { color: #e27243; }\n  .hosfu-blog .hero-desc { font-size: 1.125rem; color: #4b5563; line-height: 1.6; margin: 0; }\n  @media (min-width: 768px) { .hosfu-blog .hero-desc { font-size: 1.25rem; } }\n  .hosfu-blog .hero-underline { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: #111827; font-weight: 600; }\n  .hosfu-blog .cta-button { display: inline-flex; align-items: center; justify-content: center; background: #3bd9ca; color: #000; font-weight: 800; padding: 1rem 2rem; border-radius: 12px; border-bottom: 4px solid #259b90; text-decoration: none; font-size: 1rem; transition: all 0.3s; width: 100%; }\n  @media (min-width: 640px) { .hosfu-blog .cta-button { width: auto; font-size: 1.25rem; } }\n  .hosfu-blog .cta-button:hover { background: #2bc4b5; transform: translateY(-1px); }\n  .hosfu-blog .cta-arrow { width: 20px; height: 20px; margin-left: 12px; animation: pulse 2s infinite; }\n  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }\n  .hosfu-blog .hero-note { font-size: 0.875rem; font-style: italic; color: #6b7280; margin: 0; }\n  .hosfu-blog .hero-image-container { display: flex; justify-content: center; }\n  .hosfu-blog .hero-mockup { width: 100%; max-width: 400px; aspect-ratio: 1; border-radius: 16px; overflow: hidden; border: 4px solid #fff; background: linear-gradient(to bottom, #f3f4f6, #e5e7eb); display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }\n  .hosfu-blog .hero-device { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 10; }\n  .hosfu-blog .hero-device-inner { width: 80%; height: 50%; background: linear-gradient(to right, #1f2937, #111827); border-radius: 40px; border: 2px solid #374151; display: flex; align-items: center; justify-content: center; transform: rotate(12deg); position: relative; box-shadow: 20px 20px 40px rgba(0,0,0,0.3); }\n  .hosfu-blog .hero-device-screen { position: absolute; inset: 4px; border-radius: 32px; border: 2px solid transparent; background: linear-gradient(to right, #22d3ee, #10b981, #3b82f6); opacity: 0.85; }\n  .hosfu-blog .hero-device-display { position: absolute; width: 70%; height: 60%; background: linear-gradient(to bottom, #d1d5db, #9ca3af); border-radius: 24px; display: flex; align-items: center; justify-content: center; border: 1px solid #e5e7eb; }\n  .hosfu-blog .hero-device-label { font-size: 10px; color: #4b5563; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }\n  .hosfu-blog .hero-device-dot { position: absolute; top: 16px; right: 32px; width: 14px; height: 14px; border-radius: 50%; background: #3b82f6; }\n  .hosfu-blog .hero-device-biosensor { position: absolute; bottom: 12px; left: 32px; font-size: 9px; color: #6b7280; font-weight: 600; letter-spacing: 0.15em; }\n  .hosfu-blog .hero-badge { position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,0.7); color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 500; z-index: 20; backdrop-filter: blur(4px); }\n  .hosfu-blog .media-section { border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; background: #fff; padding: 24px 0; }\n  .hosfu-blog .media-inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }\n  .hosfu-blog .media-label { text-align: center; font-size: 0.75rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 20px; }\n  .hosfu-blog .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: center; justify-items: center; opacity: 0.75; }\n  @media (min-width: 768px) { .hosfu-blog .media-grid { grid-template-columns: repeat(6, 1fr); } }\n  .hosfu-blog .media-logo-nbc { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.05em; }\n  .hosfu-blog .media-logo-abc { width: 44px; height: 44px; border-radius: 50%; background: #000; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; }\n  .hosfu-blog .media-logo-cbs { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.05em; }\n  .hosfu-blog .media-logo-fox { background: #003366; color: #fff; padding: 4px 8px; font-family: serif; font-weight: 900; text-align: center; line-height: 1; font-size: 0.75rem; border-radius: 2px; }\n  .hosfu-blog .media-logo-dj { font-size: 0.625rem; color: #dc2626; font-weight: 700; text-transform: uppercase; letter-spacing: -0.025em; }\n  .hosfu-blog .media-logo-dj-main { font-size: 0.875rem; font-weight: 900; color: #1f2937; }\n  .hosfu-blog .media-logo-usa { display: flex; align-items: center; gap: 6px; }\n  .hosfu-blog .media-logo-usa-dot { width: 14px; height: 14px; border-radius: 50%; background: #3b82f6; }\n  .hosfu-blog .media-logo-usa-text { font-size: 0.75rem; font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; }\n</style>\n<div class=\"hosfu-blog\">\n  <section class=\"hero-section\">\n    <div class=\"hero-grid\">\n      <div class=\"hero-content\">\n        <h1 class=\"hero-heading\">\n          Sick of the Dribbles, Pads, and 3AM Toilet Trips? <span class=\"hero-highlight\">Meet The PelviDex&trade; Pelvic Floor Trainer</span>\n        </h1>\n        <p class=\"hero-desc\">\n          The smart, at-home device that helps men <span class=\"hero-underline\">stop bladder leaks</span> for good.\n        </p>\n        <div>\n          <a href=\"#order-form\" class=\"cta-button\">\n            Get 50% off today only\n            <svg class=\"cta-arrow\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3\"/></svg>\n          </a>\n          <p class=\"hero-note\"><strong>Note:</strong> Not Available on Amazon or eBay</p>\n        </div>\n      </div>\n      <div class=\"hero-image-container\">\n        <div class=\"hero-mockup\">\n          <div class=\"hero-device\">\n            <div class=\"hero-device-inner\">\n              <div class=\"hero-device-screen\"></div>\n              <div class=\"hero-device-display\">\n                <span class=\"hero-device-label\">PelviDex&trade;</span>\n              </div>\n              <div class=\"hero-device-dot\"></div>\n              <span class=\"hero-device-biosensor\">BIOSENSOR H5</span>\n            </div>\n          </div>\n          <div class=\"hero-badge\">Smart Pelvic Floor Trainer</div>\n        </div>\n      </div>\n    </div>\n  </section>\n  <section class=\"media-section\">\n    <div class=\"media-inner\">\n      <p class=\"media-label\">As seen on</p>\n      <div class=\"media-grid\">\n        <div class=\"media-logo-nbc\">NBC</div>\n        <div class=\"media-logo-abc\">abc</div>\n        <div class=\"media-logo-cbs\">CBS</div>\n        <div class=\"media-logo-fox\">FOX<br>NEWS</div>\n        <div><span class=\"media-logo-dj\">DIGITAL</span><span class=\"media-logo-dj-main\">JOURNAL</span></div>\n        <div class=\"media-logo-usa\"><span class=\"media-logo-usa-dot\"></span><span class=\"media-logo-usa-text\">USA TODAY</span></div>\n      </div>\n    </div>\n  </section>\n</div>",
+        "height": "adapt",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "section_color_scheme": "background-1",
+        "content_layout": "no-overlap",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "full_desktop_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "benefits_section": {
-      "type": "custom-liquid",
+      "type": "multicolumn",
+      "blocks": {
+        "benefit_1": {
+          "type": "column",
+          "settings": {
+            "title": "Stops Leaks",
+            "text": "<p>Regain control and stop unexpected leaks, freeing you from pads and daily anxiety.</p>"
+          }
+        },
+        "benefit_2": {
+          "type": "column",
+          "settings": {
+            "title": "Guided Strengthening",
+            "text": "<p>Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form.</p>"
+          }
+        },
+        "benefit_3": {
+          "type": "column",
+          "settings": {
+            "title": "Clinically Proven",
+            "text": "<p>Proven muscle training, backed by scientific urology research for safe, natural rehabilitation.</p>"
+          }
+        },
+        "benefit_4": {
+          "type": "column",
+          "settings": {
+            "title": "A Long-Term Solution",
+            "text": "<p>Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers.</p>"
+          }
+        }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n  .bf-section { background: #eaf6f4; padding: 3rem 1rem; border-bottom: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .bf-section { padding: 5rem 1rem; } }\n  .bf-inner { max-width: 1200px; margin: 0 auto; }\n  .bf-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800; color: #111827; text-align: center; margin: 0 0 3rem; }\n  @media (min-width: 768px) { .bf-heading { font-size: 2.25rem; } }\n  .bf-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }\n  @media (min-width: 768px) { .bf-grid { grid-template-columns: 1fr 1fr; } }\n  .bf-card { background: #fff; border-radius: 1rem; padding: 1.5rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: box-shadow 0.3s; display: flex; flex-direction: column; align-items: center; gap: 1rem; }\n  @media (min-width: 768px) { .bf-card { padding: 2rem; } }\n  .bf-card:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }\n  .bf-card-icon { width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }\n  .bf-card-icon-1 { background: #f0f9ff; border: 1px solid #bae6fd; }\n  .bf-card-icon-2 { background: #ecfdf5; border: 1px solid #a7f3d0; }\n  .bf-card-icon-3 { background: #eff6ff; border: 1px solid #bfdbfe; }\n  .bf-card-icon-4 { background: #faf5ff; border: 1px solid #e9d5ff; }\n  .bf-card-icon svg { width: 80px; height: 80px; }\n  .bf-card-title-box { display: flex; align-items: center; gap: 0.5rem; }\n  .bf-card-check { width: 24px; height: 24px; color: #10b981; flex-shrink: 0; }\n  .bf-card-title { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 700; color: #1f2937; }\n  .bf-card-desc { color: #6b7280; font-size: 0.9375rem; line-height: 1.6; max-width: 300px; margin: 0; }\n</style>\n<section class=\"bf-section\">\n  <div class=\"bf-inner\">\n    <h2 class=\"bf-heading\">Why do you need the PelviDex&trade;?</h2>\n    <div class=\"bf-grid\">\n      <div class=\"bf-card\">\n        <div class=\"bf-card-icon bf-card-icon-1\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.5\">\n            <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" fill=\"#f0f9ff\" opacity=\"0.6\"/>\n            <line x1=\"4.5\" y1=\"4.5\" x2=\"19.5\" y2=\"19.5\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n          </svg>\n        </div>\n        <div class=\"bf-card-title-box\">\n          <svg class=\"bf-card-check\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z\" clip-rule=\"evenodd\"/></svg>\n          <span class=\"bf-card-title\">Stops Leaks</span>\n        </div>\n        <p class=\"bf-card-desc\">Regain control and stop unexpected leaks, freeing you from pads and daily anxiety.</p>\n      </div>\n      <div class=\"bf-card\">\n        <div class=\"bf-card-icon bf-card-icon-2\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\">\n            <path d=\"M7 6v6h8V6m0 6l2 9M7 12l-2 9M11 12v9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n            <path d=\"M6 3c2-1.5 6-1.5 8 0M5 1.5c3-2 8-2 11 0\" stroke-linecap=\"round\" stroke-width=\"1\" opacity=\"0.6\"/>\n          </svg>\n        </div>\n        <div class=\"bf-card-title-box\">\n          <svg class=\"bf-card-check\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z\" clip-rule=\"evenodd\"/></svg>\n          <span class=\"bf-card-title\">Guided Strengthening</span>\n        </div>\n        <p class=\"bf-card-desc\">Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form.</p>\n      </div>\n      <div class=\"bf-card\">\n        <div class=\"bf-card-icon bf-card-icon-3\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\">\n            <polygon points=\"12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9\" fill=\"#eff6ff\" opacity=\"0.6\"/>\n          </svg>\n        </div>\n        <div class=\"bf-card-title-box\">\n          <svg class=\"bf-card-check\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z\" clip-rule=\"evenodd\"/></svg>\n          <span class=\"bf-card-title\">Clinically Proven</span>\n        </div>\n        <p class=\"bf-card-desc\">Proven muscle training, backed by scientific urology research for safe, natural rehabilitation.</p>\n      </div>\n      <div class=\"bf-card\">\n        <div class=\"bf-card-icon bf-card-icon-4\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#a855f7\" stroke-width=\"1.5\">\n            <path d=\"M12 6c-3 0-5.5 2-5.5 4.5S9 15 12 15s5.5-2 5.5-4.5S15 6 12 6z\" fill=\"#f3e8ff\" opacity=\"0.5\"/>\n            <path d=\"M4 11c0-3 3-5 8-5s8 2 8 5-3 5-8 5-8-2-8-5z\" stroke=\"currentColor\" stroke-width=\"2\"/>\n          </svg>\n        </div>\n        <div class=\"bf-card-title-box\">\n          <svg class=\"bf-card-check\" viewBox=\"0 0 20 20\" fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z\" clip-rule=\"evenodd\"/></svg>\n          <span class=\"bf-card-title\">A Long-Term Solution</span>\n        </div>\n        <p class=\"bf-card-desc\">Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers.</p>\n      </div>\n    </div>\n  </div>\n</section>",
+        "title": "Why do you need the PelviDex™?",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "column_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "customer_reviews_section": {
-      "type": "custom-liquid",
+      "type": "testimonials",
+      "blocks": {
+        "review_1": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>\"I was starting to feel like I couldn't leave the house without scouting every bathroom along the way. One night I didn't make it in time and had to throw out my pants in a gas station bin. That was it for me. I found the PelviDex™, and within 3 weeks, I was sleeping through the night again. No more leaks, no more stress. I feel like myself again — and my wife noticed too.\"</p>",
+            "author": "James C."
+          }
+        },
+        "review_2": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>\"I used to laugh off the leaks… until it happened on the golf course. I had to fake an early 'back injury' and head home soaked. My buddies still joke about it. I felt humiliated. A friend told me about the PelviDex™, and wow — this thing actually works. Just 10 minutes a day, and I'm back in control. I even played 18 holes last weekend, dry as a bone.\"</p>",
+            "author": "Richard W."
+          }
+        },
+        "review_3": {
+          "type": "column",
+          "settings": {
+            "star_rating": 5,
+            "text": "<p>\"Post-surgery, I was getting up 4–5 times a night and leaking during the day. I started carrying extra underwear everywhere. It messed with my confidence. Found the PelviDex™ online, figured I'd give it a shot. 4 weeks in, and I'm finally sleeping through the night again. No accidents. No stress. Honestly? I didn't think I'd feel normal again.\"</p>",
+            "author": "Albert K."
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
       "settings": {
-        "custom_liquid": "<style>\n  .rv-section { background: #f9fafb; padding: 3rem 1rem; border-bottom: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .rv-section { padding: 5rem 1rem; } }\n  .rv-inner { max-width: 1200px; margin: 0 auto; }\n  .rv-stars-top { text-align: center; font-size: 1.75rem; color: #f59e0b; letter-spacing: 0.1em; margin-bottom: 1rem; }\n  .rv-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800; color: #111827; text-align: center; margin: 0 0 2.5rem; }\n  @media (min-width: 768px) { .rv-heading { font-size: 2.25rem; } }\n  .rv-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }\n  @media (min-width: 768px) { .rv-grid { grid-template-columns: repeat(3, 1fr); } }\n  .rv-card { background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07); display: flex; flex-direction: column; }\n  .rv-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top; }\n  .rv-card-body { padding: 1.25rem 1.25rem 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }\n  .rv-quote { color: #374151; font-size: 0.9375rem; line-height: 1.65; margin: 0; }\n  .rv-quote strong { font-weight: 700; }\n  .rv-card-footer { padding: 0 1.25rem 1.25rem; display: flex; flex-direction: column; gap: 0.25rem; }\n  .rv-name { font-weight: 700; font-size: 0.875rem; color: #111827; }\n  .rv-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 0.05em; }\n</style>\n<section class=\"rv-section\">\n  <div class=\"rv-inner\">\n    <div class=\"rv-stars-top\">&#9733;&#9733;&#9733;&#9733;&#9733;</div>\n    <h2 class=\"rv-heading\">Real Men. Real Results.</h2>\n    <div class=\"rv-grid\">\n      <div class=\"rv-card\">\n        <div class=\"rv-card-body\">\n          <p class=\"rv-quote\">&ldquo;I was starting to feel like I couldn&rsquo;t leave the house <strong>without scouting every bathroom</strong> along the way. &#128515; One night I didn&rsquo;t make it in time and had to throw out my pants <strong>in a gas station bin</strong>. That was it for me. I found the PelviDex&trade;, and within 3 weeks, I was <strong>sleeping through</strong> the night again. No more leaks, no more stress. I feel like myself again &mdash; and my wife noticed too.&rdquo;</p>\n        </div>\n        <div class=\"rv-card-footer\">\n          <span class=\"rv-name\">James C.</span>\n          <span class=\"rv-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span>\n        </div>\n      </div>\n      <div class=\"rv-card\">\n        <div class=\"rv-card-body\">\n          <p class=\"rv-quote\">&ldquo;I used to laugh off the leaks&hellip; until it happened on the <strong>golf course.</strong> &#128543; I had to fake an early &lsquo;back injury&rsquo; and <strong>head home soaked.</strong> My buddies still joke about it. I felt humiliated. A friend told me about the PelviDex&trade;, and wow &mdash; this thing actually works. <strong>Just 10 minutes a day,</strong> and I&rsquo;m back in control. I even played 18 holes last weekend, dry as a bone.&rdquo;</p>\n        </div>\n        <div class=\"rv-card-footer\">\n          <span class=\"rv-name\">Richard W.</span>\n          <span class=\"rv-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span>\n        </div>\n      </div>\n      <div class=\"rv-card\">\n        <div class=\"rv-card-body\">\n          <p class=\"rv-quote\">&ldquo;Post-surgery, I was getting up <strong>4&ndash;5 times a night</strong> and leaking during the day. I started carrying extra underwear everywhere. &#128565; It messed with my confidence. Found the PelviDex&trade; online, figured I&rsquo;d give it a shot. 4 weeks in, and <strong>I&rsquo;m finally sleeping through the night</strong> again. No accidents. No stress. Honestly? I didn&rsquo;t think I&rsquo;d feel normal again.&rdquo;</p>\n        </div>\n        <div class=\"rv-card-footer\">\n          <span class=\"rv-name\">Albert K.</span>\n          <span class=\"rv-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+        "title": "Real Men. Real Results.",
+        "heading_size": "h2",
+        "show_stars": true,
+        "star_color": "#f59e0b",
+        "bg_star_color": "#e5e7eb",
+        "columns_desktop": 3,
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "content_blocks_section_1": {
-      "type": "custom-liquid",
+      "type": "multirow",
+      "blocks": {
+        "row_not_too_old": {
+          "type": "row",
+          "settings": {
+            "caption": "The Truth",
+            "title": "You're Not Too Old to Fix This—And Here's Why",
+            "text": "<p>Many men believe that once bladder leaks start, there's no way to reverse them. <strong>But that's simply not true.</strong></p><p>Your pelvic floor is a muscle—and like any muscle, <strong>it can be strengthened at any age.</strong></p><p>Studies show that <strong>men in their 40s to 90s</strong> can regain bladder control by activating and strengthening these muscles properly.</p><p>Most men struggle to perform pelvic floor exercises correctly. They squeeze the wrong muscles, forget to stay consistent, and then give up when they don't see results.</p><p>The good news? <strong>It's not too late to stop the cycle.</strong></p>"
+          }
+        },
+        "row_introducing": {
+          "type": "row",
+          "settings": {
+            "caption": "The Solution",
+            "title": "Introducing: The PelviDex™ Pelvic Floor Trainer",
+            "text": "<p>The PelviDex™ helps men over 60 regain bladder control by <strong>guiding pelvic floor contractions with real-time biofeedback.</strong></p><p>It uses <strong>pressure-sensing technology</strong> to detect and strengthen the muscle responsible for leaks and urgency.</p><p>This helps <strong>reduce accidents,</strong> improve control, and restore confidence over time.</p><p>It enhances your <strong>mind-muscle connection,</strong> making pelvic floor training simple, visual, and effective — no guesswork.</p><p>The app-based system includes <strong>interactive games and structured programs,</strong> designed to keep you engaged and improving every week.</p><p>With just <strong>5-10 minutes a day,</strong> most men start noticing results in as little as <strong>4–6 weeks.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["row_not_too_old", "row_introducing"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n  .cb-section { padding: 4rem 1rem; background: #fcfbf7; border-bottom: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .cb-section { padding: 6rem 1rem; } }\n  .cb-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 6rem; }\n  @media (min-width: 768px) { .cb-inner { gap: 8rem; } }\n  .cb-row { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }\n  @media (min-width: 768px) { .cb-row { grid-template-columns: 7fr 5fr; } }\n  .cb-row-reverse { direction: ltr; }\n  @media (min-width: 768px) { .cb-row-reverse { direction: rtl; } .cb-row-reverse > * { direction: ltr; } }\n  .cb-content { display: flex; flex-direction: column; gap: 1.5rem; }\n  .cb-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800; color: #111827; line-height: 1.2; margin: 0; }\n  @media (min-width: 768px) { .cb-heading { font-size: 2.25rem; } }\n  .cb-text { font-size: 1rem; line-height: 1.75; color: #374151; margin: 0; }\n  @media (min-width: 768px) { .cb-text { font-size: 1.125rem; } }\n  .cb-text strong { color: #111827; font-weight: 700; }\n  .cb-text .highlight { color: #e27243; font-weight: 700; }\n  .cb-underline { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }\n  .cb-accent { color: #3bd9ca; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 4px; }\n  .cb-image-box { display: flex; justify-content: center; }\n  .cb-image-mock { width: 100%; max-width: 360px; aspect-ratio: 1; border-radius: 1rem; overflow: hidden; border: 4px solid #fff; background: linear-gradient(to bottom, #f3f4f6, #e5e7eb); padding: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 20px 50px -12px rgba(0,0,0,0.25); }\n  .cb-image-mock-alt { background: linear-gradient(to bottom, #f0fdf4, #dbeafe); }\n  .cb-image-badge { position: absolute; bottom: 16px; right: 16px; color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; z-index: 20; text-transform: uppercase; }\n  .cb-image-badge-red { background: #dc2626; }\n  .cb-image-badge-red-light { background: #fecaca; color: #991b1b; border: 1px solid #fca5a5; }\n  .cb-cta { display: inline-flex; align-items: center; justify-content: center; background: #3bd9ca; color: #000; font-weight: 800; padding: 0.9rem 1.75rem; border-radius: 12px; border-bottom: 4px solid #259b90; text-decoration: none; font-size: 1rem; transition: all 0.3s; }\n  @media (min-width: 768px) { .cb-cta { font-size: 1.125rem; } }\n  .cb-cta:hover { background: #2bc4b5; transform: translateY(-1px); }\n  .cb-cta-arrow { width: 20px; height: 20px; margin-left: 10px; animation: cb-pulse 2s infinite; }\n  @keyframes cb-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }\n  .cb-italic { font-style: italic; color: #6b7280; }\n  .cb-strong-red { color: #dc2626; font-weight: 700; }\n  .cb-strong-emerald { color: #047857; font-weight: 700; }\n</style>\n<div class=\"cb-section\">\n  <div class=\"cb-inner\">\n    <div class=\"cb-row\">\n      <div class=\"cb-content\">\n        <h2 class=\"cb-heading\">You're Not Too Old to Fix This&mdash;And Here's Why</h2>\n        <p class=\"cb-text\"><strong>Many men believe that once bladder leaks start, there's no way to reverse them.</strong> But that's simply not true.</p>\n        <p class=\"cb-text\">Your pelvic floor is a muscle&mdash;and like any muscle, <strong>it can be strengthened at any age.</strong></p>\n        <p class=\"cb-text\">Studies show that <strong>men in their 40s to 90s</strong> can regain bladder control by activating and strengthening these muscles properly.</p>\n        <p class=\"cb-text cb-underline\">And just like any muscle, if you don't strengthen it, it will continue to weaken.</p>\n        <p class=\"cb-text\">Most men struggle to perform pelvic floor exercises correctly. They squeeze the wrong muscles, forget to stay consistent, and then give up when they don't see results.</p>\n        <p class=\"cb-text\">No matter how much effort you put in, if your pelvic floor remains weak, <strong>leaks will keep happening.</strong></p>\n        <p class=\"cb-text cb-italic\">And the longer you wait...</p>\n        <p class=\"cb-text\">...the harder it becomes to rebuild lost strength and take back control.</p>\n        <p class=\"cb-text\" style=\"font-size:1.125rem;\">The good news? <strong class=\"highlight\">It's not too late to stop the cycle.</strong></p>\n      </div>\n      <div class=\"cb-image-box\">\n        <div class=\"cb-image-mock\">\n          <div style=\"position:absolute;inset:0;opacity:0.15;background-image:radial-gradient(#4a5568 1px,transparent 1px);background-size:12px 12px;\"></div>\n          <div class=\"cb-image-badge cb-image-badge-red\" style=\"top:16px;right:16px;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;border:2px solid #fff;padding:0;\">&#10005;</div>\n          <div style=\"position:relative;z-index:10;margin-top:auto;margin-left:1rem;width:100px;height:100px;border-radius:50%;background:#fef7ed;border:4px solid #ef4444;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#374151\" stroke-width=\"1.5\" style=\"width:72px;height:72px;\">\n              <circle cx=\"12\" cy=\"8\" r=\"4\" fill=\"#fed7aa\" stroke=\"#c2410c\" stroke-width=\"1.5\"/>\n              <path d=\"M5 20c0-4 3-5 7-5s7 1 7 5\" fill=\"#ea580c\" stroke=\"#9a3412\" stroke-width=\"1.5\"/>\n              <path d=\"M8 7c-.5 0-.8.5-.8 1s.3 1.5.8 1.5M16 7c.5 0 .8.5 .8 1s-.3 1.5-.8 1.5\" stroke=\"#94a3b8\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n            </svg>\n          </div>\n          <div class=\"cb-image-badge cb-image-badge-red-light\">Uncontrolled Leaks</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"cb-row cb-row-reverse\">\n      <div class=\"cb-content\">\n        <h2 class=\"cb-heading\">Introducing: The <span class=\"cb-accent\">PelviDex&trade;</span> Pelvic Floor Trainer</h2>\n        <p class=\"cb-text\">The PelviDex&trade; helps men over 60 regain bladder control by <strong>guiding pelvic floor contractions with real-time biofeedback.</strong></p>\n        <p class=\"cb-text\">It uses <strong>pressure-sensing technology</strong> to detect and strengthen the muscle responsible for leaks and urgency.</p>\n        <p class=\"cb-text\">This helps <strong>reduce accidents,</strong> improve control, and restore confidence over time.</p>\n        <p class=\"cb-text\">It enhances your <strong>mind-muscle connection,</strong> making pelvic floor training simple, visual, and effective &mdash; no guesswork.</p>\n        <p class=\"cb-text\">The app-based system includes <strong>interactive games and structured programs,</strong> designed to keep you engaged and improving every week.</p>\n        <p class=\"cb-text\">The PelviDex&trade; fits all body types, works with any chair, and requires <strong>no invasive procedures and no clinic visits.</strong></p>\n        <p class=\"cb-text\" style=\"font-size:1.125rem;\">With just <strong class=\"highlight\">5-10 minutes a day,</strong> most men start noticing results in as little as <strong class=\"highlight\">4&ndash;6 weeks.</strong></p>\n      </div>\n      <div class=\"cb-image-box\">\n        <div class=\"cb-image-mock cb-image-mock-alt\">\n          <div style=\"position:absolute;inset:0;opacity:0.1;background-image:radial-gradient(#b45309 1px,transparent 1px);background-size:20px 20px;\"></div>\n          <div style=\"position:relative;z-index:10;width:100%;height:180px;display:flex;align-items:center;justify-content:center;margin-top:0.5rem;\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.5\" style=\"width:144px;height:144px;\">\n              <line x1=\"6\" y1=\"13\" x2=\"4\" y2=\"22\" stroke-linecap=\"round\"/>\n              <line x1=\"18\" y1=\"13\" x2=\"20\" y2=\"22\" stroke-linecap=\"round\"/>\n              <path d=\"M8 2h8v11H8V2z\" fill=\"#cbd5e1\" stroke-width=\"2\"/>\n              <line x1=\"10\" y1=\"2\" x2=\"10\" y2=\"13\"/>\n              <line x1=\"14\" y1=\"2\" x2=\"14\" y2=\"13\"/>\n              <rect x=\"5\" y=\"11\" width=\"14\" height=\"2.5\" rx=\"1\" fill=\"#475569\" stroke=\"#1e293b\"/>\n            </svg>\n          </div>\n          <div style=\"position:absolute;bottom:1rem;right:1rem;background:#fff;border:2px solid #10b981;padding:10px;border-radius:12px;display:flex;align-items:center;gap:8px;z-index:20;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"1.5\" style=\"width:40px;height:40px;\">\n              <ellipse cx=\"12\" cy=\"12\" rx=\"9\" ry=\"5\" fill=\"#f0fdf4\" stroke-width=\"1\"/>\n              <circle cx=\"12\" cy=\"12\" r=\"3\" fill=\"#ef4444\"/>\n            </svg>\n            <div style=\"font-size:10px;line-height:1.3;\">\n              <span style=\"font-weight:700;color:#1f2937;display:block;\">Target Active</span>\n              <span style=\"color:#059669;font-weight:600;\">Pelvic Floor Zone</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "image_layout": "alternate-left",
+        "row_color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "content_blocks_section_2": {
-      "type": "custom-liquid",
+      "type": "multirow",
+      "blocks": {
+        "row_experts": {
+          "type": "row",
+          "settings": {
+            "caption": "Expert Backed",
+            "title": "Designed by Experts in Men's Pelvic Health",
+            "text": "<p>The PelviDex™ is <strong>backed by research</strong> in pelvic floor therapy and muscle activation.</p><p>It also comes with a <strong>free Kegel eBook and video course</strong>, designed by experts to help you track your progress and maximize results.</p><p>For less than the cost of pads or expensive procedures you can <strong>regain confidence with a proven, at-home solution</strong>.</p>"
+          }
+        },
+        "row_wait": {
+          "type": "row",
+          "settings": {
+            "caption": "Act Now",
+            "title": "The Longer You Wait, the Worse It Gets",
+            "text": "<p>Men who leak urine are more likely to <strong>fall — especially at night.</strong></p><p>Getting up to rush to the bathroom in the dark can be risky. One small trip could cause a <strong>bad injury</strong> and take away your <strong>freedom</strong>.</p><p><strong>Weak pelvic muscles don't just cause leaks.</strong> They can also lead to other health problems — like <strong>pressure on the prostate</strong> or even organs shifting out of place.</p><p>And the longer you wait, the <strong>weaker</strong> those muscles get. That means it gets <strong>harder to fix</strong> later.</p><p><strong>The PelviDex™ helps you start now.</strong> Use it just <strong>5 minutes a day</strong> to build strength, stop leaks, and take back control.</p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
+          }
+        }
+      },
+      "block_order": ["row_experts", "row_wait"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n  .cb2-section { padding: 4rem 1rem; background: #eaf6f4; border-bottom: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .cb2-section { padding: 6rem 1rem; } }\n  .cb2-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 6rem; }\n  @media (min-width: 768px) { .cb2-inner { gap: 8rem; } }\n  .cb2-row { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }\n  @media (min-width: 768px) { .cb2-row { grid-template-columns: 7fr 5fr; } }\n  .cb2-content { display: flex; flex-direction: column; gap: 1.5rem; }\n  .cb2-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800; color: #111827; line-height: 1.2; margin: 0; }\n  @media (min-width: 768px) { .cb2-heading { font-size: 2.25rem; } }\n  .cb2-text { font-size: 1rem; line-height: 1.75; color: #374151; margin: 0; }\n  @media (min-width: 768px) { .cb2-text { font-size: 1.125rem; } }\n  .cb2-text strong { color: #111827; font-weight: 700; }\n  .cb2-text .highlight { color: #e27243; font-weight: 700; }\n  .cb2-image-box { display: flex; justify-content: center; }\n  .cb2-image-mock { width: 100%; max-width: 360px; aspect-ratio: 1; border-radius: 1rem; overflow: hidden; border: 4px solid #fff; padding: 1.5rem; position: relative; display: flex; flex-direction: column; box-shadow: 0 20px 50px -12px rgba(0,0,0,0.25); }\n  .cb2-image-mock-teal { background: linear-gradient(to bottom, #f0fdfa, #d1fae5); }\n  .cb2-image-mock-red { background: linear-gradient(to bottom, #fef2f2, #fffbeb); }\n  .cb2-image-badge { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); padding: 6px 16px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; white-space: nowrap; }\n  .cb2-image-badge-teal { background: #115e59; color: #fff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }\n  .cb2-image-badge-red { background: #dc2626; color: #fff; left: 0; right: 0; bottom: 0; border-radius: 0 0 0.75rem 0.75rem; padding: 8px 16px; width: 100%; transform: none; font-size: 0.75rem; }\n  .cb2-cta { display: inline-flex; align-items: center; justify-content: center; background: #3bd9ca; color: #000; font-weight: 800; padding: 0.9rem 1.75rem; border-radius: 12px; border-bottom: 4px solid #259b90; text-decoration: none; font-size: 1rem; transition: all 0.3s; }\n  @media (min-width: 768px) { .cb2-cta { font-size: 1.125rem; } }\n  .cb2-cta:hover { background: #2bc4b5; transform: translateY(-1px); }\n  .cb2-cta-arrow { width: 20px; height: 20px; margin-left: 10px; animation: cb2-pulse 2s infinite; }\n  @keyframes cb2-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }\n  .cb2-italic { font-style: italic; color: #6b7280; }\n  .cb2-strong-red { color: #dc2626; font-weight: 700; }\n  .cb2-strong-emerald { color: #047857; font-weight: 700; }\n</style>\n<div class=\"cb2-section\">\n  <div class=\"cb2-inner\">\n    <div class=\"cb2-row\">\n      <div class=\"cb2-content\">\n        <h2 class=\"cb2-heading\">Designed by Experts in Men's Pelvic Health</h2>\n        <p class=\"cb2-text\">The PelviDex&trade; is <strong>backed by research</strong> in pelvic floor therapy and muscle activation.</p>\n        <p class=\"cb2-text\">It also comes with a <strong>free Kegel eBook and video course</strong>, designed by experts to help you track your progress and maximize results.</p>\n        <p class=\"cb2-text\">For less than the cost of pads or expensive procedures you can <strong>regain confidence with a proven, at-home solution</strong>.</p>\n      </div>\n      <div class=\"cb2-image-box\">\n        <div class=\"cb2-image-mock cb2-image-mock-teal\">\n          <div style=\"display:flex;align-items:center;justify-content:center;height:100%;\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1\" style=\"width:180px;height:180px;\">\n              <circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"#fff\" opacity=\"0.6\"/>\n              <path d=\"M4 21c0-3.5 2.5-5.5 6-6h4c3.5.5 6 2.5 6 6\" fill=\"#f8fafc\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n              <path d=\"M10 15v3.5l2 1.5 2-1.5V15\" fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1\"/>\n              <circle cx=\"12\" cy=\"9\" r=\"3.5\" fill=\"#fbcfe8\" stroke=\"#db2777\" stroke-width=\"1\"/>\n              <path d=\"M8.5 9c-.2-2.5 1.5-4 3.5-4s3.7 1.5 3.5 4\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n            </svg>\n          </div>\n          <div class=\"cb2-image-badge cb2-image-badge-teal\">Medical Advisory Board</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"cb2-row\">\n      <div class=\"cb2-content\">\n        <h2 class=\"cb2-heading\">The Longer You Wait, the Worse It Gets</h2>\n        <p class=\"cb2-text\">Men who leak urine are more likely to <strong>fall &mdash; especially at night</strong>.</p>\n        <p class=\"cb2-text\">Getting up to rush to the bathroom in the dark can be risky.</p>\n        <p class=\"cb2-text\">One small trip could cause a <strong class=\"cb2-strong-red\">bad injury</strong> and take away your <strong>freedom</strong>.</p>\n        <p class=\"cb2-text cb2-italic\">But that's not all.</p>\n        <p class=\"cb2-text\"><strong>Weak pelvic muscles don't just cause leaks.</strong></p>\n        <p class=\"cb2-text\">They can also lead to other health problems &mdash; like <strong>pressure on the prostate</strong> or even organs shifting out of place.</p>\n        <p class=\"cb2-text\">And the longer you wait, the <strong class=\"cb2-strong-red\">weaker</strong> those muscles get.</p>\n        <p class=\"cb2-text\">That means it gets <strong>harder to fix</strong> later.</p>\n        <p class=\"cb2-text\">But you don't have to wait.</p>\n        <p class=\"cb2-text\"><strong class=\"cb2-strong-emerald\">The PelviDex&trade; helps you start now.</strong></p>\n        <p class=\"cb2-text\">Use it just <strong class=\"highlight\">5 minutes a day</strong> to build strength, stop leaks, and take back control.</p>\n        <div style=\"padding-top:1rem;\">\n          <a href=\"#order-form\" class=\"cb2-cta\">\n            Get 50% off today only\n            <svg class=\"cb2-cta-arrow\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3\"/></svg>\n          </a>\n        </div>\n      </div>\n      <div class=\"cb2-image-box\">\n        <div class=\"cb2-image-mock cb2-image-mock-red\">\n          <div style=\"position:absolute;inset:0;opacity:0.1;background-image:radial-gradient(#1e293b 1px,transparent 1px);background-size:16px 16px;z-index:0;\"></div>\n          <div style=\"position:relative;z-index:10;display:flex;align-items:center;justify-content:center;height:100%;\">\n            <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1\" style=\"width:150px;height:150px;\">\n              <rect x=\"3\" y=\"11\" width=\"18\" height=\"5\" rx=\"1.5\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1\"/>\n              <path d=\"M12 16v5M10 21h4\" stroke=\"#475569\" stroke-width=\"1.5\"/>\n              <circle cx=\"12\" cy=\"10.5\" r=\"2\" fill=\"#fed7aa\" stroke=\"#c2410c\"/>\n              <ellipse cx=\"12\" cy=\"15.5\" rx=\"3.5\" ry=\"1.5\" fill=\"#3b82f6\" opacity=\"0.6\"/>\n            </svg>\n          </div>\n          <div class=\"cb2-image-badge cb2-image-badge-red\">Nighttime Fall Risk Active</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "image_layout": "alternate-right",
+        "row_color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "content_blocks_section_3": {
-      "type": "custom-liquid",
+      "type": "multirow",
+      "blocks": {
+        "row_how": {
+          "type": "row",
+          "settings": {
+            "caption": "How It Works",
+            "title": "How The PelviDex™ Works",
+            "text": "<p>The PelviDex™ is the only pelvic floor trainer for men that combines <strong>real-time biofeedback</strong> with <strong>precision pressure guidance.</strong></p><p><strong>Biofeedback Technology</strong> — Tracks your pelvic muscle contractions as you squeeze and relax. This gives you <strong>instant feedback</strong> so you know you're training the right muscles.</p><p><strong>App-Guided Sessions</strong> — The connected free app adjusts difficulty based on your performance, leveling up as you improve. It personalizes your routine over time, helping you <strong>build strength, endurance, and control.</strong></p><p>Think of it like a personal trainer for your pelvic floor. One charge can last 2 weeks when used 2-3 times per day.</p>"
+          }
+        },
+        "row_guarantee": {
+          "type": "row",
+          "settings": {
+            "caption": "Our Guarantee",
+            "title": "Try It for 90 Days, 100% Risk-Free",
+            "text": "<p>Here's the deal: we believe in this product so much that we <strong>don't want you to spend a dime until you are 100% certain that it works for you.</strong></p><p>That's why we are offering a <strong>90-day \"Results or Refund\" Guarantee.</strong></p><p>Simply, get yourself The PelviDex™ today, use it for 90 days, and then make your decision based on the results.</p><p><strong>If you are not absolutely thrilled with the results, we will issue you an immediate refund.</strong></p><p>In other words, you are only paying if it turns out to be a complete lifesaver.</p>"
+          }
+        }
+      },
+      "block_order": ["row_how", "row_guarantee"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n  .cb3-section { padding: 4rem 1rem; background: #fcfbf7; border-bottom: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .cb3-section { padding: 6rem 1rem; } }\n  .cb3-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 6rem; }\n  @media (min-width: 768px) { .cb3-inner { gap: 8rem; } }\n  .cb3-row { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }\n  @media (min-width: 768px) { .cb3-row { grid-template-columns: 7fr 5fr; } }\n  .cb3-content { display: flex; flex-direction: column; gap: 1.5rem; }\n  .cb3-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 800; color: #111827; line-height: 1.2; margin: 0; }\n  @media (min-width: 768px) { .cb3-heading { font-size: 2.25rem; } }\n  .cb3-text { font-size: 1rem; line-height: 1.75; color: #374151; margin: 0; }\n  @media (min-width: 768px) { .cb3-text { font-size: 1.125rem; } }\n  .cb3-text strong { color: #111827; font-weight: 700; }\n  .cb3-feature-item { display: flex; align-items: flex-start; gap: 0.75rem; }\n  .cb3-feature-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1.4; }\n  .cb3-feature-body h4 { font-weight: 700; color: #111827; margin: 0 0 0.25rem; font-size: 1rem; }\n  .cb3-feature-body p { color: #6b7280; margin: 0; font-size: 0.875rem; }\n  @media (min-width: 768px) { .cb3-feature-body p { font-size: 1rem; } }\n  .cb3-callout { background: #fef08a; color: #111827; padding: 0.75rem 1rem; border-radius: 0.5rem; font-weight: 700; border-left: 4px solid #eab308; }\n  .cb3-note { font-size: 0.875rem; color: #9ca3af; font-style: italic; }\n  .cb3-image-box { display: flex; justify-content: center; }\n  .cb3-image-mock { width: 100%; max-width: 360px; aspect-ratio: 1; border-radius: 1rem; overflow: hidden; border: 4px solid #fff; padding: 1.5rem; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 20px 50px -12px rgba(0,0,0,0.25); }\n  .cb3-image-mock-bio { background: linear-gradient(to bottom, #f0f9ff, #fff, #e0f2fe); }\n  .cb3-image-mock-shield { background: linear-gradient(to bottom, #ecfdf5, #ccfbf1); }\n  .cb3-image-badge { position: absolute; bottom: 1rem; padding: 6px 16px; border-radius: 9999px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }\n  .cb3-image-badge-teal { background: #3bd9ca; color: #000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }\n  .cb3-image-badge-emerald { background: #065f46; color: #fff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }\n</style>\n<div class=\"cb3-section\">\n  <div class=\"cb3-inner\">\n    <div class=\"cb3-row\">\n      <div class=\"cb3-content\">\n        <h2 class=\"cb3-heading\">How The PelviDex&trade; Works</h2>\n        <p class=\"cb3-text\">The PelviDex&trade; is the only pelvic floor trainer for men that combines <strong>real-time biofeedback</strong> with <strong>precision pressure guidance</strong>.</p>\n        <div style=\"display:flex;flex-direction:column;gap:1rem;\">\n          <div class=\"cb3-feature-item\">\n            <span class=\"cb3-feature-icon\">&#x1F9E0;</span>\n            <div class=\"cb3-feature-body\">\n              <h4>Biofeedback Technology</h4>\n              <p>Tracks your pelvic muscle contractions as you squeeze and relax. This gives you <strong>instant feedback</strong> so you know you're training the right muscles.</p>\n            </div>\n          </div>\n          <div class=\"cb3-feature-item\">\n            <span class=\"cb3-feature-icon\">&#x1F4F1;</span>\n            <div class=\"cb3-feature-body\">\n              <h4>App-Guided Sessions</h4>\n              <p>The connected <span style=\"text-decoration:underline;\">free app</span> adjusts difficulty based on your performance, leveling up as you improve. It personalizes your routine over time, helping you <strong>build strength, endurance, and control</strong>.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"cb3-callout\">Think of it like a personal trainer for your pelvic floor.</div>\n        <p class=\"cb3-text\">It ensures you're <strong>engaging the right muscles</strong>, so you can do Kegels correctly. The <strong>free app</strong> includes a selection of expertly designed training programs created by pelvic health specialists to guide you through effective sessions.</p>\n        <p class=\"cb3-note\">One charge can last 2 weeks when used 2-3 times per day.</p>\n      </div>\n      <div class=\"cb3-image-box\">\n        <div class=\"cb3-image-mock cb3-image-mock-bio\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1\" style=\"width:180px;height:180px;\">\n            <path d=\"M12 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z\" fill=\"#f8fafc\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n            <path d=\"M6 14c0-2 2-3 6-3s6 1 6 3v5H6v-5z\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"1.2\"/>\n            <ellipse cx=\"12\" cy=\"15.5\" rx=\"5\" ry=\"2.5\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"1.5\" opacity=\"0.8\"/>\n            <ellipse cx=\"12\" cy=\"15.5\" rx=\"3\" ry=\"1.5\" fill=\"#3bd9ca\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n            <path d=\"M4 14.5c2-1 4-1 6 0M14 14.5c2-1 4-1 6 0\" stroke=\"#10b981\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n          </svg>\n          <div class=\"cb3-image-badge cb3-image-badge-teal\">Active Biofeedback Loop</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"cb3-row\">\n      <div class=\"cb3-content\">\n        <h2 class=\"cb3-heading\">Try It for 90 Days, 100% Risk-Free</h2>\n        <p class=\"cb3-text\">Here's the deal: we believe in this product so much that we <strong>don't want you to spend a dime until you are 100% certain that it works for you.</strong></p>\n        <p class=\"cb3-text\">That's why we are offering a <strong>90-day &ldquo;Results or Refund&rdquo; Guarantee.</strong></p>\n        <p class=\"cb3-text\">Simply, get yourself The PelviDex&trade; today, use it for 90 days, and then make your decision based on the results.</p>\n        <p class=\"cb3-text\" style=\"text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;font-weight:700;\">If you are not absolutely thrilled with the results, we will issue you an immediate refund.</p>\n        <p class=\"cb3-text\">In other words, you are only paying if it turns out to be a complete lifesaver.</p>\n      </div>\n      <div class=\"cb3-image-box\">\n        <div class=\"cb3-image-mock cb3-image-mock-shield\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1\" style=\"width:180px;height:180px;\">\n            <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" fill=\"#f0fdf4\" stroke=\"#10b981\" stroke-width=\"1.5\"/>\n            <circle cx=\"12\" cy=\"11\" r=\"5\" fill=\"#3bd9ca\" opacity=\"0.3\"/>\n            <path d=\"M9 11l2 2 4-4\" stroke=\"#10b981\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          </svg>\n          <div class=\"cb3-image-badge cb3-image-badge-emerald\">No Questions Asked Refund</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "image_layout": "alternate-left",
+        "row_color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "main": {
@@ -582,9 +755,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "atc_qty"
-          ]
+          "block_order": ["atc_qty"]
         },
         "shipping": {
           "type": "product_shipping-checkpoints",
@@ -762,7 +933,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul><h3></h3>",
+            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -856,7 +1027,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Because it's not a chore—it’s a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
+            "content": "<p>Because it's not a chore—it's a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -1016,69 +1187,401 @@
         "size": 16
       }
     },
-    "cta_order_section": {
-      "type": "custom-liquid",
+    "how_it_works_section": {
+      "type": "step-instructions",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "text": "<p><strong>Sit & Position</strong><br/>Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training.</p>"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "text": "<p><strong>Open The App</strong><br/>Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time.</p>"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "text": "<p><strong>Enjoy Lasting Control</strong><br/>Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks.</p>"
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n  .cta-order { max-width: 720px; margin: 3rem auto; padding: 0 1rem; }\n  .cta-order-box { background: linear-gradient(135deg, #111827, #1e293b, #0f172a); color: #fff; border-radius: 1rem; padding: 2rem; text-align: center; position: relative; overflow: hidden; }\n  @media (min-width: 640px) { .cta-order-box { padding: 2.5rem; } }\n  .cta-order-box::before { content: ''; position: absolute; top: -48px; right: -48px; width: 160px; height: 160px; background: #3bd9ca; opacity: 0.15; border-radius: 50%; filter: blur(40px); }\n  .cta-order-inner { position: relative; z-index: 10; display: flex; flex-direction: column; gap: 1.5rem; }\n  .cta-order-badge { display: inline-block; background: #e2e63f; color: #000; font-weight: 800; font-size: 0.75rem; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.15em; margin: 0 auto; }\n  .cta-order-heading { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900; color: #fff; margin: 0; }\n  @media (min-width: 640px) { .cta-order-heading { font-size: 1.875rem; } }\n  .cta-order-desc { color: #d1d5db; max-width: 480px; margin: 0 auto; font-size: 0.875rem; line-height: 1.6; }\n  @media (min-width: 640px) { .cta-order-desc { font-size: 1rem; } }\n  .cta-order-price { font-size: 2.25rem; font-weight: 900; color: #e27243; font-family: 'Montserrat', sans-serif; }\n  @media (min-width: 640px) { .cta-order-price { font-size: 3rem; } }\n  .cta-order-price-original { font-size: 1.125rem; color: #9ca3af; text-decoration: line-through; font-weight: 400; }\n  .cta-order-warranty { font-size: 0.75rem; color: #34d399; font-weight: 600; }\n  .cta-order-btn { display: block; width: 100%; max-width: 400px; margin: 0 auto; background: #3bd9ca; color: #000; font-weight: 900; font-size: 1.125rem; padding: 1rem 1.5rem; border-radius: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s; }\n  .cta-order-btn:hover { background: #2bc4b5; transform: translateY(-1px); }\n  .cta-order-secure { font-size: 0.6875rem; color: #9ca3af; }\n</style>\n<div class=\"cta-order\" id=\"order-form\">\n  <div class=\"cta-order-box\">\n    <div class=\"cta-order-inner\">\n      <span class=\"cta-order-badge\">EXCLUSIVE TODAY ONLY OFFER</span>\n      <h3 class=\"cta-order-heading\">CLAIM YOUR PELVIDEX&trade;</h3>\n      <p class=\"cta-order-desc\">Order now to save 50% on your PelviDex&trade; Trainer with free worldwide shipping, backed by our 30-day risk-free guarantee.</p>\n      <div>\n        <div class=\"cta-order-price\">$99.00 <span class=\"cta-order-price-original\">$198.00</span></div>\n        <p class=\"cta-order-warranty\">&#x2714; Includes 12-Month Hassle-Free Warranty</p>\n      </div>\n      <a href=\"/products/pelvidex\" class=\"cta-order-btn\">Order Now - Get 50% Off</a>\n      <p class=\"cta-order-secure\">100% Secure Checkout &mdash; Discretely Packaged &amp; Shipped</p>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "heading": "<p><strong>Bladder Control Has Never Been Easier</strong></p>",
+        "desktopsteps": 3,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "circle_number_bg_color": "#3bd9ca",
+        "number_color": "#000000",
+        "text_color": "#374151",
+        "heading_color": "#111827",
+        "background_color": "#eaf6f4",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "whats_in_the_box_section": {
-      "type": "custom-liquid",
+      "type": "image-with-text",
+      "blocks": {
+        "witb_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "What's In The Box?",
+            "heading_size": "h2",
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "witb_text": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>1 — The PelviDex™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
+            "alignment": "left",
+            "text_size": 16,
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["witb_heading", "witb_text"],
       "settings": {
-        "custom_liquid": "<style>\n  .witb-section { background: #fff; padding: 3rem 1rem; border-top: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .witb-section { padding: 5rem 1rem; } }\n  .witb-inner { max-width: 1100px; margin: 0 auto; }\n  .witb-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }\n  @media (min-width: 768px) { .witb-grid { grid-template-columns: 1fr 1fr; } }\n  .witb-image-wrap { display: flex; justify-content: center; }\n  .witb-image-wrap img { width: 100%; max-width: 480px; height: auto; }\n  .witb-content { display: flex; flex-direction: column; gap: 1.5rem; }\n  .witb-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 900; color: #111827; margin: 0; }\n  @media (min-width: 768px) { .witb-heading { font-size: 2.25rem; } }\n  .witb-list { display: flex; flex-direction: column; gap: 1.125rem; list-style: none; margin: 0; padding: 0; }\n  .witb-item { display: flex; align-items: flex-start; gap: 0.875rem; font-size: 1rem; color: #1f2937; line-height: 1.5; }\n  .witb-badge { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #2db8a8; color: #fff; font-weight: 800; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; margin-top: 1px; }\n  .witb-item-text { padding-top: 4px; }\n  .witb-strike { text-decoration: line-through; color: #9ca3af; font-size: 0.9em; }\n</style>\n<section class=\"witb-section\">\n  <div class=\"witb-inner\">\n    <div class=\"witb-grid\">\n      <div class=\"witb-image-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0944/5952/9126/files/whats-in-the-box.png\" alt=\"What's in the PelviDex box\" loading=\"lazy\" />\n      </div>\n      <div class=\"witb-content\">\n        <h2 class=\"witb-heading\">What's In The Box?</h2>\n        <ul class=\"witb-list\">\n          <li class=\"witb-item\"><span class=\"witb-badge\">1</span><span class=\"witb-item-text\">The PelviDex&trade; Pelvic Floor Trainer <span class=\"witb-strike\">(RRP: $369.99)</span></span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">2</span><span class=\"witb-item-text\">Instruction Guide &amp; Quick Start Manual</span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">3</span><span class=\"witb-item-text\">USB Charger</span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">4</span><span class=\"witb-item-text\">Travel &amp; Storage Pouch <span class=\"witb-strike\">(RRP: $4.99)</span></span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">5</span><span class=\"witb-item-text\">Free Lifetime Access to Orvantra&rsquo;s Incontinence Brotherhood <span class=\"witb-strike\">(RRP: $7.99/month)</span></span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">6</span><span class=\"witb-item-text\">High Quality Gift Box</span></li>\n          <li class=\"witb-item\"><span class=\"witb-badge\">7</span><span class=\"witb-item-text\">90 Day Habit Tracker</span></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</section>",
+        "height": "adapt",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "section_color_scheme": "background-1",
+        "content_layout": "no-overlap",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "comparison_table_section": {
-      "type": "custom-liquid",
+      "type": "comparison-table",
+      "blocks": {
+        "row_guided": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Guided Strengthening</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_noninvasive": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Non-Invasive Solution</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_app": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Guided Program Via App</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_noside": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>No Side Effects</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_cost": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Cost-Effective Solution</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_portable": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Portable & Discreet</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_clinical": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Clinically Proven</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        },
+        "row_results": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Fast, Visible Results</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false
+          }
+        }
+      },
+      "block_order": [
+        "row_guided",
+        "row_noninvasive",
+        "row_app",
+        "row_noside",
+        "row_cost",
+        "row_portable",
+        "row_clinical",
+        "row_results"
+      ],
       "settings": {
-        "custom_liquid": "<style>\n  .cmp-section { background: #fff; padding: 3rem 1rem; border-top: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .cmp-section { padding: 5rem 1rem; } }\n  .cmp-inner { max-width: 680px; margin: 0 auto; }\n  .cmp-eyebrow { text-align: center; font-size: 0.875rem; color: #6b7280; font-weight: 500; margin: 0 0 0.5rem; }\n  .cmp-heading { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900; color: #111827; text-align: center; margin: 0 0 2rem; line-height: 1.25; }\n  @media (min-width: 768px) { .cmp-heading { font-size: 2rem; } }\n  .cmp-table-wrap { overflow-x: auto; }\n  .cmp-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }\n  @media (min-width: 640px) { .cmp-table { font-size: 1rem; } }\n  .cmp-table thead tr th { padding: 0.75rem 0.5rem; font-weight: 700; color: #111827; font-size: 0.875rem; }\n  @media (min-width: 640px) { .cmp-table thead tr th { font-size: 1rem; } }\n  .cmp-table thead tr th:first-child { text-align: left; color: #6b7280; font-weight: 400; }\n  .cmp-th-orvantra { position: relative; }\n  .cmp-th-orvantra-inner { background: #e2e63f; border-radius: 12px 12px 0 0; padding: 0.5rem 1rem; display: inline-block; font-weight: 900; font-size: 0.875rem; letter-spacing: 0.05em; }\n  @media (min-width: 640px) { .cmp-th-orvantra-inner { font-size: 1rem; padding: 0.6rem 1.25rem; } }\n  .cmp-table tbody tr { border-top: 1px solid #f3f4f6; }\n  .cmp-table tbody tr td { padding: 0.6rem 0.5rem; text-align: center; color: #374151; }\n  .cmp-table tbody tr td:first-child { text-align: left; padding-left: 0; color: #6b7280; }\n  .cmp-td-orvantra { background: #fffde7; border-left: 2px solid #e2e63f; border-right: 2px solid #e2e63f; }\n  .cmp-table tbody tr:last-child .cmp-td-orvantra { border-bottom: 2px solid #e2e63f; border-radius: 0 0 8px 8px; }\n  .cmp-icon-yes { width: 28px; height: 28px; border-radius: 50%; background: #e2e63f; display: inline-flex; align-items: center; justify-content: center; }\n  .cmp-icon-yes svg { width: 16px; height: 16px; }\n  .cmp-icon-no { width: 28px; height: 28px; border-radius: 50%; background: #f3f4f6; display: inline-flex; align-items: center; justify-content: center; }\n  .cmp-icon-no svg { width: 14px; height: 14px; }\n</style>\n<section class=\"cmp-section\">\n  <div class=\"cmp-inner\">\n    <p class=\"cmp-eyebrow\">What Makes The PelviDex&trade; Special?</p>\n    <h2 class=\"cmp-heading\">The PelviDex&trade; Strengthens Your Pelvic Floor</h2>\n    <div class=\"cmp-table-wrap\">\n      <table class=\"cmp-table\">\n        <thead>\n          <tr>\n            <th></th>\n            <th class=\"cmp-th-orvantra\"><span class=\"cmp-th-orvantra-inner\">ORVANTRA</span></th>\n            <th>Medication</th>\n            <th>Surgery</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>Guided Strengthening</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Non-Invasive Solution</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Guided Program Via App</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>No Side Effects</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Cost-Effective Solution</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Portable &amp; Discreet</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Clinically Proven</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n          <tr>\n            <td>Fast, Visible Results</td>\n            <td class=\"cmp-td-orvantra\"><span class=\"cmp-icon-yes\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 13l4 4L19 7\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n            <td><span class=\"cmp-icon-no\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"2.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/></svg></span></td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</section>",
+        "title": "The PelviDex™ Strengthens Your Pelvic Floor",
+        "heading_size": "h2",
+        "number_of_competitors": 2,
+        "us_label": "PelviDex™",
+        "us_label_size": 18,
+        "logo_width": 90,
+        "mobile_logo_width": 60,
+        "others_label": "Medication",
+        "others_label_size": 18,
+        "others_logo_width": 90,
+        "others_mobile_logo_width": 60,
+        "others_2_label": "Surgery",
+        "others_2_label_size": 18,
+        "others_2_logo_width": 90,
+        "others_2_mobile_logo_width": 60,
+        "checkmark_color": "#ffffff",
+        "checkmark_bg_color": "#53af01",
+        "x_color": "#121212",
+        "x_bg_color": "#dbdbdb",
+        "highlighted_color_scheme": "custom",
+        "custom_colors_highlighted_background": "#1a237e",
+        "custom_colors_highlighted_text": "#ffffff",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "desktop_alignment": "center",
+        "mobile_content_alignment": "center",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "trust_badges_section": {
-      "type": "custom-liquid",
+      "type": "multicolumn",
+      "blocks": {
+        "trust_1": {
+          "type": "column",
+          "settings": {
+            "title": "90-Day Money Back Guarantee",
+            "text": "<p>If you're not absolutely thrilled with the results, we don't want your money. No hassles, no questions asked.</p>"
+          }
+        },
+        "trust_2": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping Worldwide",
+            "text": "<p>We provide fast free shipping with tracking numbers on all orders.</p>"
+          }
+        },
+        "trust_3": {
+          "type": "column",
+          "settings": {
+            "title": "Guaranteed High Quality",
+            "text": "<p>PelviDex™ is made of high-quality materials. Enjoy consistent, trouble-free performance for a long time.</p>"
+          }
+        }
+      },
+      "block_order": ["trust_1", "trust_2", "trust_3"],
       "settings": {
-        "custom_liquid": "<style>\n  .tb-section { background: #eaf6f4; padding: 3rem 1rem; border-top: 1px solid #d1ece8; }\n  @media (min-width: 768px) { .tb-section { padding: 4rem 1rem; } }\n  .tb-inner { max-width: 900px; margin: 0 auto; }\n  .tb-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }\n  @media (min-width: 640px) { .tb-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }\n  .tb-item { display: flex; flex-direction: column; align-items: center; gap: 1rem; }\n  .tb-badge { width: 110px; height: 110px; }\n  .tb-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.0625rem; color: #111827; line-height: 1.3; margin: 0; }\n  .tb-desc { font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin: 0; max-width: 220px; }\n</style>\n<section class=\"tb-section\">\n  <div class=\"tb-inner\">\n    <div class=\"tb-grid\">\n      <div class=\"tb-item\">\n        <svg class=\"tb-badge\" viewBox=\"0 0 110 110\" xmlns=\"http://www.w3.org/2000/svg\">\n          <circle cx=\"55\" cy=\"55\" r=\"52\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"44\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"1.5\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"40\" fill=\"#fff\" stroke=\"#6bbfb0\" stroke-width=\"1\"/>\n          <text x=\"55\" y=\"42\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">100% MONEY</text>\n          <text x=\"55\" y=\"53\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">BACK</text>\n          <text x=\"55\" y=\"67\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"900\" fill=\"#4a9e90\" font-family=\"sans-serif\">90</text>\n          <text x=\"55\" y=\"77\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">DAY</text>\n          <text x=\"55\" y=\"88\" text-anchor=\"middle\" font-size=\"7\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1.5\" font-family=\"sans-serif\">GUARANTEE</text>\n        </svg>\n        <h3 class=\"tb-title\">90-Day Money Back<br>Guarantee</h3>\n        <p class=\"tb-desc\">If you&rsquo;re not absolutely thrilled with the results, we don&rsquo;t want your money. No hassles, no questions asked.</p>\n      </div>\n      <div class=\"tb-item\">\n        <svg class=\"tb-badge\" viewBox=\"0 0 110 110\" xmlns=\"http://www.w3.org/2000/svg\">\n          <circle cx=\"55\" cy=\"55\" r=\"52\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"44\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"1.5\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"40\" fill=\"#fff\" stroke=\"#6bbfb0\" stroke-width=\"1\"/>\n          <text x=\"55\" y=\"34\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">FREE</text>\n          <text x=\"55\" y=\"44\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">SHIPPING</text>\n          <g transform=\"translate(30, 46) scale(1.2)\">\n            <rect x=\"0\" y=\"4\" width=\"22\" height=\"12\" rx=\"2\" fill=\"none\" stroke=\"#4a9e90\" stroke-width=\"1.8\"/>\n            <path d=\"M22 8h5l4 5v5h-9V8z\" fill=\"none\" stroke=\"#4a9e90\" stroke-width=\"1.8\"/>\n            <circle cx=\"6\" cy=\"20\" r=\"2.5\" fill=\"#4a9e90\"/>\n            <circle cx=\"23\" cy=\"20\" r=\"2.5\" fill=\"#4a9e90\"/>\n          </g>\n          <text x=\"55\" y=\"84\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">FREE</text>\n          <text x=\"55\" y=\"94\" text-anchor=\"middle\" font-size=\"7.5\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">SHIPPING</text>\n        </svg>\n        <h3 class=\"tb-title\">Free Shipping<br>Worldwide</h3>\n        <p class=\"tb-desc\">We provide fast free shipping with tracking numbers on all orders.</p>\n      </div>\n      <div class=\"tb-item\">\n        <svg class=\"tb-badge\" viewBox=\"0 0 110 110\" xmlns=\"http://www.w3.org/2000/svg\">\n          <circle cx=\"55\" cy=\"55\" r=\"52\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"44\" fill=\"none\" stroke=\"#6bbfb0\" stroke-width=\"1.5\"/>\n          <circle cx=\"55\" cy=\"55\" r=\"40\" fill=\"#fff\" stroke=\"#6bbfb0\" stroke-width=\"1\"/>\n          <text x=\"55\" y=\"34\" text-anchor=\"middle\" font-size=\"7\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">GUARANTEED</text>\n          <path d=\"M55 42 L55 78\" stroke=\"none\"/>\n          <circle cx=\"55\" cy=\"60\" r=\"16\" fill=\"none\" stroke=\"#4a9e90\" stroke-width=\"2\"/>\n          <path d=\"M46 60 l6 6 12-12\" stroke=\"#4a9e90\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n          <text x=\"55\" y=\"90\" text-anchor=\"middle\" font-size=\"7\" font-weight=\"700\" fill=\"#6bbfb0\" letter-spacing=\"1\" font-family=\"sans-serif\">HIGH QUALITY</text>\n        </svg>\n        <h3 class=\"tb-title\">Guaranteed High<br>quality</h3>\n        <p class=\"tb-desc\">PelviDex&trade;&rsquo;s are made of high-quality materials. Enjoy consistent, trouble-free performance for a long time.</p>\n      </div>\n    </div>\n  </div>\n</section>",
+        "title": "Our Promise to You",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "column_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "free_bonuses_section": {
-      "type": "custom-liquid",
+      "type": "multicolumn",
+      "blocks": {
+        "bonus_1": {
+          "type": "column",
+          "settings": {
+            "title": "BONUS #1: The Ultimate Kegel Contraction Guide",
+            "text": "<p><strong>RRP: $99.95 — Today: FREE</strong></p><p>Follow our expert-designed 12-week Kegel training plan to maximize your results with PelviDex™. Easy-to-follow daily routines that strengthen your pelvic floor.</p>"
+          }
+        },
+        "bonus_2": {
+          "type": "column",
+          "settings": {
+            "title": "BONUS #2: Bladder Health & Nutrition Plan",
+            "text": "<p><strong>RRP: $49.95 — Today: FREE</strong></p><p>Expert-crafted meal plan packed with bladder-friendly superfoods, hydration tips, and simple dietary swaps to improve control and reduce urgency.</p>"
+          }
+        },
+        "bonus_3": {
+          "type": "column",
+          "settings": {
+            "title": "BONUS #3: Pelvic Health Video Course Masterclass",
+            "text": "<p><strong>RRP: $449.95 — Today: FREE</strong></p><p>Exclusive video series by pelvic health specialist James Mitchell. Learn the biggest mistakes men make with Kegels and how to naturally reduce leaks.</p>"
+          }
+        }
+      },
+      "block_order": ["bonus_1", "bonus_2", "bonus_3"],
       "settings": {
-        "custom_liquid": "<style>\n  .bon-section { background: #f3f4f6; padding: 3rem 1rem; border-top: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .bon-section { padding: 5rem 1rem; } }\n  .bon-inner { max-width: 640px; margin: 0 auto; }\n  .bon-heading { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; font-weight: 900; color: #111827; text-align: center; margin: 0 0 2.5rem; line-height: 1.25; }\n  .bon-heading u { text-decoration-thickness: 3px; text-underline-offset: 4px; }\n  @media (min-width: 768px) { .bon-heading { font-size: 2.25rem; } }\n  .bon-list { display: flex; flex-direction: column; gap: 2.5rem; }\n  .bon-item { display: flex; flex-direction: column; gap: 1rem; }\n  .bon-tablet-wrap { border: 3px solid #3bd9ca; border-radius: 16px; overflow: hidden; background: #1a1a1a; padding: 1rem; }\n  .bon-tablet-inner { background: #1a1a1a; border-radius: 12px; overflow: hidden; position: relative; }\n  .bon-tablet-stripe { position: absolute; top: 0; left: 0; right: 0; height: 28px; background: repeating-linear-gradient(45deg, #e27243, #e27243 10px, #1a1a1a 10px, #1a1a1a 20px); }\n  .bon-tablet-stripe-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 28px; background: repeating-linear-gradient(45deg, #e27243, #e27243 10px, #1a1a1a 10px, #1a1a1a 20px); }\n  .bon-tablet-cover { background: #fff; margin: 28px 12px; border-radius: 4px; padding: 1.25rem 1rem; min-height: 180px; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }\n  .bon-tablet-title { font-family: 'Montserrat', sans-serif; font-size: 1.125rem; font-weight: 900; color: #111827; line-height: 1.2; }\n  .bon-tablet-subtitle { font-size: 0.75rem; font-weight: 800; color: #e27243; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.3; }\n  .bon-tablet-tagline { font-size: 0.75rem; color: #374151; font-style: italic; margin-top: 0.25rem; }\n  .bon-label { background: #3bd9ca; padding: 0.6rem 1rem; display: flex; gap: 0.5rem; align-items: center; font-size: 0.875rem; }\n  .bon-label-num { font-weight: 900; color: #111827; }\n  .bon-label-name { font-weight: 600; color: #111827; }\n  .bon-price { text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.125rem; color: #111827; }\n  .bon-free { color: #e27243; font-weight: 900; font-size: 1.25rem; display: block; text-align: center; }\n  .bon-desc { font-size: 0.9375rem; color: #374151; line-height: 1.7; margin: 0; }\n</style>\n<section class=\"bon-section\">\n  <div class=\"bon-inner\">\n    <h2 class=\"bon-heading\">Order Today and<br>Get <u>3 FREE Bonuses</u>!</h2>\n    <div class=\"bon-list\">\n      <div class=\"bon-item\">\n        <div class=\"bon-tablet-wrap\">\n          <div class=\"bon-tablet-inner\">\n            <div class=\"bon-tablet-stripe\"></div>\n            <div class=\"bon-tablet-stripe-bot\"></div>\n            <div class=\"bon-tablet-cover\">\n              <div class=\"bon-tablet-title\">THE ULTIMATE<br>PELVIDEX&trade; PLAN</div>\n              <div class=\"bon-tablet-subtitle\">A 12-WEEK PELVIC FLOOR<br>STRENGTHENING GUIDE FOR MEN</div>\n              <div class=\"bon-tablet-tagline\">Build Strength. Stop Leaks. Regain Control.</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"bon-label\">\n          <span class=\"bon-label-num\">BONUS #1</span>\n          <span class=\"bon-label-name\">The Ultimate Kegel Contraction Guide</span>\n        </div>\n        <p class=\"bon-price\">RRP: $99.95 Today: <span class=\"bon-free\">FREE</span></p>\n        <p class=\"bon-desc\">Follow our expert-designed 12-week Kegel training plan to maximize your results with PelviDex&trade;. This program includes easy-to-follow daily routines that strengthen your pelvic floor and help you regain control faster.</p>\n      </div>\n      <div class=\"bon-item\">\n        <div class=\"bon-tablet-wrap\">\n          <div class=\"bon-tablet-inner\">\n            <div class=\"bon-tablet-stripe\"></div>\n            <div class=\"bon-tablet-stripe-bot\"></div>\n            <div class=\"bon-tablet-cover\">\n              <div class=\"bon-tablet-title\">BLADDER HEALTH<br>&amp; NUTRITION PLAN</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"bon-label\">\n          <span class=\"bon-label-num\">BONUS #2</span>\n          <span class=\"bon-label-name\">Bladder Health &amp; Nutrition Plan</span>\n        </div>\n        <p class=\"bon-price\">RRP: $49.95 Today: <span class=\"bon-free\">FREE</span></p>\n        <p class=\"bon-desc\">Did you know that certain foods can weaken or strengthen your bladder? This expert-crafted meal plan is packed with bladder-friendly superfoods, hydration tips, and simple dietary swaps to improve control and reduce urgency.</p>\n      </div>\n      <div class=\"bon-item\">\n        <div class=\"bon-tablet-wrap\">\n          <div class=\"bon-tablet-inner\">\n            <div class=\"bon-tablet-stripe\"></div>\n            <div class=\"bon-tablet-stripe-bot\"></div>\n            <div class=\"bon-tablet-cover\" style=\"background:#c8a87a;\">\n              <div class=\"bon-tablet-title\" style=\"color:#fff;\">A PELVIC HEALTH<br>VIDEO COURSE<br>MASTERCLASS</div>\n              <div class=\"bon-tablet-tagline\" style=\"color:#f5e6d0;\">By James Mitchell, Pelvic Floor Therapist</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"bon-label\">\n          <span class=\"bon-label-num\">BONUS #3</span>\n          <span class=\"bon-label-name\">Pelvic Health Video Course Masterclass</span>\n        </div>\n        <p class=\"bon-price\">RRP: $449.95 Today: <span class=\"bon-free\">FREE</span></p>\n        <p class=\"bon-desc\">Gain exclusive access to a video series featuring our top pelvic health specialist, James Mitchell, who reveals the biggest mistakes women make with Kegels, how to properly engage the pelvic floor, and simple lifestyle changes to reduce leaks naturally.</p>\n      </div>\n    </div>\n  </div>\n  <div style=\"background:#eaf6f4;padding:2.5rem 1rem 3rem;\">\n    <div style=\"max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:1.5rem;\">\n      <h2 style=\"font-family:Montserrat,sans-serif;font-size:1.75rem;font-weight:900;color:#111827;text-align:center;margin:0;\">Special Offer On Now!</h2>\n      <p style=\"text-align:center;color:#374151;font-size:0.9375rem;line-height:1.6;margin:0;\">Try Your PelviDex&trade; Pelvic Floor Trainer NOW <u>Risk-Free</u> at an All Time Low Price!</p>\n      <p style=\"text-align:center;font-weight:700;font-size:1rem;margin:0;\"><u>Act Now and You&rsquo;ll Get:</u></p>\n      <ul style=\"list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;\">\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>50% OFF</strong> &ndash; PelviDex&trade; Pelvic Floor Trainer (All-Inclusive Recovery Kit)</span></li>\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>90-Day Results or Refund Guarantee</strong></span></li>\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>FREE Shipping</strong> <span style=\"color:#e27243;\">($9.95 Value)</span></span></li>\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>FREE Pelvic Health Video Course Masterclass</strong> (recorded by James Mitchell) <span style=\"color:#e27243;\">($449.95 Value)</span></span></li>\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>FREE eBook:</strong> Step-by-Step Kegel Contraction Program for Faster Results <span style=\"color:#e27243;\">($99.95 Value)</span></span></li>\n        <li style=\"display:flex;align-items:flex-start;gap:0.625rem;font-size:0.9375rem;\"><span style=\"width:22px;height:22px;background:#e2e63f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.75rem;flex-shrink:0;margin-top:1px;\">&#10003;</span><span><strong>FREE Nutrition Plan:</strong> How To Eat Your Way to a Stronger Pelvic Floor <span style=\"color:#e27243;\">($49.95 Value)</span></span></li>\n      </ul>\n      <p style=\"text-align:center;font-weight:800;font-size:1.125rem;color:#374151;margin:0;\">Total Bonus Value: <span style=\"text-decoration:line-through;color:#e27243;\">$599.85</span></p>\n      <p style=\"text-align:center;font-weight:900;font-size:1.5rem;color:#3bd9ca;margin:0;\">Today Only: FREE</p>\n      <a href=\"/products/pelvidex\" style=\"display:block;background:#3bd9ca;color:#000;font-weight:900;font-size:1rem;padding:1rem;border-radius:12px;text-align:center;text-decoration:none;border-bottom:4px solid #259b90;\">Get Your PelviDex&trade; Pelvic Floor Trainer!</a>\n      <div style=\"display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;padding:0.5rem 0;\">\n        <span style=\"background:#003087;color:#fff;font-weight:900;font-size:0.75rem;padding:4px 8px;border-radius:4px;\">P</span>\n        <span style=\"background:#1a1f71;color:#fff;font-weight:900;font-size:0.75rem;padding:4px 10px;border-radius:4px;\">VISA</span>\n        <span style=\"background:#eb001b;color:#fff;font-weight:900;font-size:0.75rem;padding:4px 8px;border-radius:4px;\">MC</span>\n        <span style=\"background:#007bc1;color:#fff;font-weight:900;font-size:0.6rem;padding:4px 6px;border-radius:4px;\">AMEX</span>\n        <span style=\"background:#ff6600;color:#fff;font-weight:900;font-size:0.6rem;padding:4px 6px;border-radius:4px;\">DISC</span>\n        <span style=\"background:#000;color:#fff;font-weight:700;font-size:0.75rem;padding:4px 10px;border-radius:4px;\">G Pay</span>\n        <span style=\"background:#000;color:#fff;font-weight:700;font-size:0.75rem;padding:4px 10px;border-radius:4px;\">&#63743; Pay</span>\n      </div>\n      <p style=\"text-align:center;font-size:0.75rem;color:#9ca3af;margin:0;\">&#128274; All transactions are secure and encrypted</p>\n    </div>\n  </div>\n</section>",
+        "title": "Order Today and Get 3 FREE Bonuses!",
+        "heading_size": "h2",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "column_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "special_offer_section": {
+      "type": "rich-text",
+      "blocks": {
+        "offer_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Special Offer On Now!",
+            "heading_size": "h2",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "offer_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try Your PelviDex™ Pelvic Floor Trainer NOW risk-free at an all-time low price!</p><ul><li><strong>50% OFF</strong> — PelviDex™ Pelvic Floor Trainer</li><li><strong>90-Day Results or Refund Guarantee</strong></li><li><strong>FREE Shipping</strong> ($9.95 Value)</li><li><strong>FREE Pelvic Health Video Course Masterclass</strong> ($449.95 Value)</li><li><strong>FREE eBook:</strong> Step-by-Step Kegel Contraction Program ($99.95 Value)</li><li><strong>FREE Nutrition Plan:</strong> How To Eat Your Way to a Stronger Pelvic Floor ($49.95 Value)</li></ul><p>Total Bonus Value: $599.85 — <strong>Today Only: FREE</strong></p>",
+            "alignment": "center",
+            "text_size": 16,
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "offer_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Your PelviDex™ Pelvic Floor Trainer!",
+            "button_link": "/products/pelvidex"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["offer_heading", "offer_text", "offer_button"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "endorsed_section": {
-      "type": "custom-liquid",
+      "type": "image-with-text",
+      "blocks": {
+        "end_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Endorsed & Recommended by Pelvic Health Experts",
+            "heading_size": "h2",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "end_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dr. Evelyn Williams and James Mitchell, renowned pelvic health specialists, have assessed and endorsed the PelviDex™.</p><p>They highlight its ability to <strong>strengthen the pelvic floor, improve bladder control, and reduce leaks</strong>—without surgery or medication.</p><p>With years of experience in bladder therapy, they praise PelviDex™ for its unique combination of biofeedback technology and muscle activation.</p><p>This allows men to rebuild strength and confidence—<strong>right from home.</strong></p>",
+            "alignment": "left",
+            "text_size": 16,
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["end_heading", "end_text"],
       "settings": {
-        "custom_liquid": "<style>\n  .end-section { background: #fff; padding: 3rem 1rem; border-top: 1px solid #e5e7eb; }\n  @media (min-width: 768px) { .end-section { padding: 4rem 1rem; } }\n  .end-inner { max-width: 1100px; margin: 0 auto; }\n  .end-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }\n  @media (min-width: 768px) { .end-grid { grid-template-columns: 1fr 1fr; } }\n  .end-content { display: flex; flex-direction: column; gap: 1.25rem; }\n  .end-heading { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900; color: #111827; line-height: 1.25; margin: 0; }\n  @media (min-width: 768px) { .end-heading { font-size: 1.875rem; } }\n  .end-text { font-size: 0.9375rem; color: #374151; line-height: 1.7; margin: 0; }\n  .end-text strong { color: #111827; font-weight: 700; }\n  .end-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }\n  .end-photo { position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 3/4; background: linear-gradient(to bottom, #e5e7eb, #d1d5db); display: flex; align-items: flex-end; }\n  .end-photo-1 { background: linear-gradient(160deg, #c7d8e8, #b0c4d8); }\n  .end-photo-2 { background: linear-gradient(160deg, #d4e0ea, #bfcedd); }\n  .end-photo svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%); opacity: 0.5; }\n  .end-caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.55); color: #fff; padding: 6px 10px; font-size: 0.75rem; font-weight: 600; line-height: 1.3; backdrop-filter: blur(2px); }\n  .end-caption small { display: block; font-weight: 400; font-size: 0.65rem; opacity: 0.85; }\n</style>\n<section class=\"end-section\">\n  <div class=\"end-inner\">\n    <div class=\"end-grid\">\n      <div class=\"end-content\">\n        <h2 class=\"end-heading\">Endorsed &amp; Recommended by Pelvic Health Experts</h2>\n        <p class=\"end-text\">Dr. Evelyn Williams and James Mitchell, renowned pelvic health specialists, have assessed and endorsed the PelviDex&trade;.</p>\n        <p class=\"end-text\">They highlight its ability to <strong>strengthen the pelvic floor, improve bladder control, and reduce leaks</strong>&mdash;without surgery or medication.</p>\n        <p class=\"end-text\">With years of experience in bladder therapy, they praise PelviDex&trade; for its <strong>unique combination of heat therapy and muscle stimulation</strong>.</p>\n        <p class=\"end-text\">This allows women to rebuild strength and confidence&mdash;<strong>right from home</strong>.</p>\n      </div>\n      <div class=\"end-photos\">\n        <div class=\"end-photo end-photo-1\">\n          <svg width=\"80\" height=\"80\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"1\">\n            <circle cx=\"12\" cy=\"8\" r=\"4\" fill=\"#d1d5db\"/>\n            <path d=\"M4 20c0-4 3.5-6 8-6s8 2 8 6\" fill=\"#d1d5db\"/>\n          </svg>\n          <div class=\"end-caption\">Evelyn Williams<small>Urologist, New York, USA</small></div>\n        </div>\n        <div class=\"end-photo end-photo-2\">\n          <svg width=\"80\" height=\"80\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#6b7280\" stroke-width=\"1\">\n            <circle cx=\"12\" cy=\"8\" r=\"4\" fill=\"#d1d5db\"/>\n            <path d=\"M4 20c0-4 3.5-6 8-6s8 2 8 6\" fill=\"#d1d5db\"/>\n          </svg>\n          <div class=\"end-caption\">James Mitchell<small>Pelvic Floor Therapist, Toronto, CA</small></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+        "height": "adapt",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "section_color_scheme": "background-1",
+        "content_layout": "no-overlap",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
-    "how_it_works_section": {
-      "type": "custom-liquid",
+    "cta_order_section": {
+      "type": "rich-text",
+      "blocks": {
+        "cta_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "CLAIM YOUR PELVIDEX™",
+            "heading_size": "h1",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "cta_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Order now to save 50% on your PelviDex™ Trainer with free worldwide shipping, backed by our 30-day risk-free guarantee.</p><p>✔ Includes 12-Month Hassle-Free Warranty<br/>✔ 100% Secure Checkout — Discretely Packaged & Shipped</p>",
+            "alignment": "center",
+            "text_size": 16,
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "cta_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Order Now - Get 50% Off",
+            "button_link": "#shopify-section-main"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["cta_heading", "cta_text", "cta_button"],
       "settings": {
-        "custom_liquid": "<style>\n  .hiw-section { background: #eaf6f4; padding: 3rem 1rem; border-top: 1px solid #d1ece8; }\n  @media (min-width: 768px) { .hiw-section { padding: 4rem 1rem; } }\n  .hiw-inner { max-width: 1000px; margin: 0 auto; }\n  .hiw-heading { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900; color: #111827; text-align: center; margin: 0 0 2rem; }\n  @media (min-width: 768px) { .hiw-heading { font-size: 2rem; } }\n  .hiw-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }\n  @media (min-width: 640px) { .hiw-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }\n  .hiw-step { display: flex; flex-direction: column; gap: 0.75rem; }\n  .hiw-step-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9375rem; color: #111827; text-align: center; }\n  .hiw-step-img { width: 100%; aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: #d1d5db; display: flex; align-items: center; justify-content: center; }\n  .hiw-step-img img { width: 100%; height: 100%; object-fit: cover; }\n  .hiw-step-desc { font-size: 0.9rem; color: #374151; line-height: 1.65; margin: 0; }\n  .hiw-step-desc strong { color: #111827; font-weight: 700; }\n</style>\n<section class=\"hiw-section\">\n  <div class=\"hiw-inner\">\n    <h2 class=\"hiw-heading\">Bladder Control Has Never Been Easier</h2>\n    <div class=\"hiw-grid\">\n      <div class=\"hiw-step\">\n        <p class=\"hiw-step-label\">Step 1</p>\n        <div class=\"hiw-step-img\">\n          <svg width=\"80\" height=\"80\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"1.2\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"7\" rx=\"2\" fill=\"#e5e7eb\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\" stroke=\"#9ca3af\"/></svg>\n        </div>\n        <p class=\"hiw-step-desc\"><strong>Sit &amp; Position</strong> &ndash; Place The PelviDex&trade; on any chair and sit down. The smart pressure-sensing cushion will detect when you&rsquo;re in the right spot to begin training.</p>\n      </div>\n      <div class=\"hiw-step\">\n        <p class=\"hiw-step-label\">Step 2</p>\n        <div class=\"hiw-step-img\">\n          <svg width=\"80\" height=\"80\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"1.2\"><rect x=\"7\" y=\"2\" width=\"10\" height=\"16\" rx=\"2\" fill=\"#e5e7eb\"/><circle cx=\"12\" cy=\"15\" r=\"1.5\" fill=\"#9ca3af\"/><line x1=\"9\" y1=\"6\" x2=\"15\" y2=\"6\" stroke=\"#9ca3af\"/><line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"9\" stroke=\"#9ca3af\"/></svg>\n        </div>\n        <p class=\"hiw-step-desc\"><strong>Open The App</strong> &ndash; Launch the PelviDex&trade; app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time.</p>\n      </div>\n      <div class=\"hiw-step\">\n        <p class=\"hiw-step-label\">Step 3</p>\n        <div class=\"hiw-step-img\">\n          <svg width=\"80\" height=\"80\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#9ca3af\" stroke-width=\"1.2\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" fill=\"#e5e7eb\"/><path d=\"M9 12l2 2 4-4\" stroke=\"#6bbfb0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <p class=\"hiw-step-desc\"><strong>Enjoy Lasting Control</strong> &ndash; Use for just 10&ndash;15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4&ndash;6 weeks.</p>\n      </div>\n    </div>\n  </div>\n</section>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "full_width": true,
+        "color_scheme": "inverse",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "newsletter": {
@@ -1103,11 +1606,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email-form"
-      ],
+      "block_order": ["heading", "paragraph", "email-form"],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -1129,19 +1628,20 @@
   "order": [
     "page_scroll_progress_frxPeK",
     "announcement_bar",
-    "hero_media_section",
+    "hero_section",
     "benefits_section",
     "customer_reviews_section",
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
+    "main",
+    "how_it_works_section",
     "whats_in_the_box_section",
     "comparison_table_section",
     "trust_badges_section",
     "free_bonuses_section",
+    "special_offer_section",
     "endorsed_section",
-    "how_it_works_section",
-    "main",
     "cta_order_section",
     "newsletter"
   ]
