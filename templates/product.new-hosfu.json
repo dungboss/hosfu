@@ -111,6 +111,61 @@
         "product_media_index": "0"
       }
     },
+    "expert_endorsement_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "expert_heading_blk": {
+          "type": "heading",
+          "settings": {
+            "title": "Pelvic Health Expert",
+            "heading_size": "h3",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "expert_quote_blk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"Strengthening your pelvic floor is the key to lasting bladder control—The PelviDex™ makes it easy and effective for men of any age.\"</p>",
+            "alignment": "left",
+            "text_size": 15,
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "expert_attribution_blk": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>David Carter, Urologist</em></p>",
+            "alignment": "left",
+            "text_size": 14,
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["expert_heading_blk", "expert_quote_blk", "expert_attribution_blk"],
+      "settings": {
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "content_layout": "no-overlap",
+        "layout": "image_first",
+        "desktop_media_width": 25,
+        "mobile_side_by_side": true,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "full_desktop_width": false,
+        "image_url": "https://img.funnelish.com/11220/875086/1754322031-Person.png",
+        "image_url_alt": "David Carter, Urologist",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "benefits_section": {
       "type": "multicolumn",
       "blocks": {
@@ -1636,6 +1691,7 @@
     "page_scroll_progress_frxPeK",
     "announcement_bar",
     "hero_section",
+    "expert_endorsement_section",
     "benefits_section",
     "customer_reviews_section",
     "content_blocks_section_1",

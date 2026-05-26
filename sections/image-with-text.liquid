@@ -18,6 +18,35 @@
     }
   }
 
+  {% if section.settings.mobile_side_by_side %}
+    #image-with-text-{{ section.id }} .image-with-text__grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    #image-with-text-{{ section.id }} .image-with-text__media-item {
+      width: {{ section.settings.desktop_media_width }}%;
+      flex-shrink: 0;
+    }
+    #image-with-text-{{ section.id }} .image-with-text__text-item {
+      width: {{ 100 | minus: section.settings.desktop_media_width }}%;
+      flex: 1;
+    }
+  {% endif %}
+
+  {% if section.settings.image_url != blank and section.settings.image == blank %}
+    #image-with-text-{{ section.id }} .global-media-settings {
+      overflow: visible !important;
+      height: auto !important;
+      padding-bottom: 0 !important;
+      background: transparent !important;
+    }
+    #image-with-text-{{ section.id }} .image-with-text__media-item > * {
+      overflow: visible !important;
+    }
+  {% endif %}
+
   .color-scheme-{{ section.id }}.color-custom {
     --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
     --gradient-background: {% if section.settings.custom_gradient_background != blank %}{{ section.settings.custom_gradient_background }}{% else %}{{ section.settings.custom_colors_background }}{% endif %};
@@ -53,7 +82,8 @@
   endif
 
   assign effective_image = section.settings.image
-  if effective_image == blank and section.settings.video == blank and template contains 'product' and product.media.size > 0
+  assign effective_image_url = section.settings.image_url
+  if effective_image == blank and effective_image_url == blank and section.settings.video == blank and template contains 'product' and product.media.size > 0
     assign media_index = section.settings.product_media_index | plus: 0 | at_least: 0
     assign media_index = media_index | modulo: product.media.size
     assign effective_image = product.media[media_index]
@@ -132,6 +162,13 @@
               | image_url: width: 1500
               | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
             }}
+          {%- elsif effective_image_url != blank -%}
+            <img
+              src="{{ effective_image_url }}"
+              alt="{{ section.settings.image_url_alt | escape }}"
+              loading="lazy"
+              style="width: 100%; height: auto; display: block;"
+            >
           {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -192,6 +229,17 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "External image URL",
+      "info": "Use an external image URL when no uploaded image is set."
+    },
+    {
+      "type": "text",
+      "id": "image_url_alt",
+      "label": "External image alt text"
     },
     {
       "type": "header",
@@ -478,6 +526,12 @@
       "default": false
     },
     {
+      "type": "checkbox",
+      "id": "mobile_side_by_side",
+      "label": "Keep side-by-side on mobile",
+      "default": false
+    },
+    {
       "type": "select",
       "id": "mobile_direction",
       "options": [
@@ -636,6 +690,9 @@
     },
     {
       "type": "collapsible-row"
+    },
+    {
+      "type": "expert-quote"
     }
   ],
   "presets": [
