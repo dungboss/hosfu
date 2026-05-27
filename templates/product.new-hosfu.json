@@ -196,7 +196,9 @@
           "settings": {
             "caption": "The Truth",
             "title": "You're Not Too Old to Fix This—And Here's Why",
-            "text": "<p>Many men believe that once bladder leaks start, there's no way to reverse them. <strong>But that's simply not true.</strong></p><p>Your pelvic floor is a muscle—and like any muscle, <strong>it can be strengthened at any age.</strong></p><p>Studies show that <strong>men in their 40s to 90s</strong> can regain bladder control by activating and strengthening these muscles properly.</p><p>Most men struggle to perform pelvic floor exercises correctly. They squeeze the wrong muscles, forget to stay consistent, and then give up when they don't see results.</p><p>The good news? <strong>It's not too late to stop the cycle.</strong></p>"
+            "text": "<p>Many men believe that once bladder leaks start, there's no way to reverse them. <strong>But that's simply not true.</strong></p><p>Your pelvic floor is a muscle—and like any muscle, <strong>it can be strengthened at any age.</strong></p><p>Studies show that <strong>men in their 40s to 90s</strong> can regain bladder control by activating and strengthening these muscles properly.</p><p>Most men struggle to perform pelvic floor exercises correctly. They squeeze the wrong muscles, forget to stay consistent, and then give up when they don't see results.</p><p>The good news? <strong>It's not too late to stop the cycle.</strong></p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
           }
         },
         "row_introducing": {
@@ -204,7 +206,9 @@
           "settings": {
             "caption": "The Solution",
             "title": "Introducing: The PelviDex™ Pelvic Floor Trainer",
-            "text": "<p>The PelviDex™ helps men over 60 regain bladder control by <strong>guiding pelvic floor contractions with real-time biofeedback.</strong></p><p>It uses <strong>pressure-sensing technology</strong> to detect and strengthen the muscle responsible for leaks and urgency.</p><p>This helps <strong>reduce accidents,</strong> improve control, and restore confidence over time.</p><p>It enhances your <strong>mind-muscle connection,</strong> making pelvic floor training simple, visual, and effective — no guesswork.</p><p>The app-based system includes <strong>interactive games and structured programs,</strong> designed to keep you engaged and improving every week.</p><p>With just <strong>5-10 minutes a day,</strong> most men start noticing results in as little as <strong>4–6 weeks.</strong></p>"
+            "text": "<p>The PelviDex™ helps men over 60 regain bladder control by <strong>guiding pelvic floor contractions with real-time biofeedback.</strong></p><p>It uses <strong>pressure-sensing technology</strong> to detect and strengthen the muscle responsible for leaks and urgency.</p><p>This helps <strong>reduce accidents,</strong> improve control, and restore confidence over time.</p><p>It enhances your <strong>mind-muscle connection,</strong> making pelvic floor training simple, visual, and effective — no guesswork.</p><p>The app-based system includes <strong>interactive games and structured programs,</strong> designed to keep you engaged and improving every week.</p><p>With just <strong>5-10 minutes a day,</strong> most men start noticing results in as little as <strong>4–6 weeks.</strong></p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
           }
         }
       },
@@ -214,6 +218,7 @@
         "desktop_image_width": "medium",
         "heading_size": "h2",
         "image_layout": "alternate-left",
+        "button_style": "primary",
         "row_color_scheme": "background-1",
         "section_color_scheme": "background-1",
         "padding_top": 52,
@@ -229,7 +234,9 @@
           "settings": {
             "caption": "Expert Backed",
             "title": "Designed by Experts in Men's Pelvic Health",
-            "text": "<p>The PelviDex™ is <strong>backed by research</strong> in pelvic floor therapy and muscle activation.</p><p>It also comes with a <strong>free Kegel eBook and video course</strong>, designed by experts to help you track your progress and maximize results.</p><p>For less than the cost of pads or expensive procedures you can <strong>regain confidence with a proven, at-home solution</strong>.</p>"
+            "text": "<p>The PelviDex™ is <strong>backed by research</strong> in pelvic floor therapy and muscle activation.</p><p>It also comes with a <strong>free Kegel eBook and video course</strong>, designed by experts to help you track your progress and maximize results.</p><p>For less than the cost of pads or expensive procedures you can <strong>regain confidence with a proven, at-home solution</strong>.</p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
           }
         },
         "row_wait": {
@@ -249,6 +256,7 @@
         "desktop_image_width": "medium",
         "heading_size": "h2",
         "image_layout": "alternate-right",
+        "button_style": "primary",
         "row_color_scheme": "background-1",
         "section_color_scheme": "background-1",
         "padding_top": 52,
@@ -264,7 +272,9 @@
           "settings": {
             "caption": "How It Works",
             "title": "How The PelviDex™ Works",
-            "text": "<p>The PelviDex™ is the only pelvic floor trainer for men that combines <strong>real-time biofeedback</strong> with <strong>precision pressure guidance.</strong></p><p><strong>Biofeedback Technology</strong> — Tracks your pelvic muscle contractions as you squeeze and relax. This gives you <strong>instant feedback</strong> so you know you're training the right muscles.</p><p><strong>App-Guided Sessions</strong> — The connected free app adjusts difficulty based on your performance, leveling up as you improve. It personalizes your routine over time, helping you <strong>build strength, endurance, and control.</strong></p><p>Think of it like a personal trainer for your pelvic floor. One charge can last 2 weeks when used 2-3 times per day.</p>"
+            "text": "<p>The PelviDex™ is the only pelvic floor trainer for men that combines <strong>real-time biofeedback</strong> with <strong>precision pressure guidance.</strong></p><p><strong>Biofeedback Technology</strong> — Tracks your pelvic muscle contractions as you squeeze and relax. This gives you <strong>instant feedback</strong> so you know you're training the right muscles.</p><p><strong>App-Guided Sessions</strong> — The connected free app adjusts difficulty based on your performance, leveling up as you improve. It personalizes your routine over time, helping you <strong>build strength, endurance, and control.</strong></p><p>Think of it like a personal trainer for your pelvic floor. One charge can last 2 weeks when used 2-3 times per day.</p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
           }
         },
         "row_guarantee": {
@@ -272,7 +282,9 @@
           "settings": {
             "caption": "Our Guarantee",
             "title": "Try It for 90 Days, 100% Risk-Free",
-            "text": "<p>Here's the deal: we believe in this product so much that we <strong>don't want you to spend a dime until you are 100% certain that it works for you.</strong></p><p>That's why we are offering a <strong>90-day \"Results or Refund\" Guarantee.</strong></p><p>Simply, get yourself The PelviDex™ today, use it for 90 days, and then make your decision based on the results.</p><p><strong>If you are not absolutely thrilled with the results, we will issue you an immediate refund.</strong></p><p>In other words, you are only paying if it turns out to be a complete lifesaver.</p>"
+            "text": "<p>Here's the deal: we believe in this product so much that we <strong>don't want you to spend a dime until you are 100% certain that it works for you.</strong></p><p>That's why we are offering a <strong>90-day \"Results or Refund\" Guarantee.</strong></p><p>Simply, get yourself The PelviDex™ today, use it for 90 days, and then make your decision based on the results.</p><p><strong>If you are not absolutely thrilled with the results, we will issue you an immediate refund.</strong></p><p>In other words, you are only paying if it turns out to be a complete lifesaver.</p>",
+            "button_label": "Get 50% off today only",
+            "button_link": "#order-form"
           }
         }
       },
@@ -282,6 +294,7 @@
         "desktop_image_width": "medium",
         "heading_size": "h2",
         "image_layout": "alternate-left",
+        "button_style": "primary",
         "row_color_scheme": "background-1",
         "section_color_scheme": "background-1",
         "padding_top": 52,
@@ -1537,90 +1550,288 @@
         "product_media_index": "2"
       }
     },
-    "cta_order_section": {
-      "type": "rich-text",
+    "bladder_control_section": {
+      "type": "custom-liquid",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "color_scheme": "background-1",
+        "custom_liquid": "<style>.bladder-steps{padding:52px 20px;text-align:center;}.bladder-steps h2{font-size:clamp(22px,4vw,32px);font-weight:700;margin-bottom:36px;}.bladder-steps__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:0 auto;}.bladder-steps__item{display:flex;flex-direction:column;align-items:center;text-align:center;}.bladder-steps__item img{width:100%;max-width:280px;height:auto;border-radius:8px;margin-bottom:14px;display:block;}.bladder-steps__item h3{font-size:16px;font-weight:700;margin:0 0 10px;}.bladder-steps__item p{font-size:14px;margin:0;color:inherit;}@media(max-width:749px){.bladder-steps__grid{grid-template-columns:1fr;max-width:360px;}}</style><div class=\"bladder-steps\"><h2>Bladder Control Has Never Been Easier</h2><div class=\"bladder-steps__grid\"><div class=\"bladder-steps__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1755537525-45e0cf82-a45e-418c-af87-6f76ed3e83d4mp4.jpg\" alt=\"Step 1\" loading=\"lazy\"/><h3>Step 1: Sit &amp; Position</h3><p>Place The PelviDex&#8482; on any chair and sit down. The smart pressure-sensing cushion will detect when you&#39;re in the right spot to begin training.</p></div><div class=\"bladder-steps__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1755537541-ab33e1cc-3980-4ab9-8fcb-fc3f64577a53mp4.jpg\" alt=\"Step 2\" loading=\"lazy\"/><h3>Step 2: Open The App</h3><p>Launch the PelviDex&#8482; app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time.</p></div><div class=\"bladder-steps__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1755537553-28251ada-44d7-4c2c-96f8-b3cd36b42bcfmp4.jpg\" alt=\"Step 3\" loading=\"lazy\"/><h3>Step 3: Enjoy Lasting Control</h3><p>Use for just 10&#8211;15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4&#8211;6 weeks.</p></div></div></div>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "real_words_section": {
+      "type": "facebook-testimonials",
       "blocks": {
-        "cta_heading": {
-          "type": "heading",
+        "column_WYqrYL": {
+          "type": "column",
           "settings": {
-            "title": "CLAIM YOUR PELVIDEX™",
-            "heading_size": "h1",
-            "margin_top": 0,
-            "margin_bottom": 15
+            "post_author": "Nat Thomas",
+            "post_author_avatar": "shopify://shop_images/t_i_xu_ng_3.png",
+            "post_author_verified": false,
+            "post_time": "2h ago",
+            "post_text": "<p>I was skeptical at first, but the quality of the HOSFU device is impressive. The case is premium and the setup was a breeze. Already feeling more 'in control' after just 10 days. Highly recommend for anyone on the fence!</p>",
+            "post_image": "shopify://shop_images/t_i_xu_ng_2.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "2.3k",
+            "post_comments_text": "65 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
+        "column_cFizfx": {
+          "type": "column",
+          "settings": {
+            "post_author": "Edgar Moran",
+            "post_author_avatar": "shopify://shop_images/t_i_xu_ng.jpg",
+            "post_author_verified": false,
+            "post_time": "5h ago",
+            "post_text": "<p>Fast shipping and 100% discreet as promised. The unboxing experience was great, and the device is very quiet. I can use it while watching my morning news without any hassle. Finally, a solution that makes sense.</p>",
+            "post_image": "shopify://shop_images/t_i_xu_ng_5.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "658",
+            "post_comments_text": "46 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
+        "column_weKzrp": {
+          "type": "column",
+          "settings": {
+            "post_author": "Kim Caton",
+            "post_author_avatar": "shopify://shop_images/t_i_xu_ng_1.jpg",
+            "post_author_verified": false,
+            "post_time": "10h ago",
+            "post_text": "<p>This is so much better than trying to do Kegels on your own. The biofeedback technology actually shows you if you're doing it right. It’s simple, effective, and the app is very easy to navigate even for someone my age.</p>",
+            "post_image": "shopify://shop_images/t_i_xu_ng_4.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "845",
+            "post_comments_text": "54 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
+        "column_WCRMNm": {
+          "type": "column",
+          "settings": {
+            "post_author": "Michell Alvarez",
+            "post_author_verified": false,
+            "post_time": "1 day ago",
+            "post_text": "<p>The best investment I've made for my health this year. I've noticed a significant decrease in my nightly bathroom trips. I'm finally getting a full night's sleep again. Thank you, HOSFU!</p>",
+            "post_image": "shopify://shop_images/t_i_xu_ng.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "1.1k",
+            "post_comments_text": "26 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
+        "review_1": {
+          "type": "column",
+          "settings": {
+            "post_author": "Mark T.",
+            "post_author_avatar": "shopify://shop_images/b27a418cf6849a21dfba046d8db11c34.jpg",
+            "post_author_verified": true,
+            "post_time": "2 weeks ago",
+            "post_text": "<p>I had tried on-and-off routines before, but this felt simple enough to actually keep using. It fits perfectly into my daily routine. The data on the app keeps me motivated to stay consistent every day.</p>",
+            "post_image": "shopify://shop_images/Gemini_Generated_Image_szmtk7szmtk7szmt.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "148",
+            "post_comments_text": "23 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        },
+        "review_2": {
+          "type": "column",
+          "settings": {
+            "post_author": "Jason R.",
+            "post_author_avatar": "shopify://shop_images/75153-1.jpg",
+            "post_author_verified": true,
+            "post_time": "1 month ago",
+            "post_text": "<p>The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it. It’s discreet, non-invasive, and it actually delivers real results. Worth every penny.</p>",
+            "post_image": "shopify://shop_images/t_i_xu_ng_1.png",
+            "post_reactions": "like, love, care",
+            "post_reactions_text": "159",
+            "post_comments_text": "31 Comments",
+            "comment_1_author": "Comment author",
+            "comment_1_author_verified": false,
+            "comment_1_time": "2h ago",
+            "comment_1_text": "",
+            "comment_2_author": "Comment author",
+            "comment_2_author_verified": false,
+            "comment_2_time": "3h ago",
+            "comment_2_text": ""
+          }
+        }
+      },
+      "block_order": ["column_WYqrYL", "column_cFizfx", "column_weKzrp", "column_WCRMNm", "review_1", "review_2"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "Real Words From Men Using It",
+        "heading_size": "h2",
+        "color_scheme": "custom",
+        "custom_colors_background": "#e9e9e9",
+        "custom_colors_text": "#000000",
+        "type": "slide",
+        "autoplay": false,
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "slider_mobile": true,
+        "post_bg_color": "#ffffff",
+        "post_text_color": "#333333",
+        "comments_bg_color": "#f0f2f5",
+        "separators_color": "#a4b0be",
+        "post_border_color": "#e7c6d4",
+        "border_width": 0,
+        "like_label": "Like",
+        "comment_label": "Comment",
+        "reply_label": "Reply",
+        "share_label": "Share",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "faq_section": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How is this different from doing Kegels on my own?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
+            "page": ""
           },
           "blocks": {}
         },
-        "cta_text": {
-          "type": "text",
+        "faq_2": {
+          "type": "collapsible-row-content",
           "settings": {
-            "text": "<p>Order now to save 50% on your PelviDex™ Trainer with free worldwide shipping, backed by our 30-day risk-free guarantee.</p><p>✔ Includes 12-Month Hassle-Free Warranty<br/>✔ 100% Secure Checkout — Discretely Packaged & Shipped</p>",
-            "alignment": "center",
-            "text_size": 16,
-            "margin_top": 0,
-            "margin_bottom": 21
+            "open": false,
+            "heading": "Is this a medical treatment?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
+            "page": ""
           },
           "blocks": {}
         },
-        "cta_button": {
-          "type": "button",
+        "faq_3": {
+          "type": "collapsible-row-content",
           "settings": {
-            "button_label": "Get 50% off today only",
-            "button_link": "#shopify-section-main"
+            "open": false,
+            "heading": "Who is this trainer designed for?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_4": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How often should I use it?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_5": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Is it rechargeable?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_6": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Will it be discreet?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_7": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "What if it doesn’t work for me?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>We stand behind our product with a <strong>90-Day Results or Refund Guarantee</strong>. If you don’t see improvement after consistent use, simply contact our support team for a full refund—no questions asked.</p>",
+            "page": ""
           },
           "blocks": {}
         }
       },
-      "block_order": ["cta_heading", "cta_text", "cta_button"],
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7"],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "full_width": true,
-        "color_scheme": "inverse",
+        "title": "<strong>Questions Men Ask Before Starting</strong>",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
         "padding_top": 52,
         "padding_bottom": 52
       }
     },
-    "newsletter": {
-      "type": "newsletter",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Subscribe to our emails",
-            "title_highlight_color": "#6d388b",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Join our email list for exclusive offers and the latest news. </p>"
-          }
-        },
-        "email-form": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": ["heading", "paragraph", "email-form"],
+    "medical_disclaimer_section": {
+      "type": "custom-liquid",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "button_type": "solid",
-        "button_label": "Sign up",
-        "button_style_secondary": false,
-        "color_scheme": "background-2",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "full_width": true,
-        "padding_top": 68,
-        "padding_bottom": 52
+        "color_scheme": "background-1",
+        "custom_liquid": "<style>#shopify-section-group-footer-group{display:none !important;}.medical-disclaimer{max-width:900px;margin:0 auto;padding:32px 20px;border-top:1px solid #ddd;}.medical-disclaimer p{font-size:12px;color:#666;line-height:1.6;margin:0;text-align:center;}.medical-disclaimer strong{color:#444;text-transform:uppercase;letter-spacing:0.5px;}</style><div class=\"medical-disclaimer\"><p><strong>Medical &amp; Health Disclaimer:</strong> The information and other content provided in this page, or in any linked materials, are not intended and should not be construed as medical advice, nor is the information a substitute for professional medical expertise or treatment.</p><br/><p>If you or any other person has a medical concern, you should consult with your health care provider or seek other professional medical treatment. Never disregard professional medical advice or delay in seeking it because of something that have read on this page or in any linked materials. If you think you may have a medical emergency, call your doctor or emergency services immediately.</p></div>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -1642,7 +1853,9 @@
     "free_bonuses_section",
     "special_offer_section",
     "endorsed_section",
-    "cta_order_section",
-    "newsletter"
+    "bladder_control_section",
+    "real_words_section",
+    "faq_section",
+    "medical_disclaimer_section"
   ]
 }
