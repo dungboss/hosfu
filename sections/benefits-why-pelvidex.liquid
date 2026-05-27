@@ -1,0 +1,169 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .why-pelvidex-{{ section.id }} {
+    text-align: center;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__title {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 700;
+    margin-bottom: 36px;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .why-pelvidex-{{ section.id }} .why-pelvidex__item p {
+    font-size: 14px;
+    margin: 0;
+  }
+  @media (max-width: 749px) {
+    .why-pelvidex-{{ section.id }} .why-pelvidex__grid {
+      grid-template-columns: 1fr;
+      max-width: 340px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div class="why-pelvidex-{{ section.id }}">
+    {%- unless section.settings.title == blank -%}
+      <h2 class="why-pelvidex__title">{{ section.settings.title }}</h2>
+    {%- endunless -%}
+
+    <div class="why-pelvidex__grid">
+      {%- for block in section.blocks -%}
+        <div class="why-pelvidex__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{
+              block.settings.image
+              | image_url: width: 600
+              | image_tag:
+                loading: 'lazy',
+                widths: '300, 600',
+                alt: block.settings.title
+            }}
+          {%- elsif block.settings.image_url != blank -%}
+            <img src="{{ block.settings.image_url }}" alt="{{ block.settings.title }}" loading="lazy" />
+          {%- endif -%}
+          {%- unless block.settings.title == blank -%}
+            <h3>{{ block.settings.title }}</h3>
+          {%- endunless -%}
+          {%- unless block.settings.text == blank -%}
+            <p>{{ block.settings.text }}</p>
+          {%- endunless -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why PelviDex",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Why do you need the PelviDex™?"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL (external)",
+          "info": "Used as fallback if no image is selected above."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Column title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why PelviDex"
+    }
+  ]
+}
+{% endschema %}

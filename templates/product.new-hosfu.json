@@ -345,14 +345,47 @@
       }
     },
     "benefits_section": {
-      "type": "custom-liquid",
+      "type": "benefits-why-pelvidex",
+      "blocks": {
+        "benefit_1": {
+          "type": "column",
+          "settings": {
+            "image_url": "https://img.funnelish.com/11220/thumbnails/1755537130-be50df97-fbb8-42e0-add0-7fa28d78482fmp4.jpg",
+            "title": "Stops Leaks",
+            "text": "Regain control and stop unexpected leaks, freeing you from pads and daily anxiety."
+          }
+        },
+        "benefit_2": {
+          "type": "column",
+          "settings": {
+            "image_url": "https://img.funnelish.com/90140/thumbnails/1756055021-2940fd26-fd29-409a-b74e-b4c83a029977mp4.jpg",
+            "title": "Guided Strengthening",
+            "text": "Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form."
+          }
+        },
+        "benefit_3": {
+          "type": "column",
+          "settings": {
+            "image_url": "https://img.funnelish.com/90140/thumbnails/1756055040-ac4c9ace-919f-42ef-8195-0ccb86a95a3fmp4.jpg",
+            "title": "Clinically Proven",
+            "text": "Proven muscle training, backed by scientific urology research for safe, natural rehabilitation."
+          }
+        },
+        "benefit_4": {
+          "type": "column",
+          "settings": {
+            "image_url": "https://img.funnelish.com/11220/thumbnails/1741613246-9d340a27-4186-4623-8f69-de7176a42928mp4.jpg",
+            "title": "A Long-Term Solution",
+            "text": "Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers."
+          }
+        }
+      },
+      "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>.benefits-why{padding:52px 20px;text-align:center;}.benefits-why h2{font-size:clamp(22px,4vw,32px);font-weight:700;margin-bottom:36px;}.benefits-why__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto;}.benefits-why__item{display:flex;flex-direction:column;align-items:center;text-align:center;}.benefits-why__item img{width:100%;max-width:280px;height:auto;border-radius:8px;margin-bottom:14px;display:block;}.benefits-why__item h3{font-size:16px;font-weight:700;margin:0 0 8px;}.benefits-why__item p{font-size:14px;margin:0;color:inherit;}@media(max-width:749px){.benefits-why__grid{grid-template-columns:1fr;max-width:340px;}}</style><div class=\"benefits-why\"><h2>Why do you need the PelviDex&#8482;?</h2><div class=\"benefits-why__grid\"><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1755537130-be50df97-fbb8-42e0-add0-7fa28d78482fmp4.jpg\" alt=\"Stops Leaks\" loading=\"lazy\"/><h3>Stops Leaks</h3><p>Regain control and stop unexpected leaks, freeing you from pads and daily anxiety.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/90140/thumbnails/1756055021-2940fd26-fd29-409a-b74e-b4c83a029977mp4.jpg\" alt=\"Guided Strengthening\" loading=\"lazy\"/><h3>Guided Strengthening</h3><p>Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/90140/thumbnails/1756055040-ac4c9ace-919f-42ef-8195-0ccb86a95a3fmp4.jpg\" alt=\"Clinically Proven\" loading=\"lazy\"/><h3>Clinically Proven</h3><p>Proven muscle training, backed by scientific urology research for safe, natural rehabilitation.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1741613246-9d340a27-4186-4623-8f69-de7176a42928mp4.jpg\" alt=\"A Long-Term Solution\" loading=\"lazy\"/><h3>A Long-Term Solution</h3><p>Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers.</p></div></div></div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "title": "Why do you need the PelviDex™?",
+        "columns_desktop": 4,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "content_blocks_section_1": {
