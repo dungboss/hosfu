@@ -192,6 +192,13 @@
                 {{ block.shopify_attributes }}
               >
                 <div class="multicolumn-card multicolumn-card--media-{{ section.settings.media_position }} content-container color-{{ section.settings.cards_color_scheme }} cards-color-scheme-{{ section.id }} gradient{{ bg_diff_class }} {{ section.settings.column_alignment }} animate-item animate-item--child">
+                  {%- if block.settings.image_url != blank -%}
+                    <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width multicolumn-card-spacing">
+                      <div class="media media--transparent">
+                        <img src="{{ block.settings.image_url }}" alt="{{ block.settings.title }}" loading="lazy" style="width:100%;height:auto;display:block;" />
+                      </div>
+                    </div>
+                  {%- endif -%}
                   {%- if block.settings.image != blank or block.settings.video != blank -%}
                     {% if section.settings.image_ratio == 'circle' %}
                       {% assign spaced_image = true %}
@@ -1608,6 +1615,12 @@
           "type": "header",
           "content": "Media",
           "info": "NOTE: Media is only available if Style is set to Cards"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL (external)",
+          "info": "Use an external image URL. If set, this takes priority over the image picker below."
         },
         {
           "type": "image_picker",

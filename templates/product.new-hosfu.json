@@ -166,89 +166,26 @@
         "padding_bottom": 36
       }
     },
-    "benefits_section": {
-      "type": "multicolumn",
-      "blocks": {
-        "benefit_1": {
-          "type": "column",
-          "settings": {
-            "title": "Stops Leaks",
-            "text": "<p>Regain control and stop unexpected leaks, freeing you from pads and daily anxiety.</p>"
-          }
-        },
-        "benefit_2": {
-          "type": "column",
-          "settings": {
-            "title": "Guided Strengthening",
-            "text": "<p>Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form.</p>"
-          }
-        },
-        "benefit_3": {
-          "type": "column",
-          "settings": {
-            "title": "Clinically Proven",
-            "text": "<p>Proven muscle training, backed by scientific urology research for safe, natural rehabilitation.</p>"
-          }
-        },
-        "benefit_4": {
-          "type": "column",
-          "settings": {
-            "title": "A Long-Term Solution",
-            "text": "<p>Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers.</p>"
-          }
-        }
-      },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
+    "as_seen_on_section": {
+      "type": "custom-liquid",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "title": "Why do you need the PelviDex™?",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "columns_mobile": "1",
-        "column_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 52,
-        "padding_bottom": 52
+        "custom_liquid": "<div style=\"text-align:center;padding:8px 16px 0;\"><p style=\"font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:10px;\">As Seen On</p><img src=\"https://img.funnelish.com/42574/338308/1714609553-1712053436643_MOBILE_trusted_by.png\" alt=\"As Seen On\" style=\"max-width:100%;width:600px;height:auto;display:inline-block;\" /></div>",
+        "padding_top": 20,
+        "padding_bottom": 8
       }
     },
-    "customer_reviews_section": {
-      "type": "testimonials",
-      "blocks": {
-        "review_1": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "text": "<p>\"I was starting to feel like I couldn't leave the house without scouting every bathroom along the way. One night I didn't make it in time and had to throw out my pants in a gas station bin. That was it for me. I found the PelviDex™, and within 3 weeks, I was sleeping through the night again. No more leaks, no more stress. I feel like myself again — and my wife noticed too.\"</p>",
-            "author": "James C."
-          }
-        },
-        "review_2": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "text": "<p>\"I used to laugh off the leaks… until it happened on the golf course. I had to fake an early 'back injury' and head home soaked. My buddies still joke about it. I felt humiliated. A friend told me about the PelviDex™, and wow — this thing actually works. Just 10 minutes a day, and I'm back in control. I even played 18 holes last weekend, dry as a bone.\"</p>",
-            "author": "Richard W."
-          }
-        },
-        "review_3": {
-          "type": "column",
-          "settings": {
-            "star_rating": 5,
-            "text": "<p>\"Post-surgery, I was getting up 4–5 times a night and leaking during the day. I started carrying extra underwear everywhere. It messed with my confidence. Found the PelviDex™ online, figured I'd give it a shot. 4 weeks in, and I'm finally sleeping through the night again. No accidents. No stress. Honestly? I didn't think I'd feel normal again.\"</p>",
-            "author": "Albert K."
-          }
-        }
-      },
-      "block_order": ["review_1", "review_2", "review_3"],
+    "benefits_section": {
+      "type": "custom-liquid",
+      "blocks": {},
+      "block_order": [],
       "settings": {
-        "title": "Real Men. Real Results.",
-        "heading_size": "h2",
-        "show_stars": true,
-        "star_color": "#f59e0b",
-        "bg_star_color": "#e5e7eb",
-        "columns_desktop": 3,
         "color_scheme": "background-1",
-        "padding_top": 52,
-        "padding_bottom": 52
+        "custom_liquid": "<style>.benefits-why{padding:52px 20px;text-align:center;}.benefits-why h2{font-size:clamp(22px,4vw,32px);font-weight:700;margin-bottom:36px;}.benefits-why__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto;}.benefits-why__item{display:flex;flex-direction:column;align-items:center;text-align:center;}.benefits-why__item img{width:100%;max-width:280px;height:auto;border-radius:8px;margin-bottom:14px;display:block;}.benefits-why__item h3{font-size:16px;font-weight:700;margin:0 0 8px;}.benefits-why__item p{font-size:14px;margin:0;color:inherit;}@media(max-width:749px){.benefits-why__grid{grid-template-columns:1fr;max-width:340px;}}</style><div class=\"benefits-why\"><h2>Why do you need the PelviDex&#8482;?</h2><div class=\"benefits-why__grid\"><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1755537130-be50df97-fbb8-42e0-add0-7fa28d78482fmp4.jpg\" alt=\"Stops Leaks\" loading=\"lazy\"/><h3>Stops Leaks</h3><p>Regain control and stop unexpected leaks, freeing you from pads and daily anxiety.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/90140/thumbnails/1756055021-2940fd26-fd29-409a-b74e-b4c83a029977mp4.jpg\" alt=\"Guided Strengthening\" loading=\"lazy\"/><h3>Guided Strengthening</h3><p>Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/90140/thumbnails/1756055040-ac4c9ace-919f-42ef-8195-0ccb86a95a3fmp4.jpg\" alt=\"Clinically Proven\" loading=\"lazy\"/><h3>Clinically Proven</h3><p>Proven muscle training, backed by scientific urology research for safe, natural rehabilitation.</p></div><div class=\"benefits-why__item\"><img src=\"https://img.funnelish.com/11220/thumbnails/1741613246-9d340a27-4186-4623-8f69-de7176a42928mp4.jpg\" alt=\"A Long-Term Solution\" loading=\"lazy\"/><h3>A Long-Term Solution</h3><p>Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers.</p></div></div></div>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "content_blocks_section_1": {
@@ -1541,7 +1478,7 @@
         "offer_button": {
           "type": "button",
           "settings": {
-            "button_label": "Get Your PelviDex™ Pelvic Floor Trainer!",
+            "button_label": "Get 50% off today only",
             "button_link": "/products/pelvidex"
           },
           "blocks": {}
@@ -1627,7 +1564,7 @@
         "cta_button": {
           "type": "button",
           "settings": {
-            "button_label": "Order Now - Get 50% Off",
+            "button_label": "Get 50% off today only",
             "button_link": "#shopify-section-main"
           },
           "blocks": {}
@@ -1692,8 +1629,8 @@
     "announcement_bar",
     "hero_section",
     "expert_endorsement_section",
+    "as_seen_on_section",
     "benefits_section",
-    "customer_reviews_section",
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
