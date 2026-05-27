@@ -8,6 +8,7 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "theme-new-hosfu",
   "sections": {
     "page_scroll_progress_frxPeK": {
       "type": "page-scroll-progress",
