@@ -20,63 +20,17 @@
         "position": "top"
       }
     },
-    "announcement_bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_sale": {
-          "type": "announcement",
-          "settings": {
-            "text": "SALE: FREE Shipping + 50% OFF Today ONLY!",
-            "text_alignment": "center",
-            "mobile_text_size": 16,
-            "desktop_text_size": 20,
-            "icon": "storefront",
-            "filled_icon": false,
-            "mobile_icon_size": 20,
-            "desktop_icon_size": 26,
-            "desktop_layout": "horizontal",
-            "mobile_layout": "horizontal"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_sale"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "columns_desktop": 1,
-        "columns_mobile": 1,
-        "desktop_spacing": 8,
-        "mobile_spacing": 8,
-        "show_separator": false,
-        "color_scheme": "custom",
-        "custom_colors_background": "#e2e63f",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#000000",
-        "slider_mobile": false,
-        "slider_desktop": false,
-        "type": "loop",
-        "autoplay": false,
-        "autoplay_speed": 3,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero_section": {
       "type": "image-with-text",
       "blocks": {
         "hero_heading": {
           "type": "heading",
           "settings": {
-            "title": "Sick of the Dribbles, Pads, and 3AM Toilet Trips? Meet The PelviDex™ Pelvic Floor Trainer",
+            "title": "<strong>Stop Letting Bladder Leaks Control Your Life</strong>",
             "title_highlight_1": "solid-color",
             "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#6d388b",
+            "title_highlight_1_color": "#000000",
             "highlighted-1_border_radius": 8,
             "highlighted-1_border_width": 0,
             "highlighted-1_border": "solid",
@@ -122,7 +76,7 @@
         "hero_text": {
           "type": "text",
           "settings": {
-            "text": "<p>The smart, at-home device that helps men <strong>stop bladder leaks</strong> for good.</p>",
+            "text": "<p><strong>HOSFU™</strong> helps men over 50 rebuild bladder control from home — so you can laugh, stand up, drive, and go out without constant fear of leaks.</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 18,
@@ -136,7 +90,7 @@
         "hero_button": {
           "type": "button",
           "settings": {
-            "button_label": "Get 50% off today only",
+            "button_label": "Get 50% Off Today",
             "button_link": "#order-form",
             "button_style_secondary": false,
             "large_font_size": false,
@@ -157,7 +111,7 @@
         "hero_note": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Note: Not Available on Amazon or eBay</em></p>",
+            "text": "<p><em>Note: Not Available on Amazon or eBay</em></p><p><strong>Discreet shipping. Private home use. Limited stock available.</strong></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 13,
@@ -217,11 +171,11 @@
         "expert_heading_blk": {
           "type": "heading",
           "settings": {
-            "title": "Pelvic Health Expert",
+            "title": "<strong>Men’s Bladder Control Expert</strong>",
             "title_highlight_1": "solid-color",
             "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#6d388b",
+            "title_highlight_1_color": "#000000",
             "highlighted-1_border_radius": 8,
             "highlighted-1_border_width": 0,
             "highlighted-1_border": "solid",
@@ -267,7 +221,7 @@
         "expert_quote_blk": {
           "type": "text",
           "settings": {
-            "text": "<p>\"Strengthening your pelvic floor is the key to lasting bladder control—The PelviDex™ makes it easy and effective for men of any age.\"</p>",
+            "text": "<p>“As men age, the muscles that help control bladder function can weaken — leading to leaks during coughing, standing, laughing, or daily activity. A guided pelvic floor training routine can help men rebuild control and reduce dependence on pads.”</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 15,
@@ -281,7 +235,7 @@
         "expert_attribution_blk": {
           "type": "text",
           "settings": {
-            "text": "<p><em>David Carter, Urologist</em></p>",
+            "text": "<p><em><strong>David Carter, MD — Urology Specialist</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -351,7 +305,7 @@
         "benefit_1": {
           "type": "column",
           "settings": {
-            "image_url": "https://img.funnelish.com/11220/thumbnails/1755537130-be50df97-fbb8-42e0-add0-7fa28d78482fmp4.jpg",
+            "video_url": "",
             "title": "Stops Leaks",
             "text": "Regain control and stop unexpected leaks, freeing you from pads and daily anxiety."
           }
@@ -359,7 +313,7 @@
         "benefit_2": {
           "type": "column",
           "settings": {
-            "image_url": "https://img.funnelish.com/90140/thumbnails/1756055021-2940fd26-fd29-409a-b74e-b4c83a029977mp4.jpg",
+            "video_url": "",
             "title": "Guided Strengthening",
             "text": "Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form."
           }
@@ -367,7 +321,7 @@
         "benefit_3": {
           "type": "column",
           "settings": {
-            "image_url": "https://img.funnelish.com/90140/thumbnails/1756055040-ac4c9ace-919f-42ef-8195-0ccb86a95a3fmp4.jpg",
+            "video_url": "",
             "title": "Clinically Proven",
             "text": "Proven muscle training, backed by scientific urology research for safe, natural rehabilitation."
           }
@@ -375,15 +329,20 @@
         "benefit_4": {
           "type": "column",
           "settings": {
-            "image_url": "https://img.funnelish.com/11220/thumbnails/1741613246-9d340a27-4186-4623-8f69-de7176a42928mp4.jpg",
+            "video_url": "",
             "title": "A Long-Term Solution",
             "text": "Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers."
           }
         }
       },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4"
+      ],
       "settings": {
-        "title": "Why do you need the PelviDex™?",
+        "title": "Why do you need the Hosfu™?",
         "columns_desktop": 4,
         "padding_top": 52,
         "padding_bottom": 52
@@ -397,10 +356,10 @@
           "settings": {
             "video_muted_autoplay": true,
             "caption": "The Truth",
-            "title": "You're Not Too Old to Fix This—And Here's Why",
-            "title_highlight_color": "#6d388b",
-            "text": "<p>Many men believe that once bladder leaks start, there's no way to reverse them. <strong>But that's simply not true.</strong></p><p>Your pelvic floor is a muscle—and like any muscle, <strong>it can be strengthened at any age.</strong></p><p>Studies show that <strong>men in their 40s to 90s</strong> can regain bladder control by activating and strengthening these muscles properly.</p><p>Most men struggle to perform pelvic floor exercises correctly. They squeeze the wrong muscles, forget to stay consistent, and then give up when they don't see results.</p><p>The good news? <strong>It's not too late to stop the cycle.</strong></p>",
-            "button_label": "Get 50% off today only",
+            "title": "<strong>Bladder Leaks Don’t Have to Control the Rest of Your Life</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p>If you’re over 50 and dealing with bladder leaks, you’ve probably told yourself it’s “just age.” That’s what most men believe — and that’s exactly why they stay stuck relying on pads, planning every outing around restrooms, and feeling embarrassed by simple leaks.</p><p>But bladder leaks are not just an age issue — they’re often a control issue. And control can be rebuilt.</p><p>As the muscles that support bladder control weaken, everyday actions like coughing, laughing, standing up, or walking can trigger embarrassing leaks. The sooner you start training those muscles properly, the sooner you can start taking your life back.</p><p><em><strong>It’s not too late to stop the cycle.</strong></em></p>",
+            "button_label": "Get 50% Off Today Only",
             "button_link": "#order-form",
             "atc_button_label": "",
             "atc_product": "",
@@ -412,10 +371,10 @@
           "settings": {
             "video_muted_autoplay": true,
             "caption": "The Solution",
-            "title": "Introducing: The PelviDex™ Pelvic Floor Trainer",
-            "title_highlight_color": "#6d388b",
-            "text": "<p>The PelviDex™ helps men over 60 regain bladder control by <strong>guiding pelvic floor contractions with real-time biofeedback.</strong></p><p>It uses <strong>pressure-sensing technology</strong> to detect and strengthen the muscle responsible for leaks and urgency.</p><p>This helps <strong>reduce accidents,</strong> improve control, and restore confidence over time.</p><p>It enhances your <strong>mind-muscle connection,</strong> making pelvic floor training simple, visual, and effective — no guesswork.</p><p>The app-based system includes <strong>interactive games and structured programs,</strong> designed to keep you engaged and improving every week.</p><p>With just <strong>5-10 minutes a day,</strong> most men start noticing results in as little as <strong>4–6 weeks.</strong></p>",
-            "button_label": "Get 50% off today only",
+            "title": "<strong>Meet HOSFU™: The Private Way to Rebuild Bladder Control at Home</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p><strong>Introducing HOSFU™: Stop Hiding Leaks. Start Training Control.</strong></p><p>Bladder pads only hide the problem after it happens.</p><p>HOSFU™ helps men train the muscles behind bladder control — privately, while seated, from home.</p><p>The smart device connects to the HOSFU app and guides each session step by step, helping you activate the right muscles and track your progress over time.</p><p>No clinic visits.<br/><br/>No awkward conversations.<br/><br/>No guessing if you’re doing it right.</p><p>Just 10–15 minutes a day to start rebuilding control and confidence.</p>",
+            "button_label": "Get 50% Off Today Only",
             "button_link": "#order-form",
             "atc_button_label": "",
             "atc_product": "",
@@ -2414,7 +2373,7 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "image_url": "https://img.funnelish.com/11220/thumbnails/1755537525-45e0cf82-a45e-418c-af87-6f76ed3e83d4mp4.jpg",
+            "video_url": "",
             "title": "Step 1: Sit & Position",
             "text": "Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
           }
@@ -2422,7 +2381,7 @@
         "step_2": {
           "type": "step",
           "settings": {
-            "image_url": "https://img.funnelish.com/11220/thumbnails/1755537541-ab33e1cc-3980-4ab9-8fcb-fc3f64577a53mp4.jpg",
+            "video_url": "",
             "title": "Step 2: Open The App",
             "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
           }
@@ -2430,13 +2389,17 @@
         "step_3": {
           "type": "step",
           "settings": {
-            "image_url": "https://img.funnelish.com/11220/thumbnails/1755537553-28251ada-44d7-4c2c-96f8-b3cd36b42bcfmp4.jpg",
+            "video_url": "",
             "title": "Step 3: Enjoy Lasting Control",
             "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
       "settings": {
         "title": "Bladder Control Has Never Been Easier",
         "columns_desktop": 3,
@@ -2869,7 +2832,6 @@
   },
   "order": [
     "page_scroll_progress_frxPeK",
-    "announcement_bar",
     "hero_section",
     "expert_endorsement_section",
     "as_seen_on_section",
