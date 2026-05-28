@@ -306,7 +306,7 @@
         "benefit_1": {
           "type": "column",
           "settings": {
-            "video_url": "",
+            "video_url": "https://videos.funnelish.com/11220/1755537130-be50df97-fbb8-42e0-add0-7fa28d78482f.mp4?token=1779942692_0x94ffe244017b37c24f062624a0d65f9ce974ab7d&page=F_90140_907870_3087708_3577635",
             "title": "Stops Leaks",
             "text": "Regain control and stop unexpected leaks, freeing you from pads and daily anxiety."
           }
@@ -534,6 +534,46 @@
         "mobile_full_media_width": false,
         "mobile_direction": "normal",
         "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "bladder_control_section": {
+      "type": "bladder-control-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 1: Sit & Position",
+            "text": "Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 2: Open The App",
+            "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 3: Enjoy Lasting Control",
+            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "title": "Bladder Control Has Never Been Easier",
+        "columns_desktop": 3,
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -981,46 +1021,6 @@
         "mobile_adaptive_height": false,
         "mobile_dots_position": "under",
         "mobile_arrows_position": "under",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "bladder_control_section": {
-      "type": "bladder-control-steps",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 1: Sit & Position",
-            "text": "Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 2: Open The App",
-            "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 3: Enjoy Lasting Control",
-            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "title": "Bladder Control Has Never Been Easier",
-        "columns_desktop": 3,
         "padding_top": 52,
         "padding_bottom": 52
       }
