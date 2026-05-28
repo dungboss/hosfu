@@ -235,7 +235,7 @@
         "expert_attribution_blk": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>David Carter, MD — Urology Specialist</strong></em></p>",
+            "text": "<p><em><strong>Dr. James Porter, MD<br/>Urogynecology Specialist</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -255,6 +255,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "shopify://shop_images/4851e766-6e7e-4194-bf04-892f4ffed52f.png",
         "image_url": "https://img.funnelish.com/11220/875086/1754322031-Person.png",
         "image_url_alt": "David Carter, Urologist",
         "video_autoplay": true,
@@ -2352,10 +2353,10 @@
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
+    "bladder_control_section",
     "whats_in_the_box_section",
     "comparison_table_section",
     "trust_badges_section",
-    "bladder_control_section",
     "main",
     "real_words_section",
     "faq_section",
