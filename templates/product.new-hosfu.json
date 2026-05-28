@@ -354,6 +354,7 @@
         "row_not_too_old": {
           "type": "row",
           "settings": {
+            "video": "shopify://files/videos/0528.mp4",
             "video_muted_autoplay": true,
             "caption": "The Truth",
             "title": "<strong>Bladder Leaks Don’t Have to Control the Rest of Your Life</strong>",
@@ -421,6 +422,7 @@
         "row_experts": {
           "type": "row",
           "settings": {
+            "video": "shopify://files/videos/0528 (1).mp4",
             "video_muted_autoplay": true,
             "caption": "Expert Backed",
             "title": "<strong>Designed to Help Men Rebuild Bladder Control</strong>",
@@ -436,6 +438,7 @@
         "row_wait": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/nh6.jpg",
             "video_muted_autoplay": true,
             "caption": "Act Now",
             "title": "<strong>Don’t Wait Until Leaks Become Your New Normal</strong>",
@@ -485,24 +488,10 @@
     "content_blocks_section_3": {
       "type": "multirow",
       "blocks": {
-        "row_how": {
-          "type": "row",
-          "settings": {
-            "video_muted_autoplay": true,
-            "caption": "How It Works",
-            "title": "<strong>How HOSFU™ Helps Men Train Bladder Control</strong>",
-            "title_highlight_color": "#2e2a39",
-            "text": "<p><strong>HOSFU™</strong> is designed to make <strong>bladder control training</strong> simple, private, and easy to follow from home.</p><p>The smart seated device connects to the <strong>HOSFU app</strong> and guides you through each session step by step.</p><p><strong>Smart Sensing Technology</strong> — Helps detect <strong>muscle engagement</strong> while you train, so you can better understand whether you’re activating the right area.</p><p><strong>App-Guided Sessions</strong> — Follow clear training routines from your phone instead of guessing what to do.</p><p><strong>Progress Tracking</strong> — Track your sessions over time and build a consistent routine that helps improve <strong>control and confidence.</strong></p><p>Just <strong>10–15 minutes a day</strong> to start training the muscles behind better bladder control.</p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#order-form",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
         "row_guarantee": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/2aOboQYovTU5cg12iTT7MKNXRQ8TaGIINXxoANQe_fcecdd63-1558-497f-a97d-511d514aaccb.jpg",
             "video_muted_autoplay": true,
             "caption": "Our Guarantee",
             "title": "<strong>Try HOSFU™ for 90 Days — Risk Free</strong>",
@@ -517,7 +506,6 @@
         }
       },
       "block_order": [
-        "row_how",
         "row_guarantee"
       ],
       "settings": {
@@ -545,6 +533,493 @@
         "mobile_full_media_width": false,
         "mobile_direction": "normal",
         "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "whats_in_the_box_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "witb_heading": {
+          "type": "heading",
+          "settings": {
+            "title": "What's In The Box?",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#f9efff",
+            "title_highlight_1_color": "#6d388b",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6d388b",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6d388b",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6d388b",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#f9efff",
+            "title_highlight_2_color": "#6d388b",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6d388b",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6d388b",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6d388b",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h2",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "witb_text": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "witb_heading",
+        "witb_text"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_url": "",
+        "image_url_alt": "",
+        "video": "shopify://files/videos/0424(1).mp4",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "1",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "comparison_table_section": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_guided": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Guided Strengthening</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_noninvasive": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Non-Invasive Solution</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_app": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Guided Program Via App</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_noside": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>No Side Effects</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_cost": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Cost-Effective Solution</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_portable": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Portable & Discreet</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_clinical": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Clinically Proven</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_results": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Fast, Visible Results</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        }
+      },
+      "block_order": [
+        "row_guided",
+        "row_noninvasive",
+        "row_app",
+        "row_noside",
+        "row_cost",
+        "row_portable",
+        "row_clinical",
+        "row_results"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>Why Men Choose HOSFU™ Over Temporary Fixes</strong>",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_bg-color": "#f9efff",
+        "title_highlight_1_color": "#2e2a39",
+        "highlighted-1_border_radius": 8,
+        "highlighted-1_border_width": 0,
+        "highlighted-1_border": "solid",
+        "highlighted-1_border_color": "#6d388b",
+        "highlighted-1_padding-block": 0.3,
+        "highlighted-1_padding-inline": 0.3,
+        "title_highlight_1_underline-thickness": 2,
+        "title_highlight_1_underline-color": "#6d388b",
+        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_underline-color-position": 25,
+        "title_highlight_1_handwritten-color": "#6d388b",
+        "title_highlight_1_handwritten-stroke-width": 3,
+        "title_highlight_1_handwritten-position": 60,
+        "title_highlight_2": "none",
+        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_bg-color": "#f9efff",
+        "title_highlight_2_color": "#6d388b",
+        "highlighted-2_border_radius": 8,
+        "highlighted-2_border_width": 0,
+        "highlighted-2_border": "solid",
+        "highlighted-2_border_color": "#6d388b",
+        "highlighted-2_padding-block": 0.3,
+        "highlighted-2_padding-inline": 0.3,
+        "title_highlight_2_underline-thickness": 2,
+        "title_highlight_2_underline-color": "#6d388b",
+        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_underline-color-position": 25,
+        "title_highlight_2_handwritten-color": "#6d388b",
+        "title_highlight_2_handwritten-stroke-width": 3,
+        "title_highlight_2_handwritten-position": 60,
+        "heading_size": "h2",
+        "custom_desktop_size": 39,
+        "custom_mobile_size": 28,
+        "text": "<p>Bladder pads only manage leaks after they happen. HOSFU™ helps men train the control system behind the leaks — privately, at home, and without complicated routines.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "desktop_alignment": "center",
+        "mobile_content_alignment": "center",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "layout": "table_second",
+        "style": "classic",
+        "corner_radius": 20,
+        "number_of_competitors": 2,
+        "us_label": "PelviDex™",
+        "us_label_size": 18,
+        "logo_width": 90,
+        "mobile_logo_width": 60,
+        "others_label": "Medication",
+        "others_label_size": 18,
+        "others_logo_width": 90,
+        "others_mobile_logo_width": 60,
+        "others_2_label": "Surgery",
+        "others_2_label_size": 18,
+        "others_2_logo_width": 90,
+        "others_2_mobile_logo_width": 60,
+        "others_3_label": "Competitor 3",
+        "others_3_label_size": 18,
+        "others_3_logo_width": 90,
+        "others_3_mobile_logo_width": 60,
+        "checkmark_style": "regular",
+        "checkmark_color": "#ffffff",
+        "checkmark_bg_color": "#53af01",
+        "x_style": "regular",
+        "x_color": "#121212",
+        "x_bg_color": "#dbdbdb",
+        "opposite_icon_colors": "original",
+        "highlighted_color_scheme": "custom",
+        "custom_colors_highlighted_background": "#1a237e",
+        "custom_colors_highlighted_text": "#ffffff",
+        "highlighted_separator_opacity": 0,
+        "highlighted_overlay_opacity": 0,
+        "other_cells_color_scheme": "background-1",
+        "custom_colors_others_background": "#ffffff",
+        "custom_colors_others_text": "#2e2a39",
+        "regular_separator_opacity": 10,
+        "regular_overlay_opacity": 0,
+        "minimalistic_border_opacity": 16,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "trust_badges_section": {
+      "type": "multicolumn",
+      "blocks": {
+        "trust_1": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "90-Day Money Back Guarantee",
+            "text": "<p>Try <strong>HOSFU™</strong> at home for 90 days. If you’re not satisfied with your results, contact us for a refund — no hassle, no stress.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust_2": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "Free Shipping Worldwide",
+            "text": "<p>Enjoy fast, free shipping with tracking included on every order, so you always know where your <strong>HOSFU™</strong> is.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust_3": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "Guaranteed High Quality",
+            "text": "<p><strong>HOSFU™</strong> is built with durable materials and designed for private, comfortable seated training at home.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>Shop HOSFU With Confidence</strong>",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_bg-color": "#f9efff",
+        "title_highlight_1_color": "#000000",
+        "highlighted-1_border_radius": 8,
+        "highlighted-1_border_width": 0,
+        "highlighted-1_border": "solid",
+        "highlighted-1_border_color": "#6d388b",
+        "highlighted-1_padding-block": 0.3,
+        "highlighted-1_padding-inline": 0.3,
+        "title_highlight_1_underline-thickness": 2,
+        "title_highlight_1_underline-color": "#6d388b",
+        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_underline-color-position": 25,
+        "title_highlight_1_handwritten-color": "#6d388b",
+        "title_highlight_1_handwritten-stroke-width": 3,
+        "title_highlight_1_handwritten-position": 60,
+        "title_highlight_2": "none",
+        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_bg-color": "#f9efff",
+        "title_highlight_2_color": "#6d388b",
+        "highlighted-2_border_radius": 8,
+        "highlighted-2_border_width": 0,
+        "highlighted-2_border": "solid",
+        "highlighted-2_border_color": "#6d388b",
+        "highlighted-2_padding-block": 0.3,
+        "highlighted-2_padding-inline": 0.3,
+        "title_highlight_2_underline-thickness": 2,
+        "title_highlight_2_underline-color": "#6d388b",
+        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_underline-color-position": 25,
+        "title_highlight_2_handwritten-color": "#6d388b",
+        "title_highlight_2_handwritten-stroke-width": 3,
+        "title_highlight_2_handwritten-position": 60,
+        "heading_size": "h2",
+        "custom_desktop_size": 39,
+        "custom_mobile_size": 28,
+        "margin_top": 15,
+        "margin_bottom": 0,
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "cards_color_scheme": "bg-overlay",
+        "custom_cards_colors_background": "#f3f3f3",
+        "custom_cards_gradient_background": "",
+        "custom_cards_colors_heading": "#222126",
+        "custom_cards_colors_text": "#2e2a39",
+        "cards_corner_radius": 20,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "bladder_control_section": {
+      "type": "bladder-control-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 1: Sit & Position",
+            "text": "Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 2: Open The App",
+            "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "video_url": "",
+            "title": "Step 3: Enjoy Lasting Control",
+            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "title": "Bladder Control Has Never Been Easier",
+        "columns_desktop": 3,
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -1445,823 +1920,6 @@
         "size": 16
       }
     },
-    "how_it_works_section": {
-      "type": "step-instructions",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "text": "<p><strong>Sit & Position</strong><br/>Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training.</p>"
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "text": "<p><strong>Open The App</strong><br/>Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time.</p>"
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "text": "<p><strong>Enjoy Lasting Control</strong><br/>Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "heading": "<p><strong>Bladder Control Has Never Been Easier</strong></p>",
-        "desktopsteps": 3,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 32,
-        "heading_height": 130,
-        "heading_align": "center",
-        "heading_align_mobile": "center",
-        "body_gap": 64,
-        "body_gap_mobile": 56,
-        "body_mt": 72,
-        "body_mt_mobile": 50,
-        "use_slider": false,
-        "slider_view_mobile": 1.3,
-        "slider_gap_mobile": 20,
-        "image_radius": 16,
-        "image_border_thickness": 2,
-        "image_ratio": "square",
-        "image_ratio_mobile": "square",
-        "product_media_start_index": "0",
-        "circle_number_size": 40,
-        "circle_number_size_mobile": 40,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 18,
-        "number_size_mobile": 18,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 18,
-        "text_size_mobile": 18,
-        "text_height": 130,
-        "text_mt": 24,
-        "text_align": "center",
-        "text_align_mobile": "center",
-        "button": "",
-        "button_url": "",
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_width": 200,
-        "button_width_mobile": 200,
-        "button_mt": 70,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 14,
-        "button_padding_vertical_mobile": 14,
-        "button_padding_horizontal": 22,
-        "button_padding_horizontal_mobile": 22,
-        "button_radius": 100,
-        "button_border_thickness": 0,
-        "button_align": "center",
-        "button_align_mobile": "center",
-        "button_style": "non_outline",
-        "image_border_color": "#000000",
-        "circle_number_bg_color": "#3bd9ca",
-        "number_color": "#000000",
-        "text_color": "#374151",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#000000",
-        "button_bg_hover_color": "#000000",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "heading_color": "#111827",
-        "background_color": "#eaf6f4",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 130,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
-    "whats_in_the_box_section": {
-      "type": "image-with-text",
-      "blocks": {
-        "witb_heading": {
-          "type": "heading",
-          "settings": {
-            "title": "What's In The Box?",
-            "title_highlight_1": "solid-color",
-            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#6d388b",
-            "highlighted-1_border_radius": 8,
-            "highlighted-1_border_width": 0,
-            "highlighted-1_border": "solid",
-            "highlighted-1_border_color": "#6d388b",
-            "highlighted-1_padding-block": 0.3,
-            "highlighted-1_padding-inline": 0.3,
-            "title_highlight_1_underline-thickness": 2,
-            "title_highlight_1_underline-color": "#6d388b",
-            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_underline-color-position": 25,
-            "title_highlight_1_handwritten-color": "#6d388b",
-            "title_highlight_1_handwritten-stroke-width": 3,
-            "title_highlight_1_handwritten-position": 60,
-            "title_highlight_2": "none",
-            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_bg-color": "#f9efff",
-            "title_highlight_2_color": "#6d388b",
-            "highlighted-2_border_radius": 8,
-            "highlighted-2_border_width": 0,
-            "highlighted-2_border": "solid",
-            "highlighted-2_border_color": "#6d388b",
-            "highlighted-2_padding-block": 0.3,
-            "highlighted-2_padding-inline": 0.3,
-            "title_highlight_2_underline-thickness": 2,
-            "title_highlight_2_underline-color": "#6d388b",
-            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_underline-color-position": 25,
-            "title_highlight_2_handwritten-color": "#6d388b",
-            "title_highlight_2_handwritten-stroke-width": 3,
-            "title_highlight_2_handwritten-position": 60,
-            "heading_size": "h2",
-            "custom_desktop_size": 39,
-            "custom_mobile_size": 28,
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "enable_custom_color": false,
-            "custom_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 21
-          },
-          "blocks": {}
-        },
-        "witb_text": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "witb_heading",
-        "witb_text"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_url": "",
-        "image_url_alt": "",
-        "video_autoplay": true,
-        "video_loop": true,
-        "product_media_index": "1",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 50,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_full_media_width": false,
-        "mobile_side_by_side": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
-      }
-    },
-    "comparison_table_section": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_guided": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Guided Strengthening</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_noninvasive": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Non-Invasive Solution</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_app": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Guided Program Via App</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_noside": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>No Side Effects</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_cost": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Cost-Effective Solution</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_portable": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Portable & Discreet</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_clinical": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Clinically Proven</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_results": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Fast, Visible Results</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        }
-      },
-      "block_order": [
-        "row_guided",
-        "row_noninvasive",
-        "row_app",
-        "row_noside",
-        "row_cost",
-        "row_portable",
-        "row_clinical",
-        "row_results"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>Why Men Choose HOSFU™ Over Temporary Fixes</strong>",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#f9efff",
-        "title_highlight_1_color": "#2e2a39",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6d388b",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6d388b",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6d388b",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#f9efff",
-        "title_highlight_2_color": "#6d388b",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6d388b",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6d388b",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6d388b",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "text": "<p>Bladder pads only manage leaks after they happen. HOSFU™ helps men train the control system behind the leaks — privately, at home, and without complicated routines.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "desktop_alignment": "center",
-        "mobile_content_alignment": "center",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "layout": "table_second",
-        "style": "classic",
-        "corner_radius": 20,
-        "number_of_competitors": 2,
-        "us_label": "PelviDex™",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Medication",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Surgery",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "checkmark_style": "regular",
-        "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#53af01",
-        "x_style": "regular",
-        "x_color": "#121212",
-        "x_bg_color": "#dbdbdb",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "custom",
-        "custom_colors_highlighted_background": "#1a237e",
-        "custom_colors_highlighted_text": "#ffffff",
-        "highlighted_separator_opacity": 0,
-        "highlighted_overlay_opacity": 0,
-        "other_cells_color_scheme": "background-1",
-        "custom_colors_others_background": "#ffffff",
-        "custom_colors_others_text": "#2e2a39",
-        "regular_separator_opacity": 10,
-        "regular_overlay_opacity": 0,
-        "minimalistic_border_opacity": 16,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "trust_badges_section": {
-      "type": "multicolumn",
-      "blocks": {
-        "trust_1": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "90-Day Money Back Guarantee",
-            "text": "<p>Try <strong>HOSFU™</strong> at home for 90 days. If you’re not satisfied with your results, contact us for a refund — no hassle, no stress.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "trust_2": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "Free Shipping Worldwide",
-            "text": "<p>Enjoy fast, free shipping with tracking included on every order, so you always know where your <strong>HOSFU™</strong> is.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "trust_3": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "Guaranteed High Quality",
-            "text": "<p><strong>HOSFU™</strong> is built with durable materials and designed for private, comfortable seated training at home.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "trust_1",
-        "trust_2",
-        "trust_3"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>Shop HOSFU With Confidence</strong>",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#f9efff",
-        "title_highlight_1_color": "#000000",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6d388b",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6d388b",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6d388b",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#f9efff",
-        "title_highlight_2_color": "#6d388b",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6d388b",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6d388b",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6d388b",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "margin_top": 15,
-        "margin_bottom": 0,
-        "button_label": "",
-        "button_link": "",
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "cards_color_scheme": "bg-overlay",
-        "custom_cards_colors_background": "#f3f3f3",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_heading": "#222126",
-        "custom_cards_colors_text": "#2e2a39",
-        "cards_corner_radius": 20,
-        "stretch_cards": false,
-        "stretched_cards_content_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "square",
-        "media_position": "top",
-        "column_alignment": "center",
-        "desktop_heading_size": 24,
-        "mobile_heading_size": 22,
-        "desktop_text_size": 16,
-        "mobile_text_size": 15,
-        "desktop_text_top_margin": 10,
-        "mobile_text_top_margin": 10,
-        "desktop_container_padding_y": 24,
-        "desktop_container_padding_x": 24,
-        "mobile_container_padding_y": 24,
-        "mobile_container_padding_x": 24,
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "columns_mobile": "1",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "special_offer_section": {
-      "type": "rich-text",
-      "blocks": {
-        "offer_heading": {
-          "type": "heading",
-          "settings": {
-            "title": "<strong>Special Offer Available Today</strong>",
-            "title_highlight_1": "solid-color",
-            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#000000",
-            "highlighted-1_border_radius": 8,
-            "highlighted-1_border_width": 0,
-            "highlighted-1_border": "solid",
-            "highlighted-1_border_color": "#6d388b",
-            "highlighted-1_padding-block": 0.3,
-            "highlighted-1_padding-inline": 0.3,
-            "title_highlight_1_underline-thickness": 2,
-            "title_highlight_1_underline-color": "#6d388b",
-            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_underline-color-position": 25,
-            "title_highlight_1_handwritten-color": "#6d388b",
-            "title_highlight_1_handwritten-stroke-width": 3,
-            "title_highlight_1_handwritten-position": 60,
-            "title_highlight_2": "none",
-            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_bg-color": "#f9efff",
-            "title_highlight_2_color": "#6d388b",
-            "highlighted-2_border_radius": 8,
-            "highlighted-2_border_width": 0,
-            "highlighted-2_border": "solid",
-            "highlighted-2_border_color": "#6d388b",
-            "highlighted-2_padding-block": 0.3,
-            "highlighted-2_padding-inline": 0.3,
-            "title_highlight_2_underline-thickness": 2,
-            "title_highlight_2_underline-color": "#6d388b",
-            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_underline-color-position": 25,
-            "title_highlight_2_handwritten-color": "#6d388b",
-            "title_highlight_2_handwritten-stroke-width": 3,
-            "title_highlight_2_handwritten-position": 60,
-            "heading_size": "h2",
-            "custom_desktop_size": 39,
-            "custom_mobile_size": 28,
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "enable_custom_color": false,
-            "custom_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 15
-          },
-          "blocks": {}
-        },
-        "offer_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Start your private bladder control training routine at home with HOSFU™ — now available with 50% off for a limited time.</strong></p><ul><li><strong>50% OFF</strong> — HOSFU™ Smart Pelvic Floor Muscle Trainer</li><li><strong>90-Day Results or Refund Guarantee</strong></li><li><strong>FREE Tracked Shipping</strong></li><li><strong>FREE Quick Start Training Guide</strong></li><li><strong>FREE Bladder Control Routine Guide</strong></li><li><strong>FREE App-Guided Training Access</strong><br/></li></ul>",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 21
-          },
-          "blocks": {}
-        },
-        "offer_button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "/products/pelvidex",
-            "button_style_secondary": false,
-            "large_font_size": false,
-            "enable_custom_color": false,
-            "custom_color": "#dd1d1d",
-            "custom_text_color": "#ffffff",
-            "custom_outline_hover_text_color": "#ffffff",
-            "full_width": false,
-            "alignment": "flex-start",
-            "mobile_alignment": "center",
-            "icon_scale": 120,
-            "icon_spacing": 10,
-            "margin_top": 15,
-            "margin_bottom": 15
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "offer_heading",
-        "offer_text",
-        "offer_button"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "full_width": true,
-        "mobile_narrow_width": false,
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "endorsed_section": {
-      "type": "image-with-text",
-      "blocks": {
-        "end_heading": {
-          "type": "heading",
-          "settings": {
-            "title": "<strong>Recommended by Pelvic Health Experts</strong>",
-            "title_highlight_1": "solid-color",
-            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#000000",
-            "highlighted-1_border_radius": 8,
-            "highlighted-1_border_width": 0,
-            "highlighted-1_border": "solid",
-            "highlighted-1_border_color": "#6d388b",
-            "highlighted-1_padding-block": 0.3,
-            "highlighted-1_padding-inline": 0.3,
-            "title_highlight_1_underline-thickness": 2,
-            "title_highlight_1_underline-color": "#6d388b",
-            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_underline-color-position": 25,
-            "title_highlight_1_handwritten-color": "#6d388b",
-            "title_highlight_1_handwritten-stroke-width": 3,
-            "title_highlight_1_handwritten-position": 60,
-            "title_highlight_2": "none",
-            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_bg-color": "#f9efff",
-            "title_highlight_2_color": "#6d388b",
-            "highlighted-2_border_radius": 8,
-            "highlighted-2_border_width": 0,
-            "highlighted-2_border": "solid",
-            "highlighted-2_border_color": "#6d388b",
-            "highlighted-2_padding-block": 0.3,
-            "highlighted-2_padding-inline": 0.3,
-            "title_highlight_2_underline-thickness": 2,
-            "title_highlight_2_underline-color": "#6d388b",
-            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_underline-color-position": 25,
-            "title_highlight_2_handwritten-color": "#6d388b",
-            "title_highlight_2_handwritten-stroke-width": 3,
-            "title_highlight_2_handwritten-position": 60,
-            "heading_size": "h2",
-            "custom_desktop_size": 39,
-            "custom_mobile_size": 28,
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "enable_custom_color": false,
-            "custom_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 15
-          },
-          "blocks": {}
-        },
-        "end_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>HOSFU™</strong> is designed for men who want a <strong>private, at-home way</strong> to train the muscles behind <strong>bladder control.</strong></p><p>Its smart seated system helps guide each session, detect <strong>muscle engagement</strong>, and <strong>track progress over time</strong> — so you’re not left guessing if you’re doing it right.</p><p>For men dealing with <strong>leaks, pads, nighttime bathroom trips, or embarrassment when coughing or laughing</strong>, HOSFU™ offers a simple way to start <strong>rebuilding control from home.</strong></p><p><strong>No clinic visits. No awkward conversations.</strong> Just guided training designed to help you <strong>take control again.</strong></p>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "end_heading",
-        "end_text"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_url": "",
-        "image_url_alt": "",
-        "video_autoplay": true,
-        "video_loop": true,
-        "product_media_index": "2",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 50,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_full_media_width": false,
-        "mobile_side_by_side": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
-      }
-    },
-    "bladder_control_section": {
-      "type": "bladder-control-steps",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 1: Sit & Position",
-            "text": "Place The PelviDex™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 2: Open The App",
-            "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "video_url": "",
-            "title": "Step 3: Enjoy Lasting Control",
-            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "title": "Bladder Control Has Never Been Easier",
-        "columns_desktop": 3,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "real_words_section": {
       "type": "facebook-testimonials",
       "blocks": {
@@ -2694,14 +2352,11 @@
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
-    "main",
-    "how_it_works_section",
     "whats_in_the_box_section",
     "comparison_table_section",
     "trust_badges_section",
-    "special_offer_section",
-    "endorsed_section",
     "bladder_control_section",
+    "main",
     "real_words_section",
     "faq_section",
     "medical_disclaimer_section"
