@@ -230,6 +230,10 @@
               style="
                 --desktop-width: {{ block.settings.desktop_width }}px;
                 --border-radius: {{ block.settings.corner_radius }}px;
+                --fs-avatar-label: {{ block.settings.fs_avatar_label | default: 12 }}px;
+                --fs-content-p: {{ block.settings.fs_content_p | default: 12 }}px;
+                --fs-heading: {{ block.settings.fs_heading | default: 22 }}px;
+                --fs-content-after: {{ block.settings.fs_content_after | default: 14 }}px;
               "
               {{ block.shopify_attributes }}
             >
@@ -1476,6 +1480,47 @@
           "type": "richtext",
           "id": "content_after",
           "label": "Content After (below middle image)"
+        },
+        { "type": "header", "content": "Font sizes" },
+        {
+          "type": "range",
+          "id": "fs_avatar_label",
+          "label": "Satisfied customers font size",
+          "min": 10,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "fs_content_p",
+          "label": "Secure payment font size",
+          "min": 10,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "fs_heading",
+          "label": "Toilet Sensor Light font size",
+          "min": 14,
+          "max": 40,
+          "step": 1,
+          "unit": "px",
+          "default": 22
+        },
+        {
+          "type": "range",
+          "id": "fs_content_after",
+          "label": "Description font size",
+          "min": 10,
+          "max": 28,
+          "step": 1,
+          "unit": "px",
+          "default": 14
         },
         {
           "type": "select",
