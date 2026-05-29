@@ -1652,7 +1652,7 @@
             "desktop_text_size": 18,
             "mobile_icon_size": 40,
             "mobile_spacing": 10,
-            "mobile_text_size": 12,
+            "mobile_text_size": 10,
             "icon_1": "assured_workload",
             "icon_1_fill": false,
             "heading_1": "30-Day Money-Back Guarantee",
