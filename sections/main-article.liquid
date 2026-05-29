@@ -255,6 +255,24 @@
               {%- endif %}
 
               <div class="sticky-promotion__content-container">
+                {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 -%}
+                  <div class="sticky-promotion__avatars">
+                    <div class="sticky-promotion__avatar-images">
+                      {%- if block.settings.avatar_1 -%}
+                        {{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                      {%- endif -%}
+                      {%- if block.settings.avatar_2 -%}
+                        {{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                      {%- endif -%}
+                      {%- if block.settings.avatar_3 -%}
+                        {{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                      {%- endif -%}
+                    </div>
+                    {%- if block.settings.avatar_label != blank -%}
+                      <span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
                 {%- if block.settings.content_top_image %}
                   <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
                     {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
@@ -1354,6 +1372,28 @@
           "step": 5,
           "default": 30,
           "unit": "%"
+        },
+        { "type": "header", "content": "Customer Avatars" },
+        {
+          "type": "image_picker",
+          "id": "avatar_1",
+          "label": "Avatar 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar_2",
+          "label": "Avatar 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar_3",
+          "label": "Avatar 3"
+        },
+        {
+          "type": "text",
+          "id": "avatar_label",
+          "label": "Avatar label",
+          "default": "14,900+ SATISFIED CUSTOMERS"
         },
         { "type": "header", "content": "Content" },
         {
