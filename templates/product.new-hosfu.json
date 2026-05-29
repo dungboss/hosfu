@@ -10,6 +10,17 @@
 {
   "layout": "theme-new-hosfu",
   "sections": {
+    "mobile_btn_center_css": {
+      "type": "custom-liquid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "custom_liquid": "<style>@media (max-width: 749px) { .image-with-text__content--mobile-left > .button { display: flex; width: fit-content; margin-left: auto; margin-right: auto; } }</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "page_scroll_progress_frxPeK": {
       "type": "page-scroll-progress",
       "name": "Scroll progress bar",
@@ -1641,7 +1652,7 @@
             "desktop_text_size": 18,
             "mobile_icon_size": 40,
             "mobile_spacing": 10,
-            "mobile_text_size": 14,
+            "mobile_text_size": 12,
             "icon_1": "assured_workload",
             "icon_1_fill": false,
             "heading_1": "30-Day Money-Back Guarantee",
@@ -2359,17 +2370,6 @@
         "open_state_content_text": "#121212",
         "padding_top": 52,
         "padding_bottom": 52
-      }
-    },
-    "mobile_btn_center_css": {
-      "type": "custom-liquid",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>@media (max-width: 749px) { .image-with-text__content--mobile-left > .button { display: flex; width: fit-content; margin-left: auto; margin-right: auto; } }</style>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "medical_disclaimer_section": {
