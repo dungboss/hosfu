@@ -22,11 +22,7 @@
     .comparison-table {
       width: 100%;
       table-layout: fixed;
-      --border-radius: 0rem;
-    }
-    .comparison-table td,
-    .comparison-table th {
-      border-radius: 0 !important;
+      --border-radius: 1rem;
     }
     .comparison-table td,
     .comparison-table th {
@@ -39,8 +35,16 @@
     .comparison-table tbody tr td:first-child {
       width: 40%;
     }
+    .comparison-table .comparison-table__icon {
+      font-size: 1.2rem;
+    }
+    .comparison-table .comparison-table__icon--solid {
+      font-size: 1.2rem;
+      padding: 0.4rem;
+    }
     .comparison-table td.comparison-table__row-name {
       font-size: 1.1rem;
+      padding-left: 1rem;
       text-align: left !important;
       white-space: normal;
       word-break: break-word;
