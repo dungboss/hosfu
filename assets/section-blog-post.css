@@ -412,6 +412,9 @@
 .sticky-promotion__content:not(.sticky-promotion__content--after) p {
   font-size: 0.88rem;
 }
+.sticky-promotion__content--after p {
+  font-size: 0.92rem;
+}
 
 /* CTA */
 .sticky-promotion__cta {
