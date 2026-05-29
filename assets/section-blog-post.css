@@ -371,6 +371,10 @@
 .sticky-promotion__content-container > * + * {
   margin-top: 1rem;
 }
+.sticky-promotion__top-image {
+  margin-top: 0.4rem;
+  margin-bottom: -0.4rem;
+}
 .sticky-promotion__content p {
   margin-bottom: 0;
 }
