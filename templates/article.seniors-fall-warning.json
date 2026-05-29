@@ -56,20 +56,20 @@
         "sticky_promotion_LiwxVa": {
           "type": "sticky_promotion",
           "settings": {
-            "color_scheme": "accent-1",
-            "corner_radius": 8,
+            "color_scheme": "background-1",
+            "corner_radius": 12,
             "desktop_width": 320,
             "desktop_position": "right",
             "mobile_position": "bottom",
             "logo_alignment": "center",
             "logo_width": 80,
-            "line_divider_opacity": 0,
-            "content": "<p>Bake the best cakes without the cakes.</p><p>Super amazing nice</p>",
-            "content_alignment": "left",
-            "content_spacing": 0,
-            "cta_label": "Learn more",
+            "line_divider_opacity": 20,
+            "content": "<p>👥 <strong>14,900+ SATISFIED CUSTOMERS</strong></p><p>🔒 Secure payment &nbsp;·&nbsp; ⚡ Limited stock available &nbsp;·&nbsp; ↩ 30-day guarantee</p><h3>Toilet Sensor Light</h3><p>Get The #1 Safety-Recommended device that prevents bathroom falls and eliminates 99% bacteria — even in complete darkness.</p>",
+            "content_alignment": "center",
+            "content_spacing": 4,
+            "cta_label": "CHECK AVAILABILITY",
             "cta_function": "link",
-            "cta_link": "",
+            "cta_link": "/products/toilet-sensor-light",
             "cta_product": ""
           }
         },
