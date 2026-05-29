@@ -68,6 +68,7 @@
             "desktop_width": 400,
             "desktop_position": "right",
             "mobile_position": "bottom",
+            "logo": "shopify://shop_images/Healthline_Black.jpg",
             "logo_alignment": "center",
             "logo_width": 80,
             "line_divider_opacity": 0,
