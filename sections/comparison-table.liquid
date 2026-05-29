@@ -26,19 +26,19 @@
     .comparison-table td,
     .comparison-table th {
       padding: 0.5rem 0.4rem;
-      font-size: 0.72rem;
+      font-size: 1.08rem;
       word-break: break-word;
       white-space: normal;
     }
-    .comparison-table__row-name {
-      width: 44%;
+    .comparison-table thead tr th:first-child,
+    .comparison-table tbody tr td:first-child {
+      width: 40%;
+    }
+    .comparison-table td.comparison-table__row-name {
+      font-size: 1.1rem;
       text-align: left !important;
       white-space: normal;
       word-break: break-word;
-    }
-    .comparison-table th:not(:first-child),
-    .comparison-table td:not(:first-child) {
-      width: auto;
     }
   }
   {% if section.settings.style != 'minimal' %}
