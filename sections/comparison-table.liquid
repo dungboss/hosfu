@@ -14,6 +14,15 @@
   .comparison-table-{{ section.id }} {
     --border-radius: {{ section.settings.corner_radius | divided_by: 10.0 }}rem;
   }
+  @media screen and (min-width: 750px) {
+    .comparison-table {
+      table-layout: fixed;
+    }
+    .comparison-table thead tr th:first-child,
+    .comparison-table tbody tr td:first-child {
+      width: 30%;
+    }
+  }
   @media screen and (max-width: 749px) {
     .comparison-table-container {
       width: 100%;
@@ -37,10 +46,14 @@
     }
     .comparison-table .comparison-table__icon {
       font-size: 1.2rem;
+      color: var(--icon-color);
     }
     .comparison-table .comparison-table__icon--solid {
       font-size: 1.2rem;
       padding: 0.4rem;
+      background-color: var(--bg-color);
+      border-radius: 50%;
+      color: var(--icon-color);
     }
     .comparison-table td.comparison-table__row-name {
       font-size: 1.1rem;

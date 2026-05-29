@@ -708,96 +708,107 @@
     "comparison_table_section": {
       "type": "comparison-table",
       "blocks": {
-        "row_guided": {
+        "row_bladder_trains": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Guided Strengthening</strong>",
+            "benefit": "<strong>Trains bladder control</strong>",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_noninvasive": {
+        "row_reduce_leaks": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Non-Invasive Solution</strong>",
+            "benefit": "<strong>Helps reduce leaks over time</strong>",
+            "us": true,
+            "others": false,
+            "others_2": true,
+            "others_3": false
+          }
+        },
+        "row_private_routine": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Private at-home routine</strong>",
+            "us": true,
+            "others": true,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_app_guided": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>App-guided sessions</strong>",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_app": {
+        "row_realtime": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Guided Program Via App</strong>",
+            "benefit": "<strong>Real-time feedback</strong>",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_noside": {
+        "row_no_clinic": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>No Side Effects</strong>",
+            "benefit": "<strong>No clinic visits needed</strong>",
+            "us": true,
+            "others": true,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_one_time": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>One-time device purchase</strong>",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_cost": {
+        "row_discreet": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Cost-Effective Solution</strong>",
+            "benefit": "<strong>Discreet and easy to use</strong>",
             "us": true,
-            "others": false,
+            "others": true,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_portable": {
+        "row_longterm": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Portable & Discreet</strong>",
+            "benefit": "<strong>Supports long-term confidence</strong>",
             "us": true,
             "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_clinical": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Clinically Proven</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_results": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Fast, Visible Results</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
+            "others_2": true,
             "others_3": false
           }
         }
       },
       "block_order": [
-        "row_guided",
-        "row_noninvasive",
-        "row_app",
-        "row_noside",
-        "row_cost",
-        "row_portable",
-        "row_clinical",
-        "row_results"
+        "row_bladder_trains",
+        "row_reduce_leaks",
+        "row_private_routine",
+        "row_app_guided",
+        "row_realtime",
+        "row_no_clinic",
+        "row_one_time",
+        "row_discreet",
+        "row_longterm"
       ],
       "settings": {
         "display_id": false,
@@ -860,15 +871,15 @@
         "style": "classic",
         "corner_radius": 20,
         "number_of_competitors": 2,
-        "us_label": "PelviDex™",
+        "us_label": "HOSFU™",
         "us_label_size": 18,
         "logo_width": 90,
         "mobile_logo_width": 60,
-        "others_label": "Medication",
+        "others_label": "Bladder Pads",
         "others_label_size": 18,
         "others_logo_width": 90,
         "others_mobile_logo_width": 60,
-        "others_2_label": "Surgery",
+        "others_2_label": "Medication / Surgery",
         "others_2_label_size": 18,
         "others_2_logo_width": 90,
         "others_2_mobile_logo_width": 60,
@@ -877,7 +888,7 @@
         "others_3_logo_width": 90,
         "others_3_mobile_logo_width": 60,
         "checkmark_style": "regular",
-        "checkmark_color": "#ffffff",
+        "checkmark_color": "#53af01",
         "checkmark_bg_color": "#53af01",
         "x_style": "regular",
         "x_color": "#121212",
