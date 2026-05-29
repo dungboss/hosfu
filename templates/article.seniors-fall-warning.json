@@ -81,6 +81,10 @@
             "logo_alignment": "center",
             "logo_width": 80,
             "line_divider_opacity": 20,
+            "avatar_1": "shopify://shop_images/Gemini_Generated_Image_v4b9rfv4b9rfv4b9.png",
+            "avatar_2": "shopify://shop_images/Phu-Nu-Trung-Nien.jpg",
+            "avatar_3": "shopify://shop_images/Gemini_Generated_Image_2ue10d2ue10d2ue1.png",
+            "avatar_label": "14,900+ SATISFIED CUSTOMERS",
             "content_top_image": "shopify://shop_images/Mens-Health-Logo.png",
             "content": "<p>🔒 Secure payment  ·  ⚡ Limited stock available  ·  ↩ 30-day guarantee</p><h3>Toilet Sensor Light</h3>",
             "middle_image_url": "https://hosfu.com/cdn/shop/files/nh1_4e6a51f7-7850-414f-b591-e42f25b56857.png",
@@ -90,8 +94,7 @@
             "cta_label": "CHECK AVAILABILITY",
             "cta_function": "link",
             "cta_link": "/products/toilet-sensor-light",
-            "cta_product": "",
-            "avatar_label": "14,900+ SATISFIED CUSTOMERS"
+            "cta_product": ""
           }
         },
         "content": {
