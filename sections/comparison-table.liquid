@@ -14,6 +14,33 @@
   .comparison-table-{{ section.id }} {
     --border-radius: {{ section.settings.corner_radius | divided_by: 10.0 }}rem;
   }
+  @media screen and (max-width: 749px) {
+    .comparison-table-container {
+      width: 100%;
+      max-width: 100%;
+    }
+    .comparison-table {
+      width: 100%;
+      table-layout: fixed;
+    }
+    .comparison-table td,
+    .comparison-table th {
+      padding: 0.5rem 0.4rem;
+      font-size: 0.72rem;
+      word-break: break-word;
+      white-space: normal;
+    }
+    .comparison-table__row-name {
+      width: 44%;
+      text-align: left !important;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .comparison-table th:not(:first-child),
+    .comparison-table td:not(:first-child) {
+      width: auto;
+    }
+  }
   {% if section.settings.style != 'minimal' %}
     .comparison-table-{{ section.id }} tr:not(:last-of-type) .highlighted-cell {
       --cell-separator-opacity: {{ section.settings.highlighted_separator_opacity | divided_by: 100.0 }};
