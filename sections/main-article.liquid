@@ -4,6 +4,13 @@
   if section.settings.page_width == 'narrow'
     assign page_narrow_class = ' page-width--narrow'
   endif
+  assign has_sticky = false
+  for b in section.blocks
+    if b.type == 'sticky_promotion'
+      assign has_sticky = true
+      break
+    endif
+  endfor
 %}
 
 <article class="article-template content-for-grouping" itemscope itemtype="http://schema.org/BlogPosting">
@@ -24,7 +31,7 @@
           </div>
         </div>
       {%- when 'featured_image' -%}
-        {%- if article.image -%}
+        {%- if article.image and has_sticky == false -%}
           <div class="article-template__hero-container{% if block.settings.full_width %} article-template__hero-container--full{% endif %}" {{ block.shopify_attributes }}>
             <div
               class="article-template__hero-{{ block.settings.image_height }} media"
@@ -88,6 +95,7 @@
       {%- when 'title' -%}
         {% assign desktop_image = block.settings.desktop_image %}
         {% assign mobile_image = block.settings.mobile_image %}
+        {%- unless has_sticky -%}
         <header class="color-{{ block.settings.color_scheme }} article-block-padding" style="--padding-top:{{ block.settings.padding_top }}px;--padding-bottom:{{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
           <div class="article-header__container page-width{{ page_narrow_class }} article-header__container--desktop-image-{{ desktop_image }} article-header__container--desktop-image-{{ block.settings.desktop_image_alignment }} article-header__container--mobile-image-{{ mobile_image }}">
             <div class="article-header__content">
@@ -176,6 +184,7 @@
             {% endif %}
           </div>
         </header>
+        {%- endunless -%}
       {%- when 'content' -%}
         <style>
           #BlogContent-{{ section.id }} img {
@@ -197,6 +206,19 @@
               class="article-template__content rte"
               itemprop="articleBody"
             >
+              {%- if has_sticky -%}
+                <h1 class="article-template__title" itemprop="headline" style="font-size:2.2rem;margin-bottom:1rem;">{{ article.title | escape }}</h1>
+                {%- if article.image -%}
+                  <div style="margin-bottom:1.2rem;">
+                    <img
+                      src="{{ article.image | image_url: width: 800 }}"
+                      alt="{{ article.image.alt | escape }}"
+                      loading="lazy"
+                      style="width:100%;border-radius:8px;display:block;"
+                    >
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
               {{ article.content }}
             </div>
             {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
