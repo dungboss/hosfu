@@ -2350,6 +2350,17 @@
         "padding_bottom": 52
       }
     },
+    "mobile_btn_center_css": {
+      "type": "custom-liquid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "custom_liquid": "<style>@media (max-width: 749px) { .image-with-text__content--mobile-left > .button { display: block; width: fit-content; margin-left: auto; margin-right: auto; } }</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "medical_disclaimer_section": {
       "type": "custom-liquid",
       "settings": {
@@ -2363,6 +2374,7 @@
     }
   },
   "order": [
+    "mobile_btn_center_css",
     "page_scroll_progress_frxPeK",
     "hero_section",
     "expert_endorsement_section",
