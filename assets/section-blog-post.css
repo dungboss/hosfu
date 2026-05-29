@@ -378,6 +378,10 @@
   margin-top: var(--spacing);
 }
 
+.sticky-promotion__content:not(.sticky-promotion__content--after) p {
+  font-size: 0.78rem;
+}
+
 /* CTA */
 .sticky-promotion__cta {
   margin-top: 1.5rem;

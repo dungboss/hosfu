@@ -269,7 +269,19 @@
                 <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
                   {{ block.settings.content }}
                 </div>
-            
+
+                {%- if block.settings.middle_image_url != blank -%}
+                  <div class="sticky-promotion__middle-image">
+                    <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.content_after != blank -%}
+                  <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+                    {{ block.settings.content_after }}
+                  </div>
+                {%- endif -%}
+
                 {%- if block.settings.content_bottom_image %}
                   <div class="sticky-promotion__bottom-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_bottom_image.aspect_ratio | times: 100 }}%">
                     {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
@@ -1359,6 +1371,17 @@
           "id": "content",
           "label": "Content",
           "default": "<p>Write a shot text to promote your product or service.</p><p>Make the customer click the CTA.</p>"
+        },
+        {
+          "type": "text",
+          "id": "middle_image_url",
+          "label": "Middle image URL",
+          "info": "External image URL displayed between Content and Content After."
+        },
+        {
+          "type": "richtext",
+          "id": "content_after",
+          "label": "Content After (below middle image)"
         },
         {
           "type": "select",
