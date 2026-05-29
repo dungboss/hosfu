@@ -255,6 +255,17 @@
               {%- endif %}
 
               <div class="sticky-promotion__content-container">
+                {%- if block.settings.content_top_image %}
+                  <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
+                    {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
+                    {{
+                      block.settings.content_top_image
+                      | image_url: width: 1500
+                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
+                    }}
+                  </div>
+                {%- endif %}
+
                 {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 -%}
                   <div class="sticky-promotion__avatars">
                     <div class="sticky-promotion__avatar-images">
@@ -273,17 +284,7 @@
                     {%- endif -%}
                   </div>
                 {%- endif -%}
-                {%- if block.settings.content_top_image %}
-                  <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
-                    {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
-                    {{
-                      block.settings.content_top_image
-                      | image_url: width: 1500
-                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
-                    }}
-                  </div>
-                {%- endif %}
-            
+
                 <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
                   {{ block.settings.content }}
                 </div>
