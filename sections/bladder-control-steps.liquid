@@ -48,6 +48,17 @@
     margin-bottom: 14px;
     background: #000;
   }
+  .bladder-steps-{{ section.id }} .bladder-steps__image-wrap {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .bladder-steps-{{ section.id }} .bladder-steps__video-wrap iframe,
   .bladder-steps-{{ section.id }} .bladder-steps__video-wrap video {
     position: absolute;
@@ -109,45 +120,42 @@
     <div class="bladder-steps__grid">
       {%- for block in section.blocks -%}
         <div class="bladder-steps__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="bladder-steps__image-wrap">
+              {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', alt: block.settings.title }}
+            </div>
+          {%- elsif block.settings.video_url != blank -%}
           <div class="bladder-steps__video-wrap">
-            {%- if block.settings.video_url != blank -%}
-              {%- assign video_url = block.settings.video_url -%}
-              {%- if video_url contains 'youtube.com' or video_url contains 'youtu.be' -%}
-                {%- if video_url contains 'youtu.be/' -%}
-                  {%- assign yt_id = video_url | split: 'youtu.be/' | last | split: '?' | first -%}
-                {%- else -%}
-                  {%- assign yt_id = video_url | split: 'v=' | last | split: '&' | first -%}
-                {%- endif -%}
-                <iframe
-                  src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  loading="lazy"
-                  title="{{ block.settings.title }}"
-                ></iframe>
-              {%- elsif video_url contains 'vimeo.com' -%}
-                {%- assign vimeo_id = video_url | split: 'vimeo.com/' | last | split: '?' | first -%}
-                <iframe
-                  src="https://player.vimeo.com/video/{{ vimeo_id }}"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                  loading="lazy"
-                  title="{{ block.settings.title }}"
-                ></iframe>
+            {%- assign video_url = block.settings.video_url -%}
+            {%- if video_url contains 'youtube.com' or video_url contains 'youtu.be' -%}
+              {%- if video_url contains 'youtu.be/' -%}
+                {%- assign yt_id = video_url | split: 'youtu.be/' | last | split: '?' | first -%}
               {%- else -%}
-                <video controls preload="none" title="{{ block.settings.title }}">
-                  <source src="{{ video_url }}" type="video/mp4">
-                </video>
+                {%- assign yt_id = video_url | split: 'v=' | last | split: '&' | first -%}
               {%- endif -%}
+              <iframe
+                src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+                title="{{ block.settings.title }}"
+              ></iframe>
+            {%- elsif video_url contains 'vimeo.com' -%}
+              {%- assign vimeo_id = video_url | split: 'vimeo.com/' | last | split: '?' | first -%}
+              <iframe
+                src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+                title="{{ block.settings.title }}"
+              ></iframe>
             {%- else -%}
-              <div class="bladder-steps__video-placeholder">
-                <div class="play-icon">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <span>Video coming soon</span>
-              </div>
+              <video controls preload="none" title="{{ block.settings.title }}">
+                <source src="{{ video_url }}" type="video/mp4">
+              </video>
             {%- endif -%}
           </div>
+          {%- endif -%}
           {%- unless block.settings.title == blank -%}
             <h3>{{ block.settings.title }}</h3>
           {%- endunless -%}
@@ -209,10 +217,16 @@
       "name": "Step",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "If set, image will be shown instead of video."
+        },
+        {
           "type": "text",
           "id": "video_url",
           "label": "Video URL",
-          "info": "Supports YouTube, Vimeo, or direct MP4 URL. Leave blank to show placeholder."
+          "info": "Supports YouTube, Vimeo, or direct MP4 URL. Used only when no image is set."
         },
         {
           "type": "text",
