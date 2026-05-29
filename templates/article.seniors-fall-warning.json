@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "page_scroll_progress_frxPeK": {
-      "type": "page-scroll-progress",
-      "name": "Scroll progress bar",
-      "settings": {
-        "bar_height": 4,
-        "filled_color": "#6d388b",
-        "corner_radius": 3,
-        "position": "top"
-      }
-    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -175,7 +165,6 @@
     }
   },
   "order": [
-    "page_scroll_progress_frxPeK",
     "main",
     "newsletter"
   ]

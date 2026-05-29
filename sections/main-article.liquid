@@ -224,11 +224,9 @@
             {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
             {% for block in promotions %}
             <div
-              class="sticky-promotion
+              class="sticky-promotion sticky-promotion--in-content
                      sticky-promotion--{{ block.settings.desktop_position }}
-                     sticky-promotion--{{ block.settings.mobile_position }}
-                     color-{{ block.settings.color_scheme }}
-                     {% if block.settings.mobile_position == 'hidden' %}hidden{% endif %}"
+                     color-{{ block.settings.color_scheme }}"
               style="
                 --desktop-width: {{ block.settings.desktop_width }}px;
                 --border-radius: {{ block.settings.corner_radius }}px;
@@ -351,6 +349,61 @@
         </div>
     {%- endcase -%}
   {%- endfor -%}
+
+  {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
+  {% for block in promotions %}
+    {% unless block.settings.mobile_position == 'hidden' %}
+    <div
+      class="sticky-promotion sticky-promotion--mobile-bottom color-{{ block.settings.color_scheme }}"
+      style="--desktop-width: {{ block.settings.desktop_width }}px; --border-radius: {{ block.settings.corner_radius }}px;"
+      {{ block.shopify_attributes }}
+    >
+      {%- if block.settings.logo %}
+        <div class="sticky-promotion__logo" style="text-align: {{ block.settings.logo_alignment }};--width: {{ block.settings.logo_width }}%;">
+          {{ block.settings.logo | image_url: width: 500 | image_tag: loading: 'lazy' }}
+        </div>
+        {%- if block.settings.line_divider_opacity > 0 %}
+          <div class="sticky-promotion__divider" style="opacity: {{ block.settings.line_divider_opacity | divided_by: 100.0 }};">&nbsp</div>
+        {%- endif %}
+      {%- endif %}
+      <div class="sticky-promotion__content-container">
+        {%- if block.settings.content_top_image %}
+          <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
+            {{ block.settings.content_top_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          </div>
+        {%- endif %}
+        {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 %}
+          <div class="sticky-promotion__avatars">
+            <div class="sticky-promotion__avatar-images">
+              {%- if block.settings.avatar_1 %}{{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+              {%- if block.settings.avatar_2 %}{{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+              {%- if block.settings.avatar_3 %}{{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+            </div>
+            {%- if block.settings.avatar_label != blank %}<span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>{%- endif %}
+          </div>
+        {%- endif %}
+        <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+          {{ block.settings.content }}
+        </div>
+        {%- if block.settings.middle_image_url != blank %}
+          <div class="sticky-promotion__middle-image">
+            <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
+          </div>
+        {%- endif %}
+        {%- if block.settings.content_after != blank %}
+          <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+            {{ block.settings.content_after }}
+          </div>
+        {%- endif %}
+      </div>
+      <div class="sticky-promotion__cta">
+        {%- if block.settings.cta_function == 'link' %}
+          <a {% if block.settings.cta_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.cta_link }}"{% endif %} class="button">{{ block.settings.cta_label }}</a>
+        {%- endif %}
+      </div>
+    </div>
+    {% endunless %}
+  {% endfor %}
 
   <div class="article-template__back element-margin-top center">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
