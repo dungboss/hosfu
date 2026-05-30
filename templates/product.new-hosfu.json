@@ -614,6 +614,7 @@
         },
         "witb_text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
             "alignment": "left",
@@ -637,6 +638,63 @@
         "image_url": "",
         "image_url_alt": "",
         "video": "shopify://files/videos/0424(1).mp4",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "1",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "image_with_text_AwUd8t": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_hxAECb": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_hxAECb"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_url": "",
+        "image_url_alt": "",
         "video_autoplay": true,
         "video_loop": true,
         "product_media_index": "1",
@@ -2347,6 +2405,7 @@
     "content_blocks_section_3",
     "bladder_control_section",
     "whats_in_the_box_section",
+    "image_with_text_AwUd8t",
     "comparison_table_section",
     "trust_badges_section",
     "main",
