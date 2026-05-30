@@ -126,7 +126,7 @@
             </div>
           {%- elsif block.settings.video != blank -%}
             <div class="bladder-steps__video-wrap">
-              <video controls preload="none" title="{{ block.settings.title }}">
+              <video autoplay muted loop playsinline preload="auto" title="{{ block.settings.title }}">
                 {%- for source in block.settings.video.sources -%}
                   <source src="{{ source.url }}" type="{{ source.mime_type }}">
                 {%- endfor -%}
@@ -142,7 +142,7 @@
                   {%- assign yt_id = video_url | split: 'v=' | last | split: '&' | first -%}
                 {%- endif -%}
                 <iframe
-                  src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist={{ yt_id }}"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                   loading="lazy"
@@ -151,14 +151,14 @@
               {%- elsif video_url contains 'vimeo.com' -%}
                 {%- assign vimeo_id = video_url | split: 'vimeo.com/' | last | split: '?' | first -%}
                 <iframe
-                  src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                  src="https://player.vimeo.com/video/{{ vimeo_id }}?autoplay=1&muted=1&loop=1&background=1"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                   loading="lazy"
                   title="{{ block.settings.title }}"
                 ></iframe>
               {%- else -%}
-                <video controls preload="none" title="{{ block.settings.title }}">
+                <video autoplay muted loop playsinline preload="auto" title="{{ block.settings.title }}">
                   <source src="{{ video_url }}" type="video/mp4">
                 </video>
               {%- endif -%}
