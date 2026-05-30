@@ -124,37 +124,45 @@
             <div class="bladder-steps__image-wrap">
               {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', alt: block.settings.title }}
             </div>
-          {%- elsif block.settings.video_url != blank -%}
-          <div class="bladder-steps__video-wrap">
-            {%- assign video_url = block.settings.video_url -%}
-            {%- if video_url contains 'youtube.com' or video_url contains 'youtu.be' -%}
-              {%- if video_url contains 'youtu.be/' -%}
-                {%- assign yt_id = video_url | split: 'youtu.be/' | last | split: '?' | first -%}
-              {%- else -%}
-                {%- assign yt_id = video_url | split: 'v=' | last | split: '&' | first -%}
-              {%- endif -%}
-              <iframe
-                src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-                title="{{ block.settings.title }}"
-              ></iframe>
-            {%- elsif video_url contains 'vimeo.com' -%}
-              {%- assign vimeo_id = video_url | split: 'vimeo.com/' | last | split: '?' | first -%}
-              <iframe
-                src="https://player.vimeo.com/video/{{ vimeo_id }}"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-                title="{{ block.settings.title }}"
-              ></iframe>
-            {%- else -%}
+          {%- elsif block.settings.video != blank -%}
+            <div class="bladder-steps__video-wrap">
               <video controls preload="none" title="{{ block.settings.title }}">
-                <source src="{{ video_url }}" type="video/mp4">
+                {%- for source in block.settings.video.sources -%}
+                  <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                {%- endfor -%}
               </video>
-            {%- endif -%}
-          </div>
+            </div>
+          {%- elsif block.settings.video_url != blank -%}
+            <div class="bladder-steps__video-wrap">
+              {%- assign video_url = block.settings.video_url -%}
+              {%- if video_url contains 'youtube.com' or video_url contains 'youtu.be' -%}
+                {%- if video_url contains 'youtu.be/' -%}
+                  {%- assign yt_id = video_url | split: 'youtu.be/' | last | split: '?' | first -%}
+                {%- else -%}
+                  {%- assign yt_id = video_url | split: 'v=' | last | split: '&' | first -%}
+                {%- endif -%}
+                <iframe
+                  src="https://www.youtube.com/embed/{{ yt_id }}?rel=0&modestbranding=1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                  title="{{ block.settings.title }}"
+                ></iframe>
+              {%- elsif video_url contains 'vimeo.com' -%}
+                {%- assign vimeo_id = video_url | split: 'vimeo.com/' | last | split: '?' | first -%}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ vimeo_id }}"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                  title="{{ block.settings.title }}"
+                ></iframe>
+              {%- else -%}
+                <video controls preload="none" title="{{ block.settings.title }}">
+                  <source src="{{ video_url }}" type="video/mp4">
+                </video>
+              {%- endif -%}
+            </div>
           {%- endif -%}
           {%- unless block.settings.title == blank -%}
             <h3>{{ block.settings.title }}</h3>
@@ -220,13 +228,19 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image",
-          "info": "If set, image will be shown instead of video."
+          "info": "If set, shown instead of video."
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video (from library)",
+          "info": "Pick a video from your Shopify Files library. Used when no image is set."
         },
         {
           "type": "text",
           "id": "video_url",
           "label": "Video URL",
-          "info": "Supports YouTube, Vimeo, or direct MP4 URL. Used only when no image is set."
+          "info": "YouTube, Vimeo, or direct MP4 URL. Used when no image or library video is set."
         },
         {
           "type": "text",
