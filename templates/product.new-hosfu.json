@@ -637,7 +637,6 @@
         "visibility": "always-display",
         "image_url": "",
         "image_url_alt": "",
-        "video": "shopify://files/videos/0424(1).mp4",
         "video_autoplay": true,
         "video_loop": true,
         "product_media_index": "1",
@@ -669,10 +668,61 @@
         "desktop_padding_bottom": 36
       }
     },
-    "image_with_text_AwUd8t": {
+    "image_with_text_3nndy6": {
       "type": "image-with-text",
       "blocks": {
-        "text_hxAECb": {
+        "heading_ECrTeD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box?",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#f9efff",
+            "title_highlight_1_color": "#6d388b",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6d388b",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6d388b",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6d388b",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#f9efff",
+            "title_highlight_2_color": "#6d388b",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6d388b",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6d388b",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6d388b",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h2",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "text_W4DXGU": {
           "type": "text",
           "settings": {
             "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
@@ -688,13 +738,15 @@
         }
       },
       "block_order": [
-        "text_hxAECb"
+        "heading_ECrTeD",
+        "text_W4DXGU"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
         "image_url": "",
         "image_url_alt": "",
+        "video": "shopify://files/videos/0424(1).mp4",
         "video_autoplay": true,
         "video_loop": true,
         "product_media_index": "1",
@@ -2405,7 +2457,7 @@
     "content_blocks_section_3",
     "bladder_control_section",
     "whats_in_the_box_section",
-    "image_with_text_AwUd8t",
+    "image_with_text_3nndy6",
     "comparison_table_section",
     "trust_badges_section",
     "main",
