@@ -326,55 +326,6 @@
         "padding_bottom": 8
       }
     },
-    "benefits_section": {
-      "type": "benefits-why-pelvidex",
-      "blocks": {
-        "benefit_1": {
-          "type": "column",
-          "settings": {
-            "video_url": "",
-            "title": "Stops Leaks",
-            "text": "Regain control and stop unexpected leaks, freeing you from pads and daily anxiety."
-          }
-        },
-        "benefit_2": {
-          "type": "column",
-          "settings": {
-            "video_url": "",
-            "title": "Guided Strengthening",
-            "text": "Just sit and follow our contraction guide. Real-time visual feedback guarantees perfect form."
-          }
-        },
-        "benefit_3": {
-          "type": "column",
-          "settings": {
-            "video_url": "",
-            "title": "Clinically Proven",
-            "text": "Proven muscle training, backed by scientific urology research for safe, natural rehabilitation."
-          }
-        },
-        "benefit_4": {
-          "type": "column",
-          "settings": {
-            "video_url": "",
-            "title": "A Long-Term Solution",
-            "text": "Strengthens the muscles that control bladder function, addressing the root cause instead of using temporary covers."
-          }
-        }
-      },
-      "block_order": [
-        "benefit_1",
-        "benefit_2",
-        "benefit_3",
-        "benefit_4"
-      ],
-      "settings": {
-        "title": "Why do you need the Hosfu™?",
-        "columns_desktop": 4,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "content_blocks_section_1": {
       "type": "multirow",
       "blocks": {
@@ -397,6 +348,7 @@
         "row_introducing": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/nh_2.jpg",
             "video_muted_autoplay": true,
             "caption": "The Solution",
             "title": "<strong>Meet HOSFU™: The Private Way to Rebuild Bladder Control at Home</strong>",
@@ -465,7 +417,7 @@
         "row_wait": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/nh6.jpg",
+            "image": "shopify://shop_images/nh_6_49cbc1de-3c67-4c9c-a894-e9f1825bceae.jpg",
             "video_muted_autoplay": true,
             "caption": "Act Now",
             "title": "<strong>Don’t Wait Until Leaks Become Your New Normal</strong>",
@@ -582,7 +534,7 @@
             "image": "shopify://shop_images/2aOboQYovTLBQAGzSL3kjoCLCtRadixwZ73ynF6u.jpg",
             "video_url": "",
             "title": "Step 2: Open The App",
-            "text": "Launch the PelviDex™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
+            "text": "Launch the Hosfu™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
           }
         },
         "step_3": {
@@ -2390,7 +2342,6 @@
     "hero_section",
     "expert_endorsement_section",
     "as_seen_on_section",
-    "benefits_section",
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
