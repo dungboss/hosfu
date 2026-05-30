@@ -522,7 +522,7 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/2aOboQYovTLBQAGzSL3kjoCLCtRadixwZ73ynF6u_61544395-07ea-4815-ae31-01ead7236a3c.jpg",
+            "video": "shopify://files/videos/1 (1).mp4",
             "video_url": "",
             "title": "Step 1: Sit & Position",
             "text": "Place The Hosfu™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
@@ -531,7 +531,7 @@
         "step_2": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/2aOboQYovTLBQAGzSL3kjoCLCtRadixwZ73ynF6u.jpg",
+            "video": "shopify://files/videos/2.mp4",
             "video_url": "",
             "title": "Step 2: Open The App",
             "text": "Launch the Hosfu™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
@@ -540,7 +540,7 @@
         "step_3": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/2aOboQYovTLBQAGzSL3kjoCLCtRadixwZ73ynF6u_61544395-07ea-4815-ae31-01ead7236a3c.jpg",
+            "video": "shopify://files/videos/3.mp4",
             "video_url": "",
             "title": "Step 3: Enjoy Lasting Control",
             "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
