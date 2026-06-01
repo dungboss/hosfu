@@ -5,6 +5,14 @@
     assign page_narrow_class = ' page-width--narrow'
   endif
   assign has_sticky = false
+  assign is_uvtoilet_article = false
+  if request.path contains '/blogs/news/uvtoilet'
+    assign is_uvtoilet_article = true
+  elsif article.url contains '/blogs/news/uvtoilet'
+    assign is_uvtoilet_article = true
+  elsif blog.handle == 'news' and article.handle == 'uvtoilet'
+    assign is_uvtoilet_article = true
+  endif
   for b in section.blocks
     if b.type == 'sticky_promotion'
       assign has_sticky = true
@@ -221,11 +229,41 @@
           #BlogContent-{{ section.id }} .article-template__editable-block--disclaimer {
             color: rgba(var(--color-foreground), 0.68);
           }
+          {% if is_uvtoilet_article %}
+            a.article-template__uvtoilet-mobile-cta,
+            .rte a.article-template__uvtoilet-mobile-cta {
+              display: none;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              min-height: 5rem;
+              padding: 0 1.6rem;
+              margin: 1.6rem 0 0;
+              border-radius: 999px;
+              background: rgb(var(--color-base-accent-1));
+              color: #fff;
+              font-size: 1.4rem;
+              font-weight: 900;
+              letter-spacing: 0.05em;
+              line-height: 1.2;
+              text-align: center;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          {% endif %}
           @media screen and (min-width: 750px) {
             #BlogContent-{{ section.id }} p {
               font-size: {{ 1.6 | times: block.settings.body_scale | divided_by: 100.0 }}rem;
             }
           }
+          {% if is_uvtoilet_article %}
+            @media screen and (max-width: 749px) {
+              a.article-template__uvtoilet-mobile-cta,
+              .rte a.article-template__uvtoilet-mobile-cta {
+                display: inline-flex;
+              }
+            }
+          {% endif %}
         </style>
         <div class="color-{{ block.settings.color_scheme }} article-block-padding" style="--padding-top:{{ block.settings.padding_top }}px;--padding-bottom:{{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
           <div class="article-template__content-container page-width{{ page_narrow_class }}">
@@ -693,6 +731,82 @@
   customElements.define('blog-contents', BlogContents);
 </script>
 
+{% if is_uvtoilet_article %}
+  <script>
+    (() => {
+      const ctaClass = 'article-template__uvtoilet-mobile-cta';
+      const sectionHeadingSelector = 'h1, h2, h3, h4, h5, h6';
+      const textBlockSelector = `${sectionHeadingSelector}, p, li, blockquote`;
+      const targets = [
+        { id: 'ordered-two', text: 'I Ordered Two That Night' },
+        { id: 'costs-easy', text: 'The Costs Made the Decision Easy' }
+      ];
+
+      const normalize = (text) => text.replace(/\s+/g, ' ').trim().toLowerCase();
+      const isSectionHeading = (element) => element.matches(sectionHeadingSelector);
+      const includesTarget = (element, target) => normalize(element.textContent).includes(normalize(target));
+
+      const findTargetBlock = (target) => {
+        const blogContent = document.getElementById('BlogContent-{{ section.id }}');
+        const roots = [blogContent, document.body].filter((root, index, list) => root && list.indexOf(root) === index);
+
+        for (const root of roots) {
+          const match = Array.from(root.querySelectorAll(textBlockSelector)).find((element) => {
+            if (element.closest(`.${ctaClass}, blog-contents, nav, header, footer`)) return false;
+            return includesTarget(element, target);
+          });
+
+          if (match) return match;
+        }
+
+        return null;
+      };
+
+      const getInsertionPoint = (block) => {
+        if (block.tagName === 'LI') return block.closest('ul, ol') || block;
+        if (!isSectionHeading(block)) return block;
+
+        let insertionPoint = block;
+        let nextElement = block.nextElementSibling;
+
+        while (nextElement && !isSectionHeading(nextElement)) {
+          if (nextElement.classList.contains(ctaClass)) return null;
+          insertionPoint = nextElement;
+          nextElement = nextElement.nextElementSibling;
+        }
+
+        return insertionPoint;
+      };
+
+      const insertCtas = () => {
+        targets.forEach((target) => {
+          if (document.querySelector(`.${ctaClass}[data-uvtoilet-cta="${target.id}"]`)) return;
+
+          const targetBlock = findTargetBlock(target.text);
+          if (!targetBlock) return;
+
+          const insertionPoint = getInsertionPoint(targetBlock);
+          if (!insertionPoint) return;
+
+          const cta = document.createElement('a');
+          cta.className = ctaClass;
+          cta.href = '/products/toilet-sensor-light';
+          cta.dataset.uvtoiletCta = target.id;
+          cta.textContent = 'Check Availability';
+          insertionPoint.insertAdjacentElement('afterend', cta);
+        });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', insertCtas, { once: true });
+      } else {
+        insertCtas();
+      }
+
+      setTimeout(insertCtas, 500);
+    })();
+  </script>
+{% endif %}
 
 <script type="application/ld+json">
   {
