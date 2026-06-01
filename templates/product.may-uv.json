@@ -1463,7 +1463,7 @@
                 "custom_text_color": "#ff0000",
                 "title": "Zero-Damage Setup",
                 "icon_heading_size": "h3",
-                "text": "<p>UInstall in under 30 seconds with our secure snap-on base and premium double-sided tape. The device easily detaches for quick, hassle-free recharging.</p>",
+                "text": "<p>Install in under 30 seconds with our secure snap-on base and premium double-sided tape. The device easily detaches for quick, hassle-free recharging.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -1803,7 +1803,7 @@
             "heading": "What if it isn't the right fit for my bathroom?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We are confident you’ll love this smart upgrade to your daily routine. However, if you are not completely satisfied, we offer a hassle-free <strong>[Điền số ngày, ví dụ: 30-Day]</strong> money-back guarantee. Simply reach out to our customer support team, and we will take care of your return quickly and quietly.</p>",
+            "row_content": "<p>We are confident you’ll love this smart upgrade to your daily routine. However, if you are not completely satisfied, we offer a hassle-free <strong>30 days</strong> money-back guarantee. Simply reach out to our customer support team, and we will take care of your return quickly and quietly.</p>",
             "page": ""
           },
           "blocks": {}

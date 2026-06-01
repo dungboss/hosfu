@@ -32,7 +32,7 @@
             "star_color": "#ffcc00",
             "bg_stars_style": "full",
             "bg_star_color": "#ececec",
-            "label": "<strong>4.8/5 (150+ Reviews)</strong> | 5,000+ Happy Users",
+            "label": "<strong>4.8/5 (150+ Reviews)</strong> | Trusted by responsible drivers",
             "size": 15,
             "alignment": "flex-start",
             "scroll_id": "",
@@ -45,7 +45,7 @@
           "type": "text",
           "name": "Text",
           "settings": {
-            "text": "<p><em><strong>Restore Bladder Control & Confidence in Just 15 Mins a Day</strong></em></p>",
+            "text": "<p><em><strong>Don’t Trust How “Fine” You Feel</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -79,7 +79,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Medical-Grade Precision: 4 Guided Modes</strong>",
+            "text_1": "<strong>Know Before You Drive</strong>",
             "icon_1": "shield",
             "filled_icon_1": false,
             "text_2": "",
@@ -119,7 +119,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Expert-designed routines tailored to your progress. Professional Kegel training made simple and effective at home.",
+            "text_1": "Alcohol can make you feel normal before your body is actually ready to drive. HOSFU gives you a clear number before you touch the ignition.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -159,8 +159,8 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Discreet & Effortless Training</strong>",
-            "icon_1": "lock",
+            "text_1": "<strong>Fast, Easy BAC Check</strong>",
+            "icon_1": "timer",
             "filled_icon_1": false,
             "text_2": "",
             "icon_2": "check_circle",
@@ -199,7 +199,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Train comfortably while sitting, reading, or watching TV. Ultra-quiet operation for complete privacy anywhere.",
+            "text_1": "Blow into the device and get a digital reading in seconds — simple enough to use before leaving dinner, a party, or a night out.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -239,8 +239,8 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Non-Invasive Solution</strong>",
-            "icon_1": "star",
+            "text_1": "<strong>Rechargeable & Reusable</strong>",
+            "icon_1": "Power",
             "filled_icon_1": false,
             "text_2": "",
             "icon_2": "check_circle",
@@ -279,7 +279,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Safe, external-use design. No surgery or medication needed—just a natural way to regain bladder control.",
+            "text_1": "No disposable batteries needed. USB-C rechargeable design keeps it ready when you need it.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -319,8 +319,8 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Real-Time App Tracking</strong>",
-            "icon_1": "trending_up",
+            "text_1": "<strong>Keep One Where It Matters</strong>",
+            "icon_1": "map-pin",
             "filled_icon_1": false,
             "text_2": "",
             "icon_2": "check_circle",
@@ -359,7 +359,7 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Sync with our app to visualize your strength gains. Stay motivated with daily goals and progress reports.",
+            "text_1": "Store it in your car, kitchen drawer, travel bag, or bar cabinet so you can check before making a risky decision.",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -450,7 +450,7 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "atc_custom_label": "GET MY HOSFU TRAINER",
+            "atc_custom_label": "GET MY HOSFU BREATHALYZER",
             "display_price": false,
             "price_position": "left",
             "price_separator": "•",
@@ -568,7 +568,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<strong>Flash Sale:</strong> Up to 30% Off Today! Free & Discreet Shipping on all orders.",
+            "text_1": "<em><strong>Flash Sale:</strong></em><em> Save 45% Today — Be ready before your next night out.</em>",
             "icon_1": "",
             "filled_icon_1": false,
             "text_2": "",
@@ -600,12 +600,12 @@
             "icon_1": "assured_workload",
             "icon_1_fill": false,
             "heading_1": "30-Day Money-Back Guarantee",
-            "icon_2": "add_circle",
+            "icon_2": "shield",
             "icon_2_fill": false,
-            "heading_2": "Doctor Recommended",
-            "icon_3": "lock",
+            "heading_2": "Police-Grade Accuracy",
+            "icon_3": "box",
             "icon_3_fill": false,
-            "heading_3": "100% Private Delivery",
+            "heading_3": "Fast & Private Delivery",
             "margin_top": 15,
             "margin_bottom": 15
           },
@@ -651,7 +651,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul><h3></h3>",
+            "content": "<p><strong>HOSFU</strong> helps remove the <strong>guesswork after drinking</strong>.</p><p>Alcohol can make you feel <strong>normal</strong> even when your body may not be ready to drive. Instead of relying on confidence, mood, or <strong>“I feel fine,”</strong> HOSFU gives you a clear <strong>digital BAC reading</strong> in seconds.</p><p>Its advanced <strong>alcohol sensor</strong> is designed to detect alcohol in your breath and display an easy-to-read number, so you can make a smarter decision <strong>before touching the ignition</strong>.</p><p></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -698,7 +698,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Step 1:</strong> Sit comfortably on the HOSFU trainer (no undressing required).<br/><strong>Step 2:</strong> Open the HOSFU App and choose your guided 15-minute routine.<br/><strong>Step 3:</strong> Follow the real-time visual cues on your phone to squeeze and relax.<br/><em>Recommended: Use once a day for 4-6 weeks for optimal results.</em></p>",
+            "content": "<p>Using <strong>HOSFU</strong> is simple:</p><ol><li>Turn on the device and wait for it to <strong>warm up</strong>.</li><li>Take a deep breath.</li><li>Blow steadily into the <strong>mouthpiece</strong>.</li><li>Read your <strong>BAC result</strong> on the digital screen.</li><li>If the number is not where you want it to be, <strong>wait, retest later, or choose a safer ride</strong>.</li></ol><p>Best used before driving home from <strong>dinner, parties, bars, BBQs, holidays</strong>, or the <strong>morning after drinking</strong>.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -709,7 +709,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Why People Keep Using It",
+            "heading": "Why Responsible Drivers Keep One",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -745,7 +745,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Because it's not a chore—it’s a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
+            "content": "<p>Responsible drivers know that <strong>“feeling fine” is not proof</strong>.</p><p>Many people keep <strong>HOSFU</strong> in their <strong>car, kitchen drawer, travel bag, or bar cabinet</strong> so they can check before making a risky decision.</p><p>It is especially useful for:</p><p>• <strong>Nights out with friends</strong><br/>• <strong>Dinner dates and wine nights</strong><br/>• <strong>Weekend BBQs and holidays</strong><br/>• <strong>Rides home after events</strong><br/>• <strong>Morning-after checks</strong> before work or errands<br/>• Families who want an extra <strong>safety step before anyone drives</strong></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -756,7 +756,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Shipping & Wellness Note",
+            "heading": "Shipping & Safety Note",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -882,13 +882,13 @@
         "review_border_color": "#e9ecef",
         "star_color": "#ffc107",
         "username_color": "#000000",
-        "username": "Mark T.",
+        "username": "Jason M.",
         "verified_customer": true,
         "verified_icon_color": "#28a745",
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "I used to wake up 4 times a night. After 3 weeks with HOSFU, I'm finally sleeping through until morning. The app makes it so easy to stay on track. Best investment for my health!",
+        "review_text": "I thought I was okay to drive after two drinks. HOSFU showed me a real BAC number that made me wait, drink water, and call a ride instead. Simple device, but it changed how I make decisions after drinking.",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
@@ -1005,7 +1005,7 @@
         "text_cLnqTc": {
           "type": "text",
           "settings": {
-            "title": "Discreet Shipping & Plain Packaging • Doctor Recommended • 15-Min Daily Sessions • Real-Time App Progress • Non-Invasive Solution • FDA-Grade Material • 30-Day Money-Back Guarantee"
+            "title": "Police-Grade Accuracy • Fast 10-Second Results • Pocket-Size & Rechargeable • Clear Digital Readings • 100-Day Risk-Free Trial • 3-Year Warranty"
           }
         }
       },
@@ -1111,7 +1111,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "<strong>Join 5,000+ Men Who Reclaimed Their Freedom</strong>",
+        "title": "<strong>Why \"I feel fine\" falls short.</strong>",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -1498,12 +1498,12 @@
         "column_WYqrYL": {
           "type": "column",
           "settings": {
-            "post_author": "Nat Thomas",
+            "post_author": "Richard M.",
             "post_author_avatar": "shopify://shop_images/t_i_xu_ng_3.png",
             "post_author_verified": false,
             "post_time": "2h ago",
-            "post_text": "<p>I was skeptical at first, but the quality of the HOSFU device is impressive. The case is premium and the setup was a breeze. Already feeling more 'in control' after just 10 days. Highly recommend for anyone on the fence!</p>",
-            "post_image": "shopify://shop_images/t_i_xu_ng_2.png",
+            "post_text": "<p>I’m 66 and I’ve been driving for over 40 years, so I always thought I knew my limit. Two glasses of wine at dinner never felt like something I needed to worry about. The first weekend I used <strong>HOSFU</strong>, it showed me a <strong>BAC number</strong> that made me wait almost another hour before driving home. That was a wake-up call. At my age, I don’t want to risk my license, my wife’s safety, or someone else’s life just because I “felt fine.” I keep it in my glove box now.</p>",
+            "post_image": "shopify://shop_images/1_de2a2eeb-7e58-45a9-ac85-6c68d03b80ff.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "2.3k",
             "post_comments_text": "65 Comments",
@@ -1520,12 +1520,12 @@
         "column_cFizfx": {
           "type": "column",
           "settings": {
-            "post_author": "Edgar Moran",
+            "post_author": "Michael R.",
             "post_author_avatar": "shopify://shop_images/t_i_xu_ng.jpg",
             "post_author_verified": false,
             "post_time": "5h ago",
-            "post_text": "<p>Fast shipping and 100% discreet as promised. The unboxing experience was great, and the device is very quiet. I can use it while watching my morning news without any hassle. Finally, a solution that makes sense.</p>",
-            "post_image": "shopify://shop_images/t_i_xu_ng_5.png",
+            "post_text": "<p>I’m 48, married, with two kids and an aging father who still insists he’s fine to drive after a couple drinks. I bought <strong>HOSFU</strong> for our house after a friend got a DUI coming home from a dinner party. Now we use it before anyone gets behind the wheel after wine, BBQs, or weekend gatherings. It takes seconds, and it ends the argument. No more “I think I’m okay.” There’s a number on the screen. I ended up buying a second one for my dad’s car.</p>",
+            "post_image": "shopify://shop_images/3_eb06c66b-01ed-4475-99d1-bf2a71538030.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "658",
             "post_comments_text": "46 Comments",
@@ -1542,80 +1542,15 @@
         "column_weKzrp": {
           "type": "column",
           "settings": {
-            "post_author": "Kim Caton",
-            "post_author_avatar": "shopify://shop_images/t_i_xu_ng_1.jpg",
+            "post_author": "Linda C.",
+            "post_author_avatar": "shopify://shop_images/841d6f45-399e-4137-9b8b-9d3a9b7e4dcf.png",
             "post_author_verified": false,
             "post_time": "10h ago",
-            "post_text": "<p>This is so much better than trying to do Kegels on your own. The biofeedback technology actually shows you if you're doing it right. It’s simple, effective, and the app is very easy to navigate even for someone my age.</p>",
-            "post_image": "shopify://shop_images/t_i_xu_ng_4.png",
+            "post_text": "<p>My son is 21 and just started going out more with friends from college. He’s a good kid, but good kids still make bad decisions when they feel confident after a few drinks. I bought <strong>HOSFU</strong> for him before he moved back to campus. He laughed at first, but two weeks later he texted me a photo of the screen and said he took an Uber instead of driving. That one text made the purchase worth it. I can’t be with him every night, but at least he has one extra check before he starts the car.</p>",
+            "post_image": "shopify://shop_images/2_e3d0a8d8-d7f4-4460-be79-453534b1014e.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "845",
             "post_comments_text": "54 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        },
-        "column_WCRMNm": {
-          "type": "column",
-          "settings": {
-            "post_author": "Michell Alvarez",
-            "post_author_verified": false,
-            "post_time": "1 day ago",
-            "post_text": "<p>The best investment I've made for my health this year. I've noticed a significant decrease in my nightly bathroom trips. I'm finally getting a full night's sleep again. Thank you, HOSFU!</p>",
-            "post_image": "shopify://shop_images/t_i_xu_ng.png",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "1.1k",
-            "post_comments_text": "26 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        },
-        "review_1": {
-          "type": "column",
-          "settings": {
-            "post_author": "Mark T.",
-            "post_author_avatar": "shopify://shop_images/b27a418cf6849a21dfba046d8db11c34.jpg",
-            "post_author_verified": true,
-            "post_time": "2 weeks ago",
-            "post_text": "<p>I had tried on-and-off routines before, but this felt simple enough to actually keep using. It fits perfectly into my daily routine. The data on the app keeps me motivated to stay consistent every day.</p>",
-            "post_image": "shopify://shop_images/Gemini_Generated_Image_szmtk7szmtk7szmt.png",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "148",
-            "post_comments_text": "23 Comments",
-            "comment_1_author": "Comment author",
-            "comment_1_author_verified": false,
-            "comment_1_time": "2h ago",
-            "comment_1_text": "",
-            "comment_2_author": "Comment author",
-            "comment_2_author_verified": false,
-            "comment_2_time": "3h ago",
-            "comment_2_text": ""
-          }
-        },
-        "review_2": {
-          "type": "column",
-          "settings": {
-            "post_author": "Jason R.",
-            "post_author_avatar": "shopify://shop_images/75153-1.jpg",
-            "post_author_verified": true,
-            "post_time": "1 month ago",
-            "post_text": "<p>The biggest shift was how manageable the routine felt. I could fit it into my evenings and that helped me stop skipping it. It’s discreet, non-invasive, and it actually delivers real results. Worth every penny.</p>",
-            "post_image": "shopify://shop_images/t_i_xu_ng_1.png",
-            "post_reactions": "like, love, care",
-            "post_reactions_text": "159",
-            "post_comments_text": "31 Comments",
             "comment_1_author": "Comment author",
             "comment_1_author_verified": false,
             "comment_1_time": "2h ago",
@@ -1630,10 +1565,7 @@
       "block_order": [
         "column_WYqrYL",
         "column_cFizfx",
-        "column_weKzrp",
-        "column_WCRMNm",
-        "review_1",
-        "review_2"
+        "column_weKzrp"
       ],
       "settings": {
         "display_id": false,
@@ -1725,10 +1657,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
+            "heading": "How is this different from cheaper breathalyzers on the market?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
+            "row_content": "<p>The core difference lies in the <strong>Fuel Cell Sensor</strong>—the exact same technology used by police officers on the side of the road. While cheaper models use semiconductor sensors that can be easily tricked by food or smoke, SoberSense combines a dual-core processor and the latest AI algorithm to deliver extreme accuracy, within <strong>±0.005</strong> of professional law enforcement devices.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1737,10 +1669,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is this a medical treatment?",
+            "heading": "Can this replace an official police breathalyzer?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
+            "row_content": "<p>No. While this breathalyzer delivers professional-grade accuracy and shares the same sensor technology as police units, it is strictly designed as a personal safety device. It shows your exact BAC on a live digital display so you can make an informed, responsible decision, but it does not replace official law enforcement results.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1749,10 +1681,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Who is this trainer designed for?",
+            "heading": "Who is this device designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
+            "row_content": "<p>This product is for anyone who values safety, responsibility, and peace of mind. It’s an essential tool for daily drivers, social drinkers, or anyone who wants to accurately check for overnight alcohol in their system the morning after a few drinks before getting behind the wheel.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1761,10 +1693,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How often should I use it?",
+            "heading": "How should I use it to get the most accurate reading?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
+            "row_content": "<p>For the most accurate blood alcohol content (BAC) reading, you should wait at least 15 to 20 minutes after your last drink or meal before testing. Once you blow into the device, the system analyzes your breath instantly and gives you a precise reading in just <strong>5 seconds</strong>.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1773,10 +1705,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable?",
+            "heading": "Is it hygienic to share with friends or family?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
+            "row_content": "<p>Absolutely. The device features a detachable air intake nozzle made from food-grade PP material. This makes it incredibly easy to clean, store, and safely share with friends or family members for quick cross-checks without compromising personal hygiene.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1785,10 +1717,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will it be discreet?",
+            "heading": "Is the design discreet and portable?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
+            "row_content": "<p>Yes. This breathalyzer is built with a sleek, minimalist, and ultra-compact design (the main body is just 101mm x 38mm). It easily fits right into your pocket, a small bag, or your car's center console without taking up much space, allowing for discreet storage and use wherever you go.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1797,10 +1729,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What if it does not feel like the right fit for me?",
+            "heading": "What if it doesn't feel like the right fit for me?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We stand by our results. HOSFU comes with a <strong>30-Day Money-Back Guarantee</strong>. If you don’t feel a difference in your strength or aren't satisfied with the experience, simply contact our support team for a hassle-free return.</p>",
+            "row_content": "<p>Your purchase is completely risk-free. We are extremely confident in the reliability of our device, which is why we proudly offer a <strong>30-Day Money-Back Guarantee</strong>. If you try the product and feel it doesn't give you the peace of mind you expected, simply return it within 100 days for a full refund. No questions asked.</p>",
             "page": ""
           },
           "blocks": {}
