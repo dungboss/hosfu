@@ -1740,10 +1740,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is the UV light safe for me and my family?",
+            "heading": "How is this detector different from standard CO alarms?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. Safety is our top priority. The UV sterilization mode is intelligently designed to activate <strong>only</strong> when the toilet lid is fully closed. This ensures zero exposure to your skin or eyes. The moment you open the lid, the UV light instantly turns off and switches to the gentle motion-sensor night light.</p>",
+            "row_content": "<p>Most traditional detectors only sound an alarm when gas concentrations reach dangerous levels (e.g., 70 ppm), meaning you have already been exposed for hours. Our device features a real-time digital display starting at 0 ppm, allowing you to see rising threats <em>before</em> they become an emergency.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1752,10 +1752,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How does the UV sterilization actually work?",
+            "heading": "Are the sensors really professional-grade?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Our device uses professional-grade UVC technology to safely break down the DNA of unseen bacteria and viruses lingering in the toilet bowl. This automated process eliminates up to 99.9% of germs daily, reducing odors and keeping your bathroom fresh without relying on harsh, toxic cleaning chemicals.</p>",
+            "row_content": "<p>Yes. This product utilizes the same high-accuracy sensor technology trusted by emergency first responders and fire departments. It is rigorously tested and fully CE-certified to meet the strictest European safety standards (EN 50291 and EN 50194).</p>",
             "page": ""
           },
           "blocks": {}
@@ -1764,10 +1764,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will this fit my current toilet?",
+            "heading": "What types of gases does it actually detect?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes! The sleek, compact design makes it universally compatible with almost all standard toilet shapes and sizes. The flat mounting base easily adheres to the inner surface of your toilet lid.</p>",
+            "row_content": "<p>It is a comprehensive 4-in-1 safety device. It continuously monitors your air for invisible, odorless Carbon Monoxide (CO), as well as combustible gases like Natural Gas and Propane (LPG). It also displays real-time room temperature and humidity.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1776,10 +1776,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable, and how long does the battery last?",
+            "heading": "Where are the best places to install it?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes, it is 100% rechargeable via the included USB cable. Thanks to the energy-efficient smart sensor—which ensures the light only activates in the dark—a single charge typically lasts for weeks. When it’s time to recharge, simply unclip the device from its magnetic/snap-on base, charge it, and snap it right back.</p>",
+            "row_content": "<p>For optimal protection, we recommend plugging the unit into wall outlets near potential leak sources. Ideal locations include the kitchen (near gas stoves), next to gas boilers, near fireplaces, and in the hallways right outside sleeping areas.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1788,10 +1788,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will the adhesive tape damage my toilet lid?",
+            "heading": "Does it require batteries, hardwiring, or an electrician?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Not at all. The device uses a specialized, premium double-sided tape designed for bathroom environments (handling moisture). It holds the device firmly in place but can be removed later without leaving sticky residue or damaging the lid's surface. No tools or drilling required.</p>",
+            "row_content": "<p>Not at all. The detector is designed for zero-stress \"Plug & Play\" installation. Simply plug it directly into any standard wall socket. No drilling, no messy wires, and no professional installation required.</p>",
             "page": ""
           },
           "blocks": {}
@@ -1800,23 +1800,22 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What if it isn't the right fit for my bathroom?",
+            "heading": "Will the alarm be loud enough to wake my family?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We are confident you’ll love this smart upgrade to your daily routine. However, if you are not completely satisfied, we offer a hassle-free <strong>[Điền số ngày, ví dụ: 30-Day]</strong> money-back guarantee. Simply reach out to our customer support team, and we will take care of your return quickly and quietly.</p>",
+            "row_content": "<p>Absolutely. If gas levels exceed safe thresholds, the device instantly triggers a piercing 85-decibel siren. It is purposely engineered to be extremely loud to wake up heavy sleepers and alert everyone in the household immediately.</p>",
             "page": ""
           },
           "blocks": {}
         },
         "faq_7": {
           "type": "collapsible-row-content",
-          "disabled": true,
           "settings": {
             "open": false,
-            "heading": "What if it does not feel like the right fit for me?",
+            "heading": "What if I am not completely satisfied with my purchase?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We stand by our results. HOSFU comes with a <strong>30-Day Money-Back Guarantee</strong>. If you don’t feel a difference in your strength or aren't satisfied with the experience, simply contact our support team for a hassle-free return.</p>",
+            "row_content": "<p>Your family's safety and your peace of mind are our top priorities. We offer a hassle-free 30-day money-back guarantee. If you don't feel completely secure with your detector, simply return it for a full refund.</p>",
             "page": ""
           },
           "blocks": {}
