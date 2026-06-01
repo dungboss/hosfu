@@ -295,6 +295,10 @@
     box-shadow: 0 14px 28px rgba(15, 105, 215, 0.24);
   }
 
+  #shopify-section-{{ section.id }} .epf-news__mobile-button {
+    display: none;
+  }
+
   #shopify-section-{{ section.id }} .epf-news__sidebar-note {
     margin-top: 0.8rem;
     font-size: 1.15rem;
@@ -505,6 +509,11 @@
     #shopify-section-{{ section.id }} .epf-news__sidebar-copy {
       font-size: 1.4rem;
     }
+
+    #shopify-section-{{ section.id }} .epf-news__mobile-button {
+      display: inline-flex;
+      margin-top: 1.4rem;
+    }
   }
 {%- endstyle -%}
 
@@ -616,6 +625,11 @@
                 <div class="epf-news__story-body">
                   {{ block.settings.body | replace: '[product_title]', product.title | newline_to_br }}
                 </div>
+                {% if block.settings.heading contains 'I Ordered Two That Night' or block.settings.heading contains 'The Costs Made the Decision Easy' %}
+                  <a class="epf-news__button epf-news__mobile-button" href="{{ section.settings.sidebar_button_link | default: '#MainProduct-offer_main' }}">
+                    Check availability
+                  </a>
+                {% endif %}
               </section>
 
             {% when 'compare_section' %}
@@ -676,6 +690,11 @@
                     </div>
                   </div>
                 </div>
+                {% if block.settings.heading contains 'I Ordered Two That Night' or block.settings.heading contains 'The Costs Made the Decision Easy' %}
+                  <a class="epf-news__button epf-news__mobile-button" href="{{ section.settings.sidebar_button_link | default: '#MainProduct-offer_main' }}">
+                    Check availability
+                  </a>
+                {% endif %}
               </section>
 
             {% when 'check_columns' %}

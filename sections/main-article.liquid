@@ -193,6 +193,34 @@
           #BlogContent-{{ section.id }} p {
             font-size: {{ 1.5 | times: block.settings.body_scale | divided_by: 100.0 }}rem;
           }
+          #BlogContent-{{ section.id }} .article-template__editable-block {
+            margin-top: var(--editable-margin-top);
+            margin-bottom: var(--editable-margin-bottom);
+            text-align: var(--editable-alignment);
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block p,
+          #BlogContent-{{ section.id }} .article-template__editable-block li {
+            font-size: var(--editable-text-size);
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block ul,
+          #BlogContent-{{ section.id }} .article-template__editable-block ol {
+            margin-bottom: 1.5rem;
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block--callout,
+          #BlogContent-{{ section.id }} .article-template__editable-block--offer {
+            padding: 1.6rem;
+            border-radius: 0.8rem;
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block--callout {
+            background: #d7f3e8;
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block--offer {
+            background: #f5fbf9;
+            border: 0.1rem solid rgba(var(--color-foreground), 0.12);
+          }
+          #BlogContent-{{ section.id }} .article-template__editable-block--disclaimer {
+            color: rgba(var(--color-foreground), 0.68);
+          }
           @media screen and (min-width: 750px) {
             #BlogContent-{{ section.id }} p {
               font-size: {{ 1.6 | times: block.settings.body_scale | divided_by: 100.0 }}rem;
@@ -219,7 +247,27 @@
                   </div>
                 {%- endif -%}
               {%- endif -%}
-              {{ article.content }}
+              {% assign editable_article_blocks = section.blocks | where: 'type', 'editable_article_content' %}
+              {%- if editable_article_blocks.size > 0 -%}
+                {%- for content_block in section.blocks -%}
+                  {%- if content_block.type == 'editable_article_content' -%}
+                    <div
+                      class="article-template__editable-block article-template__editable-block--{{ content_block.settings.style }} rte"
+                      style="
+                        --editable-margin-top: {{ content_block.settings.margin_top | divided_by: 10.0 }}rem;
+                        --editable-margin-bottom: {{ content_block.settings.margin_bottom | divided_by: 10.0 }}rem;
+                        --editable-text-size: {{ content_block.settings.text_size }}px;
+                        --editable-alignment: {{ content_block.settings.alignment }};
+                      "
+                      {{ content_block.shopify_attributes }}
+                    >
+                      {{ content_block.settings.content }}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- else -%}
+                {{ article.content }}
+              {%- endif -%}
             </div>
             {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
             {% for block in promotions %}
