@@ -1213,7 +1213,7 @@
             "heading_CBkdVX": {
               "type": "heading",
               "settings": {
-                "title": "Why Homes Trust For Complete Bathroom Hygiene",
+                "title": "Why Homes & Hosts Trust Hosfu For Their Safety",
                 "title_highlight_1": "solid-color",
                 "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
                 "title_highlight_1_bg-color": "#fce4ec",
@@ -1370,7 +1370,6 @@
               "type": "image",
               "name": "Image",
               "settings": {
-                "image": "shopify://shop_images/D63678B6-B0BD-4BE4-885D-28D40DDB7C16_1_201_a.jpg",
                 "width": 100,
                 "alignment": "center",
                 "mobile_alignment": "center",
