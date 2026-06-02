@@ -1052,7 +1052,7 @@
         "video_slide_JPWi3z": {
           "type": "video_slide",
           "settings": {
-            "video": "shopify://files/videos/0601(4).mp4",
+            "video": "shopify://files/videos/0601(5).mp4",
             "loop": true,
             "muted_autoplay": true,
             "display_play_btn": true,
