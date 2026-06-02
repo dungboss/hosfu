@@ -652,7 +652,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>The Steadfast™ Gas & CO Detector is engineered with highly sensitive, multi-threat sensors. It continuously samples the air for invisible, odorless Carbon Monoxide (CO) and combustible gases like Natural Gas and Propane (LPG). Unlike traditional alarms that leave you guessing, our device features a smart microchip and a real-time digital display to track exact gas concentrations (PPM and %LEL). The moment dangerous thresholds are crossed, it instantly triggers a piercing 85dB siren, ensuring your family has the crucial time needed to evacuate.</p>",
+            "content": "<p> Gas & CO Detector is engineered with highly sensitive, multi-threat sensors. It continuously samples the air for invisible, odorless Carbon Monoxide (CO) and combustible gases like Natural Gas and Propane (LPG). Unlike traditional alarms that leave you guessing, our device features a smart microchip and a real-time digital display to track exact gas concentrations (PPM and %LEL). The moment dangerous thresholds are crossed, it instantly triggers a piercing 85dB siren, ensuring your family has the crucial time needed to evacuate.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
