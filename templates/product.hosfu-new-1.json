@@ -31,10 +31,10 @@
         "position": "top"
       }
     },
-    "rich_text_4nN4k3": {
+    "rich_text_9QytmR": {
       "type": "rich-text",
       "blocks": {
-        "heading_fTNeGm": {
+        "heading_D4QKqW": {
           "type": "heading",
           "settings": {
             "title": "Is Your Home Truly Safe From Invisible Toxic Leaks?",
@@ -86,7 +86,7 @@
         }
       },
       "block_order": [
-        "heading_fTNeGm"
+        "heading_D4QKqW"
       ],
       "name": "Rich text",
       "settings": {
@@ -656,6 +656,115 @@
         "mobile_padding_bottom": 0,
         "desktop_padding_top": 0,
         "desktop_padding_bottom": 0
+      }
+    },
+    "rich_text_4nN4k3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fTNeGm": {
+          "type": "heading",
+          "settings": {
+            "title": "Invented By First Responders. Built To Save Lives.",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#F9EFFF",
+            "title_highlight_1_color": "#6D388B",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6D388B",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6D388B",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6D388B",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#F9EFFF",
+            "title_highlight_2_color": "#6D388B",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6D388B",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6D388B",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6D388B",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h3",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#FF0000",
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "text_UeRP94": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>HOSFU was <strong>invented and developed</strong> by first responders who saw the same tragedy repeat itself every winter — families with basic, \"working\" alarms that never gave them the early warning they desperately needed. </p><p></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 15,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_TDCeNb": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p><strong>✓ CE Certified</strong> — Meets the strictest safety, health, and environmental protection requirements for European homes.<br/><strong>✓ Professional-Grade Sensors</strong> — Powered by highly accurate electrochemical technology to detect threats instantly.<br/><strong>✓ 4-in-1 Real-Time Tracking</strong> — Independently tested to monitor Carbon Monoxide, Natural Gas, Temperature, and Humidity.</p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_fTNeGm",
+        "text_UeRP94",
+        "text_TDCeNb"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "full_width": true,
+        "mobile_narrow_width": false,
+        "color_scheme": "background-1",
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "comparison_table_section": {
@@ -3330,11 +3439,12 @@
   "order": [
     "mobile_btn_center_css",
     "page_scroll_progress_frxPeK",
-    "rich_text_4nN4k3",
+    "rich_text_9QytmR",
     "hero_section",
     "as_seen_on_section",
     "expert_endorsement_section",
     "image_with_text_xKffTQ",
+    "rich_text_4nN4k3",
     "comparison_table_section",
     "rich_text_CYKgjk",
     "main",
