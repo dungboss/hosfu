@@ -2818,6 +2818,191 @@
         "padding_bottom": 60
       }
     },
+    "faq_section": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "How is this detector different from standard CO alarms?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Most traditional detectors only sound an alarm when gas concentrations reach dangerous levels (e.g., 70 ppm), meaning you have already been exposed for hours. Our device features a real-time digital display starting at 0 ppm, allowing you to see rising threats <em>before</em> they become an emergency.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_2": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Are the sensors really professional-grade?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Yes. This product utilizes the same high-accuracy sensor technology trusted by emergency first responders and fire departments. It is rigorously tested and fully CE-certified to meet the strictest European safety standards (EN 50291 and EN 50194).</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_3": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "What types of gases does it actually detect?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>It is a comprehensive 4-in-1 safety device. It continuously monitors your air for invisible, odorless Carbon Monoxide (CO), as well as combustible gases like Natural Gas and Propane (LPG). It also displays real-time room temperature and humidity.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_4": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Where are the best places to install it?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>For optimal protection, we recommend plugging the unit into wall outlets near potential leak sources. Ideal locations include the kitchen (near gas stoves), next to gas boilers, near fireplaces, and in the hallways right outside sleeping areas.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_5": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Does it require batteries, hardwiring, or an electrician?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Not at all. The detector is designed for zero-stress \"Plug & Play\" installation. Simply plug it directly into any standard wall socket. No drilling, no messy wires, and no professional installation required.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_6": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "Will the alarm be loud enough to wake my family?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Absolutely. If gas levels exceed safe thresholds, the device instantly triggers a piercing 85-decibel siren. It is purposely engineered to be extremely loud to wake up heavy sleepers and alert everyone in the household immediately.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        },
+        "faq_7": {
+          "type": "collapsible-row-content",
+          "settings": {
+            "open": false,
+            "heading": "What if I am not completely satisfied with my purchase?",
+            "icon": "check_box",
+            "filled_icon": false,
+            "row_content": "<p>Your family's safety and your peace of mind are our top priorities. We offer a hassle-free 30-day money-back guarantee. If you don't feel completely secure with your detector, simply return it for a full refund.</p>",
+            "page": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "caption": "",
+        "title": "<strong>Questions Customers Ask Before Buying</strong>",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_bg-color": "#f9efff",
+        "title_highlight_1_color": "#1a237e",
+        "highlighted-1_border_radius": 8,
+        "highlighted-1_border_width": 0,
+        "highlighted-1_border": "solid",
+        "highlighted-1_border_color": "#6d388b",
+        "highlighted-1_padding-block": 0.3,
+        "highlighted-1_padding-inline": 0.3,
+        "title_highlight_1_underline-thickness": 2,
+        "title_highlight_1_underline-color": "#6d388b",
+        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_underline-color-position": 25,
+        "title_highlight_1_handwritten-color": "#6d388b",
+        "title_highlight_1_handwritten-stroke-width": 3,
+        "title_highlight_1_handwritten-position": 60,
+        "title_highlight_2": "none",
+        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_bg-color": "#f9efff",
+        "title_highlight_2_color": "#6d388b",
+        "highlighted-2_border_radius": 8,
+        "highlighted-2_border_width": 0,
+        "highlighted-2_border": "solid",
+        "highlighted-2_border_color": "#6d388b",
+        "highlighted-2_padding-block": 0.3,
+        "highlighted-2_padding-inline": 0.3,
+        "title_highlight_2_underline-thickness": 2,
+        "title_highlight_2_underline-color": "#6d388b",
+        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_underline-color-position": 25,
+        "title_highlight_2_handwritten-color": "#6d388b",
+        "title_highlight_2_handwritten-stroke-width": 3,
+        "title_highlight_2_handwritten-position": 60,
+        "heading_size": "h2",
+        "custom_desktop_size": 39,
+        "custom_mobile_size": 28,
+        "margin_top": 15,
+        "margin_bottom": 30,
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "video_muted_autoplay": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "rows_spacing": 4,
+        "row_heading_size": "medium",
+        "collapse_icon": "carret",
+        "collapse_icon_style": "standard",
+        "collapse_icon_radius": 15,
+        "animation_speed": 0.4,
+        "border_type": "bottom",
+        "border_thickness": 1,
+        "border_style": "solid",
+        "corner_radius": 8,
+        "enable_custom_style": false,
+        "heading_padding_vertical": 12,
+        "heading_padding_horizontal": 10,
+        "content_padding_vertical": 10,
+        "content_padding_horizontal": 10,
+        "closed_state_border": "#dddddd",
+        "closed_state_header_bg": "#f9f9f9",
+        "closed_state_header_text": "#121212",
+        "closed_state_row_icon": "#121212",
+        "closed_state_collapse_icon": "#121212",
+        "closed_state_collapse_icon_solid": "#ffffff",
+        "closed_state_collapse_bg": "#121212",
+        "closed_state_content_bg": "#f9f9f9",
+        "closed_state_content_text": "#121212",
+        "open_state_border": "#d5aeea",
+        "open_state_header_bg": "#fefaff",
+        "open_state_header_text": "#000000",
+        "open_state_row_icon": "#6d388b",
+        "open_state_collapse_icon": "#121212",
+        "open_state_collapse_icon_solid": "#ffffff",
+        "open_state_collapse_bg": "#6d388b",
+        "open_state_content_bg": "#fefaff",
+        "open_state_content_text": "#121212",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "content_blocks_section_2": {
       "type": "multirow",
       "blocks": {
@@ -3241,193 +3426,9 @@
         "padding_bottom": 52
       }
     },
-    "faq_section": {
-      "type": "collapsible-content",
-      "blocks": {
-        "faq_1": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_2": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Is this a medical treatment?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_3": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Who is this trainer designed for?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_4": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "How often should I use it?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_5": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Is it rechargeable?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_6": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Will it be discreet?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "faq_7": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "What if it doesn’t work for me?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>We stand behind our product with a <strong>90-Day Results or Refund Guarantee</strong>. If you don’t see improvement after consistent use, simply contact our support team for a full refund—no questions asked.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "caption": "",
-        "title": "<strong>Questions Men Ask Before Starting</strong>",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#f9efff",
-        "title_highlight_1_color": "#1a237e",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6d388b",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6d388b",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6d388b",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#f9efff",
-        "title_highlight_2_color": "#6d388b",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6d388b",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6d388b",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6d388b",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "margin_top": 15,
-        "margin_bottom": 30,
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "video_muted_autoplay": true,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "rows_spacing": 4,
-        "row_heading_size": "medium",
-        "collapse_icon": "carret",
-        "collapse_icon_style": "standard",
-        "collapse_icon_radius": 15,
-        "animation_speed": 0.4,
-        "border_type": "bottom",
-        "border_thickness": 1,
-        "border_style": "solid",
-        "corner_radius": 8,
-        "enable_custom_style": false,
-        "heading_padding_vertical": 12,
-        "heading_padding_horizontal": 10,
-        "content_padding_vertical": 10,
-        "content_padding_horizontal": 10,
-        "closed_state_border": "#dddddd",
-        "closed_state_header_bg": "#f9f9f9",
-        "closed_state_header_text": "#121212",
-        "closed_state_row_icon": "#121212",
-        "closed_state_collapse_icon": "#121212",
-        "closed_state_collapse_icon_solid": "#ffffff",
-        "closed_state_collapse_bg": "#121212",
-        "closed_state_content_bg": "#f9f9f9",
-        "closed_state_content_text": "#121212",
-        "open_state_border": "#d5aeea",
-        "open_state_header_bg": "#fefaff",
-        "open_state_header_text": "#000000",
-        "open_state_row_icon": "#6d388b",
-        "open_state_collapse_icon": "#121212",
-        "open_state_collapse_icon_solid": "#ffffff",
-        "open_state_collapse_bg": "#6d388b",
-        "open_state_content_bg": "#fefaff",
-        "open_state_content_text": "#121212",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "medical_disclaimer_section": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -3435,45 +3436,6 @@
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "image_with_text_Ny6jzT": {
-      "type": "image-with-text",
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_url": "",
-        "image_url_alt": "",
-        "video_autoplay": true,
-        "video_loop": true,
-        "product_media_index": "0",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#2E2A39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#FFFFFF",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#FFFFFF",
-        "custom_section_gradient_background": "",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 50,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "mobile_full_media_width": false,
-        "mobile_side_by_side": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
       }
     }
   },
@@ -3495,13 +3457,12 @@
     "image_slider_GmJFFz",
     "custom_columns_new_iUtatH",
     "real_words_section",
+    "faq_section",
     "content_blocks_section_2",
     "content_blocks_section_3",
     "bladder_control_section",
     "image_with_text_3nndy6",
     "trust_badges_section",
-    "faq_section",
-    "medical_disclaimer_section",
-    "image_with_text_Ny6jzT"
+    "medical_disclaimer_section"
   ]
 }
