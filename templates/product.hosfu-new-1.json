@@ -663,7 +663,7 @@
         "row_bladder_trains": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Trains bladder control</strong>",
+            "benefit": "Real-time Visibility",
             "us": true,
             "others": false,
             "others_2": false,
@@ -765,7 +765,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "<strong>Why Men Choose HOSFU™ Over Temporary Fixes</strong>",
+        "title": "",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -803,7 +803,7 @@
         "heading_size": "h2",
         "custom_desktop_size": 39,
         "custom_mobile_size": 28,
-        "text": "<p>Bladder pads only manage leaks after they happen. HOSFU™ helps men train the control system behind the leaks — privately, at home, and without complicated routines.</p>",
+        "text": "",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
@@ -822,16 +822,16 @@
         "layout": "table_second",
         "style": "classic",
         "corner_radius": 20,
-        "number_of_competitors": 2,
-        "us_label": "HOSFU™",
+        "number_of_competitors": 1,
+        "us_label": "HOSFU ádasd sdfsdfsd sd",
         "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Bladder Pads",
+        "logo_width": 130,
+        "mobile_logo_width": 90,
+        "others_label": "Cheap Alarms",
         "others_label_size": 18,
         "others_logo_width": 90,
         "others_mobile_logo_width": 60,
-        "others_2_label": "Medication / Surgery",
+        "others_2_label": "",
         "others_2_label_size": 18,
         "others_2_logo_width": 90,
         "others_2_mobile_logo_width": 60,
@@ -2242,6 +2242,7 @@
         "desc_row_3",
         "desc_row_4"
       ],
+      "disabled": true,
       "custom_css": [
         ".price__badge-sale {background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important;}"
       ],
