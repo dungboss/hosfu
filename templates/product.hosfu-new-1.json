@@ -411,21 +411,21 @@
         "expert_quote_blk": {
           "type": "text",
           "settings": {
-            "text": "<p>“As men age, the muscles that help control bladder function can weaken — leading to leaks during coughing, standing, laughing, or daily activity. A guided pelvic floor training routine can help men rebuild control and reduce dependence on pads.”</p>",
+            "text": "<p><strong>\" In all my years as a firefighter, the calls that haunt me the most aren't the massive blazes. It's the silent ones. </strong>Carbon monoxide (CO) is one of the leading causes of accidental poisoning deaths across Europe. Every single year, hundreds of people lose their lives to CO poisoning, and tragically, most of them pass away while they are sound asleep.</p><p>But do you want to know the real heartbreak we find when we arrive on the scene? Almost every single victim had a 'working' detector hanging on their wall. The green indicator light was still glowing. But the device was dead silent. Not a single alarm went off.</p><p>CO seeps from the everyday appliances keeping your home warm: heating boilers, furnaces, water heaters, and gas stoves. You can't see it. You can't smell it. <strong>You just don't wake up. \"</strong></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 15,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 15
+            "margin_bottom": 0
           },
           "blocks": {}
         },
         "expert_attribution_blk": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>Dr. James Porter, MD<br/>Urogynecology Specialist</strong></em></p>",
+            "text": "<p></p><p><em><strong>Thomas Becker</strong></em></p><p><em><strong>Professional Firefighter</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -478,6 +478,389 @@
         "desktop_padding_bottom": 36
       }
     },
+    "image_with_text_xKffTQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_tjCkNn": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>⭐⭐⭐⭐⭐ <strong>4.85 out of 5</strong> based on 12,000+ Reviews</p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "text_size": 14,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "heading_VeMtBb": {
+          "type": "heading",
+          "settings": {
+            "title": "Smart Protection. Simplified.",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#f9efff",
+            "title_highlight_1_color": "#000000",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6d388b",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6d388b",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6d388b",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#f9efff",
+            "title_highlight_2_color": "#6d388b",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6d388b",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6d388b",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6d388b",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h2",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_FkUwBU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p><p> We believe home security shouldn't be complicated. Just plug HOSFU directly into any standard outlet. No messy wires, no complicated setups, and no drilling required. You get instant, reliable protection from the moment it powers on. <strong>Breathe easier. Sleep better. HOSFU watches over your home so you don't have to.</strong></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 6,
+            "margin_bottom": 6
+          },
+          "blocks": {}
+        },
+        "text_NX83UU": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>We believe home security shouldn't be complicated. Just plug HOSFU directly into any standard outlet. No messy wires, no complicated setups, and no drilling required. You get instant, reliable protection from the moment it powers on.</p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "button_6YMYUg": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Get 50% Off Today",
+            "button_link": "#add-to-cart",
+            "button_style_secondary": false,
+            "large_font_size": false,
+            "enable_custom_color": false,
+            "custom_color": "#dd1d1d",
+            "custom_text_color": "#ffffff",
+            "custom_outline_hover_text_color": "#ffffff",
+            "full_width": false,
+            "alignment": "flex-start",
+            "mobile_alignment": "center",
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "text_r8kFhW": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><em>Note: Not Available on Amazon or eBay</em></p><p></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 13,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_tjCkNn",
+        "heading_VeMtBb",
+        "text_FkUwBU",
+        "text_NX83UU",
+        "button_6YMYUg",
+        "text_r8kFhW"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_url": "",
+        "image_url_alt": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
+      }
+    },
+    "comparison_table_section": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_bladder_trains": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Trains bladder control</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_reduce_leaks": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Helps reduce leaks over time</strong>",
+            "us": true,
+            "others": false,
+            "others_2": true,
+            "others_3": false
+          }
+        },
+        "row_private_routine": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Private at-home routine</strong>",
+            "us": true,
+            "others": true,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_app_guided": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>App-guided sessions</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_realtime": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Real-time feedback</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_no_clinic": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>No clinic visits needed</strong>",
+            "us": true,
+            "others": true,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_one_time": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>One-time device purchase</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_discreet": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Discreet and easy to use</strong>",
+            "us": true,
+            "others": true,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_longterm": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Supports long-term confidence</strong>",
+            "us": true,
+            "others": false,
+            "others_2": true,
+            "others_3": false
+          }
+        }
+      },
+      "block_order": [
+        "row_bladder_trains",
+        "row_reduce_leaks",
+        "row_private_routine",
+        "row_app_guided",
+        "row_realtime",
+        "row_no_clinic",
+        "row_one_time",
+        "row_discreet",
+        "row_longterm"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>Why Men Choose HOSFU™ Over Temporary Fixes</strong>",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_bg-color": "#f9efff",
+        "title_highlight_1_color": "#2e2a39",
+        "highlighted-1_border_radius": 8,
+        "highlighted-1_border_width": 0,
+        "highlighted-1_border": "solid",
+        "highlighted-1_border_color": "#6d388b",
+        "highlighted-1_padding-block": 0.3,
+        "highlighted-1_padding-inline": 0.3,
+        "title_highlight_1_underline-thickness": 2,
+        "title_highlight_1_underline-color": "#6d388b",
+        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_underline-color-position": 25,
+        "title_highlight_1_handwritten-color": "#6d388b",
+        "title_highlight_1_handwritten-stroke-width": 3,
+        "title_highlight_1_handwritten-position": 60,
+        "title_highlight_2": "none",
+        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_bg-color": "#f9efff",
+        "title_highlight_2_color": "#6d388b",
+        "highlighted-2_border_radius": 8,
+        "highlighted-2_border_width": 0,
+        "highlighted-2_border": "solid",
+        "highlighted-2_border_color": "#6d388b",
+        "highlighted-2_padding-block": 0.3,
+        "highlighted-2_padding-inline": 0.3,
+        "title_highlight_2_underline-thickness": 2,
+        "title_highlight_2_underline-color": "#6d388b",
+        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_underline-color-position": 25,
+        "title_highlight_2_handwritten-color": "#6d388b",
+        "title_highlight_2_handwritten-stroke-width": 3,
+        "title_highlight_2_handwritten-position": 60,
+        "heading_size": "h2",
+        "custom_desktop_size": 39,
+        "custom_mobile_size": 28,
+        "text": "<p>Bladder pads only manage leaks after they happen. HOSFU™ helps men train the control system behind the leaks — privately, at home, and without complicated routines.</p>",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "desktop_alignment": "center",
+        "mobile_content_alignment": "center",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "layout": "table_second",
+        "style": "classic",
+        "corner_radius": 20,
+        "number_of_competitors": 2,
+        "us_label": "HOSFU™",
+        "us_label_size": 18,
+        "logo_width": 90,
+        "mobile_logo_width": 60,
+        "others_label": "Bladder Pads",
+        "others_label_size": 18,
+        "others_logo_width": 90,
+        "others_mobile_logo_width": 60,
+        "others_2_label": "Medication / Surgery",
+        "others_2_label_size": 18,
+        "others_2_logo_width": 90,
+        "others_2_mobile_logo_width": 60,
+        "others_3_label": "Competitor 3",
+        "others_3_label_size": 18,
+        "others_3_logo_width": 90,
+        "others_3_mobile_logo_width": 60,
+        "checkmark_style": "regular",
+        "checkmark_color": "#53af01",
+        "checkmark_bg_color": "#53af01",
+        "x_style": "regular",
+        "x_color": "#121212",
+        "x_bg_color": "#dbdbdb",
+        "opposite_icon_colors": "original",
+        "highlighted_color_scheme": "custom",
+        "custom_colors_highlighted_background": "#1a237e",
+        "custom_colors_highlighted_text": "#ffffff",
+        "highlighted_separator_opacity": 0,
+        "highlighted_overlay_opacity": 0,
+        "other_cells_color_scheme": "background-1",
+        "custom_colors_others_background": "#ffffff",
+        "custom_colors_others_text": "#2e2a39",
+        "regular_separator_opacity": 10,
+        "regular_overlay_opacity": 0,
+        "minimalistic_border_opacity": 16,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "content_blocks_section_1": {
       "type": "multirow",
       "blocks": {
@@ -518,6 +901,7 @@
         "row_not_too_old",
         "row_introducing"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -553,12 +937,11 @@
         "row_experts": {
           "type": "row",
           "settings": {
-            "video": "shopify://files/videos/0528 (1).mp4",
             "video_muted_autoplay": true,
-            "caption": "Expert Backed",
-            "title": "<strong>Designed to Help Men Rebuild Bladder Control</strong>",
+            "caption": "",
+            "title": "Smart Protection. Simplified.",
             "title_highlight_color": "#000000",
-            "text": "<p><strong>HOSFU™</strong> is built around proven bladder control training principles and designed to help men <strong>reduce leaks, regain confidence, and stop relying on pads.</strong></p><p>Its smart guided system helps you train more effectively at home with better consistency and <strong>real-time feedback.</strong></p><p>Plus, every order includes free digital training resources to help you <strong>stay on track and maximize results.</strong></p><p>For far less than the ongoing cost of pads or expensive procedures, HOSFU™ offers a <strong>private, at-home solution</strong> that helps you <strong>take control again.</strong></p>",
+            "text": "<p></p><p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p>",
             "button_label": "Get 50% Off Today Only",
             "button_link": "#add-to-cart",
             "atc_button_label": "",
@@ -587,6 +970,7 @@
         "row_experts",
         "row_wait"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -896,210 +1280,6 @@
         "mobile_padding_bottom": 16,
         "desktop_padding_top": 36,
         "desktop_padding_bottom": 36
-      }
-    },
-    "comparison_table_section": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_bladder_trains": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Trains bladder control</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_reduce_leaks": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Helps reduce leaks over time</strong>",
-            "us": true,
-            "others": false,
-            "others_2": true,
-            "others_3": false
-          }
-        },
-        "row_private_routine": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Private at-home routine</strong>",
-            "us": true,
-            "others": true,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_app_guided": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>App-guided sessions</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_realtime": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Real-time feedback</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_no_clinic": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>No clinic visits needed</strong>",
-            "us": true,
-            "others": true,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_one_time": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>One-time device purchase</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_discreet": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Discreet and easy to use</strong>",
-            "us": true,
-            "others": true,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_longterm": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Supports long-term confidence</strong>",
-            "us": true,
-            "others": false,
-            "others_2": true,
-            "others_3": false
-          }
-        }
-      },
-      "block_order": [
-        "row_bladder_trains",
-        "row_reduce_leaks",
-        "row_private_routine",
-        "row_app_guided",
-        "row_realtime",
-        "row_no_clinic",
-        "row_one_time",
-        "row_discreet",
-        "row_longterm"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>Why Men Choose HOSFU™ Over Temporary Fixes</strong>",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#f9efff",
-        "title_highlight_1_color": "#2e2a39",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6d388b",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6d388b",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6d388b",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#f9efff",
-        "title_highlight_2_color": "#6d388b",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6d388b",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6d388b",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6d388b",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "text": "<p>Bladder pads only manage leaks after they happen. HOSFU™ helps men train the control system behind the leaks — privately, at home, and without complicated routines.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "desktop_alignment": "center",
-        "mobile_content_alignment": "center",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "layout": "table_second",
-        "style": "classic",
-        "corner_radius": 20,
-        "number_of_competitors": 2,
-        "us_label": "HOSFU™",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Bladder Pads",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Medication / Surgery",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "checkmark_style": "regular",
-        "checkmark_color": "#53af01",
-        "checkmark_bg_color": "#53af01",
-        "x_style": "regular",
-        "x_color": "#121212",
-        "x_bg_color": "#dbdbdb",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "custom",
-        "custom_colors_highlighted_background": "#1a237e",
-        "custom_colors_highlighted_text": "#ffffff",
-        "highlighted_separator_opacity": 0,
-        "highlighted_overlay_opacity": 0,
-        "other_cells_color_scheme": "background-1",
-        "custom_colors_others_background": "#ffffff",
-        "custom_colors_others_text": "#2e2a39",
-        "regular_separator_opacity": 10,
-        "regular_overlay_opacity": 0,
-        "minimalistic_border_opacity": 16,
-        "padding_top": 52,
-        "padding_bottom": 52
       }
     },
     "trust_badges_section": {
@@ -2573,13 +2753,14 @@
     "hero_section",
     "as_seen_on_section",
     "expert_endorsement_section",
+    "image_with_text_xKffTQ",
+    "comparison_table_section",
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
     "bladder_control_section",
     "rich_text_CYKgjk",
     "image_with_text_3nndy6",
-    "comparison_table_section",
     "trust_badges_section",
     "main",
     "real_words_section",
