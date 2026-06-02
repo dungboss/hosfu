@@ -568,36 +568,36 @@
             "title": "What's In The Box?",
             "title_highlight_1": "solid-color",
             "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_bg-color": "#F9EFFF",
-            "title_highlight_1_color": "#6D388B",
+            "title_highlight_1_bg-color": "#f9efff",
+            "title_highlight_1_color": "#6d388b",
             "highlighted-1_border_radius": 8,
             "highlighted-1_border_width": 0,
             "highlighted-1_border": "solid",
-            "highlighted-1_border_color": "#6D388B",
+            "highlighted-1_border_color": "#6d388b",
             "highlighted-1_padding-block": 0.3,
             "highlighted-1_padding-inline": 0.3,
             "title_highlight_1_underline-thickness": 2,
-            "title_highlight_1_underline-color": "#6D388B",
+            "title_highlight_1_underline-color": "#6d388b",
             "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_1_underline-color-position": 25,
-            "title_highlight_1_handwritten-color": "#6D388B",
+            "title_highlight_1_handwritten-color": "#6d388b",
             "title_highlight_1_handwritten-stroke-width": 3,
             "title_highlight_1_handwritten-position": 60,
             "title_highlight_2": "none",
             "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_bg-color": "#F9EFFF",
-            "title_highlight_2_color": "#6D388B",
+            "title_highlight_2_bg-color": "#f9efff",
+            "title_highlight_2_color": "#6d388b",
             "highlighted-2_border_radius": 8,
             "highlighted-2_border_width": 0,
             "highlighted-2_border": "solid",
-            "highlighted-2_border_color": "#6D388B",
+            "highlighted-2_border_color": "#6d388b",
             "highlighted-2_padding-block": 0.3,
             "highlighted-2_padding-inline": 0.3,
             "title_highlight_2_underline-thickness": 2,
-            "title_highlight_2_underline-color": "#6D388B",
+            "title_highlight_2_underline-color": "#6d388b",
             "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_2_underline-color-position": 25,
-            "title_highlight_2_handwritten-color": "#6D388B",
+            "title_highlight_2_handwritten-color": "#6d388b",
             "title_highlight_2_handwritten-stroke-width": 3,
             "title_highlight_2_handwritten-position": 60,
             "heading_size": "h1",
@@ -606,7 +606,7 @@
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "enable_custom_color": false,
-            "custom_color": "#FF0000",
+            "custom_color": "#ff0000",
             "margin_top": 15,
             "margin_bottom": 15
           },
@@ -626,9 +626,9 @@
         "full_width": true,
         "mobile_narrow_width": false,
         "color_scheme": "background-1",
-        "custom_colors_background": "#FFFFFF",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
+        "custom_colors_text": "#2e2a39",
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d",
@@ -808,36 +808,6 @@
             "others_2": false,
             "others_3": false
           }
-        },
-        "row_one_time": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>One-time device purchase</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_discreet": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Discreet and easy to use</strong>",
-            "us": true,
-            "others": true,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_longterm": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Supports long-term confidence</strong>",
-            "us": true,
-            "others": false,
-            "others_2": true,
-            "others_3": false
-          }
         }
       },
       "block_order": [
@@ -846,10 +816,7 @@
         "row_private_routine",
         "row_app_guided",
         "row_realtime",
-        "row_no_clinic",
-        "row_one_time",
-        "row_discreet",
-        "row_longterm"
+        "row_no_clinic"
       ],
       "settings": {
         "display_id": false,
