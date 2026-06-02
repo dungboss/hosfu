@@ -658,10 +658,10 @@
         "desktop_padding_bottom": 0
       }
     },
-    "rich_text_4nN4k3": {
+    "rich_text_RgV3HB": {
       "type": "rich-text",
       "blocks": {
-        "heading_fTNeGm": {
+        "heading_w9UypR": {
           "type": "heading",
           "settings": {
             "title": "Invented By First Responders. Built To Save Lives.",
@@ -707,45 +707,13 @@
             "enable_custom_color": false,
             "custom_color": "#FF0000",
             "margin_top": 15,
-            "margin_bottom": 15
-          },
-          "blocks": {}
-        },
-        "text_UeRP94": {
-          "type": "text",
-          "name": "Text",
-          "settings": {
-            "text": "<p>HOSFU was <strong>invented and developed</strong> by first responders who saw the same tragedy repeat itself every winter — families with basic, \"working\" alarms that never gave them the early warning they desperately needed. </p><p></p>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#FF0000",
-            "margin_top": 15,
-            "margin_bottom": 0
-          },
-          "blocks": {}
-        },
-        "text_TDCeNb": {
-          "type": "text",
-          "name": "Text",
-          "settings": {
-            "text": "<p><strong>✓ CE Certified</strong> — Meets the strictest safety, health, and environmental protection requirements for European homes.<br/><strong>✓ Professional-Grade Sensors</strong> — Powered by highly accurate electrochemical technology to detect threats instantly.<br/><strong>✓ 4-in-1 Real-Time Tracking</strong> — Independently tested to monitor Carbon Monoxide, Natural Gas, Temperature, and Humidity.</p>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#FF0000",
-            "margin_top": 0,
-            "margin_bottom": 15
+            "margin_bottom": 9
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "heading_fTNeGm",
-        "text_UeRP94",
-        "text_TDCeNb"
+        "heading_w9UypR"
       ],
       "name": "Rich text",
       "settings": {
@@ -763,7 +731,113 @@
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d",
-        "padding_top": 40,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_4nN4k3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_MYJUhd": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>HOSFU was <strong>invented and developed</strong> by first responders who saw the same tragedy repeat itself every winter — families with basic, \"working\" alarms that never gave them the early warning they desperately needed. </p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "text_TDCeNb": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p><strong>✓ CE Certified</strong> — Meets the strictest safety, health, and environmental protection requirements for European homes.<br/></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_nqHmD4": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p><strong>✓ Professional-Grade Sensors</strong> — Powered by highly accurate electrochemical technology to detect threats instantly.<br/></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_dPfdec": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p><strong>✓ 4-in-1 Real-Time Tracking</strong> — Independently tested to monitor Carbon Monoxide, Natural Gas, Temperature, and Humidity.</p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "text_LfwUxh": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>HOSFU isn't just another basic, blinking detector. It's the advanced early-warning system that rescue professionals wish every family had.</p><p><strong>Like having a 24/7 safety inspector plugged into your wall — constantly monitoring your air so you don't have to.</strong></p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#FF0000",
+            "margin_top": 12,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_MYJUhd",
+        "text_TDCeNb",
+        "text_nqHmD4",
+        "text_dPfdec",
+        "text_LfwUxh"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "full_width": true,
+        "mobile_narrow_width": false,
+        "color_scheme": "background-1",
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "padding_top": 4,
         "padding_bottom": 0
       }
     },
@@ -2746,76 +2820,6 @@
         "padding_bottom": 60
       }
     },
-    "content_blocks_section_1": {
-      "type": "multirow",
-      "blocks": {
-        "row_not_too_old": {
-          "type": "row",
-          "settings": {
-            "video": "shopify://files/videos/0528.mp4",
-            "video_muted_autoplay": true,
-            "caption": "The Truth",
-            "title": "<strong>Bladder Leaks Don’t Have to Control the Rest of Your Life</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p><strong>If you’re over 50</strong> and dealing with bladder leaks, you’ve probably told yourself it’s “just age.” That’s what most men believe — and that’s exactly why they stay stuck <strong>relying on pads</strong>, planning every outing around restrooms, and feeling embarrassed by simple leaks.</p><p>But bladder leaks are not just an age issue — they’re often a <strong>control issue.</strong> And <strong>control can be rebuilt.</strong></p><p>As the muscles that support bladder control weaken, everyday actions like <strong>coughing, laughing, standing up, or walking</strong> can trigger embarrassing leaks. The sooner you start training those muscles properly, the sooner you can start <strong>taking your life back.</strong></p><p><strong>It’s not too late to stop the cycle.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
-        "row_introducing": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/nh_2.jpg",
-            "video_muted_autoplay": true,
-            "caption": "The Solution",
-            "title": "<strong>Meet HOSFU™: The Private Way to Rebuild Bladder Control at Home</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p><strong>Introducing HOSFU™: Stop Hiding Leaks. Start Training Control.</strong></p><p>Bladder pads only <strong>hide the problem after it happens.</strong></p><p><strong>HOSFU™ helps men train the muscles behind bladder control</strong> — privately, while seated, from home.</p><p>The smart device connects to the HOSFU app and guides each session step by step, helping you <strong>activate the right muscles</strong> and <strong>track your progress over time.</strong></p><p><strong>No clinic visits.</strong></p><p><strong>No awkward conversations.</strong></p><p><strong>No guessing if you’re doing it right.</strong></p><p>Just <strong>10–15 minutes a day</strong> to start rebuilding <strong>control and confidence.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": [
-        "row_not_too_old",
-        "row_introducing"
-      ],
-      "disabled": true,
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_height": "adapt",
-        "product_media_start_index": "0",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "row_color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "content_blocks_section_2": {
       "type": "multirow",
       "blocks": {
@@ -3444,6 +3448,7 @@
     "as_seen_on_section",
     "expert_endorsement_section",
     "image_with_text_xKffTQ",
+    "rich_text_RgV3HB",
     "rich_text_4nN4k3",
     "comparison_table_section",
     "rich_text_CYKgjk",
@@ -3453,7 +3458,6 @@
     "image_slider_GmJFFz",
     "custom_columns_new_iUtatH",
     "real_words_section",
-    "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
     "bladder_control_section",
