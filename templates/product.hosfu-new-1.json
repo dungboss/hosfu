@@ -630,7 +630,7 @@
         "video_autoplay": true,
         "video_loop": true,
         "product_media_index": "0",
-        "height": "adapt",
+        "height": "small",
         "color_scheme": "background-1",
         "custom_colors_background": "#2e2a39",
         "custom_gradient_background": "",
