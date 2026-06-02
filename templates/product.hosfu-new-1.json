@@ -3438,6 +3438,45 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_Ny6jzT": {
+      "type": "image-with-text",
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_url": "",
+        "image_url_alt": "",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#2E2A39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#FFFFFF",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#FFFFFF",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -3464,6 +3503,7 @@
     "image_with_text_3nndy6",
     "trust_badges_section",
     "faq_section",
-    "medical_disclaimer_section"
+    "medical_disclaimer_section",
+    "image_with_text_Ny6jzT"
   ]
 }
