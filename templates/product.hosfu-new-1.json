@@ -414,7 +414,7 @@
             "text": "<p><strong>\" In all my years as a firefighter, the calls that haunt me the most aren't the massive blazes. It's the silent ones. </strong>Carbon monoxide (CO) is one of the leading causes of accidental poisoning deaths across Europe. Every single year, hundreds of people lose their lives to CO poisoning, and tragically, most of them pass away while they are sound asleep.</p><p>But do you want to know the real heartbreak we find when we arrive on the scene? Almost every single victim had a 'working' detector hanging on their wall. The green indicator light was still glowing. But the device was dead silent. Not a single alarm went off.</p><p>CO seeps from the everyday appliances keeping your home warm: heating boilers, furnaces, water heaters, and gas stoves. You can't see it. You can't smell it. <strong>You just don't wake up. \"</strong></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
-            "text_size": 15,
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
