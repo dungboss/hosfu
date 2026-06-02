@@ -861,240 +861,6 @@
         "padding_bottom": 52
       }
     },
-    "content_blocks_section_1": {
-      "type": "multirow",
-      "blocks": {
-        "row_not_too_old": {
-          "type": "row",
-          "settings": {
-            "video": "shopify://files/videos/0528.mp4",
-            "video_muted_autoplay": true,
-            "caption": "The Truth",
-            "title": "<strong>Bladder Leaks Don’t Have to Control the Rest of Your Life</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p><strong>If you’re over 50</strong> and dealing with bladder leaks, you’ve probably told yourself it’s “just age.” That’s what most men believe — and that’s exactly why they stay stuck <strong>relying on pads</strong>, planning every outing around restrooms, and feeling embarrassed by simple leaks.</p><p>But bladder leaks are not just an age issue — they’re often a <strong>control issue.</strong> And <strong>control can be rebuilt.</strong></p><p>As the muscles that support bladder control weaken, everyday actions like <strong>coughing, laughing, standing up, or walking</strong> can trigger embarrassing leaks. The sooner you start training those muscles properly, the sooner you can start <strong>taking your life back.</strong></p><p><strong>It’s not too late to stop the cycle.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
-        "row_introducing": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/nh_2.jpg",
-            "video_muted_autoplay": true,
-            "caption": "The Solution",
-            "title": "<strong>Meet HOSFU™: The Private Way to Rebuild Bladder Control at Home</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p><strong>Introducing HOSFU™: Stop Hiding Leaks. Start Training Control.</strong></p><p>Bladder pads only <strong>hide the problem after it happens.</strong></p><p><strong>HOSFU™ helps men train the muscles behind bladder control</strong> — privately, while seated, from home.</p><p>The smart device connects to the HOSFU app and guides each session step by step, helping you <strong>activate the right muscles</strong> and <strong>track your progress over time.</strong></p><p><strong>No clinic visits.</strong></p><p><strong>No awkward conversations.</strong></p><p><strong>No guessing if you’re doing it right.</strong></p><p>Just <strong>10–15 minutes a day</strong> to start rebuilding <strong>control and confidence.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": [
-        "row_not_too_old",
-        "row_introducing"
-      ],
-      "disabled": true,
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_height": "adapt",
-        "product_media_start_index": "0",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "row_color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "content_blocks_section_2": {
-      "type": "multirow",
-      "blocks": {
-        "row_experts": {
-          "type": "row",
-          "settings": {
-            "video_muted_autoplay": true,
-            "caption": "",
-            "title": "Smart Protection. Simplified.",
-            "title_highlight_color": "#000000",
-            "text": "<p></p><p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
-        "row_wait": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/nh_6_49cbc1de-3c67-4c9c-a894-e9f1825bceae.jpg",
-            "video_muted_autoplay": true,
-            "caption": "Act Now",
-            "title": "<strong>Don’t Wait Until Leaks Become Your New Normal</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p>At first, bladder leaks may seem small — a few drops when you <strong>cough, laugh, or stand up.</strong></p><p>But over time, many men start <strong>changing their life around the problem.</strong></p><p>They stop wearing light pants. They keep extra underwear in the car. They avoid long drives. They <strong>rely on pads.</strong> They look for restrooms everywhere they go.</p><p>That is how a small leak starts <strong>controlling your confidence.</strong></p><p><strong>HOSFU™ helps you stop just hiding the problem and start training bladder control from home.</strong> The app-guided seated routine is simple, private, and takes just <strong>10–15 minutes a day.</strong></p><p>The sooner you start, the sooner you can begin <strong>taking control back.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": [
-        "row_experts",
-        "row_wait"
-      ],
-      "disabled": true,
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_height": "adapt",
-        "product_media_start_index": "2",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-right",
-        "row_color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "content_blocks_section_3": {
-      "type": "multirow",
-      "blocks": {
-        "row_guarantee": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/nh_4_644ee8f7-11e6-4a5e-82c6-3dfa54c24c8a.jpg",
-            "video_muted_autoplay": true,
-            "caption": "Our Guarantee",
-            "title": "<strong>Try HOSFU™ for 90 Days — Risk Free</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p>Here’s our promise: we want you to feel completely confident trying <strong>HOSFU™ at home.</strong></p><p>Use <strong>HOSFU™ consistently for 90 days</strong> and see how it works for you.</p><p>If you’re not satisfied with your results, we’ll issue a refund under our <strong>90-Day Results or Refund Guarantee.</strong></p><p>That means you can try <strong>HOSFU™ with confidence</strong> — and without the risk of <strong>wasting your money.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": [
-        "row_guarantee"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_height": "adapt",
-        "product_media_start_index": "4",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "row_color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "bladder_control_section": {
-      "type": "bladder-control-steps",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "video": "shopify://files/videos/1 (1).mp4",
-            "video_url": "",
-            "title": "Step 1: Sit & Position",
-            "text": "Place The Hosfu™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "video": "shopify://files/videos/2.mp4",
-            "video_url": "",
-            "title": "Step 2: Open The App",
-            "text": "Launch the Hosfu™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "video": "shopify://files/videos/3.mp4",
-            "video_url": "",
-            "title": "Step 3: Enjoy Lasting Control",
-            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "title": "Bladder Control Has Never Been Easier",
-        "columns_desktop": 3,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_CYKgjk": {
       "type": "rich-text",
       "blocks": {
@@ -1169,261 +935,6 @@
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d",
         "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_with_text_3nndy6": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_ECrTeD": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "What's In The Box?",
-            "title_highlight_1": "solid-color",
-            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_bg-color": "#f9efff",
-            "title_highlight_1_color": "#6d388b",
-            "highlighted-1_border_radius": 8,
-            "highlighted-1_border_width": 0,
-            "highlighted-1_border": "solid",
-            "highlighted-1_border_color": "#6d388b",
-            "highlighted-1_padding-block": 0.3,
-            "highlighted-1_padding-inline": 0.3,
-            "title_highlight_1_underline-thickness": 2,
-            "title_highlight_1_underline-color": "#6d388b",
-            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_1_underline-color-position": 25,
-            "title_highlight_1_handwritten-color": "#6d388b",
-            "title_highlight_1_handwritten-stroke-width": 3,
-            "title_highlight_1_handwritten-position": 60,
-            "title_highlight_2": "none",
-            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_bg-color": "#f9efff",
-            "title_highlight_2_color": "#6d388b",
-            "highlighted-2_border_radius": 8,
-            "highlighted-2_border_width": 0,
-            "highlighted-2_border": "solid",
-            "highlighted-2_border_color": "#6d388b",
-            "highlighted-2_padding-block": 0.3,
-            "highlighted-2_padding-inline": 0.3,
-            "title_highlight_2_underline-thickness": 2,
-            "title_highlight_2_underline-color": "#6d388b",
-            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-            "title_highlight_2_underline-color-position": 25,
-            "title_highlight_2_handwritten-color": "#6d388b",
-            "title_highlight_2_handwritten-stroke-width": 3,
-            "title_highlight_2_handwritten-position": 60,
-            "heading_size": "h2",
-            "custom_desktop_size": 39,
-            "custom_mobile_size": 28,
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "enable_custom_color": false,
-            "custom_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 21
-          },
-          "blocks": {}
-        },
-        "text_W4DXGU": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-center",
-            "text_size": 16,
-            "enable_custom_color": false,
-            "custom_text_color": "#ff0000",
-            "margin_top": 0,
-            "margin_bottom": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "heading_ECrTeD",
-        "text_W4DXGU"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_url": "",
-        "image_url_alt": "",
-        "video": "shopify://files/videos/0424(1).mp4",
-        "video_autoplay": true,
-        "video_loop": true,
-        "product_media_index": "1",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_media_width": 50,
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_full_media_width": false,
-        "mobile_side_by_side": false,
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 16,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
-      }
-    },
-    "trust_badges_section": {
-      "type": "multicolumn",
-      "blocks": {
-        "trust_1": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "90-Day Money Back Guarantee",
-            "text": "<p>Try <strong>HOSFU™</strong> at home for 90 days. If you’re not satisfied with your results, contact us for a refund — no hassle, no stress.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "trust_2": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "Free Shipping Worldwide",
-            "text": "<p>Enjoy fast, free shipping with tracking included on every order, so you always know where your <strong>HOSFU™</strong> is.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "trust_3": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "muted_autoplay": true,
-            "title": "Guaranteed High Quality",
-            "text": "<p><strong>HOSFU™</strong> is built with durable materials and designed for private, comfortable seated training at home.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "trust_1",
-        "trust_2",
-        "trust_3"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "<strong>Shop HOSFU With Confidence</strong>",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#f9efff",
-        "title_highlight_1_color": "#000000",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6d388b",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6d388b",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6d388b",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#f9efff",
-        "title_highlight_2_color": "#6d388b",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6d388b",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6d388b",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6d388b",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "margin_top": 15,
-        "margin_bottom": 0,
-        "button_label": "",
-        "button_link": "",
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "color_scheme": "background-1",
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "cards_color_scheme": "bg-overlay",
-        "custom_cards_colors_background": "#f3f3f3",
-        "custom_cards_gradient_background": "",
-        "custom_cards_colors_heading": "#222126",
-        "custom_cards_colors_text": "#2e2a39",
-        "cards_corner_radius": 20,
-        "stretch_cards": false,
-        "stretched_cards_content_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "square",
-        "media_position": "top",
-        "column_alignment": "center",
-        "desktop_heading_size": 24,
-        "mobile_heading_size": 22,
-        "desktop_text_size": 16,
-        "mobile_text_size": 15,
-        "desktop_text_top_margin": 10,
-        "mobile_text_top_margin": 10,
-        "desktop_container_padding_y": 24,
-        "desktop_container_padding_x": 24,
-        "mobile_container_padding_y": 24,
-        "mobile_container_padding_x": 24,
-        "type": "slide",
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "arrows_color_scheme": "inverse",
-        "transparent_arrows": true,
-        "dots_color_scheme": "inverse",
-        "desktop_full_page": false,
-        "columns_desktop": 3,
-        "slider_desktop": false,
-        "per_move_desktop": 1,
-        "desktop_spacing": 40,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "under",
-        "desktop_arrows_position": "sides",
-        "columns_mobile": "1",
-        "slider_mobile": true,
-        "enable_mobile_preview": false,
-        "mobile_adaptive_height": false,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "under",
-        "padding_top": 52,
         "padding_bottom": 52
       }
     },
@@ -2011,7 +1522,7 @@
             "icon_color": "accent-1",
             "desktop_icon_size": 48,
             "desktop_spacing": 12,
-            "desktop_text_size": 18,
+            "desktop_text_size": 16,
             "mobile_icon_size": 40,
             "mobile_spacing": 10,
             "mobile_text_size": 10,
@@ -2020,10 +1531,10 @@
             "heading_1": "30-Day Money-Back Guarantee",
             "icon_2": "add_circle",
             "icon_2_fill": false,
-            "heading_2": "Doctor Recommended",
-            "icon_3": "lock",
+            "heading_2": "Recommended by Firefighters",
+            "icon_3": "Shield",
             "icon_3_fill": false,
-            "heading_3": "100% Private Delivery",
+            "heading_3": "24/7 Home Protection",
             "margin_top": 15,
             "margin_bottom": 15
           },
@@ -2069,7 +1580,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>HOSFU utilizes advanced <strong>Biofeedback Technology</strong> to monitor your pelvic floor muscles in real-time. Unlike traditional Kegels where you \"guess\" if you're squeezing the right spot, HOSFU ensures every contraction is targeted and effective.</p><ul><li><strong>Targeted Strength:</strong> Rebuilds muscle tone to support bladder control.</li><li><strong>Visible Progress:</strong> Track your strength gain directly on the app.</li><li><strong>Expert Approval:</strong> Designed based on urological physical therapy principles.</li></ul>",
+            "content": "<p> Gas & CO Detector is engineered with highly sensitive, multi-threat sensors. It continuously samples the air for invisible, odorless Carbon Monoxide (CO) and combustible gases like Natural Gas and Propane (LPG). Unlike traditional alarms that leave you guessing, our device features a smart microchip and a real-time digital display to track exact gas concentrations (PPM and %LEL). The moment dangerous thresholds are crossed, it instantly triggers a piercing 85dB siren, ensuring your family has the crucial time needed to evacuate.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -2116,7 +1627,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Step 1:</strong> Sit comfortably on the HOSFU trainer (no undressing required).<br/><strong>Step 2:</strong> Open the HOSFU App and choose your guided 15-minute routine.<br/><strong>Step 3:</strong> Follow the real-time visual cues on your phone to squeeze and relax.<br/><em>Recommended: Use once a day for 4-6 weeks for optimal results.</em></p>",
+            "content": "<p>We designed this for zero-stress installation—no drilling, no hardwiring, and no electrician required.</p><ul><li><strong>Step 1: Plug It In.</strong> Simply plug the device directly into any standard wall outlet.</li><li><strong>Step 2: Auto-Calibration.</strong> Wait a few moments as the device performs an automatic self-test and calibrates to your room's air quality.</li><li><strong>Step 3: 24/7 Protection.</strong> Leave it to monitor your home round-the-clock.<br/><strong>Placement Tip:</strong> For optimal safety, place units near high-risk areas such as the kitchen, gas boiler, fireplace, and hallways outside bedrooms.</li></ul>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -2163,7 +1674,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Because it's not a chore—it's a game. Most users stay consistent because the app transforms training into an interactive experience.</p><ul><li><strong>Unmatched Convenience:</strong> Train while watching TV or reading.</li><li><strong>Fast Results:</strong> Feel a difference in bladder control in as little as 14 days.</li><li><strong>Restored Confidence:</strong> Say goodbye to the fear of leaks and nighttime interruptions.</li></ul>",
+            "content": "<p><strong>Absolute Peace of Mind:</strong> Users sleep better knowing a reliable, CE-certified \"silent guard\" is protecting their loved ones from invisible threats 24/7.</p><p><strong>No More Guesswork:</strong> The dynamic digital screen removes the anxiety of wondering what a flashing green light means. You see the actual air safety numbers, room temperature, and humidity at a glance.</p><p><strong>Rental Compliance Made Easy:</strong> Airbnb and property hosts consistently rely on our detector to effortlessly meet local safety regulations and protect their guests without dealing with complex, permanent installations.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -2242,7 +1753,6 @@
         "desc_row_3",
         "desc_row_4"
       ],
-      "disabled": true,
       "custom_css": [
         ".price__badge-sale {background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important;}"
       ],
@@ -2301,13 +1811,13 @@
         "review_border_color": "#e9ecef",
         "star_color": "#ffc107",
         "username_color": "#000000",
-        "username": "Mark T.",
+        "username": "Isabella R.",
         "verified_customer": true,
         "verified_icon_color": "#28a745",
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "I used to wake up 4 times a night. After 3 weeks with HOSFU, I'm finally sleeping through until morning. The app makes it so easy to stay on track. Best investment for my health!",
+        "review_text": "\"I’ve always hated feeling anxious about hidden gas leaks. This device is completely hands-off and simple. It fits perfectly into our modern kitchen setup. Just knowing it continuously monitors the air for both natural gas and CO gives our family total peace of mind. The added temperature and humidity display is a great bonus.\"",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
@@ -2322,6 +1832,499 @@
         "bg_star_color2": "#ececec",
         "label": "(Trusted by men)",
         "size": 16
+      }
+    },
+    "content_blocks_section_1": {
+      "type": "multirow",
+      "blocks": {
+        "row_not_too_old": {
+          "type": "row",
+          "settings": {
+            "video": "shopify://files/videos/0528.mp4",
+            "video_muted_autoplay": true,
+            "caption": "The Truth",
+            "title": "<strong>Bladder Leaks Don’t Have to Control the Rest of Your Life</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p><strong>If you’re over 50</strong> and dealing with bladder leaks, you’ve probably told yourself it’s “just age.” That’s what most men believe — and that’s exactly why they stay stuck <strong>relying on pads</strong>, planning every outing around restrooms, and feeling embarrassed by simple leaks.</p><p>But bladder leaks are not just an age issue — they’re often a <strong>control issue.</strong> And <strong>control can be rebuilt.</strong></p><p>As the muscles that support bladder control weaken, everyday actions like <strong>coughing, laughing, standing up, or walking</strong> can trigger embarrassing leaks. The sooner you start training those muscles properly, the sooner you can start <strong>taking your life back.</strong></p><p><strong>It’s not too late to stop the cycle.</strong></p>",
+            "button_label": "Get 50% Off Today Only",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "row_introducing": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/nh_2.jpg",
+            "video_muted_autoplay": true,
+            "caption": "The Solution",
+            "title": "<strong>Meet HOSFU™: The Private Way to Rebuild Bladder Control at Home</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p><strong>Introducing HOSFU™: Stop Hiding Leaks. Start Training Control.</strong></p><p>Bladder pads only <strong>hide the problem after it happens.</strong></p><p><strong>HOSFU™ helps men train the muscles behind bladder control</strong> — privately, while seated, from home.</p><p>The smart device connects to the HOSFU app and guides each session step by step, helping you <strong>activate the right muscles</strong> and <strong>track your progress over time.</strong></p><p><strong>No clinic visits.</strong></p><p><strong>No awkward conversations.</strong></p><p><strong>No guessing if you’re doing it right.</strong></p><p>Just <strong>10–15 minutes a day</strong> to start rebuilding <strong>control and confidence.</strong></p>",
+            "button_label": "Get 50% Off Today Only",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": [
+        "row_not_too_old",
+        "row_introducing"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "0",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "content_blocks_section_2": {
+      "type": "multirow",
+      "blocks": {
+        "row_experts": {
+          "type": "row",
+          "settings": {
+            "video_muted_autoplay": true,
+            "caption": "",
+            "title": "Smart Protection. Simplified.",
+            "title_highlight_color": "#000000",
+            "text": "<p></p><p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p>",
+            "button_label": "Get 50% Off Today Only",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "row_wait": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/nh_6_49cbc1de-3c67-4c9c-a894-e9f1825bceae.jpg",
+            "video_muted_autoplay": true,
+            "caption": "Act Now",
+            "title": "<strong>Don’t Wait Until Leaks Become Your New Normal</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p>At first, bladder leaks may seem small — a few drops when you <strong>cough, laugh, or stand up.</strong></p><p>But over time, many men start <strong>changing their life around the problem.</strong></p><p>They stop wearing light pants. They keep extra underwear in the car. They avoid long drives. They <strong>rely on pads.</strong> They look for restrooms everywhere they go.</p><p>That is how a small leak starts <strong>controlling your confidence.</strong></p><p><strong>HOSFU™ helps you stop just hiding the problem and start training bladder control from home.</strong> The app-guided seated routine is simple, private, and takes just <strong>10–15 minutes a day.</strong></p><p>The sooner you start, the sooner you can begin <strong>taking control back.</strong></p>",
+            "button_label": "Get 50% Off Today Only",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": [
+        "row_experts",
+        "row_wait"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "2",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "content_blocks_section_3": {
+      "type": "multirow",
+      "blocks": {
+        "row_guarantee": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/nh_4_644ee8f7-11e6-4a5e-82c6-3dfa54c24c8a.jpg",
+            "video_muted_autoplay": true,
+            "caption": "Our Guarantee",
+            "title": "<strong>Try HOSFU™ for 90 Days — Risk Free</strong>",
+            "title_highlight_color": "#000000",
+            "text": "<p>Here’s our promise: we want you to feel completely confident trying <strong>HOSFU™ at home.</strong></p><p>Use <strong>HOSFU™ consistently for 90 days</strong> and see how it works for you.</p><p>If you’re not satisfied with your results, we’ll issue a refund under our <strong>90-Day Results or Refund Guarantee.</strong></p><p>That means you can try <strong>HOSFU™ with confidence</strong> — and without the risk of <strong>wasting your money.</strong></p>",
+            "button_label": "Get 50% Off Today Only",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": [
+        "row_guarantee"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "4",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "bladder_control_section": {
+      "type": "bladder-control-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "video": "shopify://files/videos/1 (1).mp4",
+            "video_url": "",
+            "title": "Step 1: Sit & Position",
+            "text": "Place The Hosfu™ on any chair and sit down. The smart pressure-sensing cushion will detect when you're in the right spot to begin training."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "video": "shopify://files/videos/2.mp4",
+            "video_url": "",
+            "title": "Step 2: Open The App",
+            "text": "Launch the Hosfu™ app and choose your training mode. Follow simple visual cues or play interactive games to contract the right muscles at the right time."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "video": "shopify://files/videos/3.mp4",
+            "video_url": "",
+            "title": "Step 3: Enjoy Lasting Control",
+            "text": "Use for just 10–15 minutes a day while seated, dressed, and comfortable. Most men feel stronger control and fewer leaks within 4–6 weeks."
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Bladder Control Has Never Been Easier",
+        "columns_desktop": 3,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_3nndy6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ECrTeD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box?",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#f9efff",
+            "title_highlight_1_color": "#6d388b",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6d388b",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6d388b",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6d388b",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#f9efff",
+            "title_highlight_2_color": "#6d388b",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6d388b",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6d388b",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6d388b",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h2",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 21
+          },
+          "blocks": {}
+        },
+        "text_W4DXGU": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>1 — Hosfu™ Pelvic Floor Trainer</li><li>2 — Instruction Guide & Quick Start Manual</li><li>3 — USB Charger</li><li>4 — Travel & Storage Pouch</li><li>5 — Free Lifetime Access to Orvantra's Incontinence Brotherhood</li><li>6 — High Quality Gift Box</li><li>7 — 90 Day Habit Tracker</li></ul>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
+            "enable_custom_color": false,
+            "custom_text_color": "#ff0000",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_ECrTeD",
+        "text_W4DXGU"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_url": "",
+        "image_url_alt": "",
+        "video": "shopify://files/videos/0424(1).mp4",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "1",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#2e2a39",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#ffffff",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "trust_badges_section": {
+      "type": "multicolumn",
+      "blocks": {
+        "trust_1": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "90-Day Money Back Guarantee",
+            "text": "<p>Try <strong>HOSFU™</strong> at home for 90 days. If you’re not satisfied with your results, contact us for a refund — no hassle, no stress.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust_2": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "Free Shipping Worldwide",
+            "text": "<p>Enjoy fast, free shipping with tracking included on every order, so you always know where your <strong>HOSFU™</strong> is.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "trust_3": {
+          "type": "column",
+          "settings": {
+            "image_url": "",
+            "muted_autoplay": true,
+            "title": "Guaranteed High Quality",
+            "text": "<p><strong>HOSFU™</strong> is built with durable materials and designed for private, comfortable seated training at home.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "<strong>Shop HOSFU With Confidence</strong>",
+        "title_highlight_1": "solid-color",
+        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_bg-color": "#f9efff",
+        "title_highlight_1_color": "#000000",
+        "highlighted-1_border_radius": 8,
+        "highlighted-1_border_width": 0,
+        "highlighted-1_border": "solid",
+        "highlighted-1_border_color": "#6d388b",
+        "highlighted-1_padding-block": 0.3,
+        "highlighted-1_padding-inline": 0.3,
+        "title_highlight_1_underline-thickness": 2,
+        "title_highlight_1_underline-color": "#6d388b",
+        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_1_underline-color-position": 25,
+        "title_highlight_1_handwritten-color": "#6d388b",
+        "title_highlight_1_handwritten-stroke-width": 3,
+        "title_highlight_1_handwritten-position": 60,
+        "title_highlight_2": "none",
+        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_bg-color": "#f9efff",
+        "title_highlight_2_color": "#6d388b",
+        "highlighted-2_border_radius": 8,
+        "highlighted-2_border_width": 0,
+        "highlighted-2_border": "solid",
+        "highlighted-2_border_color": "#6d388b",
+        "highlighted-2_padding-block": 0.3,
+        "highlighted-2_padding-inline": 0.3,
+        "title_highlight_2_underline-thickness": 2,
+        "title_highlight_2_underline-color": "#6d388b",
+        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+        "title_highlight_2_underline-color-position": 25,
+        "title_highlight_2_handwritten-color": "#6d388b",
+        "title_highlight_2_handwritten-stroke-width": 3,
+        "title_highlight_2_handwritten-position": 60,
+        "heading_size": "h2",
+        "custom_desktop_size": 39,
+        "custom_mobile_size": 28,
+        "margin_top": 15,
+        "margin_bottom": 0,
+        "button_label": "",
+        "button_link": "",
+        "atc_button_label": "",
+        "atc_product": "",
+        "atc_skip_cart": false,
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "cards_color_scheme": "bg-overlay",
+        "custom_cards_colors_background": "#f3f3f3",
+        "custom_cards_gradient_background": "",
+        "custom_cards_colors_heading": "#222126",
+        "custom_cards_colors_text": "#2e2a39",
+        "cards_corner_radius": 20,
+        "stretch_cards": false,
+        "stretched_cards_content_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "square",
+        "media_position": "top",
+        "column_alignment": "center",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "desktop_text_top_margin": 10,
+        "mobile_text_top_margin": 10,
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "type": "slide",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": true,
+        "dots_color_scheme": "inverse",
+        "desktop_full_page": false,
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "per_move_desktop": 1,
+        "desktop_spacing": 40,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "under",
+        "desktop_arrows_position": "sides",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "enable_mobile_preview": false,
+        "mobile_adaptive_height": false,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "under",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "real_words_section": {
@@ -2467,6 +2470,7 @@
         "review_1",
         "review_2"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -2756,14 +2760,14 @@
     "expert_endorsement_section",
     "image_with_text_xKffTQ",
     "comparison_table_section",
+    "rich_text_CYKgjk",
+    "main",
     "content_blocks_section_1",
     "content_blocks_section_2",
     "content_blocks_section_3",
     "bladder_control_section",
-    "rich_text_CYKgjk",
     "image_with_text_3nndy6",
     "trust_badges_section",
-    "main",
     "real_words_section",
     "faq_section",
     "medical_disclaimer_section"
