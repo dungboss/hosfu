@@ -624,6 +624,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "shopify://shop_images/9DD347D5-5DC1-426D-8551-2F5BD60E26ED.png",
         "image_url": "",
         "image_url_alt": "",
         "video_autoplay": true,
