@@ -227,7 +227,7 @@
             "icon_4": "check_circle",
             "filled_icon_4": false,
             "margin_top": 9,
-            "margin_bottom": 15
+            "margin_bottom": 6
           },
           "blocks": {}
         },
@@ -267,7 +267,7 @@
             "icon_4": "check_circle",
             "filled_icon_4": false,
             "margin_top": 9,
-            "margin_bottom": 15
+            "margin_bottom": 6
           },
           "blocks": {}
         },
