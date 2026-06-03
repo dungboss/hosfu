@@ -2355,9 +2355,18 @@
             "target_blank": false
           }
         },
+        "logo_itknRh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/images.png",
+            "link": "",
+            "target_blank": false
+          }
+        },
         "logo_g7xrmU": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/d2c0114a-617b-4fc8-8319-bc3c9bbaee91.jpg",
             "link": "",
             "target_blank": false
           }
@@ -2366,6 +2375,7 @@
       "block_order": [
         "logo_ajrqKY",
         "logo_DT43e7",
+        "logo_itknRh",
         "logo_g7xrmU"
       ],
       "name": "Featured on",
