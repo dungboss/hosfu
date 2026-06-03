@@ -434,8 +434,8 @@
         "display_id": false,
         "visibility": "always-display",
         "image": "shopify://shop_images/A63A9E54-E7BD-4DE7-AFD7-126FF1F6EFC9_4e80703b-248d-4ee2-b4f8-8d849b4b92a2.png",
-        "image_url": "https://img.funnelish.com/11220/875086/1754322031-Person.png",
-        "image_url_alt": "David Carter, Urologist",
+        "image_url": "",
+        "image_url_alt": "",
         "video_autoplay": true,
         "video_loop": true,
         "product_media_index": "0",
@@ -726,7 +726,7 @@
         "custom_section_gradient_background": "",
         "image": "shopify://shop_images/88f5a558-8f47-462a-a311-ff1962f8ee15.jpg",
         "desktop_image_width": "limited",
-        "image_max_width": 900,
+        "image_max_width": 800,
         "full_page_width": false,
         "image_corner_radius": false,
         "hotspot_open_event": "click",
@@ -3074,75 +3074,6 @@
         "padding_bottom": 52
       }
     },
-    "content_blocks_section_2": {
-      "type": "multirow",
-      "blocks": {
-        "row_experts": {
-          "type": "row",
-          "settings": {
-            "video_muted_autoplay": true,
-            "caption": "",
-            "title": "Smart Protection. Simplified.",
-            "title_highlight_color": "#000000",
-            "text": "<p></p><p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        },
-        "row_wait": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/nh_6_49cbc1de-3c67-4c9c-a894-e9f1825bceae.jpg",
-            "video_muted_autoplay": true,
-            "caption": "Act Now",
-            "title": "<strong>Don’t Wait Until Leaks Become Your New Normal</strong>",
-            "title_highlight_color": "#000000",
-            "text": "<p>At first, bladder leaks may seem small — a few drops when you <strong>cough, laugh, or stand up.</strong></p><p>But over time, many men start <strong>changing their life around the problem.</strong></p><p>They stop wearing light pants. They keep extra underwear in the car. They avoid long drives. They <strong>rely on pads.</strong> They look for restrooms everywhere they go.</p><p>That is how a small leak starts <strong>controlling your confidence.</strong></p><p><strong>HOSFU™ helps you stop just hiding the problem and start training bladder control from home.</strong> The app-guided seated routine is simple, private, and takes just <strong>10–15 minutes a day.</strong></p><p>The sooner you start, the sooner you can begin <strong>taking control back.</strong></p>",
-            "button_label": "Get 50% Off Today Only",
-            "button_link": "#add-to-cart",
-            "atc_button_label": "",
-            "atc_product": "",
-            "atc_skip_cart": false
-          }
-        }
-      },
-      "block_order": [
-        "row_experts",
-        "row_wait"
-      ],
-      "disabled": true,
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "image_height": "adapt",
-        "product_media_start_index": "2",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "primary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-right",
-        "row_color_scheme": "background-1",
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "section_color_scheme": "background-1",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": "",
-        "mobile_full_media_width": false,
-        "mobile_direction": "normal",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
     "content_blocks_section_3": {
       "type": "multirow",
       "blocks": {
@@ -3530,7 +3461,6 @@
     "custom_columns_new_iUtatH",
     "real_words_section",
     "faq_section",
-    "content_blocks_section_2",
     "content_blocks_section_3",
     "bladder_control_section",
     "image_with_text_3nndy6",
