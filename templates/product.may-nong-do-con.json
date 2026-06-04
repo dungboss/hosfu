@@ -2817,9 +2817,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Foolproof Readouts",
+                "title": "High-Precision Sensor",
                 "icon_heading_size": "h3",
-                "text": "<p>Instantly know where you stand. The smart, color-coded display (Green, Yellow, Red) ensures there is absolutely no confusion about your results.</p>",
+                "text": "<p>Equipped with an imported, highly sensitive electrochemical sensor. It strictly isolates alcohol content and resists interference from acetone, giving you dependable and repeatable readouts every time.</p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -2838,9 +2838,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Always Ready, Always Easy",
+                "title": "Hygienic & Detachable",
                 "icon_heading_size": "h3",
-                "text": "<p>A built-in rechargeable battery via Type-C ensures your HOSFU is powered up whenever you are. One quick charge lasts for hundreds of consistent tests.</p>",
+                "text": "<p>Features a detachable, food-grade PP nozzle that ensures a clean testing experience. It’s compact, easy to swap out, and perfectly hygienic if you need to share the device with family or friends.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
