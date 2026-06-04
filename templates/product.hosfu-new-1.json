@@ -314,7 +314,7 @@
         "hero_button": {
           "type": "button",
           "settings": {
-            "button_label": "Get 50% Off Today",
+            "button_label": "GET MY GAS DETECTOR",
             "button_link": "#add-to-cart",
             "button_style_secondary": false,
             "large_font_size": false,
