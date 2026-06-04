@@ -15,7 +15,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "custom_liquid": "<style>@media (max-width: 749px) { .image-with-text__content--mobile-left > .button { display: flex; width: fit-content; margin-left: auto; margin-right: auto; } }</style>",
+        "custom_liquid": "<style>\n  /* Hide Shop Pay Installments - Multiple selector approaches */\n  shop-pay-installments-banner,\n  .shop-pay-installments,\n  [data-shop-pay-installments],\n  .installment,\n  affirm-placement,\n  [class*=\"installment\"],\n  [class*=\"shop-pay\"],\n  [class*=\"payment-terms\"],\n  .payment-terms,\n  .shopify-payment-terms,\n  .product-form__payment-terms,\n  [data-testid=\"payment-terms\"],\n  /* Target elements containing \"Pay in 4\" text */\n  *:has(> :contains(\"Pay in 4\")),\n  /* Polaris Box containers */\n  .Polaris-Box:has(> [class*=\"installment\"]),\n  /* Generic payment method containers */\n  [class*=\"payment-method\"],\n  [class*=\"financing\"],\n  [class*=\"affirm\"],\n  [class*=\"klarna\"],\n  [class*=\"afterpay\"] {\n    display: none !important;\n    visibility: hidden !important;\n    height: 0 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    border: none !important;\n  }\n</style>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1810,6 +1810,7 @@
         },
         "price": {
           "type": "product_price",
+          "disabled": true,
           "settings": {
             "price_layout": "price-first",
             "price_color": "accent-1",
