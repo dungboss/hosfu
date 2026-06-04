@@ -637,10 +637,11 @@
         "section_color_scheme": "background-1",
         "custom_section_colors_background": "#ffffff",
         "custom_section_gradient_background": "",
+        "image": "shopify://shop_images/D2A180D5-F521-4C29-8F3B-80E30710376A_4_5005_c_aeb27829-0951-419a-9acd-af83745af62d.jpg",
         "desktop_image_width": "limited",
         "image_max_width": 300,
         "full_page_width": false,
-        "image_corner_radius": false,
+        "image_corner_radius": true,
         "hotspot_open_event": "click",
         "hotspots_color_scheme": "inverse",
         "display_hotspots_animation": true,
@@ -2113,19 +2114,19 @@
             "icon_color": "accent-1",
             "desktop_icon_size": 48,
             "desktop_spacing": 12,
-            "desktop_text_size": 18,
+            "desktop_text_size": 16,
             "mobile_icon_size": 40,
             "mobile_spacing": 10,
             "mobile_text_size": 10,
             "icon_1": "assured_workload",
             "icon_1_fill": false,
             "heading_1": "30-Day Money-Back Guarantee",
-            "icon_2": "add_circle",
+            "icon_2": "shield",
             "icon_2_fill": false,
-            "heading_2": "Doctor Recommended",
+            "heading_2": "Officer Recommended",
             "icon_3": "lock",
             "icon_3_fill": false,
-            "heading_3": "100% Private Delivery",
+            "heading_3": "100% Secure Checkout",
             "margin_top": 15,
             "margin_bottom": 15
           },
@@ -2408,7 +2409,7 @@
         "verified_text_color": "#28a745",
         "verified_text": "Verified Purchase",
         "review_text_color": "#000000",
-        "review_text": "I used to wake up 4 times a night. After 3 weeks with HOSFU, I'm finally sleeping through until morning. The app makes it so easy to stay on track. Best investment for my health!",
+        "review_text": "Fast shipping. The unboxing experience was great, and the device is remarkably quick to use. It takes just seconds to get an accurate reading, which fits perfectly into my pre-drive routine without any hassle. Finally, a solution that makes sense for anyone who drinks socially and drives.",
         "enablegallerybottomtext": false,
         "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
@@ -2423,6 +2424,52 @@
         "bg_star_color2": "#ececec",
         "label": "(Trusted by men)",
         "size": 16
+      }
+    },
+    "horizontal_ticker_BHtpqB": {
+      "type": "horizontal-ticker",
+      "blocks": {
+        "text_iwzUG8": {
+          "type": "text",
+          "settings": {
+            "title": "Fast & Discreet Shipping • Hygienic Washable Mouthpieces • Police-Grade Precision • Instant BAC Readouts • Compact & Always Ready • Independently Calibrated • 100-Day Risk-Free Trial"
+          }
+        }
+      },
+      "block_order": [
+        "text_iwzUG8"
+      ],
+      "name": "Horizontal Ticker",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "speed": 3,
+        "direction": "normal",
+        "stop_on_hover": false,
+        "mobile_spacing": 60,
+        "desktop_spacing": 100,
+        "color_scheme": "accent-1",
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "mobile_text_size": 16,
+        "desktop_text_size": 18,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": false,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "mobile_video_height": 150,
+        "desktop_video_height": 250,
+        "mobile_reviews_width": 300,
+        "desktop_reviews_width": 400,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16
       }
     },
     "image_slider_KgiJPE": {
@@ -2539,52 +2586,6 @@
         "mobile_arrows_position": "sides",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "horizontal_ticker_BHtpqB": {
-      "type": "horizontal-ticker",
-      "blocks": {
-        "text_iwzUG8": {
-          "type": "text",
-          "settings": {
-            "title": "Fast & Discreet Shipping • Hygienic Washable Mouthpieces • Police-Grade Precision • Instant BAC Readouts • Compact & Always Ready • Independently Calibrated • 100-Day Risk-Free Trial"
-          }
-        }
-      },
-      "block_order": [
-        "text_iwzUG8"
-      ],
-      "name": "Horizontal Ticker",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "speed": 3,
-        "direction": "normal",
-        "stop_on_hover": false,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "accent-1",
-        "custom_colors_background": "#FFFFFF",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "mobile_text_size": 16,
-        "desktop_text_size": 18,
-        "italic_text": false,
-        "uppercase_text": false,
-        "bold_text": false,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "mobile_video_height": 150,
-        "desktop_video_height": 250,
-        "mobile_reviews_width": 300,
-        "desktop_reviews_width": 400,
-        "hidden_products": "",
-        "enable_specific_display": false,
-        "displayed_products": "",
-        "mobile_padding_top": 12,
-        "mobile_padding_bottom": 12,
-        "desktop_padding_top": 16,
-        "desktop_padding_bottom": 16
       }
     },
     "custom_columns_new_7ALNcj": {
@@ -3027,7 +3028,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Real Words From Men Using It",
+        "title": "Real Words From Customers Using It",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
