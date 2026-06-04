@@ -2425,6 +2425,300 @@
         "size": 16
       }
     },
+    "custom_columns_new_7ALNcj": {
+      "type": "custom-columns-new",
+      "blocks": {
+        "column_twjpCj": {
+          "type": "column",
+          "settings": {
+            "desktop_width": 12,
+            "mobile_width": 4,
+            "visibility": "always-display",
+            "bg_type": "none",
+            "bg_color": "#6D388B",
+            "bg_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "border_radius": 12,
+            "border_width": 0,
+            "border": "solid",
+            "border_color": "#6D388B",
+            "vertical_desktop_padding": 15,
+            "horizontal_desktop_padding": 15,
+            "vertical_mobile_padding": 14,
+            "horizontal_mobile_padding": 14
+          },
+          "blocks": {
+            "heading_Fa6MqB": {
+              "type": "heading",
+              "settings": {
+                "title": "Why Smart Drivers Trust HOSFU",
+                "title_highlight_1": "solid-color",
+                "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+                "title_highlight_1_bg-color": "#F9EFFF",
+                "title_highlight_1_color": "#6D388B",
+                "highlighted-1_border_radius": 8,
+                "highlighted-1_border_width": 0,
+                "highlighted-1_border": "solid",
+                "highlighted-1_border_color": "#6D388B",
+                "highlighted-1_padding-block": 0.3,
+                "highlighted-1_padding-inline": 0.3,
+                "title_highlight_1_underline-thickness": 2,
+                "title_highlight_1_underline-color": "#6D388B",
+                "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+                "title_highlight_1_underline-color-position": 25,
+                "title_highlight_1_handwritten-color": "#6D388B",
+                "title_highlight_1_handwritten-stroke-width": 3,
+                "title_highlight_1_handwritten-position": 60,
+                "title_highlight_2": "none",
+                "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+                "title_highlight_2_bg-color": "#F9EFFF",
+                "title_highlight_2_color": "#6D388B",
+                "highlighted-2_border_radius": 8,
+                "highlighted-2_border_width": 0,
+                "highlighted-2_border": "solid",
+                "highlighted-2_border_color": "#6D388B",
+                "highlighted-2_padding-block": 0.3,
+                "highlighted-2_padding-inline": 0.3,
+                "title_highlight_2_underline-thickness": 2,
+                "title_highlight_2_underline-color": "#6D388B",
+                "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+                "title_highlight_2_underline-color-position": 25,
+                "title_highlight_2_handwritten-color": "#6D388B",
+                "title_highlight_2_handwritten-stroke-width": 3,
+                "title_highlight_2_handwritten-position": 60,
+                "heading_size": "h1",
+                "custom_desktop_size": 39,
+                "custom_mobile_size": 28,
+                "alignment": "center",
+                "mobile_alignment": "mobile-left",
+                "enable_custom_color": false,
+                "custom_color": "#FF0000",
+                "margin_top": 15,
+                "margin_bottom": 15
+              },
+              "blocks": {}
+            },
+            "text_66TPFG": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>Engineered for precision, consistency, and absolute peace of mind.</em></p>",
+                "alignment": "center",
+                "mobile_alignment": "mobile-center",
+                "text_size": 14,
+                "enable_custom_color": false,
+                "custom_text_color": "#FF0000",
+                "margin_top": 15,
+                "margin_bottom": 15
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_Fa6MqB",
+            "text_66TPFG"
+          ]
+        },
+        "column_hjpAd8": {
+          "type": "column",
+          "settings": {
+            "desktop_width": 4,
+            "mobile_width": 4,
+            "visibility": "always-display",
+            "bg_type": "none",
+            "bg_color": "#6D388B",
+            "bg_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "border_radius": 12,
+            "border_width": 0,
+            "border": "solid",
+            "border_color": "#6D388B",
+            "vertical_desktop_padding": 15,
+            "horizontal_desktop_padding": 15,
+            "vertical_mobile_padding": 14,
+            "horizontal_mobile_padding": 14
+          },
+          "blocks": {
+            "icon_with_content_FmCKpr": {
+              "type": "icon-with-content",
+              "settings": {
+                "icon": "shield",
+                "filled_icon": false,
+                "icon_size": "m",
+                "icon_position": "next-to-title",
+                "icon_color": "accent-1",
+                "custom_icon_color": "#FF0000",
+                "icon_text_alignment": "left",
+                "text_color": "text",
+                "custom_text_color": "#FF0000",
+                "title": "Police-Grade Precision",
+                "icon_heading_size": "h3",
+                "text": "<p>Advanced electrochemical sensors eliminate guesswork. Get law-enforcement level accuracy before you ever turn the ignition.</p>",
+                "text_size": 14,
+                "margin_top": 0,
+                "margin_bottom": 30
+              },
+              "blocks": {}
+            },
+            "icon_with_content_8zeKr3": {
+              "type": "icon-with-content",
+              "settings": {
+                "icon": "timer",
+                "filled_icon": false,
+                "icon_size": "m",
+                "icon_position": "next-to-title",
+                "icon_color": "accent-1",
+                "custom_icon_color": "#FF0000",
+                "icon_text_alignment": "left",
+                "text_color": "text",
+                "custom_text_color": "#FF0000",
+                "title": "Results In Seconds",
+                "icon_heading_size": "h3",
+                "text": "<p>No long wait times. Fast warm-up and rapid analysis deliver your exact BAC reading instantly, so you can make safe decisions on the spot.</p>",
+                "text_size": 14,
+                "margin_top": 15,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_with_content_FmCKpr",
+            "icon_with_content_8zeKr3"
+          ]
+        },
+        "column_gEThQd": {
+          "type": "column",
+          "settings": {
+            "desktop_width": 4,
+            "mobile_width": 4,
+            "visibility": "always-display",
+            "bg_type": "none",
+            "bg_color": "#6D388B",
+            "bg_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "border_radius": 12,
+            "border_width": 0,
+            "border": "solid",
+            "border_color": "#6D388B",
+            "vertical_desktop_padding": 15,
+            "horizontal_desktop_padding": 15,
+            "vertical_mobile_padding": 14,
+            "horizontal_mobile_padding": 14
+          },
+          "blocks": {
+            "image_EEkwHN": {
+              "type": "image",
+              "settings": {
+                "width": 100,
+                "alignment": "center",
+                "mobile_alignment": "center",
+                "border_radius": 0,
+                "margin_top": 15,
+                "margin_bottom": 15
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_EEkwHN"
+          ]
+        },
+        "column_mRD9aP": {
+          "type": "column",
+          "settings": {
+            "desktop_width": 4,
+            "mobile_width": 4,
+            "visibility": "always-display",
+            "bg_type": "none",
+            "bg_color": "#6D388B",
+            "bg_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "border_radius": 12,
+            "border_width": 0,
+            "border": "solid",
+            "border_color": "#6D388B",
+            "vertical_desktop_padding": 15,
+            "horizontal_desktop_padding": 15,
+            "vertical_mobile_padding": 14,
+            "horizontal_mobile_padding": 14
+          },
+          "blocks": {
+            "icon_with_content_Lrd7Ua": {
+              "type": "icon-with-content",
+              "settings": {
+                "icon": "visibility",
+                "filled_icon": false,
+                "icon_size": "m",
+                "icon_position": "next-to-title",
+                "icon_color": "accent-1",
+                "custom_icon_color": "#FF0000",
+                "icon_text_alignment": "left",
+                "text_color": "text",
+                "custom_text_color": "#FF0000",
+                "title": "Foolproof Readouts",
+                "icon_heading_size": "h3",
+                "text": "<p>Instantly know where you stand. The smart, color-coded display (Green, Yellow, Red) ensures there is absolutely no confusion about your results.</p>",
+                "text_size": 14,
+                "margin_top": 0,
+                "margin_bottom": 30
+              },
+              "blocks": {}
+            },
+            "icon_with_content_4FTCNc": {
+              "type": "icon-with-content",
+              "settings": {
+                "icon": "power lightning",
+                "filled_icon": false,
+                "icon_size": "m",
+                "icon_position": "next-to-title",
+                "icon_color": "accent-1",
+                "custom_icon_color": "#FF0000",
+                "icon_text_alignment": "left",
+                "text_color": "text",
+                "custom_text_color": "#FF0000",
+                "title": "Always Ready, Always Easy",
+                "icon_heading_size": "h3",
+                "text": "<p>A built-in rechargeable battery via Type-C ensures your HOSFU is powered up whenever you are. One quick charge lasts for hundreds of consistent tests.</p>",
+                "text_size": 14,
+                "margin_top": 15,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_with_content_Lrd7Ua",
+            "icon_with_content_4FTCNc"
+          ]
+        }
+      },
+      "block_order": [
+        "column_twjpCj",
+        "column_hjpAd8",
+        "column_gEThQd",
+        "column_mRD9aP"
+      ],
+      "name": "Custom Columns V2",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "custom_colors_solid_button_background": "#dd1d1d",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#dd1d1d",
+        "display_grid_lines": false,
+        "desktop_page_width": "normal",
+        "custom_page_width": 900,
+        "column_gap_desktop": 40,
+        "row_gap_desktop": 40,
+        "desktop_vertical_alignment": "center",
+        "mobile_full_page": false,
+        "column_gap_mobile": 20,
+        "row_gap_mobile": 30,
+        "mobile_vertical_alignment": "flex-start",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "real_words_section": {
       "type": "facebook-testimonials",
       "blocks": {
@@ -2658,10 +2952,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this different from doing Kegels on my own?",
+            "heading": "How is Hosfu different from cheap breathalyzers?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Most men perform Kegels incorrectly by straining the wrong muscles. HOSFU uses built-in <strong>Biofeedback Sensors</strong> to guide you in real-time. It ensures every contraction is targeted and effective, and tracks your progress via the app so you’re never guessing if it’s working.</p>",
+            "row_content": "<p>Unlike cheap devices that use unreliable semiconductor chips, Hosfu uses advanced, police-grade electrochemical sensors. This means our device specifically isolates alcohol and will not give you \"false positives\" from keto diets, breath mints, or spicy foods. You get absolute accuracy starting from 0.000%.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2670,10 +2964,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is this a medical treatment?",
+            "heading": "How long should I wait after drinking to take a test?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>HOSFU is a non-invasive, high-tech wellness device designed for pelvic floor muscle strengthening. While it is based on urological exercise principles, it is not a medical treatment. If you have chronic conditions or recently had surgery, we recommend consulting your doctor before use.</p>",
+            "row_content": "<p>For the most accurate results, we recommend waiting at least 15 to 20 minutes after your last drink or meal. This allows any residual alcohol in your mouth to dissipate, ensuring the device measures your true Blood Alcohol Concentration (BAC) from your deep lung air.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2682,10 +2976,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Who is this trainer designed for?",
+            "heading": "Who is this device designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>It’s designed for any man looking to improve bladder control, recover after prostate procedures, or simply strengthen their pelvic floor for better core health and confidence. Whether you’re seeing early signs of weakness or want to be proactive, HOSFU is for you.</p>",
+            "row_content": "<p>Hosfu is built for any responsible adult who drinks socially. Whether you enjoy a single glass of wine at dinner, a couple of beers after work, or attend weekend parties, this device is for anyone who refuses to gamble their life and future on a \"guess.\"</p>",
             "page": ""
           },
           "blocks": {}
@@ -2694,10 +2988,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How often should I use it?",
+            "heading": "Is it rechargeable?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Consistency is key. We recommend one <strong>15-minute session per day</strong>. Most users report noticeable improvements in bladder control and overall confidence within <strong>4 to 6 weeks</strong> of daily, consistent use.</p>",
+            "row_content": "<p>Yes! Hosfu features a built-in, long-lasting rechargeable battery with a modern USB-C charging port. A single quick charge provides enough power for hundreds of consistent tests, so it’s always ready in your glovebox or pocket when you need it.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2706,10 +3000,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it rechargeable?",
+            "heading": "Can I share it with my friends and family?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes! HOSFU features a standard <strong>Type-C fast-charging port</strong>. One full charge provides enough power for several weeks of daily training, making it easy to stay on track without worrying about batteries.</p>",
+            "row_content": "<p>Absolutely. Your Hosfu comes with interchangeable, washable mouthpieces. You can easily snap on a fresh mouthpiece so everyone in your group can check their numbers safely and hygienically before heading home.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2718,10 +3012,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will it be discreet?",
+            "heading": "Can I use this reading as legal defense against the police?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. The device operates nearly silently, and its compact design allows for private use at home. Furthermore, we ship every order in <strong>plain, unbranded packaging</strong>—your privacy is our top priority.</p>",
+            "row_content": "<p>No. While Hosfu utilizes professional-grade technology for high accuracy, it is intended strictly as a personal safety and reference tool to help you make responsible decisions. It should never be used to justify drinking and driving or as legal evidence in a court of law.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2730,10 +3024,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What if it doesn’t work for me?",
+            "heading": "What if I am not completely satisfied with it?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>We stand behind our product with a <strong>90-Day Results or Refund Guarantee</strong>. If you don’t see improvement after consistent use, simply contact our support team for a full refund—no questions asked.</p>",
+            "row_content": "<p>We are fully confident in our police-grade accuracy. That’s why every Hosfu is backed by our <strong>100-Day Risk-Free Trial</strong> and a <strong>3-Year Warranty</strong>. If the device doesn't give you total peace of mind, simply return it for a full, hassle-free refund.</p>",
             "page": ""
           },
           "blocks": {}
@@ -2865,6 +3159,7 @@
     "image_with_text_3nndy6",
     "trust_badges_section",
     "main",
+    "custom_columns_new_7ALNcj",
     "real_words_section",
     "faq_section",
     "medical_disclaimer_section"
