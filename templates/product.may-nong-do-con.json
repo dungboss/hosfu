@@ -403,7 +403,7 @@
             "text": "<p><strong>\"I only had two beers\" is the deadliest phrase on American roads.</strong></p><p>Every year, over 13,000 Americans die in drunk driving crashes. The real tragedy? Almost every driver I pull over genuinely believes they are sober. They trust their \"tolerance\". They drink a cup of black coffee. They wait an hour and feel completely \"fine\". But alcohol is a master of deception. It impairs your judgment long before it impairs your body. You can't feel a 0.08% BAC. You can't guess your exact reaction time. </p><p><strong>The most haunting part isn’t being arrested. It’s when you realize that breath alcohol concentration isn’t just a number; it just cost a life. \"</strong></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
-            "text_size": 14,
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
