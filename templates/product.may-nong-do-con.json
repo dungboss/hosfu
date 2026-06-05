@@ -1900,6 +1900,7 @@
         },
         "price": {
           "type": "product_price",
+          "disabled": true,
           "settings": {
             "price_layout": "price-first",
             "price_color": "accent-1",
