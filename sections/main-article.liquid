@@ -6,12 +6,16 @@
   endif
   assign has_sticky = false
   assign is_uvtoilet_article = false
+  assign is_check_availability_blog = false
   if request.path contains '/blogs/news/uvtoilet'
     assign is_uvtoilet_article = true
   elsif article.url contains '/blogs/news/uvtoilet'
     assign is_uvtoilet_article = true
   elsif blog.handle == 'news' and article.handle == 'uvtoilet'
     assign is_uvtoilet_article = true
+  endif
+  if article.id == 616390689048 or article.id == 616390918424 or article.id == 616390983960
+    assign is_check_availability_blog = true
   endif
   for b in section.blocks
     if b.type == 'sticky_promotion'
@@ -229,6 +233,35 @@
           #BlogContent-{{ section.id }} .article-template__editable-block--disclaimer {
             color: rgba(var(--color-foreground), 0.68);
           }
+          {% if is_check_availability_blog %}
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: fit-content;
+              min-width: 220px;
+              max-width: 100%;
+              margin: 1.6rem auto 0;
+              padding: 1.4rem 2rem;
+              color: #fff !important;
+              text-align: center !important;
+              white-space: normal;
+              gap: 0 !important;
+              background-image: none !important;
+            }
+
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn::before,
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn::after {
+              content: none !important;
+              display: none !important;
+            }
+
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn .icon,
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn .icon-wrap,
+            #BlogContent-{{ section.id }} .article-template__check-availability-btn svg {
+              display: none !important;
+            }
+          {% endif %}
           {% if is_uvtoilet_article %}
             a.article-template__uvtoilet-mobile-cta,
             .rte a.article-template__uvtoilet-mobile-cta {
@@ -305,6 +338,19 @@
                 {%- endfor -%}
               {%- else -%}
                 {{ article.content }}
+              {%- endif -%}
+              {%- if is_check_availability_blog -%}
+                {%- assign check_availability_image_keys = '2aOboQZJXUCMz2nhNU1OYmwxy9S0ty1gEhNCB2FE.jpg|z7871234320341_46ded545606557f99f081f7964df7b13.jpg' | split: '|' -%}
+                {%- for check_availability_image_key in check_availability_image_keys -%}
+                  <a
+                    href="/products/toilet-sensor-light"
+                    class="button button--primary article-template__check-availability-btn"
+                    data-check-availability-target="{{ check_availability_image_key }}"
+                    hidden
+                  >
+                    Check Availability
+                  </a>
+                {%- endfor -%}
               {%- endif -%}
             </div>
             {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
@@ -730,6 +776,61 @@
 
   customElements.define('blog-contents', BlogContents);
 </script>
+
+{% if is_check_availability_blog %}
+  <script>
+    (() => {
+      const content = document.getElementById('BlogContent-{{ section.id }}');
+      if (!content) return;
+
+      const targetImageKeys = [
+        '2aOboQZJXUCMz2nhNU1OYmwxy9S0ty1gEhNCB2FE.jpg',
+        'z7871234320341_46ded545606557f99f081f7964df7b13.jpg'
+      ];
+
+      const matchesTargetImage = (img, imageKey) => {
+        const candidates = [
+          img.getAttribute('src'),
+          img.currentSrc,
+          img.getAttribute('data-src'),
+          img.getAttribute('data-lazy-src')
+        ].filter(Boolean);
+
+        return candidates.some((value) => value.includes(imageKey));
+      };
+
+      const getTarget = (imageKey) => {
+        const img = Array.from(content.querySelectorAll('img')).find((candidate) => matchesTargetImage(candidate, imageKey));
+        if (!img) return null;
+
+        return img.closest('figure') || img.closest('a') || img.closest('p') || img.parentElement || img;
+      };
+
+      const positionButton = (imageKey) => {
+        const button = content.querySelector(`[data-check-availability-target="${imageKey}"]`);
+        if (!button) return;
+
+        const target = getTarget(imageKey);
+        if (!target || !target.parentNode) return;
+
+        button.hidden = false;
+        target.insertAdjacentElement('afterend', button);
+      };
+
+      const positionButtons = () => {
+        targetImageKeys.forEach(positionButton);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', positionButtons, { once: true });
+      } else {
+        positionButtons();
+      }
+
+      setTimeout(positionButtons, 500);
+    })();
+  </script>
+{% endif %}
 
 {% if is_uvtoilet_article %}
   <script>
