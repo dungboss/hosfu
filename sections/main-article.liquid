@@ -14,11 +14,11 @@
   elsif blog.handle == 'news' and article.handle == 'uvtoilet'
     assign is_uvtoilet_article = true
   endif
-  if article.id == 616390689048 or article.id == 616390918424 or article.id == 616390983960
+  if article.id == 616390689048 or article.id == 616390918424 or article.id == 616390983960 or template.suffix == 'seniors-fall-warning'
     assign is_check_availability_blog = true
   endif
   for b in section.blocks
-    if b.type == 'sticky_promotion'
+    if b.type == 'sticky_promotion' and is_check_availability_blog
       assign has_sticky = true
       break
     endif
@@ -340,140 +340,141 @@
                 {{ article.content }}
               {%- endif -%}
               {%- if is_check_availability_blog -%}
-                {%- assign check_availability_image_keys = '2aOboQZJXUCMz2nhNU1OYmwxy9S0ty1gEhNCB2FE.jpg|z7871234320341_46ded545606557f99f081f7964df7b13.jpg' | split: '|' -%}
-                {%- for check_availability_image_key in check_availability_image_keys -%}
-                  <a
-                    href="/products/toilet-sensor-light"
-                    class="button button--primary article-template__check-availability-btn"
-                    data-check-availability-target="{{ check_availability_image_key }}"
-                    hidden
-                  >
-                    Check Availability
-                  </a>
-                {%- endfor -%}
+                <a
+                  href="/products/toilet-sensor-light"
+                  class="button button--primary article-template__check-availability-btn"
+                  data-check-availability-button
+                  hidden
+                >
+                  Check Availability
+                </a>
               {%- endif -%}
             </div>
-            {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
-            {% for block in promotions %}
-            <div
-              class="sticky-promotion sticky-promotion--in-content
-                     sticky-promotion--{{ block.settings.desktop_position }}
-                     color-{{ block.settings.color_scheme }}"
-              style="
-                --desktop-width: {{ block.settings.desktop_width }}px;
-                --border-radius: {{ block.settings.corner_radius }}px;
-                --fs-avatar-label: {{ block.settings.fs_avatar_label | default: 12 }}px;
-                --fs-content-p: {{ block.settings.fs_content_p | default: 12 }}px;
-                --fs-heading: {{ block.settings.fs_heading | default: 22 }}px;
-                --fs-content-after: {{ block.settings.fs_content_after | default: 14 }}px;
-              "
-              {{ block.shopify_attributes }}
-            >
-              {%- if block.settings.logo %}
+            {% if is_check_availability_blog %}
+              {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
+              {% for block in promotions %}
                 <div
-                  class="sticky-promotion__logo"
-                  style="text-align: {{ block.settings.logo_alignment }};--width: {{ block.settings.logo_width }}%;"
+                  class="sticky-promotion sticky-promotion--in-content
+                         sticky-promotion--{{ block.settings.desktop_position }}
+                         color-{{ block.settings.color_scheme }}"
+                  style="
+                    --desktop-width: {{ block.settings.desktop_width }}px;
+                    --border-radius: {{ block.settings.corner_radius }}px;
+                    --fs-avatar-label: {{ block.settings.fs_avatar_label | default: 12 }}px;
+                    --fs-content-p: {{ block.settings.fs_content_p | default: 12 }}px;
+                    --fs-heading: {{ block.settings.fs_heading | default: 22 }}px;
+                    --fs-content-after: {{ block.settings.fs_content_after | default: 14 }}px;
+                  "
+                  {{ block.shopify_attributes }}
                 >
-                  {{
-                    block.settings.logo
-                    | image_url: width: 500
-                    | image_tag: loading: 'lazy'
-                  }}
-                </div>
-                {%- if block.settings.line_divider_opacity > 0 %}
-                  <div
-                    class="sticky-promotion__divider"
-                    style="opacity: {{ block.settings.line_divider_opacity | divided_by: 100.0 }};"
-                  >&nbsp</div>
-                {%- endif %}
-              {%- endif %}
-
-              <div class="sticky-promotion__content-container">
-                {%- if block.settings.content_top_image %}
-                  <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
-                    {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
-                    {{
-                      block.settings.content_top_image
-                      | image_url: width: 1500
-                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
-                    }}
-                  </div>
-                {%- endif %}
-
-                {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 -%}
-                  <div class="sticky-promotion__avatars">
-                    <div class="sticky-promotion__avatar-images">
-                      {%- if block.settings.avatar_1 -%}
-                        {{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
-                      {%- endif -%}
-                      {%- if block.settings.avatar_2 -%}
-                        {{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
-                      {%- endif -%}
-                      {%- if block.settings.avatar_3 -%}
-                        {{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
-                      {%- endif -%}
+                  {%- if block.settings.logo %}
+                    <div
+                      class="sticky-promotion__logo"
+                      style="text-align: {{ block.settings.logo_alignment }};--width: {{ block.settings.logo_width }}%;"
+                    >
+                      {{
+                        block.settings.logo
+                        | image_url: width: 500
+                        | image_tag: loading: 'lazy'
+                      }}
                     </div>
-                    {%- if block.settings.avatar_label != blank -%}
-                      <span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>
+                    {%- if block.settings.line_divider_opacity > 0 %}
+                      <div
+                        class="sticky-promotion__divider"
+                        style="opacity: {{ block.settings.line_divider_opacity | divided_by: 100.0 }};"
+                      >&nbsp</div>
+                    {%- endif %}
+                  {%- endif %}
+
+                  <div class="sticky-promotion__content-container">
+                    {%- if block.settings.content_top_image %}
+                      <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
+                        {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
+                        {{
+                          block.settings.content_top_image
+                          | image_url: width: 1500
+                          | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
+                        }}
+                      </div>
+                    {%- endif %}
+
+                    {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 -%}
+                      <div class="sticky-promotion__avatars">
+                        <div class="sticky-promotion__avatar-images">
+                          {%- if block.settings.avatar_1 -%}
+                            {{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                          {%- endif -%}
+                          {%- if block.settings.avatar_2 -%}
+                            {{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                          {%- endif -%}
+                          {%- if block.settings.avatar_3 -%}
+                            {{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}
+                          {%- endif -%}
+                        </div>
+                        {%- if block.settings.avatar_label != blank -%}
+                          <span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>
+                        {%- endif -%}
+                      </div>
                     {%- endif -%}
-                  </div>
-                {%- endif -%}
 
-                <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
-                  {{ block.settings.content }}
-                </div>
+                    <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+                      {{ block.settings.content }}
+                    </div>
 
-                {%- if block.settings.middle_image_url != blank -%}
-                  <div class="sticky-promotion__middle-image">
-                    <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
-                  </div>
-                {%- endif -%}
+                    {%- if block.settings.middle_image_url != blank -%}
+                      <div class="sticky-promotion__middle-image">
+                        <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
+                      </div>
+                    {%- endif -%}
 
-                {%- if block.settings.content_after != blank -%}
-                  <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
-                    {{ block.settings.content_after }}
-                  </div>
-                {%- endif -%}
+                    {%- if block.settings.content_after != blank -%}
+                      <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+                        {{ block.settings.content_after }}
+                      </div>
+                    {%- endif -%}
 
-                {%- if block.settings.content_bottom_image %}
-                  <div class="sticky-promotion__bottom-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_bottom_image.aspect_ratio | times: 100 }}%">
-                    {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
-                    {{
-                      block.settings.content_bottom_image
-                      | image_url: width: 1500
-                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
-                    }}
+                    {%- if block.settings.content_bottom_image %}
+                      <div class="sticky-promotion__bottom-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_bottom_image.aspect_ratio | times: 100 }}%">
+                        {%- capture sizes -%}(min-width: 750px) {{ block.settings.desktop_width }}px, calc(100vw - 70px){%- endcapture -%}
+                        {{
+                          block.settings.content_bottom_image
+                          | image_url: width: 1500
+                          | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500'
+                        }}
+                      </div>
+                    {%- endif %}
                   </div>
-                {%- endif %}
-              </div>
-          
-              <div class="sticky-promotion__cta">
-                {% if block.settings.cta_function == 'link' %}
-                  <a
-                    {% if block.settings.cta_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.cta_link }}"
-                    {% endif %}
-                    class="button"
-                  >
-                    {{ block.settings.cta_label }}
-                  </a>
-                {% else %}
-                  {% if block.settings.cta_product != blank %}
-                    {% assign product_form_id = 'section-product-form-' | append: section.id | append: block.id %}
-                    {% render 'separate-atc-btn',
-                      product: block.settings.cta_product,
-                      product_form_id: product_form_id,
-                      label: block.settings.cta_label
-                    %}
+
+              {%- unless is_check_availability_blog -%}
+                <div class="sticky-promotion__cta">
+                  {% if block.settings.cta_function == 'link' %}
+                    <a
+                      {% if block.settings.cta_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.cta_link }}"
+                      {% endif %}
+                      class="button"
+                    >
+                      {{ block.settings.cta_label }}
+                    </a>
                   {% else %}
-                    <h4 style="margin: 1.5rem 0 0;">Assign add to cart product in block settings</h4>
+                    {% if block.settings.cta_product != blank %}
+                      {% assign product_form_id = 'section-product-form-' | append: section.id | append: block.id %}
+                      {% render 'separate-atc-btn',
+                        product: block.settings.cta_product,
+                        product_form_id: product_form_id,
+                        label: block.settings.cta_label
+                      %}
+                    {% else %}
+                      <h4 style="margin: 1.5rem 0 0;">Assign add to cart product in block settings</h4>
+                    {% endif %}
                   {% endif %}
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
+                </div>
+              {%- endunless -%}
+                </div>
+              {% endfor %}
+            {% endif %}
           </div>
         </div>
       {%- when 'share' -%}
@@ -486,60 +487,64 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
-  {% for block in promotions %}
-    {% unless block.settings.mobile_position == 'hidden' %}
-    <div
-      class="sticky-promotion sticky-promotion--mobile-bottom color-{{ block.settings.color_scheme }}"
-      style="--desktop-width: {{ block.settings.desktop_width }}px; --border-radius: {{ block.settings.corner_radius }}px;"
-      {{ block.shopify_attributes }}
-    >
-      {%- if block.settings.logo %}
-        <div class="sticky-promotion__logo" style="text-align: {{ block.settings.logo_alignment }};--width: {{ block.settings.logo_width }}%;">
-          {{ block.settings.logo | image_url: width: 500 | image_tag: loading: 'lazy' }}
-        </div>
-        {%- if block.settings.line_divider_opacity > 0 %}
-          <div class="sticky-promotion__divider" style="opacity: {{ block.settings.line_divider_opacity | divided_by: 100.0 }};">&nbsp</div>
-        {%- endif %}
-      {%- endif %}
-      <div class="sticky-promotion__content-container">
-        {%- if block.settings.content_top_image %}
-          <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
-            {{ block.settings.content_top_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
-          </div>
-        {%- endif %}
-        {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 %}
-          <div class="sticky-promotion__avatars">
-            <div class="sticky-promotion__avatar-images">
-              {%- if block.settings.avatar_1 %}{{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
-              {%- if block.settings.avatar_2 %}{{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
-              {%- if block.settings.avatar_3 %}{{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+  {% if is_check_availability_blog %}
+    {% assign promotions = section.blocks | where: 'type', 'sticky_promotion' %}
+    {% for block in promotions %}
+      {% unless block.settings.mobile_position == 'hidden' %}
+        <div
+          class="sticky-promotion sticky-promotion--mobile-bottom color-{{ block.settings.color_scheme }}"
+          style="--desktop-width: {{ block.settings.desktop_width }}px; --border-radius: {{ block.settings.corner_radius }}px;"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.logo %}
+            <div class="sticky-promotion__logo" style="text-align: {{ block.settings.logo_alignment }};--width: {{ block.settings.logo_width }}%;">
+              {{ block.settings.logo | image_url: width: 500 | image_tag: loading: 'lazy' }}
             </div>
-            {%- if block.settings.avatar_label != blank %}<span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>{%- endif %}
+            {%- if block.settings.line_divider_opacity > 0 %}
+              <div class="sticky-promotion__divider" style="opacity: {{ block.settings.line_divider_opacity | divided_by: 100.0 }};">&nbsp</div>
+            {%- endif %}
+          {%- endif %}
+          <div class="sticky-promotion__content-container">
+            {%- if block.settings.content_top_image %}
+              <div class="sticky-promotion__top-image media media--transparent ratio" style="--ratio-percent: {{ 1 | divided_by: block.settings.content_top_image.aspect_ratio | times: 100 }}%">
+                {{ block.settings.content_top_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+              </div>
+            {%- endif %}
+            {%- if block.settings.avatar_1 or block.settings.avatar_2 or block.settings.avatar_3 %}
+              <div class="sticky-promotion__avatars">
+                <div class="sticky-promotion__avatar-images">
+                  {%- if block.settings.avatar_1 %}{{ block.settings.avatar_1 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+                  {%- if block.settings.avatar_2 %}{{ block.settings.avatar_2 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+                  {%- if block.settings.avatar_3 %}{{ block.settings.avatar_3 | image_url: width: 80 | image_tag: loading: 'lazy', class: 'sticky-promotion__avatar-img' }}{%- endif %}
+                </div>
+                {%- if block.settings.avatar_label != blank %}<span class="sticky-promotion__avatar-label">{{ block.settings.avatar_label }}</span>{%- endif %}
+              </div>
+            {%- endif %}
+            <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+              {{ block.settings.content }}
+            </div>
+            {%- if block.settings.middle_image_url != blank %}
+              <div class="sticky-promotion__middle-image">
+                <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
+              </div>
+            {%- endif %}
+            {%- if block.settings.content_after != blank %}
+              <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
+                {{ block.settings.content_after }}
+              </div>
+            {%- endif %}
           </div>
-        {%- endif %}
-        <div class="sticky-promotion__content rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
-          {{ block.settings.content }}
+          {%- unless is_check_availability_blog -%}
+            <div class="sticky-promotion__cta">
+              {%- if block.settings.cta_function == 'link' %}
+                <a {% if block.settings.cta_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.cta_link }}"{% endif %} class="button">{{ block.settings.cta_label }}</a>
+              {%- endif %}
+            </div>
+          {%- endunless -%}
         </div>
-        {%- if block.settings.middle_image_url != blank %}
-          <div class="sticky-promotion__middle-image">
-            <img src="{{ block.settings.middle_image_url }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:6px;" />
-          </div>
-        {%- endif %}
-        {%- if block.settings.content_after != blank %}
-          <div class="sticky-promotion__content sticky-promotion__content--after rte {{ block.settings.content_alignment }}" style="--spacing:{{ block.settings.content_spacing | divided_by: 10.0 }}rem;">
-            {{ block.settings.content_after }}
-          </div>
-        {%- endif %}
-      </div>
-      <div class="sticky-promotion__cta">
-        {%- if block.settings.cta_function == 'link' %}
-          <a {% if block.settings.cta_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.cta_link }}"{% endif %} class="button">{{ block.settings.cta_label }}</a>
-        {%- endif %}
-      </div>
-    </div>
-    {% endunless %}
-  {% endfor %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
 
   <div class="article-template__back element-margin-top center">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
@@ -787,6 +792,8 @@
         '2aOboQZJXUCMz2nhNU1OYmwxy9S0ty1gEhNCB2FE.jpg',
         'z7871234320341_46ded545606557f99f081f7964df7b13.jpg'
       ];
+      const button = content.querySelector('[data-check-availability-button]');
+      if (!button) return;
 
       const matchesTargetImage = (img, imageKey) => {
         const candidates = [
@@ -799,35 +806,34 @@
         return candidates.some((value) => value.includes(imageKey));
       };
 
-      const getTarget = (imageKey) => {
-        const img = Array.from(content.querySelectorAll('img')).find((candidate) => matchesTargetImage(candidate, imageKey));
-        if (!img) return null;
+      const getTarget = () => {
+        const images = Array.from(content.querySelectorAll('img'));
 
-        return img.closest('figure') || img.closest('a') || img.closest('p') || img.parentElement || img;
+        for (const imageKey of targetImageKeys) {
+          const img = images.find((candidate) => matchesTargetImage(candidate, imageKey));
+          if (!img) continue;
+
+          return img.closest('figure') || img.closest('a') || img.closest('p') || img.parentElement || img;
+        }
+
+        return null;
       };
 
-      const positionButton = (imageKey) => {
-        const button = content.querySelector(`[data-check-availability-target="${imageKey}"]`);
-        if (!button) return;
-
-        const target = getTarget(imageKey);
+      const positionButton = () => {
+        const target = getTarget();
         if (!target || !target.parentNode) return;
 
         button.hidden = false;
         target.insertAdjacentElement('afterend', button);
       };
 
-      const positionButtons = () => {
-        targetImageKeys.forEach(positionButton);
-      };
-
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', positionButtons, { once: true });
+        document.addEventListener('DOMContentLoaded', positionButton, { once: true });
       } else {
-        positionButtons();
+        positionButton();
       }
 
-      setTimeout(positionButtons, 500);
+      setTimeout(positionButton, 500);
     })();
   </script>
 {% endif %}
