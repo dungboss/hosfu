@@ -445,33 +445,31 @@
                     {%- endif %}
                   </div>
 
-              {%- unless is_check_availability_blog -%}
-                <div class="sticky-promotion__cta">
-                  {% if block.settings.cta_function == 'link' %}
-                    <a
-                      {% if block.settings.cta_link == blank %}
-                        role="link" aria-disabled="true"
-                      {% else %}
-                        href="{{ block.settings.cta_link }}"
-                      {% endif %}
-                      class="button"
-                    >
-                      {{ block.settings.cta_label }}
-                    </a>
-                  {% else %}
-                    {% if block.settings.cta_product != blank %}
-                      {% assign product_form_id = 'section-product-form-' | append: section.id | append: block.id %}
-                      {% render 'separate-atc-btn',
-                        product: block.settings.cta_product,
-                        product_form_id: product_form_id,
-                        label: block.settings.cta_label
-                      %}
+              <div class="sticky-promotion__cta">
+                {% if block.settings.cta_function == 'link' %}
+                  <a
+                    {% if block.settings.cta_link == blank %}
+                      role="link" aria-disabled="true"
                     {% else %}
-                      <h4 style="margin: 1.5rem 0 0;">Assign add to cart product in block settings</h4>
+                      href="{{ block.settings.cta_link }}"
                     {% endif %}
+                    class="button"
+                  >
+                    {{ block.settings.cta_label }}
+                  </a>
+                {% else %}
+                  {% if block.settings.cta_product != blank %}
+                    {% assign product_form_id = 'section-product-form-' | append: section.id | append: block.id %}
+                    {% render 'separate-atc-btn',
+                      product: block.settings.cta_product,
+                      product_form_id: product_form_id,
+                      label: block.settings.cta_label
+                    %}
+                  {% else %}
+                    <h4 style="margin: 1.5rem 0 0;">Assign add to cart product in block settings</h4>
                   {% endif %}
-                </div>
-              {%- endunless -%}
+                {% endif %}
+              </div>
                 </div>
               {% endfor %}
             {% endif %}
@@ -534,13 +532,11 @@
               </div>
             {%- endif %}
           </div>
-          {%- unless is_check_availability_blog -%}
-            <div class="sticky-promotion__cta">
-              {%- if block.settings.cta_function == 'link' %}
-                <a {% if block.settings.cta_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.cta_link }}"{% endif %} class="button">{{ block.settings.cta_label }}</a>
-              {%- endif %}
-            </div>
-          {%- endunless -%}
+          <div class="sticky-promotion__cta">
+            {%- if block.settings.cta_function == 'link' %}
+              <a {% if block.settings.cta_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.cta_link }}"{% endif %} class="button">{{ block.settings.cta_label }}</a>
+            {%- endif %}
+          </div>
         </div>
       {% endunless %}
     {% endfor %}

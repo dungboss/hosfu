@@ -28,16 +28,6 @@
             "full_width": false
           }
         },
-        "navigation_JTtDyK": {
-          "type": "navigation",
-          "settings": {
-            "alignment": "center",
-            "color_scheme": "background-1",
-            "text_color": "accent-1",
-            "padding_top": 10,
-            "padding_bottom": 10
-          }
-        },
         "table_of_contents_Bc9ymt": {
           "type": "table_of_contents",
           "settings": {
@@ -132,7 +122,6 @@
       },
       "block_order": [
         "featured_image",
-        "navigation_JTtDyK",
         "table_of_contents_Bc9ymt",
         "sticky_promotion_LiwxVa",
         "title",
