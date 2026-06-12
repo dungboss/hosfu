@@ -1685,7 +1685,7 @@
             "corner_radius": 40,
             "padding": 3,
             "text_1": "<strong>Stay Connected — Call For Help</strong>",
-            "icon_1": "power socket connector icon",
+            "icon_1": "smartphone",
             "filled_icon_1": false,
             "text_2": "",
             "icon_2": "check_circle",
