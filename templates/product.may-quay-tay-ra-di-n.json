@@ -88,6 +88,7 @@
       "block_order": [
         "heading_D4QKqW"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "display_id": false,
@@ -357,6 +358,7 @@
         "hero_button",
         "hero_note"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -430,6 +432,7 @@
         "expert_quote_blk",
         "expert_attribution_blk"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -649,6 +652,7 @@
     },
     "as_seen_on_section": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -660,6 +664,7 @@
     },
     "shoppable_image_cFMX6j": {
       "type": "shoppable-image",
+      "disabled": true,
       "name": "Shoppable image",
       "settings": {
         "display_id": false,
@@ -1148,6 +1153,7 @@
         "text_with_icon_by4jfj",
         "text_DdLJVC"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -1242,6 +1248,7 @@
       "block_order": [
         "heading_PgEzaX"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "display_id": false,
@@ -1264,6 +1271,7 @@
     },
     "shoppable_image_4YKMBB": {
       "type": "shoppable-image",
+      "disabled": true,
       "name": "Shoppable image",
       "settings": {
         "display_id": false,
@@ -3075,7 +3083,7 @@
             "post_author_verified": false,
             "post_time": "10h ago",
             "post_text": "<p>The biggest shift was how sturdy and compact this tool feels. I tossed it right into my truck's glovebox. The aluminum case is heavy-duty, the electronic fire starter works flawlessly in the wind, and it actually delivers real emergency power to my phone when needed. Worth every penny.</p>",
-            "post_image": "shopify://shop_images/FC32DB06-271F-415A-AEFF-E01CE7B10097.jpg",
+            "post_image": "shopify://shop_images/3CB4CC80-91AE-4F4F-9DFE-354A3EFE9BE0.png",
             "post_reactions": "like, love, care",
             "post_reactions_text": "845",
             "post_comments_text": "54 Comments",
@@ -3096,7 +3104,7 @@
             "post_author_verified": false,
             "post_time": "1 day ago",
             "post_text": "<p>I was skeptical at first, but the quality of this emergency device is impressive. The aluminum case feels premium, heavy-duty, and testing the features was a breeze. Already feeling much more 'in control' and prepared for hurricane season after just putting it in my go-bag. Highly recommend for anyone on the fence!</p>",
-            "post_image": "shopify://shop_images/60FBACC1-09CD-4895-9DA8-F71C3B2E20B4.jpg",
+            "post_image": "shopify://shop_images/FC32DB06-271F-415A-AEFF-E01CE7B10097.jpg",
             "post_reactions": "like, love, care",
             "post_reactions_text": "1.1k",
             "post_comments_text": "26 Comments",
@@ -3118,7 +3126,7 @@
             "post_author_verified": true,
             "post_time": "2 weeks ago",
             "post_text": "<p>Fast shipping and securely packaged as promised. The unboxing experience was great, and the hand-crank mechanism is surprisingly smooth and quiet. I can crank it to listen to the morning weather radio without waking up the whole camp. Finally, an off-grid survival solution that makes sense. </p>",
-            "post_image": "shopify://shop_images/5FED19FF-35A7-4E13-B2F3-2BB22B3F5011.jpg",
+            "post_image": "shopify://shop_images/D0314726-C8A0-4406-A273-DA55959C40FD.jpg",
             "post_reactions": "like, love, care",
             "post_reactions_text": "148",
             "post_comments_text": "23 Comments",
