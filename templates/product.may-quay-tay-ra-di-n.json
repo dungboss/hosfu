@@ -37,7 +37,7 @@
         "heading_D4QKqW": {
           "type": "heading",
           "settings": {
-            "title": "Is Your Home Truly Safe From Invisible Toxic Leaks?",
+            "title": "Don’t Be Left Helpless When The Grid Fails",
             "title_highlight_1": "solid-color",
             "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_1_bg-color": "#f9efff",
@@ -180,7 +180,7 @@
         "hero_text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>HOSFU is an easy-to-use, 4-in-1 CO & gas detector</strong> that shows you real-time danger levels — so you can protect your loved ones from hidden leaks before it’s too late.</p>",
+            "text": "<p><strong>HOSFU</strong> is a pocket-sized 5-in-1 survival hub that generates instant off-grid power - so you can keep your family safe and connected when disaster strikes.</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 18,
@@ -214,7 +214,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<em><strong>Real-Time Digital Display</strong></em> — Don't wait for a blind alarm to sound. See exact Carbon Monoxide (PPM) and Natural Gas (%LEL) levels instantly, alongside room temperature and humidity.",
+            "text_1": "<strong>Unlimited Manual Power</strong> — <em>Stop relying on dead power banks or solar chargers that need clear skies. Generate your own electricity instantly.</em>",
             "icon_1": "check_circle",
             "filled_icon_1": false,
             "text_2": "",
@@ -254,7 +254,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<em><strong>Zero-Hassle Plug & Play</strong></em> — No drilling, no wiring, and no expensive electricians. Simply plug it into any standard wall outlet and you are protected in seconds.",
+            "text_1": "<strong>Instant Windproof Fire</strong> — <em>No fumbling for wet matches. The electronic ignition sparks a survival fire in seconds, even in severe weather.</em>",
             "icon_1": "check_circle",
             "filled_icon_1": false,
             "text_2": "",
@@ -294,7 +294,7 @@
             "border_color": "#b7b7b7",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "<em><strong>85dB Siren for Total Security</strong></em> — Loud enough to wake the deepest sleepers. Perfect for protecting elderly parents, kids, and everyone under your roof during winter heating.",
+            "text_1": "<strong>The Ultimate Lifeline</strong> — <em>Boosts dead phones for critical calls, tracks weather alerts via SW/FM radio, and lights up the dark—all in one rugged tool.</em>",
             "icon_1": "check_circle",
             "filled_icon_1": false,
             "text_2": "",
@@ -360,7 +360,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "image": "shopify://shop_images/Gemini_Generated_Image_mr54c6mr54c6mr54.png",
+        "image": "shopify://shop_images/Untitled_image_22.png",
         "image_url": "",
         "image_url_alt": "",
         "video_autoplay": true,
