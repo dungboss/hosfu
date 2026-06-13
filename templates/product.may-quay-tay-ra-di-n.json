@@ -2747,7 +2747,7 @@
             "heading_Cg4RzK": {
               "type": "heading",
               "settings": {
-                "title": "Why Homes & Hosts Trust Hosfu For Their Safety",
+                "title": "Why Survivalists Trust Hosfu For Unexpected Crises",
                 "title_highlight_1": "solid-color",
                 "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
                 "title_highlight_1_bg-color": "#f9efff",
@@ -2797,7 +2797,7 @@
             "text_wEPVpQ": {
               "type": "text",
               "settings": {
-                "text": "<p>Designed for precision, effortless setup, and absolute peace of mind.</p>",
+                "text": "<p>Designed for off-grid reliability, extreme versatility, and real-world survival.</p>",
                 "alignment": "center",
                 "mobile_alignment": "mobile-center",
                 "text_size": 14,
@@ -2836,27 +2836,6 @@
             "icon_with_content_ccPbG6": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "radar wave",
-                "filled_icon": false,
-                "icon_size": "m",
-                "icon_position": "next-to-title",
-                "icon_color": "accent-1",
-                "custom_icon_color": "#ff0000",
-                "icon_text_alignment": "left",
-                "text_color": "text",
-                "custom_text_color": "#ff0000",
-                "title": "Real-Time Precision Display",
-                "icon_heading_size": "h3",
-                "text": "<p>Stop guessing with basic indicator lights. The smart digital screen shows exact Carbon Monoxide (PPM) and combustible gas (%LEL) levels instantly, giving you complete clarity on the air you breathe.</p>",
-                "text_size": 14,
-                "margin_top": 0,
-                "margin_bottom": 30
-              },
-              "blocks": {}
-            },
-            "icon_with_content_JEwJXt": {
-              "type": "icon-with-content",
-              "settings": {
                 "icon": "power socket connector icon",
                 "filled_icon": false,
                 "icon_size": "m",
@@ -2866,9 +2845,30 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Instant Plug & Play Setup",
+                "title": "Unlimited Manual Power",
                 "icon_heading_size": "h3",
-                "text": "<p>Complete protection in seconds. Simply plug the device into any standard wall socket near your boiler, fireplace, or kitchen. No drilling, no hardwiring, and no professional help needed.</p>",
+                "text": "<p>Stop relying on batteries that die or solar panels that need clear skies. The smooth 3W hand-crank system guarantees instant, physical energy whenever the grid goes down.</p>",
+                "text_size": 14,
+                "margin_top": 0,
+                "margin_bottom": 30
+              },
+              "blocks": {}
+            },
+            "icon_with_content_JEwJXt": {
+              "type": "icon-with-content",
+              "settings": {
+                "icon": "radar wave",
+                "filled_icon": false,
+                "icon_size": "m",
+                "icon_position": "next-to-title",
+                "icon_color": "accent-1",
+                "custom_icon_color": "#ff0000",
+                "icon_text_alignment": "left",
+                "text_color": "text",
+                "custom_text_color": "#ff0000",
+                "title": "Vital Emergency Lifeline",
+                "icon_heading_size": "h3",
+                "text": "<p>Never lose touch with the outside world. Give your dead phone a crucial power boost for emergency calls and track severe weather alerts via the built-in SW/FM radio.</p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
@@ -2940,7 +2940,7 @@
             "icon_with_content_HUaxgz": {
               "type": "icon-with-content",
               "settings": {
-                "icon": "waves icon",
+                "icon": "spark and fire outline vector",
                 "filled_icon": false,
                 "icon_size": "m",
                 "icon_position": "next-to-title",
@@ -2949,9 +2949,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "85dB Unmissable Alarm",
+                "title": "Windproof Fire Starter",
                 "icon_heading_size": "h3",
-                "text": "<p>Engineered to wake even the heaviest sleepers. A piercing 85dB siren triggers instantly at the first sign of danger, ensuring your family has the crucial time needed to evacuate safely.</p>",
+                "text": "<p>Start a survival fire in seconds without fumbling for wet matches. The electronic ignition provides a guaranteed heating wire to ignite tinder in harsh weather conditions. </p>",
                 "text_size": 14,
                 "margin_top": 0,
                 "margin_bottom": 30
@@ -2970,9 +2970,9 @@
                 "icon_text_alignment": "left",
                 "text_color": "text",
                 "custom_text_color": "#ff0000",
-                "title": "Certified EU Protection",
+                "title": "Rugged & Go-Bag Ready",
                 "icon_heading_size": "h3",
-                "text": "<p>Fully CE-certified and rigorously tested. A single device reliably monitors CO, Natural Gas, and Propane simultaneously, making it essential compliance for every modern home or Airbnb rental.</p>",
+                "text": "<p>Built with industrial-grade aluminum, not cheap plastic. This pocket-sized 5-in-1 tool replaces a bulky flashlight, radio, and lighter, saving crucial space in your kit. </p>",
                 "text_size": 14,
                 "margin_top": 15,
                 "margin_bottom": 0
