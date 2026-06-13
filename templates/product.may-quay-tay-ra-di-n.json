@@ -724,7 +724,7 @@
         "section_color_scheme": "background-1",
         "custom_section_colors_background": "#ffffff",
         "custom_section_gradient_background": "",
-        "image": "shopify://shop_images/88f5a558-8f47-462a-a311-ff1962f8ee15.jpg",
+        "image": "shopify://shop_images/Untitled_image_24.png",
         "desktop_image_width": "limited",
         "image_max_width": 800,
         "full_page_width": false,
@@ -747,7 +747,7 @@
         "display_price_in_btn": false,
         "skip_cart": false,
         "padding_top": 68,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "rich_text_RgV3HB": {
