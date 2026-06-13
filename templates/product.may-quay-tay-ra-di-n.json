@@ -941,7 +941,7 @@
         "heading_CDPC4a": {
           "type": "heading",
           "settings": {
-            "title": "Invented By First Responders. Built To Save Lives.",
+            "title": "Trusted By Survival Experts. Built To Keep You Alive.",
             "title_highlight_1": "solid-color",
             "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
             "title_highlight_1_bg-color": "#f9efff",
@@ -984,14 +984,14 @@
             "enable_custom_color": false,
             "custom_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 15
+            "margin_bottom": 9
           },
           "blocks": {}
         },
         "text_LzdH79": {
           "type": "text",
           "settings": {
-            "text": "<p>HOSFU was <strong>invented and developed</strong> by first responders who saw the same tragedy repeat itself every winter — families with basic, \"working\" alarms that never gave them the early warning they desperately needed. </p>",
+            "text": "<p>This device was developed alongside former Search & Rescue specialists who witnessed the same avoidable tragedy year after year — families stranded during severe blackouts or wilderness emergencies with dead smartphones and zero connection to the outside world.</p><p><strong>✓ Infinite Off-Grid Power</strong> — The robust hand-crank generator ensures you never have to rely on a wall outlet or a dying lithium battery again.</p><p><strong>✓ Weatherproof Electronic Ignition</strong> — Start a life-saving fire instantly, even in high winds or damp conditions when traditional matches fail.</p><p><strong>✓ Vital Emergency Comms</strong> — Built-in SW/FM radio and emergency LED lighting to track storm updates, illuminate your camp, and signal for help.</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 16,
@@ -1005,6 +1005,7 @@
         "text_with_icon_nEngfq": {
           "type": "text-with-icon",
           "name": "Text with icon",
+          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 16,
@@ -1045,6 +1046,7 @@
         "text_with_icon_BqJTGC": {
           "type": "text-with-icon",
           "name": "Text with icon",
+          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 16,
@@ -1085,6 +1087,7 @@
         "text_with_icon_by4jfj": {
           "type": "text-with-icon",
           "name": "Text with icon",
+          "disabled": true,
           "settings": {
             "mobile_text_size": 14,
             "desktop_text_size": 16,
@@ -1125,7 +1128,7 @@
         "text_DdLJVC": {
           "type": "text",
           "settings": {
-            "text": "<p>HOSFU isn't just another basic, blinking detector. It's the advanced early-warning system that rescue professionals wish every family had.</p><p><strong>Like having a 24/7 safety inspector plugged into your wall — constantly monitoring your air so you don't have to.</strong></p>",
+            "text": "<p>This isn't just another flimsy power bank. It’s the ultimate backup plan that wilderness experts wish every household kept in their go-bag.</p><p><strong>Like having a survival guide in your backpack — ensuring you're never truly off the grid.</strong></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 16,
