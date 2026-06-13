@@ -3249,10 +3249,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How is this detector different from standard CO alarms?",
+            "heading": "How is this different from a standard power bank?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Most traditional detectors only sound an alarm when gas concentrations reach dangerous levels (e.g., 70 ppm), meaning you have already been exposed for hours. Our device features a real-time digital display starting at 0 ppm, allowing you to see rising threats <em>before</em> they become an emergency.</p>",
+            "row_content": "<p>Standard power banks lose their charge over time and become useless when empty. This device features a mechanical hand-crank generator, meaning you can create your own power from scratch, even if the grid has been down for days. </p>",
             "page": ""
           },
           "blocks": {}
@@ -3261,10 +3261,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Are the sensors really professional-grade?",
+            "heading": "Will this fully charge my smartphone?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes. This product utilizes the same high-accuracy sensor technology trusted by emergency first responders and fire departments. It is rigorously tested and fully CE-certified to meet the strictest European safety standards (EN 50291 and EN 50194).</p>",
+            "row_content": "<p>No, and it's not meant to. This is designed as an <em>emergency lifeline</em>, not a daily charger. The built-in 1000mAh battery provides a crucial power boost—enough to revive a dead phone to make an emergency 911 call or send text messages when it matters most. </p>",
             "page": ""
           },
           "blocks": {}
@@ -3273,10 +3273,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What types of gases does it actually detect?",
+            "heading": "Who is this emergency tool designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>It is a comprehensive 4-in-1 safety device. It continuously monitors your air for invisible, odorless Carbon Monoxide (CO), as well as combustible gases like Natural Gas and Propane (LPG). It also displays real-time room temperature and humidity.</p>",
+            "row_content": "<p>It’s essential for campers, hikers, hunters, and anyone living in areas prone to sudden power outages, hurricanes, or severe winter storms. If you want a foolproof backup plan for your family, this belongs in your go-bag.</p>",
             "page": ""
           },
           "blocks": {}
@@ -3285,10 +3285,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Where are the best places to install it?",
+            "heading": "How much cranking is required to get power?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>For optimal protection, we recommend plugging the unit into wall outlets near potential leak sources. Ideal locations include the kitchen (near gas stoves), next to gas boilers, near fireplaces, and in the hallways right outside sleeping areas.</p>",
+            "row_content": "<p>It’s surprisingly efficient. Just 1 to 2 minutes of steady cranking will generate enough power for 5-10 minutes of radio playtime, prolonged flashlight use, or enough battery boost to make a quick, critical phone call. </p>",
             "page": ""
           },
           "blocks": {}
@@ -3297,10 +3297,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Does it require batteries, hardwiring, or an electrician?",
+            "heading": "Can I charge it normally before an emergency?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Not at all. The detector is designed for zero-stress \"Plug & Play\" installation. Simply plug it directly into any standard wall socket. No drilling, no messy wires, and no professional installation required.</p>",
+            "row_content": "<p>Absolutely. While the hand crank is your off-grid backup, the device features a 5V/1A USB input. You can fully charge its internal battery via a standard wall plug before you head into the woods or when a storm warning is announced. </p>",
             "page": ""
           },
           "blocks": {}
@@ -3309,10 +3309,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will the alarm be loud enough to wake my family?",
+            "heading": "Is it durable enough for harsh conditions?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Absolutely. If gas levels exceed safe thresholds, the device instantly triggers a piercing 85-decibel siren. It is purposely engineered to be extremely loud to wake up heavy sleepers and alert everyone in the household immediately.</p>",
+            "row_content": "<p>Yes. Unlike cheap plastic survival gear, this device is encased in heavy-duty aluminum. It’s tough, rugged, and pocket-sized, designed to take a beating while taking up minimal space in your survival kit or glovebox. </p>",
             "page": ""
           },
           "blocks": {}
@@ -3321,10 +3321,10 @@
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What if I am not completely satisfied with my purchase?",
+            "heading": "What if it does not feel like the right fit for me?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Your family's safety and your peace of mind are our top priorities. We offer a hassle-free 30-day money-back guarantee. If you don't feel completely secure with your detector, simply return it for a full refund.</p>",
+            "row_content": "<p>Your peace of mind is our priority. If you receive the device and don't feel 100% confident in its quality or utility, we offer a hassle-free <strong>[30-Day]</strong> money-back guarantee. Just reach out to our support team. </p>",
             "page": ""
           },
           "blocks": {}
