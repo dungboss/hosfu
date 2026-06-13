@@ -1151,7 +1151,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "image": "shopify://shop_images/0690715B-3E78-4741-BCB2-0D293AD583C4_1_201_a.jpg",
+        "image": "shopify://shop_images/Gemini_Generated_Image_ec2r75ec2r75ec2r.png",
         "image_url": "",
         "image_url_alt": "",
         "video_autoplay": true,
@@ -2589,7 +2589,7 @@
         "video_slide_Jw8dp4": {
           "type": "video_slide",
           "settings": {
-            "video": "shopify://files/videos/0601(5).mp4",
+            "video": "shopify://files/videos/0613.mp4",
             "loop": true,
             "muted_autoplay": true,
             "display_play_btn": true,
@@ -2607,7 +2607,7 @@
         "video_slide_h3VVyM": {
           "type": "video_slide",
           "settings": {
-            "video": "shopify://files/videos/0601(2).mp4",
+            "video": "shopify://files/videos/0613(1).mp4",
             "loop": true,
             "muted_autoplay": true,
             "display_play_btn": true,
@@ -2625,7 +2625,7 @@
         "video_slide_AL9Udy": {
           "type": "video_slide",
           "settings": {
-            "video": "shopify://files/videos/0601(1).mp4",
+            "video": "shopify://files/videos/0613(2).mp4",
             "loop": true,
             "muted_autoplay": true,
             "display_play_btn": true,
