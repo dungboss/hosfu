@@ -1572,6 +1572,7 @@
         "text_qjjK8L": {
           "type": "text",
           "name": "Text",
+          "disabled": true,
           "settings": {
             "text": "<p><em><strong>Protect Your Family from Silent Threats 24/7</strong></em></p>",
             "alignment": "left",
