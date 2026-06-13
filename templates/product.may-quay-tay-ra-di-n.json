@@ -400,10 +400,10 @@
         "expert_quote_blk": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>\" In all my years as a firefighter, the calls that haunt me the most aren't the massive blazes. It's the silent ones. </strong>Carbon monoxide (CO) is one of the leading causes of accidental poisoning deaths across Europe. Every single year, hundreds of people lose their lives to CO poisoning, and tragically, most of them pass away while they are sound asleep.</p><p>But do you want to know the real heartbreak we find when we arrive on the scene? Almost every single victim had a 'working' detector hanging on their wall. The green indicator light was still glowing. But the device was dead silent. Not a single alarm went off.</p><p>CO seeps from the everyday appliances keeping your home warm: heating boilers, furnaces, water heaters, and gas stoves. You can't see it. You can't smell it. <strong>You just don't wake up. \"</strong></p>",
+            "text": "<p>\"In over 15 years of guiding backcountry expeditions and facing down brutal weather, the thing that scares me the most isn't apex predators or sheer drop-offs. <strong>It’s the silence.</strong></p><p>Every single year, experienced hikers and everyday families find themselves in life-or-death situations when severe storms hit, wiping out the power grid and severing all communication.</p><p>But you want to know the real tragedy I see when working alongside Search and Rescue? Almost every stranded person we find had a thousand-dollar smartphone and a heavy-duty power bank packed in their bag. They thought they were prepared. But when you're trapped on day three of a freezing, off-grid blackout, lithium batteries drain. Those expensive gadgets just become dead weight. No light. No fire. No way to know what's happening in the outside world.</p><p>Disasters and rolling blackouts don't care about your plans. When total darkness hits and you are completely isolated, you can't pray for a wall outlet. You need the crackle of an emergency weather radio to know when the storm will pass. You need a spark that howling winds can't blow out to start a fire. And you need just enough juice to power up a dead phone and get that one critical SOS text message through.</p><p>Stop trusting your family's safety to a battery that will eventually die. When the grid collapses, <strong>your own two hands should be all you need to generate power, light, and a way out.</strong>\"</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
-            "text_size": 16,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
@@ -414,7 +414,7 @@
         "expert_attribution_blk": {
           "type": "text",
           "settings": {
-            "text": "<p></p><p><em><strong>Thomas Becker</strong></em></p><p><em><strong>Professional Firefighter</strong></em></p>",
+            "text": "<p></p><p><em><strong>John Hatcher</strong></em></p><p><em><strong>Master Trekking Guide & Survivalist</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -463,7 +463,7 @@
         "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 40,
+        "desktop_padding_top": 0,
         "desktop_padding_bottom": 0
       }
     },
