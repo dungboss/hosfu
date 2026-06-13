@@ -664,7 +664,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "Smart Protection. Simplified.",
+        "title": "Emergency Preparedness. Simplified.",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -704,7 +704,7 @@
         "custom_mobile_size": 28,
         "margin_top": 0,
         "margin_bottom": 0,
-        "text": "<p>A brilliantly designed 4-in-1 device that continuously monitors your home's air. It tracks Carbon Monoxide and Natural Gas in real-time, while keeping you beautifully informed of your room’s temperature and humidity at a single glance.</p><p> We believe home security shouldn't be complicated. Just plug HOSFU directly into any standard outlet. No messy wires, no complicated setups, and no drilling required. You get instant, reliable protection from the moment it powers on. <strong>Breathe easier. Sleep better. HOSFU watches over your home so you don't have to.</strong></p>",
+        "text": "<p>A ruggedly built 5-in-1 survival tool that ensures you are never left powerless. It generates instant mechanical energy on demand, while keeping you fully equipped with a crucial phone battery boost, SW/FM weather alerts, an LED flashlight, and a windproof fire starter—all in one compact aluminum device.</p><p>We believe survival gear shouldn't rely on things you can't control. Just turn the smooth hand-crank to create your own electricity from scratch. No dead power banks, no waiting for sunny weather, and no fragile electronics. You get a reliable, instant lifeline from your own two hands.</p><p><strong>Stay powered. Stay connected. HOSFU secures your peace of mind when the grid goes down.</strong></p>",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
