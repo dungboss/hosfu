@@ -2294,7 +2294,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Shipping & Wellness Note",
+            "heading": "Shipping",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
