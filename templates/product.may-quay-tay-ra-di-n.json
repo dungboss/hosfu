@@ -2015,6 +2015,7 @@
         },
         "shipping": {
           "type": "product_shipping-checkpoints",
+          "disabled": true,
           "settings": {
             "top_text_1": "<strong>[start_date]</strong>",
             "bottom_text_1": "Ordered",
