@@ -1,0 +1,1046 @@
+{{ 'section-hosfu-advertorial.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign nav_blocks = section.blocks | where: 'type', 'nav_item'
+  assign product_blocks = section.blocks | where: 'type', 'product'
+  assign criteria_blocks = section.blocks | where: 'type', 'criteria'
+  assign score_blocks = section.blocks | where: 'type', 'score_row'
+  assign comment_blocks = section.blocks | where: 'type', 'comment'
+  assign root_id = 'hosfu-advertorial-' | append: section.id
+  assign hero_sub = section.settings.hero_sub
+  if hero_sub == blank and article.excerpt != blank
+    assign hero_sub = article.excerpt | strip_html
+  endif
+  assign author_name = section.settings.author_name
+  if author_name == blank and article.author != blank
+    assign author_name = article.author
+  endif
+%}
+
+<article
+  id="{{ root_id }}"
+  class="hosfu-advertorial{% if section.settings.show_sticky_cta %} hosfu-advertorial--has-sticky{% else %} hosfu-advertorial--no-sticky{% endif %}"
+  style="
+    --advertorial-accent-color: {{ section.settings.accent_color }};
+    --advertorial-surface-color: {{ section.settings.surface_color }};
+    --advertorial-text-color: {{ section.settings.text_color }};
+    --advertorial-top-bar-color: {{ section.settings.top_bar_background }};
+  "
+>
+  {% if section.settings.top_bar_highlight != blank or section.settings.top_bar_text != blank %}
+    <div class="hosfu-advertorial__top-bar">
+      {% if section.settings.top_bar_highlight != blank %}
+        <span class="hosfu-advertorial__top-bar-highlight">{{ section.settings.top_bar_highlight | escape }}</span>
+      {% endif %}
+      {% if section.settings.top_bar_text != blank %}
+        {{ section.settings.top_bar_text | escape }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <header class="hosfu-advertorial__site-header">
+    {% if section.settings.site_name != blank %}
+      <div class="hosfu-advertorial__site-name">{{ section.settings.site_name | escape }}</div>
+    {% endif %}
+    {% if section.settings.verified_badge_text != blank %}
+      <div class="hosfu-advertorial__verified-badge">{{ section.settings.verified_badge_text | escape }}</div>
+    {% endif %}
+  </header>
+
+  {% if nav_blocks.size > 0 %}
+    <nav class="hosfu-advertorial__nav" aria-label="Advertorial navigation">
+      {% for block in nav_blocks %}
+        {% if block.settings.label != blank and block.settings.anchor_id != blank %}
+          <a
+            href="#{{ block.settings.anchor_id | escape }}"
+            class="hosfu-advertorial__nav-link{% if forloop.first %} active{% endif %}"
+            data-adv-nav
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.label | escape }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+  <section class="hosfu-advertorial__hero">
+    {% if section.settings.hero_eyebrow != blank %}
+      <div class="hosfu-advertorial__hero-eyebrow">{{ section.settings.hero_eyebrow | escape }}</div>
+    {% endif %}
+
+    <h1 class="hosfu-advertorial__hero-title">
+      {% if section.settings.hero_title_prefix != blank or section.settings.hero_title_highlight != blank or section.settings.hero_title_suffix != blank %}
+        {% if section.settings.hero_title_prefix != blank %}{{ section.settings.hero_title_prefix | escape }} {% endif %}
+        {% if section.settings.hero_title_highlight != blank %}<em>{{ section.settings.hero_title_highlight | escape }}</em>{% endif %}
+        {% if section.settings.hero_title_suffix != blank %} {{ section.settings.hero_title_suffix | escape }}{% endif %}
+      {% elsif article.title != blank %}
+        {{ article.title | escape }}
+      {% endif %}
+    </h1>
+
+    {% if hero_sub != blank %}
+      <p class="hosfu-advertorial__hero-sub">{{ hero_sub | escape }}</p>
+    {% endif %}
+
+    {% if section.settings.author_avatar != blank or author_name != blank or section.settings.author_title != blank %}
+      <div class="hosfu-advertorial__author">
+        {% if section.settings.author_avatar != blank %}
+          <div class="hosfu-advertorial__author-avatar">{{ section.settings.author_avatar | escape }}</div>
+        {% endif %}
+        <div>
+          {% if author_name != blank %}
+            <div class="hosfu-advertorial__author-name">{{ author_name | escape }}</div>
+          {% endif %}
+          {% if section.settings.author_title != blank %}
+            <div class="hosfu-advertorial__author-title">{{ section.settings.author_title | escape }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+
+  <div class="hosfu-advertorial__container">
+    {% if section.settings.intro_heading != blank or section.settings.intro_body != blank %}
+      <section class="hosfu-advertorial__intro">
+        {% if section.settings.intro_heading != blank %}
+          <h2>{{ section.settings.intro_heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.intro_body != blank %}
+          <div class="hosfu-advertorial__copy">{{ section.settings.intro_body | escape }}</div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+    {% if product_blocks.size > 0 %}
+      <div id="{{ section.settings.rankings_anchor_id | default: 'top-pick' | escape }}" class="hosfu-advertorial__rankings-anchor">
+        {% if section.settings.rankings_label != blank %}
+          <div class="hosfu-advertorial__section-title">{{ section.settings.rankings_label | escape }}</div>
+        {% endif %}
+      </div>
+
+      {% for block in product_blocks %}
+        {% assign tone_class = '' %}
+        {% case block.settings.grade_tone %}
+          {% when 'blue' %}
+            {% assign tone_class = ' is-blue' %}
+          {% when 'gray' %}
+            {% assign tone_class = ' is-gray' %}
+          {% when 'light' %}
+            {% assign tone_class = ' is-light' %}
+          {% when 'orange' %}
+            {% assign tone_class = ' is-orange' %}
+        {% endcase %}
+
+        <section
+          class="hosfu-advertorial__product-card{% if block.settings.top_pick %} hosfu-advertorial__product-card--top-pick{% endif %}"
+          {% if block.settings.anchor_id != blank %}id="{{ block.settings.anchor_id | escape }}"{% endif %}
+          {{ block.shopify_attributes }}
+        >
+          <div class="hosfu-advertorial__card-header{% if block.settings.top_pick %} hosfu-advertorial__card-header--top-pick{% endif %}">
+            <div class="hosfu-advertorial__rank-badge{% if block.settings.top_pick %} hosfu-advertorial__rank-badge--gold{% endif %}">
+              {{ block.settings.rank_number | escape }}
+            </div>
+            <div class="hosfu-advertorial__card-header-info">
+              {% if block.settings.rank_label != blank %}
+                <div class="hosfu-advertorial__rank-label{% if block.settings.top_pick %} hosfu-advertorial__rank-label--gold{% endif %}">
+                  {{ block.settings.rank_label | escape }}
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="hosfu-advertorial__card-title">{{ block.settings.title | escape }}</h3>
+              {% endif %}
+              {% if block.settings.brand_line != blank %}
+                <div class="hosfu-advertorial__card-brand">{{ block.settings.brand_line | escape }}</div>
+              {% endif %}
+            </div>
+            {% if block.settings.grade != blank %}
+              <div class="hosfu-advertorial__grade-pill{{ tone_class }}">{{ block.settings.grade | escape }}</div>
+            {% endif %}
+          </div>
+
+          <div class="hosfu-advertorial__pros-cons">
+            <div class="hosfu-advertorial__pros">
+              {% if block.settings.pros_heading != blank %}
+                <h4>{{ block.settings.pros_heading | escape }}</h4>
+              {% endif %}
+              {% if block.settings.pros_list != blank %}
+                {% assign pros_items = block.settings.pros_list | newline_to_br | split: '<br />' %}
+                <ul class="hosfu-advertorial__list">
+                  {% for item in pros_items %}
+                    {% assign clean_item = item | strip %}
+                    {% if clean_item != blank %}
+                      <li class="hosfu-advertorial__list-item hosfu-advertorial__list-item--pro">{{ clean_item | escape }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="hosfu-advertorial__cons">
+              {% if block.settings.cons_heading != blank %}
+                <h4>{{ block.settings.cons_heading | escape }}</h4>
+              {% endif %}
+              {% if block.settings.cons_list != blank %}
+                {% assign cons_items = block.settings.cons_list | newline_to_br | split: '<br />' %}
+                <ul class="hosfu-advertorial__list">
+                  {% for item in cons_items %}
+                    {% assign clean_item = item | strip %}
+                    {% if clean_item != blank %}
+                      <li class="hosfu-advertorial__list-item hosfu-advertorial__list-item--con">{{ clean_item | escape }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </div>
+
+          {% if block.settings.bottom_line_heading != blank or block.settings.bottom_line != blank or block.settings.testing_note != blank %}
+            <div class="hosfu-advertorial__bottom-line">
+              {% if block.settings.bottom_line_heading != blank %}
+                <h4>{{ block.settings.bottom_line_heading | escape }}</h4>
+              {% endif %}
+              {% if block.settings.bottom_line != blank %}
+                <div class="hosfu-advertorial__copy hosfu-advertorial__bottom-line-copy">{{ block.settings.bottom_line | escape }}</div>
+              {% endif %}
+              {% if block.settings.testing_note != blank %}
+                <div class="hosfu-advertorial__testing-note">
+                  {% if block.settings.testing_note_label != blank %}
+                    <strong>{{ block.settings.testing_note_label | escape }}</strong>
+                  {% endif %}
+                  {{ block.settings.testing_note | escape }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if block.settings.cta_label != blank %}
+            <div class="hosfu-advertorial__cta-wrap">
+              {% if block.settings.cta_style == 'secondary' %}
+                <a href="{{ block.settings.cta_link | default: '#' }}" class="hosfu-advertorial__button-secondary">
+                  {{ block.settings.cta_label | escape }}
+                </a>
+              {% else %}
+                <a href="{{ block.settings.cta_link | default: '#' }}" class="hosfu-advertorial__button-primary">
+                  {{ block.settings.cta_label | escape }}
+                </a>
+              {% endif %}
+
+              {% if block.settings.cta_support_text != blank %}
+                <div class="hosfu-advertorial__cta-support">{{ block.settings.cta_support_text | escape }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </section>
+      {% endfor %}
+    {% endif %}
+
+    {% if section.settings.methodology_heading != blank or section.settings.methodology_intro != blank or criteria_blocks.size > 0 %}
+      <section id="how-tested" class="hosfu-advertorial__how-tested">
+        {% if section.settings.methodology_label != blank %}
+          <div class="hosfu-advertorial__section-title">{{ section.settings.methodology_label | escape }}</div>
+        {% endif %}
+        {% if section.settings.methodology_heading != blank %}
+          <h2>{{ section.settings.methodology_heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.methodology_intro != blank %}
+          <div class="hosfu-advertorial__copy">{{ section.settings.methodology_intro | escape }}</div>
+        {% endif %}
+
+        {% if criteria_blocks.size > 0 %}
+          <div class="hosfu-advertorial__criteria-grid">
+            {% for block in criteria_blocks %}
+              <div class="hosfu-advertorial__criteria-item" {{ block.shopify_attributes }}>
+                {% if block.settings.number_label != blank %}
+                  <div class="hosfu-advertorial__criteria-number">{{ block.settings.number_label | escape }}</div>
+                {% endif %}
+                {% if block.settings.title != blank %}
+                  <h3 class="hosfu-advertorial__criteria-title">{{ block.settings.title | escape }}</h3>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <div class="hosfu-advertorial__criteria-desc">{{ block.settings.description | escape }}</div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+    {% if score_blocks.size > 0 %}
+      <div id="scorecard">
+        {% if section.settings.scorecard_label != blank %}
+          <div class="hosfu-advertorial__section-title">{{ section.settings.scorecard_label | escape }}</div>
+        {% endif %}
+      </div>
+      <section class="hosfu-advertorial__scorecard">
+        {% if section.settings.scorecard_header != blank %}
+          <div class="hosfu-advertorial__scorecard-header">{{ section.settings.scorecard_header | escape }}</div>
+        {% endif %}
+
+        <div class="hosfu-advertorial__scorecard-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                {% if section.settings.score_column_1 != blank %}<th>{{ section.settings.score_column_1 | escape }}</th>{% endif %}
+                {% if section.settings.score_column_2 != blank %}<th>{{ section.settings.score_column_2 | escape }}</th>{% endif %}
+                {% if section.settings.score_column_3 != blank %}<th>{{ section.settings.score_column_3 | escape }}</th>{% endif %}
+                {% if section.settings.score_column_4 != blank %}<th>{{ section.settings.score_column_4 | escape }}</th>{% endif %}
+                {% if section.settings.score_column_5 != blank %}<th>{{ section.settings.score_column_5 | escape }}</th>{% endif %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for block in score_blocks %}
+                <tr {{ block.shopify_attributes }}>
+                  <td>{{ block.settings.label | escape }}</td>
+                  {% if section.settings.score_column_1 != blank %}
+                    {% assign score = block.settings.score_1 | plus: 0 %}
+                    <td>
+                      {% for i in (1..5) %}
+                        {% if i <= score %}<span class="hosfu-advertorial__score-star">★</span>{% else %}<span class="hosfu-advertorial__score-empty">★</span>{% endif %}
+                      {% endfor %}
+                    </td>
+                  {% endif %}
+                  {% if section.settings.score_column_2 != blank %}
+                    {% assign score = block.settings.score_2 | plus: 0 %}
+                    <td>
+                      {% for i in (1..5) %}
+                        {% if i <= score %}<span class="hosfu-advertorial__score-star">★</span>{% else %}<span class="hosfu-advertorial__score-empty">★</span>{% endif %}
+                      {% endfor %}
+                    </td>
+                  {% endif %}
+                  {% if section.settings.score_column_3 != blank %}
+                    {% assign score = block.settings.score_3 | plus: 0 %}
+                    <td>
+                      {% for i in (1..5) %}
+                        {% if i <= score %}<span class="hosfu-advertorial__score-star">★</span>{% else %}<span class="hosfu-advertorial__score-empty">★</span>{% endif %}
+                      {% endfor %}
+                    </td>
+                  {% endif %}
+                  {% if section.settings.score_column_4 != blank %}
+                    {% assign score = block.settings.score_4 | plus: 0 %}
+                    <td>
+                      {% for i in (1..5) %}
+                        {% if i <= score %}<span class="hosfu-advertorial__score-star">★</span>{% else %}<span class="hosfu-advertorial__score-empty">★</span>{% endif %}
+                      {% endfor %}
+                    </td>
+                  {% endif %}
+                  {% if section.settings.score_column_5 != blank %}
+                    {% assign score = block.settings.score_5 | plus: 0 %}
+                    <td>
+                      {% for i in (1..5) %}
+                        {% if i <= score %}<span class="hosfu-advertorial__score-star">★</span>{% else %}<span class="hosfu-advertorial__score-empty">★</span>{% endif %}
+                      {% endfor %}
+                    </td>
+                  {% endif %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {% if section.settings.scorecard_cta_label != blank %}
+        <div class="hosfu-advertorial__scorecard-cta">
+          <a href="{{ section.settings.scorecard_cta_link | default: '#' }}" class="hosfu-advertorial__button-primary">
+            {{ section.settings.scorecard_cta_label | escape }}
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if comment_blocks.size > 0 %}
+      <section id="comments" class="hosfu-advertorial__comments">
+        {% if section.settings.comments_heading != blank %}
+          <h3>{{ section.settings.comments_heading | escape }}</h3>
+        {% endif %}
+
+        {% for block in comment_blocks %}
+          <div class="hosfu-advertorial__comment" {{ block.shopify_attributes }}>
+            {% if block.settings.avatar != blank %}
+              <div class="hosfu-advertorial__comment-avatar">{{ block.settings.avatar | escape }}</div>
+            {% endif %}
+            <div>
+              {% if block.settings.name != blank %}
+                <div class="hosfu-advertorial__comment-name">{{ block.settings.name | escape }}</div>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <div class="hosfu-advertorial__comment-text">{{ block.settings.text | escape }}</div>
+              {% endif %}
+              {% if block.settings.likes != blank or block.settings.timestamp != blank %}
+                <div class="hosfu-advertorial__comment-meta">
+                  {% if block.settings.likes != blank %}
+                    <span class="hosfu-advertorial__comment-likes">{{ block.settings.likes | escape }}</span>
+                  {% endif %}
+                  {% if block.settings.timestamp != blank %}
+                    · {{ block.settings.timestamp | escape }}
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    {% if section.settings.disclaimer_1 != blank or section.settings.disclaimer_2 != blank or section.settings.disclaimer_3 != blank %}
+      <section class="hosfu-advertorial__disclaimer">
+        {% if section.settings.disclaimer_1 != blank %}<p>{{ section.settings.disclaimer_1 | escape }}</p>{% endif %}
+        {% if section.settings.disclaimer_2 != blank %}<p>{{ section.settings.disclaimer_2 | escape }}</p>{% endif %}
+        {% if section.settings.disclaimer_3 != blank %}<p>{{ section.settings.disclaimer_3 | escape }}</p>{% endif %}
+      </section>
+    {% endif %}
+  </div>
+
+  {% if section.settings.show_sticky_cta and section.settings.sticky_button_label != blank %}
+    <div class="hosfu-advertorial__sticky-cta">
+      <div class="hosfu-advertorial__sticky-text">
+        {% if section.settings.sticky_title != blank %}<strong>{{ section.settings.sticky_title | escape }}</strong>{% endif %}
+        {% if section.settings.sticky_text != blank %}{{ section.settings.sticky_text | escape }}{% endif %}
+      </div>
+      <a href="{{ section.settings.sticky_button_link | default: '#' }}" class="hosfu-advertorial__sticky-button">
+        {{ section.settings.sticky_button_label | escape }}
+      </a>
+    </div>
+  {% endif %}
+</article>
+
+<script>
+  (function() {
+    var root = document.getElementById('{{ root_id }}');
+    if (!root || root.dataset.advertorialNavReady === 'true') return;
+    root.dataset.advertorialNavReady = 'true';
+
+    var navLinks = root.querySelectorAll('[data-adv-nav]');
+    if (!navLinks.length) return;
+
+    var sections = [];
+    navLinks.forEach(function(link) {
+      var hash = link.getAttribute('href');
+      if (!hash || hash.charAt(0) !== '#') return;
+      var target = document.getElementById(hash.slice(1));
+      if (target) sections.push(target);
+    });
+
+    if (!sections.length) return;
+
+    var updateActiveState = function() {
+      var currentId = '';
+      sections.forEach(function(section) {
+        if (window.scrollY >= section.offsetTop - 120) {
+          currentId = section.id;
+        }
+      });
+
+      navLinks.forEach(function(link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+      });
+    };
+
+    updateActiveState();
+    document.addEventListener('scroll', updateActiveState, { passive: true });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Hosfu advertorial",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#c8882a"
+    },
+    {
+      "type": "color",
+      "id": "surface_color",
+      "label": "Surface color",
+      "default": "#f7f6f3"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "top_bar_background",
+      "label": "Top bar background",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Top bar"
+    },
+    {
+      "type": "text",
+      "id": "top_bar_highlight",
+      "label": "Highlighted text",
+      "default": "⚡ Limited Time Sale — 52% OFF"
+    },
+    {
+      "type": "text",
+      "id": "top_bar_text",
+      "label": "Supporting text",
+      "default": "the Hosfu Premium Hand Crank Generator | Limited Stock"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "site_name",
+      "label": "Site name",
+      "default": "EmergencyGearReview.com"
+    },
+    {
+      "type": "text",
+      "id": "verified_badge_text",
+      "label": "Verified badge text",
+      "default": "✅ Verified Reviews & Advertising Content"
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Eyebrow",
+      "default": "2026 Emergency Gear Rankings"
+    },
+    {
+      "type": "text",
+      "id": "hero_title_prefix",
+      "label": "Title prefix",
+      "default": "The Best"
+    },
+    {
+      "type": "text",
+      "id": "hero_title_highlight",
+      "label": "Highlighted title text",
+      "default": "Emergency Power Generators"
+    },
+    {
+      "type": "text",
+      "id": "hero_title_suffix",
+      "label": "Title suffix",
+      "default": "of 2026 – Honest Reviews & Rankings"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_sub",
+      "label": "Hero description",
+      "default": "We tested 5 of the most talked-about portable emergency power solutions so you don't have to. Here's what actually works when the grid goes down."
+    },
+    {
+      "type": "text",
+      "id": "author_avatar",
+      "label": "Author avatar text",
+      "default": "🎖️"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author name",
+      "default": "James Holden"
+    },
+    {
+      "type": "text",
+      "id": "author_title",
+      "label": "Author title",
+      "default": "Certified Emergency Preparedness Specialist · 14 years field experience"
+    },
+    {
+      "type": "header",
+      "content": "Intro"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Intro heading",
+      "default": "You've Probably Already Seen Dozens of Emergency Power Products..."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_body",
+      "label": "Intro copy",
+      "default": "Explain the problem, why this review exists, and what criteria you used."
+    },
+    {
+      "type": "text",
+      "id": "rankings_anchor_id",
+      "label": "Rankings anchor id",
+      "default": "top-pick"
+    },
+    {
+      "type": "text",
+      "id": "rankings_label",
+      "label": "Rankings label",
+      "default": "⚡ Rankings"
+    },
+    {
+      "type": "header",
+      "content": "Methodology"
+    },
+    {
+      "type": "text",
+      "id": "methodology_label",
+      "label": "Methodology label",
+      "default": "Testing Methodology"
+    },
+    {
+      "type": "text",
+      "id": "methodology_heading",
+      "label": "Methodology heading",
+      "default": "How We Scored Each Product"
+    },
+    {
+      "type": "textarea",
+      "id": "methodology_intro",
+      "label": "Methodology intro",
+      "default": "Describe the testing process."
+    },
+    {
+      "type": "header",
+      "content": "Scorecard"
+    },
+    {
+      "type": "text",
+      "id": "scorecard_label",
+      "label": "Scorecard label",
+      "default": "Full Scorecard"
+    },
+    {
+      "type": "text",
+      "id": "scorecard_header",
+      "label": "Scorecard header",
+      "default": "📊 Side-by-Side Comparison"
+    },
+    {
+      "type": "text",
+      "id": "score_column_1",
+      "label": "Column 1",
+      "default": "Hosfu"
+    },
+    {
+      "type": "text",
+      "id": "score_column_2",
+      "label": "Column 2",
+      "default": "Power Bank"
+    },
+    {
+      "type": "text",
+      "id": "score_column_3",
+      "label": "Column 3",
+      "default": "Solar Panel"
+    },
+    {
+      "type": "text",
+      "id": "score_column_4",
+      "label": "Column 4",
+      "default": "Cheap Crank"
+    },
+    {
+      "type": "text",
+      "id": "score_column_5",
+      "label": "Column 5"
+    },
+    {
+      "type": "text",
+      "id": "scorecard_cta_label",
+      "label": "Scorecard button label",
+      "default": "⚡ Shop Hosfu — Apply 52% Limited Time Discount >>"
+    },
+    {
+      "type": "url",
+      "id": "scorecard_cta_link",
+      "label": "Scorecard button link"
+    },
+    {
+      "type": "header",
+      "content": "Comments"
+    },
+    {
+      "type": "text",
+      "id": "comments_heading",
+      "label": "Comments heading",
+      "default": "💬 Reader Comments"
+    },
+    {
+      "type": "header",
+      "content": "Disclaimer"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer_1",
+      "label": "Disclaimer line 1",
+      "default": "Advertorial disclosure text."
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer_2",
+      "label": "Disclaimer line 2"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer_3",
+      "label": "Disclaimer line 3"
+    },
+    {
+      "type": "header",
+      "content": "Sticky CTA"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sticky_cta",
+      "label": "Show sticky CTA",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sticky_title",
+      "label": "Sticky CTA title",
+      "default": "Hosfu Premium Hand Crank Generator"
+    },
+    {
+      "type": "text",
+      "id": "sticky_text",
+      "label": "Sticky CTA text",
+      "default": "Limited Time — 52% off while stock lasts"
+    },
+    {
+      "type": "text",
+      "id": "sticky_button_label",
+      "label": "Sticky CTA button label",
+      "default": "Shop Now >>"
+    },
+    {
+      "type": "url",
+      "id": "sticky_button_link",
+      "label": "Sticky CTA button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_item",
+      "name": "Nav item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Our #1 Pick"
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Anchor id",
+          "default": "top-pick"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Anchor id"
+        },
+        {
+          "type": "checkbox",
+          "id": "top_pick",
+          "label": "Highlight as top pick",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "rank_number",
+          "label": "Rank number",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "rank_label",
+          "label": "Rank label",
+          "default": "Editor's Choice"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Product name"
+        },
+        {
+          "type": "text",
+          "id": "brand_line",
+          "label": "Brand line",
+          "default": "by Brand · ★★★★★ 100 Reviews"
+        },
+        {
+          "type": "text",
+          "id": "grade",
+          "label": "Grade",
+          "default": "A+"
+        },
+        {
+          "type": "select",
+          "id": "grade_tone",
+          "label": "Grade color",
+          "default": "gold",
+          "options": [
+            {
+              "value": "gold",
+              "label": "Gold"
+            },
+            {
+              "value": "blue",
+              "label": "Blue"
+            },
+            {
+              "value": "gray",
+              "label": "Gray"
+            },
+            {
+              "value": "light",
+              "label": "Light gray"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "pros_heading",
+          "label": "Pros heading",
+          "default": "✓ Pros"
+        },
+        {
+          "type": "textarea",
+          "id": "pros_list",
+          "label": "Pros list",
+          "default": "Add one benefit per line"
+        },
+        {
+          "type": "text",
+          "id": "cons_heading",
+          "label": "Cons heading",
+          "default": "✗ Cons"
+        },
+        {
+          "type": "textarea",
+          "id": "cons_list",
+          "label": "Cons list",
+          "default": "Add one drawback per line"
+        },
+        {
+          "type": "text",
+          "id": "bottom_line_heading",
+          "label": "Bottom line heading",
+          "default": "The Bottom Line"
+        },
+        {
+          "type": "textarea",
+          "id": "bottom_line",
+          "label": "Bottom line copy",
+          "default": "Explain your verdict."
+        },
+        {
+          "type": "text",
+          "id": "testing_note_label",
+          "label": "Testing note label",
+          "default": "Testing Notes:"
+        },
+        {
+          "type": "textarea",
+          "id": "testing_note",
+          "label": "Testing note"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "CTA style",
+          "default": "primary",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary button"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary link"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA link"
+        },
+        {
+          "type": "text",
+          "id": "cta_support_text",
+          "label": "CTA support text"
+        }
+      ]
+    },
+    {
+      "type": "criteria",
+      "name": "Criteria",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number_label",
+          "label": "Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Criteria title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Describe what you measured."
+        }
+      ]
+    },
+    {
+      "type": "score_row",
+      "name": "Score row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Category",
+          "default": "Test Results"
+        },
+        {
+          "type": "range",
+          "id": "score_1",
+          "label": "Score 1",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "range",
+          "id": "score_2",
+          "label": "Score 2",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "score_3",
+          "label": "Score 3",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 2
+        },
+        {
+          "type": "range",
+          "id": "score_4",
+          "label": "Score 4",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "score_5",
+          "label": "Score 5",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "comment",
+      "name": "Comment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "avatar",
+          "label": "Avatar text",
+          "default": "👤"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Reader name"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Comment text",
+          "default": "Reader feedback goes here."
+        },
+        {
+          "type": "text",
+          "id": "likes",
+          "label": "Likes text",
+          "default": "👍 7"
+        },
+        {
+          "type": "text",
+          "id": "timestamp",
+          "label": "Timestamp",
+          "default": "38 min ago"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hosfu advertorial",
+      "blocks": [
+        {
+          "type": "nav_item"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "criteria"
+        },
+        {
+          "type": "score_row"
+        },
+        {
+          "type": "comment"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

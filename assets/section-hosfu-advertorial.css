@@ -1,0 +1,801 @@
+.hosfu-advertorial {
+  --advertorial-black: #111111;
+  --advertorial-card-bg: #ffffff;
+  --advertorial-surface: var(--advertorial-surface-color, #f7f6f3);
+  --advertorial-border: #e2e0db;
+  --advertorial-accent: var(--advertorial-accent-color, #c8882a);
+  --advertorial-accent-light: #f5e6c8;
+  --advertorial-green: #2a7a3b;
+  --advertorial-green-light: #e6f4ea;
+  --advertorial-red: #c0392b;
+  --advertorial-text: var(--advertorial-text-color, #222222);
+  --advertorial-muted: #666666;
+  --advertorial-top-bar-bg: var(--advertorial-top-bar-color, #111111);
+  --advertorial-radius: 10px;
+  background: var(--advertorial-surface);
+  color: var(--advertorial-text);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.hosfu-advertorial,
+.hosfu-advertorial * {
+  box-sizing: border-box;
+}
+
+.hosfu-advertorial a {
+  color: inherit;
+}
+
+.hosfu-advertorial__top-bar {
+  background: var(--advertorial-top-bar-bg);
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+}
+
+.hosfu-advertorial__top-bar-highlight {
+  color: var(--advertorial-accent);
+  font-weight: 700;
+}
+
+.hosfu-advertorial__site-header {
+  background: #ffffff;
+  border-bottom: 2px solid var(--advertorial-border);
+  padding: 18px 24px;
+  text-align: center;
+}
+
+.hosfu-advertorial__site-name {
+  color: var(--advertorial-black);
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hosfu-advertorial__verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border: 1px solid #b6dfc0;
+  border-radius: 999px;
+  background: var(--advertorial-green-light);
+  color: var(--advertorial-green);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hosfu-advertorial__nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-bottom: 1px solid var(--advertorial-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.hosfu-advertorial__nav-link {
+  padding: 14px 20px;
+  border-bottom: 3px solid transparent;
+  color: var(--advertorial-black);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.hosfu-advertorial__nav-link:hover,
+.hosfu-advertorial__nav-link.active {
+  border-bottom-color: var(--advertorial-accent);
+  color: var(--advertorial-accent);
+}
+
+.hosfu-advertorial__hero {
+  padding: 56px 24px 48px;
+  background: linear-gradient(135deg, #111111 0%, #1e2d1e 60%, #2a3a1a 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.hosfu-advertorial__hero-eyebrow {
+  margin-bottom: 16px;
+  color: var(--advertorial-accent);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hosfu-advertorial__hero-title {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  font-size: clamp(26px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hosfu-advertorial__hero-title em {
+  color: var(--advertorial-accent);
+  font-style: normal;
+}
+
+.hosfu-advertorial__hero-sub {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: #cccccc;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+}
+
+.hosfu-advertorial__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--advertorial-radius);
+  background: rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.hosfu-advertorial__author-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--advertorial-accent);
+  font-size: 22px;
+}
+
+.hosfu-advertorial__author-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hosfu-advertorial__author-title {
+  color: #aaaaaa;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.hosfu-advertorial__container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.hosfu-advertorial--has-sticky .hosfu-advertorial__container {
+  padding-bottom: 120px;
+}
+
+.hosfu-advertorial__intro,
+.hosfu-advertorial__how-tested,
+.hosfu-advertorial__comments,
+.hosfu-advertorial__scorecard,
+.hosfu-advertorial__disclaimer {
+  border: 1px solid var(--advertorial-border);
+  border-radius: var(--advertorial-radius);
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hosfu-advertorial__intro {
+  margin: 32px 0;
+  padding: 44px 40px;
+}
+
+.hosfu-advertorial__intro h2,
+.hosfu-advertorial__how-tested h2 {
+  margin: 0 0 16px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.hosfu-advertorial__copy {
+  white-space: pre-line;
+}
+
+.hosfu-advertorial__copy + .hosfu-advertorial__copy {
+  margin-top: 12px;
+}
+
+.hosfu-advertorial__section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  color: var(--advertorial-accent);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hosfu-advertorial__section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--advertorial-border);
+}
+
+.hosfu-advertorial__rankings-anchor {
+  margin-top: 32px;
+}
+
+.hosfu-advertorial__product-card {
+  margin-bottom: 32px;
+  overflow: hidden;
+  border: 1px solid var(--advertorial-border);
+  border-radius: var(--advertorial-radius);
+  background: var(--advertorial-card-bg);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.hosfu-advertorial__product-card--top-pick {
+  border-width: 2px;
+  border-color: var(--advertorial-accent);
+  box-shadow: 0 4px 28px rgba(200, 136, 42, 0.18);
+}
+
+.hosfu-advertorial__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--advertorial-border);
+  background: var(--advertorial-surface);
+}
+
+.hosfu-advertorial__card-header--top-pick {
+  background: var(--advertorial-accent-light);
+}
+
+.hosfu-advertorial__rank-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--advertorial-muted);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.hosfu-advertorial__rank-badge--gold {
+  background: var(--advertorial-accent);
+}
+
+.hosfu-advertorial__card-header-info {
+  flex: 1;
+}
+
+.hosfu-advertorial__rank-label {
+  margin-bottom: 2px;
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hosfu-advertorial__rank-label--gold {
+  color: var(--advertorial-accent);
+}
+
+.hosfu-advertorial__card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hosfu-advertorial__card-brand {
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.hosfu-advertorial__grade-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--advertorial-accent);
+  border-radius: 8px;
+  background: var(--advertorial-accent-light);
+  color: var(--advertorial-accent);
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.hosfu-advertorial__grade-pill.is-blue {
+  border-color: #3a7abf;
+  background: #e8f0fb;
+  color: #3a7abf;
+}
+
+.hosfu-advertorial__grade-pill.is-gray {
+  border-color: #bbbbbb;
+  background: #f4f4f4;
+  color: #888888;
+}
+
+.hosfu-advertorial__grade-pill.is-light {
+  border-color: #cccccc;
+  background: #f8f8f8;
+  color: #999999;
+}
+
+.hosfu-advertorial__grade-pill.is-orange {
+  border-color: #e8a080;
+  background: #fdf1eb;
+  color: #c85a1a;
+}
+
+.hosfu-advertorial__pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--advertorial-border);
+  border-bottom: 1px solid var(--advertorial-border);
+}
+
+.hosfu-advertorial__pros,
+.hosfu-advertorial__cons {
+  padding: 24px 28px;
+}
+
+.hosfu-advertorial__pros {
+  border-right: 1px solid var(--advertorial-border);
+}
+
+.hosfu-advertorial__pros h4,
+.hosfu-advertorial__cons h4,
+.hosfu-advertorial__bottom-line h4 {
+  margin: 0 0 14px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hosfu-advertorial__pros h4 {
+  color: var(--advertorial-green);
+}
+
+.hosfu-advertorial__cons h4 {
+  color: var(--advertorial-red);
+}
+
+.hosfu-advertorial__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hosfu-advertorial__list-item {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hosfu-advertorial__list-item::before {
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.hosfu-advertorial__list-item--pro::before {
+  content: "✓";
+  color: var(--advertorial-green);
+}
+
+.hosfu-advertorial__list-item--con::before {
+  content: "✗";
+  color: var(--advertorial-red);
+}
+
+.hosfu-advertorial__bottom-line {
+  padding: 28px 28px 12px;
+}
+
+.hosfu-advertorial__bottom-line h4 {
+  margin-bottom: 12px;
+  color: var(--advertorial-black);
+}
+
+.hosfu-advertorial__bottom-line-copy {
+  font-size: 16px;
+}
+
+.hosfu-advertorial__testing-note {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--advertorial-border);
+  color: var(--advertorial-muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.hosfu-advertorial__testing-note strong {
+  color: var(--advertorial-text);
+}
+
+.hosfu-advertorial__cta-wrap {
+  padding: 20px 28px 28px;
+}
+
+.hosfu-advertorial__button-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 32px;
+  border-radius: 6px;
+  background: var(--advertorial-accent);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.hosfu-advertorial__button-primary:hover {
+  background: #a86e1e;
+  transform: translateY(-1px);
+}
+
+.hosfu-advertorial__button-secondary {
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.hosfu-advertorial__button-secondary:hover {
+  color: var(--advertorial-black);
+}
+
+.hosfu-advertorial__cta-support {
+  margin-top: 10px;
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+
+.hosfu-advertorial__how-tested {
+  margin-bottom: 32px;
+  padding: 36px 40px;
+}
+
+.hosfu-advertorial__criteria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.hosfu-advertorial__criteria-item {
+  border: 1px solid var(--advertorial-border);
+  border-radius: 8px;
+  background: var(--advertorial-surface);
+  padding: 16px;
+}
+
+.hosfu-advertorial__criteria-number {
+  margin-bottom: 4px;
+  color: var(--advertorial-accent);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.hosfu-advertorial__criteria-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hosfu-advertorial__criteria-desc {
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hosfu-advertorial__scorecard {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.hosfu-advertorial__scorecard-header {
+  padding: 14px 20px;
+  background: var(--advertorial-black);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hosfu-advertorial__scorecard-table-wrap {
+  overflow-x: auto;
+}
+
+.hosfu-advertorial__scorecard table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.hosfu-advertorial__scorecard th {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--advertorial-border);
+  background: var(--advertorial-surface);
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.hosfu-advertorial__scorecard th:first-child,
+.hosfu-advertorial__scorecard td:first-child {
+  text-align: left;
+}
+
+.hosfu-advertorial__scorecard td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--advertorial-border);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hosfu-advertorial__scorecard td:first-child {
+  font-weight: 600;
+}
+
+.hosfu-advertorial__scorecard tr:last-child td {
+  border-bottom: 0;
+}
+
+.hosfu-advertorial__scorecard tr:hover td {
+  background: var(--advertorial-surface);
+}
+
+.hosfu-advertorial__score-star {
+  color: var(--advertorial-accent);
+  font-size: 15px;
+}
+
+.hosfu-advertorial__score-empty {
+  color: #dddddd;
+  font-size: 15px;
+}
+
+.hosfu-advertorial__scorecard-cta {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.hosfu-advertorial__scorecard-cta .hosfu-advertorial__button-primary {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
+.hosfu-advertorial__comments {
+  margin-bottom: 32px;
+  padding: 32px 36px;
+}
+
+.hosfu-advertorial__comments h3 {
+  margin: 0 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--advertorial-border);
+  font-size: 20px;
+}
+
+.hosfu-advertorial__comment {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--advertorial-border);
+}
+
+.hosfu-advertorial__comment:last-child {
+  border-bottom: 0;
+}
+
+.hosfu-advertorial__comment-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--advertorial-border);
+  border-radius: 50%;
+  background: var(--advertorial-surface);
+  font-size: 18px;
+}
+
+.hosfu-advertorial__comment-name {
+  margin-bottom: 2px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hosfu-advertorial__comment-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hosfu-advertorial__comment-meta {
+  margin-top: 6px;
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.hosfu-advertorial__comment-likes {
+  color: var(--advertorial-accent);
+  margin-right: 8px;
+}
+
+.hosfu-advertorial__disclaimer {
+  margin-bottom: 40px;
+  padding: 24px 28px;
+  background: var(--advertorial-surface);
+}
+
+.hosfu-advertorial__disclaimer p {
+  margin: 0 0 8px;
+  color: var(--advertorial-muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.hosfu-advertorial__disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.hosfu-advertorial__sticky-cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  background: var(--advertorial-black);
+  color: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hosfu-advertorial__sticky-text {
+  flex: 1;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.hosfu-advertorial__sticky-text strong {
+  display: block;
+  font-size: 15px;
+}
+
+.hosfu-advertorial__sticky-button {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: var(--advertorial-accent);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.hosfu-advertorial__sticky-button:hover {
+  background: #a86e1e;
+}
+
+@media screen and (max-width: 600px) {
+  .hosfu-advertorial__intro,
+  .hosfu-advertorial__how-tested {
+    padding: 28px 22px;
+  }
+
+  .hosfu-advertorial__comments {
+    padding: 24px 20px;
+  }
+
+  .hosfu-advertorial__card-header {
+    padding: 16px 18px;
+  }
+
+  .hosfu-advertorial__pros,
+  .hosfu-advertorial__cons {
+    padding: 18px;
+  }
+
+  .hosfu-advertorial__bottom-line,
+  .hosfu-advertorial__cta-wrap {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .hosfu-advertorial__grade-pill {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hosfu-advertorial__pros-cons,
+  .hosfu-advertorial__criteria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hosfu-advertorial__pros {
+    border-right: 0;
+    border-bottom: 1px solid var(--advertorial-border);
+  }
+
+  .hosfu-advertorial__sticky-cta {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .hosfu-advertorial__sticky-button {
+    width: 100%;
+  }
+}
