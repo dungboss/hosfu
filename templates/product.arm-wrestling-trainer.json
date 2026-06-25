@@ -1,0 +1,424 @@
+{
+  "sections": {
+    "news_story": {
+      "type": "epf-news-story",
+      "blocks": {
+        "story_1": {
+          "type": "story_section",
+          "settings": {
+            "heading": "This portable device gives you championship-level arm wrestling strength at home.",
+            "body": "Standard gym routines often fail because generic wrist curls and grip trainers can't simulate the real dynamic resistance of an opponent. The Portable Arm Wrestling Trainer solves this with adjustable tension, multi-angle resistance, and app-guided workouts that ensure you target every critical muscle group."
+          }
+        },
+        "compare_1": {
+          "type": "compare_section",
+          "settings": {
+            "heading": "Why regular wrist rollers and grip trainers are no longer enough",
+            "body": "Traditional equipment focuses on isolation exercises that fail to replicate the rotational forces and side-pressure needed in real matches. A device-led routine provides structured resistance across multiple planes of motion that actually builds match-ready strength within weeks.",
+            "left_title": "Smart Training System",
+            "left_copy": "Adjustable resistance from beginner to elite. Just 15 minutes a day to transform your forearm, wrist, and grip power.",
+            "right_title": "Professional-Grade Specs",
+            "right_copy": "Heavy-duty steel frame, multi-angle resistance mounts, Bluetooth-enabled tracking, and app-guided progressive overload programs."
+          }
+        },
+        "before_after_1": {
+          "type": "before_after",
+          "settings": {
+            "heading": "Real Transformation: Measurable Strength Gains from Real Athletes",
+            "before_label": "Day 1",
+            "after_label": "Day 30",
+            "stat_text": "92% of users reported a noticeable increase in grip strength and side-pressure control after 4 weeks of consistent training."
+          }
+        },
+        "story_2": {
+          "type": "story_section",
+          "settings": {
+            "heading": "A professional arm wrestling training system that fits your lifestyle.",
+            "body": "Staying consistent with strength training can be hard with busy schedules. This trainer is fully portable - set it up on any sturdy table, complete your workout, and pack it away in seconds. Perfect for home, office, or on-the-go training."
+          }
+        },
+        "checks_1": {
+          "type": "check_columns",
+          "settings": {
+            "heading": "Why you'll actually see results faster with this system",
+            "copy": "Great results come from correct form and progressive overload - not just lifting heavier. No complicated setups, no gym membership required.",
+            "left_title": "What you usually struggle with",
+            "left_items": "Plateauing grip strength\nLimited training angles\nInconsistent workout routines\nExpensive gym memberships\nNo way to track real progress",
+            "right_title": "What this device offers",
+            "right_items": "8 adjustable resistance levels\n360 degree rotational training capability\nApp-guided championship programs\nCompact, travel-ready design\nReal-time strength tracking & analytics"
+          }
+        },
+        "story_3": {
+          "type": "story_section",
+          "settings": {
+            "heading": "It's not about training harder. It's about training smarter.",
+            "body": "The secret to dominating on the table isn't just raw power - it's targeting the right muscle groups with the right angles and the right progressive resistance. By making this portable system part of your daily routine, you're giving your forearm, wrist, and shoulder the precise stimulus needed to overpower any opponent."
+          }
+        },
+        "cta_1": {
+          "type": "cta_band",
+          "settings": {
+            "heading": "Check availability for the Premium Portable Arm Wrestling Trainer",
+            "text": "Click the button below to claim our current special offer. Check pricing, availability, and exclusive bundle deals before stock runs out.",
+            "button_label": "Check availability",
+            "button_link": "#MainProduct-offer_main"
+          }
+        }
+      },
+      "block_order": ["story_1", "compare_1", "before_after_1", "story_2", "checks_1", "story_3", "cta_1"],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 44,
+        "eyebrow": "Special report",
+        "headline": "The portable device arm wrestlers are using to build table-dominating power more consistently",
+        "author_name": "By Mark Daniels | Strength & Combat Sports Contributor",
+        "author_meta": "Updated today",
+        "intro_paragraph_1": "For most athletes, building true arm wrestling strength goes far beyond standard grip trainers and wrist curls. Traditional equipment lacks the rotational resistance and side-pressure simulation needed to develop match-winning power.\n\nThe Premium Portable Arm Wrestling Trainer offers a smarter, multi-angle solution. By providing adjustable resistance across all planes of motion - pronation, supination, side pressure, and back pressure - it delivers a complete training system far more effective than isolated exercises.\n\nThis combination of professional-grade engineering and total portability is why thousands of competitors are ditching expensive gym setups for this simplified, championship-level home training device.",
+        "intro_paragraph_2": "The Portable Arm Wrestling Trainer is the smarter at-home option: 8 resistance levels, Bluetooth progress tracking, and app-guided programs that deliver faster strength gains than traditional methods.",
+        "intro_paragraph_3": "This combination of measurable results and training convenience is why this device is becoming the secret weapon for serious arm wrestlers.",
+        "sidebar_kicker": "Recommended today",
+        "sidebar_title": "Portable Arm Wrestling Trainer",
+        "sidebar_copy": "Build championship-level grip, wrist, and forearm power with a professional training system you can use anywhere.",
+        "sidebar_bullets": "8 adjustable resistance levels for all skill levels.\n360 degree rotational training for complete muscle development.\nBluetooth-enabled real-time strength tracking.\nCompact, portable design with quick setup.\nApp-guided programs with progressive overload routines.",
+        "sidebar_button_label": "SHOP 50% OFF TODAY",
+        "sidebar_button_link": "#MainProduct-offer_main",
+        "sidebar_note": "Pricing and stock can change. Use the button above to view the live product offer.",
+        "bottom_note": "Training note: The Portable Arm Wrestling Trainer is presented here as a strength training and fitness device."
+      }
+    },
+    "offer_main": {
+      "type": "main-product",
+      "blocks": {
+        "package_badge": {
+          "type": "custombannertext",
+          "settings": {
+            "customerbannertext": "Championship-Level Training Technology",
+            "backgroundcustomerbannertext": "#c41230",
+            "colorcustomerbannertext": "#ffffff",
+            "fontsizecustomerbannertext": 14,
+            "weightcustomerbannertext": "700",
+            "bordercustomerbannertext": 20,
+            "margin_top": 0,
+            "margin_bottom": 12
+          },
+          "blocks": {}
+        },
+        "title": {
+          "type": "product_title",
+          "settings": {
+            "uppercase_title": false,
+            "desktop_size": 36,
+            "alignment": "left",
+            "mobile_size": 28,
+            "mobile_alignment": "mobile-left",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "rating": {
+          "type": "rating-stars",
+          "settings": {
+            "rating": 4.8,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "4.8/5 stars - Join 8,000+ strong athletes",
+            "size": 15,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 6,
+            "margin_bottom": 12
+          },
+          "blocks": {}
+        },
+        "price": {
+          "type": "product_price",
+          "settings": {
+            "price_layout": "price-first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "regular_price_size": 24,
+            "sale_price_size": 20,
+            "compare_price_size": 15,
+            "displayed_badge": "sale",
+            "sale_badge_color": "accent-2",
+            "custom_badge_text": "SAVE TODAY",
+            "icon_scale": 100,
+            "icon_1": "redeem",
+            "filled_icon_1": false,
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "variant_picker": {
+          "type": "product_product-variant-picker-block",
+          "settings": {
+            "picker_types": "dropdown, dropdown, dropdown",
+            "custom_labels": "[name] - [selected]",
+            "skip_unavailable": false,
+            "append": "option_1_label_container",
+            "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "#000000, #FFFFFF",
+            "full_width_dropdowns": true,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_prices_layout": "price-first-vertical",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_vertical_items_align": "flex-start",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "none",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "Variant 1 caption, Variant 2 caption, Variant 3 caption",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "benefits": {
+          "type": "key-benefits",
+          "settings": {
+            "key1": "8 adjustable resistance levels for all skill levels",
+            "key2": "360 degree rotational training for complete muscle activation",
+            "key3": "Bluetooth-enabled real-time strength tracking",
+            "key4": "Heavy-duty steel frame built to last",
+            "key5": "Compact & portable - train anywhere",
+            "checkmarkcolorbackground": "#fce4e4",
+            "checkmarkcolor": "#c41230",
+            "keybenefitsborderradius": 14,
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "buy_buttons": {
+          "type": "product_buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "atc_append": "left",
+            "atc_append_heights": "stretch-quantity",
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "GET MY ARM TRAINER NOW",
+            "display_price": false,
+            "price_position": "left",
+            "price_separator": "|",
+            "enable_custom_color": false,
+            "custom_color": "#c41230",
+            "custom_text_color": "#ffffff",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#c41230",
+            "margin_top": 9,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
+        "shipping": {
+          "type": "product_shipping-checkpoints",
+          "settings": {
+            "top_text_1": "<strong>Today</strong>",
+            "bottom_text_1": "Secure Checkout",
+            "icon_1": "add_shopping_cart",
+            "filled_icon_1": false,
+            "min_days_1": 0,
+            "max_days_1": 0,
+            "top_text_2": "<strong>24-48 hrs</strong>",
+            "bottom_text_2": "Fast Order Processing",
+            "icon_2": "local_shipping",
+            "filled_icon_2": false,
+            "min_days_2": 1,
+            "max_days_2": 2,
+            "top_text_3": "<strong>Estimated delivery</strong>",
+            "bottom_text_3": "Fast US Shipping (7-10 Days)",
+            "icon_3": "redeem",
+            "filled_icon_3": false,
+            "min_days_3": 4,
+            "max_days_3": 7,
+            "date_format": "mm_dd",
+            "days_labels": "Mon, Tue, Wed, Thu, Fri, Sat, Sun",
+            "months_labels": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
+            "days_to_skip": "",
+            "dates_to_skip": "",
+            "color_scheme": "inverse",
+            "margin_top": 12,
+            "margin_bottom": 9
+          },
+          "blocks": {}
+        },
+        "sticky": {
+          "type": "product_sticky-atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "Buy now",
+            "enable_custom_btn_color": false,
+            "custom_btn_color": "#c41230",
+            "color_scheme": "background-1",
+            "star_color": "#ffcc00",
+            "stars_label": "(Trusted by athletes)",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": false,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["package_badge", "title", "rating", "price", "variant_picker", "benefits", "buy_buttons", "shipping", "sticky"],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": false,
+        "color_scheme": "background-1",
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
+        "media_size": "small",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 4,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 18,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 8,
+        "mobile_padding_bottom": 8,
+        "desktop_padding_top": 24,
+        "desktop_padding_bottom": 24,
+        "enabledesktopreview": true,
+        "review_background_color": "#ffffff",
+        "review_border_color": "#e9ecef",
+        "star_color": "#ffc107",
+        "username_color": "#000000",
+        "username": "Jake T.",
+        "verified_customer": true,
+        "verified_icon_color": "#28a745",
+        "verified_text_color": "#28a745",
+        "verified_text": "Verified Purchase",
+        "review_text_color": "#000000",
+        "review_text": "Dominating my local tournaments now. This trainer changed the game for me.",
+        "enablegallerybottomtext": false,
+        "galleryinnerbackground": "#000000",
+        "galleryinneropacity": 0.8,
+        "galleryinnertextcolor": "#ffffff",
+        "galleryinnerradius": 8,
+        "galleryinnerheight": 80,
+        "galleryinnertext": "5-Star Rated Product",
+        "enablegalleryreviewstars": false,
+        "rating": 4.8,
+        "star_color2": "#ffcc00",
+        "bg_stars_style": "full",
+        "bg_star_color2": "#ececec",
+        "label": "(xxxx Reviews)",
+        "size": 16
+      }
+    },
+    "epf_support": {
+      "type": "epf-support",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 48,
+        "hero_eyebrow": "Championship-inspired strength training",
+        "hero_heading": "Professional arm wrestling power for athletes who refuse to lose",
+        "hero_lead": "Designed for athletes looking to build real, functional strength that translates directly to the table. This portable training system helps you develop grip power, side pressure, and wrist control.",
+        "hero_primary_label": "START BUILDING CHAMPIONSHIP STRENGTH",
+        "hero_primary_link": "#MainProduct-offer_main",
+        "hero_secondary_label": "LEARN HOW IT WORKS",
+        "hero_secondary_link": "#epf-what-to-expect",
+        "hero_proof_copy": "4.8/5 from athletes using at-home training to build match-ready power, grip endurance, and table control.",
+        "hero_chip_top": "Quick 15-minute sessions that fit your training schedule.",
+        "hero_chip_bottom": "Heavy-duty construction for maximum durability.",
+        "featured_label": "As seen in",
+        "featured_image_url": "",
+        "featured_image_alt": "Featured on logos",
+        "problem_heading": "The Problem Isn't Lack of Effort. It's Training the Wrong Way.",
+        "problem_body": "Most athletes are told to just do wrist curls and squeeze grippers, then left wondering why they keep losing on the table. Real arm wrestling dominance happens when you train rotational resistance, side pressure, and grip endurance together.",
+        "problem_bar_label_1": "Grip",
+        "problem_bar_label_2": "Control",
+        "problem_bar_label_3": "Power",
+        "problem_tendon_heading": "MULTI-ANGLE RESISTANCE TRAINING",
+        "problem_tendon_copy": "Better results happen when you train pronation, supination, side pressure, and back pressure together.",
+        "intro_heading": "Introducing the Premium Portable Arm Wrestling Trainer",
+        "intro_body": "Our training system is designed to help you build table-dominating strength, targeting every critical muscle angle needed for real matches.",
+        "expect_heading": "What to Expect",
+        "expect_cta_label": "START MY ARM TRAINING NOW",
+        "expect_cta_link": "#MainProduct-offer_main",
+        "results_heading": "Results That Matter",
+        "results_body": "The goal is winning on the table. Day 1: Learn proper form. Week 2: Improved grip endurance. Month 1: Significant gains in side-pressure and overall table strength.",
+        "journey_heading": "15 Minutes a Day for Championship-Level Arm Wrestling Power",
+        "journey_cta_label": "Still have questions?",
+        "journey_cta_link": "#epf-questions",
+        "testimonials_heading": "Real Athletes, Real Dominance"
+      }
+    }
+  },
+  "order": ["news_story", "offer_main", "epf_support"]
+}
