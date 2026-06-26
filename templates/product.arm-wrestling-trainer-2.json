@@ -15,7 +15,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "custom_liquid": "{{ 'arm-wrestling-dark-theme.css' | asset_url | stylesheet_tag }}<style>.bladder-steps-level_cards .bladder-steps__item{border:1px solid #2a2a2a!important;border-radius:12px!important;padding:36px 20px!important;min-height:180px!important;justify-content:center!important;text-align:center!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(1){border-top:4px solid #4caf78!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(2){border-top:4px solid #c8a04a!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(3){border-top:4px solid #e8872a!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(4){border-top:4px solid #e83040!important}</style>",
+        "custom_liquid": "{{ 'arm-wrestling-dark-theme.css' | asset_url | stylesheet_tag }}<style>.bladder-steps-level_cards .bladder-steps__item{border:1px solid #2a2a2a!important;border-radius:12px!important;padding:36px 20px!important;min-height:180px!important;justify-content:center!important;text-align:center!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(1){border-top:4px solid #4caf78!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(2){border-top:4px solid #c8a04a!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(3){border-top:4px solid #e8872a!important}.bladder-steps-level_cards .bladder-steps__item:nth-child(4){border-top:4px solid #e83040!important}.bladder-steps-why_cards .bladder-steps__item{position:relative!important;align-items:flex-start!important;text-align:left!important;padding:22px 18px 22px 68px!important}.bladder-steps-why_cards .bladder-steps__item .wc-ic{position:absolute!important;left:18px!important;top:20px!important;font-size:34px!important;line-height:1!important}.bladder-steps-why_cards .bladder-steps__item .wc-tt{display:block!important}.bladder-steps-why_cards .bladder-steps__item p{margin-top:6px!important}</style>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -354,7 +354,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "⚙️ 12 Resistance Levels",
+            "title": "<span class=\"wc-ic\">⚙️</span><span class=\"wc-tt\">12 Resistance Levels</span>",
             "text": "Dial it from casual warm-up to full competition-grade intensity. You'll never plateau."
           }
         },
@@ -362,7 +362,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "🪵 Premium Beechwood",
+            "title": "<span class=\"wc-ic\">🪵</span><span class=\"wc-tt\">Premium Beechwood</span>",
             "text": "Solid Eastern European beechwood. No cheap plastics, no flex — just a stable, premium feel every rep."
           }
         },
@@ -370,7 +370,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "🛡️ 8×8\" Elbow Pad",
+            "title": "<span class=\"wc-ic\">🛡️</span><span class=\"wc-tt\">8×8\" Elbow Pad</span>",
             "text": "Thick, padded elbow rest protects your joint during max-effort pulls — included in the box."
           }
         },
@@ -378,7 +378,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "🏠 Zero Setup — Use Anywhere",
+            "title": "<span class=\"wc-ic\">🏠</span><span class=\"wc-tt\">Zero Setup — Use Anywhere</span>",
             "text": "Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss."
           }
         }
