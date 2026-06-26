@@ -39,6 +39,41 @@
     font-size: 14px;
     margin: 0;
   }
+  {%- if section.settings.card_style == 'icon_left' -%}
+  .bladder-steps-{{ section.id }} .bladder-steps__grid {
+    max-width: 1180px;
+    gap: 20px;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item {
+    position: relative;
+    align-items: flex-start;
+    text-align: left;
+    padding: 26px 20px 26px 64px;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item h3 {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .01em;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    white-space: nowrap;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item h3 .wc-ic {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    font-size: 32px;
+    line-height: 1;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item h3 .wc-tt {
+    display: block;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item p {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  {%- endif -%}
   .bladder-steps-{{ section.id }} .bladder-steps__video-wrap {
     position: relative;
     width: 100%;
@@ -197,6 +232,16 @@
       "step": 1,
       "default": 3,
       "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "card_style",
+      "label": "Card style",
+      "options": [
+        { "value": "center", "label": "Centered" },
+        { "value": "icon_left", "label": "Icon left, text left-aligned" }
+      ],
+      "default": "center"
     },
     {
       "type": "range",
