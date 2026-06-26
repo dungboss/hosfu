@@ -252,3 +252,105 @@ a {
 a:hover {
   color: var(--orange) !important;
 }
+
+/* ============================================================
+   ROOT FIX — flip the theme color schemes to dark.
+   The header & main product section render `.color-background-1`,
+   which computes its background from --color-background (white) and
+   its text/title from --color-foreground (dark). Overriding those
+   scheme variables fixes the white header, white frame around the
+   product image, white ATC/form box, AND the invisible dark title
+   in one place — instead of patching each element.
+   Accent schemes are left untouched so orange pills/badges stay.
+   ============================================================ */
+.color-background-1,
+.color-background-2 {
+  --color-background: 15, 15, 15;          /* #0f0f0f */
+  --gradient-background: #0f0f0f;
+  --color-foreground: 245, 245, 240;       /* #f5f5f0 light text + title */
+  --color-button: 240, 90, 26;             /* orange */
+  --color-button-text: 255, 255, 255;
+  --color-link: 255, 125, 62;
+  --border-color: 58, 58, 58;
+}
+.color-background-2 {
+  --color-background: 26, 26, 26;           /* slightly lifted card surface */
+}
+
+/* Header — kill leftover white, keep nav text/icons light */
+.header-wrapper,
+.section-header {
+  background: var(--bg-dark) !important;
+}
+.header__heading-link,
+.header__menu-item,
+.header__active-menu-item,
+.header__icon .icon {
+  color: var(--white) !important;
+}
+
+/* Product media — remove the white box framing the image */
+.product__media-wrapper,
+.product__media-list,
+.product-media-container,
+.product__media-item,
+.product__modal-opener,
+media-gallery,
+.thumbnail-list,
+.thumbnail {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Product info / form column — remove white background behind ATC */
+.product__info-wrapper,
+.product__info-container,
+.product-form,
+.product-form__buttons,
+.price {
+  background: transparent !important;
+}
+
+/* Title — guarantee it is visible on the dark background */
+.product__title,
+.product__title h1,
+.product__title h2,
+.product-title--uppercase {
+  color: var(--white) !important;
+}
+
+/* ATC button — full width but contained, not oversized / overflowing */
+.product-form__submit,
+.product__info-wrapper .button,
+.product-form__buttons .button {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  padding: 16px 18px !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+/* Scroll-to-top button — force orange background + white icon */
+.scroll-to-top-btn {
+  background: var(--orange) !important;
+  background-color: var(--orange) !important;
+  --color-background: 240, 90, 26 !important;
+  --gradient-background: #f05a1a !important;
+  --color-button: 240, 90, 26 !important;
+  --color-foreground: 255, 255, 255 !important;
+  color: #fff !important;
+}
+.scroll-to-top-btn svg,
+.scroll-to-top-btn path {
+  fill: #fff !important;
+  color: #fff !important;
+}
+
+/* Hide the gentle-wave (waves_3) section divider above the footer */
+.section-divider,
+.section-divider__svg {
+  display: none !important;
+}

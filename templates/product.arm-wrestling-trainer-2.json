@@ -34,7 +34,7 @@
           "type": "product_title",
           "settings": {
             "uppercase_title": true,
-            "desktop_size": 48,
+            "desktop_size": 51,
             "alignment": "left",
             "mobile_size": 32,
             "mobile_alignment": "mobile-left",
@@ -148,14 +148,7 @@
             "secondary_btn_custom_color": "#8d184d",
             "margin_top": 24,
             "margin_bottom": 12
-          },
-          "blocks": {
-            "atc_qty": {
-              "type": "product_atc-quantity-selector",
-              "settings": {}
-            }
-          },
-          "block_order": ["atc_qty"]
+          }
         },
         "trust_strip": {
           "type": "custom-liquid",
@@ -168,7 +161,7 @@
           "settings": {
             "function": "add_to_cart",
             "display_when": "after_scroll",
-            "button_label": "GRAB YOURS — ADD TO CART",
+            "button_label": "GRAB YOURS — ADD TO CART →",
             "enable_custom_btn_color": true,
             "custom_btn_color": "#f05a1a",
             "color_scheme": "background-1",
@@ -209,6 +202,7 @@
       ],
       "settings": {
         "enable_sticky_info": false,
+        "enabledesktopreview": false,
         "color_scheme": "background-1",
         "media_size": "medium",
         "constrain_to_viewport": true,
@@ -216,11 +210,14 @@
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "show",
+        "desktop_thumbnails_position": "bottom",
+        "mobile_thumbnails_position": "bottom",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36,
+        "mobile_padding_top": 16,
+        "mobile_padding_bottom": 16
       }
     },
     "why_this_trainer": {
@@ -258,9 +255,9 @@
         "desktop_content_alignment": "left",
         "image_layout": "text-first",
         "row_color_scheme": "background-1",
-        "custom_colors_background": "#f05a1a",
+        "custom_colors_background": "#1a1a1a",
         "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
+        "custom_colors_text": "#f5f5f0",
         "custom_colors_solid_button_background": "#f05a1a",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#f05a1a",
@@ -357,9 +354,9 @@
         "desktop_content_alignment": "left",
         "image_layout": "text-first",
         "row_color_scheme": "background-1",
-        "custom_colors_background": "#f05a1a",
+        "custom_colors_background": "#1a1a1a",
         "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
+        "custom_colors_text": "#f5f5f0",
         "custom_colors_solid_button_background": "#f05a1a",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#f05a1a",
@@ -524,9 +521,9 @@
         "desktop_content_alignment": "left",
         "image_layout": "alternate-right",
         "row_color_scheme": "background-1",
-        "custom_colors_background": "#f05a1a",
+        "custom_colors_background": "#1a1a1a",
         "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
+        "custom_colors_text": "#f5f5f0",
         "custom_colors_solid_button_background": "#f05a1a",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#f05a1a",
