@@ -454,7 +454,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "1–3 SIMPLE",
+            "title": "1–3 <span style=\"display:block;margin-top:6px;color:#4caf78;letter-spacing:.06em\">SIMPLE</span>",
             "text": "Beginners & warm-up"
           }
         },
@@ -462,7 +462,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "4–6 NORMAL",
+            "title": "4–6 <span style=\"display:block;margin-top:6px;color:#c8a04a;letter-spacing:.06em\">NORMAL</span>",
             "text": "Intermediate training"
           }
         },
@@ -470,7 +470,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "7–9 HARD",
+            "title": "7–9 <span style=\"display:block;margin-top:6px;color:#e8872a;letter-spacing:.06em\">HARD</span>",
             "text": "Serious strength gains"
           }
         },
@@ -478,7 +478,7 @@
           "type": "step",
           "settings": {
             "video_url": "",
-            "title": "10–12 SUPER DIFFICULT",
+            "title": "10–12 <span style=\"display:block;margin-top:6px;color:#e83040;letter-spacing:.06em\">SUPER DIFFICULT</span>",
             "text": "Competition-level prep"
           }
         }
