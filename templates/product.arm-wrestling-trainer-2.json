@@ -25,16 +25,9 @@
       "type": "main-product",
       "blocks": {
         "badge": {
-          "type": "text",
+          "type": "custom-liquid",
           "settings": {
-            "text": "<p style=\"display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#7b3a1c,#f05a1a);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin:32px 0 16px;\">🏆 2026 Top Rated · Arm Training</p>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 13,
-            "enable_custom_color": false,
-            "custom_text_color": "#ffffff",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "custom_liquid": "<div class=\"product-badge\">🏆 2026 Top Rated · Arm Training</div><style>.product-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#7b3a1c,#f05a1a);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin:32px 0 16px;}</style>"
           }
         },
         "title": {
@@ -88,16 +81,9 @@
           }
         },
         "shipping_notices": {
-          "type": "text",
+          "type": "custom-liquid",
           "settings": {
-            "text": "<div style=\"display:flex;flex-direction:column;gap:8px;background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;\"><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">🚚</span><span><strong style=\"color:#f05a1a;\">FREE</strong> Insured + Tracked Shipping on all orders</span></div><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">⚡</span><span><strong style=\"color:#f05a1a;\">Limited offer</strong> — free shipping valid for first 50 orders today</span></div><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">🎁</span><span>First order? Use code <strong style=\"color:#f05a1a;\">WELCOME10OFF</strong> for an extra 10% off</span></div></div>",
-            "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
-            "enable_custom_color": false,
-            "custom_text_color": "#f5f5f0",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "custom_liquid": "<div class=\"shipping-notices\"><div class=\"line\"><span class=\"icon\">🚚</span><span><strong>FREE</strong> Insured + Tracked Shipping on all orders</span></div><div class=\"line\"><span class=\"icon\">⚡</span><span><strong>Limited offer</strong> — free shipping valid for first 50 orders today</span></div><div class=\"line\"><span class=\"icon\">🎁</span><span>First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off</span></div></div><style>.shipping-notices{display:flex;flex-direction:column;gap:8px;background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;}.shipping-notices .line{display:flex;align-items:center;gap:10px;}.shipping-notices .icon{font-size:18px;}.shipping-notices strong{color:#f05a1a;}</style>"
           }
         },
         "variant_picker": {
@@ -172,16 +158,9 @@
           "block_order": ["atc_qty"]
         },
         "trust_strip": {
-          "type": "text",
+          "type": "custom-liquid",
           "settings": {
-            "text": "<div style=\"display:flex;justify-content:center;gap:20px;font-size:12px;color:#9a9a90;margin-bottom:32px;flex-wrap:wrap;\"><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> 30-Day Returns</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Secure Checkout</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Ships in 24–48 hrs</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Premium Beechwood</span></div>",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "text_size": 12,
-            "enable_custom_color": false,
-            "custom_text_color": "#9a9a90",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "custom_liquid": "<div class=\"trust-strip\"><span><span class=\"chk\">✓</span> 30-Day Returns</span><span><span class=\"chk\">✓</span> Secure Checkout</span><span><span class=\"chk\">✓</span> Ships in 24–48 hrs</span><span><span class=\"chk\">✓</span> Premium Beechwood</span></div><style>.trust-strip{display:flex;justify-content:center;gap:20px;font-size:12px;color:#9a9a90;margin-bottom:32px;flex-wrap:wrap;}.trust-strip span{display:flex;align-items:center;gap:4px;}.trust-strip .chk{color:#4caf78;}</style>"
           }
         },
         "sticky_atc": {
