@@ -1,0 +1,542 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "block-badge": {
+          "type": "text",
+          "settings": {
+            "text": "🏆 2026 Top Rated · Arm Training"
+          }
+        },
+        "block-title": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-price": {
+          "type": "price",
+          "settings": {}
+        },
+        "block-rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "block-variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "block-quantity-selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block-buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "block-description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-badge",
+        "block-title",
+        "block-price",
+        "block-rating",
+        "block-variant-picker",
+        "block-quantity-selector",
+        "block-buy-buttons",
+        "block-description"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
+    },
+
+    "why-this-trainer": {
+      "type": "multicolumn",
+      "blocks": {
+        "why-col-1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "12 Resistance Levels",
+            "text": "<p>Dial it from casual warm-up to full competition-grade intensity. You'll never plateau.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "why-col-2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Premium Beechwood",
+            "text": "<p>Solid Eastern European beechwood. No cheap plastics, no flex — just a stable, premium feel every rep.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "why-col-3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "8×8\" Elbow Pad",
+            "text": "<p>Thick, padded elbow rest protects your joint during max-effort pulls — included in the box.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "why-col-4": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Zero Setup — Use Anywhere",
+            "text": "<p>Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "why-col-1",
+        "why-col-2",
+        "why-col-3",
+        "why-col-4"
+      ],
+      "settings": {
+        "title": "Built For Real Arm Strength — Not Just Looks",
+        "heading_size": "h2",
+        "columns_desktop": "4",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "progressive-resistance-intro": {
+      "type": "rich-text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "12 Levels. One Trainer. For Life.",
+        "heading_size": "h2",
+        "text": "<p>The biggest complaint about other arm wrestling trainers? They hit the ceiling too fast. One guy on Reddit summed it up perfectly: <em>\"Got strong enough in two weeks and there was nowhere to go.\"</em></p><p>We fixed that. With 12 distinct resistance settings — from light rehabilitation work all the way up to \"genuinely challenging for a seasoned gym-goer\" — this trainer grows with you. Pull the handle outward, shift the gear, and you're training at the next level. Simple.</p>",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "resistance-levels": {
+      "type": "multicolumn",
+      "blocks": {
+        "level-col-1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "1–3 · Simple",
+            "text": "<p>Beginners & warm-up</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "level-col-2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "4–6 · Normal",
+            "text": "<p>Intermediate training</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "level-col-3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "7–9 · Hard",
+            "text": "<p>Serious strength gains</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "level-col-4": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "10–12 · Super Difficult",
+            "text": "<p>Competition-level prep</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "level-col-1",
+        "level-col-2",
+        "level-col-3",
+        "level-col-4"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "columns_desktop": "4",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "feature-match-feel": {
+      "type": "image-with-text",
+      "blocks": {
+        "text-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Train Like You're Already at the Table",
+            "heading_size": "h2"
+          }
+        },
+        "text-body-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Generic curls and wrist rollers build muscle, sure — but they don't build <em>arm wrestling muscle</em>. The pulling angle, the tension curve, the way your forearm fires through the movement — it's completely different at the table.</p><p>This trainer's hydraulic resistance system is engineered to replicate that exact force curve. Every rep activates your forearms, wrists, and biceps the same way a real match would — so your strength transfers directly to performance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-heading-1",
+        "text-body-1"
+      ],
+      "settings": {
+        "image": "",
+        "layout": "image_first",
+        "height": "adapt_to_image",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "feature-muscle-targeting": {
+      "type": "image-with-text",
+      "blocks": {
+        "text-heading-2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hit the Muscles That Actually Win",
+            "heading_size": "h2"
+          }
+        },
+        "text-body-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Arm wrestling isn't just biceps. It's a full-arm chain: your forearm fires first, your biceps lock the angle, and your shoulder group stabilizes the whole thing. Miss any one of these and you'll lose to someone half your size.</p><p>This trainer is engineered to load all three, in the movement pattern that matters most.</p><p><strong>Targets:</strong> Forearm Muscles · Biceps Brachii · Shoulder Group · Grip Strength · Wrist Flexion · Pull Endurance</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-heading-2",
+        "text-body-2"
+      ],
+      "settings": {
+        "image": "",
+        "layout": "text_first",
+        "height": "adapt_to_image",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "feature-beechwood-build": {
+      "type": "image-with-text",
+      "blocks": {
+        "text-heading-3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Beechwood — No Cheap Substitutes",
+            "heading_size": "h2"
+          }
+        },
+        "text-body-3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We chose Eastern European beechwood deliberately. It's dense, it absorbs vibration, it feels warm and solid in the hand — and it won't crack, flex, or creak under heavy resistance like the plastic-bodied trainers you'll find on generic marketplace listings.</p><ul><li>Solid beechwood frame — no wobble, no flex under load</li><li>Non-slip grip handle — stays secure even when your palms sweat</li><li>Stable base — no suction cups, no mounting, no setup needed</li><li>Reinforced with stainless steel rods throughout</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text-heading-3",
+        "text-body-3"
+      ],
+      "settings": {
+        "image": "",
+        "layout": "image_first",
+        "height": "adapt_to_image",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "feature-solo-training": {
+      "type": "image-with-text",
+      "blocks": {
+        "text-heading-4": {
+          "type": "heading",
+          "settings": {
+            "heading": "No Partner? No Problem.",
+            "heading_size": "h2"
+          }
+        },
+        "text-body-4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Finding a training partner at the right skill level, available when you are, who won't disappear after two sessions — that's the real challenge in arm wrestling training. This trainer removes that dependency entirely.</p><p>Set it on any flat surface. Adjust the resistance. Pull. That's it. You get targeted, consistent reps on your own schedule — whether it's 6am before work or 11pm after the gym.</p><ul><li>Ready in seconds — zero setup or assembly</li><li>Works on desks, tables, workbenches, kitchen counters</li><li>Compact enough for truck cabs, hotel rooms, office breaks</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text-heading-4",
+        "text-body-4"
+      ],
+      "settings": {
+        "image": "",
+        "layout": "text_first",
+        "height": "adapt_to_image",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "feature-elbow-pad": {
+      "type": "image-with-text",
+      "blocks": {
+        "text-heading-5": {
+          "type": "heading",
+          "settings": {
+            "heading": "The 8×8\" Elbow Pad Matters More Than You Think",
+            "heading_size": "h2"
+          }
+        },
+        "text-body-5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One Amazon reviewer wrote: <em>\"Works amazing for training the appropriate muscles. Though mine never came with the pad.\"</em> — That's a complaint about a different product. Ours includes it.</p><p>The thick, 8×8\" comfort pad is designed specifically for the elbow position you hold during arm-wrestling-style pulls. Your joint stays cushioned and stable, so you can push harder and train longer without discomfort cutting your session short.</p><ul><li>8×8\" oversized pad — more coverage than standard trainers</li><li>Thick foam cushioning for high-rep sessions</li><li>Keeps your elbow anchored for cleaner, more effective pulls</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text-heading-5",
+        "text-body-5"
+      ],
+      "settings": {
+        "image": "",
+        "layout": "image_first",
+        "height": "adapt_to_image",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "specifications": {
+      "type": "multicolumn",
+      "blocks": {
+        "spec-col-1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "17.3\" × 14.6\"",
+            "text": "<p>Dimensions (L × H)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "spec-col-2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "12",
+            "text": "<p>Resistance Levels</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "spec-col-3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "8 × 8\"",
+            "text": "<p>Elbow Pad Size</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "spec-col-4": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Beechwood",
+            "text": "<p>Primary Material</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "spec-col-5": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Non-Slip",
+            "text": "<p>Handle Type</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "spec-col-6": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Portable",
+            "text": "<p>Design</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "spec-col-1",
+        "spec-col-2",
+        "spec-col-3",
+        "spec-col-4",
+        "spec-col-5",
+        "spec-col-6"
+      ],
+      "settings": {
+        "title": "What You're Getting",
+        "heading_size": "h2",
+        "columns_desktop": "4",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "comparison": {
+      "type": "rich-text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "Why Most Arm Wrestling Trainers Fail You",
+        "heading_size": "h2",
+        "text": "<p>Before we built this, we tested the competition. Here's the honest breakdown:</p><table><thead><tr><th>Feature</th><th>This Trainer</th><th>Cheap Spring Trainers</th></tr></thead><tbody><tr><td>Resistance Adjustability</td><td>✓ 12 levels</td><td>✗ Fixed resistance only</td></tr><tr><td>Stability on Surface</td><td>✓ Solid base, no suction cups</td><td>✗ Suction cups that pop loose</td></tr><tr><td>Build Material</td><td>✓ Premium beechwood</td><td>✗ Cheap ABS plastic / thin metal</td></tr><tr><td>Elbow Pad Included</td><td>✓ 8×8\" thick pad included</td><td>✗ Usually sold separately</td></tr><tr><td>Realistic Movement Pattern</td><td>✓ Hydraulic arm-wrestling motion</td><td>✗ Generic spring curl</td></tr><tr><td>Long-Term Progression</td><td>✓ Scales from beginner to advanced</td><td>✗ Easy to outgrow in weeks</td></tr></tbody></table>",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "whats-in-the-box": {
+      "type": "rich-text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "What's In The Box",
+        "heading_size": "h2",
+        "text": "<ul><li>1× Premium Beechwood Arm Wrestling Trainer</li><li>1× 8×8\" Thickened Elbow Comfort Pad</li><li>Quick-Start Guide (adjustment instructions included)</li></ul>",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "customer-reviews": {
+      "type": "multicolumn",
+      "blocks": {
+        "review-col-1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Aaron C. ★★★★★",
+            "text": "<p><strong>Feels premium and actually works</strong></p><p>I wanted a compact trainer for grip and forearm work without buying a whole cable setup. This has been pretty effective. The beechwood feels solid — not the cheap plastic-y vibe I was half-expecting at this price point. Stays put on my desk without wandering around during reps. Does exactly what I wanted it to do.</p><p><em>✓ Verified Purchase</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "review-col-2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Michael T. ★★★★★",
+            "text": "<p><strong>Simple, effective, no gimmicks</strong></p><p>Bought this to add focused forearm work at home, and it's been worth every penny. The wood frame feels sturdy and not cheap at all. I like that it keeps the training focused — it's not trying to be 10 things at once. For a dedicated arm trainer for home use, this is the one.</p><p><em>✓ Verified Purchase</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "review-col-3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Adam F. ★★★★★",
+            "text": "<p><strong>Compact but substantial</strong></p><p>I was mainly interested in the arm-wrestling movement specifically, and this nailed it. The handle is comfortable and easy to control through the whole pull. Overall build quality is better than most niche fitness tools I've ordered online. Satisfied — would buy again.</p><p><em>✓ Verified Purchase</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "review-col-4": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Paula G. ★★★★★",
+            "text": "<p><strong>More specific than anything else I found</strong></p><p>I wanted something more targeted than a generic forearm roller. This is it. Compact enough to keep on the kitchen counter without it being in the way. The resistance system genuinely feels different from standard gym movements — I can feel it targeting muscles I wasn't hitting before.</p><p><em>✓ Verified Purchase</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "review-col-1",
+        "review-col-2",
+        "review-col-3",
+        "review-col-4"
+      ],
+      "settings": {
+        "title": "What Real Customers Are Saying",
+        "heading_size": "h2",
+        "columns_desktop": "4",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    },
+
+    "guarantee": {
+      "type": "rich-text",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "heading": "🏆 Our Guarantee",
+        "heading_size": "h2",
+        "text": "<p>We stand behind this trainer completely. If it's not the right fit within 30 days, send it back — no hassle, no long forms, no runaround. And if anything goes wrong from our side, we'll make it right.</p><p>🚚 Free Tracked Shipping &nbsp;·&nbsp; 🔄 30-Day Returns &nbsp;·&nbsp; 🔒 Secure Checkout &nbsp;·&nbsp; 📞 Responsive Support</p>",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      }
+    }
+  },
+
+  "order": [
+    "main",
+    "why-this-trainer",
+    "progressive-resistance-intro",
+    "resistance-levels",
+    "feature-match-feel",
+    "feature-muscle-targeting",
+    "feature-beechwood-build",
+    "feature-solo-training",
+    "feature-elbow-pad",
+    "specifications",
+    "comparison",
+    "whats-in-the-box",
+    "customer-reviews",
+    "guarantee"
+  ]
+}
