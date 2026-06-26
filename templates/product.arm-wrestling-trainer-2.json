@@ -6,51 +6,12 @@
         "block-badge": {
           "type": "text",
           "settings": {
-            "text": "🏆 2026 Top Rated · Arm Training"
+            "text": "<p>🏆 2026 Top Rated · Arm Training</p>"
           }
-        },
-        "block-title": {
-          "type": "title",
-          "settings": {}
-        },
-        "block-price": {
-          "type": "price",
-          "settings": {}
-        },
-        "block-rating": {
-          "type": "rating",
-          "settings": {}
-        },
-        "block-variant-picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "block-quantity-selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "block-buy-buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "block-description": {
-          "type": "description",
-          "settings": {}
         }
       },
       "block_order": [
-        "block-badge",
-        "block-title",
-        "block-price",
-        "block-rating",
-        "block-variant-picker",
-        "block-quantity-selector",
-        "block-buy-buttons",
-        "block-description"
+        "block-badge"
       ],
       "settings": {
         "color_scheme": "scheme-4",
@@ -61,7 +22,6 @@
         "enable_video_looping": false
       }
     },
-
     "why-this-trainer": {
       "type": "multicolumn",
       "blocks": {
@@ -115,12 +75,11 @@
       "settings": {
         "title": "Built For Real Arm Strength — Not Just Looks",
         "heading_size": "h2",
-        "columns_desktop": "4",
+        "columns_desktop": 4,
         "color_scheme": "scheme-4",
         "full_width": true
       }
     },
-
     "progressive-resistance-intro": {
       "type": "rich-text",
       "blocks": {},
@@ -133,7 +92,6 @@
         "full_width": true
       }
     },
-
     "resistance-levels": {
       "type": "multicolumn",
       "blocks": {
@@ -187,12 +145,11 @@
       "settings": {
         "title": "",
         "heading_size": "h2",
-        "columns_desktop": "4",
+        "columns_desktop": 4,
         "color_scheme": "scheme-4",
         "full_width": true
       }
     },
-
     "feature-match-feel": {
       "type": "image-with-text",
       "blocks": {
@@ -222,7 +179,6 @@
         "full_width": true
       }
     },
-
     "feature-muscle-targeting": {
       "type": "image-with-text",
       "blocks": {
@@ -252,7 +208,6 @@
         "full_width": true
       }
     },
-
     "feature-beechwood-build": {
       "type": "image-with-text",
       "blocks": {
@@ -282,7 +237,6 @@
         "full_width": true
       }
     },
-
     "feature-solo-training": {
       "type": "image-with-text",
       "blocks": {
@@ -312,7 +266,6 @@
         "full_width": true
       }
     },
-
     "feature-elbow-pad": {
       "type": "image-with-text",
       "blocks": {
@@ -342,7 +295,6 @@
         "full_width": true
       }
     },
-
     "specifications": {
       "type": "multicolumn",
       "blocks": {
@@ -418,12 +370,11 @@
       "settings": {
         "title": "What You're Getting",
         "heading_size": "h2",
-        "columns_desktop": "4",
+        "columns_desktop": 4,
         "color_scheme": "scheme-4",
         "full_width": true
       }
     },
-
     "comparison": {
       "type": "rich-text",
       "blocks": {},
@@ -431,12 +382,11 @@
       "settings": {
         "heading": "Why Most Arm Wrestling Trainers Fail You",
         "heading_size": "h2",
-        "text": "<p>Before we built this, we tested the competition. Here's the honest breakdown:</p><table><thead><tr><th>Feature</th><th>This Trainer</th><th>Cheap Spring Trainers</th></tr></thead><tbody><tr><td>Resistance Adjustability</td><td>✓ 12 levels</td><td>✗ Fixed resistance only</td></tr><tr><td>Stability on Surface</td><td>✓ Solid base, no suction cups</td><td>✗ Suction cups that pop loose</td></tr><tr><td>Build Material</td><td>✓ Premium beechwood</td><td>✗ Cheap ABS plastic / thin metal</td></tr><tr><td>Elbow Pad Included</td><td>✓ 8×8\" thick pad included</td><td>✗ Usually sold separately</td></tr><tr><td>Realistic Movement Pattern</td><td>✓ Hydraulic arm-wrestling motion</td><td>✗ Generic spring curl</td></tr><tr><td>Long-Term Progression</td><td>✓ Scales from beginner to advanced</td><td>✗ Easy to outgrow in weeks</td></tr></tbody></table>",
+        "text": "<p>Before we built this, we tested the competition. Here's the honest breakdown:</p><h3>Resistance Adjustability</h3><ul><li>This Trainer: ✓ 12 levels</li><li>Cheap Spring Trainers: ✗ Fixed resistance only</li></ul><h3>Stability on Surface</h3><ul><li>This Trainer: ✓ Solid base, no suction cups</li><li>Cheap Spring Trainers: ✗ Suction cups that pop loose</li></ul><h3>Build Material</h3><ul><li>This Trainer: ✓ Premium beechwood</li><li>Cheap Spring Trainers: ✗ Cheap ABS plastic / thin metal</li></ul><h3>Elbow Pad Included</h3><ul><li>This Trainer: ✓ 8×8\" thick pad included</li><li>Cheap Spring Trainers: ✗ Usually sold separately</li></ul><h3>Realistic Movement Pattern</h3><ul><li>This Trainer: ✓ Hydraulic arm-wrestling motion</li><li>Cheap Spring Trainers: ✗ Generic spring curl</li></ul><h3>Long-Term Progression</h3><ul><li>This Trainer: ✓ Scales from beginner to advanced</li><li>Cheap Spring Trainers: ✗ Easy to outgrow in weeks</li></ul>",
         "color_scheme": "scheme-4",
         "full_width": true
       }
     },
-
     "whats-in-the-box": {
       "type": "rich-text",
       "blocks": {},
@@ -449,7 +399,6 @@
         "full_width": true
       }
     },
-
     "customer-reviews": {
       "type": "multicolumn",
       "blocks": {
@@ -503,12 +452,11 @@
       "settings": {
         "title": "What Real Customers Are Saying",
         "heading_size": "h2",
-        "columns_desktop": "4",
+        "columns_desktop": 4,
         "color_scheme": "scheme-4",
         "full_width": true
       }
     },
-
     "guarantee": {
       "type": "rich-text",
       "blocks": {},
@@ -522,7 +470,6 @@
       }
     }
   },
-
   "order": [
     "main",
     "why-this-trainer",
