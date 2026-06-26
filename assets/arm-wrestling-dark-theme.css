@@ -1,0 +1,254 @@
+/* Dark Theme for Arm Wrestling Trainer Product Page */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --bg-card2: #232323;
+  --orange: #f05a1a;
+  --orange-lt: #ff7d3e;
+  --gold: #c8a04a;
+  --white: #f5f5f0;
+  --muted: #9a9a90;
+  --wood: #c8945a;
+  --green-chk: #4caf78;
+  --radius: 12px;
+}
+
+/* Global Dark Theme */
+body {
+  background: var(--bg-dark) !important;
+  color: var(--white) !important;
+}
+
+.shopify-section {
+  background: var(--bg-dark) !important;
+}
+
+/* Product Title - Barlow Condensed Uppercase */
+.product__title,
+h1.product-title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  color: var(--white) !important;
+  letter-spacing: -.01em !important;
+}
+
+/* Price Styling */
+.price__sale .price-item--sale {
+  color: var(--orange) !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 38px !important;
+}
+
+.price__regular {
+  color: var(--muted) !important;
+}
+
+.price__badge-sale {
+  background: #2e4a2e !important;
+  color: var(--green-chk) !important;
+  border-color: #2e4a2e !important;
+}
+
+/* Star Rating */
+.rating-stars svg,
+.rating-stars path {
+  fill: var(--gold) !important;
+  color: var(--gold) !important;
+}
+
+/* Sections & Cards */
+.multirow__inner,
+.collapsible-content,
+.product__info-wrapper,
+.card,
+.content-container {
+  background: var(--bg-dark) !important;
+  color: var(--white) !important;
+}
+
+/* Multirow sections */
+.multirow {
+  background: var(--bg-card) !important;
+}
+
+.multirow .media {
+  background: var(--bg-card2) !important;
+}
+
+/* Text colors */
+.product__text,
+.rte p,
+.multirow__text,
+p,
+li {
+  color: var(--muted) !important;
+}
+
+h2, h3, h4, h5, h6,
+.heading,
+.multirow__heading {
+  color: var(--white) !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+/* Buttons */
+.button,
+.product-form__submit,
+.shopify-payment-button__button,
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--orange), #d94a0a) !important;
+  color: #fff !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  box-shadow: 0 6px 28px rgba(240,90,26,.38) !important;
+}
+
+.button:hover,
+.product-form__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(240,90,26,.5) !important;
+}
+
+/* Caption/Eyebrow text */
+.caption,
+.multirow__caption {
+  color: var(--orange) !important;
+  text-transform: uppercase !important;
+  letter-spacing: .15em !important;
+  font-weight: 700 !important;
+}
+
+/* Icons */
+.icon-with-text svg,
+.text-with-icon svg {
+  fill: var(--orange) !important;
+  color: var(--orange) !important;
+}
+
+/* Collapsible rows (FAQ) */
+.collapsible-row-list {
+  background: var(--bg-dark) !important;
+}
+
+.collapsible-row {
+  border-color: #2a2a2a !important;
+  background: var(--bg-card) !important;
+}
+
+.collapsible-row__heading {
+  color: var(--white) !important;
+  background: var(--bg-card) !important;
+}
+
+.collapsible-row[open] .collapsible-row__heading {
+  background: var(--bg-card2) !important;
+}
+
+.collapsible-row__content {
+  background: var(--bg-card2) !important;
+  color: var(--muted) !important;
+}
+
+/* Testimonials */
+.facebook-testimonials {
+  background: var(--bg-dark) !important;
+}
+
+.fb-post {
+  background: var(--bg-card) !important;
+  border-color: #2a2a2a !important;
+  color: var(--white) !important;
+}
+
+.fb-post__text {
+  color: var(--muted) !important;
+}
+
+/* Trust badges */
+.trust-badge,
+.icon-with-text__item {
+  color: var(--muted) !important;
+}
+
+/* Product media */
+.product__media-wrapper {
+  background: var(--bg-card2) !important;
+}
+
+/* Footer adjustments */
+.footer {
+  background: var(--bg-card) !important;
+  color: var(--muted) !important;
+}
+
+/* Badge styling */
+.badge,
+.product-badge {
+  background: linear-gradient(90deg, #7b3a1c, var(--orange)) !important;
+  color: #fff !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+/* Scroll progress bar */
+.page-scroll-progress__bar {
+  background: var(--orange) !important;
+}
+
+/* Why cards grid */
+.bladder-control-steps {
+  background: var(--bg-dark) !important;
+}
+
+.bladder-control-steps__item {
+  background: var(--bg-card) !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Level indicators */
+.level-indicator {
+  border-color: var(--orange) !important;
+}
+
+/* Comparison table */
+.comparison-table {
+  background: var(--bg-card) !important;
+  color: var(--white) !important;
+}
+
+.comparison-table th {
+  background: #111 !important;
+  color: var(--white) !important;
+}
+
+.comparison-table td {
+  border-color: #222 !important;
+  color: var(--muted) !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select {
+  background: var(--bg-card2) !important;
+  color: var(--white) !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Links */
+a {
+  color: var(--orange-lt) !important;
+}
+
+a:hover {
+  color: var(--orange) !important;
+}

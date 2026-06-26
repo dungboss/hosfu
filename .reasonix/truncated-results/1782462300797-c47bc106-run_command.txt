@@ -1,0 +1,175 @@
+$ python3 -c "
+import json, re, glob
+
+# Find usage examples of multicolumn, image-with-text, rich-text
+for f in glob.glob('templates/*.json'):
+    text = open(f).read()
+    text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
+    try:
+        d = json.loads(text.strip())
+        for sec_id, sec in d.get('sections', {}).items():
+            st = sec.get('type', '')
+            if st in ('multicolumn', 'image-with-text', 'rich-text'):
+                print(f'=== {f} / {sec_id} ({st}) ===')
+                print(f'  settings: {list(sec.get(\"settings\", {}).keys())}')
+                for blk_id, blk in sec.get('blocks', {}).items():
+                    print(f'  block \"{blk_id}\": type=\"{blk[\"type\"]}\" settings={list(blk.get(\"settings\", {}).keys())[:6]}')
+                print()
+                if st == 'multicolumn':
+                    break  # one example enough
+    except:
+        pass
+" 2>&1
+[exit 0]
+=== templates/product.arm-wrestling-trainer-2.json / why-this-trainer (multicolumn) ===
+  settings: ['title', 'heading_size', 'columns_desktop', 'color_scheme', 'full_width']
+  block "why-col-1": type="column" settings=['image', 'title', 'text', 'link_label', 'link']
+  block "why-col-2": type="column" settings=['image', 'title', 'text', 'link_label', 'link']
+  block "why-col-3": type="column" settings=['image', 'title', 'text', 'link_label', 'link']
+  block "why-col-4": type="column" settings=['image', 'title', 'text', 'link_label', 'link']
+
+=== templates/page.track-order.json / fd57cce8-d801-473c-9554-025221fb7723 (image-with-text) ===
+  settings: ['height', 'color_scheme', 'content_layout', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment']
+  block "template-18472096104777_fd57cce8-d801-473c-9554-025221fb7723-1679865021003cfb75-0": type="heading" settings=['heading_size']
+  block "template-18472096104777_fd57cce8-d801-473c-9554-025221fb7723-1679865021003cfb75-1": type="text" settings=['text']
+  block "template-18472096104777_fd57cce8-d801-473c-9554-025221fb7723-1679865021003cfb75-2": type="button" settings=['button_label', 'button_link']
+
+=== templates/product.may-quay-tay-ra-di-n.json / rich_text_9QytmR (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_D4QKqW": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+
+=== templates/product.may-quay-tay-ra-di-n.json / hero_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "hero_rating": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "hero_heading": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "hero_text": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_with_icon_kY6YP7": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_kkyqCn": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_CjNEJX": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "hero_button": type="button" settings=['button_label', 'button_link', 'button_style_secondary', 'large_font_size', 'enable_custom_color', 'custom_color']
+  block "hero_note": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / expert_endorsement_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "expert_quote_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "expert_attribution_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / image_with_text_xKffTQ (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "text_tjCkNn": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "heading_VeMtBb": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_FkUwBU": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_NX83UU": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "button_6YMYUg": type="button" settings=['button_label', 'button_link', 'button_style_secondary', 'large_font_size', 'enable_custom_color', 'custom_color']
+  block "text_r8kFhW": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / rich_text_RgV3HB (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_w9UypR": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+
+=== templates/product.may-quay-tay-ra-di-n.json / rich_text_4nN4k3 (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "text_MYJUhd": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_TDCeNb": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_nqHmD4": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_dPfdec": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_LfwUxh": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / image_with_text_Nw6nQr (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "heading_CDPC4a": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_LzdH79": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_with_icon_nEngfq": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_BqJTGC": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_by4jfj": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_DdLJVC": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / rich_text_CYKgjk (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_PgEzaX": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+
+=== templates/product.may-quay-tay-ra-di-n.json / image_with_text_3nndy6 (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image_url', 'image_url_alt', 'video', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "heading_ECrTeD": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_W4DXGU": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-quay-tay-ra-di-n.json / trust_badges_section (multicolumn) ===
+  settings: ['display_id', 'visibility', 'title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius', 'highlighted-1_border_width', 'highlighted-1_border', 'highlighted-1_border_color', 'highlighted-1_padding-block', 'highlighted-1_padding-inline', 'title_highlight_1_underline-thickness', 'title_highlight_1_underline-color', 'title_highlight_1_underline-color--gradient', 'title_highlight_1_underline-color-position', 'title_highlight_1_handwritten-color', 'title_highlight_1_handwritten-stroke-width', 'title_highlight_1_handwritten-position', 'title_highlight_2', 'title_highlight_2_gradient', 'title_highlight_2_bg-color', 'title_highlight_2_color', 'highlighted-2_border_radius', 'highlighted-2_border_width', 'highlighted-2_border', 'highlighted-2_border_color', 'highlighted-2_padding-block', 'highlighted-2_padding-inline', 'title_highlight_2_underline-thickness', 'title_highlight_2_underline-color', 'title_highlight_2_underline-color--gradient', 'title_highlight_2_underline-color-position', 'title_highlight_2_handwritten-color', 'title_highlight_2_handwritten-stroke-width', 'title_highlight_2_handwritten-position', 'heading_size', 'custom_desktop_size', 'custom_mobile_size', 'margin_top', 'margin_bottom', 'button_label', 'button_link', 'atc_button_label', 'atc_product', 'atc_skip_cart', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'cards_color_scheme', 'custom_cards_colors_background', 'custom_cards_gradient_background', 'custom_cards_colors_heading', 'custom_cards_colors_text', 'cards_corner_radius', 'stretch_cards', 'stretched_cards_content_alignment', 'image_width', 'image_ratio', 'media_position', 'column_alignment', 'desktop_heading_size', 'mobile_heading_size', 'desktop_text_size', 'mobile_text_size', 'desktop_text_top_margin', 'mobile_text_top_margin', 'desktop_container_padding_y', 'desktop_container_padding_x', 'mobile_container_padding_y', 'mobile_container_padding_x', 'type', 'autoplay', 'autoplay_speed', 'arrows_color_scheme', 'transparent_arrows', 'dots_color_scheme', 'desktop_full_page', 'columns_desktop', 'slider_desktop', 'per_move_desktop', 'desktop_spacing', 'desktop_side_padding', 'desktop_padding_calc', 'desktop_adaptive_height', 'desktop_dots_position', 'desktop_arrows_position', 'columns_mobile', 'slider_mobile', 'enable_mobile_preview', 'mobile_adaptive_height', 'mobile_dots_position', 'mobile_arrows_position', 'padding_top', 'padding_bottom']
+  block "trust_1": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+  block "trust_2": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+  block "trust_3": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+
+=== templates/page.contact.json / 60910267-55e8-4e0d-a9f9-79b26b3533dc (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "template-18407212810569_60910267-55e8-4e0d-a9f9-79b26b3533dc-16795881913b1fb5f3-0": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "template-18407212810569_60910267-55e8-4e0d-a9f9-79b26b3533dc-16795881913b1fb5f3-1": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / rich_text_CYKgjk (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_PgEzaX": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+
+=== templates/product.may-nong-do-con.json / hero_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "hero_rating": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "hero_heading": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "hero_text": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_with_icon_RqATiQ": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_y8aE3H": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_PacHQY": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "hero_button": type="button" settings=['button_label', 'button_link', 'button_style_secondary', 'large_font_size', 'enable_custom_color', 'custom_color']
+  block "hero_note": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / expert_endorsement_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "expert_quote_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "expert_attribution_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / rich_text_9cKKyh (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_RiVFPy": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_KzJQr6": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / image_with_text_XyPEjh (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "heading_8FT6Ld": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_yFgJ7M": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_with_icon_fYAyzU": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_NRcEpt": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_h6jMQT": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_DNAkHJ": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / image_with_text_3nndy6 (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image_url', 'image_url_alt', 'video', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "heading_ECrTeD": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "text_W4DXGU": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.may-nong-do-con.json / trust_badges_section (multicolumn) ===
+  settings: ['display_id', 'visibility', 'title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius', 'highlighted-1_border_width', 'highlighted-1_border', 'highlighted-1_border_color', 'highlighted-1_padding-block', 'highlighted-1_padding-inline', 'title_highlight_1_underline-thickness', 'title_highlight_1_underline-color', 'title_highlight_1_underline-color--gradient', 'title_highlight_1_underline-color-position', 'title_highlight_1_handwritten-color', 'title_highlight_1_handwritten-stroke-width', 'title_highlight_1_handwritten-position', 'title_highlight_2', 'title_highlight_2_gradient', 'title_highlight_2_bg-color', 'title_highlight_2_color', 'highlighted-2_border_radius', 'highlighted-2_border_width', 'highlighted-2_border', 'highlighted-2_border_color', 'highlighted-2_padding-block', 'highlighted-2_padding-inline', 'title_highlight_2_underline-thickness', 'title_highlight_2_underline-color', 'title_highlight_2_underline-color--gradient', 'title_highlight_2_underline-color-position', 'title_highlight_2_handwritten-color', 'title_highlight_2_handwritten-stroke-width', 'title_highlight_2_handwritten-position', 'heading_size', 'custom_desktop_size', 'custom_mobile_size', 'margin_top', 'margin_bottom', 'button_label', 'button_link', 'atc_button_label', 'atc_product', 'atc_skip_cart', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'cards_color_scheme', 'custom_cards_colors_background', 'custom_cards_gradient_background', 'custom_cards_colors_heading', 'custom_cards_colors_text', 'cards_corner_radius', 'stretch_cards', 'stretched_cards_content_alignment', 'image_width', 'image_ratio', 'media_position', 'column_alignment', 'desktop_heading_size', 'mobile_heading_size', 'desktop_text_size', 'mobile_text_size', 'desktop_text_top_margin', 'mobile_text_top_margin', 'desktop_container_padding_y', 'desktop_container_padding_x', 'mobile_container_padding_y', 'mobile_container_padding_x', 'type', 'autoplay', 'autoplay_speed', 'arrows_color_scheme', 'transparent_arrows', 'dots_color_scheme', 'desktop_full_page', 'columns_desktop', 'slider_desktop', 'per_move_desktop', 'desktop_spacing', 'desktop_side_padding', 'desktop_padding_calc', 'desktop_adaptive_height', 'desktop_dots_position', 'desktop_arrows_position', 'columns_mobile', 'slider_mobile', 'enable_mobile_preview', 'mobile_adaptive_height', 'mobile_dots_position', 'mobile_arrows_position', 'padding_top', 'padding_bottom']
+  block "trust_1": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+  block "trust_2": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+  block "trust_3": type="column" settings=['image_url', 'muted_autoplay', 'title', 'text', 'link_label', 'link']
+
+=== templates/product.hosfu-new-1.json / rich_text_9QytmR (rich-text) ===
+  settings: ['display_id', 'visibility', 'desktop_content_position', 'desktop_content_alignment', 'mobile_content_alignment', 'full_width', 'mobile_narrow_width', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'padding_top', 'padding_bottom']
+  block "heading_D4QKqW": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+
+=== templates/product.hosfu-new-1.json / hero_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "hero_rating": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "hero_heading": type="heading" settings=['title', 'title_highlight_1', 'title_highlight_1_gradient', 'title_highlight_1_bg-color', 'title_highlight_1_color', 'highlighted-1_border_radius']
+  block "hero_text": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "text_with_icon_kY6YP7": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_kkyqCn": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "text_with_icon_CjNEJX": type="text-with-icon" settings=['mobile_text_size', 'desktop_text_size', 'alignment', 'mobile_alignment', 'text_color', 'font_family']
+  block "hero_button": type="button" settings=['button_label', 'button_link', 'button_style_secondary', 'large_font_size', 'enable_custom_color', 'custom_color']
+  block "hero_note": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.hosfu-new-1.json / expert_endorsement_section (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image', 'image_url', 'image_url_alt', 'video_autoplay', 'video_loop', 'product_media_index', 'height', 'color_scheme', 'custom_colors_background', 'custom_gradient_background', 'custom_colors_text', 'custom_colors_solid_button_background', 'custom_colors_solid_button_text', 'custom_colors_outline_button', 'section_color_scheme', 'custom_section_colors_background', 'custom_section_gradient_background', 'full_desktop_width', 'content_layout', 'desktop_media_width', 'layout', 'desktop_content_position', 'desktop_content_alignment', 'mobile_full_media_width', 'mobile_side_by_side', 'mobile_direction', 'mobile_image_quanlity', 'mobile_content_alignment', 'mobile_padding_top', 'mobile_padding_bottom', 'desktop_padding_top', 'desktop_padding_bottom']
+  block "expert_quote_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+  block "expert_attribution_blk": type="text" settings=['text', 'alignment', 'mobile_alignment', 'text_size', 'enable_custom_color', 'custom_text_color']
+
+=== templates/product.hosfu-new-1.json / image_with_text_xKffTQ (image-with-text) ===
+  settings: ['display_id', 'visibility', 'image_ur
+
+[… truncated 21141 chars …]

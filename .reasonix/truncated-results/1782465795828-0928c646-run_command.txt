@@ -1,0 +1,397 @@
+$ python3 -c "
+import json, re
+
+ours = json.load(open('templates/product.arm-wrestling-trainer-2.json'))
+
+text = open('templates/product.may-quay-tay-ra-di-n.json').read()
+text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
+ref = json.loads(text.strip())
+
+# Build reference defaults: for each section_type/block_type -> {setting: value}
+# Take the first occurrence as the default
+ref_defaults = {}
+for sec_id, sec in ref['sections'].items():
+    st = sec['type']
+    if st not in ref_defaults:
+        ref_defaults[st] = {}
+    for k, v in sec.get('settings', {}).items():
+        if k not in ref_defaults[st]:
+            ref_defaults[st][k] = v
+    for blk_id, blk in sec.get('blocks', {}).items():
+        bt = blk['type']
+        key = f'{st}/{bt}'
+        if key not in ref_defaults:
+            ref_defaults[key] = {}
+        for k, v in blk.get('settings', {}).items():
+            if k not in ref_defaults[key]:
+                ref_defaults[key][k] = v
+
+changes = 0
+
+# Fix section settings
+for sec_id, sec in ours['sections'].items():
+    st = sec['type']
+    if st in ref_defaults:
+        for k in list(sec.get('settings', {}).keys()):
+            if k in ref_defaults[st]:
+                ref_v = ref_defaults[st][k]
+                our_v = sec['settings'][k]
+                # Skip content fields we want to keep custom
+                if k in ('title', 'text', 'heading', 'custom_liquid', 'button_label', 'button_link', 'link', 'link_label', 'image', 'image_url', 'image_url_alt', 'video', 'icon'):
+                    continue
+                if our_v != ref_v:
+                    print(f'  {sec_id} settings.{k}: {repr(our_v)[:40]} → {repr(ref_v)[:40]}')
+                    sec['settings'][k] = ref_v
+                    changes += 1
+
+    # Fix block settings
+    for blk_id, blk in sec.get('blocks', {}).items():
+        bt = blk['type']
+        key = f'{st}/{bt}'
+        if key in ref_defaults:
+            for k in list(blk.get('settings', {}).keys()):
+                if k in ref_defaults[key]:
+                    ref_v = ref_defaults[key][k]
+                    our_v = blk['settings'][k]
+                    if k in ('title', 'text', 'heading', 'button_label', 'button_link', 'link', 'link_label', 'image', 'image_url', 'image_url_alt', 'icon', 'label'):
+                        continue
+                    if our_v != ref_v:
+                        print(f'  {sec_id}/{blk_id} ({key}) settings.{k}: {repr(our_v)[:40]} → {repr(ref_v)[:40]}')
+                        blk['settings'][k] = ref_v
+                        changes += 1
+
+json.dump(ours, open('templates/product.arm-wrestling-trainer-2.json', 'w'), indent=2, ensure_ascii=False)
+print(f'{changes} changes made')
+" 2>&1
+[exit 0]
+  main settings.color_scheme: 'scheme-4' → 'background-1'
+  main settings.image_zoom: 'lightbox' → 'none'
+  main settings.thumbnails_ratio: '1-1' → 'square'
+  main settings.arrows_color_scheme: 'background-1' → 'inverse'
+  main settings.dots_color_scheme: 'background-1' → 'inverse'
+  main settings.play_btn_color_scheme: 'background-1' → 'accent-1'
+  main settings.sound_btn_color_scheme: 'background-1' → 'inverse'
+  main settings.timeline_color: '#000' → 'accent-1'
+  main settings.gallery_layout: 'thumbnails' → 'thumbnail_slider'
+  main settings.desktop_arrows_position: 'inside' → 'hidden'
+  main settings.mobile_spacing_pixels: 8 → 0
+  main settings.mobile_arrows_position: 'inside' → 'sides'
+  main settings.mobile_pagination: 'dots' → 'dots_overlay'
+  main settings.mobile_thumbnails_position: 'bottom' → 'hidden'
+  main settings.mobile_vertical_thumbnails_hide_arrows: False → True
+  main settings.mobile_scroll_padding_percentage: 10 → 0
+  main settings.mobile_scroll_padding_pixels: 0 → 16
+  main settings.enable_mobile_outher_spacing: True → False
+  main settings.mobile_slides_container_width: 90 → 100
+  main settings.trust_badge_position: 'bottom-right' → 'top-right'
+  main settings.mobile_padding_bottom: 0 → 16
+  main settings.desktop_padding_top: 0 → 36
+  main settings.desktop_padding_bottom: 0 → 36
+  main settings.enabledesktopreview: False → True
+  main settings.review_background_color: '#f8f6f3' → '#ffffff'
+  main settings.review_border_color: '#e2ddd4' → '#e9ecef'
+  main settings.star_color: '#c8a04a' → '#ffc107'
+  main settings.username_color: '#121212' → '#000000'
+  main settings.username: '' → 'Linda P.'
+  main settings.verified_customer: False → True
+  main settings.verified_icon_color: '#4caf78' → '#28a745'
+  main settings.verified_text_color: '#4caf78' → '#28a745'
+  main settings.verified_text: 'Verified Customer' → 'Verified Purchase'
+  main settings.review_text_color: '#2e2a39' → '#000000'
+  main settings.review_text: '' → '" The best investment I\'ve made for my
+  main settings.galleryinnerbackground: '#ffffff' → '#000000'
+  main settings.galleryinnertextcolor: '#121212' → '#ffffff'
+  main settings.galleryinnerradius: 4 → 8
+  main settings.galleryinnerheight: 60 → 80
+  main settings.galleryinnertext: '' → '5-Star Rated Product'
+  main settings.star_color2: '#c8a04a' → '#ffcc00'
+  main settings.label: '' → '(Trusted by men)'
+  main settings.size: 14 → 16
+  main/badge_text (main-product/text) settings.text_size: 13 → 14
+  main/badge_text (main-product/text) settings.margin_bottom: 12 → 15
+  main/title (main-product/product_title) settings.uppercase_title: True → False
+  main/title (main-product/product_title) settings.mobile_size: 32 → 26
+  main/title (main-product/product_title) settings.margin_bottom: 9 → 0
+  main/rating_stars (main-product/rating-stars) settings.star_color: '#c8a04a' → '#ffcc00'
+  main/rating_stars (main-product/rating-stars) settings.size: 14 → 15
+  main/rating_stars (main-product/rating-stars) settings.margin_bottom: 12 → 0
+  main/price (main-product/product_price) settings.price_layout: 'horizontal' → 'price-first'
+  main/price (main-product/product_price) settings.price_color: '#f05a1a' → 'accent-1'
+  main/price (main-product/product_price) settings.custom_price_color: '#f05a1a' → '#1a237e'
+  main/price (main-product/product_price) settings.compare_price_color: '#9a9a90' → 'text'
+  main/price (main-product/product_price) settings.regular_price_size: 20 → 25
+  main/price (main-product/product_price) settings.sale_price_size: 38 → 20
+  main/price (main-product/product_price) settings.compare_price_size: 18 → 16
+  main/shipping_info_1 (main-product/text-with-icon) settings.mobile_text_size: 13 → 14
+  main/shipping_info_1 (main-product/text-with-icon) settings.desktop_text_size: 14 → 16
+  main/shipping_info_1 (main-product/text-with-icon) settings.text_color: '#f5f5f0' → '#121212'
+  main/shipping_info_1 (main-product/text-with-icon) settings.icon_scale: 100 → 120
+  main/shipping_info_1 (main-product/text-with-icon) settings.icon_color: '#f05a1a' → '#1a237e'
+  main/shipping_info_1 (main-product/text-with-icon) settings.enable_bg: True → False
+  main/shipping_info_1 (main-product/text-with-icon) settings.bg_color: '#1a1a1a' → '#f8eee8'
+  main/shipping_info_1 (main-product/text-with-icon) settings.border_size: 1 → 0
+  main/shipping_info_1 (main-product/text-with-icon) settings.border_color: '#333333' → '#e7c6d4'
+  main/shipping_info_1 (main-product/text-with-icon) settings.corner_radius: 12 → 40
+  main/shipping_info_1 (main-product/text-with-icon) settings.margin_top: 3 → 9
+  main/shipping_info_1 (main-product/text-with-icon) settings.margin_bottom: 3 → 0
+  main/shipping_info_2 (main-product/text-with-icon) settings.mobile_text_size: 13 → 14
+  main/shipping_info_2 (main-product/text-with-icon) settings.desktop_text_size: 14 → 16
+  main/shipping_info_2 (main-product/text-with-icon) settings.text_color: '#f5f5f0' → '#121212'
+  main/shipping_info_2 (main-product/text-with-icon) settings.icon_scale: 100 → 120
+  main/shipping_info_2 (main-product/text-with-icon) settings.icon_color: '#f05a1a' → '#1a237e'
+  main/shipping_info_2 (main-product/text-with-icon) settings.enable_bg: True → False
+  main/shipping_info_2 (main-product/text-with-icon) settings.bg_color: '#1a1a1a' → '#f8eee8'
+  main/shipping_info_2 (main-product/text-with-icon) settings.border_size: 1 → 0
+  main/shipping_info_2 (main-product/text-with-icon) settings.border_color: '#333333' → '#e7c6d4'
+  main/shipping_info_2 (main-product/text-with-icon) settings.corner_radius: 12 → 40
+  main/shipping_info_2 (main-product/text-with-icon) settings.margin_top: 0 → 9
+  main/shipping_info_2 (main-product/text-with-icon) settings.margin_bottom: 3 → 0
+  main/shipping_info_3 (main-product/text-with-icon) settings.mobile_text_size: 13 → 14
+  main/shipping_info_3 (main-product/text-with-icon) settings.desktop_text_size: 14 → 16
+  main/shipping_info_3 (main-product/text-with-icon) settings.text_color: '#f5f5f0' → '#121212'
+  main/shipping_info_3 (main-product/text-with-icon) settings.icon_scale: 100 → 120
+  main/shipping_info_3 (main-product/text-with-icon) settings.icon_color: '#f05a1a' → '#1a237e'
+  main/shipping_info_3 (main-product/text-with-icon) settings.enable_bg: True → False
+  main/shipping_info_3 (main-product/text-with-icon) settings.bg_color: '#1a1a1a' → '#f8eee8'
+  main/shipping_info_3 (main-product/text-with-icon) settings.border_size: 1 → 0
+  main/shipping_info_3 (main-product/text-with-icon) settings.border_color: '#333333' → '#e7c6d4'
+  main/shipping_info_3 (main-product/text-with-icon) settings.corner_radius: 12 → 40
+  main/shipping_info_3 (main-product/text-with-icon) settings.margin_top: 0 → 9
+  main/shipping_info_3 (main-product/text-with-icon) settings.margin_bottom: 21 → 0
+  main/variant_picker (main-product/product_product-variant-picker-block) settings.picker_types: 'button' → 'pills, pills, pills'
+  main/variant_picker (main-product/product_product-variant-picker-block) settings.skip_unavailable: True → False
+  main/variant_picker (main-product/product_product-variant-picker-block) settings.append: 'default' → 'option_1_label_container'
+  main/variant_picker (main-product/product_product-variant-picker-block) settings.swatches_size: 'large' → 'medium'
+  main/variant_picker (main-product/product_product-variant-picker-block) settings.swatches_custom_colors_list: '' → '#000000, #FFFFFF'
+  main/buy_buttons (main-product/product_buy-buttons) settings.show_dynamic_checkout: True → False
+  main/buy_buttons (main-product/product_buy-buttons) settings.atc_append: 'default' → 'left'
+  main/buy_buttons (main-product/product_buy-buttons) settings.icon_scale: 100 → 120
+  main/buy_buttons (main-product/product_buy-buttons) settings.icon_spacing: 4 → 10
+  main/buy_buttons (main-product/product_buy-buttons) settings.atc_custom_label: 'Grab Yours — Add to Cart →' → 'GET MY SURVIVAL HUB'
+  main/trust_strip (main-product/icon-with-text) settings.icon_color: '#4caf78' → 'accent-1'
+  main/trust_strip (main-product/icon-with-text) settings.desktop_icon_size: 14 → 48
+  main/trust_strip (main-product/icon-with-text) settings.desktop_spacing: 8 → 12
+  main/trust_strip (main-product/icon-with-text) settings.desktop_text_size: 12 → 16
+  main/trust_strip (main-product/icon-with-text) settings.mobile_icon_size: 14 → 40
+  main/trust_strip (main-product/icon-with-text) settings.mobile_spacing: 8 → 10
+  main/trust_strip (main-product/icon-with-text) settings.mobile_text_size: 12 → 10
+  main/collapsible_specs (main-product/collapsible-row) settings.heading_size: 'h3' → 'medium'
+  main/collapsible_specs (main-product/collapsible-row) settings.collapse_icon: '' → 'carret'
+  main/collapsible_specs (main-product/collapsible-row) settings.collapse_icon_style: 'plus-minus' → 'standard'
+  main/collapsible_specs (main-product/collapsible-row) settings.collapse_icon_radius: 20 → 15
+  why-this-trainer settings.desktop_heading_size: 38 → 24
+  why-this-trainer settings.mobile_heading_size: 24 → 22
+  why-this-trainer settings.desktop_text_size: 14 → 16
+  why-this-trainer settings.mobile_text_size: 13 → 15
+  why-this-trainer settings.columns_desktop: 4 → 3
+  why-this-trainer settings.color_scheme: 'scheme-4' → 'background-1'
+  why-this-trainer settings.cards_color_scheme: 'background-1' → 'bg-overlay'
+  why-this-trainer settings.image_width: '100%' → 'full'
+  why-this-trainer settings.image_ratio: '1-1' → 'square'
+  why-this-trainer settings.column_alignment: 'left' → 'center'
+  why-this-trainer settings.desktop_container_padding_y: 20 → 24
+  why-this-trainer settings.desktop_container_padding_x: 18 → 24
+  why-this-trainer settings.mobile_container_padding_y: 20 → 24
+  why-this-trainer settings.mobile_container_padding_x: 18 → 24
+  why-this-trainer settings.padding_top: 40 → 52
+  why-this-trainer settings.padding_bottom: 20 → 52
+  progressive-resistance-intro settings.desktop_content_alignment: 'left' → 'center'
+  progressive-resistance-intro settings.mobile_content_alignment: 'left' → 'center'
+  progressive-resistance-intro settings.color_scheme: 'scheme-4' → 'background-1'
+  progressive-resistance-intro settings.custom_colors_background: '#0f0f0f' → '#ffffff'
+  progressive-resistance-intro settings.custom_colors_text: '#f5f5f0' → '#2e2a39'
+  progressive-resistance-intro settings.custom_colors_solid_button_background: '#f05a1a' → '#dd1d1d'
+  progressive-resistance-intro settings.custom_colors_outline_button: '#f05a1a' → '#dd1d1d'
+  progressive-resistance-intro settings.padding_top: 30 → 40
+  progressive-resistance-intro/heading_12l (rich-text/heading) settings.heading_size: 'h2' → 'h1'
+  progressive-resistance-intro/heading_12l (rich-text/heading) settings.margin_top: 0 → 15
+  progressive-resistance-intro/heading_12l (rich-text/heading) settings.margin_bottom: 0 → 15
+  progressive-resistance-intro/text_12l_1 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  progressive-resistance-intro/text_12l_1 (rich-text/text) settings.text_size: 15 → 16
+  progressive-resistance-intro/text_12l_1 (rich-text/text) settings.margin_top: 12 → 15
+  progressive-resistance-intro/text_12l_1 (rich-text/text) settings.margin_bottom: 0 → 15
+  progressive-resistance-intro/text_12l_2 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  progressive-resistance-intro/text_12l_2 (rich-text/text) settings.text_size: 15 → 16
+  progressive-resistance-intro/text_12l_2 (rich-text/text) settings.margin_top: 9 → 15
+  progressive-resistance-intro/text_12l_2 (rich-text/text) settings.margin_bottom: 0 → 15
+  resistance-levels settings.desktop_heading_size: 22 → 24
+  resistance-levels settings.mobile_heading_size: 18 → 22
+  resistance-levels settings.desktop_text_size: 14 → 16
+  resistance-levels settings.mobile_text_size: 13 → 15
+  resistance-levels settings.columns_desktop: 4 → 3
+  resistance-levels settings.color_scheme: 'scheme-4' → 'background-1'
+  resistance-levels settings.cards_color_scheme: 'background-1' → 'bg-overlay'
+  resistance-levels settings.image_width: '100%' → 'full'
+  resistance-levels settings.image_ratio: '1-1' → 'square'
+  resistance-levels settings.desktop_container_padding_y: 16 → 24
+  resistance-levels settings.desktop_container_padding_x: 12 → 24
+  resistance-levels settings.mobile_container_padding_y: 16 → 24
+  resistance-levels settings.mobile_container_padding_x: 12 → 24
+  resistance-levels settings.padding_top: 20 → 52
+  resistance-levels settings.padding_bottom: 30 → 52
+  feature-match-feel settings.color_scheme: 'scheme-4' → 'background-1'
+  feature-match-feel settings.section_color_scheme: 'scheme-4' → 'background-1'
+  feature-match-feel settings.full_desktop_width: True → False
+  feature-match-feel settings.layout: 'image_first' → 'text_first'
+  feature-match-feel settings.content_layout: 'image_first' → 'no-overlap'
+  feature-match-feel settings.desktop_content_position: 'middle-center' → 'middle'
+  feature-match-feel settings.mobile_content_alignment: 'center' → 'left'
+  feature-match-feel settings.desktop_padding_top: 36 → 0
+  feature-match-feel settings.desktop_padding_bottom: 36 → 0
+  feature-match-feel/heading_f1 (image-with-text/heading) settings.heading_size: 'h2' → 'h1'
+  feature-match-feel/heading_f1 (image-with-text/heading) settings.margin_bottom: 12 → 15
+  feature-match-feel/text_f1 (image-with-text/text) settings.text_size: 15 → 14
+  feature-match-feel/text_f1 (image-with-text/text) settings.margin_bottom: 0 → 15
+  feature-muscle-targeting settings.color_scheme: 'scheme-4' → 'background-1'
+  feature-muscle-targeting settings.section_color_scheme: 'scheme-4' → 'background-1'
+  feature-muscle-targeting settings.full_desktop_width: True → False
+  feature-muscle-targeting settings.content_layout: 'text_first' → 'no-overlap'
+  feature-muscle-targeting settings.desktop_content_position: 'middle-center' → 'middle'
+  feature-muscle-targeting settings.mobile_content_alignment: 'center' → 'left'
+  feature-muscle-targeting settings.desktop_padding_top: 36 → 0
+  feature-muscle-targeting settings.desktop_padding_bottom: 36 → 0
+  feature-muscle-targeting/heading_f2 (image-with-text/heading) settings.heading_size: 'h2' → 'h1'
+  feature-muscle-targeting/heading_f2 (image-with-text/heading) settings.margin_bottom: 12 → 15
+  feature-muscle-targeting/text_f2 (image-with-text/text) settings.text_size: 15 → 14
+  feature-muscle-targeting/text_f2 (image-with-text/text) settings.margin_bottom: 0 → 15
+  feature-beechwood-build settings.color_scheme: 'scheme-4' → 'background-1'
+  feature-beechwood-build settings.section_color_scheme: 'scheme-4' → 'background-1'
+  feature-beechwood-build settings.full_desktop_width: True → False
+  feature-beechwood-build settings.layout: 'image_first' → 'text_first'
+  feature-beechwood-build settings.content_layout: 'image_first' → 'no-overlap'
+  feature-beechwood-build settings.desktop_content_position: 'middle-center' → 'middle'
+  feature-beechwood-build settings.mobile_content_alignment: 'center' → 'left'
+  feature-beechwood-build settings.desktop_padding_top: 36 → 0
+  feature-beechwood-build settings.desktop_padding_bottom: 36 → 0
+  feature-beechwood-build/heading_f3 (image-with-text/heading) settings.heading_size: 'h2' → 'h1'
+  feature-beechwood-build/heading_f3 (image-with-text/heading) settings.margin_bottom: 12 → 15
+  feature-beechwood-build/text_f3 (image-with-text/text) settings.text_size: 15 → 14
+  feature-beechwood-build/text_f3 (image-with-text/text) settings.margin_bottom: 0 → 15
+  feature-solo-training settings.color_scheme: 'scheme-4' → 'background-1'
+  feature-solo-training settings.section_color_scheme: 'scheme-4' → 'background-1'
+  feature-solo-training settings.full_desktop_width: True → False
+  feature-solo-training settings.content_layout: 'text_first' → 'no-overlap'
+  feature-solo-training settings.desktop_content_position: 'middle-center' → 'middle'
+  feature-solo-training settings.mobile_content_alignment: 'center' → 'left'
+  feature-solo-training settings.desktop_padding_top: 36 → 0
+  feature-solo-training settings.desktop_padding_bottom: 36 → 0
+  feature-solo-training/heading_f4 (image-with-text/heading) settings.heading_size: 'h2' → 'h1'
+  feature-solo-training/heading_f4 (image-with-text/heading) settings.margin_bottom: 12 → 15
+  feature-solo-training/text_f4 (image-with-text/text) settings.text_size: 15 → 14
+  feature-solo-training/text_f4 (image-with-text/text) settings.margin_bottom: 0 → 15
+  feature-elbow-pad settings.color_scheme: 'scheme-4' → 'background-1'
+  feature-elbow-pad settings.section_color_scheme: 'scheme-4' → 'background-1'
+  feature-elbow-pad settings.full_desktop_width: True → False
+  feature-elbow-pad settings.layout: 'image_first' → 'text_first'
+  feature-elbow-pad settings.content_layout: 'image_first' → 'no-overlap'
+  feature-elbow-pad settings.desktop_content_position: 'middle-center' → 'middle'
+  feature-elbow-pad settings.mobile_content_alignment: 'center' → 'left'
+  feature-elbow-pad settings.desktop_padding_top: 36 → 0
+  feature-elbow-pad settings.desktop_padding_bottom: 36 → 0
+  feature-elbow-pad/heading_f5 (image-with-text/heading) settings.heading_size: 'h2' → 'h1'
+  feature-elbow-pad/heading_f5 (image-with-text/heading) settings.margin_bottom: 12 → 15
+  feature-elbow-pad/text_f5 (image-with-text/text) settings.text_size: 15 → 14
+  feature-elbow-pad/text_f5 (image-with-text/text) settings.margin_bottom: 0 → 15
+  specifications settings.desktop_heading_size: 38 → 24
+  specifications settings.mobile_heading_size: 24 → 22
+  specifications settings.desktop_text_size: 14 → 16
+  specifications settings.mobile_text_size: 13 → 15
+  specifications settings.columns_desktop: 4 → 3
+  specifications settings.color_scheme: 'scheme-4' → 'background-1'
+  specifications settings.cards_color_scheme: 'background-1' → 'bg-overlay'
+  specifications settings.image_width: '100%' → 'full'
+  specifications settings.image_ratio: '1-1' → 'square'
+  specifications settings.desktop_container_padding_y: 16 → 24
+  specifications settings.desktop_container_padding_x: 14 → 24
+  specifications settings.mobile_container_padding_y: 16 → 24
+  specifications settings.mobile_container_padding_x: 14 → 24
+  specifications settings.padding_top: 40 → 52
+  specifications settings.padding_bottom: 20 → 52
+  comparison settings.desktop_content_alignment: 'left' → 'center'
+  comparison settings.mobile_content_alignment: 'left' → 'center'
+  comparison settings.color_scheme: 'scheme-4' → 'background-1'
+  comparison settings.custom_colors_background: '#1a1a1a' → '#ffffff'
+  comparison settings.custom_colors_text: '#f5f5f0' → '#2e2a39'
+  comparison settings.custom_colors_solid_button_background: '#f05a1a' → '#dd1d1d'
+  comparison settings.custom_colors_outline_button: '#f05a1a' → '#dd1d1d'
+  comparison settings.padding_bottom: 20 → 0
+  comparison/heading_comp (rich-text/heading) settings.heading_size: 'h2' → 'h1'
+  comparison/heading_comp (rich-text/heading) settings.margin_top: 0 → 15
+  comparison/heading_comp (rich-text/heading) settings.margin_bottom: 0 → 15
+  comparison/text_comp_intro (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_intro (rich-text/text) settings.text_size: 15 → 16
+  comparison/text_comp_intro (rich-text/text) settings.margin_top: 12 → 15
+  comparison/text_comp_intro (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_1 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_1 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_1 (rich-text/text) settings.margin_top: 12 → 15
+  comparison/text_comp_1 (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_2 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_2 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_2 (rich-text/text) settings.margin_top: 9 → 15
+  comparison/text_comp_2 (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_3 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_3 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_3 (rich-text/text) settings.margin_top: 9 → 15
+  comparison/text_comp_3 (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_4 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_4 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_4 (rich-text/text) settings.margin_top: 9 → 15
+  comparison/text_comp_4 (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_5 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_5 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_5 (rich-text/text) settings.margin_top: 9 → 15
+  comparison/text_comp_5 (rich-text/text) settings.margin_bottom: 0 → 15
+  comparison/text_comp_6 (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  comparison/text_comp_6 (rich-text/text) settings.text_size: 14 → 16
+  comparison/text_comp_6 (rich-text/text) settings.margin_top: 9 → 15
+  comparison/text_comp_6 (rich-text/text) settings.margin_bottom: 0 → 15
+  whats-in-the-box settings.desktop_content_alignment: 'left' → 'center'
+  whats-in-the-box settings.mobile_content_alignment: 'left' → 'center'
+  whats-in-the-box settings.color_scheme: 'scheme-4' → 'background-1'
+  whats-in-the-box settings.custom_colors_background: '#1a1a1a' → '#ffffff'
+  whats-in-the-box settings.custom_colors_text: '#f5f5f0' → '#2e2a39'
+  whats-in-the-box settings.custom_colors_solid_button_background: '#f05a1a' → '#dd1d1d'
+  whats-in-the-box settings.custom_colors_outline_button: '#f05a1a' → '#dd1d1d'
+  whats-in-the-box settings.padding_top: 30 → 40
+  whats-in-the-box settings.padding_bottom: 20 → 0
+  whats-in-the-box/heading_box (rich-text/heading) settings.heading_size: 'h2' → 'h1'
+  whats-in-the-box/heading_box (rich-text/heading) settings.margin_top: 0 → 15
+  whats-in-the-box/heading_box (rich-text/heading) settings.margin_bottom: 0 → 15
+  whats-in-the-box/text_box (rich-text/text) settings.mobile_alignment: 'mobile-left' → 'mobile-center'
+  whats-in-the-box/text_box (rich-text/text) settings.text_size: 15 → 16
+  whats-in-the-box/text_box (rich-text/text) settings.margin_top: 12 → 15
+  whats-in-the-box/text_box (rich-text/text) settings.margin_bottom: 0 → 15
+  customer-reviews settings.desktop_heading_size: 30 → 24
+  customer-reviews settings.mobile_heading_size: 24 → 22
+  customer-reviews settings.desktop_text_size: 14 → 16
+  customer-reviews settings.mobile_text_size: 13 → 15
+  customer-reviews settings.columns_desktop: 4 → 3
+  customer-reviews settings.color_scheme: 'scheme-4' → 'background-1'
+  customer-reviews settings.cards_color_scheme: 'background-1' → 'bg-overlay'
+  customer-reviews settings.image_width: '100%' → 'full'
+  customer-reviews settings.image_ratio: '1-1' → 'square'
+  customer-reviews settings.column_alignment: 'left' → 'center'
+  customer-reviews settings.desktop_container_padding_y: 20 → 24
+  customer-reviews settings.desktop_container_padding_x: 18 → 24
+  customer-reviews settings.mobile_container_padding_y: 20 → 24
+  customer-reviews settings.mobile_container_padding_x: 18 → 24
+  customer-reviews settings.padding_top: 40 → 52
+  customer-reviews settings.padding_bottom: 20 → 52
+  guarantee settings.color_scheme: 'scheme-4' → 'background-1'
+  guarantee settings.custom_colors_background: '#1a1005' → '#ffffff'
+  guarantee settings.custom_colors_text: '#c8c0b0' → '#2e2a39'
+  guarantee settings.custom_colors_solid_button_background: '#c8a04a' → '#dd1d1d'
+  guarantee settings.custom_colors_outline_button: '#c8a04a' → '#dd1d1d'
+  guarantee settings.padding_top: 32 → 40
+  guarantee settings.padding_bottom: 32 → 0
+  guarantee/heading_guarantee (rich-text/heading) settings.heading_size: 'h2' → 'h1'
+  guarantee/heading_guarantee (rich-text/heading) settings.alignment: 'center' → 'left'
+  guarantee/heading_guarantee (rich-text/heading) settings.mobile_alignment: 'mobile-center' → 'mobile-left'
+  guarantee/heading_guarantee (rich-text/heading) settings.margin_top: 0 → 15
+  guarantee/heading_guarantee (rich-text/heading) settings.margin_bottom: 0 → 15
+  guarantee/text_guarantee (rich-text/text) settings.alignment: 'center' → 'left'
+  guarantee/text_guarantee (rich-text/text) settings.text_size: 15 → 16
+  guarantee/text_guarantee (rich-text/text) settings.margin_top: 12 → 15
+  guarantee/text_guarantee (rich-text/text) settings.margin_bottom: 0 → 15
+330 changes made

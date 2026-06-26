@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "theme-new-hosfu",
   "sections": {
@@ -6,7 +15,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "custom_liquid": "<style>\n\n.shopify-payment-button__more-options,\n.shopify-payment-button__more-options-text,\n[data-testid=\"payment-button-more-options\"],\n.affirm-container,\n.affirm-modal,\n.affirm-messaging,\n.shop-pay-installments,\n.shop-pay-installments-container,\n.payment-button-more-options,\n.payment-button-installments,\n.payment-button-installments-text,\n.payment-button-installments-message,\n.payment-button-installments-offer,\n.payment-button-installments-link,\n.payment-button-installments-button,\n.payment-button-installments-modal,\n.payment-button-installments-popup,\n.payment-button-installments-banner,\n.payment-button-installments-badge,\n.payment-button-installments-label,\n.payment-button-installments-offer-text,\n.payment-button-installments-offer-link,\n.payment-button-installments-offer-button,\n.payment-button-installments-offer-modal,\n.payment-button-installments-offer-popup,\n.payment-button-installments-offer-banner,\n.payment-button-installments-offer-badge,\n.payment-button-installments-offer-label,\n.payment-button-installments-offer-text-container,\n.payment-button-installments-offer-link-container,\n.payment-button-installments-offer-button-container,\n.payment-button-installments-offer-modal-container,\n.payment-button-installments-offer-popup-container,\n.payment-button-installments-offer-banner-container,\n.payment-button-installments-offer-badge-container,\n.payment-button-installments-offer-label-container,\n[class*=\"installment\"],\n[class*=\"affirm\"],\n[class*=\"shop-pay\"],\n[class*=\"payment-button-more\"],\n[class*=\"more-options\"],\n[class*=\"pay-in-4\"],\n[class*=\"pay-in-4-installments\"],\n[class*=\"interest-free\"],\n[class*=\"installments\"],\n[class*=\"financing\"],\n[class*=\"klarna\"],\n[class*=\"afterpay\"],\n[class*=\"sezzle\"],\n[class*=\"quadpay\"],\n[class*=\"paypal-credit\"],\n[class*=\"paypal-installments\"],\n[class*=\"paypal-financing\"],\n[class*=\"paypal-pay-later\"],\n[class*=\"paypal-credit-message\"],\n[class*=\"paypal-credit-offer\"],\n[class*=\"paypal-credit-link\"],\n[class*=\"paypal-credit-button\"],\n[class*=\"paypal-credit-modal\"],\n[class*=\"paypal-credit-popup\"],\n[class*=\"paypal-credit-banner\"],\n[class*=\"paypal-credit-badge\"],\n[class*=\"paypal-credit-label\"],\n[class*=\"paypal-credit-text\"],\n[class*=\"paypal-credit-container\"],\n[class*=\"paypal-credit-wrapper\"],\n[class*=\"paypal-credit-section\"],\n[class*=\"paypal-credit-area\"],\n[class*=\"paypal-credit-zone\"],\n[class*=\"paypal-credit-region\"],\n[class*=\"paypal-credit-block\"],\n[class*=\"paypal-credit-element\"],\n[class*=\"paypal-credit-item\"],\n[class*=\"paypal-credit-part\"],\n[class*=\"paypal-credit-piece\"],\n[class*=\"paypal-credit-component\"],\n[class*=\"paypal-credit-widget\"],\n[class*=\"paypal-credit-frame\"],\n[class*=\"paypal-credit-iframe\"],\n[class*=\"paypal-credit-embed\"],\n[class*=\"paypal-credit-script\"],\n[class*=\"paypal-credit-code\"],\n[class*=\"paypal-credit-html\"],\n[class*=\"paypal-credit-xml\"],\n[class*=\"paypal-credit-json\"],\n[class*=\"paypal-credit-data\"],\n[class*=\"paypal-credit-info\"],\n[class*=\"paypal-credit-details\"],\n[class*=\"paypal-credit-description\"],\n[class*=\"paypal-credit-summary\"],\n[class*=\"paypal-credit-overview\"],\n[class*=\"paypal-credit-preview\"],\n[class*=\"paypal-credit-thumbnail\"],\n[class*=\"paypal-credit-image\"],\n[class*=\"paypal-credit-icon\"],\n[class*=\"paypal-credit-logo\"],\n[class*=\"paypal-credit-brand\"],\n[class*=\"paypal-credit-name\"],\n[class*=\"paypal-credit-title\"],\n[class*=\"paypal-credit-heading\"],\n[class*=\"paypal-credit-subheading\"],\n[class*=\"paypal-credit-caption\"],\n[class*=\"paypal-credit-subtitle\"],\n[class*=\"paypal-credit-description-text\"],\n[class*=\"paypal-credit-offer-text\"],\n[class*=\"paypal-credit-link-text\"],\n[class*=\"paypal-credit-button-text\"],\n[class*=\"paypal-credit-modal-text\"],\n[class*=\"paypal-credit-popup-text\"],\n[class*=\"paypal-credit-banner-text\"],\n[class*=\"paypal-credit-badge-text\"],\n[class*=\"paypal-credit-label-text\"],\n[class*=\"paypal-credit-container-text\"],\n[class*=\"paypal-credit-wrapper-text\"],\n[class*=\"paypal-credit-section-text\"],\n[class*=\"paypal-credit-area-text\"],\n[class*=\"paypal-credit-zone-text\"],\n[class*=\"paypal-credit-region-text\"],\n[class*=\"paypal-credit-block-text\"],\n[class*=\"paypal-credit-element-text\"],\n[class*=\"paypal-credit-item-text\"],\n[class*=\"paypal-credit-part-text\"],\n[class*=\"paypal-credit-piece-text\"],\n[class*=\"paypal-credit-component-text\"],\n[class*=\"paypal-credit-widget-text\"],\n[class*=\"paypal-credit-frame-text\"],\n[class*=\"paypal-credit-iframe-text\"],\n[class*=\"paypal-credit-embed-text\"],\n[class*=\"paypal-credit-script-text\"],\n[class*=\"paypal-credit-code-text\"],\n[class*=\"paypal-credit-html-text\"],\n[class*=\"paypal-credit-xml-text\"],\n[class*=\"paypal-credit-json-text\"],\n[class*=\"paypal-credit-data-text\"],\n[class*=\"paypal-credit-info-text\"],\n[class*=\"paypal-credit-details-text\"],\n[class*=\"paypal-credit-description-text\"],\n[class*=\"paypal-credit-summary-text\"],\n[class*=\"paypal-credit-overview-text\"],\n[class*=\"paypal-credit-preview-text\"],\n[class*=\"paypal-credit-thumbnail-text\"],\n[class*=\"paypal-credit-image-text\"],\n[class*=\"paypal-credit-icon-text\"],\n[class*=\"paypal-credit-logo-text\"],\n[class*=\"paypal-credit-brand-text\"],\n[class*=\"paypal-credit-name-text\"],\n[class*=\"paypal-credit-title-text\"],\n[class*=\"paypal-credit-heading-text\"],\n[class*=\"paypal-credit-subheading-text\"],\n[class*=\"paypal-credit-caption-text\"],\n[class*=\"paypal-credit-subtitle-text\"] {\n  display: none !important;\n  visibility: hidden !important;\n  opacity: 0 !important;\n  height: 0 !important;\n  width: 0 !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  border: none !important;\n  overflow: hidden !important;\n  pointer-events: none !important;\n}\n\n\n.shopify-payment-button__more-options {\n  display: none !important;\n}\n\n\nbutton[aria-label*=\"installment\"],\nbutton[aria-label*=\"financing\"],\nbutton[aria-label*=\"pay later\"],\nbutton[aria-label*=\"pay in\"],\nbutton[aria-label*=\"interest-free\"],\nbutton[aria-label*=\"affirm\"],\nbutton[aria-label*=\"klarna\"],\nbutton[aria-label*=\"afterpay\"],\nbutton[aria-label*=\"sezzle\"],\nbutton[aria-label*=\"quadpay\"],\nbutton[aria-label*=\"paypal\"] {\n  display: none !important;\n}\n\n\n*:has-text(\"Pay in 4\"),\n*:has-text(\"interest-free\"),\n*:has-text(\"installment\"),\n*:has-text(\"financing\"),\n*:has-text(\"pay later\") {\n  display: none !important;\n}\n\n\n.scroll-to-top-btn { background: #E5692B !important; }\n</style>",
+        "custom_liquid": "<style>\n/* Hide Shop Pay Installments \"Pay in 4\" message */\n.shopify-payment-button__more-options,\n.shopify-payment-button__more-options-text,\n[data-testid=\"payment-button-more-options\"],\n.affirm-container,\n.affirm-modal,\n.affirm-messaging,\n.shop-pay-installments,\n.shop-pay-installments-container,\n.payment-button-more-options,\n.payment-button-installments,\n.payment-button-installments-text,\n.payment-button-installments-message,\n.payment-button-installments-offer,\n.payment-button-installments-link,\n.payment-button-installments-button,\n.payment-button-installments-modal,\n.payment-button-installments-popup,\n.payment-button-installments-banner,\n.payment-button-installments-badge,\n.payment-button-installments-label,\n.payment-button-installments-offer-text,\n.payment-button-installments-offer-link,\n.payment-button-installments-offer-button,\n.payment-button-installments-offer-modal,\n.payment-button-installments-offer-popup,\n.payment-button-installments-offer-banner,\n.payment-button-installments-offer-badge,\n.payment-button-installments-offer-label,\n.payment-button-installments-offer-text-container,\n.payment-button-installments-offer-link-container,\n.payment-button-installments-offer-button-container,\n.payment-button-installments-offer-modal-container,\n.payment-button-installments-offer-popup-container,\n.payment-button-installments-offer-banner-container,\n.payment-button-installments-offer-badge-container,\n.payment-button-installments-offer-label-container,\n[class*=\"installment\"],\n[class*=\"affirm\"],\n[class*=\"shop-pay\"],\n[class*=\"payment-button-more\"],\n[class*=\"more-options\"],\n[class*=\"pay-in-4\"],\n[class*=\"pay-in-4-installments\"],\n[class*=\"interest-free\"],\n[class*=\"installments\"],\n[class*=\"financing\"],\n[class*=\"klarna\"],\n[class*=\"afterpay\"],\n[class*=\"sezzle\"],\n[class*=\"quadpay\"],\n[class*=\"paypal-credit\"],\n[class*=\"paypal-installments\"],\n[class*=\"paypal-financing\"],\n[class*=\"paypal-pay-later\"],\n[class*=\"paypal-credit-message\"],\n[class*=\"paypal-credit-offer\"],\n[class*=\"paypal-credit-link\"],\n[class*=\"paypal-credit-button\"],\n[class*=\"paypal-credit-modal\"],\n[class*=\"paypal-credit-popup\"],\n[class*=\"paypal-credit-banner\"],\n[class*=\"paypal-credit-badge\"],\n[class*=\"paypal-credit-label\"],\n[class*=\"paypal-credit-text\"],\n[class*=\"paypal-credit-container\"],\n[class*=\"paypal-credit-wrapper\"],\n[class*=\"paypal-credit-section\"],\n[class*=\"paypal-credit-area\"],\n[class*=\"paypal-credit-zone\"],\n[class*=\"paypal-credit-region\"],\n[class*=\"paypal-credit-block\"],\n[class*=\"paypal-credit-element\"],\n[class*=\"paypal-credit-item\"],\n[class*=\"paypal-credit-part\"],\n[class*=\"paypal-credit-piece\"],\n[class*=\"paypal-credit-component\"],\n[class*=\"paypal-credit-widget\"],\n[class*=\"paypal-credit-frame\"],\n[class*=\"paypal-credit-iframe\"],\n[class*=\"paypal-credit-embed\"],\n[class*=\"paypal-credit-script\"],\n[class*=\"paypal-credit-code\"],\n[class*=\"paypal-credit-html\"],\n[class*=\"paypal-credit-xml\"],\n[class*=\"paypal-credit-json\"],\n[class*=\"paypal-credit-data\"],\n[class*=\"paypal-credit-info\"],\n[class*=\"paypal-credit-details\"],\n[class*=\"paypal-credit-description\"],\n[class*=\"paypal-credit-summary\"],\n[class*=\"paypal-credit-overview\"],\n[class*=\"paypal-credit-preview\"],\n[class*=\"paypal-credit-thumbnail\"],\n[class*=\"paypal-credit-image\"],\n[class*=\"paypal-credit-icon\"],\n[class*=\"paypal-credit-logo\"],\n[class*=\"paypal-credit-brand\"],\n[class*=\"paypal-credit-name\"],\n[class*=\"paypal-credit-title\"],\n[class*=\"paypal-credit-heading\"],\n[class*=\"paypal-credit-subheading\"],\n[class*=\"paypal-credit-caption\"],\n[class*=\"paypal-credit-subtitle\"],\n[class*=\"paypal-credit-description-text\"],\n[class*=\"paypal-credit-offer-text\"],\n[class*=\"paypal-credit-link-text\"],\n[class*=\"paypal-credit-button-text\"],\n[class*=\"paypal-credit-modal-text\"],\n[class*=\"paypal-credit-popup-text\"],\n[class*=\"paypal-credit-banner-text\"],\n[class*=\"paypal-credit-badge-text\"],\n[class*=\"paypal-credit-label-text\"],\n[class*=\"paypal-credit-container-text\"],\n[class*=\"paypal-credit-wrapper-text\"],\n[class*=\"paypal-credit-section-text\"],\n[class*=\"paypal-credit-area-text\"],\n[class*=\"paypal-credit-zone-text\"],\n[class*=\"paypal-credit-region-text\"],\n[class*=\"paypal-credit-block-text\"],\n[class*=\"paypal-credit-element-text\"],\n[class*=\"paypal-credit-item-text\"],\n[class*=\"paypal-credit-part-text\"],\n[class*=\"paypal-credit-piece-text\"],\n[class*=\"paypal-credit-component-text\"],\n[class*=\"paypal-credit-widget-text\"],\n[class*=\"paypal-credit-frame-text\"],\n[class*=\"paypal-credit-iframe-text\"],\n[class*=\"paypal-credit-embed-text\"],\n[class*=\"paypal-credit-script-text\"],\n[class*=\"paypal-credit-code-text\"],\n[class*=\"paypal-credit-html-text\"],\n[class*=\"paypal-credit-xml-text\"],\n[class*=\"paypal-credit-json-text\"],\n[class*=\"paypal-credit-data-text\"],\n[class*=\"paypal-credit-info-text\"],\n[class*=\"paypal-credit-details-text\"],\n[class*=\"paypal-credit-description-text\"],\n[class*=\"paypal-credit-summary-text\"],\n[class*=\"paypal-credit-overview-text\"],\n[class*=\"paypal-credit-preview-text\"],\n[class*=\"paypal-credit-thumbnail-text\"],\n[class*=\"paypal-credit-image-text\"],\n[class*=\"paypal-credit-icon-text\"],\n[class*=\"paypal-credit-logo-text\"],\n[class*=\"paypal-credit-brand-text\"],\n[class*=\"paypal-credit-name-text\"],\n[class*=\"paypal-credit-title-text\"],\n[class*=\"paypal-credit-heading-text\"],\n[class*=\"paypal-credit-subheading-text\"],\n[class*=\"paypal-credit-caption-text\"],\n[class*=\"paypal-credit-subtitle-text\"] {\n  display: none !important;\n  visibility: hidden !important;\n  opacity: 0 !important;\n  height: 0 !important;\n  width: 0 !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  border: none !important;\n  overflow: hidden !important;\n  pointer-events: none !important;\n}\n\n/* Additional targeting for Shop Pay Installments */\n.shopify-payment-button__more-options {\n  display: none !important;\n}\n\n/* Hide the \"more options\" button that reveals installments */\nbutton[aria-label*=\"installment\"],\nbutton[aria-label*=\"financing\"],\nbutton[aria-label*=\"pay later\"],\nbutton[aria-label*=\"pay in\"],\nbutton[aria-label*=\"interest-free\"],\nbutton[aria-label*=\"affirm\"],\nbutton[aria-label*=\"klarna\"],\nbutton[aria-label*=\"afterpay\"],\nbutton[aria-label*=\"sezzle\"],\nbutton[aria-label*=\"quadpay\"],\nbutton[aria-label*=\"paypal\"] {\n  display: none !important;\n}\n\n/* Hide any text containing \"Pay in 4\" or similar */\n*:has-text(\"Pay in 4\"),\n*:has-text(\"interest-free\"),\n*:has-text(\"installment\"),\n*:has-text(\"financing\"),\n*:has-text(\"pay later\") {\n  display: none !important;\n}\n\n/* Scroll to top button */\n.scroll-to-top-btn { background: #E5692B !important; }\n</style>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -951,6 +960,7 @@
           },
           "blocks": {}
         },
+        
         "desc_row_features_1": {
           "type": "collapsible-row",
           "settings": {
@@ -991,7 +1001,7 @@
             "open_state_collapse_bg": "#E5692B",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Dial from casual warm-up to full competition-grade intensity. With 12 distinct resistance settings, you’ll never plateau — this trainer grows with you. Pull the handle outward, shift the gear, and you’re training at the next level.</p>",
+            "content": "<p>Dial from casual warm-up to full competition-grade intensity. With 12 distinct resistance settings, you\u2019ll never plateau \u2014 this trainer grows with you. Pull the handle outward, shift the gear, and you\u2019re training at the next level.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -1002,7 +1012,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "8×8\" Elbow Pad Included",
+            "heading": "8\u00d78\" Elbow Pad Included",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -1038,7 +1048,7 @@
             "open_state_collapse_bg": "#E5692B",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Thick, padded 8×8\" elbow rest protects your joint during max-effort pulls — included in the box. The oversized pad keeps your elbow anchored for cleaner, more effective pulls without discomfort cutting your session short.</p>",
+            "content": "<p>Thick, padded 8\u00d78\" elbow rest protects your joint during max-effort pulls \u2014 included in the box. The oversized pad keeps your elbow anchored for cleaner, more effective pulls without discomfort cutting your session short.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -1049,7 +1059,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Zero Setup — Use Anywhere",
+            "heading": "Zero Setup \u2014 Use Anywhere",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -1085,7 +1095,7 @@
             "open_state_collapse_bg": "#E5692B",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss. Set it on any flat surface, adjust the resistance, and pull. Ready in seconds — zero setup or assembly required. Compact enough for truck cabs, hotel rooms, office breaks.</p>",
+            "content": "<p>Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss. Set it on any flat surface, adjust the resistance, and pull. Ready in seconds \u2014 zero setup or assembly required. Compact enough for truck cabs, hotel rooms, office breaks.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -1096,7 +1106,7 @@
           "type": "collapsible-row",
           "settings": {
             "open": true,
-            "heading": "Limited Offer — Save 40% Today",
+            "heading": "Limited Offer \u2014 Save 40% Today",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -1132,13 +1142,14 @@
             "open_state_collapse_bg": "#E5692B",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>FREE</strong> insured + tracked shipping on all orders. First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off. Ships in 24–48 hours with tracking. 30-day money-back guarantee.</p>",
+            "content": "<p><strong>FREE</strong> insured + tracked shipping on all orders. First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off. Ships in 24\u201348 hours with tracking. 30-day money-back guarantee.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
           },
           "blocks": {}
         },
+
         "desc_row_features_5": {
           "type": "collapsible-row",
           "settings": {
@@ -1179,7 +1190,7 @@
             "open_state_collapse_bg": "#E5692B",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p>Solid Eastern European beechwood frame. No cheap plastics, no flex — just a stable, premium feel every rep. Dense, absorbs vibration, feels warm and solid in the hand. Reinforced with stainless steel rods throughout. Non-slip grip handle stays secure even when your palms sweat.</p>",
+            "content": "<p>Solid Eastern European beechwood frame. No cheap plastics, no flex \u2014 just a stable, premium feel every rep. Dense, absorbs vibration, feels warm and solid in the hand. Reinforced with stainless steel rods throughout. Non-slip grip handle stays secure even when your palms sweat.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -1807,81 +1818,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "why-this-trainer": {
-      "type": "multicolumn",
-      "blocks": {
-        "why-col-1": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "title": "12 Resistance Levels",
-            "text": "<p>Dial it from casual warm-up to full competition-grade intensity. You'll never plateau.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "why-col-2": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "title": "Premium Beechwood",
-            "text": "<p>Solid Eastern European beechwood. No cheap plastics, no flex — just a stable, premium feel every rep.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "why-col-3": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "title": "8×8\" Elbow Pad",
-            "text": "<p>Thick, padded elbow rest protects your joint during max-effort pulls — included in the box.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "why-col-4": {
-          "type": "column",
-          "settings": {
-            "image_url": "",
-            "title": "Zero Setup — Use Anywhere",
-            "text": "<p>Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "why-col-1",
-        "why-col-2",
-        "why-col-3",
-        "why-col-4"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "Built For Real Arm Strength — Not Just Looks",
-        "heading_size": "h2",
-        "desktop_heading_size": 24,
-        "mobile_heading_size": 22,
-        "desktop_text_size": 16,
-        "mobile_text_size": 15,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "cards_color_scheme": "bg-overlay",
-        "stretch_cards": false,
-        "image_width": "full",
-        "image_ratio": "square",
-        "media_position": "top",
-        "column_alignment": "center",
-        "desktop_container_padding_y": 24,
-        "desktop_container_padding_x": 24,
-        "mobile_container_padding_y": 24,
-        "mobile_container_padding_x": 24,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -1894,7 +1830,6 @@
     "bladder_control_section",
     "real_words_section",
     "faq_section",
-    "medical_disclaimer_section",
-    "why-this-trainer"
+    "medical_disclaimer_section"
   ]
 }
