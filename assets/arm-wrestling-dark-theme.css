@@ -204,19 +204,36 @@ button[type="submit"] {
   background: var(--orange) !important;
 }
 
-/* Why cards grid */
-.bladder-control-steps {
-  background: var(--bg-dark) !important;
+/* Feature cards (bladder-steps) — baseline dark boxed card for all clusters */
+.bladder-steps__item {
+  background: var(--bg-card) !important;       /* #1a1a1a */
+  border: 1px solid #2a2a2a !important;
+  border-radius: var(--radius) !important;     /* 12px */
 }
 
-.bladder-control-steps__item {
-  background: var(--bg-card) !important;
-  border-color: #2a2a2a !important;
+/* "Why this trainer" cards (12 Resistance Levels cluster) — match reference .why-card */
+.bladder-steps-why_cards .bladder-steps__grid {
+  gap: 16px !important;
 }
-
-/* Level indicators */
-.level-indicator {
-  border-color: var(--orange) !important;
+.bladder-steps-why_cards .bladder-steps__item {
+  padding: 20px 18px !important;
+  text-align: left !important;
+}
+.bladder-steps-why_cards .bladder-steps__item h3 {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: var(--white) !important;
+  text-transform: uppercase !important;
+  letter-spacing: .03em !important;
+  line-height: 1.25 !important;
+  margin: 0 0 6px !important;
+}
+.bladder-steps-why_cards .bladder-steps__item p {
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
 }
 
 /* Comparison table */
