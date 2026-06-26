@@ -39,7 +39,7 @@
             "mobile_size": 32,
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 8
+            "margin_bottom": 9
           }
         },
         "rating_stars": {
@@ -54,7 +54,7 @@
             "alignment": "flex-start",
             "scroll_id": "",
             "margin_top": 0,
-            "margin_bottom": 20
+            "margin_bottom": 21
           }
         },
         "price": {
@@ -271,7 +271,7 @@
         "mobile_direction": "normal",
         "mobile_content_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 21
       }
     },
     "why_cards": {
@@ -370,7 +370,7 @@
         "mobile_direction": "normal",
         "mobile_content_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 21
       }
     },
     "level_cards": {
