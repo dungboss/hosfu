@@ -10,177 +10,177 @@
             "text": "<p>🏆 2026 Top Rated · Arm Training</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
-            "text_size": 13,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 15,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "title": {
           "type": "product_title",
           "settings": {
-            "uppercase_title": true,
+            "uppercase_title": false,
             "desktop_size": 36,
             "alignment": "left",
-            "mobile_size": 32,
+            "mobile_size": 26,
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 9
+            "margin_bottom": 0
           }
         },
         "rating_stars": {
           "type": "rating-stars",
           "settings": {
             "rating": 4.8,
-            "star_color": "#c8a04a",
+            "star_color": "#ffcc00",
             "bg_stars_style": "full",
             "bg_star_color": "#ececec",
             "label": "<strong>4.8 · 106 reviews</strong>",
-            "size": 14,
+            "size": 15,
             "alignment": "flex-start",
             "scroll_id": "",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 0
           }
         },
         "price": {
           "type": "product_price",
           "settings": {
-            "price_layout": "horizontal",
-            "price_color": "#f05a1a",
+            "price_layout": "price-first",
+            "price_color": "accent-1",
             "enable_custom_price_color": true,
-            "custom_price_color": "#f05a1a",
-            "compare_price_color": "#9a9a90",
-            "regular_price_size": 20,
-            "sale_price_size": 38,
-            "compare_price_size": 18
+            "custom_price_color": "#1a237e",
+            "compare_price_color": "text",
+            "regular_price_size": 25,
+            "sale_price_size": 20,
+            "compare_price_size": 16
           }
         },
         "shipping_info_1": {
           "type": "text-with-icon",
           "settings": {
-            "mobile_text_size": 13,
-            "desktop_text_size": 14,
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#f5f5f0",
+            "text_color": "#121212",
             "font_family": "body",
-            "icon_scale": 100,
-            "icon_color": "#f05a1a",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
             "styling_container": "container",
-            "enable_bg": true,
-            "bg_color": "#1a1a1a",
-            "border_size": 1,
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
             "border_style": "solid",
-            "border_color": "#333333",
-            "corner_radius": 12,
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
             "padding_block": 10,
             "padding_inline": 16,
             "container": true,
-            "margin_top": 3,
-            "margin_bottom": 3,
+            "margin_top": 9,
+            "margin_bottom": 0,
             "text": "<p>🚚 <strong>FREE</strong> Insured + Tracked Shipping on all orders</p>"
           }
         },
         "shipping_info_2": {
           "type": "text-with-icon",
           "settings": {
-            "mobile_text_size": 13,
-            "desktop_text_size": 14,
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#f5f5f0",
+            "text_color": "#121212",
             "font_family": "body",
-            "icon_scale": 100,
-            "icon_color": "#f05a1a",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
             "styling_container": "container",
-            "enable_bg": true,
-            "bg_color": "#1a1a1a",
-            "border_size": 1,
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
             "border_style": "solid",
-            "border_color": "#333333",
-            "corner_radius": 12,
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
             "padding_block": 10,
             "padding_inline": 16,
             "container": true,
-            "margin_top": 0,
-            "margin_bottom": 3,
+            "margin_top": 9,
+            "margin_bottom": 0,
             "text": "<p>⚡ <strong>Limited offer</strong> — free shipping valid for first 50 orders today</p>"
           }
         },
         "shipping_info_3": {
           "type": "text-with-icon",
           "settings": {
-            "mobile_text_size": 13,
-            "desktop_text_size": 14,
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#f5f5f0",
+            "text_color": "#121212",
             "font_family": "body",
-            "icon_scale": 100,
-            "icon_color": "#f05a1a",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
             "styling_container": "container",
-            "enable_bg": true,
-            "bg_color": "#1a1a1a",
-            "border_size": 1,
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
             "border_style": "solid",
-            "border_color": "#333333",
-            "corner_radius": 12,
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
             "padding_block": 10,
             "padding_inline": 16,
             "container": true,
-            "margin_top": 0,
-            "margin_bottom": 21,
+            "margin_top": 9,
+            "margin_bottom": 0,
             "text": "<p>🎁 First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off</p>"
           }
         },
         "variant_picker": {
           "type": "product_product-variant-picker-block",
           "settings": {
-            "picker_types": "button",
+            "picker_types": "pills, pills, pills",
             "custom_labels": "",
-            "skip_unavailable": true,
-            "append": "default",
-            "swatches_size": "large",
+            "skip_unavailable": false,
+            "append": "option_1_label_container",
+            "swatches_size": "medium",
             "swatches_custom_colors": "disabled",
-            "swatches_custom_colors_list": "",
+            "swatches_custom_colors_list": "#000000, #FFFFFF",
             "full_width_dropdowns": false
           }
         },
         "buy_buttons": {
           "type": "product_buy-buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "skip_cart": false,
-            "atc_append": "default",
+            "atc_append": "left",
             "atc_append_heights": "stretch-quantity",
             "uppercase_text": true,
-            "icon_scale": 100,
-            "icon_spacing": 4,
-            "atc_custom_label": "Grab Yours — Add to Cart →"
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "GET MY SURVIVAL HUB"
           }
         },
         "trust_strip": {
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_color": "#4caf78",
-            "desktop_icon_size": 14,
-            "desktop_spacing": 8,
-            "desktop_text_size": 12,
-            "mobile_icon_size": 14,
-            "mobile_spacing": 8,
-            "mobile_text_size": 12,
+            "icon_color": "accent-1",
+            "desktop_icon_size": 48,
+            "desktop_spacing": 12,
+            "desktop_text_size": 16,
+            "mobile_icon_size": 40,
+            "mobile_spacing": 10,
+            "mobile_text_size": 10,
             "text": "<p>30-Day Returns · Secure Checkout · Ships in 24–48 hrs · Premium Beechwood</p>"
           }
         },
@@ -189,12 +189,12 @@
           "settings": {
             "open": false,
             "heading": "Product Details & Shipping",
-            "heading_size": "h3",
+            "heading_size": "medium",
             "icon": "box",
             "filled_icon": false,
-            "collapse_icon": "",
-            "collapse_icon_style": "plus-minus",
-            "collapse_icon_radius": 20
+            "collapse_icon": "carret",
+            "collapse_icon_style": "standard",
+            "collapse_icon_radius": 15
           }
         }
       },
@@ -214,79 +214,79 @@
       "settings": {
         "display_id": false,
         "enable_sticky_info": true,
-        "color_scheme": "scheme-4",
+        "color_scheme": "background-1",
         "display_variant_image_first": false,
         "disable_prepend": false,
         "hide_variants": false,
         "variant_image_filtering": "none",
-        "image_zoom": "lightbox",
-        "thumbnails_ratio": "1-1",
-        "arrows_color_scheme": "background-1",
+        "image_zoom": "none",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
         "transparent_arrows": false,
-        "dots_color_scheme": "background-1",
+        "dots_color_scheme": "inverse",
         "video_player": "play_btn",
         "enable_video_looping": false,
         "autoplay_videos_pause_btn": false,
         "video_sound_btn": false,
         "video_timeline": false,
-        "play_btn_color_scheme": "background-1",
-        "sound_btn_color_scheme": "background-1",
-        "timeline_color": "#000",
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
         "media_size": "medium",
         "media_position": "left",
-        "gallery_layout": "thumbnails",
+        "gallery_layout": "thumbnail_slider",
         "desktop_thumbnails_position": "bottom",
         "desktop_thumbnails_count": 5,
         "desktop_vertical_thumbnails_width": 16,
         "desktop_vertical_thumbnails_hide_arrows": false,
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "desktop_arrows_position": "inside",
+        "desktop_arrows_position": "hidden",
         "mobile_media_corner_radius": 0,
-        "mobile_spacing_pixels": 8,
-        "mobile_arrows_position": "inside",
-        "mobile_pagination": "dots",
-        "mobile_thumbnails_position": "bottom",
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails_position": "hidden",
         "mobile_thumbnails_count": 5,
         "mobile_vertical_thumbnails_width": 22,
-        "mobile_vertical_thumbnails_hide_arrows": false,
-        "mobile_scroll_padding_percentage": 10,
-        "mobile_scroll_padding_pixels": 0,
-        "enable_mobile_outher_spacing": true,
-        "mobile_slides_container_width": 90,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 16,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
         "mobile_slides_inner_width": 100,
-        "trust_badge_position": "bottom-right",
+        "trust_badge_position": "top-right",
         "trust_badge_size": "medium",
         "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0,
-        "desktop_padding_top": 0,
-        "desktop_padding_bottom": 0,
-        "enabledesktopreview": false,
-        "review_background_color": "#f8f6f3",
-        "review_border_color": "#e2ddd4",
-        "star_color": "#c8a04a",
-        "username_color": "#121212",
-        "username": "",
-        "verified_customer": false,
-        "verified_icon_color": "#4caf78",
-        "verified_text_color": "#4caf78",
-        "verified_text": "Verified Customer",
-        "review_text_color": "#2e2a39",
-        "review_text": "",
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36,
+        "enabledesktopreview": true,
+        "review_background_color": "#ffffff",
+        "review_border_color": "#e9ecef",
+        "star_color": "#ffc107",
+        "username_color": "#000000",
+        "username": "Linda P.",
+        "verified_customer": true,
+        "verified_icon_color": "#28a745",
+        "verified_text_color": "#28a745",
+        "verified_text": "Verified Purchase",
+        "review_text_color": "#000000",
+        "review_text": "\" The best investment I've made for my family's safety this year. We lost power during a recent storm, and having the hand-crank radio and emergency flashlight gave us so much peace of mind. I'm finally feeling fully prepared for the unexpected. Thank you, Hosfu! \"",
         "enablegallerybottomtext": false,
-        "galleryinnerbackground": "#ffffff",
+        "galleryinnerbackground": "#000000",
         "galleryinneropacity": 0.8,
-        "galleryinnertextcolor": "#121212",
-        "galleryinnerradius": 4,
-        "galleryinnerheight": 60,
-        "galleryinnertext": "",
+        "galleryinnertextcolor": "#ffffff",
+        "galleryinnerradius": 8,
+        "galleryinnerheight": 80,
+        "galleryinnertext": "5-Star Rated Product",
         "enablegalleryreviewstars": false,
         "rating": 4.8,
-        "star_color2": "#c8a04a",
+        "star_color2": "#ffcc00",
         "bg_stars_style": "full",
         "bg_star_color2": "#ececec",
-        "label": "",
-        "size": 14
+        "label": "(Trusted by men)",
+        "size": 16
       }
     },
     "why-this-trainer": {
@@ -344,24 +344,24 @@
         "visibility": "always-display",
         "title": "Built For Real Arm Strength — Not Just Looks",
         "heading_size": "h2",
-        "desktop_heading_size": 38,
-        "mobile_heading_size": 24,
-        "desktop_text_size": 14,
-        "mobile_text_size": 13,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-4",
-        "cards_color_scheme": "background-1",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "bg-overlay",
         "stretch_cards": false,
-        "image_width": "100%",
-        "image_ratio": "1-1",
+        "image_width": "full",
+        "image_ratio": "square",
         "media_position": "top",
-        "column_alignment": "left",
-        "desktop_container_padding_y": 20,
-        "desktop_container_padding_x": 18,
-        "mobile_container_padding_y": 20,
-        "mobile_container_padding_x": 18,
-        "padding_top": 40,
-        "padding_bottom": 20
+        "column_alignment": "center",
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "progressive-resistance-intro": {
@@ -371,11 +371,11 @@
           "type": "heading",
           "settings": {
             "title": "12 Levels. One Trainer. For Life.",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_12l_1": {
@@ -383,12 +383,12 @@
           "settings": {
             "text": "<p>The biggest complaint about other arm wrestling trainers? They hit the ceiling too fast. One guy on Reddit summed it up perfectly: <em>\"Got strong enough in two weeks and there was nowhere to go.\"</em></p>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 12,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_12l_2": {
@@ -396,12 +396,12 @@
           "settings": {
             "text": "<p>We fixed that. With 12 distinct resistance settings — from light rehabilitation work all the way up to \"genuinely challenging for a seasoned gym-goer\" — this trainer grows with you. Pull the handle outward, shift the gear, and you're training at the next level. Simple.</p>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         }
       },
@@ -414,18 +414,18 @@
         "display_id": false,
         "visibility": "always-display",
         "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
         "full_width": true,
         "mobile_narrow_width": false,
-        "color_scheme": "scheme-4",
-        "custom_colors_background": "#0f0f0f",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#f5f5f0",
-        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#f05a1a",
-        "padding_top": 30,
+        "custom_colors_outline_button": "#dd1d1d",
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -484,24 +484,24 @@
         "visibility": "always-display",
         "title": "",
         "heading_size": "h2",
-        "desktop_heading_size": 22,
-        "mobile_heading_size": 18,
-        "desktop_text_size": 14,
-        "mobile_text_size": 13,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-4",
-        "cards_color_scheme": "background-1",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "bg-overlay",
         "stretch_cards": false,
-        "image_width": "100%",
-        "image_ratio": "1-1",
+        "image_width": "full",
+        "image_ratio": "square",
         "media_position": "top",
         "column_alignment": "center",
-        "desktop_container_padding_y": 16,
-        "desktop_container_padding_x": 12,
-        "mobile_container_padding_y": 16,
-        "mobile_container_padding_x": 12,
-        "padding_top": 20,
-        "padding_bottom": 30
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "feature-match-feel": {
@@ -511,11 +511,11 @@
           "type": "heading",
           "settings": {
             "title": "Train Like You're Already at the Table",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "text_f1": {
@@ -524,11 +524,11 @@
             "text": "<p>Generic curls and wrist rollers build muscle, sure — but they don't build <em>arm wrestling muscle</em>. The pulling angle, the tension curve, the way your forearm fires through the movement — it's completely different at the table.</p><p>This trainer's hydraulic resistance system is engineered to replicate that exact force curve. Every rep activates your forearms, wrists, and biceps the same way a real match would — so your strength transfers directly to performance.</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 0
+            "margin_bottom": 15
           }
         }
       },
@@ -542,19 +542,19 @@
         "image": "",
         "image_url": "",
         "height": "adapt",
-        "color_scheme": "scheme-4",
-        "section_color_scheme": "scheme-4",
-        "full_desktop_width": true,
-        "layout": "image_first",
-        "content_layout": "image_first",
-        "desktop_content_position": "middle-center",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_media_width": 50,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "feature-muscle-targeting": {
@@ -564,11 +564,11 @@
           "type": "heading",
           "settings": {
             "title": "Hit the Muscles That Actually Win",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "text_f2": {
@@ -577,11 +577,11 @@
             "text": "<p>Arm wrestling isn't just biceps. It's a full-arm chain: your forearm fires first, your biceps lock the angle, and your shoulder group stabilizes the whole thing. Miss any one of these and you'll lose to someone half your size.</p><p>This trainer is engineered to load all three, in the movement pattern that matters most.</p><p><strong>Targets:</strong> Forearm Muscles · Biceps Brachii · Shoulder Group · Grip Strength · Wrist Flexion · Pull Endurance</p>",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 0
+            "margin_bottom": 15
           }
         }
       },
@@ -595,19 +595,19 @@
         "image": "",
         "image_url": "",
         "height": "adapt",
-        "color_scheme": "scheme-4",
-        "section_color_scheme": "scheme-4",
-        "full_desktop_width": true,
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
         "layout": "text_first",
-        "content_layout": "text_first",
-        "desktop_content_position": "middle-center",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_media_width": 50,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "feature-beechwood-build": {
@@ -617,11 +617,11 @@
           "type": "heading",
           "settings": {
             "title": "Premium Beechwood — No Cheap Substitutes",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "text_f3": {
@@ -630,11 +630,11 @@
             "text": "<p>We chose Eastern European beechwood deliberately. It's dense, it absorbs vibration, it feels warm and solid in the hand — and it won't crack, flex, or creak under heavy resistance like the plastic-bodied trainers you'll find on generic marketplace listings.</p><ul><li>Solid beechwood frame — no wobble, no flex under load</li><li>Non-slip grip handle — stays secure even when your palms sweat</li><li>Stable base — no suction cups, no mounting, no setup needed</li><li>Reinforced with stainless steel rods throughout</li></ul>",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 0
+            "margin_bottom": 15
           }
         }
       },
@@ -648,19 +648,19 @@
         "image": "",
         "image_url": "",
         "height": "adapt",
-        "color_scheme": "scheme-4",
-        "section_color_scheme": "scheme-4",
-        "full_desktop_width": true,
-        "layout": "image_first",
-        "content_layout": "image_first",
-        "desktop_content_position": "middle-center",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_media_width": 50,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "feature-solo-training": {
@@ -670,11 +670,11 @@
           "type": "heading",
           "settings": {
             "title": "No Partner? No Problem.",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "text_f4": {
@@ -683,11 +683,11 @@
             "text": "<p>Finding a training partner at the right skill level, available when you are, who won't disappear after two sessions — that's the real challenge in arm wrestling training. This trainer removes that dependency entirely.</p><p>Set it on any flat surface. Adjust the resistance. Pull. That's it. You get targeted, consistent reps on your own schedule — whether it's 6am before work or 11pm after the gym.</p><ul><li>Ready in seconds — zero setup or assembly</li><li>Works on desks, tables, workbenches, kitchen counters</li><li>Compact enough for truck cabs, hotel rooms, office breaks</li></ul>",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 0
+            "margin_bottom": 15
           }
         }
       },
@@ -701,19 +701,19 @@
         "image": "",
         "image_url": "",
         "height": "adapt",
-        "color_scheme": "scheme-4",
-        "section_color_scheme": "scheme-4",
-        "full_desktop_width": true,
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
         "layout": "text_first",
-        "content_layout": "text_first",
-        "desktop_content_position": "middle-center",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_media_width": 50,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "feature-elbow-pad": {
@@ -723,11 +723,11 @@
           "type": "heading",
           "settings": {
             "title": "The 8×8\" Elbow Pad Matters More Than You Think",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
-            "margin_bottom": 12
+            "margin_bottom": 15
           }
         },
         "text_f5": {
@@ -736,11 +736,11 @@
             "text": "<p>One Amazon reviewer wrote: <em>\"Works amazing for training the appropriate muscles. Though mine never came with the pad.\"</em> — That's a complaint about a different product. Ours includes it.</p><p>The thick, 8×8\" comfort pad is designed specifically for the elbow position you hold during arm-wrestling-style pulls. Your joint stays cushioned and stable, so you can push harder and train longer without discomfort cutting your session short.</p><ul><li>8×8\" oversized pad — more coverage than standard trainers</li><li>Thick foam cushioning for high-rep sessions</li><li>Keeps your elbow anchored for cleaner, more effective pulls</li></ul>",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "text_size": 14,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
             "margin_top": 0,
-            "margin_bottom": 0
+            "margin_bottom": 15
           }
         }
       },
@@ -754,19 +754,19 @@
         "image": "",
         "image_url": "",
         "height": "adapt",
-        "color_scheme": "scheme-4",
-        "section_color_scheme": "scheme-4",
-        "full_desktop_width": true,
-        "layout": "image_first",
-        "content_layout": "image_first",
-        "desktop_content_position": "middle-center",
+        "color_scheme": "background-1",
+        "section_color_scheme": "background-1",
+        "full_desktop_width": false,
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "desktop_media_width": 50,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 0,
-        "desktop_padding_top": 36,
-        "desktop_padding_bottom": 36
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "specifications": {
@@ -846,24 +846,24 @@
         "visibility": "always-display",
         "title": "What You're Getting",
         "heading_size": "h2",
-        "desktop_heading_size": 38,
-        "mobile_heading_size": 24,
-        "desktop_text_size": 14,
-        "mobile_text_size": 13,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-4",
-        "cards_color_scheme": "background-1",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "bg-overlay",
         "stretch_cards": false,
-        "image_width": "100%",
-        "image_ratio": "1-1",
+        "image_width": "full",
+        "image_ratio": "square",
         "media_position": "top",
         "column_alignment": "center",
-        "desktop_container_padding_y": 16,
-        "desktop_container_padding_x": 14,
-        "mobile_container_padding_y": 16,
-        "mobile_container_padding_x": 14,
-        "padding_top": 40,
-        "padding_bottom": 20
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "comparison": {
@@ -873,11 +873,11 @@
           "type": "heading",
           "settings": {
             "title": "Why Most Arm Wrestling Trainers Fail You",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_intro": {
@@ -885,12 +885,12 @@
           "settings": {
             "text": "<p>Before we built this, we tested the competition. Here's the honest breakdown:</p>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 12,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_1": {
@@ -898,12 +898,12 @@
           "settings": {
             "text": "<h3>Resistance Adjustability</h3><ul><li>This Trainer: ✓ 12 levels — Cheap Spring Trainers: ✗ Fixed resistance only</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 12,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_2": {
@@ -911,12 +911,12 @@
           "settings": {
             "text": "<h3>Stability on Surface</h3><ul><li>This Trainer: ✓ Solid base, no suction cups — Cheap Spring Trainers: ✗ Suction cups that pop loose</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_3": {
@@ -924,12 +924,12 @@
           "settings": {
             "text": "<h3>Build Material</h3><ul><li>This Trainer: ✓ Premium beechwood — Cheap Spring Trainers: ✗ Cheap ABS plastic / thin metal</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_4": {
@@ -937,12 +937,12 @@
           "settings": {
             "text": "<h3>Elbow Pad Included</h3><ul><li>This Trainer: ✓ 8×8\" thick pad included — Cheap Spring Trainers: ✗ Usually sold separately</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_5": {
@@ -950,12 +950,12 @@
           "settings": {
             "text": "<h3>Realistic Movement Pattern</h3><ul><li>This Trainer: ✓ Hydraulic arm-wrestling motion — Cheap Spring Trainers: ✗ Generic spring curl</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_comp_6": {
@@ -963,12 +963,12 @@
           "settings": {
             "text": "<h3>Long-Term Progression</h3><ul><li>This Trainer: ✓ Scales from beginner to advanced — Cheap Spring Trainers: ✗ Easy to outgrow in weeks</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 14,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 9,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         }
       },
@@ -986,19 +986,19 @@
         "display_id": false,
         "visibility": "always-display",
         "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
         "full_width": true,
         "mobile_narrow_width": false,
-        "color_scheme": "scheme-4",
-        "custom_colors_background": "#1a1a1a",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#f5f5f0",
-        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#f05a1a",
+        "custom_colors_outline_button": "#dd1d1d",
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 0
       }
     },
     "whats-in-the-box": {
@@ -1008,11 +1008,11 @@
           "type": "heading",
           "settings": {
             "title": "📦 What's In The Box",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "alignment": "left",
             "mobile_alignment": "mobile-left",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_box": {
@@ -1020,12 +1020,12 @@
           "settings": {
             "text": "<ul><li>1× Premium Beechwood Arm Wrestling Trainer</li><li>1× 8×8\" Thickened Elbow Comfort Pad</li><li>Quick-Start Guide (adjustment instructions included)</li></ul>",
             "alignment": "left",
-            "mobile_alignment": "mobile-left",
-            "text_size": 15,
+            "mobile_alignment": "mobile-center",
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 12,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         }
       },
@@ -1037,19 +1037,19 @@
         "display_id": false,
         "visibility": "always-display",
         "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
         "full_width": true,
         "mobile_narrow_width": false,
-        "color_scheme": "scheme-4",
-        "custom_colors_background": "#1a1a1a",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#f5f5f0",
-        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#f05a1a",
-        "padding_top": 30,
-        "padding_bottom": 20
+        "custom_colors_outline_button": "#dd1d1d",
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "customer-reviews": {
@@ -1107,24 +1107,24 @@
         "visibility": "always-display",
         "title": "What Real Customers Are Saying",
         "heading_size": "h2",
-        "desktop_heading_size": 30,
-        "mobile_heading_size": 24,
-        "desktop_text_size": 14,
-        "mobile_text_size": 13,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-4",
-        "cards_color_scheme": "background-1",
+        "desktop_heading_size": 24,
+        "mobile_heading_size": 22,
+        "desktop_text_size": 16,
+        "mobile_text_size": 15,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "cards_color_scheme": "bg-overlay",
         "stretch_cards": false,
-        "image_width": "100%",
-        "image_ratio": "1-1",
+        "image_width": "full",
+        "image_ratio": "square",
         "media_position": "top",
-        "column_alignment": "left",
-        "desktop_container_padding_y": 20,
-        "desktop_container_padding_x": 18,
-        "mobile_container_padding_y": 20,
-        "mobile_container_padding_x": 18,
-        "padding_top": 40,
-        "padding_bottom": 20
+        "column_alignment": "center",
+        "desktop_container_padding_y": 24,
+        "desktop_container_padding_x": 24,
+        "mobile_container_padding_y": 24,
+        "mobile_container_padding_x": 24,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "guarantee": {
@@ -1134,24 +1134,24 @@
           "type": "heading",
           "settings": {
             "title": "🏆 Our Guarantee",
-            "heading_size": "h2",
-            "alignment": "center",
-            "mobile_alignment": "mobile-center",
-            "margin_top": 0,
-            "margin_bottom": 0
+            "heading_size": "h1",
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "text_guarantee": {
           "type": "text",
           "settings": {
             "text": "<p>We stand behind this trainer completely. If it's not the right fit within 30 days, send it back — no hassle, no long forms, no runaround. And if anything goes wrong from our side, we'll make it right.</p><p>🚚 Free Tracked Shipping · 🔄 30-Day Returns · 🔒 Secure Checkout · 📞 Responsive Support</p>",
-            "alignment": "center",
+            "alignment": "left",
             "mobile_alignment": "mobile-center",
-            "text_size": 15,
+            "text_size": 16,
             "enable_custom_color": false,
             "custom_text_color": "#ff0000",
-            "margin_top": 12,
-            "margin_bottom": 0
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         }
       },
@@ -1167,15 +1167,15 @@
         "mobile_content_alignment": "center",
         "full_width": true,
         "mobile_narrow_width": false,
-        "color_scheme": "scheme-4",
-        "custom_colors_background": "#1a1005",
+        "color_scheme": "background-1",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#c8c0b0",
-        "custom_colors_solid_button_background": "#c8a04a",
+        "custom_colors_text": "#2e2a39",
+        "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#c8a04a",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "custom_colors_outline_button": "#dd1d1d",
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     }
   },
