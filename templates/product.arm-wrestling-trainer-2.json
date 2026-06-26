@@ -65,7 +65,7 @@
             "enable_custom_price_color": true,
             "custom_price_color": "#f05a1a",
             "compare_price_color": "text",
-            "regular_price_size": 38,
+            "regular_price_size": 32,
             "sale_price_size": 20,
             "compare_price_size": 20,
             "displayed_badge": "sale",
