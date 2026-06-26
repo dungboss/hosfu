@@ -74,6 +74,40 @@
     line-height: 1.5;
   }
   {%- endif -%}
+  {%- if section.settings.card_style == 'level' -%}
+  .bladder-steps-{{ section.id }} .bladder-steps__grid {
+    max-width: 1040px;
+    gap: 18px;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item {
+    padding: 16px 14px;
+    min-height: 96px;
+    justify-content: center;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item:nth-child(1) { border-top: 4px solid #4caf78 !important; }
+  .bladder-steps-{{ section.id }} .bladder-steps__item:nth-child(2) { border-top: 4px solid #c8a04a !important; }
+  .bladder-steps-{{ section.id }} .bladder-steps__item:nth-child(3) { border-top: 4px solid #e8872a !important; }
+  .bladder-steps-{{ section.id }} .bladder-steps__item:nth-child(4) { border-top: 4px solid #e83040 !important; }
+  .bladder-steps-{{ section.id }} .bladder-steps__item h3 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 6px;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item h3 span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 8px !important;
+  }
+  .bladder-steps-{{ section.id }} .bladder-steps__item p {
+    font-size: 12.5px;
+    color: #b3b3b3;
+    margin: 0;
+    white-space: nowrap;
+  }
+  {%- endif -%}
   .bladder-steps-{{ section.id }} .bladder-steps__video-wrap {
     position: relative;
     width: 100%;
@@ -239,7 +273,8 @@
       "label": "Card style",
       "options": [
         { "value": "center", "label": "Centered" },
-        { "value": "icon_left", "label": "Icon left, text left-aligned" }
+        { "value": "icon_left", "label": "Icon left, text left-aligned" },
+        { "value": "level", "label": "Level cards (big number + colored top border)" }
       ],
       "default": "center"
     },

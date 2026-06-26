@@ -493,6 +493,7 @@
       "settings": {
         "title": "",
         "columns_desktop": 4,
+        "card_style": "level",
         "padding_top": 20,
         "padding_bottom": 40
       }
