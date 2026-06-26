@@ -1,0 +1,575 @@
+{
+  "layout": "theme-new-hosfu",
+  "sections": {
+    "mobile_btn_center_css": {
+      "type": "custom-liquid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "custom_liquid": "{{ 'arm-wrestling-dark-theme.css' | asset_url | stylesheet_tag }}",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "page_scroll_progress": {
+      "type": "page-scroll-progress",
+      "settings": {
+        "bar_height": 4,
+        "filled_color": "#f05a1a",
+        "corner_radius": 3,
+        "position": "top"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "badge": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#7b3a1c,#f05a1a);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin:32px 0 16px;\">🏆 2026 Top Rated · Arm Training</p>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "text_size": 13,
+            "enable_custom_color": false,
+            "custom_text_color": "#ffffff",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "title": {
+          "type": "product_title",
+          "settings": {
+            "uppercase_title": true,
+            "desktop_size": 48,
+            "alignment": "left",
+            "mobile_size": 32,
+            "mobile_alignment": "mobile-left",
+            "margin_top": 0,
+            "margin_bottom": 8
+          }
+        },
+        "rating_stars": {
+          "type": "rating-stars",
+          "settings": {
+            "rating": 4.8,
+            "star_color": "#c8a04a",
+            "bg_stars_style": "full",
+            "bg_star_color": "#2a2a2a",
+            "label": "<strong>4.8</strong> · 106 reviews",
+            "size": 16,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 20
+          }
+        },
+        "price": {
+          "type": "product_price",
+          "settings": {
+            "price_layout": "price-first",
+            "price_color": "accent-1",
+            "enable_custom_price_color": true,
+            "custom_price_color": "#f05a1a",
+            "compare_price_color": "text",
+            "regular_price_size": 38,
+            "sale_price_size": 20,
+            "compare_price_size": 20,
+            "displayed_badge": "sale",
+            "sale_badge_color": "accent-2",
+            "custom_badge_text": "Save 40%",
+            "icon_scale": 140,
+            "icon_1": "",
+            "filled_icon_1": false,
+            "icon_2": "",
+            "filled_icon_2": false,
+            "margin_top": 18,
+            "margin_bottom": 18
+          }
+        },
+        "shipping_notices": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"display:flex;flex-direction:column;gap:8px;background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;\"><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">🚚</span><span><strong style=\"color:#f05a1a;\">FREE</strong> Insured + Tracked Shipping on all orders</span></div><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">⚡</span><span><strong style=\"color:#f05a1a;\">Limited offer</strong> — free shipping valid for first 50 orders today</span></div><div style=\"display:flex;align-items:center;gap:10px;\"><span style=\"font-size:18px;\">🎁</span><span>First order? Use code <strong style=\"color:#f05a1a;\">WELCOME10OFF</strong> for an extra 10% off</span></div></div>",
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "text_size": 14,
+            "enable_custom_color": false,
+            "custom_text_color": "#f5f5f0",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "variant_picker": {
+          "type": "product_product-variant-picker-block",
+          "settings": {
+            "picker_types": "pills, pills, pills",
+            "custom_labels": "",
+            "skip_unavailable": false,
+            "append": "option_1_label_container",
+            "swatches_size": "medium",
+            "swatches_custom_colors": "disabled",
+            "swatches_custom_colors_list": "",
+            "full_width_dropdowns": false,
+            "breaks_style": "normal",
+            "breaks_headline": "BUNDLE & SAVE",
+            "breaks_prices_layout": "price-first-vertical",
+            "breaks_display_selected_indicator": true,
+            "breaks_border_radius": 10,
+            "breaks_border_width": 2,
+            "breaks_color_scheme": "accent-1",
+            "breaks_vertical_items_align": "flex-start",
+            "breaks_badges": "[empty], Most popular, [empty]",
+            "breaks_badge_style": "1",
+            "breaks_badge_color": "accent-1",
+            "breaks_displayed_images": "none",
+            "breaks_custom_images": "",
+            "breaks_image_width": 70,
+            "breaks_space_images": true,
+            "breaks_vertical_images_position": "top",
+            "breaks_labels": "[name], [name], [name]",
+            "breaks_benefits": "[empty], Free Shipping, Free Shipping",
+            "breaks_benefit_position": "top",
+            "breaks_benefit_style": "outlined",
+            "breaks_benefit_color": "accent-1",
+            "breaks_captions": "",
+            "breaks_price_texts": "[price], [price], [price]",
+            "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
+            "margin_top": 12,
+            "margin_bottom": 0
+          }
+        },
+        "buy_buttons": {
+          "type": "product_buy-buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "skip_cart": false,
+            "atc_append": "left",
+            "atc_append_heights": "stretch-quantity",
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "atc_custom_label": "GRAB YOURS — ADD TO CART →",
+            "display_price": false,
+            "price_position": "left",
+            "price_separator": "•",
+            "enable_custom_color": true,
+            "custom_color": "#f05a1a",
+            "custom_text_color": "#ffffff",
+            "enable_secondary_btn": false,
+            "secondary_btn_label": "",
+            "secondary_btn_enable_custom_color": false,
+            "secondary_btn_custom_color": "#8d184d",
+            "margin_top": 24,
+            "margin_bottom": 12
+          },
+          "blocks": {
+            "atc_qty": {
+              "type": "product_atc-quantity-selector",
+              "settings": {}
+            }
+          },
+          "block_order": ["atc_qty"]
+        },
+        "trust_strip": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"display:flex;justify-content:center;gap:20px;font-size:12px;color:#9a9a90;margin-bottom:32px;flex-wrap:wrap;\"><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> 30-Day Returns</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Secure Checkout</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Ships in 24–48 hrs</span><span style=\"display:flex;align-items:center;gap:4px;\"><span style=\"color:#4caf78;\">✓</span> Premium Beechwood</span></div>",
+            "alignment": "center",
+            "mobile_alignment": "mobile-center",
+            "text_size": 12,
+            "enable_custom_color": false,
+            "custom_text_color": "#9a9a90",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "sticky_atc": {
+          "type": "product_sticky-atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "GRAB YOURS — ADD TO CART",
+            "enable_custom_btn_color": true,
+            "custom_btn_color": "#f05a1a",
+            "color_scheme": "background-1",
+            "star_color": "#c8a04a",
+            "stars_label": "(106 Reviews)",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": false,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "badge",
+        "title",
+        "rating_stars",
+        "price",
+        "shipping_notices",
+        "variant_picker",
+        "buy_buttons",
+        "trust_strip",
+        "sticky_atc"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "background-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "why_this_trainer": {
+      "type": "multirow",
+      "blocks": {
+        "why_intro": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Why This Trainer?",
+            "title": "<strong>Built For Real Arm Strength — Not Just Looks</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>Most forearm tools on the market are either too easy, fall apart after a week, or slip off your desk mid-rep (yes, we've all seen those suction cup disasters). This trainer is different.</p><p>The Portable Arm Wrestling Trainer uses a <strong>hydraulic resistance system</strong> that mimics the actual force you'd feel at the table. No gimmicks — just focused, progressive, functional strength training you can do solo, anywhere.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": ["why_intro"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "0",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "text-first",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#f05a1a",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#f05a1a",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#0f0f0f",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "why_cards": {
+      "type": "bladder-control-steps",
+      "blocks": {
+        "card_1": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "⚙️ 12 Resistance Levels",
+            "text": "Dial it from casual warm-up to full competition-grade intensity. You'll never plateau."
+          }
+        },
+        "card_2": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "🪵 Premium Beechwood",
+            "text": "Solid Eastern European beechwood. No cheap plastics, no flex — just a stable, premium feel every rep."
+          }
+        },
+        "card_3": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "🛡️ 8×8\" Elbow Pad",
+            "text": "Thick, padded elbow rest protects your joint during max-effort pulls — included in the box."
+          }
+        },
+        "card_4": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "🏠 Zero Setup — Use Anywhere",
+            "text": "Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss."
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2", "card_3", "card_4"],
+      "settings": {
+        "title": "",
+        "columns_desktop": 4,
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "twelve_levels": {
+      "type": "multirow",
+      "blocks": {
+        "levels_intro": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Progressive Resistance",
+            "title": "<strong>12 Levels. One Trainer. For Life.</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>The biggest complaint about other arm wrestling trainers? They hit the ceiling too fast. One guy on Reddit summed it up perfectly: <em>\"Got strong enough in two weeks and there was nowhere to go.\"</em></p><p>We fixed that. With <strong>12 distinct resistance settings</strong> — from light rehabilitation work all the way up to genuinely challenging for a seasoned gym-goer — this trainer grows with you. Pull the handle outward, shift the gear, and you're training at the next level. Simple.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": ["levels_intro"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "0",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "text-first",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#f05a1a",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#f05a1a",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#0f0f0f",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "level_cards": {
+      "type": "bladder-control-steps",
+      "blocks": {
+        "level_1_3": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "1–3 SIMPLE",
+            "text": "Beginners & warm-up"
+          }
+        },
+        "level_4_6": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "4–6 NORMAL",
+            "text": "Intermediate training"
+          }
+        },
+        "level_7_9": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "7–9 HARD",
+            "text": "Serious strength gains"
+          }
+        },
+        "level_10_12": {
+          "type": "step",
+          "settings": {
+            "video": "",
+            "video_url": "",
+            "title": "10–12 SUPER DIFFICULT",
+            "text": "Competition-level prep"
+          }
+        }
+      },
+      "block_order": ["level_1_3", "level_4_6", "level_7_9", "level_10_12"],
+      "settings": {
+        "title": "",
+        "columns_desktop": 4,
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "feature_rows": {
+      "type": "multirow",
+      "blocks": {
+        "feature_1": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Feels Like the Real Thing",
+            "title": "<strong>Train Like You're Already at the Table</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>Generic curls and wrist rollers build muscle, sure — but they don't build <strong>arm wrestling muscle</strong>. The pulling angle, the tension curve, the way your forearm fires through the movement — it's completely different at the table.</p><p>This trainer's <strong>hydraulic resistance system</strong> is engineered to replicate that exact force curve. Every rep activates your forearms, wrists, and biceps the same way a real match would — so your strength transfers directly to performance.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "feature_2": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Targeted Muscle Development",
+            "title": "<strong>Hit the Muscles That Actually Win</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>Arm wrestling isn't just biceps. It's a full-arm chain: your <strong>forearm</strong> fires first, your <strong>biceps</strong> lock the angle, and your <strong>shoulder group</strong> stabilizes the whole thing. Miss any one of these and you'll lose to someone half your size.</p><p>This trainer is engineered to load all three, in the movement pattern that matters most. Plus it builds <strong>grip strength, wrist flexion, and pull endurance</strong> — the skills that actually decide matches.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "feature_3": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Built to Last",
+            "title": "<strong>Premium Beechwood — No Cheap Substitutes</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>We chose <strong>Eastern European beechwood</strong> deliberately. It's dense, it absorbs vibration, it feels warm and solid in the hand — and it won't crack, flex, or creak under heavy resistance like the plastic-bodied trainers you'll find on generic marketplace listings.</p><p><strong>Features:</strong> Solid beechwood frame with no wobble. Non-slip grip handle that stays secure even when your palms sweat. Stable base — no suction cups, no mounting, no setup needed. Reinforced with stainless steel rods throughout.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "feature_4": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Solo Training — Anytime",
+            "title": "<strong>No Partner? No Problem.</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>Finding a training partner at the right skill level, available when you are, who won't disappear after two sessions — that's the real challenge in arm wrestling training. This trainer removes that dependency entirely.</p><p>Set it on any flat surface. Adjust the resistance. Pull. That's it. You get targeted, consistent reps on your own schedule — whether it's 6am before work or 11pm after the gym.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        },
+        "feature_5": {
+          "type": "row",
+          "settings": {
+            "image": "",
+            "video": "",
+            "video_muted_autoplay": true,
+            "caption": "Comfort & Joint Protection",
+            "title": "<strong>The 8×8\" Elbow Pad Matters More Than You Think</strong>",
+            "title_highlight_color": "#f05a1a",
+            "text": "<p>One Amazon reviewer wrote: <em>\"Works amazing for training the appropriate muscles. Though mine never came with the pad.\"</em> — That's a complaint about a different product. Ours includes it.</p><p>The thick, 8×8\" comfort pad is designed specifically for the elbow position you hold during arm-wrestling-style pulls. Your joint stays cushioned and stable, so you can push harder and train longer without discomfort cutting your session short.</p>",
+            "button_label": "GET MY ARM TRAINER",
+            "button_link": "#add-to-cart",
+            "atc_button_label": "",
+            "atc_product": "",
+            "atc_skip_cart": false
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4", "feature_5"],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "image_height": "adapt",
+        "product_media_start_index": "0",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "row_color_scheme": "background-1",
+        "custom_colors_background": "#f05a1a",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff",
+        "custom_colors_solid_button_background": "#f05a1a",
+        "custom_colors_solid_button_text": "#ffffff",
+        "custom_colors_outline_button": "#f05a1a",
+        "section_color_scheme": "background-1",
+        "custom_section_colors_background": "#0f0f0f",
+        "custom_section_gradient_background": "",
+        "mobile_full_media_width": false,
+        "mobile_direction": "normal",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "mobile_btn_center_css",
+    "page_scroll_progress",
+    "main",
+    "why_this_trainer",
+    "why_cards",
+    "twelve_levels",
+    "level_cards",
+    "feature_rows"
+  ]
+}
