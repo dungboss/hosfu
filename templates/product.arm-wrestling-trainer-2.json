@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "theme-new-hosfu",
   "sections": {
@@ -28,7 +37,8 @@
           "type": "custom-liquid",
           "settings": {
             "custom_liquid": "<div class=\"product-badge\">🏆 2026 Top Rated · Arm Training</div><style>.product-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#7b3a1c,#f05a1a);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin:32px 0 16px;}</style>"
-          }
+          },
+          "blocks": {}
         },
         "title": {
           "type": "product_title",
@@ -40,7 +50,8 @@
             "mobile_alignment": "mobile-left",
             "margin_top": 0,
             "margin_bottom": 9
-          }
+          },
+          "blocks": {}
         },
         "rating_stars": {
           "type": "rating-stars",
@@ -55,7 +66,8 @@
             "scroll_id": "",
             "margin_top": 0,
             "margin_bottom": 21
-          }
+          },
+          "blocks": {}
         },
         "price": {
           "type": "product_price",
@@ -78,13 +90,15 @@
             "filled_icon_2": false,
             "margin_top": 18,
             "margin_bottom": 18
-          }
+          },
+          "blocks": {}
         },
         "shipping_notices": {
           "type": "custom-liquid",
           "settings": {
             "custom_liquid": "<div class=\"shipping-notices\"><div class=\"line\"><span class=\"icon\">🚚</span><span><strong>FREE</strong> Insured + Tracked Shipping on all orders</span></div><div class=\"line\"><span class=\"icon\">⚡</span><span><strong>Limited offer</strong> — free shipping valid for first 50 orders today</span></div><div class=\"line\"><span class=\"icon\">🎁</span><span>First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off</span></div></div><style>.shipping-notices{display:flex;flex-direction:column;gap:8px;background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;}.shipping-notices .line{display:flex;align-items:center;gap:10px;}.shipping-notices .icon{font-size:18px;}.shipping-notices strong{color:#f05a1a;}</style>"
-          }
+          },
+          "blocks": {}
         },
         "variant_picker": {
           "type": "product_product-variant-picker-block",
@@ -123,7 +137,8 @@
             "breaks_compare_price_texts": "[compare_price], [compare_price], [compare_price]",
             "margin_top": 12,
             "margin_bottom": 0
-          }
+          },
+          "blocks": {}
         },
         "buy_buttons": {
           "type": "product_buy-buttons",
@@ -148,13 +163,15 @@
             "secondary_btn_custom_color": "#8d184d",
             "margin_top": 24,
             "margin_bottom": 12
-          }
+          },
+          "blocks": {}
         },
         "trust_strip": {
           "type": "custom-liquid",
           "settings": {
             "custom_liquid": "<div class=\"trust-strip\"><span><span class=\"chk\">✓</span> 30-Day Returns</span><span><span class=\"chk\">✓</span> Secure Checkout</span><span><span class=\"chk\">✓</span> Ships in 24–48 hrs</span><span><span class=\"chk\">✓</span> Premium Beechwood</span></div><style>.trust-strip{display:flex;justify-content:center;gap:20px;font-size:12px;color:#9a9a90;margin-bottom:32px;flex-wrap:wrap;}.trust-strip span{display:flex;align-items:center;gap:4px;}.trust-strip .chk{color:#4caf78;}</style>"
-          }
+          },
+          "blocks": {}
         },
         "sticky_atc": {
           "type": "product_sticky-atc",
@@ -186,7 +203,8 @@
             "mobile_full_button_width": false,
             "mobile_show_price_in_button": false,
             "mobile_transparent_bg": false
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -201,23 +219,81 @@
         "sticky_atc"
       ],
       "settings": {
+        "display_id": false,
         "enable_sticky_info": false,
-        "enabledesktopreview": false,
         "color_scheme": "background-1",
+        "display_variant_image_first": false,
+        "disable_prepend": false,
+        "hide_variants": true,
+        "variant_image_filtering": "none",
+        "image_zoom": "lightbox",
+        "thumbnails_ratio": "square",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "video_player": "play_btn",
+        "enable_video_looping": false,
+        "autoplay_videos_pause_btn": false,
+        "video_sound_btn": false,
+        "video_timeline": false,
+        "play_btn_color_scheme": "accent-1",
+        "sound_btn_color_scheme": "inverse",
+        "timeline_color": "accent-1",
         "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_count": 5,
+        "desktop_vertical_thumbnails_width": 16,
+        "desktop_vertical_thumbnails_hide_arrows": false,
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "desktop_thumbnails_position": "bottom",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 12,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
         "mobile_thumbnails_position": "bottom",
-        "hide_variants": true,
-        "enable_video_looping": false,
+        "mobile_thumbnails_count": 5,
+        "mobile_vertical_thumbnails_width": 22,
+        "mobile_vertical_thumbnails_hide_arrows": true,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 16,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 16,
+        "mobile_padding_bottom": 16,
         "desktop_padding_top": 36,
         "desktop_padding_bottom": 36,
-        "mobile_padding_top": 16,
-        "mobile_padding_bottom": 16
+        "enabledesktopreview": false,
+        "review_background_color": "#ffffff",
+        "review_border_color": "#e9ecef",
+        "star_color": "#ffc107",
+        "username_color": "#000000",
+        "username": "Sarah M.",
+        "verified_customer": true,
+        "verified_icon_color": "#28a745",
+        "verified_text_color": "#28a745",
+        "verified_text": "Verified Purchase",
+        "review_text_color": "#000000",
+        "review_text": "Amazing product! Highly recommend it to everyone.",
+        "enablegallerybottomtext": false,
+        "galleryinnerbackground": "#000000",
+        "galleryinneropacity": 0.8,
+        "galleryinnertextcolor": "#ffffff",
+        "galleryinnerradius": 8,
+        "galleryinnerheight": 80,
+        "galleryinnertext": "5-Star Rated Product",
+        "enablegalleryreviewstars": false,
+        "rating": 4.8,
+        "star_color2": "#ffcc00",
+        "bg_stars_style": "full",
+        "bg_star_color2": "#ececec",
+        "label": "(xxxx Reviews)",
+        "size": 16
       }
     },
     "why_this_trainer": {
@@ -226,8 +302,6 @@
         "why_intro": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Why This Trainer?",
             "title": "<strong>Built For Real Arm Strength — Not Just Looks</strong>",
@@ -241,7 +315,9 @@
           }
         }
       },
-      "block_order": ["why_intro"],
+      "block_order": [
+        "why_intro"
+      ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -277,7 +353,6 @@
         "card_1": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "⚙️ 12 Resistance Levels",
             "text": "Dial it from casual warm-up to full competition-grade intensity. You'll never plateau."
@@ -286,7 +361,6 @@
         "card_2": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "🪵 Premium Beechwood",
             "text": "Solid Eastern European beechwood. No cheap plastics, no flex — just a stable, premium feel every rep."
@@ -295,7 +369,6 @@
         "card_3": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "🛡️ 8×8\" Elbow Pad",
             "text": "Thick, padded elbow rest protects your joint during max-effort pulls — included in the box."
@@ -304,14 +377,18 @@
         "card_4": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "🏠 Zero Setup — Use Anywhere",
             "text": "Home gym, desk, kitchen table, truck cab. No mounting, no suction cups, no fuss."
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3", "card_4"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ],
       "settings": {
         "title": "",
         "columns_desktop": 4,
@@ -325,8 +402,6 @@
         "levels_intro": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Progressive Resistance",
             "title": "<strong>12 Levels. One Trainer. For Life.</strong>",
@@ -340,7 +415,9 @@
           }
         }
       },
-      "block_order": ["levels_intro"],
+      "block_order": [
+        "levels_intro"
+      ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -376,7 +453,6 @@
         "level_1_3": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "1–3 SIMPLE",
             "text": "Beginners & warm-up"
@@ -385,7 +461,6 @@
         "level_4_6": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "4–6 NORMAL",
             "text": "Intermediate training"
@@ -394,7 +469,6 @@
         "level_7_9": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "7–9 HARD",
             "text": "Serious strength gains"
@@ -403,14 +477,18 @@
         "level_10_12": {
           "type": "step",
           "settings": {
-            "video": "",
             "video_url": "",
             "title": "10–12 SUPER DIFFICULT",
             "text": "Competition-level prep"
           }
         }
       },
-      "block_order": ["level_1_3", "level_4_6", "level_7_9", "level_10_12"],
+      "block_order": [
+        "level_1_3",
+        "level_4_6",
+        "level_7_9",
+        "level_10_12"
+      ],
       "settings": {
         "title": "",
         "columns_desktop": 4,
@@ -424,8 +502,6 @@
         "feature_1": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Feels Like the Real Thing",
             "title": "<strong>Train Like You're Already at the Table</strong>",
@@ -441,8 +517,6 @@
         "feature_2": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Targeted Muscle Development",
             "title": "<strong>Hit the Muscles That Actually Win</strong>",
@@ -458,8 +532,6 @@
         "feature_3": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Built to Last",
             "title": "<strong>Premium Beechwood — No Cheap Substitutes</strong>",
@@ -475,8 +547,6 @@
         "feature_4": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Solo Training — Anytime",
             "title": "<strong>No Partner? No Problem.</strong>",
@@ -492,13 +562,11 @@
         "feature_5": {
           "type": "row",
           "settings": {
-            "image": "",
-            "video": "",
             "video_muted_autoplay": true,
             "caption": "Comfort & Joint Protection",
             "title": "<strong>The 8×8\" Elbow Pad Matters More Than You Think</strong>",
             "title_highlight_color": "#f05a1a",
-            "text": "<p>One Amazon reviewer wrote: <em>\"Works amazing for training the appropriate muscles. Though mine never came with the pad.\"</em> — That's a complaint about a different product. Ours includes it.</p><p>The thick, 8×8\" comfort pad is designed specifically for the elbow position you hold during arm-wrestling-style pulls. Your joint stays cushioned and stable, so you can push harder and train longer without discomfort cutting your session short.</p>",
+            "text": "<p>One reviewer wrote: <em>\"Works amazing for training the appropriate muscles. Though mine never came with the pad.\"</em> — That's a complaint about a different product. Ours includes it.</p><p>The thick, 8×8\" comfort pad is designed specifically for the elbow position you hold during arm-wrestling-style pulls. Your joint stays cushioned and stable, so you can push harder and train longer without discomfort cutting your session short.</p>",
             "button_label": "GET MY ARM TRAINER",
             "button_link": "#add-to-cart",
             "atc_button_label": "",
@@ -507,7 +575,13 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4", "feature_5"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5"
+      ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
