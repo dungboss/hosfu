@@ -1,0 +1,365 @@
+{
+  "sections": {
+    "main": {
+      "type": "listicle-roundup",
+      "blocks": {
+        "qp_1": {
+          "type": "quick_pick",
+          "settings": {
+            "label": "🏆 Editor's Choice",
+            "text": "<p><a href=\"https://hosfu.com/products/arm-wrestling-trainer\">Hosfu Portable Arm Wrestling Trainer</a> — Best overall, 12 resistance levels, premium beechwood</p>"
+          }
+        },
+        "qp_2": {
+          "type": "quick_pick",
+          "settings": {
+            "label": "🥈 Runner-Up",
+            "text": "<p>Gripzilla Tornado ($197) — most advanced multi-axis forearm tool, 24 muscles, 100+ exercises, but overkill for most</p>"
+          }
+        },
+        "qp_3": {
+          "type": "quick_pick",
+          "settings": {
+            "label": "💰 Budget Pick",
+            "text": "<p>YoeDirect 45-50lb Spring Trainer — Good for beginners, limited resistance range</p>"
+          }
+        },
+        "qp_4": {
+          "type": "quick_pick",
+          "settings": {
+            "label": "🔰 Entry Level",
+            "text": "<p>ProArm Desktop Spring Bar — Cheapest option, works for casual use only</p>"
+          }
+        },
+        "qp_5": {
+          "type": "quick_pick",
+          "settings": {
+            "label": "🏋️ Cable-Based",
+            "text": "<p>J Bryant Training Strap — Best for gym-goers with cable machines already</p>"
+          }
+        },
+        "cmp_price": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Price",
+            "cell_1": "$99",
+            "cell_2": "$197",
+            "cell_3": "$29–35",
+            "cell_4": "$19–25",
+            "cell_5": "$30–35"
+          }
+        },
+        "cmp_resistance": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Resistance Levels",
+            "cell_1": "✓ 12 levels",
+            "cell_2": "~ Via cable weight",
+            "cell_3": "✗ Fixed 45–50lb",
+            "cell_4": "✗ Fixed spring",
+            "cell_5": "~ Varies by weight"
+          }
+        },
+        "cmp_material": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Build Material",
+            "cell_1": "Premium Beechwood",
+            "cell_2": "Steel + Nylon",
+            "cell_3": "ABS Plastic",
+            "cell_4": "Spring Steel",
+            "cell_5": "Nylon Strap"
+          }
+        },
+        "cmp_base": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Stable Base",
+            "cell_1": "✓ Solid base",
+            "cell_2": "~ Needs cable setup",
+            "cell_3": "✗ Suction cups",
+            "cell_4": "✗ Suction cups",
+            "cell_5": "~ Needs cable setup"
+          }
+        },
+        "cmp_pad": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Elbow Pad Included",
+            "cell_1": "✓ 8×8\" thick pad",
+            "cell_2": "✗ Not included",
+            "cell_3": "✗ No",
+            "cell_4": "✗ No",
+            "cell_5": "✗ No"
+          }
+        },
+        "cmp_solo": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Solo Training",
+            "cell_1": "✓ Yes",
+            "cell_2": "✗ Needs cable machine",
+            "cell_3": "✓ Yes",
+            "cell_4": "✓ Yes",
+            "cell_5": "~ Needs cable machine"
+          }
+        },
+        "cmp_movement": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Realistic Movement",
+            "cell_1": "✓ Hydraulic",
+            "cell_2": "✓ 5 match angles",
+            "cell_3": "~ Basic spring",
+            "cell_4": "~ Basic spring",
+            "cell_5": "~ Partial"
+          }
+        },
+        "cmp_progression": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Long-Term Progression",
+            "cell_1": "✓ Yes",
+            "cell_2": "✓ Yes (technique)",
+            "cell_3": "✗ Outgrow fast",
+            "cell_4": "✗ Outgrow fast",
+            "cell_5": "~ Depends on setup"
+          }
+        },
+        "cmp_rating": {
+          "type": "compare_row",
+          "settings": {
+            "row_label": "Our Rating",
+            "cell_1": "★★★★★ 4.9",
+            "cell_2": "★★★★ 4.4",
+            "cell_3": "★★★ 3.5",
+            "cell_4": "★★★ 3.1",
+            "cell_5": "★★★ 3.3"
+          }
+        },
+        "prod_hosfu": {
+          "type": "product",
+          "settings": {
+            "top_pick": true,
+            "winner_banner": "EDITOR'S CHOICE — Best Arm Wrestling Trainer 2026",
+            "pick_tone": "winner",
+            "pick_label": "🏆 Editor's Choice — Best Overall",
+            "product_name": "Hosfu Portable Arm Wrestling Trainer",
+            "rating_stars": "★★★★★",
+            "rating_text": "4.9/5 — 106 reviews",
+            "price": "$99",
+            "compare_price": "was $149",
+            "key_pills": "12 Resistance Levels\nPremium Beechwood\n8×8\" Elbow Pad Included",
+            "pills": "Hydraulic Resistance\nNon-Slip Handle\nPortable — No Setup\nSolo Training",
+            "verdict": "<p>After four weeks of testing, this is the one we keep coming back to — and it's not particularly close. The <strong>Hosfu Portable Arm Wrestling Trainer</strong> is the only product in this roundup that checks every single box: realistic resistance pattern, genuine progression over time, a stable base that doesn't move during max-effort reps, and build quality that actually feels premium rather than just looking premium in photos.</p><p>The hydraulic resistance system is the real differentiator here. Unlike spring-based trainers that push back with a predictable fixed tension, the hydraulic mechanism provides resistance that <strong>builds as you pull</strong> — which is exactly how real arm wrestling force works. You engage your forearm, your wrist loads, your bicep locks the angle. Every rep feels like the start of a real match.</p><p>The <strong>12 adjustable resistance levels</strong> give this trainer genuine long-term value. Most people start at level 3–4 and work up to 7–8 over several weeks of consistent training. Levels 10–12 are genuinely challenging for experienced strength athletes — you won't outgrow this tool quickly.</p><p>We'd also call out the <strong>8×8\" elbow pad</strong> as a meaningful inclusion. Most competing trainers either don't include one or include a pad that's too thin to protect your joint under real training loads. This one is thick enough to let you push hard without your elbow becoming the limiting factor.</p>",
+            "quote_text": "\"The wood frame is solid — doesn't flex or move during heavy reps. Way better build quality than I expected. I can feel it working muscles I wasn't hitting before.\"",
+            "quote_cite": "— Aaron C., Verified Buyer ✓",
+            "pros_heading": "✓ What We Liked",
+            "pros": "Hydraulic resistance feels like real match pressure\n12 levels — room to grow for months\nSolid beechwood, no wobble or flex under load\n8×8\" elbow pad included and actually useful\nNo suction cups — stays put on any surface\nNon-slip handle stays secure even with sweaty palms\nCompact enough for home desk or travel bag",
+            "cons_heading": "✗ What to Know",
+            "cons": "Higher price than spring-based alternatives\nShips internationally — allow 8–15 days\nOverkill if you only want casual entertainment",
+            "primary_cta_label": "Shop on Hosfu.com →",
+            "primary_cta_link": "https://hosfu.com/products/arm-wrestling-trainer",
+            "secondary_cta_label": "See Full Details",
+            "secondary_cta_link": "https://hosfu.com/products/arm-wrestling-trainer",
+            "guarantee_note": "<p><span>✓ Free tracked shipping</span> · <span>✓ 30-day returns</span> · Secure checkout</p>"
+          }
+        },
+        "prod_gripzilla": {
+          "type": "product",
+          "settings": {
+            "top_pick": false,
+            "pick_tone": "runner",
+            "pick_label": "🥈 Premium Pick — Most Advanced Forearm Tool",
+            "product_name": "Gripzilla Tornado",
+            "rating_stars": "★★★★",
+            "rating_text": "4.8/5 · 87 reviews",
+            "price": "$197",
+            "key_pills": "Multi-Axis\n24 Muscles\n100+ Exercises",
+            "pills": "360° Spins\n5 Match Angles\nSteel + Nylon",
+            "verdict": "<p>The <strong>Gripzilla Tornado</strong> is the most advanced forearm and grip tool we tested — a multi-axis trainer that targets 24 muscles across 100+ exercises and five different arm wrestling match angles. For a serious competitor who already has a cable machine, it's a genuinely impressive piece of kit.</p><p>The catch is the price and the setup. At $197 it's twice the cost of our top pick, it needs a cable machine to load resistance, and the sheer number of configurations is overkill for most people who just want to get stronger at the table.</p>",
+            "quote_text": "\"Incredibly well built and the range of exercises is wild. But you need a cable setup to get the most out of it — not a grab-and-go trainer.\"",
+            "quote_cite": "— Ryan K., Verified Buyer ★★★★★",
+            "pros_heading": "✓ What We Liked",
+            "pros": "Most versatile — 100+ exercises, 24 muscles\nFive realistic match angles for technique work\nExcellent steel-and-nylon build quality\nGreat for advanced competitors",
+            "cons_heading": "✗ What to Know",
+            "cons": "Expensive at $197\nNeeds a cable machine — no solo training\nOverkill for casual or beginner users\nSteep learning curve",
+            "secondary_cta_label": "View at Gripzilla.co →",
+            "secondary_cta_link": "https://gripzilla.co/products/gripzilla-tornado"
+          }
+        },
+        "prod_yoedirect": {
+          "type": "product",
+          "settings": {
+            "top_pick": false,
+            "pick_tone": "budget",
+            "pick_label": "💰 Best Budget Pick",
+            "product_name": "YoeDirect 45–50lb Forearm Trainer",
+            "rating_stars": "★★★",
+            "rating_text": "3.5/5 · Amazon",
+            "price": "$29–35",
+            "key_pills": "Budget Friendly\nSolo Training",
+            "pills": "Fixed 45–50lb\nABS Plastic\nSpring Resistance",
+            "verdict": "<p>The <strong>YoeDirect</strong> is a reasonable entry point if you're on a tight budget and just want to start building forearm strength. It works solo and costs a fraction of the premium options.</p><p>But the fixed 45–50lb spring resistance is its ceiling — there's no way to progress once it gets easy, and the suction-cup base struggles on textured surfaces. Most users outgrow it within a few weeks.</p>",
+            "quote_text": "\"Decent for the price to get started, but I maxed out the resistance pretty quickly and the base kept popping off my desk.\"",
+            "quote_cite": "— Amazon Reviewer ✓",
+            "pros_heading": "✓ What We Liked",
+            "pros": "Cheap and accessible\nWorks for solo training\nFine for absolute beginners",
+            "cons_heading": "✗ What to Know",
+            "cons": "Fixed resistance — you outgrow it fast\nSuction cups pop loose under load\nThin ABS plastic build\nNo elbow pad",
+            "secondary_cta_label": "View on Amazon →",
+            "secondary_cta_link": "https://www.amazon.com/s?k=YoeDirect+arm+wrestling+trainer"
+          }
+        },
+        "prod_proarm": {
+          "type": "product",
+          "settings": {
+            "top_pick": false,
+            "pick_tone": "other",
+            "pick_label": "🔰 Entry Level / Fun Use",
+            "product_name": "ProArm Desktop Spring Bar Trainer",
+            "rating_stars": "★★★",
+            "rating_text": "3.1/5 · Amazon",
+            "price": "$19–25",
+            "key_pills": "Cheapest Option",
+            "pills": "Fixed Spring\nSpring Steel\nDesktop",
+            "verdict": "<p>The <strong>ProArm</strong> is the cheapest thing on this list, and it shows. It's a basic spring bar that mounts to a desk — fine for a bit of casual fun, but not a serious training tool.</p><p>Fixed spring tension, suction cups that won't hold under real effort, and a cold steel bar with no elbow protection mean you'll outgrow it almost immediately if you're actually training.</p>",
+            "pros_heading": "✓ What We Liked",
+            "pros": "Very inexpensive\nSimple to use\nOkay for casual fun",
+            "cons_heading": "✗ What to Know",
+            "cons": "Fixed spring — no progression\nSuction cups slip under load\nCold steel bar, no elbow pad\nNot built for serious training",
+            "secondary_cta_label": "View on Amazon →",
+            "secondary_cta_link": "https://www.amazon.com/s?k=proarm+wrestling+spring+trainer+desktop"
+          }
+        },
+        "prod_jbryant": {
+          "type": "product",
+          "settings": {
+            "top_pick": false,
+            "pick_tone": "other",
+            "pick_label": "🏋️ Best For Gym-Goers",
+            "product_name": "J Bryant Arm Wrestling Training Strap",
+            "rating_stars": "★★★",
+            "rating_text": "3.3/5 · Amazon",
+            "price": "$30–35",
+            "key_pills": "Cable-Based",
+            "pills": "Nylon Strap\nVariable Weight\nGym Use",
+            "verdict": "<p>The <strong>J Bryant strap</strong> is a simple nylon handle that attaches to a cable machine or weight stack. If you already train at a gym with cable equipment, it's a cheap way to load arm wrestling movements with adjustable weight.</p><p>Outside a gym setting, though, it's not much use — there's no standalone resistance, no base, and no way to train it solo at home without additional equipment.</p>",
+            "quote_text": "\"Works great clipped to my cable machine for technique work. Useless without one though — it's just a strap.\"",
+            "quote_cite": "— Amazon Reviewer ✓",
+            "pros_heading": "✓ What We Liked",
+            "pros": "Cheap if you already have a cable machine\nAdjustable weight via the stack\nGood for technique drills",
+            "cons_heading": "✗ What to Know",
+            "cons": "Needs a cable machine — no home solo use\nJust a strap, no frame or base\nNo elbow pad\nLimited without gym access",
+            "secondary_cta_label": "View on Amazon →",
+            "secondary_cta_link": "https://www.amazon.com/s?k=J+Bryant+arm+wrestling+training+strap"
+          }
+        },
+        "guide_1": {
+          "type": "guide_item",
+          "settings": {
+            "title": "1. Adjustable resistance is non-negotiable if you're serious",
+            "description": "<p>Fixed-resistance spring trainers are fine for a week or two. After that, you plateau. Look for at least 8–12 distinct levels — the hydraulic systems that use gear-shift mechanisms (like the Hosfu and MARCHMARS) are significantly more effective than simple spring tension adjustments.</p>"
+          }
+        },
+        "guide_2": {
+          "type": "guide_item",
+          "settings": {
+            "title": "2. Avoid suction cup bases wherever possible",
+            "description": "<p>Every suction-cup-based trainer in this roundup had the same complaint from real users: the cups pop loose on textured or non-smooth surfaces. If you're going to be pushing hard, you want a trainer with a solid weighted base — not one that requires a perfectly smooth, freshly cleaned glass table to stay put.</p>"
+          }
+        },
+        "guide_3": {
+          "type": "guide_item",
+          "settings": {
+            "title": "3. The material actually matters — wood vs. plastic vs. steel",
+            "description": "<p>Beechwood absorbs vibration and feels comfortable and warm in the hand during long sessions. Plastic flexes slightly under load which compromises the movement. Steel spring bars are grippy but cold and unforgiving. If you're training regularly, the material choice affects your rep quality over time.</p>"
+          }
+        },
+        "guide_4": {
+          "type": "guide_item",
+          "settings": {
+            "title": "4. The elbow pad is often the overlooked detail",
+            "description": "<p>Your elbow is your anchor point in arm wrestling. A thin or absent pad means you'll cut sessions short because your elbow joint — not your forearm strength — becomes the limiting factor. Only one product in this roundup includes a pad worth using.</p>"
+          }
+        },
+        "guide_5": {
+          "type": "guide_item",
+          "settings": {
+            "title": "5. Realistic movement > generic forearm training",
+            "description": "<p>A standard wrist roller or forearm curl does build forearm strength — but it doesn't build arm wrestling-specific strength. The hydraulic trainers in this roundup load your arm in the correct direction and angle for actual match performance. If you want to transfer gym work to the table, the movement pattern has to match.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "qp_1",
+        "qp_2",
+        "qp_3",
+        "qp_4",
+        "qp_5",
+        "cmp_price",
+        "cmp_resistance",
+        "cmp_material",
+        "cmp_base",
+        "cmp_pad",
+        "cmp_solo",
+        "cmp_movement",
+        "cmp_progression",
+        "cmp_rating",
+        "prod_hosfu",
+        "prod_gripzilla",
+        "prod_yoedirect",
+        "prod_proarm",
+        "prod_jbryant",
+        "guide_1",
+        "guide_2",
+        "guide_3",
+        "guide_4",
+        "guide_5"
+      ],
+      "settings": {
+        "bg_color": "#f5f4f0",
+        "accent_color": "#c0380a",
+        "accent_light_color": "#e04a18",
+        "text_color": "#18181a",
+        "brand_text": "Hosfu",
+        "brand_highlight": "Fitness",
+        "brand_suffix": "— Gear Reviews & Guides",
+        "eyebrow": "Gear Review · Arm Strength Training",
+        "title": "5 Best Arm Wrestling Trainers in 2026 — We Tested Them All So You Don't Have To",
+        "author_name": "James Hartwell",
+        "author_title": "Fitness Gear Editor",
+        "updated_label": "June 2026",
+        "read_time": "6 min read",
+        "intro": "We spent four weeks testing the most popular arm wrestling trainers on the market — from $19 spring-bar units to $99 beechwood hydraulic rigs — to find out which ones actually build functional arm strength and which ones just look the part. Here's what we found.",
+        "quick_picks_heading": "⚡ Quick Picks — Jump to Winner",
+        "comparison_heading": "At a Glance — Full Comparison",
+        "compare_col_0": "Product",
+        "compare_col_1": "Hosfu Trainer",
+        "compare_col_2": "Gripzilla Kit",
+        "compare_col_3": "YoeDirect",
+        "compare_col_4": "ProArm",
+        "compare_col_5": "J Bryant",
+        "compare_highlight_col": 1,
+        "reviews_title": "The Full Reviews",
+        "guide_heading": "📖 Arm Wrestling Trainer Buying Guide — What Actually Matters",
+        "verdict_heading": "Our Final Verdict",
+        "verdict_body": "<p>If you're shopping for an arm wrestling trainer, the choice really comes down to how serious you are. For casual entertainment, the ProArm or YoeDirect will do the job at low cost — though you'll outgrow them fast. For anyone who wants to actually improve at arm wrestling or build serious forearm and grip strength, there's one clear answer.</p><p>The <strong>Hosfu Portable Arm Wrestling Trainer</strong> is the only product here that hits every criterion that matters: realistic hydraulic resistance, 12 genuine levels of progression, solid beechwood build, an included elbow pad, and a stable base that doesn't rely on suction cups. It's the most complete arm wrestling training tool you can use solo, anywhere, without needing additional equipment.</p>",
+        "verdict_cta_label": "Shop the Hosfu Trainer — $99 with Free Shipping →",
+        "verdict_cta_link": "https://hosfu.com/products/arm-wrestling-trainer",
+        "footer_brand": "Hosfu Fitness",
+        "footer_tagline": "Gear Reviews & Training Guides",
+        "footer_links": "<p><a href=\"https://hosfu.com\">hosfu.com</a> · <a href=\"https://hosfu.com/pages/contact\">Contact</a> · <a href=\"https://hosfu.com/pages/privacy-policy\">Privacy Policy</a></p>",
+        "footer_disclosure": "<p>Disclosure: Links marked \"Shop on Hosfu.com\" link to our own store where we sell this product. Amazon links are provided for reference. Prices may vary. Last updated June 2026.</p>",
+        "show_sticky": true,
+        "sticky_eyebrow": "🏆 Our Top Pick",
+        "sticky_text": "Hosfu Arm Wrestling Trainer · $99 · Free Shipping",
+        "sticky_button_label": "Shop Now →",
+        "sticky_link": "https://hosfu.com/products/arm-wrestling-trainer"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
