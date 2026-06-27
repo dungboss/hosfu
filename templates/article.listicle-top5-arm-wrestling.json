@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -142,6 +151,7 @@
           "settings": {
             "top_pick": true,
             "winner_banner": "EDITOR'S CHOICE — Best Arm Wrestling Trainer 2026",
+            "image": "shopify://shop_images/8x8.png",
             "pick_tone": "winner",
             "pick_label": "🏆 Editor's Choice — Best Overall",
             "product_name": "Hosfu Portable Arm Wrestling Trainer",
@@ -162,19 +172,22 @@
             "primary_cta_link": "https://hosfu.com/products/hosfufitness",
             "secondary_cta_label": "See Full Details",
             "secondary_cta_link": "https://hosfu.com/products/hosfufitness",
-            "guarantee_note": "<p><span>✓ Free tracked shipping</span> · <span>✓ 30-day returns</span> · Secure checkout</p>"
+            "guarantee_note": "<p>✓ Free tracked shipping · ✓ 30-day returns · Secure checkout</p>"
           }
         },
         "prod_gripzilla": {
           "type": "product",
           "settings": {
             "top_pick": false,
+            "winner_banner": "EDITOR'S CHOICE — Best Pick 2026",
+            "image": "shopify://shop_images/tornado-the-most-powerful-grip-and-forearm-builder-2060589_1.webp",
             "pick_tone": "runner",
             "pick_label": "🥈 Premium Pick — Most Advanced Forearm Tool",
             "product_name": "Gripzilla Tornado",
             "rating_stars": "★★★★",
             "rating_text": "4.8/5 · 87 reviews",
             "price": "$197",
+            "compare_price": "was $149",
             "key_pills": "Multi-Axis\n24 Muscles\n100+ Exercises",
             "pills": "360° Spins\n5 Match Angles\nSteel + Nylon",
             "verdict": "<p>The <strong>Gripzilla Tornado</strong> is the most advanced forearm and grip tool we tested — a multi-axis trainer that targets 24 muscles across 100+ exercises and five different arm wrestling match angles. For a serious competitor who already has a cable machine, it's a genuinely impressive piece of kit.</p><p>The catch is the price and the setup. At $197 it's twice the cost of our top pick, it needs a cable machine to load resistance, and the sheer number of configurations is overkill for most people who just want to get stronger at the table.</p>",
@@ -184,20 +197,26 @@
             "pros": "Most versatile — 100+ exercises, 24 muscles\nFive realistic match angles for technique work\nExcellent steel-and-nylon build quality\nGreat for advanced competitors",
             "cons_heading": "✗ What to Know",
             "cons": "Expensive at $197\nNeeds a cable machine — no solo training\nOverkill for casual or beginner users\nSteep learning curve",
+            "primary_cta_label": "",
+            "primary_cta_link": "",
             "secondary_cta_label": "View at Gripzilla.co →",
-            "secondary_cta_link": "https://gripzilla.co/products/gripzilla-tornado"
+            "secondary_cta_link": "https://gripzilla.co/products/gripzilla-tornado",
+            "guarantee_note": ""
           }
         },
         "prod_yoedirect": {
           "type": "product",
           "settings": {
             "top_pick": false,
+            "winner_banner": "EDITOR'S CHOICE — Best Pick 2026",
+            "image": "shopify://shop_images/z7982072490696_e8995eea963bb4a92e3ef26ee805d57f.jpg",
             "pick_tone": "budget",
             "pick_label": "💰 Best Budget Pick",
             "product_name": "YoeDirect 45–50lb Forearm Trainer",
             "rating_stars": "★★★",
             "rating_text": "3.5/5 · Amazon",
             "price": "$29–35",
+            "compare_price": "was $149",
             "key_pills": "Budget Friendly\nSolo Training",
             "pills": "Fixed 45–50lb\nABS Plastic\nSpring Resistance",
             "verdict": "<p>The <strong>YoeDirect</strong> is a reasonable entry point if you're on a tight budget and just want to start building forearm strength. It works solo and costs a fraction of the premium options.</p><p>But the fixed 45–50lb spring resistance is its ceiling — there's no way to progress once it gets easy, and the suction-cup base struggles on textured surfaces. Most users outgrow it within a few weeks.</p>",
@@ -207,41 +226,55 @@
             "pros": "Cheap and accessible\nWorks for solo training\nFine for absolute beginners",
             "cons_heading": "✗ What to Know",
             "cons": "Fixed resistance — you outgrow it fast\nSuction cups pop loose under load\nThin ABS plastic build\nNo elbow pad",
+            "primary_cta_label": "",
+            "primary_cta_link": "",
             "secondary_cta_label": "View on Amazon →",
-            "secondary_cta_link": "https://www.amazon.com/s?k=YoeDirect+arm+wrestling+trainer"
+            "secondary_cta_link": "https://www.amazon.com/s?k=YoeDirect+arm+wrestling+trainer",
+            "guarantee_note": ""
           }
         },
         "prod_proarm": {
           "type": "product",
           "settings": {
             "top_pick": false,
+            "winner_banner": "EDITOR'S CHOICE — Best Pick 2026",
+            "image": "shopify://shop_images/61JuAoKLhmL._AC_UL495_SR435_495.jpg",
             "pick_tone": "other",
             "pick_label": "🔰 Entry Level / Fun Use",
             "product_name": "ProArm Desktop Spring Bar Trainer",
             "rating_stars": "★★★",
             "rating_text": "3.1/5 · Amazon",
             "price": "$19–25",
+            "compare_price": "was $149",
             "key_pills": "Cheapest Option",
             "pills": "Fixed Spring\nSpring Steel\nDesktop",
             "verdict": "<p>The <strong>ProArm</strong> is the cheapest thing on this list, and it shows. It's a basic spring bar that mounts to a desk — fine for a bit of casual fun, but not a serious training tool.</p><p>Fixed spring tension, suction cups that won't hold under real effort, and a cold steel bar with no elbow protection mean you'll outgrow it almost immediately if you're actually training.</p>",
+            "quote_text": "",
+            "quote_cite": "",
             "pros_heading": "✓ What We Liked",
             "pros": "Very inexpensive\nSimple to use\nOkay for casual fun",
             "cons_heading": "✗ What to Know",
             "cons": "Fixed spring — no progression\nSuction cups slip under load\nCold steel bar, no elbow pad\nNot built for serious training",
+            "primary_cta_label": "",
+            "primary_cta_link": "",
             "secondary_cta_label": "View on Amazon →",
-            "secondary_cta_link": "https://www.amazon.com/s?k=proarm+wrestling+spring+trainer+desktop"
+            "secondary_cta_link": "https://www.amazon.com/s?k=proarm+wrestling+spring+trainer+desktop",
+            "guarantee_note": ""
           }
         },
         "prod_jbryant": {
           "type": "product",
           "settings": {
             "top_pick": false,
+            "winner_banner": "EDITOR'S CHOICE — Best Pick 2026",
+            "image": "shopify://shop_images/611HraIqImL._AC_UF1000_1000_QL80.jpg",
             "pick_tone": "other",
             "pick_label": "🏋️ Best For Gym-Goers",
             "product_name": "J Bryant Arm Wrestling Training Strap",
             "rating_stars": "★★★",
             "rating_text": "3.3/5 · Amazon",
             "price": "$30–35",
+            "compare_price": "was $149",
             "key_pills": "Cable-Based",
             "pills": "Nylon Strap\nVariable Weight\nGym Use",
             "verdict": "<p>The <strong>J Bryant strap</strong> is a simple nylon handle that attaches to a cable machine or weight stack. If you already train at a gym with cable equipment, it's a cheap way to load arm wrestling movements with adjustable weight.</p><p>Outside a gym setting, though, it's not much use — there's no standalone resistance, no base, and no way to train it solo at home without additional equipment.</p>",
@@ -251,8 +284,11 @@
             "pros": "Cheap if you already have a cable machine\nAdjustable weight via the stack\nGood for technique drills",
             "cons_heading": "✗ What to Know",
             "cons": "Needs a cable machine — no home solo use\nJust a strap, no frame or base\nNo elbow pad\nLimited without gym access",
+            "primary_cta_label": "",
+            "primary_cta_link": "",
             "secondary_cta_label": "View on Amazon →",
-            "secondary_cta_link": "https://www.amazon.com/s?k=J+Bryant+arm+wrestling+training+strap"
+            "secondary_cta_link": "https://www.amazon.com/s?k=J+Bryant+arm+wrestling+training+strap",
+            "guarantee_note": ""
           }
         },
         "guide_1": {
