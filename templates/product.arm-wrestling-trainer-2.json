@@ -60,7 +60,7 @@
             "star_color": "#c8a04a",
             "bg_stars_style": "full",
             "bg_star_color": "#2a2a2a",
-            "label": "<strong>4.8</strong> · 106 reviews",
+            "label": "<strong>4.8</strong> · 509 reviews",
             "size": 16,
             "alignment": "flex-start",
             "scroll_id": "",
@@ -96,7 +96,7 @@
         "shipping_notices": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"shipping-notices\"><div class=\"line\"><span class=\"icon\">🚚</span><span><strong>FREE</strong> Insured + Tracked Shipping on all orders</span></div><div class=\"line\"><span class=\"icon\">⚡</span><span><strong>Limited offer</strong> — free shipping valid for first 50 orders today</span></div><div class=\"line\"><span class=\"icon\">🎁</span><span>First order? Use code <strong>WELCOME10OFF</strong> for an extra 10% off</span></div></div><style>.shipping-notices{display:flex;flex-direction:column;gap:8px;background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;}.shipping-notices .line{display:flex;align-items:center;gap:10px;}.shipping-notices .icon{font-size:18px;}.shipping-notices strong{color:#f05a1a;}</style>"
+            "custom_liquid": "<div class=\"shipping-notices\">\n  <div class=\"line\">\n    <span class=\"icon\">🚚</span>\n    <span><strong>FREE</strong> Insured + Tracked Shipping on all orders</span>\n  </div>\n\n  <div class=\"line\">\n    <span class=\"icon\">⚡</span>\n    <span><strong>Limited offer</strong> — free shipping valid for first 50 orders today</span>\n  </div>\n</div>\n\n<style>\n.shipping-notices {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  background: #1a1a1a;\n  border: 1px solid #333;\n  border-radius: 12px;\n  padding: 16px 20px;\n  margin-bottom: 24px;\n  font-size: 14px;\n}\n\n.shipping-notices .line {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.shipping-notices .icon {\n  font-size: 18px;\n}\n\n.shipping-notices strong {\n  color: #f05a1a;\n}\n</style>"
           },
           "blocks": {}
         },
@@ -169,7 +169,7 @@
         "trust_strip": {
           "type": "custom-liquid",
           "settings": {
-            "custom_liquid": "<div class=\"trust-strip\"><span><span class=\"chk\">✓</span> 30-Day Returns</span><span><span class=\"chk\">✓</span> Secure Checkout</span><span><span class=\"chk\">✓</span> Ships in 24–48 hrs</span><span><span class=\"chk\">✓</span> Premium Beechwood</span></div><style>.trust-strip{display:flex;justify-content:center;gap:20px;font-size:12px;color:#9a9a90;margin-bottom:32px;flex-wrap:wrap;}.trust-strip span{display:flex;align-items:center;gap:4px;}.trust-strip .chk{color:#4caf78;}</style>"
+            "custom_liquid": "<div class=\"trust-strip\">\n  <span><span class=\"chk\">✓</span> 30-Day Returns</span>\n  <span><span class=\"chk\">✓</span> Secure Checkout</span>\n  <span><span class=\"chk\">✓</span> Ships in 7–10 business days</span>\n  <span><span class=\"chk\">✓</span> Premium Beechwood</span>\n</div>\n\n<style>\n.trust-strip {\n  display: flex;\n  justify-content: center;\n  gap: 20px;\n  font-size: 12px;\n  color: #9a9a90;\n  margin-bottom: 32px;\n  flex-wrap: wrap;\n}\n\n.trust-strip span {\n  display: flex;\n  align-items: center;\n  gap: 4px;\n}\n\n.trust-strip .chk {\n  color: #4caf78;\n}\n</style>"
           },
           "blocks": {}
         },
