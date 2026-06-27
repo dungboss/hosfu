@@ -302,6 +302,7 @@
         "why_intro": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/8225dc8f-f2ba-46c2-b8e8-ccf51c3ab618.png",
             "video_muted_autoplay": true,
             "caption": "Why This Trainer?",
             "title": "<strong>Built For Real Arm Strength — Not Just Looks</strong>",
@@ -403,6 +404,7 @@
         "levels_intro": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/2_6114d320-9172-4d68-bdd2-d5bb31e56bf8.png",
             "video_muted_autoplay": true,
             "caption": "Progressive Resistance",
             "title": "<strong>12 Levels. One Trainer. For Life.</strong>",
@@ -519,6 +521,7 @@
         "feature_2": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/7.png",
             "video_muted_autoplay": true,
             "caption": "Targeted Muscle Development",
             "title": "<strong>Hit the Muscles That Actually Win</strong>",
@@ -534,6 +537,7 @@
         "feature_3": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/built_to_last.png",
             "video_muted_autoplay": true,
             "caption": "Built to Last",
             "title": "<strong>Premium Beechwood — No Cheap Substitutes</strong>",
@@ -549,6 +553,7 @@
         "feature_4": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/solo_training_-_anytime.png",
             "video_muted_autoplay": true,
             "caption": "Solo Training — Anytime",
             "title": "<strong>No Partner? No Problem.</strong>",
@@ -564,6 +569,7 @@
         "feature_5": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/8x8.png",
             "video_muted_autoplay": true,
             "caption": "Comfort & Joint Protection",
             "title": "<strong>The 8×8\" Elbow Pad Matters More Than You Think</strong>",
