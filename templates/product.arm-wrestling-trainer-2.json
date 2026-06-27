@@ -69,30 +69,6 @@
           },
           "blocks": {}
         },
-        "price": {
-          "type": "product_price",
-          "settings": {
-            "price_layout": "price-first",
-            "price_color": "accent-1",
-            "enable_custom_price_color": true,
-            "custom_price_color": "#f05a1a",
-            "compare_price_color": "text",
-            "regular_price_size": 32,
-            "sale_price_size": 20,
-            "compare_price_size": 20,
-            "displayed_badge": "sale",
-            "sale_badge_color": "accent-2",
-            "custom_badge_text": "Save 40%",
-            "icon_scale": 140,
-            "icon_1": "",
-            "filled_icon_1": false,
-            "icon_2": "",
-            "filled_icon_2": false,
-            "margin_top": 18,
-            "margin_bottom": 18
-          },
-          "blocks": {}
-        },
         "shipping_notices": {
           "type": "custom-liquid",
           "settings": {
@@ -211,7 +187,6 @@
         "badge",
         "title",
         "rating_stars",
-        "price",
         "shipping_notices",
         "variant_picker",
         "buy_buttons",
