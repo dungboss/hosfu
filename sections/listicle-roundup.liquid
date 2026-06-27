@@ -1,0 +1,726 @@
+{% comment %}
+  Listicle / Product Roundup blog post section.
+  Converted from listicle-top5-arm-wrestling.html into a configurable Shopify
+  section. Drop it on any article template (see templates/article.listicle-*.json).
+
+  Block types:
+    - quick_pick   : one row in the "Quick Picks" box
+    - compare_row  : one row in the "At a Glance" comparison table
+    - product      : one full product review card
+    - guide_item   : one entry in the buying guide
+{% endcomment %}
+
+{% liquid
+  assign root_id = 'listicle-' | append: section.id
+  assign quick_picks = section.blocks | where: 'type', 'quick_pick'
+  assign compare_rows = section.blocks | where: 'type', 'compare_row'
+  assign products = section.blocks | where: 'type', 'product'
+  assign guide_items = section.blocks | where: 'type', 'guide_item'
+  assign highlight_col = section.settings.compare_highlight_col
+
+  assign article_title = section.settings.title
+  if article_title == blank and article.title != blank
+    assign article_title = article.title
+  endif
+
+  assign author_name = section.settings.author_name
+  if author_name == blank and article.author != blank
+    assign author_name = article.author
+  endif
+
+  assign intro = section.settings.intro
+  if intro == blank and article.excerpt != blank
+    assign intro = article.excerpt | strip_html
+  endif
+%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap">
+
+<article
+  id="{{ root_id }}"
+  class="listicle{% if section.settings.show_sticky %} listicle--has-sticky{% endif %}"
+  style="
+    --lst-bg: {{ section.settings.bg_color }};
+    --lst-accent: {{ section.settings.accent_color }};
+    --lst-accent-lt: {{ section.settings.accent_light_color }};
+    --lst-ink: {{ section.settings.text_color }};
+  "
+>
+  {%- comment -%} ── SITE HEADER ── {%- endcomment -%}
+  {% if section.settings.brand_text != blank %}
+    <header class="listicle__site-header">
+      <div class="brand">
+        {{ section.settings.brand_text | escape }}
+        {%- if section.settings.brand_highlight != blank %} <span>{{ section.settings.brand_highlight | escape }}</span>{% endif -%}
+        {%- if section.settings.brand_suffix != blank %} {{ section.settings.brand_suffix | escape }}{% endif -%}
+      </div>
+    </header>
+  {% endif %}
+
+  {%- comment -%} ── ARTICLE HEADER ── {%- endcomment -%}
+  <div class="article-header">
+    <div class="lst-container">
+      {% if section.settings.eyebrow != blank %}
+        <div class="eyebrow">{{ section.settings.eyebrow | escape }}</div>
+      {% endif %}
+      {% if article_title != blank %}
+        <h1 class="article-title">{{ article_title | escape }}</h1>
+      {% endif %}
+      <div class="article-meta">
+        {% if author_name != blank %}
+          <span>By <strong>{{ author_name | escape }}</strong>{% if section.settings.author_title != blank %}, {{ section.settings.author_title | escape }}{% endif %}</span>
+        {% endif %}
+        {% if section.settings.updated_label != blank %}
+          <span>Updated <strong>{{ section.settings.updated_label | escape }}</strong></span>
+        {% endif %}
+        {% if section.settings.read_time != blank %}
+          <span>⏱ {{ section.settings.read_time | escape }}</span>
+        {% endif %}
+      </div>
+      {% if intro != blank %}
+        <p class="article-intro">{{ intro }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="lst-container">
+    <div class="content">
+
+      {%- comment -%} ── QUICK PICKS ── {%- endcomment -%}
+      {% if quick_picks.size > 0 %}
+        <div class="quick-picks">
+          {% if section.settings.quick_picks_heading != blank %}
+            <h3>{{ section.settings.quick_picks_heading | escape }}</h3>
+          {% endif %}
+          {% for block in quick_picks %}
+            <div class="qp-row" {{ block.shopify_attributes }}>
+              <span class="qp-label">{{ block.settings.label | escape }}</span>
+              <span class="qp-name">{{ block.settings.text }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {%- comment -%} ── COMPARISON TABLE ── {%- endcomment -%}
+      {% if compare_rows.size > 0 %}
+        <div class="comparison-section">
+          {% if section.settings.comparison_heading != blank %}
+            <h2>{{ section.settings.comparison_heading | escape }}</h2>
+          {% endif %}
+          <div class="table-wrap">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>{{ section.settings.compare_col_0 | escape }}</th>
+                  {% for i in (1..5) %}
+                    {%- assign col_key = 'compare_col_' | append: i -%}
+                    {%- assign col_val = section.settings[col_key] -%}
+                    {% if col_val != blank %}
+                      <th class="{% if i == highlight_col %}highlight{% endif %}">{{ col_val | escape }}</th>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for block in compare_rows %}
+                  {%- assign cells = block.settings.cell_1 | append: '|~|' | append: block.settings.cell_2 | append: '|~|' | append: block.settings.cell_3 | append: '|~|' | append: block.settings.cell_4 | append: '|~|' | append: block.settings.cell_5 | split: '|~|' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td>{{ block.settings.row_label | escape }}</td>
+                    {% for cell in cells %}
+                      {%- assign col_index = forloop.index -%}
+                      {%- assign col_key = 'compare_col_' | append: col_index -%}
+                      {% if section.settings[col_key] != blank %}
+                        {%- assign trimmed = cell | strip -%}
+                        {%- assign mark = trimmed | slice: 0, 1 -%}
+                        <td class="{% if col_index == highlight_col %}highlight{% endif %}">
+                          {%- if mark == '✓' -%}
+                            <span class="chk">✓</span>{{ trimmed | remove_first: '✓' }}
+                          {%- elsif mark == '✗' -%}
+                            <span class="x">✗</span>{{ trimmed | remove_first: '✗' }}
+                          {%- elsif mark == '~' -%}
+                            <span class="partial">~</span>{{ trimmed | remove_first: '~' }}
+                          {%- elsif mark == '★' -%}
+                            {%- assign star_parts = trimmed | split: ' ' -%}
+                            <span class="stars-s">{{ star_parts | first }}</span>{% if star_parts.size > 1 %} {{ trimmed | remove_first: star_parts.first | strip }}{% endif %}
+                          {%- else -%}
+                            {{ trimmed }}
+                          {%- endif -%}
+                        </td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endif %}
+
+      {%- comment -%} ── PRODUCT REVIEWS ── {%- endcomment -%}
+      {% if products.size > 0 %}
+        {% if section.settings.reviews_title != blank %}
+          <h2 class="section-title">{{ section.settings.reviews_title | escape }}</h2>
+        {% endif %}
+
+        {% for block in products %}
+          {%- assign rank = forloop.index -%}
+          {%- assign rank_class = 'r' | append: rank -%}
+          <div class="product-card{% if block.settings.top_pick %} winner{% endif %}" {{ block.shopify_attributes }}>
+
+            {% if block.settings.image != blank %}
+              <div class="card-img-wrap">
+                <img
+                  src="{{ block.settings.image | image_url: width: 720 }}"
+                  alt="{{ block.settings.product_name | escape }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+            {% if block.settings.top_pick and block.settings.winner_banner != blank %}
+              <div class="winner-banner">
+                <span class="trophy">🏆</span>
+                {{ block.settings.winner_banner | escape }}
+              </div>
+            {% endif %}
+
+            <div class="card-header">
+              <div class="rank-badge {{ rank_class }}">
+                <span class="num">#{{ rank }}</span>
+                <span class="of">TOP</span>
+              </div>
+              <div class="card-title-area">
+                {% if block.settings.pick_label != blank %}
+                  <div class="product-pick-label {{ block.settings.pick_tone }}-label">{{ block.settings.pick_label | escape }}</div>
+                {% endif %}
+                <h3 class="product-name">{{ block.settings.product_name | escape }}</h3>
+                <div class="product-rating">
+                  <span class="stars-lg">{{ block.settings.rating_stars | escape }}</span>
+                  <span>{{ block.settings.rating_text | escape }}</span>
+                </div>
+              </div>
+              {% if block.settings.price != blank %}
+                <div class="price-tag">
+                  {{ block.settings.price | escape }}
+                  {%- if block.settings.compare_price != blank %}<small>{{ block.settings.compare_price | escape }}</small>{% endif -%}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="card-body">
+              {% assign key_pills = block.settings.key_pills | newline_to_br | split: '<br />' %}
+              {% assign pills = block.settings.pills | newline_to_br | split: '<br />' %}
+              {% if key_pills.size > 0 or pills.size > 0 %}
+                <div class="feature-pills">
+                  {% for p in key_pills %}{% assign t = p | strip %}{% if t != blank %}<span class="pill key">{{ t | escape }}</span>{% endif %}{% endfor %}
+                  {% for p in pills %}{% assign t = p | strip %}{% if t != blank %}<span class="pill">{{ t | escape }}</span>{% endif %}{% endfor %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.verdict != blank %}
+                <div class="card-verdict">{{ block.settings.verdict }}</div>
+              {% endif %}
+
+              {% if block.settings.quote_text != blank %}
+                <div class="inline-quote">
+                  {{ block.settings.quote_text | escape }}
+                  {%- if block.settings.quote_cite != blank %}<cite>{{ block.settings.quote_cite | escape }}</cite>{% endif -%}
+                </div>
+              {% endif %}
+
+              {% assign pros = block.settings.pros | newline_to_br | split: '<br />' %}
+              {% assign cons = block.settings.cons | newline_to_br | split: '<br />' %}
+              {% if pros.size > 0 or cons.size > 0 %}
+                <div class="pros-cons">
+                  <div class="pros">
+                    <h4>{{ block.settings.pros_heading | escape }}</h4>
+                    <ul>
+                      {% for item in pros %}{% assign t = item | strip %}{% if t != blank %}<li>{{ t | escape }}</li>{% endif %}{% endfor %}
+                    </ul>
+                  </div>
+                  <div class="cons">
+                    <h4>{{ block.settings.cons_heading | escape }}</h4>
+                    <ul>
+                      {% for item in cons %}{% assign t = item | strip %}{% if t != blank %}<li>{{ t | escape }}</li>{% endif %}{% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endif %}
+
+              <div class="cta-wrap">
+                {% if block.settings.primary_cta_label != blank %}
+                  <a href="{{ block.settings.primary_cta_link }}" class="btn-primary">{{ block.settings.primary_cta_label | escape }}</a>
+                {% endif %}
+                {% if block.settings.secondary_cta_label != blank %}
+                  <a href="{{ block.settings.secondary_cta_link }}" class="btn-secondary">{{ block.settings.secondary_cta_label | escape }}</a>
+                {% endif %}
+              </div>
+              {% if block.settings.guarantee_note != blank %}
+                <p class="guarantee-note">{{ block.settings.guarantee_note }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {%- comment -%} ── BUYING GUIDE ── {%- endcomment -%}
+      {% if guide_items.size > 0 %}
+        <div class="buying-guide">
+          {% if section.settings.guide_heading != blank %}
+            <h2>{{ section.settings.guide_heading | escape }}</h2>
+          {% endif %}
+          {% for block in guide_items %}
+            <div class="guide-item" {{ block.shopify_attributes }}>
+              <h4>{{ block.settings.title | escape }}</h4>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {%- comment -%} ── FINAL VERDICT ── {%- endcomment -%}
+      {% if section.settings.verdict_heading != blank or section.settings.verdict_body != blank %}
+        <div class="final-verdict">
+          {% if section.settings.verdict_heading != blank %}
+            <h2>{{ section.settings.verdict_heading | escape }}</h2>
+          {% endif %}
+          {% if section.settings.verdict_body != blank %}
+            {{ section.settings.verdict_body }}
+          {% endif %}
+          {% if section.settings.verdict_cta_label != blank %}
+            <a href="{{ section.settings.verdict_cta_link }}" class="cta-final">{{ section.settings.verdict_cta_label | escape }}</a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {%- comment -%} ── FOOTER ── {%- endcomment -%}
+  {% if section.settings.footer_brand != blank or section.settings.footer_disclosure != blank %}
+    <footer class="listicle__footer">
+      <div class="lst-container">
+        {% if section.settings.footer_brand != blank %}
+          <strong>{{ section.settings.footer_brand | escape }}</strong>{% if section.settings.footer_tagline != blank %} · {{ section.settings.footer_tagline | escape }}{% endif %}<br>
+        {% endif %}
+        {% if section.settings.footer_links != blank %}{{ section.settings.footer_links }}<br><br>{% endif %}
+        {% if section.settings.footer_disclosure != blank %}
+          <small style="font-size:12px;color:#aaa">{{ section.settings.footer_disclosure }}</small>
+        {% endif %}
+      </div>
+    </footer>
+  {% endif %}
+
+  {%- comment -%} ── STICKY CTA BAR ── {%- endcomment -%}
+  {% if section.settings.show_sticky %}
+    <div class="sticky-bar">
+      <div class="sb-text">
+        {{ section.settings.sticky_eyebrow | escape }}
+        {%- if section.settings.sticky_text != blank %}<small>{{ section.settings.sticky_text | escape }}</small>{% endif -%}
+      </div>
+      <a href="{{ section.settings.sticky_link }}" class="sb-btn">{{ section.settings.sticky_button_label | escape }}</a>
+    </div>
+  {% endif %}
+</article>
+
+{% stylesheet %}
+.listicle {
+  --bg: #f5f4f0;
+  --white: #ffffff;
+  --ink: #18181a;
+  --ink-soft: #4a4a55;
+  --ink-muted: #7a7a85;
+  --accent: #c0380a;
+  --accent-lt: #e04a18;
+  --gold: #b8920a;
+  --gold-bg: #fef9ea;
+  --green: #1a7040;
+  --green-bg: #edf7f1;
+  --red-bg: #fdf0ee;
+  --border: #ddddd8;
+  --rank1: #c0380a;
+  --rank2: #7a5a2a;
+  --rank3: #3a6a8a;
+  --rank4: #4a4a55;
+  --rank5: #4a4a55;
+
+  background: var(--lst-bg, var(--bg));
+  color: var(--lst-ink, var(--ink));
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  display: block;
+}
+.listicle, .listicle *, .listicle *::before, .listicle *::after { box-sizing: border-box; }
+.listicle h1, .listicle h2, .listicle h3, .listicle h4, .listicle p, .listicle ul { margin: 0; padding: 0; }
+
+/* Map theme-editor overrides */
+.listicle { --accent: var(--lst-accent, #c0380a); --accent-lt: var(--lst-accent-lt, #e04a18); }
+
+/* ── LAYOUT ── */
+.listicle .lst-container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+/* ── SITE HEADER ── */
+.listicle__site-header { background: var(--ink); padding: 12px 20px; text-align: center; }
+.listicle__site-header .brand { color: #fff; font-weight: 700; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; }
+.listicle__site-header .brand span { color: var(--accent); }
+
+/* ── ARTICLE HEADER ── */
+.listicle .article-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 48px 20px 36px; }
+.listicle .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.listicle .eyebrow::before, .listicle .eyebrow::after { content: ''; display: block; height: 1px; width: 24px; background: var(--accent); opacity: .5; }
+.listicle h1.article-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(26px, 5vw, 40px); font-weight: 800; line-height: 1.15; color: var(--ink); margin-bottom: 16px; max-width: 680px; }
+.listicle .article-meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; color: var(--ink-muted); margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.listicle .article-meta strong { color: var(--ink-soft); }
+.listicle .article-intro { font-size: 17px; color: var(--ink-soft); line-height: 1.75; max-width: 680px; }
+
+/* ── QUICK PICKS BOX ── */
+.listicle .quick-picks { background: var(--gold-bg); border: 1.5px solid #dbb830; border-radius: 10px; padding: 24px 28px; margin: 36px 0; }
+.listicle .quick-picks h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.listicle .qp-row { display: flex; align-items: baseline; gap: 10px; padding: 8px 0; border-top: 1px solid #e8d070; font-size: 14.5px; }
+.listicle .qp-row:first-of-type { border-top: none; }
+.listicle .qp-label { font-weight: 700; color: var(--ink-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; min-width: 140px; flex-shrink: 0; }
+.listicle .qp-name { color: var(--ink); font-weight: 600; }
+.listicle .qp-name a { color: var(--accent); text-decoration: none; font-weight: 700; }
+.listicle .qp-name a:hover { text-decoration: underline; }
+
+/* ── COMPARISON TABLE ── */
+.listicle .comparison-section { margin: 36px 0; }
+.listicle .comparison-section h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 16px; color: var(--ink); }
+.listicle .table-wrap { overflow-x: auto; }
+.listicle table.compare { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.listicle table.compare th { background: var(--ink); color: #fff; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; padding: 12px 14px; text-align: left; white-space: nowrap; }
+.listicle table.compare th.highlight { background: var(--accent); }
+.listicle table.compare td { padding: 11px 14px; border-bottom: 1px solid #ececec; color: var(--ink-soft); vertical-align: middle; }
+.listicle table.compare td.highlight { background: #fff8f5; font-weight: 600; color: var(--ink); }
+.listicle table.compare tr:last-child td { border-bottom: none; }
+.listicle table.compare td:first-child { font-weight: 600; color: var(--ink); }
+.listicle .chk { color: var(--green); font-size: 16px; }
+.listicle .x { color: #d03030; font-size: 16px; }
+.listicle .partial { color: var(--gold); font-size: 15px; }
+.listicle .stars-s { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+
+/* ── MAIN CONTENT AREA ── */
+.listicle .content { padding: 16px 0 48px; }
+
+/* ── SECTION HEADING ── */
+.listicle .section-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--ink); margin: 40px 0 20px; padding-top: 24px; border-top: 2px solid var(--border); }
+
+/* ── PRODUCT CARD ── */
+.listicle .product-card { background: var(--white); border-radius: 12px; border: 1.5px solid var(--border); margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.listicle .product-card.winner { border-color: var(--accent); box-shadow: 0 4px 20px rgba(192,56,10,.15); }
+.listicle .card-header { padding: 20px 24px 16px; border-bottom: 1px solid #efefef; display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.listicle .rank-badge { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; flex-shrink: 0; font-family: 'Playfair Display', serif; }
+.listicle .rank-badge .num { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
+.listicle .rank-badge .of { font-size: 9px; color: rgba(255,255,255,.75); text-transform: uppercase; letter-spacing: .1em; }
+.listicle .rank-badge.r1 { background: var(--rank1); }
+.listicle .rank-badge.r2 { background: var(--rank2); }
+.listicle .rank-badge.r3 { background: var(--rank3); }
+.listicle .rank-badge.r4 { background: var(--rank4); }
+.listicle .rank-badge.r5 { background: var(--rank5); }
+.listicle .card-title-area { flex: 1; min-width: 200px; }
+.listicle .product-pick-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 4px; }
+.listicle .product-pick-label.winner-label { color: var(--accent); }
+.listicle .product-pick-label.runner-label { color: var(--rank2); }
+.listicle .product-pick-label.budget-label { color: var(--rank3); }
+.listicle .product-pick-label.other-label { color: var(--ink-muted); }
+.listicle h3.product-name { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: 6px; }
+.listicle .product-rating { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-muted); }
+.listicle .stars-lg { color: var(--gold); font-size: 15px; letter-spacing: 1px; }
+.listicle .price-tag { font-size: 22px; font-weight: 700; color: var(--ink); margin-left: auto; align-self: center; white-space: nowrap; }
+.listicle .price-tag small { font-size: 13px; color: var(--ink-muted); text-decoration: line-through; font-weight: 400; display: block; text-align: right; }
+
+/* ── CARD BODY ── */
+.listicle .card-body { padding: 20px 24px; }
+.listicle .card-verdict { font-size: 15px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 18px; }
+.listicle .card-verdict p { margin-bottom: 14px; }
+.listicle .card-verdict p:last-child { margin-bottom: 0; }
+.listicle .card-verdict strong { color: var(--ink); }
+.listicle .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.listicle .pros, .listicle .cons { padding: 14px 16px; border-radius: 8px; font-size: 13.5px; }
+.listicle .pros { background: var(--green-bg); }
+.listicle .cons { background: var(--red-bg); }
+.listicle .pros h4, .listicle .cons h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+.listicle .pros h4 { color: var(--green); }
+.listicle .cons h4 { color: #c03030; }
+.listicle .pros ul, .listicle .cons ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.listicle .pros ul li::before { content: '✓ '; color: var(--green); font-weight: 700; }
+.listicle .cons ul li::before { content: '✗ '; color: #c03030; font-weight: 700; }
+.listicle .pros ul li, .listicle .cons ul li { color: var(--ink-soft); line-height: 1.4; }
+
+/* ── FEATURE PILLS ── */
+.listicle .feature-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+.listicle .pill { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 100px; background: #f0f0ec; color: var(--ink-soft); border: 1px solid #e0e0db; }
+.listicle .pill.key { background: #fff0eb; color: var(--accent); border-color: #f8c0a8; }
+
+/* ── CTA BUTTONS ── */
+.listicle .cta-wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.listicle .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 700; font-size: 15px; padding: 13px 24px; border-radius: 8px; text-decoration: none; transition: background .15s, transform .1s; }
+.listicle .btn-primary:hover { background: var(--accent-lt); transform: translateY(-1px); }
+.listicle .btn-secondary { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--ink-muted); font-weight: 500; font-size: 14px; padding: 11px 18px; border-radius: 8px; text-decoration: none; border: 1px solid var(--border); transition: border-color .15s; }
+.listicle .btn-secondary:hover { border-color: #aaa; color: var(--ink); }
+.listicle .guarantee-note { font-size: 12px; color: var(--ink-muted); margin-top: 10px; }
+.listicle .guarantee-note span { color: var(--green); font-weight: 600; }
+
+/* ── WINNER BANNER ── */
+.listicle .winner-banner { background: linear-gradient(90deg, var(--accent), #e05020); padding: 10px 24px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #fff; letter-spacing: .03em; }
+.listicle .winner-banner .trophy { font-size: 18px; }
+
+/* ── INLINE QUOTE ── */
+.listicle .inline-quote { border-left: 3px solid var(--accent); padding: 12px 18px; margin: 16px 0; background: #fafaf8; border-radius: 0 6px 6px 0; font-size: 14.5px; color: var(--ink-soft); font-style: italic; line-height: 1.65; }
+.listicle .inline-quote cite { display: block; margin-top: 6px; font-style: normal; font-size: 12px; color: var(--ink-muted); font-weight: 600; }
+
+/* ── BUYING GUIDE ── */
+.listicle .buying-guide { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 28px; margin: 40px 0; }
+.listicle .buying-guide h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 18px; color: var(--ink); }
+.listicle .guide-item { padding: 14px 0; border-top: 1px solid var(--border); }
+.listicle .guide-item:first-of-type { border-top: none; }
+.listicle .guide-item h4 { font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.listicle .guide-item p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+
+/* ── FINAL VERDICT ── */
+.listicle .final-verdict { background: var(--ink); color: #fff; border-radius: 12px; padding: 32px 28px; margin: 36px 0; }
+.listicle .final-verdict h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 14px; color: #fff; }
+.listicle .final-verdict p { font-size: 15px; color: #c0c0b8; line-height: 1.7; margin-bottom: 14px; }
+.listicle .final-verdict strong { color: #fff; }
+.listicle .final-verdict .cta-final { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
+.listicle .final-verdict .cta-final:hover { background: var(--accent-lt); }
+
+/* ── FOOTER ── */
+.listicle__footer { background: var(--white); border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; font-size: 13px; color: var(--ink-muted); line-height: 1.8; }
+.listicle__footer a { color: var(--accent); text-decoration: none; }
+.listicle__footer strong { color: var(--ink-soft); }
+
+/* ── PRODUCT IMAGE ── */
+.listicle .card-img-wrap { width: 100%; background: #f5f4f0; border-bottom: 1px solid var(--border); display: flex; justify-content: center; align-items: center; overflow: hidden; max-height: 280px; position: relative; }
+.listicle .card-img-wrap img { width: 100%; max-width: 360px; height: 260px; object-fit: contain; padding: 16px; display: block; }
+
+/* ── STICKY CTA BAR ── */
+.listicle--has-sticky { padding-bottom: 72px; }
+.listicle .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; z-index: 100; box-shadow: 0 -4px 16px rgba(0,0,0,.2); }
+.listicle .sticky-bar .sb-text { font-size: 13px; font-weight: 600; color: #fff; }
+.listicle .sticky-bar .sb-text small { display: block; font-weight: 400; color: #8888a0; font-size: 11px; }
+.listicle .sticky-bar .sb-btn { background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 7px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+
+/* ── RESPONSIVE — TABLET ── */
+@media (max-width: 768px) {
+  .listicle .article-header { padding: 28px 16px 24px; }
+  .listicle h1.article-title { font-size: clamp(22px, 5.5vw, 32px); }
+  .listicle .article-intro { font-size: 15px; }
+  .listicle .card-body { padding: 16px; }
+  .listicle .card-header { padding: 14px 16px 12px; }
+  .listicle .buying-guide { padding: 20px 16px; }
+  .listicle .final-verdict { padding: 24px 16px; }
+  .listicle .quick-picks { padding: 18px 16px; }
+}
+
+/* ── RESPONSIVE — MOBILE ── */
+@media (max-width: 580px) {
+  .listicle { font-size: 15px; }
+  .listicle .lst-container { padding: 0 14px; }
+  .listicle .article-header { padding: 20px 14px; }
+  .listicle h1.article-title { font-size: clamp(20px, 6.5vw, 28px); line-height: 1.2; }
+  .listicle .article-meta { gap: 10px; font-size: 12px; }
+  .listicle .article-intro { font-size: 14.5px; }
+  .listicle .quick-picks { padding: 14px; }
+  .listicle .qp-row { flex-direction: column; gap: 2px; }
+  .listicle .qp-label { min-width: unset; font-size: 10px; }
+  .listicle .qp-name { font-size: 13.5px; }
+  .listicle .table-wrap { border-radius: 8px; overflow: hidden; }
+  .listicle table.compare { font-size: 11.5px; min-width: 480px; }
+  .listicle table.compare th, .listicle table.compare td { padding: 8px 9px; }
+  .listicle table.compare th { font-size: 10px; letter-spacing: .03em; }
+  .listicle .product-card { border-radius: 10px; }
+  .listicle .card-img-wrap { max-height: 200px; }
+  .listicle .card-img-wrap img { height: 180px; }
+  .listicle .card-header { flex-wrap: wrap; gap: 10px; padding: 12px 14px 10px; align-items: flex-start; }
+  .listicle .rank-badge { width: 44px; height: 44px; }
+  .listicle .rank-badge .num { font-size: 18px; }
+  .listicle .card-title-area { flex: 1; min-width: 140px; }
+  .listicle h3.product-name { font-size: 16px; }
+  .listicle .product-pick-label { font-size: 9.5px; }
+  .listicle .product-rating { font-size: 12px; }
+  .listicle .stars-lg { font-size: 13px; }
+  .listicle .price-tag { margin-left: 0; width: 100%; font-size: 20px; text-align: left; padding-left: 54px; }
+  .listicle .price-tag small { text-align: left; font-size: 12px; }
+  .listicle .card-body { padding: 14px; }
+  .listicle .card-verdict { font-size: 14px; }
+  .listicle .feature-pills { gap: 5px; }
+  .listicle .pill { font-size: 11px; padding: 3px 10px; }
+  .listicle .pros-cons { grid-template-columns: 1fr; gap: 10px; }
+  .listicle .pros, .listicle .cons { padding: 12px; }
+  .listicle .pros ul li, .listicle .cons ul li { font-size: 13px; }
+  .listicle .inline-quote { padding: 10px 14px; font-size: 13.5px; }
+  .listicle .cta-wrap { flex-direction: column; align-items: stretch; gap: 10px; }
+  .listicle .btn-primary, .listicle .btn-secondary { justify-content: center; font-size: 14px; padding: 12px 18px; }
+  .listicle .section-title { font-size: 20px; }
+  .listicle .comparison-section h2 { font-size: 19px; }
+  .listicle .buying-guide { padding: 16px 14px; }
+  .listicle .buying-guide h2 { font-size: 19px; }
+  .listicle .guide-item h4 { font-size: 13.5px; }
+  .listicle .guide-item p { font-size: 13px; }
+  .listicle .final-verdict { padding: 20px 14px; border-radius: 10px; }
+  .listicle .final-verdict h2 { font-size: 19px; }
+  .listicle .final-verdict p { font-size: 14px; }
+  .listicle .final-verdict .cta-final { display: flex; justify-content: center; font-size: 14px; padding: 13px 16px; width: 100%; text-align: center; }
+  .listicle .sticky-bar { padding: 10px 14px; }
+  .listicle .sticky-bar .sb-text { font-size: 12px; }
+  .listicle .sticky-bar .sb-text small { font-size: 10px; }
+  .listicle .sticky-bar .sb-btn { font-size: 13px; padding: 9px 16px; }
+  .listicle .winner-banner { padding: 8px 14px; font-size: 12px; }
+  .listicle .winner-banner .trophy { font-size: 16px; }
+  .listicle .guarantee-note { font-size: 11px; }
+  .listicle .quick-picks h3 { font-size: 16px; }
+}
+
+@media (max-width: 360px) {
+  .listicle { font-size: 14px; }
+  .listicle h1.article-title { font-size: 18px; }
+  .listicle .price-tag { font-size: 18px; }
+  .listicle h3.product-name { font-size: 15px; }
+  .listicle .sticky-bar .sb-text { display: none; }
+  .listicle .sticky-bar .sb-btn { width: 100%; text-align: center; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Listicle roundup",
+  "tag": "section",
+  "class": "section-listicle-roundup",
+  "settings": [
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "bg_color", "label": "Page background", "default": "#f5f4f0" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#c0380a" },
+    { "type": "color", "id": "accent_light_color", "label": "Accent (hover)", "default": "#e04a18" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#18181a" },
+
+    { "type": "header", "content": "Site header" },
+    { "type": "text", "id": "brand_text", "label": "Brand", "default": "Hosfu" },
+    { "type": "text", "id": "brand_highlight", "label": "Brand highlight (accent word)", "default": "Fitness" },
+    { "type": "text", "id": "brand_suffix", "label": "Brand suffix", "default": "— Gear Reviews & Guides" },
+
+    { "type": "header", "content": "Article header" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Gear Review · Arm Strength Training" },
+    { "type": "text", "id": "title", "label": "Title (blank = article title)" },
+    { "type": "text", "id": "author_name", "label": "Author (blank = article author)" },
+    { "type": "text", "id": "author_title", "label": "Author role", "default": "Fitness Gear Editor" },
+    { "type": "text", "id": "updated_label", "label": "Updated label", "default": "June 2026" },
+    { "type": "text", "id": "read_time", "label": "Read time", "default": "6 min read" },
+    { "type": "textarea", "id": "intro", "label": "Intro (blank = article excerpt)" },
+
+    { "type": "header", "content": "Quick picks" },
+    { "type": "text", "id": "quick_picks_heading", "label": "Heading", "default": "⚡ Quick Picks — Jump to Winner" },
+
+    { "type": "header", "content": "Comparison table" },
+    { "type": "text", "id": "comparison_heading", "label": "Heading", "default": "At a Glance — Full Comparison" },
+    { "type": "text", "id": "compare_col_0", "label": "Row label column header", "default": "Product" },
+    { "type": "text", "id": "compare_col_1", "label": "Column 1", "default": "Hosfu Trainer" },
+    { "type": "text", "id": "compare_col_2", "label": "Column 2", "default": "Gripzilla Kit" },
+    { "type": "text", "id": "compare_col_3", "label": "Column 3", "default": "YoeDirect" },
+    { "type": "text", "id": "compare_col_4", "label": "Column 4", "default": "ProArm" },
+    { "type": "text", "id": "compare_col_5", "label": "Column 5", "default": "J Bryant" },
+    { "type": "range", "id": "compare_highlight_col", "label": "Highlight column", "min": 0, "max": 5, "step": 1, "default": 1, "info": "0 = none. Cells: start with ✓, ✗, ~ or ★ for colored markers." },
+
+    { "type": "header", "content": "Reviews" },
+    { "type": "text", "id": "reviews_title", "label": "Section title", "default": "The Full Reviews" },
+
+    { "type": "header", "content": "Buying guide" },
+    { "type": "text", "id": "guide_heading", "label": "Heading", "default": "📖 Buying Guide — What Actually Matters" },
+
+    { "type": "header", "content": "Final verdict" },
+    { "type": "text", "id": "verdict_heading", "label": "Heading", "default": "Our Final Verdict" },
+    { "type": "richtext", "id": "verdict_body", "label": "Body" },
+    { "type": "text", "id": "verdict_cta_label", "label": "CTA label", "default": "Shop the Hosfu Trainer →" },
+    { "type": "url", "id": "verdict_cta_link", "label": "CTA link" },
+
+    { "type": "header", "content": "Footer" },
+    { "type": "text", "id": "footer_brand", "label": "Brand", "default": "Hosfu Fitness" },
+    { "type": "text", "id": "footer_tagline", "label": "Tagline", "default": "Gear Reviews & Training Guides" },
+    { "type": "richtext", "id": "footer_links", "label": "Links line" },
+    { "type": "richtext", "id": "footer_disclosure", "label": "Disclosure" },
+
+    { "type": "header", "content": "Sticky CTA bar" },
+    { "type": "checkbox", "id": "show_sticky", "label": "Show sticky bar", "default": true },
+    { "type": "text", "id": "sticky_eyebrow", "label": "Eyebrow", "default": "🏆 Our Top Pick" },
+    { "type": "text", "id": "sticky_text", "label": "Subtext", "default": "Hosfu Arm Wrestling Trainer · $99 · Free Shipping" },
+    { "type": "text", "id": "sticky_button_label", "label": "Button label", "default": "Shop Now →" },
+    { "type": "url", "id": "sticky_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "quick_pick",
+      "name": "Quick pick",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "🏆 Editor's Choice" },
+        { "type": "richtext", "id": "text", "label": "Text (supports a link)", "default": "<p>Best overall pick</p>" }
+      ]
+    },
+    {
+      "type": "compare_row",
+      "name": "Comparison row",
+      "settings": [
+        { "type": "text", "id": "row_label", "label": "Row label", "default": "Price" },
+        { "type": "text", "id": "cell_1", "label": "Column 1 cell", "default": "$99" },
+        { "type": "text", "id": "cell_2", "label": "Column 2 cell" },
+        { "type": "text", "id": "cell_3", "label": "Column 3 cell" },
+        { "type": "text", "id": "cell_4", "label": "Column 4 cell" },
+        { "type": "text", "id": "cell_5", "label": "Column 5 cell" }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product review",
+      "settings": [
+        { "type": "checkbox", "id": "top_pick", "label": "Top pick (winner styling)", "default": false },
+        { "type": "text", "id": "winner_banner", "label": "Winner banner text", "default": "EDITOR'S CHOICE — Best Pick 2026" },
+        { "type": "image_picker", "id": "image", "label": "Product image" },
+        { "type": "select", "id": "pick_tone", "label": "Pick label color", "options": [ { "value": "winner", "label": "Winner (accent)" }, { "value": "runner", "label": "Runner-up" }, { "value": "budget", "label": "Budget" }, { "value": "other", "label": "Other" } ], "default": "other" },
+        { "type": "text", "id": "pick_label", "label": "Pick label", "default": "🔰 Entry Level" },
+        { "type": "text", "id": "product_name", "label": "Product name", "default": "Product name" },
+        { "type": "text", "id": "rating_stars", "label": "Rating stars", "default": "★★★★★" },
+        { "type": "text", "id": "rating_text", "label": "Rating text", "default": "4.9/5 — 106 reviews" },
+        { "type": "text", "id": "price", "label": "Price", "default": "$99" },
+        { "type": "text", "id": "compare_price", "label": "Compare-at price", "default": "was $149" },
+        { "type": "textarea", "id": "key_pills", "label": "Key feature pills (one per line)" },
+        { "type": "textarea", "id": "pills", "label": "Feature pills (one per line)" },
+        { "type": "richtext", "id": "verdict", "label": "Verdict (paragraphs)" },
+        { "type": "textarea", "id": "quote_text", "label": "Inline quote" },
+        { "type": "text", "id": "quote_cite", "label": "Quote attribution" },
+        { "type": "text", "id": "pros_heading", "label": "Pros heading", "default": "✓ What We Liked" },
+        { "type": "textarea", "id": "pros", "label": "Pros (one per line)" },
+        { "type": "text", "id": "cons_heading", "label": "Cons heading", "default": "✗ What to Know" },
+        { "type": "textarea", "id": "cons", "label": "Cons (one per line)" },
+        { "type": "text", "id": "primary_cta_label", "label": "Primary CTA label" },
+        { "type": "url", "id": "primary_cta_link", "label": "Primary CTA link" },
+        { "type": "text", "id": "secondary_cta_label", "label": "Secondary CTA label", "default": "View on Amazon →" },
+        { "type": "url", "id": "secondary_cta_link", "label": "Secondary CTA link" },
+        { "type": "richtext", "id": "guarantee_note", "label": "Guarantee note" }
+      ]
+    },
+    {
+      "type": "guide_item",
+      "name": "Guide item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Buying tip" },
+        { "type": "richtext", "id": "description", "label": "Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Listicle roundup",
+      "blocks": [
+        { "type": "quick_pick" },
+        { "type": "compare_row" },
+        { "type": "product" },
+        { "type": "guide_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
