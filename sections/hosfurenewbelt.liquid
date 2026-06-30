@@ -1,0 +1,853 @@
+{% comment %}
+  Hosfu Renew Postpartum Recovery Belt - product page extra section
+  Cloned and rewritten from competitor structure Vaseiko Pulse Red Light EMS Core Belt
+  Angle: postpartum stretch mark and core recovery for new moms
+  4 in 1 technology EMS plus Red and Near Infrared Light Therapy plus Heat plus Vibration
+  Pricing is pulled live from the product object. If Kaching Bundles overrides pricing on the
+  live page that override will take priority since this section only renders the base product price.
+  Image mapping for the merchant to follow when uploading product photos in Shopify admin, in order:
+  Image 1 (featured) = main hero product shot on white or model
+  Image 2 = before and after stretch mark or core tone result graphic
+  Image 3 = EMS core activation lifestyle or diagram shot
+  Image 4 = busy mom multitasking lifestyle shot
+  Image 5 = unboxing or gift packaging shot
+  Any additional images become extra gallery thumbnails automatically
+{% endcomment %}
+
+<style>
+  #hsf-root-{{ section.id }} {
+    --hsf-black: #141414;
+    --hsf-charcoal: #232323;
+    --hsf-red: #c81e3a;
+    --hsf-red-dark: #9c1429;
+    --hsf-cream: #faf6f1;
+    --hsf-blush: #f3dbe0;
+    --hsf-line: #2c2c2c;
+    --hsf-font-display: 'Trebuchet MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+    --hsf-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: var(--hsf-font-body);
+    color: var(--hsf-black);
+    background: var(--hsf-cream);
+    overflow-x: hidden;
+  }
+
+  #hsf-root-{{ section.id }} * { box-sizing: border-box; }
+  #hsf-root-{{ section.id }} img { max-width: 100%; display: block; }
+  #hsf-root-{{ section.id }} .hsf-container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  #hsf-root-{{ section.id }} h1, #hsf-root-{{ section.id }} h2, #hsf-root-{{ section.id }} h3 {
+    font-family: var(--hsf-font-display);
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
+
+  /* ---------- trust bar ---------- */
+  .hsf-trustbar {
+    background: var(--hsf-black);
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: .02em;
+  }
+  .hsf-trustbar-inner {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .hsf-trustbar-item { display: flex; align-items: center; gap: 6px; opacity: .92; }
+
+  /* ---------- hero ---------- */
+  .hsf-hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    padding: 44px 0 36px;
+  }
+  @media (max-width: 860px) {
+    .hsf-hero { grid-template-columns: 1fr; gap: 24px; padding: 24px 0; }
+  }
+  .hsf-gallery-main {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ece4dc;
+  }
+  .hsf-gallery-main img { width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; }
+  .hsf-save-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--hsf-red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .04em;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .hsf-thumbs {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .hsf-thumb {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background: #fff;
+  }
+  .hsf-thumb.is-active { border-color: var(--hsf-red); }
+  .hsf-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+  .hsf-info { padding-top: 4px; }
+  .hsf-rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 14px; color: #4a4a4a; }
+  .hsf-stars { color: var(--hsf-red); letter-spacing: 1px; }
+  .hsf-title { font-size: 30px; }
+  .hsf-subtitle { font-size: 15px; color: #565656; margin-bottom: 18px; line-height: 1.5; }
+
+  .hsf-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .hsf-price-now { font-size: 28px; font-weight: 700; color: var(--hsf-red); }
+  .hsf-price-was { font-size: 17px; color: #9a9a9a; text-decoration: line-through; }
+  .hsf-price-save { font-size: 12px; font-weight: 700; color: #fff; background: var(--hsf-black); padding: 3px 8px; border-radius: 6px; }
+  .hsf-unit-note { font-size: 12px; color: #8a8a8a; margin-bottom: 20px; }
+
+  .hsf-benefits { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 10px; }
+  .hsf-benefits li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; }
+  .hsf-benefits svg { flex: 0 0 auto; margin-top: 2px; }
+
+  .hsf-option-group { margin-bottom: 16px; }
+  .hsf-option-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 8px; }
+  .hsf-option-values { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hsf-option-btn {
+    border: 1.5px solid var(--hsf-black);
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .hsf-option-btn.is-selected { background: var(--hsf-black); color: #fff; }
+
+  .hsf-qty-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .hsf-qty-box { display: flex; align-items: center; border: 1.5px solid var(--hsf-black); border-radius: 8px; overflow: hidden; }
+  .hsf-qty-box button { width: 38px; height: 40px; background: #fff; border: none; font-size: 18px; cursor: pointer; }
+  .hsf-qty-box input { width: 42px; height: 40px; border: none; text-align: center; font-size: 15px; -moz-appearance: textfield; }
+
+  .hsf-cta-btn {
+    width: 100%;
+    background: var(--hsf-red);
+    color: #fff;
+    border: none;
+    font-family: var(--hsf-font-display);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 16px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: .02em;
+    transition: background .15s ease;
+  }
+  .hsf-cta-btn:hover { background: var(--hsf-red-dark); }
+  .hsf-cta-btn:disabled { opacity: .65; cursor: progress; }
+  .hsf-cta-error { color: var(--hsf-red); font-size: 13px; margin-top: 8px; display: none; }
+
+  .hsf-guarantee-line { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: #555; }
+  .hsf-guarantee-line span { display: flex; align-items: center; gap: 6px; }
+
+  /* ---------- sticky bar ---------- */
+  .hsf-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -120px;
+    background: #fff;
+    border-top: 1px solid #e7e1d8;
+    box-shadow: 0 -6px 20px rgba(0,0,0,.08);
+    z-index: 999;
+    transition: bottom .25s ease;
+  }
+  .hsf-sticky.is-visible { bottom: 0; }
+  .hsf-sticky-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .hsf-sticky-inner img { width: 46px; height: 46px; border-radius: 8px; object-fit: cover; flex: 0 0 auto; }
+  .hsf-sticky-title { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; }
+  .hsf-sticky-price { font-size: 15px; font-weight: 700; color: var(--hsf-red); white-space: nowrap; }
+  .hsf-sticky .hsf-cta-btn { width: auto; padding: 11px 22px; font-size: 14px; }
+  @media (max-width: 600px) { .hsf-sticky-title { display: none; } }
+
+  /* ---------- tech grid ---------- */
+  .hsf-tech {
+    background: var(--hsf-black);
+    color: #fff;
+    padding: 52px 0;
+  }
+  .hsf-tech h2 { color: #fff; text-align: center; font-size: 26px; }
+  .hsf-tech-sub { text-align: center; color: #bdbdbd; max-width: 560px; margin: 0 auto 36px; font-size: 14px; }
+  .hsf-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 760px) { .hsf-tech-grid { grid-template-columns: 1fr 1fr; } }
+  .hsf-tech-card { background: var(--hsf-charcoal); border-radius: 14px; padding: 22px 16px; text-align: center; }
+  .hsf-tech-card svg { margin-bottom: 12px; }
+  .hsf-tech-card h3 { font-size: 15px; color: #fff; margin-bottom: 6px; }
+  .hsf-tech-card p { font-size: 12.5px; color: #b7b7b7; line-height: 1.5; margin: 0; }
+
+  /* ---------- feature rows ---------- */
+  .hsf-feature {
+    padding: 56px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: center;
+  }
+  .hsf-feature.is-reverse .hsf-feature-media { order: 2; }
+  @media (max-width: 800px) {
+    .hsf-feature { grid-template-columns: 1fr; padding: 32px 0; gap: 20px; }
+    .hsf-feature.is-reverse .hsf-feature-media { order: 0; }
+  }
+  .hsf-feature-media { border-radius: 16px; overflow: hidden; }
+  .hsf-feature-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+  .hsf-feature h2 { font-size: 24px; }
+  .hsf-feature p { font-size: 15px; line-height: 1.65; color: #444; }
+  .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red); background: var(--hsf-blush); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; }
+
+  /* ---------- results / placeholder svg ---------- */
+  .hsf-placeholder-svg { width: 100%; aspect-ratio: 4/3; background: #efe7de; }
+
+  /* ---------- faq ---------- */
+  .hsf-faq-section { background: var(--hsf-blush); padding: 56px 0; }
+  .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; }
+  .hsf-faq-sub { text-align: center; color: #6a4954; font-size: 14px; margin-bottom: 32px; }
+  .hsf-faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
+  .hsf-faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
+  .hsf-faq-q {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 16px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+  }
+  .hsf-faq-q .hsf-faq-icon { transition: transform .2s ease; flex: 0 0 auto; }
+  .hsf-faq-item.is-open .hsf-faq-icon { transform: rotate(45deg); }
+  .hsf-faq-a { max-height: 0; overflow: hidden; transition: max-height .25s ease; padding: 0 18px; }
+  .hsf-faq-a-inner { padding-bottom: 16px; font-size: 14px; color: #4d4d4d; line-height: 1.6; }
+  .hsf-faq-note { max-width: 760px; margin: 26px auto 0; font-size: 12.5px; color: #6a4954; text-align: center; line-height: 1.6; }
+
+  /* ---------- guarantee strip ---------- */
+  .hsf-guarantee-strip { padding: 44px 0; text-align: center; }
+  .hsf-guarantee-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .hsf-guarantee-grid div { max-width: 180px; font-size: 13px; color: #555; }
+  .hsf-guarantee-grid svg { margin-bottom: 8px; }
+
+  /* ---------- cart drawer ---------- */
+  .hsf-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 1000; }
+  .hsf-overlay.is-open { opacity: 1; pointer-events: auto; }
+  .hsf-drawer {
+    position: fixed;
+    top: 0; right: -380px;
+    width: 360px; max-width: 90vw; height: 100%;
+    background: #fff;
+    z-index: 1001;
+    transition: right .25s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .hsf-drawer.is-open { right: 0; }
+  .hsf-drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+  .hsf-drawer-head h3 { margin: 0; font-size: 17px; }
+  .hsf-drawer-close { background: none; border: none; font-size: 22px; cursor: pointer; line-height: 1; }
+  .hsf-drawer-item { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid #eee; }
+  .hsf-drawer-item img { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; }
+  .hsf-drawer-item-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .hsf-drawer-item-meta { font-size: 13px; color: #666; }
+  .hsf-drawer-actions { margin-top: auto; display: grid; gap: 10px; }
+  .hsf-drawer-actions a {
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .hsf-drawer-checkout { background: var(--hsf-red); color: #fff; }
+  .hsf-drawer-view { background: #fff; color: var(--hsf-black); border: 1.5px solid var(--hsf-black); }
+</style>
+
+<div id="hsf-root-{{ section.id }}">
+
+  <div class="hsf-trustbar">
+    <div class="hsf-trustbar-inner">
+      <div class="hsf-trustbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.6-.4L12 2z" fill="#fff"/></svg>
+        2-Year Warranty
+      </div>
+      <div class="hsf-trustbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v8H3z" stroke="#fff" stroke-width="1.6"/><path d="M16 10h3l2 3v2h-5z" stroke="#fff" stroke-width="1.6"/></svg>
+        Free US Shipping
+      </div>
+      <div class="hsf-trustbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#fff" stroke-width="1.6"/></svg>
+        90-Day Money-Back Guarantee
+      </div>
+    </div>
+  </div>
+
+  <div class="hsf-container">
+    <div class="hsf-hero">
+
+      {% assign gallery_images = product.images %}
+      <div>
+        <div class="hsf-gallery-main">
+          <span class="hsf-save-badge" id="hsf-save-badge-{{ section.id }}">SAVE 45%</span>
+          {% if product.featured_image %}
+            <img id="hsf-main-image-{{ section.id }}"
+                 src="{{ product.featured_image | image_url: width: 900, height: 900, crop: 'center' }}"
+                 width="900" height="900"
+                 alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                 loading="eager">
+          {% else %}
+            <div id="hsf-main-image-{{ section.id }}">
+              {{ 'product-1' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if gallery_images.size > 1 %}
+          <div class="hsf-thumbs">
+            {% for image in gallery_images limit: 8 %}
+              <button type="button" class="hsf-thumb{% if forloop.first %} is-active{% endif %}" data-full="{{ image | image_url: width: 900, height: 900, crop: 'center' }}">
+                <img src="{{ image | image_url: width: 150, height: 150, crop: 'center' }}" width="150" height="150" alt="{{ image.alt | default: product.title | escape }}" loading="lazy">
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="hsf-info">
+        <div class="hsf-rating-row">
+          <span class="hsf-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>4.8 out of 5 &nbsp;|&nbsp; 1,200+ Moms Reviewed</span>
+        </div>
+
+        <h1 class="hsf-title">Hosfu Renew Postpartum Recovery Belt</h1>
+        <p class="hsf-subtitle">Your at-home "Postpartum Recovery Coach" — EMS core toning, Red &amp; Near-Infrared light therapy, heat, and vibration massage in one wearable belt, built for the fourth trimester.</p>
+
+        <div class="hsf-price-row">
+          <span class="hsf-price-now">{{ product.selected_or_first_available_variant.price | default: product.price | money }}</span>
+          {% assign compare_price = product.selected_or_first_available_variant.compare_at_price %}
+          {% if compare_price and compare_price > product.selected_or_first_available_variant.price %}
+            <span class="hsf-price-was">{{ compare_price | money }}</span>
+            <span class="hsf-price-save">SAVE {{ compare_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: compare_price | round }}%</span>
+          {% endif %}
+        </div>
+        <p class="hsf-unit-note">Price shown reflects the live product price. Bundle and quantity pricing is applied automatically at checkout.</p>
+
+        <ul class="hsf-benefits">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#c81e3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Helps fade stretch marks with Red &amp; NIR light therapy
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#c81e3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            EMS gently re-activates and tones your core
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#c81e3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            3-level heat soothes lower back and cramping
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#c81e3a"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Wear it cordless while you feed, rock, or rest baby
+          </li>
+        </ul>
+
+        <div>
+          <form id="hsf-form-{{ section.id }}" data-hsf-form>
+            {% if product.has_only_default_variant == false %}
+              {% for option in product.options_with_values %}
+                <div class="hsf-option-group">
+                  <span class="hsf-option-label">{{ option.name }}</span>
+                  <div class="hsf-option-values" data-option-index="{{ forloop.index0 }}">
+                    {% for value in option.values %}
+                      <button type="button" class="hsf-option-btn{% if forloop.first %} is-selected{% endif %}" data-value="{{ value | escape }}">{{ value }}</button>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+            <div class="hsf-qty-row">
+              <span class="hsf-option-label" style="margin:0;">Quantity</span>
+              <div class="hsf-qty-box">
+                <button type="button" data-hsf-qty-minus aria-label="Decrease quantity">&minus;</button>
+                <input type="text" inputmode="numeric" value="1" id="hsf-qty-{{ section.id }}" data-hsf-qty-input readonly>
+                <button type="button" data-hsf-qty-plus aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <button type="submit" class="hsf-cta-btn" data-hsf-submit>
+              Add to Cart — Start My Recovery
+            </button>
+            <p class="hsf-cta-error" data-hsf-error></p>
+          </form>
+        </div>
+
+        <div class="hsf-guarantee-line">
+          <span>&#128176; 90-Day Money-Back</span>
+          <span>&#128295; 2-Year Warranty</span>
+          <span>&#128274; Secure Checkout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 4-in-1 tech grid ============ -->
+  <div class="hsf-tech">
+    <div class="hsf-container">
+      <h2>4-in-1 Renew Technology</h2>
+      <p class="hsf-tech-sub">Every Hosfu Renew Belt combines four clinical-inspired therapies into a single wearable, so your postpartum recovery routine fits into nap time, not gym time.</p>
+      <div class="hsf-tech-grid">
+        <div class="hsf-tech-card">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#c81e3a"/></svg>
+          <h3>EMS Toning</h3>
+          <p>Micro-current pulses fire your core muscles to help rebuild tone after pregnancy.</p>
+        </div>
+        <div class="hsf-tech-card">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="#c81e3a" stroke-width="1.8"/><g stroke="#c81e3a" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/></g></svg>
+          <h3>Red &amp; NIR Light</h3>
+          <p>850nm, 940nm and 1064nm wavelengths target skin and deep tissue to support collagen renewal.</p>
+        </div>
+        <div class="hsf-tech-card">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2c-3 4-5 6.5-5 10a5 5 0 0010 0c0-3.5-2-6-5-10z" stroke="#c81e3a" stroke-width="1.8"/></svg>
+          <h3>3-Level Heat</h3>
+          <p>113°F, 122°F and 131°F warmth to ease circulation and lower-back tension.</p>
+        </div>
+        <div class="hsf-tech-card">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0" stroke="#c81e3a" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          <h3>Vibration Massage</h3>
+          <p>Gentle kneading helps release tension built up from carrying and feeding baby all day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ stretch mark results ============ -->
+  <div class="hsf-container">
+    <div class="hsf-feature">
+      <div>
+        <span class="hsf-feature-tag">Real Postpartum Concerns</span>
+        <h2>Help Your Skin and Core Recover, Not Just "Bounce Back"</h2>
+        <p>Stretch marks and a softer core are one of the most common — and least talked about — parts of the fourth trimester. Hosfu Renew's Red &amp; Near-Infrared light is designed to be worn directly over the lower belly, the area most affected by skin stretching during pregnancy, while EMS works underneath to gently re-engage your core muscles.</p>
+        <p>Like any light therapy or muscle stimulation device, results build gradually with consistent use over several weeks — Hosfu Renew is a recovery tool, not an overnight fix, and works best alongside your OB-approved postpartum movement plan.</p>
+      </div>
+      <div class="hsf-feature-media">
+        {% assign img_results = product.images[1] %}
+        {% if img_results %}
+          <img src="{{ img_results | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt postpartum results" loading="lazy">
+        {% else %}
+          {{ 'product-2' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="hsf-feature is-reverse">
+      <div class="hsf-feature-media">
+        {% assign img_ems = product.images[2] %}
+        {% if img_ems %}
+          <img src="{{ img_ems | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="EMS core activation" loading="lazy">
+        {% else %}
+          {{ 'product-3' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
+        {% endif %}
+      </div>
+      <div>
+        <span class="hsf-feature-tag">No Crunches Needed</span>
+        <h2>Core Activation You Can Do While Sitting Still</h2>
+        <p>Diastasis recti and a weaker core are normal after birth, but crunches aren't always safe in early postpartum recovery. EMS pulses trigger gentle, repeated muscle contractions so your core gets activated even while you're nursing, rocking baby, or finally sitting down for five minutes.</p>
+      </div>
+    </div>
+
+    <div class="hsf-feature">
+      <div>
+        <span class="hsf-feature-tag">Built For Busy Moms</span>
+        <h2>Cordless Recovery That Moves With You</h2>
+        <p>Powered by a 5,000mAh rechargeable battery for up to 2 hours of continuous use, Hosfu Renew is fully cordless and discreet enough to wear under loose clothing — at your desk, doing laundry, or on a walk with the stroller.</p>
+      </div>
+      <div class="hsf-feature-media">
+        {% assign img_mom = product.images[3] %}
+        {% if img_mom %}
+          <img src="{{ img_mom | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Mom wearing Hosfu Renew Belt while multitasking" loading="lazy">
+        {% else %}
+          {{ 'product-4' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="hsf-feature is-reverse">
+      <div class="hsf-feature-media">
+        {% assign img_gift = product.images[4] %}
+        {% if img_gift %}
+          <img src="{{ img_gift | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt packaging" loading="lazy">
+        {% else %}
+          {{ 'product-5' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
+        {% endif %}
+      </div>
+      <div>
+        <span class="hsf-feature-tag">Ready To Gift</span>
+        <h2>A Postpartum Care Gift She'll Actually Use</h2>
+        <p>Thoughtfully packaged and ready to give at a baby shower or "just because," Hosfu Renew is an easy way to tell a new mom her recovery matters too.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FAQ ============ -->
+  <div class="hsf-faq-section">
+    <div class="hsf-container">
+      <h2>Frequently Asked Questions</h2>
+      <p class="hsf-faq-sub">Everything new moms ask before trying Hosfu Renew</p>
+
+      <div class="hsf-faq-list" data-hsf-faq>
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            What does the 4-in-1 Renew Technology actually combine?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Hosfu Renew combines EMS muscle stimulation for core toning, Red &amp; Near-Infrared light therapy to support skin and collagen renewal, 3-level heat to boost circulation, and vibration massage to ease tension — all in one belt you wear over your lower belly.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            Why three light wavelengths instead of one?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Most light therapy belts use a single 850nm wavelength. Hosfu Renew layers 850nm, 940nm, and 1064nm together so light reaches both the surface skin layer where stretch marks form and the deeper tissue layer, for more complete coverage in one session.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            Will this really help with my stretch marks?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Red and near-infrared light is widely used in skin recovery routines to support the skin's natural collagen production. Many moms notice their skin looking smoother and more supple with consistent daily use over 8-12 weeks. Individual results vary, and Hosfu Renew is a supportive recovery tool rather than a guaranteed or instant fix.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            What are the different modes for?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Renew Mode focuses light therapy on stretch marks and skin tone. Sculpt Mode uses EMS to fire and tone core muscles. Soothe Mode uses heat to ease lower back and cramping discomfort. Massage Mode uses vibration to relieve daily tension from carrying and feeding baby.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            Can I adjust the heat and intensity?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Yes. Choose between 3 heat levels (113°F, 122°F, 131°F) and 5 EMS intensity levels for Sculpt, Renew, and Massage modes, so you can build up gradually as your body heals.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            Will it fit my postpartum body?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Yes. Your body changes a lot in the months after birth, so Hosfu Renew includes an extension strap that fits waist sizes up to 58 inches for a secure, skin-contact fit at any stage of postpartum recovery.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            How long is a session, and is it safe to forget about?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Each session runs for a default 10 minutes, then the belt automatically powers down to standby. That makes it easy to fit into a nap window without worrying about overuse.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            Is the EMS uncomfortable?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">It shouldn't be. Hosfu Renew is designed to mimic natural muscle contractions rather than a shock. We recommend starting on the lowest intensity and increasing gradually with the +/- buttons until it feels effective but comfortable.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            How long does the battery last?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Hosfu Renew is fully cordless, powered by a 5,000mAh battery delivering up to 2 hours of continuous use per charge — plenty for several sessions between charges.</div></div>
+        </div>
+
+        <div class="hsf-faq-item">
+          <button type="button" class="hsf-faq-q" data-hsf-faq-toggle>
+            When can I start using it after giving birth?
+            <span class="hsf-faq-icon">+</span>
+          </button>
+          <div class="hsf-faq-a"><div class="hsf-faq-a-inner">Every recovery timeline is different, especially after a C-section or any healing incision. We recommend waiting until your provider clears you for postpartum activity at your follow-up visit, and checking with them before starting EMS or heat therapy over any healing area.</div></div>
+        </div>
+      </div>
+
+      <p class="hsf-faq-note">Hosfu Renew is a wellness and recovery support device. It is not intended to diagnose, treat, or cure any medical condition. Always consult your OB-GYN or healthcare provider before starting any postpartum recovery device, particularly after a C-section.</p>
+    </div>
+  </div>
+
+  <!-- ============ guarantee strip ============ -->
+  <div class="hsf-guarantee-strip">
+    <div class="hsf-container">
+      <div class="hsf-guarantee-grid">
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#141414" stroke-width="1.6"/></svg>
+          <div>90-Day Money-Back Guarantee, no questions asked</div>
+        </div>
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#141414" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#141414" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div>2-Year Warranty on every Hosfu Renew Belt</div>
+        </div>
+        <div>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#141414" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#141414" stroke-width="1.6"/></svg>
+          <div>Secure checkout, encrypted payment processing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ sticky add to cart bar ============ -->
+  <div class="hsf-sticky" data-hsf-sticky>
+    <div class="hsf-sticky-inner">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | image_url: width: 92, height: 92, crop: 'center' }}" width="46" height="46" alt="{{ product.title | escape }}" loading="lazy">
+      {% endif %}
+      <span class="hsf-sticky-title">{{ product.title }}</span>
+      <span class="hsf-sticky-price">{{ product.selected_or_first_available_variant.price | default: product.price | money }}</span>
+      <button type="button" class="hsf-cta-btn" data-hsf-sticky-submit>Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- ============ cart drawer ============ -->
+  <div class="hsf-overlay" data-hsf-overlay></div>
+  <div class="hsf-drawer" data-hsf-drawer>
+    <div class="hsf-drawer-head">
+      <h3>Added to your cart</h3>
+      <button type="button" class="hsf-drawer-close" data-hsf-drawer-close aria-label="Close cart">&times;</button>
+    </div>
+    <div data-hsf-drawer-body></div>
+    <div class="hsf-drawer-actions">
+      <a href="/checkout" class="hsf-drawer-checkout">Checkout Now</a>
+      <a href="/cart" class="hsf-drawer-view">View Cart</a>
+    </div>
+  </div>
+
+  <script type="application/json" data-hsf-variants defer>{{ product.variants | json }}</script>
+</div>
+
+<script defer>
+(function () {
+  var sectionId = '{{ section.id }}';
+  var root = document.getElementById('hsf-root-' + sectionId);
+  if (!root) return;
+
+  var variantsData = [];
+  try {
+    var variantsScript = root.querySelector('[data-hsf-variants]');
+    variantsData = JSON.parse(variantsScript.textContent || '[]');
+  } catch (e) { variantsData = []; }
+
+  var form = root.querySelector('[data-hsf-form]');
+  var qtyInput = root.querySelector('[data-hsf-qty-input]');
+  var qtyMinus = root.querySelector('[data-hsf-qty-minus]');
+  var qtyPlus = root.querySelector('[data-hsf-qty-plus]');
+  var errorEl = root.querySelector('[data-hsf-error]');
+  var stickyBar = root.querySelector('[data-hsf-sticky]');
+  var stickySubmit = root.querySelector('[data-hsf-sticky-submit]');
+  var overlay = root.querySelector('[data-hsf-overlay]');
+  var drawer = root.querySelector('[data-hsf-drawer]');
+  var drawerBody = root.querySelector('[data-hsf-drawer-body]');
+  var drawerClose = root.querySelector('[data-hsf-drawer-close]');
+  var mainImage = root.querySelector('[id^="hsf-main-image-"]');
+
+  var selectedOptions = {};
+  root.querySelectorAll('.hsf-option-values').forEach(function (group) {
+    var idx = group.getAttribute('data-option-index');
+    var firstBtn = group.querySelector('.hsf-option-btn');
+    if (firstBtn) selectedOptions[idx] = firstBtn.getAttribute('data-value');
+
+    group.querySelectorAll('.hsf-option-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        group.querySelectorAll('.hsf-option-btn').forEach(function (b) { b.classList.remove('is-selected'); });
+        btn.classList.add('is-selected');
+        selectedOptions[idx] = btn.getAttribute('data-value');
+      });
+    });
+  });
+
+  function getSelectedVariantId() {
+    if (!variantsData.length) return null;
+    if (variantsData.length === 1) return variantsData[0].id;
+    var match = variantsData.find(function (v) {
+      var opts = [v.option1, v.option2, v.option3];
+      return Object.keys(selectedOptions).every(function (key) {
+        return opts[parseInt(key, 10)] === selectedOptions[key];
+      });
+    });
+    return match ? match.id : variantsData[0].id;
+  }
+
+  if (qtyMinus && qtyPlus && qtyInput) {
+    qtyMinus.addEventListener('click', function () {
+      var v = parseInt(qtyInput.value, 10) || 1;
+      qtyInput.value = Math.max(1, v - 1);
+    });
+    qtyPlus.addEventListener('click', function () {
+      var v = parseInt(qtyInput.value, 10) || 1;
+      qtyInput.value = v + 1;
+    });
+  }
+
+  // thumbnail swap
+  root.querySelectorAll('.hsf-thumb').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      root.querySelectorAll('.hsf-thumb').forEach(function (t) { t.classList.remove('is-active'); });
+      thumb.classList.add('is-active');
+      var full = thumb.getAttribute('data-full');
+      var img = mainImage ? mainImage.querySelector('img') || mainImage : null;
+      if (img && img.tagName === 'IMG' && full) img.src = full;
+    });
+  });
+
+  function showError(msg) {
+    if (!errorEl) return;
+    errorEl.textContent = msg;
+    errorEl.style.display = 'block';
+  }
+
+  function openDrawer(item) {
+    if (!drawerBody) return;
+    drawerBody.innerHTML =
+      '<div class="hsf-drawer-item">' +
+        (item.image ? '<img src="' + item.image + '" width="64" height="64" alt="' + (item.product_title || '') + '">' : '') +
+        '<div><div class="hsf-drawer-item-title">' + (item.product_title || item.title || '') + '</div>' +
+        '<div class="hsf-drawer-item-meta">Qty ' + item.quantity + ' &middot; ' + (item.final_line_price_money || '') + '</div></div>' +
+      '</div>';
+    overlay.classList.add('is-open');
+    drawer.classList.add('is-open');
+  }
+
+  function closeDrawer() {
+    overlay.classList.remove('is-open');
+    drawer.classList.remove('is-open');
+  }
+
+  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if (overlay) overlay.addEventListener('click', closeDrawer);
+
+  function addToCart(submitBtn) {
+    var variantId = getSelectedVariantId();
+    if (!variantId) { showError('This product is currently unavailable.'); return; }
+    var qty = qtyInput ? (parseInt(qtyInput.value, 10) || 1) : 1;
+
+    if (errorEl) errorEl.style.display = 'none';
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Adding...'; }
+
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ items: [{ id: variantId, quantity: qty }] })
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.status) { throw new Error(data.description || 'Something went wrong adding this to your cart.'); }
+        document.dispatchEvent(new CustomEvent('cart:refresh', { detail: data }));
+        openDrawer(data);
+      })
+      .catch(function (err) {
+        showError(err.message || 'Something went wrong. Please try again.');
+      })
+      .finally(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitBtn === stickySubmit ? 'Add to Cart' : 'Add to Cart — Start My Recovery'; }
+      });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      addToCart(form.querySelector('[data-hsf-submit]'));
+    });
+  }
+  if (stickySubmit) {
+    stickySubmit.addEventListener('click', function () { addToCart(stickySubmit); });
+  }
+
+  // sticky bar visibility
+  var heroForm = form;
+  if (heroForm && stickyBar && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          stickyBar.classList.remove('is-visible');
+        } else if (entry.boundingClientRect.top < 0) {
+          stickyBar.classList.add('is-visible');
+        } else {
+          stickyBar.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0 });
+    observer.observe(heroForm);
+  }
+
+  // FAQ accordion
+  root.querySelectorAll('[data-hsf-faq-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.hsf-faq-item');
+      var answer = item.querySelector('.hsf-faq-a');
+      var isOpen = item.classList.contains('is-open');
+
+      root.querySelectorAll('.hsf-faq-item.is-open').forEach(function (openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('is-open');
+          openItem.querySelector('.hsf-faq-a').style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('is-open');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('is-open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Hosfu Renew Product Page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hosfu Renew Product Page"
+    }
+  ]
+}
+{% endschema %}
