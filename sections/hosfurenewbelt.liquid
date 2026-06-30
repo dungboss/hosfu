@@ -461,7 +461,7 @@
         <p>Like any light therapy or muscle stimulation device, results build gradually with consistent use over several weeks — Hosfu Renew is a recovery tool, not an overnight fix, and works best alongside your OB-approved postpartum movement plan.</p>
       </div>
       <div class="hsf-feature-media">
-        {% assign img_results = product.images[1] %}
+        {% assign img_results = section.settings.results_image | default: product.images[1] %}
         {% if img_results %}
           <img src="{{ img_results | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt postpartum results" loading="lazy">
         {% else %}
@@ -472,7 +472,7 @@
 
     <div class="hsf-feature is-reverse">
       <div class="hsf-feature-media">
-        {% assign img_ems = product.images[2] %}
+        {% assign img_ems = section.settings.ems_image | default: product.images[2] %}
         {% if img_ems %}
           <img src="{{ img_ems | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="EMS core activation" loading="lazy">
         {% else %}
@@ -493,7 +493,7 @@
         <p>Powered by a 5,000mAh rechargeable battery for up to 2 hours of continuous use, Hosfu Renew is fully cordless and discreet enough to wear under loose clothing — at your desk, doing laundry, or on a walk with the stroller.</p>
       </div>
       <div class="hsf-feature-media">
-        {% assign img_mom = product.images[3] %}
+        {% assign img_mom = section.settings.mom_image | default: product.images[3] %}
         {% if img_mom %}
           <img src="{{ img_mom | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Mom wearing Hosfu Renew Belt while multitasking" loading="lazy">
         {% else %}
@@ -504,7 +504,7 @@
 
     <div class="hsf-feature is-reverse">
       <div class="hsf-feature-media">
-        {% assign img_gift = product.images[4] %}
+        {% assign img_gift = section.settings.gift_image | default: product.images[4] %}
         {% if img_gift %}
           <img src="{{ img_gift | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt packaging" loading="lazy">
         {% else %}
@@ -843,7 +843,36 @@
 {% schema %}
 {
   "name": "Hosfu Renew Product Page",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Optional image overrides"
+    },
+    {
+      "type": "paragraph",
+      "content": "Leave blank to auto-use the product's own photos (image #2-#5 in the product gallery). Pick an image here only to override that specific section."
+    },
+    {
+      "type": "image_picker",
+      "id": "results_image",
+      "label": "Stretch mark results image"
+    },
+    {
+      "type": "image_picker",
+      "id": "ems_image",
+      "label": "EMS core activation image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mom_image",
+      "label": "Busy moms lifestyle image"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image",
+      "label": "Gift packaging image"
+    }
+  ],
   "presets": [
     {
       "name": "Hosfu Renew Product Page"
