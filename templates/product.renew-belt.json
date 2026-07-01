@@ -1845,7 +1845,12 @@
     "hosfurenewbelt_NDRzdR": {
       "type": "hosfurenewbelt",
       "name": "Hosfu Renew Product Page",
-      "settings": {}
+      "settings": {
+        "results_image": "shopify://shop_images/c9094a3a-5d07-427a-9718-c1d50ad7f941.png",
+        "ems_image": "shopify://shop_images/70de13f8-2627-4928-9f28-1936cbfb9677.png",
+        "mom_image": "shopify://shop_images/2cb1a462-9046-4bd5-ab5a-9abea08c87bc.png",
+        "gift_image": "shopify://shop_images/0a2a1f75-b54f-44b7-bf94-a9b8a7e102eb.png"
+      }
     }
   },
   "order": [
