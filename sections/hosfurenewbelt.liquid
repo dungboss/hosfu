@@ -123,6 +123,7 @@
   .hsf-benefits svg { flex: 0 0 auto; margin-top: 2px; }
 
   .hsf-option-group { margin-bottom: 16px; }
+  kaching-bundle:not(:empty) { display: block; margin: 4px 0 18px; }
   .hsf-option-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 8px; }
   .hsf-option-values { display: flex; flex-wrap: wrap; gap: 8px; }
   .hsf-option-btn {
@@ -382,7 +383,7 @@
         </ul>
 
         <div>
-          <form id="hsf-form-{{ section.id }}" data-hsf-form>
+          <form id="hsf-form-{{ section.id }}" action="/cart/add" method="post" data-type="add-to-cart-form" data-hsf-form>
             {% if product.has_only_default_variant == false %}
               {% for option in product.options_with_values %}
                 <div class="hsf-option-group">
@@ -396,11 +397,16 @@
               {% endfor %}
             {% endif %}
 
-            <div class="hsf-qty-row">
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" data-hsf-variant-input>
+
+            <!-- Kaching Bundles widget mounts here automatically if a bundle deal exists for this product -->
+            <kaching-bundle product-id="{{ product.id }}"></kaching-bundle>
+
+            <div class="hsf-qty-row" data-hsf-qty-wrap>
               <span class="hsf-option-label" style="margin:0;">Quantity</span>
               <div class="hsf-qty-box">
                 <button type="button" data-hsf-qty-minus aria-label="Decrease quantity">&minus;</button>
-                <input type="text" inputmode="numeric" value="1" id="hsf-qty-{{ section.id }}" data-hsf-qty-input readonly>
+                <input type="text" inputmode="numeric" value="1" name="quantity" id="hsf-qty-{{ section.id }}" data-hsf-qty-input readonly>
                 <button type="button" data-hsf-qty-plus aria-label="Increase quantity">+</button>
               </div>
             </div>
@@ -664,6 +670,9 @@
   var drawerBody = root.querySelector('[data-hsf-drawer-body]');
   var drawerClose = root.querySelector('[data-hsf-drawer-close]');
   var mainImage = root.querySelector('[id^="hsf-main-image-"]');
+  var variantInput = root.querySelector('[data-hsf-variant-input]');
+  var qtyWrap = root.querySelector('[data-hsf-qty-wrap]');
+  var kachingEl = root.querySelector('kaching-bundle');
 
   var selectedOptions = {};
   root.querySelectorAll('.hsf-option-values').forEach(function (group) {
@@ -676,6 +685,7 @@
         group.querySelectorAll('.hsf-option-btn').forEach(function (b) { b.classList.remove('is-selected'); });
         btn.classList.add('is-selected');
         selectedOptions[idx] = btn.getAttribute('data-value');
+        if (variantInput) variantInput.value = getSelectedVariantId();
       });
     });
   });
@@ -768,7 +778,36 @@
   }
 
   if (form) {
+    var kachingActive = false;
+
+    function activateKachingMode() {
+      if (kachingActive) return;
+      kachingActive = true;
+      if (qtyWrap) qtyWrap.style.display = 'none';
+      // Kaching Bundles owns the submit flow from here on: it reuses this
+      // form's action=/cart/add and this same submit button, so we
+      // stop intercepting submit and let the native/Kaching-driven flow run.
+    }
+
+    if (kachingEl) {
+      // Kaching Bundles renders its widget asynchronously once the app
+      // embed is active and a bundle deal exists for this product. Watch
+      // for that content instead of guessing with a fixed delay.
+      var kachingObserver = new MutationObserver(function () {
+        if (kachingEl.childElementCount > 0 || kachingEl.shadowRoot) {
+          activateKachingMode();
+          kachingObserver.disconnect();
+        }
+      });
+      kachingObserver.observe(kachingEl, { childList: true, subtree: true });
+
+      // Safety timeout: if nothing rendered after 2.5s, assume no bundle is
+      // configured for this product and stick with our own add-to-cart flow.
+      setTimeout(function () { kachingObserver.disconnect(); }, 2500);
+    }
+
     form.addEventListener('submit', function (e) {
+      if (kachingActive) return; // let Kaching / native submission proceed
       e.preventDefault();
       addToCart(form.querySelector('[data-hsf-submit]'));
     });
