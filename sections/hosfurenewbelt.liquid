@@ -67,6 +67,12 @@
   @media (max-width: 860px) {
     .hsf-hero { grid-template-columns: 1fr; gap: 24px; padding: 24px 0; }
   }
+  /* Grid items default to min-width:auto, which floors each track at its
+     content's min-content width. The thumbnail strip (8x64px + gaps ~582px,
+     overflow-x:auto) would otherwise force the column to 582px and push the
+     title/price/CTA past the right edge where #hsf-root's overflow-x:hidden
+     clips them. min-width:0 lets the 1fr track shrink to the viewport. */
+  .hsf-hero > * { min-width: 0; }
   .hsf-gallery-main {
     position: relative;
     border-radius: 18px;
@@ -262,16 +268,23 @@
   .hsf-overlay.is-open { opacity: 1; pointer-events: auto; }
   .hsf-drawer {
     position: fixed;
-    top: 0; right: -380px;
+    top: 0; right: 0;
     width: 360px; max-width: 90vw; height: 100%;
     background: #fff;
     z-index: 1001;
-    transition: right .25s ease;
+    /* Hide off-canvas with transform (not a physical `right: -380px`) so the
+       drawer's layout box stays inside the viewport. A fixed element parked
+       past the right edge would extend the document width and cause a
+       horizontal-scroll / cut-off strip on mobile, since #hsf-root's
+       overflow-x:hidden cannot clip a fixed-position descendant. */
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform .25s ease, visibility .25s ease;
     display: flex;
     flex-direction: column;
     padding: 22px;
   }
-  .hsf-drawer.is-open { right: 0; }
+  .hsf-drawer.is-open { transform: translateX(0); visibility: visible; }
   .hsf-drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
   .hsf-drawer-head h3 { margin: 0; font-size: 17px; color: var(--hsf-black); }
   .hsf-drawer-close { background: none; border: none; color: var(--hsf-black); font-size: 22px; cursor: pointer; line-height: 1; }
