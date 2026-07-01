@@ -21,7 +21,7 @@
     --hsf-red: #c81e3a;
     --hsf-red-dark: #9c1429;
     --hsf-cream: #faf6f1;
-    --hsf-blush: #f3dbe0;
+    --hsf-blush: rgba(200, 30, 58, 0.08);
     --hsf-line: #2c2c2c;
     --hsf-font-display: 'Trebuchet MS', 'Arial Rounded MT Bold', Arial, sans-serif;
     --hsf-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -231,7 +231,7 @@
   /* ---------- faq ---------- */
   .hsf-faq-section { background: var(--hsf-blush); padding: 60px 0; }
   #hsf-root-{{ section.id }} .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; color: var(--hsf-black); }
-  .hsf-faq-sub { text-align: center; color: #6a4954; font-size: 14px; margin-bottom: 36px; }
+  .hsf-faq-sub { text-align: center; color: var(--hsf-red-dark); font-size: 14px; margin-bottom: 36px; }
   .hsf-faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
   .hsf-faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
   #hsf-root-{{ section.id }} .hsf-faq-q {
@@ -254,7 +254,7 @@
   .hsf-faq-item.is-open .hsf-faq-icon { transform: rotate(45deg); }
   .hsf-faq-a { max-height: 0; overflow: hidden; transition: max-height .25s ease; padding: 0 18px; }
   .hsf-faq-a-inner { padding-bottom: 16px; font-size: 14px; color: #4d4d4d; line-height: 1.6; }
-  .hsf-faq-note { max-width: 760px; margin: 26px auto 0; font-size: 12.5px; color: #6a4954; text-align: center; line-height: 1.6; }
+  .hsf-faq-note { max-width: 760px; margin: 26px auto 0; font-size: 12.5px; color: #6b6b6b; text-align: center; line-height: 1.6; }
 
   /* ---------- cart drawer ---------- */
   .hsf-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 1000; }
