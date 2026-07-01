@@ -54,7 +54,8 @@
     padding: 10px 16px;
     text-align: center;
   }
-  .hsf-trustbar-item { display: flex; align-items: center; gap: 6px; opacity: .92; }
+  .hsf-trustbar-item { display: flex; align-items: center; gap: 6px; opacity: .92; white-space: nowrap; }
+  .hsf-trustbar-short { display: none; }
 
   /* ---------- hero ---------- */
   .hsf-hero {
@@ -297,7 +298,9 @@
     /* trust bar: smaller type + tighter gap so 3 items settle into 1-2 clean rows
        instead of stretching across a narrow screen */
     .hsf-trustbar { font-size: 11px; }
-    .hsf-trustbar-inner { gap: 8px 16px; padding: 8px 12px; }
+    .hsf-trustbar-inner { gap: 6px 10px; padding: 8px 10px; }
+    .hsf-trustbar-full { display: none; }
+    .hsf-trustbar-short { display: inline; }
 
     /* hero */
     .hsf-hero { padding: 16px 0; gap: 18px; }
@@ -338,15 +341,18 @@
     <div class="hsf-trustbar-inner">
       <div class="hsf-trustbar-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.6-.4L12 2z" fill="#fff"/></svg>
-        2-Year Warranty
+        <span class="hsf-trustbar-full">2-Year Warranty</span>
+        <span class="hsf-trustbar-short">2-Yr Warranty</span>
       </div>
       <div class="hsf-trustbar-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 7h13v8H3z" stroke="#fff" stroke-width="1.6"/><path d="M16 10h3l2 3v2h-5z" stroke="#fff" stroke-width="1.6"/></svg>
-        Free US Shipping
+        <span class="hsf-trustbar-full">Free US Shipping</span>
+        <span class="hsf-trustbar-short">Free Shipping</span>
       </div>
       <div class="hsf-trustbar-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#fff" stroke-width="1.6"/></svg>
-        90-Day Money-Back Guarantee
+        <span class="hsf-trustbar-full">90-Day Money-Back Guarantee</span>
+        <span class="hsf-trustbar-short">90-Day Refunds</span>
       </div>
     </div>
   </div>
