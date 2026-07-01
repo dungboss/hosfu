@@ -21,7 +21,6 @@
     --hsf-red: #c81e3a;
     --hsf-red-dark: #9c1429;
     --hsf-cream: #faf6f1;
-    --hsf-blush: rgba(200, 30, 58, 0.08);
     --hsf-line: #2c2c2c;
     --hsf-font-display: 'Trebuchet MS', 'Arial Rounded MT Bold', Arial, sans-serif;
     --hsf-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -223,17 +222,17 @@
   .hsf-feature-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; }
   .hsf-feature h2 { font-size: 25px; color: var(--hsf-black); }
   .hsf-feature p { font-size: 15.5px; line-height: 1.7; color: #4a4a4a; }
-  .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red); background: var(--hsf-blush); padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
+  .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red-dark); background: #fff; border: 1.5px solid var(--hsf-red); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
 
   /* ---------- results / placeholder svg ---------- */
   .hsf-placeholder-svg { width: 100%; aspect-ratio: 1/1; background: #efe7de; }
 
   /* ---------- faq ---------- */
-  .hsf-faq-section { background: var(--hsf-blush); padding: 60px 0; }
+  .hsf-faq-section { background: var(--hsf-cream); border-top: 3px solid var(--hsf-red); padding: 60px 0; }
   #hsf-root-{{ section.id }} .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; color: var(--hsf-black); }
   .hsf-faq-sub { text-align: center; color: var(--hsf-red-dark); font-size: 14px; margin-bottom: 36px; }
   .hsf-faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
-  .hsf-faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
+  .hsf-faq-item { background: #fff; border: 1px solid #ece4dc; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(20,20,20,.04); }
   #hsf-root-{{ section.id }} .hsf-faq-q {
     width: 100%;
     text-align: left;
