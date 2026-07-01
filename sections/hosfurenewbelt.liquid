@@ -110,7 +110,7 @@
   .hsf-info { padding-top: 4px; }
   .hsf-rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 14px; color: #4a4a4a; }
   .hsf-stars { color: var(--hsf-red); letter-spacing: 1px; }
-  .hsf-title { font-size: 30px; }
+  .hsf-title { font-size: 30px; color: var(--hsf-black); }
   .hsf-subtitle { font-size: 15px; color: #565656; margin-bottom: 18px; line-height: 1.5; }
 
   .hsf-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
@@ -129,6 +129,8 @@
   .hsf-option-btn {
     border: 1.5px solid var(--hsf-black);
     background: #fff;
+    color: var(--hsf-black);
+    font-family: var(--hsf-font-body);
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 14px;
@@ -138,8 +140,8 @@
 
   .hsf-qty-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
   .hsf-qty-box { display: flex; align-items: center; border: 1.5px solid var(--hsf-black); border-radius: 8px; overflow: hidden; }
-  .hsf-qty-box button { width: 38px; height: 40px; background: #fff; border: none; font-size: 18px; cursor: pointer; }
-  .hsf-qty-box input { width: 42px; height: 40px; border: none; text-align: center; font-size: 15px; -moz-appearance: textfield; }
+  .hsf-qty-box button { width: 38px; height: 40px; background: #fff; color: var(--hsf-black); border: none; font-size: 18px; cursor: pointer; }
+  .hsf-qty-box input { width: 42px; height: 40px; border: none; color: var(--hsf-black); text-align: center; font-size: 15px; -moz-appearance: textfield; }
 
   .hsf-cta-btn {
     width: 100%;
@@ -184,7 +186,7 @@
     gap: 16px;
   }
   .hsf-sticky-inner img { width: 46px; height: 46px; border-radius: 8px; object-fit: cover; flex: 0 0 auto; }
-  .hsf-sticky-title { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; }
+  .hsf-sticky-title { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; color: var(--hsf-black); }
   .hsf-sticky-price { font-size: 15px; font-weight: 700; color: var(--hsf-red); white-space: nowrap; }
   .hsf-sticky .hsf-cta-btn { width: auto; padding: 11px 22px; font-size: 14px; }
   @media (max-width: 600px) { .hsf-sticky-title { display: none; } }
@@ -219,7 +221,7 @@
   }
   .hsf-feature-media { border-radius: 20px; overflow: hidden; box-shadow: 0 12px 32px rgba(20,20,20,.08); }
   .hsf-feature-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; }
-  .hsf-feature h2 { font-size: 25px; }
+  .hsf-feature h2 { font-size: 25px; color: var(--hsf-black); }
   .hsf-feature p { font-size: 15.5px; line-height: 1.7; color: #4a4a4a; }
   .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red); background: var(--hsf-blush); padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
 
@@ -228,11 +230,11 @@
 
   /* ---------- faq ---------- */
   .hsf-faq-section { background: var(--hsf-blush); padding: 60px 0; }
-  .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; }
+  #hsf-root-{{ section.id }} .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; color: var(--hsf-black); }
   .hsf-faq-sub { text-align: center; color: #6a4954; font-size: 14px; margin-bottom: 36px; }
   .hsf-faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
   .hsf-faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
-  .hsf-faq-q {
+  #hsf-root-{{ section.id }} .hsf-faq-q {
     width: 100%;
     text-align: left;
     background: none;
@@ -240,23 +242,19 @@
     padding: 16px 18px;
     font-size: 15px;
     font-weight: 600;
+    font-family: var(--hsf-font-body);
+    color: var(--hsf-black);
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     gap: 12px;
   }
-  .hsf-faq-q .hsf-faq-icon { transition: transform .2s ease; flex: 0 0 auto; }
+  .hsf-faq-q .hsf-faq-icon { transition: transform .2s ease; flex: 0 0 auto; color: var(--hsf-red); font-weight: 700; }
   .hsf-faq-item.is-open .hsf-faq-icon { transform: rotate(45deg); }
   .hsf-faq-a { max-height: 0; overflow: hidden; transition: max-height .25s ease; padding: 0 18px; }
   .hsf-faq-a-inner { padding-bottom: 16px; font-size: 14px; color: #4d4d4d; line-height: 1.6; }
   .hsf-faq-note { max-width: 760px; margin: 26px auto 0; font-size: 12.5px; color: #6a4954; text-align: center; line-height: 1.6; }
-
-  /* ---------- guarantee strip ---------- */
-  .hsf-guarantee-strip { padding: 44px 0; text-align: center; }
-  .hsf-guarantee-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-  .hsf-guarantee-grid div { max-width: 180px; font-size: 13px; color: #555; }
-  .hsf-guarantee-grid svg { margin-bottom: 8px; }
 
   /* ---------- cart drawer ---------- */
   .hsf-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 1000; }
@@ -274,11 +272,11 @@
   }
   .hsf-drawer.is-open { right: 0; }
   .hsf-drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-  .hsf-drawer-head h3 { margin: 0; font-size: 17px; }
-  .hsf-drawer-close { background: none; border: none; font-size: 22px; cursor: pointer; line-height: 1; }
+  .hsf-drawer-head h3 { margin: 0; font-size: 17px; color: var(--hsf-black); }
+  .hsf-drawer-close { background: none; border: none; color: var(--hsf-black); font-size: 22px; cursor: pointer; line-height: 1; }
   .hsf-drawer-item { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid #eee; }
   .hsf-drawer-item img { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; }
-  .hsf-drawer-item-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .hsf-drawer-item-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--hsf-black); }
   .hsf-drawer-item-meta { font-size: 13px; color: #666; }
   .hsf-drawer-actions { margin-top: auto; display: grid; gap: 10px; }
   .hsf-drawer-actions a {
@@ -611,26 +609,6 @@
       </div>
 
       <p class="hsf-faq-note">Hosfu Renew is a wellness and recovery support device. It is not intended to diagnose, treat, or cure any medical condition. Always consult your OB-GYN or healthcare provider before starting any postpartum recovery device, particularly after a C-section.</p>
-    </div>
-  </div>
-
-  <!-- ============ guarantee strip ============ -->
-  <div class="hsf-guarantee-strip">
-    <div class="hsf-container">
-      <div class="hsf-guarantee-grid">
-        <div>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#141414" stroke-width="1.6"/></svg>
-          <div>90-Day Money-Back Guarantee, no questions asked</div>
-        </div>
-        <div>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#141414" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#141414" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div>2-Year Warranty on every Hosfu Renew Belt</div>
-        </div>
-        <div>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#141414" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#141414" stroke-width="1.6"/></svg>
-          <div>Secure checkout, encrypted payment processing</div>
-        </div>
-      </div>
     </div>
   </div>
 
