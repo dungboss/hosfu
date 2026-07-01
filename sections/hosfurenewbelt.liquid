@@ -38,7 +38,6 @@
     font-family: var(--hsf-font-display);
     line-height: 1.15;
     margin: 0 0 14px;
-      color: var(--hsf-black);
   }
 
   /* ---------- trust bar ---------- */
@@ -192,45 +191,45 @@
 
   /* ---------- tech grid ---------- */
   .hsf-tech {
-    background: var(--hsf-black);
+    background: #1c1614;
     color: #fff;
-    padding: 52px 0;
+    padding: 60px 0;
   }
-  .hsf-tech h2 { color: #fff; text-align: center; font-size: 26px; }
-  .hsf-tech-sub { text-align: center; color: #bdbdbd; max-width: 560px; margin: 0 auto 36px; font-size: 14px; }
-  .hsf-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  #hsf-root-{{ section.id }} .hsf-tech h2 { color: #fff; text-align: center; font-size: 26px; }
+  .hsf-tech-sub { text-align: center; color: #c9bdb5; max-width: 560px; margin: 0 auto 40px; font-size: 14px; line-height: 1.6; }
+  .hsf-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
   @media (max-width: 760px) { .hsf-tech-grid { grid-template-columns: 1fr 1fr; } }
-  .hsf-tech-card { background: var(--hsf-charcoal); border-radius: 14px; padding: 22px 16px; text-align: center; }
-  .hsf-tech-card svg { margin-bottom: 12px; }
-  .hsf-tech-card h3 { font-size: 15px; color: #fff; margin-bottom: 6px; }
-  .hsf-tech-card p { font-size: 12.5px; color: #b7b7b7; line-height: 1.5; margin: 0; }
+  .hsf-tech-card { background: #2a221f; border: 1px solid #3a302b; border-radius: 16px; padding: 26px 18px; text-align: center; transition: border-color .2s ease; }
+  .hsf-tech-card svg { margin-bottom: 14px; }
+  #hsf-root-{{ section.id }} .hsf-tech-card h3 { font-size: 15px; color: #fff; margin-bottom: 8px; }
+  .hsf-tech-card p { font-size: 12.5px; color: #b9aea7; line-height: 1.55; margin: 0; }
 
   /* ---------- feature rows ---------- */
   .hsf-feature {
-    padding: 56px 0;
+    padding: 60px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 44px;
+    gap: 52px;
     align-items: center;
   }
   .hsf-feature.is-reverse .hsf-feature-media { order: 2; }
   @media (max-width: 800px) {
-    .hsf-feature { grid-template-columns: 1fr; padding: 32px 0; gap: 20px; }
+    .hsf-feature { grid-template-columns: 1fr; padding: 36px 0; gap: 22px; }
     .hsf-feature.is-reverse .hsf-feature-media { order: 0; }
   }
-  .hsf-feature-media { border-radius: 16px; overflow: hidden; }
-  .hsf-feature-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
-  .hsf-feature h2 { font-size: 24px;color: var(--hsf-black);  }
-  .hsf-feature p { font-size: 15px; line-height: 1.65; color: #444; }
-  .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red); background: var(--hsf-blush); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .hsf-feature-media { border-radius: 20px; overflow: hidden; box-shadow: 0 12px 32px rgba(20,20,20,.08); }
+  .hsf-feature-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; }
+  .hsf-feature h2 { font-size: 25px; }
+  .hsf-feature p { font-size: 15.5px; line-height: 1.7; color: #4a4a4a; }
+  .hsf-feature-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--hsf-red); background: var(--hsf-blush); padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
 
   /* ---------- results / placeholder svg ---------- */
-  .hsf-placeholder-svg { width: 100%; aspect-ratio: 4/3; background: #efe7de; }
+  .hsf-placeholder-svg { width: 100%; aspect-ratio: 1/1; background: #efe7de; }
 
   /* ---------- faq ---------- */
-  .hsf-faq-section { background: var(--hsf-blush); padding: 56px 0; }
-  .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px;color: #141414;  }
-  .hsf-faq-sub { text-align: center; color: #6a4954; font-size: 14px; margin-bottom: 32px; }
+  .hsf-faq-section { background: var(--hsf-blush); padding: 60px 0; }
+  .hsf-faq-section h2 { text-align: center; font-size: 26px; margin-bottom: 8px; }
+  .hsf-faq-sub { text-align: center; color: #6a4954; font-size: 14px; margin-bottom: 36px; }
   .hsf-faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
   .hsf-faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
   .hsf-faq-q {
@@ -317,9 +316,13 @@
     <div class="hsf-hero">
 
       {% assign gallery_images = product.images %}
+      {% assign compare_price = product.selected_or_first_available_variant.compare_at_price %}
+      {% assign current_price = product.selected_or_first_available_variant.price %}
       <div>
         <div class="hsf-gallery-main">
-          <span class="hsf-save-badge" id="hsf-save-badge-{{ section.id }}">SAVE 45%</span>
+          {% if compare_price and compare_price > current_price %}
+            <span class="hsf-save-badge" id="hsf-save-badge-{{ section.id }}">SAVE {{ compare_price | minus: current_price | times: 100.0 | divided_by: compare_price | round }}%</span>
+          {% endif %}
           {% if product.featured_image %}
             <img id="hsf-main-image-{{ section.id }}"
                  src="{{ product.featured_image | image_url: width: 900, height: 900, crop: 'center' }}"
@@ -355,13 +358,12 @@
 
         <div class="hsf-price-row">
           <span class="hsf-price-now">{{ product.selected_or_first_available_variant.price | default: product.price | money }}</span>
-          {% assign compare_price = product.selected_or_first_available_variant.compare_at_price %}
-          {% if compare_price and compare_price > product.selected_or_first_available_variant.price %}
+          {% if compare_price and compare_price > current_price %}
             <span class="hsf-price-was">{{ compare_price | money }}</span>
-            <span class="hsf-price-save">SAVE {{ compare_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: compare_price | round }}%</span>
+            <span class="hsf-price-save">SAVE {{ compare_price | minus: current_price | times: 100.0 | divided_by: compare_price | round }}%</span>
           {% endif %}
         </div>
-        <p class="hsf-unit-note">Price shown reflects the live product price. Bundle and quantity pricing is applied automatically at checkout.</p>
+        <p class="hsf-unit-note">Free US shipping &amp; easy 90-day returns on every order.</p>
 
         <ul class="hsf-benefits">
           <li>
@@ -464,7 +466,7 @@
       <div class="hsf-feature-media">
         {% assign img_results = section.settings.results_image | default: product.images[1] %}
         {% if img_results %}
-          <img src="{{ img_results | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt postpartum results" loading="lazy">
+          <img src="{{ img_results | image_url: width: 900, height: 900, crop: 'center' }}" width="900" height="900" alt="Hosfu Renew Belt postpartum results" loading="lazy">
         {% else %}
           {{ 'product-2' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
         {% endif %}
@@ -475,7 +477,7 @@
       <div class="hsf-feature-media">
         {% assign img_ems = section.settings.ems_image | default: product.images[2] %}
         {% if img_ems %}
-          <img src="{{ img_ems | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="EMS core activation" loading="lazy">
+          <img src="{{ img_ems | image_url: width: 900, height: 900, crop: 'center' }}" width="900" height="900" alt="EMS core activation" loading="lazy">
         {% else %}
           {{ 'product-3' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
         {% endif %}
@@ -496,7 +498,7 @@
       <div class="hsf-feature-media">
         {% assign img_mom = section.settings.mom_image | default: product.images[3] %}
         {% if img_mom %}
-          <img src="{{ img_mom | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Mom wearing Hosfu Renew Belt while multitasking" loading="lazy">
+          <img src="{{ img_mom | image_url: width: 900, height: 900, crop: 'center' }}" width="900" height="900" alt="Mom wearing Hosfu Renew Belt while multitasking" loading="lazy">
         {% else %}
           {{ 'product-4' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
         {% endif %}
@@ -507,7 +509,7 @@
       <div class="hsf-feature-media">
         {% assign img_gift = section.settings.gift_image | default: product.images[4] %}
         {% if img_gift %}
-          <img src="{{ img_gift | image_url: width: 1000, height: 750, crop: 'center' }}" width="1000" height="750" alt="Hosfu Renew Belt packaging" loading="lazy">
+          <img src="{{ img_gift | image_url: width: 900, height: 900, crop: 'center' }}" width="900" height="900" alt="Hosfu Renew Belt packaging" loading="lazy">
         {% else %}
           {{ 'product-5' | placeholder_svg_tag: 'hsf-placeholder-svg' }}
         {% endif %}
