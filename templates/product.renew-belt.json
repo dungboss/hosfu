@@ -824,6 +824,7 @@
         "desc_row_3",
         "desc_row_4"
       ],
+      "disabled": true,
       "custom_css": [
         ".price__badge-sale {background: #1a237e !important; color: #ffffff !important; border-color: #1a237e !important;}"
       ],
@@ -938,6 +939,7 @@
         "logo_mFEwUm",
         "logo_j8nYyC"
       ],
+      "disabled": true,
       "name": "Featured on",
       "settings": {
         "display_id": false,
@@ -1012,6 +1014,7 @@
       "block_order": [
         "text_cLnqTc"
       ],
+      "disabled": true,
       "name": "Horizontal Ticker",
       "settings": {
         "display_id": false,
@@ -1108,6 +1111,7 @@
         "video_slide_BK4dyH",
         "video_slide_jYP3ND"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -1467,6 +1471,7 @@
         "column_yWrahR",
         "column_rgMUzg"
       ],
+      "disabled": true,
       "name": "Custom Columns V2",
       "settings": {
         "display_id": false,
@@ -1567,6 +1572,7 @@
         "column_cFizfx",
         "column_weKzrp"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -1747,6 +1753,7 @@
         "faq_6",
         "faq_7"
       ],
+      "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
@@ -1834,6 +1841,11 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "hosfurenewbelt_NDRzdR": {
+      "type": "hosfurenewbelt",
+      "name": "Hosfu Renew Product Page",
+      "settings": {}
     }
   },
   "order": [
@@ -1843,6 +1855,7 @@
     "eba88da5-80ac-47fc-aa75-997cfe7b2e59",
     "custom_columns_new_giXnD8",
     "facebook_testimonials_r6Afm8",
-    "collapsible_content_nJrYmE"
+    "collapsible_content_nJrYmE",
+    "hosfurenewbelt_NDRzdR"
   ]
 }
