@@ -289,6 +289,47 @@
   }
   .hsf-drawer-checkout { background: var(--hsf-red); color: #fff; }
   .hsf-drawer-view { background: #fff; color: var(--hsf-black); border: 1.5px solid var(--hsf-black); }
+
+  /* ---------- phone-width tightening (real phones, not just tablet stack) ---------- */
+  @media (max-width: 480px) {
+    #hsf-root-{{ section.id }} .hsf-container { padding: 0 16px; }
+
+    /* trust bar: smaller type + tighter gap so 3 items settle into 1-2 clean rows
+       instead of stretching across a narrow screen */
+    .hsf-trustbar { font-size: 11px; }
+    .hsf-trustbar-inner { gap: 8px 16px; padding: 8px 12px; }
+
+    /* hero */
+    .hsf-hero { padding: 16px 0; gap: 18px; }
+    .hsf-save-badge { top: 10px; left: 10px; font-size: 10.5px; padding: 5px 10px; }
+    .hsf-title { font-size: 22px; margin-bottom: 8px; }
+    .hsf-subtitle { font-size: 14px; margin-bottom: 14px; }
+    .hsf-rating-row { font-size: 12.5px; }
+    .hsf-price-now { font-size: 23px; }
+    .hsf-price-was { font-size: 15px; }
+    .hsf-benefits li { font-size: 14px; }
+    .hsf-cta-btn { font-size: 15px; padding: 14px 16px; }
+    .hsf-guarantee-line { gap: 10px 14px; font-size: 12px; }
+
+    /* tech grid */
+    .hsf-tech { padding: 40px 0; }
+    #hsf-root-{{ section.id }} .hsf-tech h2 { font-size: 21px; }
+    .hsf-tech-sub { font-size: 13px; margin-bottom: 24px; }
+    .hsf-tech-card { padding: 18px 12px; }
+
+    /* feature rows */
+    .hsf-feature { padding: 28px 0; gap: 16px; }
+    .hsf-feature h2 { font-size: 20px; }
+    .hsf-feature p { font-size: 14.5px; }
+
+    /* faq */
+    .hsf-faq-section { padding: 40px 0; }
+    #hsf-root-{{ section.id }} .hsf-faq-section h2 { font-size: 21px; }
+    .hsf-faq-q { font-size: 14px; padding: 14px; }
+
+    /* sticky bar sits above the phone's home-indicator safe area */
+    .hsf-sticky-inner { padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+  }
 </style>
 
 <div id="hsf-root-{{ section.id }}">
