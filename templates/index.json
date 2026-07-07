@@ -767,7 +767,7 @@
         "custom_colors_background": "#f3e7de",
         "custom_gradient_background": "",
         "custom_colors_text": "#201b19",
-        "custom_colors_solid_button_background": "#AB243F",
+        "custom_colors_solid_button_background": "#ab243f",
         "custom_colors_solid_button_text": "#ffffff",
         "success_icon": "check_circle",
         "success_icon_filled": false,
