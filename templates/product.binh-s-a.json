@@ -49,10 +49,10 @@
             "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#3C342C",
+            "text_color": "#3c342c",
             "font_family": "body",
             "icon_scale": 120,
-            "icon_color": "#6B5F54",
+            "icon_color": "#6b5f54",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -89,10 +89,10 @@
             "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#6B5F54",
+            "text_color": "#6b5f54",
             "font_family": "body",
             "icon_scale": 120,
-            "icon_color": "#6B5F54",
+            "icon_color": "#6b5f54",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -129,10 +129,10 @@
             "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#6B5F54",
+            "text_color": "#6b5f54",
             "font_family": "body",
             "icon_scale": 120,
-            "icon_color": "#6B5F54",
+            "icon_color": "#6b5f54",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -169,10 +169,10 @@
             "desktop_text_size": 16,
             "alignment": "left",
             "mobile_alignment": "left",
-            "text_color": "#6B5F54",
+            "text_color": "#6b5f54",
             "font_family": "body",
             "icon_scale": 120,
-            "icon_color": "#6B5F54",
+            "icon_color": "#6b5f54",
             "width": "100%",
             "direction": "horizontal",
             "column_gap": 3,
@@ -648,7 +648,7 @@
       "settings": {
         "display_id": false,
         "enable_sticky_info": true,
-        "color_scheme": "background-2",
+        "color_scheme": "accent-2",
         "display_variant_image_first": false,
         "disable_prepend": false,
         "hide_variants": false,
@@ -833,7 +833,7 @@
         "text_cLnqTc": {
           "type": "text",
           "settings": {
-            "title": "Non-Invasive Safety • Pediatrician Recommended • 1-Second Activation • No Batteries Required • Scientific Anti-Reverse Flow • Fits All Ages • Travel-Friendly Design • Life-Saving Essential • Trusted by 10,000+ Families"
+            "title": "Free shipping"
           }
         }
       },
@@ -844,11 +844,11 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "speed": 3,
+        "speed": 2,
         "direction": "normal",
         "stop_on_hover": true,
         "mobile_spacing": 60,
-        "desktop_spacing": 100,
+        "desktop_spacing": 200,
         "color_scheme": "custom",
         "custom_colors_background": "#bd854e",
         "custom_gradient_background": "",
@@ -865,7 +865,7 @@
         "mobile_reviews_width": 300,
         "desktop_reviews_width": 400,
         "hidden_products": "",
-        "enable_specific_display": false,
+        "enable_specific_display": true,
         "displayed_products": "",
         "mobile_padding_top": 12,
         "mobile_padding_bottom": 12,
@@ -1639,6 +1639,53 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "announcement_bar_3kg6jG": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_3H8X6d": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "text_alignment": "center",
+            "mobile_text_size": 14,
+            "desktop_text_size": 17,
+            "icon": "",
+            "filled_icon": false,
+            "mobile_icon_size": 20,
+            "desktop_icon_size": 26,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "announcement_3H8X6d"
+      ],
+      "name": "Announcement bar",
+      "settings": {
+        "visibility": "always-display",
+        "columns_desktop": 1,
+        "columns_mobile": 1,
+        "desktop_spacing": 28,
+        "mobile_spacing": 16,
+        "show_separator": false,
+        "color_scheme": "custom",
+        "custom_colors_background": "#E2944C",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#FFFFFF",
+        "slider_mobile": true,
+        "slider_desktop": false,
+        "type": "loop",
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
     }
   },
   "order": [
@@ -1648,6 +1695,7 @@
     "eba88da5-80ac-47fc-aa75-997cfe7b2e59",
     "custom_columns_new_giXnD8",
     "facebook_testimonials_r6Afm8",
-    "collapsible_content_nJrYmE"
+    "collapsible_content_nJrYmE",
+    "announcement_bar_3kg6jG"
   ]
 }
