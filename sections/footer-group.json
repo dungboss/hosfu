@@ -22,7 +22,7 @@
         "shape_color": "custom",
         "custom_shape_color": "#ab243f",
         "background_color": "custom",
-        "custom_background_color": "#ffffff",
+        "custom_background_color": "#000000",
         "padding_top": 0,
         "padding_bottom": 0
       }
