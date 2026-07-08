@@ -55,21 +55,6 @@
       --color-foreground: {{ block.settings.open_state_content_text.red }}, {{ block.settings.open_state_content_text.green }}, {{ block.settings.open_state_content_text.blue }};
     }
   {% endif %}
-
-  {% comment %} Simple text color (only when custom style is OFF) {% endcomment %}
-  {% unless block.settings.enable_custom_style %}
-    {% if block.settings.text_color_heading != blank %}
-      #Accordion-{{ block.id }} .accordion__title {
-        color: {{ block.settings.text_color_heading }};
-      }
-    {% endif %}
-    {% if block.settings.text_color_content != blank %}
-      #Accordion-{{ block.id }} .accordion__content__inner,
-      #Accordion-{{ block.id }} .accordion__content__inner * {
-        color: {{ block.settings.text_color_content }};
-      }
-    {% endif %}
-  {% endunless %}
 </style>
 
 {%liquid
@@ -384,20 +369,6 @@
       "unit": "px",
       "default": 8,
       "visible_if": "{{ block.settings.border_type == 'all' or block.settings.border_type == 'none' and block.settings.enable_custom_style }}"
-    },
-
-    { "type": "header", "content": "Text colors" },
-    {
-      "type": "color",
-      "id": "text_color_heading",
-      "label": "Heading text color",
-      "info": "Leave empty to use theme default. Ignored when custom color styling below is enabled."
-    },
-    {
-      "type": "color",
-      "id": "text_color_content",
-      "label": "Content text color",
-      "info": "Leave empty to use theme default. Ignored when custom color styling below is enabled."
     },
 
     { "type": "header", "content": "Colors selection" },
