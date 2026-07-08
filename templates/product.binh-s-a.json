@@ -12,8 +12,49 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "text_with_icon_TzktEE": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 30,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#3c342c",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#6b5f54",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "<strong>Hosfu Bottle</strong>",
+            "icon_1": "",
+            "filled_icon_1": true,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
         "title": {
           "type": "product_title",
+          "disabled": true,
           "settings": {
             "uppercase_title": false,
             "desktop_size": 36,
@@ -31,7 +72,7 @@
             "rating": 4.8,
             "star_color": "#ffcc00",
             "bg_stars_style": "full",
-            "bg_star_color": "#ececec",
+            "bg_star_color": "#FFF6F0",
             "label": "(4.8) Based on 3,618 Reviews",
             "size": 14,
             "alignment": "flex-start",
@@ -41,7 +82,7 @@
           },
           "blocks": {}
         },
-        "text_with_icon_TzktEE": {
+        "text_with_icon_gMpTfi": {
           "type": "text-with-icon",
           "name": "Text with icon",
           "settings": {
@@ -374,6 +415,7 @@
         "icon_with_text_bGry86": {
           "type": "icon-with-text",
           "name": "Icons with text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_color": "outline-button",
@@ -587,9 +629,10 @@
         }
       },
       "block_order": [
+        "text_with_icon_TzktEE",
         "title",
         "rating_stars",
-        "text_with_icon_TzktEE",
+        "text_with_icon_gMpTfi",
         "text_with_icon_EMEXxh",
         "text_with_icon_whnVxP",
         "text_with_icon_tCpaB8",
