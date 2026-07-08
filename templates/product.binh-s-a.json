@@ -811,7 +811,7 @@
       "settings": {
         "display_id": false,
         "enable_sticky_info": true,
-        "color_scheme": "inverse",
+        "color_scheme": "background-2",
         "display_variant_image_first": false,
         "disable_prepend": false,
         "hide_variants": false,
