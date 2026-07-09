@@ -299,6 +299,22 @@
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
 
+      {%- comment -%} Moka Bottle template: cream/brown palette scoped to this template only {%- endcomment -%}
+      {%- if template.suffix == 'moka-bottle' -%}
+      :root {
+        --color-base-text: 36, 27, 22;
+        --color-shadow: 36, 27, 22;
+        --color-base-background-1: 255, 249, 243;
+        --color-base-background-2: 247, 241, 234;
+        --color-base-solid-button-labels: 255, 248, 240;
+        --color-base-outline-button-labels: 111, 78, 55;
+        --color-base-accent-1: 111, 78, 55;
+        --gradient-base-background-1: rgb(255, 249, 243);
+        --gradient-base-background-2: rgb(247, 241, 234);
+        --gradient-base-accent-1: rgb(111, 78, 55);
+      }
+      {%- endif -%}
+
       *,
       *::before,
       *::after {
