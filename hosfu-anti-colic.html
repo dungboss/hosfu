@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Reasons Parents Are Trading In Their Old Anti-Colic Bottles for Hosfu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1D2733;
+    --ink-soft:#2A3644;
+    --cream:#FBF7EF;
+    --cream-dim:#F2EBDB;
+    --amber:#E7A855;
+    --amber-deep:#C8863A;
+    --moss:#7C9B7E;
+    --text-dark:#24211C;
+    --text-light:#F5EFE3;
+    --text-muted:#6F7A85;
+    --max:1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Libre Franklin', sans-serif;
+    color:var(--text-dark);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+
+  /* ---------- Top wordmark ---------- */
+  .topbar{
+    padding:22px 0;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+  }
+  .wordmark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    letter-spacing:0.02em;
+  }
+  .wordmark .dot{
+    width:10px; height:10px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--amber), var(--amber-deep));
+    box-shadow:0 0 10px rgba(231,168,85,0.7);
+  }
+  .wordmark small{
+    font-family:'Libre Franklin', sans-serif;
+    font-weight:500; font-size:12px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--text-muted);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 40px;}
+  .eyebrow{
+    font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--amber-deep); margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(30px, 5vw, 50px);
+    line-height:1.12;
+    max-width:820px;
+    margin-bottom:28px;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px; margin-bottom:38px;
+  }
+  .avatar{
+    width:46px; height:46px; border-radius:50%;
+    background:linear-gradient(145deg, var(--moss), #566E58);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--text-light); font-family:'Fraunces',serif; font-weight:600; font-size:17px;
+    flex-shrink:0;
+  }
+  .byline .name{font-weight:600; font-size:15px;}
+  .byline .role{font-size:13px; color:var(--text-muted);}
+
+  .hero-art{
+    background:var(--ink);
+    border-radius:18px;
+    padding:38px 24px;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero-art .cap{
+    position:absolute; bottom:14px; left:0; right:0; text-align:center;
+    font-size:12px; color:rgba(245,239,227,0.55); font-style:italic;
+  }
+
+  /* ---------- Numbered sections ---------- */
+  .section{
+    padding:76px 0;
+  }
+  .section.dark{
+    background:var(--ink);
+    color:var(--text-light);
+  }
+  .section-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .section-inner.reverse .art{order:2;}
+  .section-inner.reverse .copy{order:1;}
+  .marker{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:40px; height:40px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--amber), var(--amber-deep));
+    box-shadow:0 0 18px rgba(231,168,85,0.55);
+    font-family:'Fraunces', serif; font-weight:600; font-size:17px;
+    color:#241505;
+    margin-bottom:22px;
+  }
+  .section h2{
+    font-size:clamp(24px, 3.2vw, 32px);
+    line-height:1.22;
+    margin-bottom:18px;
+  }
+  .section p{
+    font-size:16.5px;
+    max-width:520px;
+  }
+  .section.dark p{color:rgba(245,239,227,0.86);}
+  .section.dark .text-muted-local{color:rgba(245,239,227,0.55);}
+  .art{
+    border-radius:16px;
+    padding:34px;
+    display:flex; align-items:center; justify-content:center;
+    min-height:280px;
+  }
+  .section:not(.dark) .art{background:var(--cream-dim);}
+  .section.dark .art{background:var(--ink-soft);}
+
+  /* ---------- CTA buttons ---------- */
+  .cta-row{margin-top:30px;}
+  .btn{
+    display:inline-block;
+    background:var(--amber);
+    color:#241505;
+    font-weight:600;
+    font-size:14.5px;
+    padding:15px 30px;
+    border-radius:100px;
+    text-decoration:none;
+    letter-spacing:0.01em;
+    transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 8px 20px rgba(231,168,85,0.35);
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(231,168,85,0.45);}
+  .btn.outline{
+    background:transparent;
+    border:1.5px solid rgba(245,239,227,0.5);
+    color:var(--text-light);
+    box-shadow:none;
+  }
+
+  /* ---------- Final CTA band ---------- */
+  .final-cta{
+    background:linear-gradient(120deg, #E7A855, #C8863A);
+    padding:72px 0;
+    text-align:center;
+  }
+  .final-cta h2{
+    color:#241505;
+    font-size:clamp(26px, 4vw, 38px);
+    max-width:680px;
+    margin:0 auto 30px;
+    line-height:1.2;
+  }
+  .final-cta .btn{
+    background:var(--ink);
+    color:var(--text-light);
+    box-shadow:0 10px 24px rgba(29,39,51,0.35);
+  }
+
+  /* ---------- Reviews ---------- */
+  .reviews{padding:80px 0 100px;}
+  .reviews-head{max-width:560px; margin-bottom:44px;}
+  .reviews-head .eyebrow{margin-bottom:14px;}
+  .reviews-head h2{font-size:clamp(24px,3vw,32px); margin-bottom:12px;}
+  .reviews-head p{color:var(--text-muted); font-size:15px;}
+
+  .rating-summary{
+    display:flex; align-items:center; gap:22px;
+    background:var(--cream-dim);
+    border-radius:14px;
+    padding:22px 26px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+  }
+  .rating-summary .score{
+    font-family:'Fraunces', serif; font-weight:600; font-size:40px; line-height:1;
+  }
+  .stars{color:var(--amber-deep); font-size:17px; letter-spacing:2px;}
+  .rating-summary .meta{font-size:13px; color:var(--text-muted);}
+
+  .review-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  .review-card{
+    background:#fff;
+    border:1px solid rgba(0,0,0,0.06);
+    border-radius:14px;
+    padding:26px;
+  }
+  .review-card .stars{margin-bottom:12px; display:block;}
+  .review-card h3{
+    font-family:'Libre Franklin', sans-serif;
+    font-weight:700; font-size:15.5px;
+    margin-bottom:10px;
+  }
+  .review-card p{font-size:14px; color:#4A463F; margin-bottom:16px;}
+  .reviewer{display:flex; align-items:center; gap:10px;}
+  .reviewer .initial{
+    width:32px; height:32px; border-radius:50%;
+    background:var(--moss); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:600; font-family:'Fraunces',serif;
+    flex-shrink:0;
+  }
+  .reviewer .rname{font-size:13px; font-weight:600;}
+  .reviewer .rverified{font-size:11.5px; color:var(--text-muted);}
+
+  .note{
+    max-width:var(--max); margin:0 auto; padding:0 28px 60px;
+    font-size:12px; color:var(--text-muted); font-style:italic;
+  }
+
+  footer{
+    padding:30px 0 50px; text-align:center; font-size:12.5px; color:var(--text-muted);
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:820px){
+    .section-inner{grid-template-columns:1fr; gap:32px;}
+    .section-inner.reverse .art{order:1;}
+    .section-inner.reverse .copy{order:2;}
+    .review-grid{grid-template-columns:1fr;}
+    .section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap wordmark">
+    <span class="dot"></span> Hosfu Feeding Journal <small>&nbsp;— editorial</small>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow reveal">Feeding &amp; Sleep · Parent Report</div>
+    <h1 class="reveal">5 Reasons Parents Are Trading In Their Old Anti-Colic Bottles for Hosfu</h1>
+    <div class="byline reveal">
+      <div class="avatar">EH</div>
+      <div>
+        <div class="name">Dr. Emily Hartman, RD</div>
+        <div class="role">Pediatric feeding &amp; nutrition specialist · Reviewed July 09, 2026</div>
+      </div>
+    </div>
+
+    <div class="hero-art reveal">
+      <svg width="360" height="260" viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#E7A855" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#E7A855" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="bottleG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F5EFE3" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#CBD3D8" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+        <circle cx="180" cy="95" r="120" fill="url(#glow)"/>
+        <!-- bottle -->
+        <rect x="148" y="70" width="64" height="130" rx="14" fill="url(#bottleG)"/>
+        <rect x="160" y="46" width="40" height="30" rx="6" fill="#EFE4CC"/>
+        <ellipse cx="180" cy="42" rx="16" ry="8" fill="#E7A855"/>
+        <rect x="152" y="120" width="56" height="3" fill="#8FA0AA" opacity="0.6"/>
+        <rect x="152" y="140" width="56" height="3" fill="#8FA0AA" opacity="0.6"/>
+        <rect x="152" y="160" width="56" height="3" fill="#8FA0AA" opacity="0.6"/>
+        <!-- moon + stars for 3am mood -->
+        <circle cx="60" cy="50" r="14" fill="#F5EFE3" opacity="0.85"/>
+        <circle cx="66" cy="46" r="14" fill="#1D2733"/>
+        <circle cx="300" cy="60" r="2.4" fill="#F5EFE3" opacity="0.7"/>
+        <circle cx="285" cy="90" r="1.6" fill="#F5EFE3" opacity="0.5"/>
+        <circle cx="312" cy="100" r="1.8" fill="#F5EFE3" opacity="0.6"/>
+      </svg>
+      <div class="cap">A calm night feed, minus the tangle of vent parts</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1 ============ -->
+<section class="section dark">
+  <div class="wrap section-inner reveal">
+    <div class="copy">
+      <div class="marker">1</div>
+      <h2>Bottle after bottle, and you're still the one running on empty</h2>
+      <p>You know this routine. It's 3am and you're at the sink rinsing tiny valve pieces instead of sleeping, and the shelf above your counter is lined with bottles that each promised to be the last one you'd ever need. Meanwhile your baby is still gulping air, spitting up, and crying halfway through the feed. It's easy to start wondering if you're doing something wrong. <strong>You're not.</strong> Ask any group of new parents and the same three complaints come up again and again: bottles that are miserable to clean, seals that give out, and a colic that never really lets up.</p>
+    </div>
+    <div class="art">
+      <svg width="280" height="220" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="150" width="240" height="10" rx="4" fill="#3A4855"/>
+        <rect x="30" y="70" width="34" height="80" rx="8" fill="#8FA0AA" opacity="0.85"/>
+        <rect x="80" y="90" width="34" height="60" rx="8" fill="#7C9B7E" opacity="0.85"/>
+        <rect x="130" y="55" width="34" height="95" rx="8" fill="#E7A855" opacity="0.8"/>
+        <rect x="180" y="100" width="34" height="50" rx="8" fill="#8FA0AA" opacity="0.7"/>
+        <rect x="212" y="75" width="34" height="75" rx="8" fill="#7C9B7E" opacity="0.6"/>
+        <circle cx="47" cy="55" r="9" fill="#F5EFE3" opacity="0.7"/>
+        <circle cx="97" cy="78" r="9" fill="#F5EFE3" opacity="0.7"/>
+        <circle cx="147" cy="42" r="9" fill="#F5EFE3" opacity="0.9"/>
+        <circle cx="197" cy="88" r="9" fill="#F5EFE3" opacity="0.6"/>
+        <circle cx="229" cy="62" r="9" fill="#F5EFE3" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 ============ -->
+<section class="section">
+  <div class="wrap section-inner reverse reveal">
+    <div class="copy">
+      <div class="marker">2</div>
+      <h2>The harder you scrub, the more the problem fights back</h2>
+      <p>The real trouble isn't the bottle body, it's the maze of vent tubes and valves hiding inside it. A bottle brush can't reach into those tight seams, so leftover milk sits there — and in a warm, damp spot it turns into mold and bacteria within days. So you sterilize harder, not realizing that repeated high heat is exactly what warps standard baby-grade plastic and opens it up to leaks. Clean it too gently and something starts growing; sterilize it too often and you're peeling a soaked onesie off a screaming baby at 4am while formula seeps through your shirt.</p>
+      <div class="cta-row"><a href="#product" class="btn">See How Hosfu Solves It</a></div>
+    </div>
+    <div class="art">
+      <svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="120" width="200" height="70" rx="14" fill="#7C9B7E" opacity="0.25"/>
+        <path d="M60 130 C60 90, 100 90, 100 130" stroke="#C8863A" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M120 130 C120 80, 170 80, 170 130" stroke="#C8863A" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M190 130 C190 95, 210 95, 210 130" stroke="#C8863A" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="80" cy="150" r="5" fill="#3A4855" opacity="0.4"/>
+        <circle cx="140" cy="160" r="5" fill="#3A4855" opacity="0.4"/>
+        <circle cx="190" cy="150" r="5" fill="#3A4855" opacity="0.4"/>
+        <path d="M50 195 h160" stroke="#3A4855" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 ============ -->
+<section class="section dark" id="product">
+  <div class="wrap section-inner reveal">
+    <div class="copy">
+      <div class="marker">3</div>
+      <h2>Why Hosfu works where everything else stalled out</h2>
+      <p>After weeks of trial and error with bottles that never actually stopped the sputtering, it's fair to be skeptical that "one more bottle" will change anything. Here's what most brands won't say out loud: the majority of anti-colic bottles on the market are still built on venting designs from three decades ago. Once tube-and-valve systems became the industry default, there was little reason to rethink them — so parents were left choosing between fiddly anti-colic hardware or no venting at all. Hosfu was built differently. A team of feeding specialists spent over a year re-engineering the vent from the ground up, landing on a single frictionless channel built into the base of a 4-piece glass bottle, so air escapes on its own instead of turning every wash into a fifteen-minute project.</p>
+    </div>
+    <div class="art">
+      <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="80" y="30" width="80" height="150" rx="16" fill="#3A4855" stroke="#F5EFE3" stroke-opacity="0.25" stroke-width="1.5"/>
+        <rect x="95" y="10" width="50" height="26" rx="6" fill="#E7A855"/>
+        <ellipse cx="120" cy="8" rx="20" ry="7" fill="#C8863A"/>
+        <rect x="90" y="150" width="60" height="18" rx="6" fill="#7C9B7E"/>
+        <circle cx="120" cy="159" r="4" fill="#1D2733"/>
+        <path d="M120 168 v34" stroke="#E7A855" stroke-width="3" stroke-dasharray="3 5"/>
+        <path d="M108 195 L120 210 L132 195" stroke="#E7A855" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 ============ -->
+<section class="section">
+  <div class="wrap section-inner reverse reveal">
+    <div class="copy">
+      <div class="marker">4</div>
+      <h2>It costs more — and here's the honest reason why</h2>
+      <p>Hosfu isn't trying to be the cheapest anti-colic bottle on the shelf; it's a small-batch product built from materials most brands won't pay for. Every surface that touches milk is real borosilicate glass and medical-grade silicone, not the budget plastic found in most bottles, so it can be sterilized as often as needed without warping. The nipple itself was shaped and tested to encourage a deeper, more natural latch, which is what actually cuts down on the gulping and sputtering that cheaper nipple designs tend to cause. Because the materials hold up, a Hosfu bottle typically outlasts a standard one several times over — no swapping out warped parts, no starting over with a new bottle every few months. Once you add up what you've likely already spent replacing bottles that didn't work, the price stops looking like a splurge and starts looking like the last purchase you'll need to make.</p>
+      <div class="cta-row"><a href="#buy" class="btn">Check Current Availability</a></div>
+    </div>
+    <div class="art">
+      <svg width="260" height="200" viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="40" width="90" height="120" rx="18" fill="#CBD3D8" opacity="0.7"/>
+        <rect x="130" y="70" width="110" height="90" rx="14" fill="#E7A855" opacity="0.85"/>
+        <circle cx="65" cy="100" r="26" fill="#F5EFE3" opacity="0.6"/>
+        <circle cx="185" cy="115" r="20" fill="#C8863A" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 ============ -->
+<section class="section dark">
+  <div class="wrap section-inner reveal">
+    <div class="copy">
+      <div class="marker">5</div>
+      <h2>Thousands of parents who'd tried everything are finally done trying</h2>
+      <p>Hosfu's earliest reviews came from parents who tested the first production run before it ever went public. The pattern showed up almost immediately: babies who used to arch their backs, cry, and pull away mid-feed were suddenly finishing their bottles and settling within days. Parents who'd been stuck spending twenty minutes a night disassembling and scrubbing vent parts were down to rinsing four simple pieces under the tap. For thousands of families now, getting their hands on a Hosfu bottle wasn't just another purchase — it was the point where they stopped hunting for a better bottle and realized they'd already found it.</p>
+    </div>
+    <div class="art">
+      <svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="110" r="46" fill="#7C9B7E" opacity="0.3"/>
+        <circle cx="90" cy="80" r="24" fill="#F5EFE3" opacity="0.85"/>
+        <rect x="65" y="100" width="50" height="60" rx="20" fill="#F5EFE3" opacity="0.85"/>
+        <circle cx="150" cy="70" r="10" fill="#E7A855" opacity="0.5"/>
+        <circle cx="180" cy="100" r="7" fill="#E7A855" opacity="0.4"/>
+        <circle cx="200" cy="60" r="5" fill="#E7A855" opacity="0.35"/>
+        <circle cx="165" cy="140" r="6" fill="#E7A855" opacity="0.4"/>
+        <circle cx="210" cy="130" r="8" fill="#E7A855" opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta" id="buy">
+  <div class="wrap reveal">
+    <h2>Ready for Easier Cleanup, a Calmer Baby, and a Full Night's Sleep?</h2>
+    <a href="#" class="btn">Check Stock Now</a>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="reviews-head reveal">
+      <div class="eyebrow">Customer Feedback</div>
+      <h2>What Hosfu Parents Are Saying</h2>
+      <p>Real feedback from families who've made the switch. Replace this block with your live review-app feed (Judge.me, Loox, etc.) before publishing.</p>
+    </div>
+
+    <div class="rating-summary reveal">
+      <div class="score">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="meta">Based on verified customer reviews — connect your review app to populate this live</div>
+      </div>
+    </div>
+
+    <div class="review-grid reveal">
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <h3>Finally not washing a science experiment</h3>
+        <p>We started with a big-name anti-colic brand because our daughter was so gassy after feeds. It helped some, but those tiny valve pieces made me dread every single wash. Hosfu is the first bottle that keeps her calm during feeds without me standing at the sink with a little brush for twenty minutes. She still needs burping, obviously, but she's not gulping air like before.</p>
+        <div class="reviewer">
+          <div class="initial">S</div>
+          <div><div class="rname">Sarah Mitchell</div><div class="rverified">Verified buyer</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <h3>Worth it if your baby is picky about flow</h3>
+        <p>My son is combo-fed and was picky about flow with every bottle we tried. Our old brand leaked in the diaper bag twice and he'd fight the nipple constantly. He took to the Hosfu nipple on day one and actually finished the bottle instead of fussing through it. Not magic, but it worked for us.</p>
+        <div class="reviewer">
+          <div class="initial">B</div>
+          <div><div class="rname">Brianna Cole</div><div class="rverified">Verified buyer</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <h3>Feels premium without being complicated</h3>
+        <p>I wanted glass because I didn't love the idea of warming milk in plastic, but I also didn't want some heavy, fussy setup. This feels premium, and knowing the milk only touches glass and silicone puts my mind at ease. It's heavier than plastic so I still hold it for her, but that's the tradeoff I expected going in.</p>
+        <div class="reviewer">
+          <div class="initial">P</div>
+          <div><div class="rname">Priya Nair</div><div class="rverified">Verified buyer</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <h3>Makes the 3am feed less of a hassle</h3>
+        <p>I'm the one who handles the middle-of-the-night bottle and I don't care about cute packaging — I care whether it leaks and whether I can clean it half asleep. This is so much easier than our old setup. Fewer parts, easy-to-read markings, and I haven't had milk running down my wrist at 3am since we switched.</p>
+        <div class="reviewer">
+          <div class="initial">M</div>
+          <div><div class="rname">Marcus Webb</div><div class="rverified">Verified buyer</div></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <h3>Helped with our daughter's gas</h3>
+        <p>Our seven-week-old was clicking, gulping, then screaming after every bottle. We'd already tried two other slow-flow options before this one. With Hosfu she seems to pace herself much better and we need way fewer burp breaks mid-feed. The gas isn't completely gone — she's a baby — but feeds are noticeably calmer now.</p>
+        <div class="reviewer">
+          <div class="initial">C</div>
+          <div><div class="rname">Courtney Diaz</div><div class="rverified">Verified buyer</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="note">
+  This page is editorial-style advertorial content for Hosfu. Illustrations are original placeholder graphics — swap in real Hosfu product photography before publishing. Review count, star rating, and testimonials are template content and should be replaced with genuine customer feedback from your review platform prior to going live, to keep the page compliant with advertising standards.
+</div>
+
+<footer>© 2026 Hosfu. All rights reserved.</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
