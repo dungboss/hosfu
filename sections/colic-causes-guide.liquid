@@ -1,0 +1,552 @@
+{{ 'section-colic-causes-guide.css' | asset_url | stylesheet_tag }}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% liquid
+  assign root_id = 'colic-guide-' | append: section.id
+
+  assign heading = section.settings.heading
+  if heading == blank and article.title != blank
+    assign heading = article.title
+  endif
+
+  assign hero_sub = section.settings.hero_sub
+  if hero_sub == blank and article.excerpt != blank
+    assign hero_sub = article.excerpt | strip_html
+  endif
+
+  assign author_name = section.settings.author_name
+  if author_name == blank and article.author != blank
+    assign author_name = article.author
+  endif
+
+  assign initials = ''
+  assign name_parts = author_name | split: ' '
+  for part in name_parts limit: 2
+    assign ch = part | slice: 0, 1
+    assign initials = initials | append: ch
+  endfor
+  assign initials = initials | upcase
+
+  assign review_date = section.settings.reviewed_date
+  if review_date == blank and article.published_at != blank
+    assign review_date = article.published_at | date: '%B %d, %Y'
+  endif
+
+  assign product_link = section.settings.product_link | default: article.url
+%}
+
+<article id="{{ root_id }}" class="colic-guide">
+
+  {% if section.settings.site_name != blank %}
+    <div class="cg-topbar">
+      <div class="cg-wrap cg-wordmark">
+        <span class="cg-dot"></span> {{ section.settings.site_name | escape }}
+        {% if section.settings.site_tagline != blank %}<small>&nbsp;— {{ section.settings.site_tagline | escape }}</small>{% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- ============ HERO ============ -->
+  <section class="cg-hero">
+    <div class="cg-wrap">
+      {% if section.settings.eyebrow != blank %}<div class="cg-eyebrow cg-reveal">{{ section.settings.eyebrow | escape }}</div>{% endif %}
+      <h1 class="cg-reveal">{{ heading | escape }}</h1>
+      {% if hero_sub != blank %}<p class="cg-hero-sub cg-reveal">{{ hero_sub | escape }}</p>{% endif %}
+      <div class="cg-byline cg-reveal">
+        <div class="cg-avatar">{{ initials | default: 'HF' }}</div>
+        <div>
+          <div class="cg-name">{{ author_name | default: 'Hosfu Editorial' | escape }}</div>
+          <div class="cg-role">
+            {{ section.settings.author_role | escape }}{% if review_date != blank %} · Reviewed {{ review_date }}{% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="cg-hero-art cg-reveal">
+        <svg width="360" height="260" viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cgGlow{{ section.id }}" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#E7A855" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#E7A855" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="180" cy="125" r="120" fill="url(#cgGlow{{ section.id }})"/>
+          <circle cx="180" cy="130" r="58" fill="#7C9B7E" opacity="0.25"/>
+          <circle cx="180" cy="112" r="34" fill="#F5EFE3" opacity="0.95"/>
+          <path d="M164 108 q5 5 10 0" stroke="#1D2733" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M186 108 q5 5 10 0" stroke="#1D2733" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M170 122 q10 8 20 0" stroke="#1D2733" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <circle cx="163" cy="118" r="3.5" fill="#E7A855" opacity="0.5"/>
+          <circle cx="197" cy="118" r="3.5" fill="#E7A855" opacity="0.5"/>
+          <path d="M150 150 q30 -16 60 0 l6 44 q-36 16 -72 0 z" fill="#F5EFE3" opacity="0.9"/>
+          <path d="M172 162 q8 6 16 0" stroke="#CBD3D8" stroke-width="2" fill="none" opacity="0.6"/>
+          <circle cx="66" cy="54" r="14" fill="#F5EFE3" opacity="0.85"/>
+          <circle cx="72" cy="50" r="14" fill="#1D2733"/>
+          <path d="M292 58 c-4-6-12-2-10 4 c1 4 10 9 10 9 c0 0 9-5 10-9 c2-6-6-10-10-4 z" fill="#E7A855" opacity="0.55"/>
+          <circle cx="300" cy="108" r="2.4" fill="#F5EFE3" opacity="0.7"/>
+          <circle cx="284" cy="92" r="1.6" fill="#F5EFE3" opacity="0.5"/>
+          <circle cx="312" cy="128" r="1.8" fill="#F5EFE3" opacity="0.6"/>
+        </svg>
+        {% if section.settings.hero_caption != blank %}<div class="cg-cap">{{ section.settings.hero_caption | escape }}</div>{% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEAD ============ -->
+  {% if section.settings.lead_text != blank %}
+    <section class="cg-lead-wrap">
+      <div class="cg-wrap cg-reveal">
+        <p class="cg-lead">{{ section.settings.lead_text }}</p>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- ============ SECTION 1 · what colic is ============ -->
+  <section class="cg-section cg-dark">
+    <div class="cg-wrap cg-section-inner cg-reveal">
+      <div class="cg-copy">
+        <div class="cg-marker">1</div>
+        <h2>First — what colic actually is (and isn't)</h2>
+        <p>Colic isn't a disease or something you'll find on a lab report. It's a <em>pattern</em>. Pediatricians describe it with the "rule of three": crying for more than three hours a day, more than three days a week, for more than three weeks — in a baby who is otherwise healthy, feeding, and growing.</p>
+        <p>It usually begins around two to three weeks of age, peaks near six weeks, and eases off by three to four months. That timeline won't stop tonight's crying, but it does mean there is a finish line, even when it doesn't feel like one.</p>
+        <div class="cg-factcard">
+          <div class="cg-fc-label">The rule of three</div>
+          <div class="cg-fc-row">
+            <div class="cg-fc-item"><strong>3+ hrs</strong> a day</div>
+            <div class="cg-fc-item"><strong>3+ days</strong> a week</div>
+            <div class="cg-fc-item"><strong>3+ weeks</strong> running</div>
+            <div class="cg-fc-item">peaks <strong>~6 wks</strong>, fades by <strong>3–4 mo</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="cg-art">
+        <svg width="280" height="220" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="180" width="240" height="3" rx="1.5" fill="#3A4855"/>
+          <path d="M30 165 C70 165, 90 60, 130 55 C170 50, 200 150, 250 165" stroke="#E7A855" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M30 165 C70 165, 90 60, 130 55 C170 50, 200 150, 250 165 L250 180 L30 180 Z" fill="#E7A855" opacity="0.14"/>
+          <circle cx="130" cy="55" r="6" fill="#E7A855"/>
+          <text x="130" y="40" text-anchor="middle" font-family="Fraunces, serif" font-size="12" fill="#F5EFE3" opacity="0.85">peak ~6 wks</text>
+          <text x="30" y="200" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="10" fill="#8FA0AA">2 wks</text>
+          <text x="250" y="200" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="10" fill="#8FA0AA">3–4 mo</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE · the causes ============ -->
+  <section class="cg-feature">
+    <div class="cg-wrap">
+      <div class="cg-feature-head cg-reveal">
+        <div class="cg-eyebrow">What's really going on</div>
+        <h2>Five things that quietly make feeds harder</h2>
+        <p>Colic rarely has one single cause. But when a baby gulps, arches, and cries after eating, it usually traces back to some mix of these five — and most of them are easier to influence than they look.</p>
+      </div>
+
+      <div class="cg-cause-grid cg-reveal">
+        <div class="cg-cause-card">
+          <div class="cg-ico">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="10" r="5" stroke="#C8863A" stroke-width="2"/>
+              <circle cx="18" cy="15" r="3.5" stroke="#C8863A" stroke-width="2"/>
+              <circle cx="10" cy="19" r="2.2" stroke="#C8863A" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <span class="cg-num">Cause 01</span>
+          <h3>Swallowed air</h3>
+          <p>A fast or poorly-sealed latch means baby takes in nearly as much air as milk. That trapped air is what causes the arching, squirming, and pulling away mid-feed.</p>
+        </div>
+
+        <div class="cg-cause-card">
+          <div class="cg-ico">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 3 C13 3, 5 13, 5 18 a8 8 0 0 0 16 0 C21 13, 13 3, 13 3 Z" stroke="#C8863A" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <path d="M9 22 l2-3 M13 23 l2-3" stroke="#C8863A" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="cg-num">Cause 02</span>
+          <h3>Milk flowing too fast</h3>
+          <p>A nipple that flows faster than a baby can pace themselves forces gulping, choking, and extra swallowed air — the opposite of a calm, steady feed.</p>
+        </div>
+
+        <div class="cg-cause-card">
+          <div class="cg-ico">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6 C6 12, 20 10, 20 15 C20 20, 8 19, 8 21" stroke="#C8863A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="6" cy="6" r="2" fill="#C8863A"/>
+              <circle cx="8" cy="21" r="2" fill="#C8863A"/>
+            </svg>
+          </div>
+          <span class="cg-num">Cause 03</span>
+          <h3>An immature gut</h3>
+          <p>A newborn's digestive system is still learning to move milk and gas along. Some fussiness is simply development — not something you did wrong.</p>
+        </div>
+
+        <div class="cg-cause-card">
+          <div class="cg-ico">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="9" stroke="#C8863A" stroke-width="2"/>
+              <path d="M13 8 v5 l3.5 2.5" stroke="#C8863A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="cg-num">Cause 04</span>
+          <h3>Feeding too fast or too much</h3>
+          <p>Big, quick feeds overwhelm a small stomach — and what doesn't fit tends to come straight back up, often with tears attached.</p>
+        </div>
+
+        <div class="cg-cause-card">
+          <div class="cg-ico">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 21 V7" stroke="#C8863A" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 13 L13 6 L19 13" stroke="#C8863A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 23 q8 -3 16 0" stroke="#C8863A" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+          </div>
+          <span class="cg-num">Cause 05</span>
+          <h3>Reflux</h3>
+          <p>When the muscle at the top of the stomach is still weak, milk — and discomfort — rises back up after feeds, leaving baby unsettled and sore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 · what helps ============ -->
+  <section class="cg-section">
+    <div class="cg-wrap cg-section-inner cg-reverse cg-reveal">
+      <div class="cg-copy">
+        <div class="cg-marker">2</div>
+        <h2>What actually helps at feed time</h2>
+        <p>You can't fully switch off a baby's colic — but you can lower the amount of air and pressure going in, and that's where most of the relief comes from. A few small habits, done consistently, tend to add up faster than any single "fix."</p>
+        <ul class="cg-fix-list">
+          <li><span class="cg-tick">✓</span><strong>Feed paced and upright.</strong> Hold baby at roughly a 45° angle and let them take breaks instead of draining the bottle in one go.</li>
+          <li><span class="cg-tick">✓</span><strong>Burp early and often.</strong> Pause halfway through the feed, not only at the end, to clear air before it builds.</li>
+          <li><span class="cg-tick">✓</span><strong>Smaller, more frequent feeds.</strong> A less-full tummy is a calmer tummy — and less likely to send milk back up.</li>
+          <li><span class="cg-tick">✓</span><strong>Stay upright after.</strong> Twenty to thirty minutes vertical helps milk settle instead of rising.</li>
+          <li><span class="cg-tick">✓</span><strong>Cut the air at the source.</strong> Choose a bottle that lets air escape rather than forcing it back into your baby.</li>
+        </ul>
+      </div>
+      <div class="cg-art">
+        <svg width="260" height="230" viewBox="0 0 260 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 190 L150 90" stroke="#8FA0AA" stroke-width="3" stroke-linecap="round" opacity="0.5" stroke-dasharray="2 7"/>
+          <circle cx="150" cy="88" r="26" fill="#7C9B7E" opacity="0.85"/>
+          <circle cx="150" cy="80" r="15" fill="#F5EFE3"/>
+          <path d="M144 78 q3 3 6 0" stroke="#1D2733" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M150 84 q4 3 8 -1" stroke="#1D2733" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M132 100 q18 -12 36 0 l14 60 q-32 14 -64 0 z" fill="#7C9B7E" opacity="0.6"/>
+          <g transform="rotate(-38 120 120)">
+            <rect x="104" y="96" width="26" height="52" rx="7" fill="#F5EFE3" stroke="#CBD3D8" stroke-width="1.5"/>
+            <rect x="110" y="86" width="14" height="12" rx="4" fill="#E7A855"/>
+            <rect x="107" y="112" width="20" height="2.4" fill="#8FA0AA" opacity="0.6"/>
+            <rect x="107" y="124" width="20" height="2.4" fill="#8FA0AA" opacity="0.6"/>
+          </g>
+          <text x="86" y="205" text-anchor="middle" font-family="Fraunces, serif" font-size="12" fill="#6F7A85">~45° &amp; paced</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 · where the bottle matters (Hosfu) ============ -->
+  <section class="cg-section cg-dark" id="product">
+    <div class="cg-wrap cg-section-inner cg-reveal">
+      <div class="cg-copy">
+        <div class="cg-marker">3</div>
+        <h2>The part most parents overlook: the bottle itself</h2>
+        <p>Technique does a lot of the work — but the bottle in your hand either helps you or fights you. Most of the air a bottle-fed baby swallows comes from two places: a nipple that can't hold a steady latch, and a vent system that pushes air back <em>through</em> the milk instead of letting it out.</p>
+        <p>Older anti-colic bottles try to fix this with a maze of tubes and valves. They can work — when they're spotless — but they trap milk and are miserable to clean. This is exactly the problem <strong>Hosfu</strong> was built around: a single frictionless vent channel at the base lets air escape on its own, and a nipple shaped for a deeper, more natural latch means less gulping to begin with. Four simple pieces of borosilicate glass and medical-grade silicone — nothing for air, or bacteria, to hide in.</p>
+        {% if section.settings.mid_cta_label != blank %}
+          <div class="cg-cta-row"><a href="{{ product_link }}" class="cg-btn">{{ section.settings.mid_cta_label | escape }}</a></div>
+        {% endif %}
+      </div>
+      <div class="cg-art">
+        <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="80" y="30" width="80" height="150" rx="16" fill="#3A4855" stroke="#F5EFE3" stroke-opacity="0.25" stroke-width="1.5"/>
+          <rect x="95" y="10" width="50" height="26" rx="6" fill="#E7A855"/>
+          <ellipse cx="120" cy="8" rx="20" ry="7" fill="#C8863A"/>
+          <rect x="90" y="150" width="60" height="18" rx="6" fill="#7C9B7E"/>
+          <circle cx="120" cy="159" r="4" fill="#1D2733"/>
+          <path d="M120 168 v34" stroke="#E7A855" stroke-width="3" stroke-dasharray="3 5"/>
+          <path d="M108 195 L120 210 L132 195" stroke="#E7A855" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="120" y="228" text-anchor="middle" font-family="Fraunces, serif" font-size="11" fill="#F5EFE3" opacity="0.7">air escapes on its own</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RED FLAGS ============ -->
+  <section class="cg-redflags">
+    <div class="cg-wrap cg-reveal">
+      <div class="cg-rf-box">
+        <div class="cg-eyebrow">Important</div>
+        <h2>When it's more than colic — call your pediatrician</h2>
+        <p>Colic is, by definition, crying in an otherwise <em>healthy</em> baby. If any of the following show up, it isn't colic — it's a reason to get checked. Your instinct to ask is always valid.</p>
+        <ul class="cg-rf-grid">
+          <li>Fever, or forceful / green vomiting</li>
+          <li>Blood in the stool or spit-up</li>
+          <li>Diarrhea or signs of dehydration</li>
+          <li>Poor weight gain or refusing to feed</li>
+          <li>Crying that sounds weak, high-pitched, or "different"</li>
+          <li>Pain and arching that continues well past 4 months</li>
+        </ul>
+        <p class="cg-rf-foot">This article is general parenting information, not a substitute for medical advice. When something feels off, trust it and speak with your pediatrician about your baby.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  {% if section.settings.final_cta_heading != blank %}
+    <section class="cg-final-cta" id="buy">
+      <div class="cg-wrap cg-reveal">
+        <h2>{{ section.settings.final_cta_heading | escape }}</h2>
+        {% if section.settings.final_cta_text != blank %}<p>{{ section.settings.final_cta_text | escape }}</p>{% endif %}
+        {% if section.settings.final_cta_label != blank %}<a href="{{ product_link }}" class="cg-btn">{{ section.settings.final_cta_label | escape }}</a>{% endif %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- ============ REVIEWS ============ -->
+  {% if section.settings.show_reviews %}
+    <section class="cg-reviews">
+      <div class="cg-wrap">
+        <div class="cg-reviews-head cg-reveal">
+          <div class="cg-eyebrow">Parent Experiences</div>
+          <h2>{{ section.settings.reviews_heading | default: 'What Changed for These Families' | escape }}</h2>
+          <p>Real feedback from parents who adjusted their feeds and switched bottles. Replace this block with your live review-app feed (Judge.me, Loox, etc.) before publishing.</p>
+        </div>
+
+        <div class="cg-rating-summary cg-reveal">
+          <div class="cg-score">{{ section.settings.rating_score | default: '4.8' }}</div>
+          <div>
+            <div class="cg-stars">★★★★★</div>
+            <div class="cg-meta">Based on verified customer reviews — connect your review app to populate this live</div>
+          </div>
+        </div>
+
+        <div class="cg-review-grid cg-reveal">
+          <div class="cg-review-card">
+            <span class="cg-stars">★★★★★</span>
+            <h3>Helped with our daughter's gas</h3>
+            <p>Our seven-week-old was clicking, gulping, then screaming after every bottle. Once we slowed the feeds down and switched, she paces herself much better and we need way fewer burp breaks mid-feed. The gas isn't completely gone — she's a baby — but feeds are noticeably calmer now.</p>
+            <div class="cg-reviewer">
+              <div class="cg-initial">C</div>
+              <div><div class="cg-rname">Courtney Diaz</div><div class="cg-rverified">Verified buyer</div></div>
+            </div>
+          </div>
+
+          <div class="cg-review-card">
+            <span class="cg-stars">★★★★★</span>
+            <h3>Finally not washing a science experiment</h3>
+            <p>We started with a big-name anti-colic brand because our daughter was so gassy after feeds. It helped some, but those tiny valve pieces made me dread every wash. Hosfu is the first bottle that keeps her calm during feeds without me standing at the sink with a little brush for twenty minutes.</p>
+            <div class="cg-reviewer">
+              <div class="cg-initial">S</div>
+              <div><div class="cg-rname">Sarah Mitchell</div><div class="cg-rverified">Verified buyer</div></div>
+            </div>
+          </div>
+
+          <div class="cg-review-card">
+            <span class="cg-stars">★★★★★</span>
+            <h3>Makes the 3am feed less of a hassle</h3>
+            <p>I handle the middle-of-the-night bottle and I don't care about cute packaging — I care whether it leaks and whether I can clean it half asleep. Fewer parts, easy-to-read markings, and I haven't had milk running down my wrist at 3am since we switched.</p>
+            <div class="cg-reviewer">
+              <div class="cg-initial">M</div>
+              <div><div class="cg-rname">Marcus Webb</div><div class="cg-rverified">Verified buyer</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if section.settings.disclaimer != blank %}
+    <div class="cg-note">{{ section.settings.disclaimer }}</div>
+  {% endif %}
+
+  {% if section.settings.footer_text != blank %}
+    <footer class="cg-footer">{{ section.settings.footer_text | escape }}</footer>
+  {% endif %}
+</article>
+
+<script>
+  (function(){
+    var root = document.getElementById('{{ root_id }}');
+    if(!root){ return; }
+    var els = root.querySelectorAll('.cg-reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(e){ e.classList.add('cg-in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('cg-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Colic Causes Guide",
+  "tag": "section",
+  "class": "colic-guide-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Masthead"
+    },
+    {
+      "type": "text",
+      "id": "site_name",
+      "label": "Wordmark / site name",
+      "default": "Hosfu Feeding Journal"
+    },
+    {
+      "type": "text",
+      "id": "site_tagline",
+      "label": "Wordmark tagline",
+      "default": "parent guide"
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Colic & Comfort · Parent Guide"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Headline (falls back to article title)",
+      "default": "Why Your Baby Cries, Gulps, and Arches After Every Feed"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_sub",
+      "label": "Sub-headline (falls back to article excerpt)",
+      "default": "A calm, plain-English look at what colic actually is, the real reasons feeds go sideways, and the small changes that tend to make the biggest difference — including the one most parents overlook."
+    },
+    {
+      "type": "text",
+      "id": "hero_caption",
+      "label": "Hero illustration caption",
+      "default": "Colic is common, exhausting — and more manageable than it feels at 3am"
+    },
+    {
+      "type": "header",
+      "content": "Author byline"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author name (falls back to article author)",
+      "default": "Dr. Emily Hartman, RD"
+    },
+    {
+      "type": "text",
+      "id": "author_role",
+      "label": "Author role / credential",
+      "default": "Pediatric feeding & nutrition specialist"
+    },
+    {
+      "type": "text",
+      "id": "reviewed_date",
+      "label": "Reviewed date (falls back to publish date)",
+      "info": "Leave blank to use the article's publish date."
+    },
+    {
+      "type": "header",
+      "content": "Lead paragraph"
+    },
+    {
+      "type": "richtext",
+      "id": "lead_text",
+      "label": "Lead paragraph",
+      "default": "<p>If your evenings have turned into a blur of inconsolable crying, clenched fists, and a baby who pulls away mid-bottle, you are not doing anything wrong — and you are very far from alone. Roughly <strong>one in five babies</strong> goes through a stretch of colic. Here's what's actually happening inside those feeds, and the changes that tend to help most.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "url",
+      "id": "product_link",
+      "label": "Hosfu product link",
+      "info": "Used by both CTAs. Falls back to this article's URL."
+    },
+    {
+      "type": "text",
+      "id": "mid_cta_label",
+      "label": "Mid-article button label",
+      "default": "See How Hosfu Is Made"
+    },
+    {
+      "type": "text",
+      "id": "final_cta_heading",
+      "label": "Final CTA heading",
+      "default": "A Calmer Feed Starts With Less Swallowed Air"
+    },
+    {
+      "type": "textarea",
+      "id": "final_cta_text",
+      "label": "Final CTA text",
+      "default": "See how Hosfu's single-vent, 4-piece glass design helps babies gulp less — and gives you fewer parts to scrub at 3am."
+    },
+    {
+      "type": "text",
+      "id": "final_cta_label",
+      "label": "Final CTA button label",
+      "default": "Explore the Hosfu Bottle"
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show reviews block",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "reviews_heading",
+      "label": "Reviews heading",
+      "default": "What Changed for These Families"
+    },
+    {
+      "type": "text",
+      "id": "rating_score",
+      "label": "Rating score",
+      "default": "4.8"
+    },
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer note",
+      "default": "<p>This article is editorial parenting content for Hosfu and is general information only — not medical advice. Illustrations are original placeholder graphics; swap in real Hosfu product photography before publishing. Review count, star rating, and testimonials are template content and should be replaced with genuine customer feedback from your review platform prior to going live, to keep the page compliant with advertising and health-claim standards.</p>"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer line",
+      "default": "© 2026 Hosfu. All rights reserved."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Colic Causes Guide"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["article", "page"]
+  }
+}
+{% endschema %}

@@ -2652,8 +2652,7 @@
         "moka_bundle_heading_sub": {
           "type": "text",
           "settings": {
-            "text": "<p>Don't buy five bottles before you know your baby loves it. Start with one, or jump to a full rotation if you're already sold on glass.</p>",
-            "text_style": "body"
+            "text": "<p>Don't buy five bottles before you know your baby loves it. Start with one, or jump to a full rotation if you're already sold on glass.</p>"
           }
         }
       },
@@ -3406,8 +3405,7 @@
         "moka_bundle_heading_sub": {
           "type": "text",
           "settings": {
-            "text": "<p>Moka has four open parts and a glass body you can boil, steam, or UV-sterilize — so you can see it's clean.</p>",
-            "text_style": "body"
+            "text": "<p>Moka has four open parts and a glass body you can boil, steam, or UV-sterilize — so you can see it's clean.</p>"
           }
         }
       },
@@ -3432,8 +3430,7 @@
         "custom_colors_solid_button_text": "#FFF8F0",
         "custom_colors_outline_button": "#6F4E37",
         "padding_top": 40,
-        "padding_bottom": 0,
-        "margin_bottom": 8
+        "padding_bottom": 0
       }
     }
   },

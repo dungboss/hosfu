@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "colic-causes-guide",
+      "settings": {
+        "site_name": "Hosfu Feeding Journal",
+        "site_tagline": "parent guide",
+        "eyebrow": "Colic & Comfort · Parent Guide",
+        "heading": "Why Your Baby Cries, Gulps, and Arches After Every Feed",
+        "hero_sub": "A calm, plain-English look at what colic actually is, the real reasons feeds go sideways, and the small changes that tend to make the biggest difference — including the one most parents overlook.",
+        "hero_caption": "Colic is common, exhausting — and more manageable than it feels at 3am",
+        "author_name": "Dr. Emily Hartman, RD",
+        "author_role": "Pediatric feeding & nutrition specialist",
+        "reviewed_date": "",
+        "lead_text": "<p>If your evenings have turned into a blur of inconsolable crying, clenched fists, and a baby who pulls away mid-bottle, you are not doing anything wrong — and you are very far from alone. Roughly <strong>one in five babies</strong> goes through a stretch of colic. Here's what's actually happening inside those feeds, and the changes that tend to help most.</p>",
+        "product_link": "",
+        "mid_cta_label": "See How Hosfu Is Made",
+        "final_cta_heading": "A Calmer Feed Starts With Less Swallowed Air",
+        "final_cta_text": "See how Hosfu's single-vent, 4-piece glass design helps babies gulp less — and gives you fewer parts to scrub at 3am.",
+        "final_cta_label": "Explore the Hosfu Bottle",
+        "show_reviews": true,
+        "reviews_heading": "What Changed for These Families",
+        "rating_score": "4.8",
+        "disclaimer": "<p>This article is editorial parenting content for Hosfu and is general information only — not medical advice. Illustrations are original placeholder graphics; swap in real Hosfu product photography before publishing. Review count, star rating, and testimonials are template content and should be replaced with genuine customer feedback from your review platform prior to going live, to keep the page compliant with advertising and health-claim standards.</p>",
+        "footer_text": "© 2026 Hosfu. All rights reserved."
+      }
+    }
+  },
+  "order": ["main"]
+}
