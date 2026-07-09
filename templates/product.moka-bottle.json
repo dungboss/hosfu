@@ -1059,7 +1059,6 @@
         },
         "hero_heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "title": "Feeding is hard enough without fighting the bottle.",
             "title_highlight_1": "solid-color",
@@ -1270,7 +1269,7 @@
         "display_id": false,
         "visibility": "always-display",
         "image": "",
-        "image_url": "https://cdn.shopify.com/s/files/1/1005/4536/4333/files/ChatGPTImageJun2_2026_10_26_58AM.png?v=1780360034",
+        "image_url": "https://mokababy.co/cdn/shop/files/hf_20260602_144923_d032566d-9dd8-4d47-9a34-bf25169e8d49.png?v=1781773471",
         "image_url_alt": "Feeding is hard enough without fighting the bottle.",
         "video_autoplay": true,
         "video_loop": true,
@@ -1304,61 +1303,153 @@
       }
     },
     "moka_airflow": {
-      "type": "icons-with-content",
+      "type": "image-with-text",
       "blocks": {
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
+        "hero_heading": {
           "type": "heading",
           "settings": {
-            "title": "Air in the bottle becomes gas in your baby.",
-            "title_highlight_color": "#6F4E37",
-            "heading_size": "h1"
-          }
+            "title": "Peace of mind comes from a gas-free tummy.",
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#F7F1EA",
+            "title_highlight_1_color": "#241B16",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6F4E37",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6F4E37",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6F4E37",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#F7F1EA",
+            "title_highlight_2_color": "#6F4E37",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6F4E37",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6F4E37",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6F4E37",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h1",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
+        "hero_text": {
           "type": "text",
           "settings": {
             "text": "<p>A steady vent helps air move back into the bottle instead of mixing heavily into the milk.</p>",
-            "text_style": "body"
-          }
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 18,
+            "enable_custom_color": false,
+            "custom_text_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "moka_airflow_icon_1": {
-          "type": "icon",
+        "mech_step_1": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "child_care",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Baby drinks",
-            "text": "<p>Milk moves through the nipple while pressure changes inside the bottle.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Milk moves through the nipple while pressure changes inside the bottle.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_airflow_icon_2": {
-          "type": "icon",
+        "mech_step_2": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "air",
             "filled_icon": false,
-            "title": "Air returns above the milk",
-            "text": "<p>The bottom vent sends air back into the bottle instead of through the feed.</p>"
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
+            "title": "Air returns",
+            "icon_heading_size": "h5",
+            "text": "<p>The bottom vent sends air back into the bottle instead of through the feed.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_airflow_icon_3": {
-          "type": "icon",
+        "mech_step_3": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "sentiment_calm",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Calmer feeds",
-            "text": "<p>Less air in the milk means a steadier bottle routine after the feed.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Less air in the milk means a steadier bottle routine after the feed.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         }
       },
       "block_order": [
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1",
-        "moka_airflow_icon_1",
-        "moka_airflow_icon_2",
-        "moka_airflow_icon_3"
+        "hero_heading",
+        "hero_text",
+        "mech_step_1",
+        "mech_step_2",
+        "mech_step_3"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "",
+        "image_url": "https://mokababy.co/cdn/shop/files/hf_20260617_092959_f99b8ccb-54fe-4aa1-8f88-e411b7f2184a.png?v=1781690770",
+        "image_url_alt": "Feeding is hard enough without fighting the bottle.",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
         "color_scheme": "custom",
         "custom_colors_background": "#FFFFFF",
         "custom_gradient_background": "",
@@ -1366,87 +1457,196 @@
         "custom_colors_solid_button_background": "#6F4E37",
         "custom_colors_solid_button_text": "#FFF8F0",
         "custom_colors_outline_button": "#6F4E37",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "text",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "1-column",
-        "icons_mobile_layout": "1-column",
-        "desktop_content_alignment": "left",
+        "section_color_scheme": "custom",
+        "custom_section_colors_background": "#F7F1EA",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
         "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "moka_materials": {
-      "type": "icons-with-content",
+      "type": "image-with-text",
       "blocks": {
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
+        "hero_heading": {
           "type": "heading",
           "settings": {
             "title": "Swiss-engineered. Safe down to the last part.",
-            "title_highlight_color": "#6F4E37",
-            "heading_size": "h1"
-          }
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#F7F1EA",
+            "title_highlight_1_color": "#241B16",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6F4E37",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6F4E37",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6F4E37",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#F7F1EA",
+            "title_highlight_2_color": "#6F4E37",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6F4E37",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6F4E37",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6F4E37",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h1",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
+        "hero_text": {
           "type": "text",
           "settings": {
             "text": "<p>Most bottles tell you what they're free of. We'll tell you exactly what your baby's milk touches, and why we chose every material.</p>",
-            "text_style": "body"
-          }
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 18,
+            "enable_custom_color": false,
+            "custom_text_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "moka_materials_icon_1": {
-          "type": "icon",
+        "moka_materials_step_1": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "opacity",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "High-borosilicate glass",
-            "text": "<p>Milk sits in glass, never plastic. It handles 180°C and the temperature swings of a bottle warmer without clouding, scratching, or cracking like ordinary glass.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Milk sits in glass, never plastic. It handles 180°C and the temperature swings of a bottle warmer without clouding, scratching, or cracking like ordinary glass.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_materials_icon_2": {
-          "type": "icon",
+        "moka_materials_step_2": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "water_drop",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Platinum-cured silicone nipple",
-            "text": "<p>Not standard food-grade silicone. Platinum curing leaves no chemical byproducts, so the nipple is purer, softer, more heat-stable, and longer-lasting.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Not standard food-grade silicone. Platinum curing leaves no chemical byproducts, so the nipple is purer, softer, more heat-stable, and longer-lasting.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_materials_icon_3": {
-          "type": "icon",
+        "moka_materials_step_3": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "category",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "BPA-free PPSU cap & ring",
-            "text": "<p>The same high-performance polymer used in medical devices. It takes repeated sterilizing without warping where ordinary polypropylene can degrade.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>The same high-performance polymer used in medical devices. It takes repeated sterilizing without warping where ordinary polypropylene can degrade.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_materials_icon_4": {
-          "type": "icon",
+        "moka_materials_step_4": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "verified",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Lead-free",
-            "text": "<p>Independently third-party tested and confirmed lead-free.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Independently third-party tested and confirmed lead-free.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         }
       },
       "block_order": [
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1",
-        "moka_materials_icon_1",
-        "moka_materials_icon_2",
-        "moka_materials_icon_3",
-        "moka_materials_icon_4"
+        "hero_heading",
+        "hero_text",
+        "moka_materials_step_1",
+        "moka_materials_step_2",
+        "moka_materials_step_3",
+        "moka_materials_step_4"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "",
+        "image_url": "https://mokababy.co/cdn/shop/files/ChatGPT_Image_Jun_2_2026_10_26_58_AM_d55e89a4-5060-41f9-a9c0-7d24d6dfc49f.png?v=1781685712",
+        "image_url_alt": "Feeding is hard enough without fighting the bottle.",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
         "color_scheme": "custom",
         "custom_colors_background": "#F7F1EA",
         "custom_gradient_background": "",
@@ -1454,77 +1654,174 @@
         "custom_colors_solid_button_background": "#6F4E37",
         "custom_colors_solid_button_text": "#FFF8F0",
         "custom_colors_outline_button": "#6F4E37",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "text",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "1-column",
-        "icons_mobile_layout": "1-column",
-        "desktop_content_alignment": "left",
+        "section_color_scheme": "custom",
+        "custom_section_colors_background": "#F7F1EA",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
         "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "moka_flow": {
-      "type": "icons-with-content",
+      "type": "image-with-text",
       "blocks": {
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
+        "hero_heading": {
           "type": "heading",
           "settings": {
             "title": "The right flow for every stage.",
-            "title_highlight_color": "#6F4E37",
-            "heading_size": "h1"
-          }
+            "title_highlight_1": "solid-color",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#F7F1EA",
+            "title_highlight_1_color": "#241B16",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6F4E37",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6F4E37",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6F4E37",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#F7F1EA",
+            "title_highlight_2_color": "#6F4E37",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6F4E37",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6F4E37",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6F4E37",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h1",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
+        "hero_text": {
           "type": "text",
           "settings": {
             "text": "<p>Five laser-cut silicone nipples give a precise, consistent flow at every age, from a slow newborn flow to a faster flow for hungry toddlers. Lactation-consultant approved.</p>",
-            "text_style": "body"
-          }
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 18,
+            "enable_custom_color": false,
+            "custom_text_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "moka_flow_icon_1": {
-          "type": "icon",
+        "moka_flow_step_1": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "touch_app",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Start with your baby's age",
-            "text": "<p>SS (0–1m), S (1–3m), M (3–6m), L (6–10m), or LL (10m+). Breastfed babies often do best one stage slower.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>SS (0–1m), S (1–3m), M (3–6m), L (6–10m), or LL (10m+). Breastfed babies often do best one stage slower.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_flow_icon_2": {
-          "type": "icon",
+        "moka_flow_step_2": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "south_west",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Slow down if you see gulping",
-            "text": "<p>Coughing, milk escaping the mouth, pulling off, or fussing can mean the flow is too fast.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Coughing, milk escaping the mouth, pulling off, or fussing can mean the flow is too fast.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_flow_icon_3": {
-          "type": "icon",
+        "moka_flow_step_3": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "north_east",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-title",
+            "icon_color": "accent-1",
+            "custom_icon_color": "#6F4E37",
+            "icon_text_alignment": "left",
+            "text_color": "text",
+            "custom_text_color": "#241B16",
             "title": "Speed up if feeds drag on",
-            "text": "<p>Long feeds, frustration at the nipple, chewing, or falling asleep before finishing can mean the flow is too slow.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>Long feeds, frustration at the nipple, chewing, or falling asleep before finishing can mean the flow is too slow.</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         }
       },
       "block_order": [
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1",
-        "moka_flow_icon_1",
-        "moka_flow_icon_2",
-        "moka_flow_icon_3"
+        "hero_heading",
+        "hero_text",
+        "moka_flow_step_1",
+        "moka_flow_step_2",
+        "moka_flow_step_3"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "",
+        "image_url": "https://mokababy.co/cdn/shop/files/hf_20260617_092806_2af07f06-2cc0-4707-98c6-e9ba435da0e7.png?v=1781690785",
+        "image_url_alt": "Feeding is hard enough without fighting the bottle.",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
         "color_scheme": "custom",
         "custom_colors_background": "#FFFFFF",
         "custom_gradient_background": "",
@@ -1532,19 +1829,24 @@
         "custom_colors_solid_button_background": "#6F4E37",
         "custom_colors_solid_button_text": "#FFF8F0",
         "custom_colors_outline_button": "#6F4E37",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "text",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "1-column",
-        "icons_mobile_layout": "1-column",
-        "desktop_content_alignment": "left",
+        "section_color_scheme": "custom",
+        "custom_section_colors_background": "#F7F1EA",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
         "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "moka_reviews": {
@@ -1721,7 +2023,6 @@
         },
         "hero_heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "title": "No tubes. No hidden mold.",
             "title_highlight_1": "solid-color",
@@ -2073,7 +2374,6 @@
         },
         "hero_heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "title": "Why we made Moka.",
             "title_highlight_1": "solid-color",
@@ -2741,7 +3041,6 @@
         },
         "hero_heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "title": "Premium glass deserves a premium guarantee.",
             "title_highlight_1": "solid-color",
