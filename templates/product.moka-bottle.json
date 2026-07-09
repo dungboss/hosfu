@@ -25,11 +25,27 @@
           },
           "blocks": {}
         },
+        "rating_stars": {
+          "type": "rating-stars",
+          "settings": {
+            "rating": 4.8,
+            "star_color": "#ffcc00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "<strong>4.8/5 (150+ Reviews)</strong> | Trusted by responsible drivers",
+            "size": 15,
+            "alignment": "flex-start",
+            "scroll_id": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
         "text_qjjK8L": {
           "type": "text",
           "name": "Text",
           "settings": {
-            "text": "<p>Swiss-engineered glass baby bottle</p>",
+            "text": "<p><em><strong>Don’t Trust How “Fine” You Feel</strong></em></p>",
             "alignment": "left",
             "mobile_alignment": "mobile-center",
             "text_size": 14,
@@ -63,20 +79,300 @@
             "border_color": "#e7c6d4",
             "corner_radius": 40,
             "padding": 3,
-            "text_1": "Engineered in Switzerland with lactation-consultant approval",
-            "icon_1": "public",
+            "text_1": "<strong>Know Before You Drive</strong>",
+            "icon_1": "shield",
             "filled_icon_1": false,
-            "text_2": "High-borosilicate glass + BPA-free PPSU",
-            "icon_2": "science",
+            "text_2": "",
+            "icon_2": "check_circle",
             "filled_icon_2": false,
-            "text_3": "15° angle + naturally-shaped nipple for a deep latch",
-            "icon_3": "water_drop",
+            "text_3": "",
+            "icon_3": "check_circle",
             "filled_icon_3": false,
-            "text_4": "Anti-colic bottom vent · 4 parts · leak-free feeding",
+            "text_4": "",
             "icon_4": "check_circle",
             "filled_icon_4": false,
             "margin_top": 9,
             "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_with_icon_bhiGth": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "Alcohol can make you feel normal before your body is actually ready to drive. HOSFU gives you a clear number before you touch the ignition.",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 0,
+            "margin_bottom": 9
+          },
+          "blocks": {}
+        },
+        "text_with_icon_EMEXxh": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "<strong>Fast, Easy BAC Check</strong>",
+            "icon_1": "timer",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_with_icon_q66iBz": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "Blow into the device and get a digital reading in seconds — simple enough to use before leaving dinner, a party, or a night out.",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 0,
+            "margin_bottom": 9
+          },
+          "blocks": {}
+        },
+        "text_with_icon_whnVxP": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "<strong>Rechargeable & Reusable</strong>",
+            "icon_1": "Power",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_with_icon_ccrn9E": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "No disposable batteries needed. USB-C rechargeable design keeps it ready when you need it.",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 0,
+            "margin_bottom": 9
+          },
+          "blocks": {}
+        },
+        "text_with_icon_tCpaB8": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "<strong>Keep One Where It Matters</strong>",
+            "icon_1": "map-pin",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 9,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "text_with_icon_gYCjez": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f8eee8",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#e7c6d4",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "Store it in your car, kitchen drawer, travel bag, or bar cabinet so you can check before making a risky decision.",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 0,
+            "margin_bottom": 27
           },
           "blocks": {}
         },
@@ -91,9 +387,9 @@
             "regular_price_size": 25,
             "sale_price_size": 20,
             "compare_price_size": 16,
-            "displayed_badge": "custom",
+            "displayed_badge": "sale",
             "sale_badge_color": "accent-2",
-            "custom_badge_text": "SAVE 21%",
+            "custom_badge_text": "SAVE TODAY",
             "icon_scale": 140,
             "icon_1": "redeem",
             "filled_icon_1": false,
@@ -154,7 +450,7 @@
             "uppercase_text": true,
             "icon_scale": 120,
             "icon_spacing": 10,
-            "atc_custom_label": "Add to cart",
+            "atc_custom_label": "GET MY HOSFU BREATHALYZER",
             "display_price": false,
             "price_position": "left",
             "price_separator": "•",
@@ -249,37 +545,77 @@
           },
           "blocks": {}
         },
+        "text_with_icon_DiUgTb": {
+          "type": "text-with-icon",
+          "name": "Text with icon",
+          "settings": {
+            "mobile_text_size": 14,
+            "desktop_text_size": 16,
+            "alignment": "left",
+            "mobile_alignment": "left",
+            "text_color": "#121212",
+            "font_family": "body",
+            "icon_scale": 120,
+            "icon_color": "#1a237e",
+            "width": "100%",
+            "direction": "horizontal",
+            "column_gap": 3,
+            "styling_container": "container",
+            "enable_bg": false,
+            "bg_color": "#f3f3f3",
+            "border_size": 0,
+            "border_style": "solid",
+            "border_color": "#b7b7b7",
+            "corner_radius": 40,
+            "padding": 3,
+            "text_1": "<em><strong>Flash Sale:</strong></em><em> Save 45% Today — Be ready before your next night out.</em>",
+            "icon_1": "",
+            "filled_icon_1": false,
+            "text_2": "",
+            "icon_2": "check_circle",
+            "filled_icon_2": false,
+            "text_3": "",
+            "icon_3": "check_circle",
+            "filled_icon_3": false,
+            "text_4": "",
+            "icon_4": "check_circle",
+            "filled_icon_4": false,
+            "margin_top": 15,
+            "margin_bottom": 15
+          },
+          "blocks": {}
+        },
         "icon_with_text_bGry86": {
           "type": "icon-with-text",
           "name": "Icons with text",
           "settings": {
             "layout": "horizontal",
-            "icon_color": "text",
+            "icon_color": "accent-1",
             "desktop_icon_size": 48,
             "desktop_spacing": 12,
             "desktop_text_size": 18,
             "mobile_icon_size": 40,
             "mobile_spacing": 10,
             "mobile_text_size": 14,
-            "icon_1": "medical_services",
+            "icon_1": "assured_workload",
             "icon_1_fill": false,
-            "heading_1": "Pediatrician-Backed",
-            "icon_2": "verified_user",
+            "heading_1": "30-Day Money-Back Guarantee",
+            "icon_2": "shield",
             "icon_2_fill": false,
-            "heading_2": "90-Day Guarantee",
-            "icon_3": "local_shipping",
+            "heading_2": "Police-Grade Accuracy",
+            "icon_3": "box",
             "icon_3_fill": false,
-            "heading_3": "Ships from our US warehouse",
+            "heading_3": "Fast & Private Delivery",
             "margin_top": 15,
             "margin_bottom": 15
           },
           "blocks": {}
         },
-        "moka_acc_1": {
+        "desc_row_1": {
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Product details",
+            "heading": "Why It Works",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -315,18 +651,18 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Two sizes</strong> — 160 ml for newborns, 240 ml for older babies.<br><strong>Five flow stages</strong> — the nipple keeps up as your baby grows.<br><strong>In the box</strong> — bottle, nipple, collar, cap, and a sealing disc.<br><strong>Fits your kit</strong> — 71 mm wide, works with standard warmers. Replacement nipples available separately.</p>",
+            "content": "<p><strong>HOSFU</strong> helps remove the <strong>guesswork after drinking</strong>.</p><p>Alcohol can make you feel <strong>normal</strong> even when your body may not be ready to drive. Instead of relying on confidence, mood, or <strong>“I feel fine,”</strong> HOSFU gives you a clear <strong>digital BAC reading</strong> in seconds.</p><p>Its advanced <strong>alcohol sensor</strong> is designed to detect alcohol in your breath and display an easy-to-read number, so you can make a smarter decision <strong>before touching the ignition</strong>.</p><p></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
           },
           "blocks": {}
         },
-        "moka_acc_2": {
+        "desc_row_2": {
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Materials & safety",
+            "heading": "How To Use",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -362,18 +698,18 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Glass where it counts</strong> — warm milk touches high-borosilicate glass, never plastic.<br><strong>Platinum-cured silicone nipple</strong> — purer and longer-lasting than ordinary food-grade silicone.<br><strong>BPA-free PPSU cap & ring</strong> — a high-performance plastic used in medical devices, tough enough for repeated sterilizing.<br><strong>Lead-free</strong> — confirmed by independent third-party testing.</p>",
+            "content": "<p>Using <strong>HOSFU</strong> is simple:</p><ol><li>Turn on the device and wait for it to <strong>warm up</strong>.</li><li>Take a deep breath.</li><li>Blow steadily into the <strong>mouthpiece</strong>.</li><li>Read your <strong>BAC result</strong> on the digital screen.</li><li>If the number is not where you want it to be, <strong>wait, retest later, or choose a safer ride</strong>.</li></ol><p>Best used before driving home from <strong>dinner, parties, bars, BBQs, holidays</strong>, or the <strong>morning after drinking</strong>.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
           },
           "blocks": {}
         },
-        "moka_acc_3": {
+        "desc_row_3": {
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "How it works",
+            "heading": "Why Responsible Drivers Keep One",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -409,18 +745,18 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Bottom vent</strong> — lets air back in above the milk, so your baby swallows less of it.<br><strong>15° breast-shaped nipple</strong> — helps babies latch the way they do when nursing.</p>",
+            "content": "<p>Responsible drivers know that <strong>“feeling fine” is not proof</strong>.</p><p>Many people keep <strong>HOSFU</strong> in their <strong>car, kitchen drawer, travel bag, or bar cabinet</strong> so they can check before making a risky decision.</p><p>It is especially useful for:</p><p>• <strong>Nights out with friends</strong><br/>• <strong>Dinner dates and wine nights</strong><br/>• <strong>Weekend BBQs and holidays</strong><br/>• <strong>Rides home after events</strong><br/>• <strong>Morning-after checks</strong> before work or errands<br/>• Families who want an extra <strong>safety step before anyone drives</strong></p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
           },
           "blocks": {}
         },
-        "moka_acc_4": {
+        "desc_row_4": {
           "type": "collapsible-row",
           "settings": {
             "open": false,
-            "heading": "Care & cleaning",
+            "heading": "Shipping & Safety Note",
             "heading_size": "medium",
             "icon": "",
             "filled_icon": false,
@@ -456,54 +792,7 @@
             "open_state_collapse_bg": "#1a237e",
             "open_state_content_bg": "#fefaff",
             "open_state_content_text": "#121212",
-            "content": "<p><strong>Every day</strong> — a quick hand-wash keeps every part in good shape.<br><strong>Deep clean</strong> — boil, steam, or UV-sterilize whenever you like; the glass handles the heat easily.<br><strong>To make it last</strong> — hand-wash the silicone and PPSU parts and save sterilizing for when you need it. They're high-quality, not indestructible.</p>",
-            "page": "",
-            "margin_top": 0,
-            "margin_bottom": 0
-          },
-          "blocks": {}
-        },
-        "moka_acc_5": {
-          "type": "collapsible-row",
-          "settings": {
-            "open": false,
-            "heading": "Shipping & 90-Day Guarantee",
-            "heading_size": "medium",
-            "icon": "",
-            "filled_icon": false,
-            "collapse_icon": "carret",
-            "collapse_icon_style": "standard",
-            "collapse_icon_radius": 15,
-            "animation_speed": 0.4,
-            "border_type": "bottom",
-            "border_thickness": 1,
-            "border_style": "solid",
-            "corner_radius": 8,
-            "enable_custom_style": false,
-            "heading_padding_vertical": 12,
-            "heading_padding_horizontal": 10,
-            "content_padding_vertical": 10,
-            "content_padding_horizontal": 10,
-            "closed_state_border": "#dddddd",
-            "closed_state_header_bg": "#f9f9f9",
-            "closed_state_header_text": "#121212",
-            "closed_state_row_icon": "#121212",
-            "closed_state_collapse_icon": "#1a237e",
-            "closed_state_collapse_icon_solid": "#ffffff",
-            "closed_state_collapse_bg": "#121212",
-            "closed_state_content_bg": "#f9f9f9",
-            "closed_state_content_text": "#121212",
-            "open_colors_on_hover": true,
-            "open_state_border": "#d5aeea",
-            "open_state_header_bg": "#fefaff",
-            "open_state_header_text": "#000000",
-            "open_state_row_icon": "#1a237e",
-            "open_state_collapse_icon": "#1a237e",
-            "open_state_collapse_icon_solid": "#ffffff",
-            "open_state_collapse_bg": "#1a237e",
-            "open_state_content_bg": "#fefaff",
-            "open_state_content_text": "#121212",
-            "content": "<p><strong>Ships next business day</strong> from our US warehouse.<br><strong>90-day money-back guarantee</strong> — if it's not right for your baby, send it back for a refund.</p>",
+            "content": "<p><strong>Processing:</strong> 1-2 business days (with tracking number provided).</p><p><strong>US Delivery:</strong> 10-14 business days.</p><p><strong>International:</strong> 10-20 business days.</p>",
             "page": "",
             "margin_top": 0,
             "margin_bottom": 0
@@ -513,19 +802,27 @@
       },
       "block_order": [
         "title",
+        "rating_stars",
         "text_qjjK8L",
         "text_with_icon_TzktEE",
+        "text_with_icon_bhiGth",
+        "text_with_icon_EMEXxh",
+        "text_with_icon_q66iBz",
+        "text_with_icon_whnVxP",
+        "text_with_icon_ccrn9E",
+        "text_with_icon_tCpaB8",
+        "text_with_icon_gYCjez",
         "price",
         "variant_picker",
         "buy_buttons",
         "shipping",
         "sticky_atc",
+        "text_with_icon_DiUgTb",
         "icon_with_text_bGry86",
-        "moka_acc_1",
-        "moka_acc_2",
-        "moka_acc_3",
-        "moka_acc_4",
-        "moka_acc_5"
+        "desc_row_1",
+        "desc_row_2",
+        "desc_row_3",
+        "desc_row_4"
       ],
       "disabled": true,
       "custom_css": [
@@ -2953,50 +3250,50 @@
     "moka_bundle": {
       "type": "multicolumn",
       "blocks": {
-        "moka_bundle_col_1": {
+        "trust_1": {
           "type": "column",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/1005/4536/4333/files/7.png?v=1780392600",
+            "image_url": "",
             "muted_autoplay": true,
-            "title": "One-Bottle Trial",
-            "text": "<p>The low-risk way to see if your baby takes to it.</p>",
-            "link_label": "Select Trial",
+            "title": "90-Day Money Back Guarantee",
+            "text": "<p>Try <strong>HOSFU™</strong> at home for 90 days. If you’re not satisfied with your results, contact us for a refund — no hassle, no stress.</p>",
+            "link_label": "",
             "link": ""
           }
         },
-        "moka_bundle_col_2": {
+        "trust_2": {
           "type": "column",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/1005/4536/4333/files/10.png?v=1780392898",
+            "image_url": "",
             "muted_autoplay": true,
-            "title": "Three-Bottle Set",
-            "text": "<p>Enough for day, night, and a spare in the bag.</p>",
-            "link_label": "Choose Starter Set",
+            "title": "Free Shipping Worldwide",
+            "text": "<p>Enjoy fast, free shipping with tracking included on every order, so you always know where your <strong>HOSFU™</strong> is.</p>",
+            "link_label": "",
             "link": ""
           }
         },
-        "moka_bundle_col_3": {
+        "trust_3": {
           "type": "column",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/1005/4536/4333/files/16.png?v=1780392911",
+            "image_url": "",
             "muted_autoplay": true,
-            "title": "Five-Bottle Set",
-            "text": "<p>A full rotation so you're never washing mid-feed.</p>",
-            "link_label": "Select Full Set",
+            "title": "Guaranteed High Quality",
+            "text": "<p><strong>HOSFU™</strong> is built with durable materials and designed for private, comfortable seated training at home.</p>",
+            "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "moka_bundle_col_1",
-        "moka_bundle_col_2",
-        "moka_bundle_col_3"
+        "trust_1",
+        "trust_2",
+        "trust_3"
       ],
       "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "",
+        "title": "<strong>Shop HOSFU With Confidence</strong>",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -3099,60 +3396,70 @@
     "moka_compare": {
       "type": "comparison-table",
       "blocks": {
-        "moka_compare_row_1": {
+        "row_bladder_trains": {
           "type": "row",
           "settings": {
-            "benefit": "Latch — breast-shaped, 15°",
+            "benefit": "Real-time Visibility",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "moka_compare_row_2": {
+        "row_reduce_leaks": {
           "type": "row",
           "settings": {
-            "benefit": "Air kept out of the milk",
+            "benefit": "Comprehensive Safety",
+            "us": true,
+            "others": false,
+            "others_2": true,
+            "others_3": false
+          }
+        },
+        "row_private_routine": {
+          "type": "row",
+          "settings": {
+            "benefit": "Early Alert System",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "moka_compare_row_3": {
+        "row_app_guided": {
           "type": "row",
           "settings": {
-            "benefit": "Milk contact — glass + silicone",
+            "benefit": "Installation Method",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "moka_compare_row_4": {
+        "row_realtime": {
           "type": "row",
           "settings": {
-            "benefit": "Only four parts to wash, no tubes",
+            "benefit": "Sensor Accuracy",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "moka_compare_row_5": {
+        "row_no_clinic": {
           "type": "row",
           "settings": {
-            "benefit": "Leak-free",
+            "benefit": "Self-Test Button",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "moka_compare_row_6": {
+        "row_one_time": {
           "type": "row",
           "settings": {
-            "benefit": "Swiss-engineered",
+            "benefit": "Safety Standard",
             "us": true,
             "others": false,
             "others_2": false,
@@ -3161,18 +3468,19 @@
         }
       },
       "block_order": [
-        "moka_compare_row_1",
-        "moka_compare_row_2",
-        "moka_compare_row_3",
-        "moka_compare_row_4",
-        "moka_compare_row_5",
-        "moka_compare_row_6"
+        "row_bladder_trains",
+        "row_reduce_leaks",
+        "row_private_routine",
+        "row_app_guided",
+        "row_realtime",
+        "row_no_clinic",
+        "row_one_time"
       ],
       "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "The difference shows up after every feed.",
+        "title": "",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
@@ -3229,20 +3537,17 @@
         "layout": "table_second",
         "style": "classic",
         "corner_radius": 20,
-        "number_of_competitors": 2,
-        "us_label": "The Moka Bottle",
+        "number_of_competitors": 1,
+        "us_label": "HOSFU",
         "us_label_size": 18,
-        "logo": "",
         "logo_width": 130,
         "mobile_logo_width": 90,
-        "others_label": "Complex anti-colic bottle",
+        "others_label": "Cheap Alarms",
         "others_label_size": 18,
-        "others_logo": "",
         "others_logo_width": 90,
         "others_mobile_logo_width": 60,
-        "others_2_label": "Standard plastic bottle",
+        "others_2_label": "",
         "others_2_label_size": 18,
-        "others_2_logo": "",
         "others_2_logo_width": 90,
         "others_2_mobile_logo_width": 60,
         "others_3_label": "Competitor 3",
@@ -3538,171 +3843,106 @@
     "moka_faq": {
       "type": "collapsible-content",
       "blocks": {
-        "moka_faq_1": {
+        "faq_1": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Will my baby take it?",
+            "heading": "How is this different from cheaper breathalyzers on the market?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Every baby is different, which is why Moka is covered by a 90-day guarantee. Try it through real feeds and send it back if it is not right.</p>",
+            "row_content": "<p>The core difference lies in the <strong>Fuel Cell Sensor</strong>—the exact same technology used by police officers on the side of the road. While cheaper models use semiconductor sensors that can be easily tricked by food or smoke, SoberSense combines a dual-core processor and the latest AI algorithm to deliver extreme accuracy, within <strong>±0.005</strong> of professional law enforcement devices.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_2": {
+        "faq_2": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "I already found a bottle that works. Why switch?",
+            "heading": "Can this replace an official police breathalyzer?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>You do not have to switch everything at once. Start with one bottle if you want glass milk contact, fewer parts, and a cleaner routine.</p>",
+            "row_content": "<p>No. While this breathalyzer delivers professional-grade accuracy and shares the same sensor technology as police units, it is strictly designed as a personal safety device. It shows your exact BAC on a live digital display so you can make an informed, responsible decision, but it does not replace official law enforcement results.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_3": {
+        "faq_3": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Does it work for the bottle-resistant?",
+            "heading": "Who is this device designed for?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Moka uses a wide, 15° naturally-shaped nipple to support a deeper latch, but no bottle can guarantee acceptance for every baby.</p>",
+            "row_content": "<p>This product is for anyone who values safety, responsibility, and peace of mind. It’s an essential tool for daily drivers, social drinkers, or anyone who wants to accurately check for overnight alcohol in their system the morning after a few drinks before getting behind the wheel.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_4": {
+        "faq_4": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it really Swiss-engineered?",
+            "heading": "How should I use it to get the most accurate reading?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes. Moka is Swiss-engineered with a bottom vent, five laser-cut flow stages, and material choices designed around everyday feeding.</p>",
+            "row_content": "<p>For the most accurate blood alcohol content (BAC) reading, you should wait at least 15 to 20 minutes after your last drink or meal before testing. Once you blow into the device, the system analyzes your breath instantly and gives you a precise reading in just <strong>5 seconds</strong>.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_5": {
+        "faq_5": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "What's the nipple made of?",
+            "heading": "Is it hygienic to share with friends or family?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Platinum-cured silicone, chosen for softness, heat stability, and longer-lasting daily use than ordinary food-grade silicone.</p>",
+            "row_content": "<p>Absolutely. The device features a detachable air intake nozzle made from food-grade PP material. This makes it incredibly easy to clean, store, and safely share with friends or family members for quick cross-checks without compromising personal hygiene.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_6": {
+        "faq_6": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "Is it really lead-free?",
+            "heading": "Is the design discreet and portable?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Yes. Independent third-party testing confirmed Moka is lead-free.</p>",
+            "row_content": "<p>Yes. This breathalyzer is built with a sleek, minimalist, and ultra-compact design (the main body is just 101mm x 38mm). It easily fits right into your pocket, a small bag, or your car's center console without taking up much space, allowing for discreet storage and use wherever you go.</p>",
             "page": ""
           },
           "blocks": {}
         },
-        "moka_faq_7": {
+        "faq_7": {
           "type": "collapsible-row-content",
           "settings": {
             "open": false,
-            "heading": "How should I clean it to make it last?",
+            "heading": "What if it doesn't feel like the right fit for me?",
             "icon": "check_box",
             "filled_icon": false,
-            "row_content": "<p>Boil, steam, or UV when you need to. For longest life, hand-wash the silicone and PPSU parts and sterilize occasionally rather than every time.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "moka_faq_8": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "How do I know which flow my baby needs?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Start by age, then watch the feed. Gulping or pulling off means slow it down; frustration or chewing means speed it up.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "moka_faq_9": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Will it fit my pump?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Pump compatibility depends on the pump and adapter. Please confirm compatibility for your specific pump before use.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "moka_faq_10": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "Does this prevent colic?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>No bottle can prevent or cure colic. Moka is designed to help reduce swallowed air by keeping air out of the milk.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "moka_faq_11": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "What is included?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Each bottle includes the bottle, nipple, collar, cap, and sealing disc. Replacement nipples are sold separately.</p>",
-            "page": ""
-          },
-          "blocks": {}
-        },
-        "moka_faq_12": {
-          "type": "collapsible-row-content",
-          "settings": {
-            "open": false,
-            "heading": "What's the guarantee?",
-            "icon": "check_box",
-            "filled_icon": false,
-            "row_content": "<p>Use Moka for 90 days through real feeds, washes, and nights. If it is not right for your baby, send it back for a refund.</p>",
+            "row_content": "<p>Your purchase is completely risk-free. We are extremely confident in the reliability of our device, which is why we proudly offer a <strong>30-Day Money-Back Guarantee</strong>. If you try the product and feel it doesn't give you the peace of mind you expected, simply return it within 100 days for a full refund. No questions asked.</p>",
             "page": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "moka_faq_1",
-        "moka_faq_2",
-        "moka_faq_3",
-        "moka_faq_4",
-        "moka_faq_5",
-        "moka_faq_6",
-        "moka_faq_7",
-        "moka_faq_8",
-        "moka_faq_9",
-        "moka_faq_10",
-        "moka_faq_11",
-        "moka_faq_12"
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
       ],
       "disabled": true,
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "caption": "FAQ",
-        "title": "Before you make the switch.",
+        "caption": "Have Questions?",
+        "title": "<strong>Questions Men Ask Before Starting</strong>",
         "title_highlight_1": "solid-color",
         "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
         "title_highlight_1_bg-color": "#f9efff",
