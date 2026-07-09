@@ -997,8 +997,8 @@
         "custom_cards_colors_heading": "#241B16",
         "custom_cards_colors_text": "#241B16",
         "cards_corner_radius": 16,
-        "stretch_cards": false,
-        "stretched_cards_content_alignment": "center",
+        "stretch_cards": true,
+        "stretched_cards_content_alignment": "top",
         "image_width": "full",
         "image_ratio": "square",
         "media_position": "top",
@@ -2267,71 +2267,175 @@
       }
     },
     "moka_care": {
-      "type": "icons-with-content",
+      "type": "image-with-text",
       "blocks": {
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1": {
+        "hero_heading": {
           "type": "heading",
           "settings": {
             "title": "Simple enough for 3 a.m.",
-            "title_highlight_color": "#6F4E37",
-            "heading_size": "h1"
-          }
+            "title_highlight_1": "none",
+            "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_bg-color": "#F7F1EA",
+            "title_highlight_1_color": "#FFF8F0",
+            "highlighted-1_border_radius": 8,
+            "highlighted-1_border_width": 0,
+            "highlighted-1_border": "solid",
+            "highlighted-1_border_color": "#6F4E37",
+            "highlighted-1_padding-block": 0.3,
+            "highlighted-1_padding-inline": 0.3,
+            "title_highlight_1_underline-thickness": 2,
+            "title_highlight_1_underline-color": "#6F4E37",
+            "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_1_underline-color-position": 25,
+            "title_highlight_1_handwritten-color": "#6F4E37",
+            "title_highlight_1_handwritten-stroke-width": 3,
+            "title_highlight_1_handwritten-position": 60,
+            "title_highlight_2": "none",
+            "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_bg-color": "#F7F1EA",
+            "title_highlight_2_color": "#6F4E37",
+            "highlighted-2_border_radius": 8,
+            "highlighted-2_border_width": 0,
+            "highlighted-2_border": "solid",
+            "highlighted-2_border_color": "#6F4E37",
+            "highlighted-2_padding-block": 0.3,
+            "highlighted-2_padding-inline": 0.3,
+            "title_highlight_2_underline-thickness": 2,
+            "title_highlight_2_underline-color": "#6F4E37",
+            "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
+            "title_highlight_2_underline-color-position": 25,
+            "title_highlight_2_handwritten-color": "#6F4E37",
+            "title_highlight_2_handwritten-stroke-width": 3,
+            "title_highlight_2_handwritten-position": 60,
+            "heading_size": "h1",
+            "custom_desktop_size": 39,
+            "custom_mobile_size": 28,
+            "alignment": "left",
+            "mobile_alignment": "mobile-left",
+            "enable_custom_color": false,
+            "custom_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1": {
+        "hero_text": {
           "type": "text",
           "settings": {
             "text": "<p>A note on care. Moka is safe to boil, steam, and UV-sterilize. The silicone and PPSU parts last longer if you hand-wash them and save sterilizing for when you need it. The glass can take the heat any day.</p>",
-            "text_style": "body"
-          }
+            "alignment": "left",
+            "mobile_alignment": "mobile-center",
+            "text_size": 18,
+            "enable_custom_color": false,
+            "custom_text_color": "#6F4E37",
+            "margin_top": 0,
+            "margin_bottom": 15
+          },
+          "blocks": {}
         },
-        "moka_care_icon_1": {
-          "type": "icon",
+        "moka_care_step_1": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "format_color_fill",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-text",
+            "icon_color": "custom",
+            "custom_icon_color": "#FFF8F0",
+            "icon_text_alignment": "left",
+            "text_color": "custom",
+            "custom_text_color": "#FFF8F0",
             "title": "Fill",
-            "text": "<p>Clear, readable markings.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>clear, readable markings</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_care_icon_2": {
-          "type": "icon",
+        "moka_care_step_2": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "local_drink",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-text",
+            "icon_color": "custom",
+            "custom_icon_color": "#FFF8F0",
+            "icon_text_alignment": "left",
+            "text_color": "custom",
+            "custom_text_color": "#FFF8F0",
             "title": "Feed",
-            "text": "<p>Breast-shaped, leak-free.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>breast-shaped, leak-free</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_care_icon_3": {
-          "type": "icon",
+        "moka_care_step_3": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "cleaning_services",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-text",
+            "icon_color": "custom",
+            "custom_icon_color": "#FFF8F0",
+            "icon_text_alignment": "left",
+            "text_color": "custom",
+            "custom_text_color": "#FFF8F0",
             "title": "Rinse",
-            "text": "<p>Four parts, no tubes.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>four parts, no tubes</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         },
-        "moka_care_icon_4": {
-          "type": "icon",
+        "moka_care_step_4": {
+          "type": "icon-with-content",
           "settings": {
             "icon": "restart_alt",
             "filled_icon": false,
+            "image": "",
+            "icon_size": "s",
+            "icon_position": "next-to-text",
+            "icon_color": "custom",
+            "custom_icon_color": "#FFF8F0",
+            "icon_text_alignment": "left",
+            "text_color": "custom",
+            "custom_text_color": "#FFF8F0",
             "title": "Reset",
-            "text": "<p>Ready for the next feed.</p>"
+            "icon_heading_size": "h5",
+            "text": "<p>ready for the next feed</p>",
+            "text_size": 15,
+            "margin_top": 9,
+            "margin_bottom": 9
           }
         }
       },
       "block_order": [
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-heading-1",
-        "template--21507361800487__4fc05ee5-1c30-4863-b88f-81cb6fa7c41a-text-1",
-        "moka_care_icon_1",
-        "moka_care_icon_2",
-        "moka_care_icon_3",
-        "moka_care_icon_4"
+        "hero_heading",
+        "hero_text",
+        "moka_care_step_1",
+        "moka_care_step_2",
+        "moka_care_step_3",
+        "moka_care_step_4"
       ],
       "settings": {
         "display_id": false,
         "visibility": "always-display",
+        "image": "",
+        "image_url": "https://mokababy.co/cdn/shop/files/hf_20260617_093017_123ac60a-674e-4c6d-ba7a-b7297bd0e40b.png?v=1781691035",
+        "image_url_alt": "Feeding is hard enough without fighting the bottle.",
+        "video_autoplay": true,
+        "video_loop": true,
+        "product_media_index": "0",
+        "height": "adapt",
         "color_scheme": "custom",
         "custom_colors_background": "#4A3426",
         "custom_gradient_background": "",
@@ -2339,19 +2443,24 @@
         "custom_colors_solid_button_background": "#6F4E37",
         "custom_colors_solid_button_text": "#FFF8F0",
         "custom_colors_outline_button": "#6F4E37",
-        "icon_size": "m",
-        "icon_position": "next-to-title",
-        "icon_color": "text",
-        "icon_heading_size": "h3",
-        "icon_text_alignment": "left",
-        "icons_desktop_layout": "1-column",
-        "icons_mobile_layout": "1-column",
+        "section_color_scheme": "custom",
+        "custom_section_colors_background": "#4A3426",
+        "custom_section_gradient_background": "",
+        "full_desktop_width": false,
+        "content_layout": "no-overlap",
+        "desktop_media_width": 50,
+        "layout": "text_first",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "layout": "image_first",
-        "mobile_layout": "text_first",
-        "hide_content_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "mobile_full_media_width": false,
+        "mobile_side_by_side": false,
+        "mobile_direction": "normal",
+        "mobile_image_quanlity": "2",
+        "mobile_content_alignment": "left",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0
       }
     },
     "moka_story": {
@@ -2848,177 +2957,14 @@
       }
     },
     "moka_compare": {
-      "type": "comparison-table",
-      "blocks": {
-        "moka_compare_row_1": {
-          "type": "row",
-          "settings": {
-            "benefit": "Latch — breast-shaped, 15°",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "moka_compare_row_2": {
-          "type": "row",
-          "settings": {
-            "benefit": "Air kept out of the milk",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "moka_compare_row_3": {
-          "type": "row",
-          "settings": {
-            "benefit": "Milk contact — glass + silicone",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "moka_compare_row_4": {
-          "type": "row",
-          "settings": {
-            "benefit": "Only four parts to wash, no tubes",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "moka_compare_row_5": {
-          "type": "row",
-          "settings": {
-            "benefit": "Leak-free",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "moka_compare_row_6": {
-          "type": "row",
-          "settings": {
-            "benefit": "Swiss-engineered",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        }
-      },
-      "block_order": [
-        "moka_compare_row_1",
-        "moka_compare_row_2",
-        "moka_compare_row_3",
-        "moka_compare_row_4",
-        "moka_compare_row_5",
-        "moka_compare_row_6"
-      ],
+      "type": "custom-liquid",
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "The difference shows up after every feed.",
-        "title_highlight_1": "solid-color",
-        "title_highlight_1_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_bg-color": "#F7F1EA",
-        "title_highlight_1_color": "#241B16",
-        "highlighted-1_border_radius": 8,
-        "highlighted-1_border_width": 0,
-        "highlighted-1_border": "solid",
-        "highlighted-1_border_color": "#6F4E37",
-        "highlighted-1_padding-block": 0.3,
-        "highlighted-1_padding-inline": 0.3,
-        "title_highlight_1_underline-thickness": 2,
-        "title_highlight_1_underline-color": "#6F4E37",
-        "title_highlight_1_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_1_underline-color-position": 25,
-        "title_highlight_1_handwritten-color": "#6F4E37",
-        "title_highlight_1_handwritten-stroke-width": 3,
-        "title_highlight_1_handwritten-position": 60,
-        "title_highlight_2": "none",
-        "title_highlight_2_gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_bg-color": "#F7F1EA",
-        "title_highlight_2_color": "#6F4E37",
-        "highlighted-2_border_radius": 8,
-        "highlighted-2_border_width": 0,
-        "highlighted-2_border": "solid",
-        "highlighted-2_border_color": "#6F4E37",
-        "highlighted-2_padding-block": 0.3,
-        "highlighted-2_padding-inline": 0.3,
-        "title_highlight_2_underline-thickness": 2,
-        "title_highlight_2_underline-color": "#6F4E37",
-        "title_highlight_2_underline-color--gradient": "linear-gradient(57deg, rgba(249, 119, 255, 1) 8%, rgba(54, 212, 255, 1) 47%, rgba(43, 252, 135, 1) 83%)",
-        "title_highlight_2_underline-color-position": 25,
-        "title_highlight_2_handwritten-color": "#6F4E37",
-        "title_highlight_2_handwritten-stroke-width": 3,
-        "title_highlight_2_handwritten-position": 60,
-        "heading_size": "h2",
-        "custom_desktop_size": 39,
-        "custom_mobile_size": 28,
-        "text": "",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "atc_button_label": "",
-        "atc_product": "",
-        "atc_skip_cart": false,
-        "desktop_alignment": "center",
-        "mobile_content_alignment": "center",
-        "color_scheme": "custom",
-        "custom_colors_background": "#F7F1EA",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#241B16",
-        "custom_colors_solid_button_background": "#6F4E37",
-        "custom_colors_solid_button_text": "#FFF8F0",
-        "custom_colors_outline_button": "#6F4E37",
-        "layout": "table_second",
-        "style": "classic",
-        "corner_radius": 20,
-        "number_of_competitors": 2,
-        "us_label": "The Moka Bottle",
-        "us_label_size": 18,
-        "logo_width": 130,
-        "mobile_logo_width": 90,
-        "others_label": "Complex anti-colic bottle",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Standard plastic bottle",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "checkmark_style": "regular",
-        "checkmark_color": "#53af01",
-        "checkmark_bg_color": "#53af01",
-        "x_style": "regular",
-        "x_color": "#241B16",
-        "x_bg_color": "#dbdbdb",
-        "opposite_icon_colors": "original",
-        "highlighted_color_scheme": "custom",
-        "custom_colors_highlighted_background": "#6F4E37",
-        "custom_colors_highlighted_text": "#ffffff",
-        "highlighted_separator_opacity": 0,
-        "highlighted_overlay_opacity": 0,
-        "other_cells_color_scheme": "background-1",
-        "custom_colors_others_background": "#ffffff",
-        "custom_colors_others_text": "#241B16",
-        "regular_separator_opacity": 10,
-        "regular_overlay_opacity": 0,
-        "minimalistic_border_opacity": 16,
-        "padding_top": 8,
-        "padding_bottom": 52,
-        "logo": "",
-        "others_logo": "",
-        "others_2_logo": ""
+        "custom_liquid": "<style>\n.mcmp{max-width:1120px;margin:0 auto;padding:0 20px;color:#241B16;}\n.mcmp__t{text-align:center;font-size:44px;line-height:1.12;font-weight:700;margin:0 0 34px;}\n.mcmp__g{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;border:1px solid #E7D8C8;border-radius:18px;background:#fff;overflow:hidden;}\n.mcmp__cell{padding:15px 18px;border-bottom:1px solid #EFE4D7;display:flex;align-items:center;gap:10px;}\n.mcmp__corner{border-bottom:1px solid #EFE4D7;min-width:0;}\n.mcmp__g>*{min-width:0;}\n.mcmp__h{flex-direction:column;align-items:stretch;gap:10px;padding:14px;}\n.mcmp__img{aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#F3E9DE;}\n.mcmp__img img{width:100%;height:100%;object-fit:cover;display:block;}\n.mcmp__lab{font-weight:700;font-size:17px;}\n.mcmp__rl{font-weight:700;font-size:14px;}\n.mcmp__d{font-size:15px;}\n.mcmp__ic{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;background:#EADDCB;}\n.mcmp__ic--c{color:#6E8B57;} .mcmp__ic--x{color:#A9876A;}\n.mcmp__h.mcmp__act{background:#4A3426;color:#FFF8F0;}\n.mcmp__h.mcmp__act .mcmp__lab{color:#FFF8F0;}\n.mcmp__d.mcmp__act{background:#FBF4EC;box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37;}\n.mcmp__h.mcmp__act{box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37,inset 0 2px #6F4E37;}\n.mcmp__d.mcmp__act.mcmp__last{box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37,inset 0 -2px #6F4E37;}\n.mcmp__btnwrap{text-align:center;margin-top:34px;}\n.mcmp__btn{display:inline-block;background:#6F4E37;color:#FFF8F0;padding:15px 42px;border-radius:100px;font-weight:700;font-size:16px;text-decoration:none;}\n@media(max-width:749px){.mcmp__t{font-size:28px;}.mcmp__cell{padding:9px;font-size:12px;gap:6px;}.mcmp__lab{font-size:12px;}.mcmp__ic{flex-basis:18px;width:18px;height:18px;}}\n</style>\n<div class=\"mcmp\">\n<h2 class=\"mcmp__t\">The difference shows up after every feed.</h2>\n<div class=\"mcmp__g\">\n<div class=\"mcmp__cell mcmp__corner\">&nbsp;</div>\n<div class=\"mcmp__cell mcmp__h mcmp__act\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/hf_20260602_142614_20971555-330d-4c7a-92cd-f795a940840d.png?v=1781686074\" loading=\"lazy\" alt=\"The Moka Bottle\"></div><div class=\"mcmp__lab\">The Moka Bottle</div></div>\n<div class=\"mcmp__cell mcmp__h\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/ChatGPT_Image_Jun_17_2026_07_40_47_PM.png?v=1781691111\" loading=\"lazy\" alt=\"Anti-colic bottles\"></div><div class=\"mcmp__lab\">&#39;Anti-colic&#39; bottles</div></div>\n<div class=\"mcmp__cell mcmp__h\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/hf_20260617_100320_8aeebc8d-54f7-4cea-a0a4-ec16125d892b.png?v=1781691115\" loading=\"lazy\" alt=\"Standard bottles\"></div><div class=\"mcmp__lab\">Standard bottles</div></div>\n<div class=\"mcmp__cell mcmp__rl\">Latch</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Breast-shaped, 15°</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often narrow</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often narrow</span></div><div class=\"mcmp__cell mcmp__rl\">Air in the milk</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Kept out by base vent</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Tubes & valves</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often more</span></div><div class=\"mcmp__cell mcmp__rl\">Milk contact</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Glass + silicone</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Varies</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Plastic</span></div><div class=\"mcmp__cell mcmp__rl\">Parts to wash</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Four, no tubes</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>More, with tubes</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Few</span></div><div class=\"mcmp__cell mcmp__rl\">Leaks</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Leak-free</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Common complaint</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Varies</span></div><div class=\"mcmp__cell mcmp__rl\">Materials</div><div class=\"mcmp__cell mcmp__d mcmp__act mcmp__last\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Highest Quality</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Hidden Plastics</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Lowest Quality</span></div>\n</div>\n<div class=\"mcmp__btnwrap\"><a class=\"mcmp__btn\" href=\"#\">Choose Your Trial Bottle</a></div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 52,
+        "padding_bottom": 24
       }
     },
     "moka_guarantee": {
