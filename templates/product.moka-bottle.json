@@ -2858,12 +2858,126 @@
       }
     },
     "moka_compare": {
-      "type": "custom-liquid",
+      "type": "new-compare-chart",
+      "blocks": {
+        "row_latch": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Latch",
+            "first_column": "Breast-shaped, 15°",
+            "first_column_icon": "check",
+            "second_column": "Often narrow",
+            "second_column_icon": "cross",
+            "third_column": "Often narrow",
+            "third_column_icon": "cross"
+          }
+        },
+        "row_air": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Air in the milk",
+            "first_column": "Kept out by base vent",
+            "first_column_icon": "check",
+            "second_column": "Tubes & valves",
+            "second_column_icon": "cross",
+            "third_column": "Often more",
+            "third_column_icon": "cross"
+          }
+        },
+        "row_contact": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Milk contact",
+            "first_column": "Glass + silicone",
+            "first_column_icon": "check",
+            "second_column": "Varies",
+            "second_column_icon": "cross",
+            "third_column": "Plastic",
+            "third_column_icon": "cross"
+          }
+        },
+        "row_parts": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Parts to wash",
+            "first_column": "Four, no tubes",
+            "first_column_icon": "check",
+            "second_column": "More, with tubes",
+            "second_column_icon": "cross",
+            "third_column": "Few",
+            "third_column_icon": "cross"
+          }
+        },
+        "row_leaks": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Leaks",
+            "first_column": "Leak-free",
+            "first_column_icon": "check",
+            "second_column": "Common complaint",
+            "second_column_icon": "cross",
+            "third_column": "Varies",
+            "third_column_icon": "cross"
+          }
+        },
+        "row_materials": {
+          "type": "table_row",
+          "settings": {
+            "row_heading": "Materials",
+            "first_column": "Highest Quality",
+            "first_column_icon": "check",
+            "second_column": "Hidden Plastics",
+            "second_column_icon": "cross",
+            "third_column": "Lowest Quality",
+            "third_column_icon": "cross"
+          }
+        }
+      },
+      "block_order": [
+        "row_latch",
+        "row_air",
+        "row_contact",
+        "row_parts",
+        "row_leaks",
+        "row_materials"
+      ],
       "settings": {
-        "display_id": false,
         "visibility": "always-display",
-        "custom_liquid": "<style>\n.mcmp{max-width:1120px;margin:0 auto;padding:0 20px;color:#241B16;}\n.mcmp__t{text-align:center;font-size:44px;line-height:1.12;font-weight:700;margin:0 0 34px;}\n.mcmp__g{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;border:1px solid #E7D8C8;border-radius:18px;background:#fff;overflow:hidden;}\n.mcmp__cell{padding:15px 18px;border-bottom:1px solid #EFE4D7;display:flex;align-items:center;gap:10px;}\n.mcmp__corner{border-bottom:1px solid #EFE4D7;min-width:0;}\n.mcmp__g>*{min-width:0;}\n.mcmp__h{flex-direction:column;align-items:stretch;gap:10px;padding:14px;}\n.mcmp__img{aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#F3E9DE;}\n.mcmp__img img{width:100%;height:100%;object-fit:cover;display:block;}\n.mcmp__lab{font-weight:700;font-size:17px;}\n.mcmp__rl{font-weight:700;font-size:14px;}\n.mcmp__d{font-size:15px;}\n.mcmp__ic{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;background:#EADDCB;}\n.mcmp__ic--c{color:#6E8B57;} .mcmp__ic--x{color:#A9876A;}\n.mcmp__h.mcmp__act{background:#4A3426;color:#FFF8F0;}\n.mcmp__h.mcmp__act .mcmp__lab{color:#FFF8F0;}\n.mcmp__d.mcmp__act{background:#FBF4EC;box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37;}\n.mcmp__h.mcmp__act{box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37,inset 0 2px #6F4E37;}\n.mcmp__d.mcmp__act.mcmp__last{box-shadow:inset 2px 0 #6F4E37,inset -2px 0 #6F4E37,inset 0 -2px #6F4E37;}\n.mcmp__btnwrap{text-align:center;margin-top:34px;}\n.mcmp__btn{display:inline-block;background:#6F4E37;color:#FFF8F0;padding:15px 42px;border-radius:100px;font-weight:700;font-size:16px;text-decoration:none;}\n@media(max-width:749px){.mcmp__t{font-size:28px;}.mcmp__cell{padding:9px;font-size:12px;gap:6px;}.mcmp__lab{font-size:12px;}.mcmp__ic{flex-basis:18px;width:18px;height:18px;}}\n</style>\n<div class=\"mcmp\">\n<h2 class=\"mcmp__t\">The difference shows up after every feed.</h2>\n<div class=\"mcmp__g\">\n<div class=\"mcmp__cell mcmp__corner\">&nbsp;</div>\n<div class=\"mcmp__cell mcmp__h mcmp__act\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/hf_20260602_142614_20971555-330d-4c7a-92cd-f795a940840d.png?v=1781686074\" loading=\"lazy\" alt=\"The Moka Bottle\"></div><div class=\"mcmp__lab\">The Moka Bottle</div></div>\n<div class=\"mcmp__cell mcmp__h\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/ChatGPT_Image_Jun_17_2026_07_40_47_PM.png?v=1781691111\" loading=\"lazy\" alt=\"Anti-colic bottles\"></div><div class=\"mcmp__lab\">&#39;Anti-colic&#39; bottles</div></div>\n<div class=\"mcmp__cell mcmp__h\"><div class=\"mcmp__img\"><img src=\"https://mokababy.co/cdn/shop/files/hf_20260617_100320_8aeebc8d-54f7-4cea-a0a4-ec16125d892b.png?v=1781691115\" loading=\"lazy\" alt=\"Standard bottles\"></div><div class=\"mcmp__lab\">Standard bottles</div></div>\n<div class=\"mcmp__cell mcmp__rl\">Latch</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Breast-shaped, 15°</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often narrow</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often narrow</span></div><div class=\"mcmp__cell mcmp__rl\">Air in the milk</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Kept out by base vent</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Tubes & valves</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Often more</span></div><div class=\"mcmp__cell mcmp__rl\">Milk contact</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Glass + silicone</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Varies</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Plastic</span></div><div class=\"mcmp__cell mcmp__rl\">Parts to wash</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Four, no tubes</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>More, with tubes</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Few</span></div><div class=\"mcmp__cell mcmp__rl\">Leaks</div><div class=\"mcmp__cell mcmp__d mcmp__act\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Leak-free</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Common complaint</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Varies</span></div><div class=\"mcmp__cell mcmp__rl\">Materials</div><div class=\"mcmp__cell mcmp__d mcmp__act mcmp__last\"><span class=\"mcmp__ic mcmp__ic--c\">&#10003;</span><span>Highest Quality</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Hidden Plastics</span></div><div class=\"mcmp__cell mcmp__d\"><span class=\"mcmp__ic mcmp__ic--x\">&#10005;</span><span>Lowest Quality</span></div>\n</div>\n<div class=\"mcmp__btnwrap\"><a class=\"mcmp__btn\" href=\"#\">Choose Your Trial Bottle</a></div>\n</div>",
-        "color_scheme": "background-1",
+        "content_horizontal_align": "center",
+        "content_horizontal_align_mobile": "center",
+        "heading": "<p>The difference shows up after every feed.</p>",
+        "heading_color": "#241B16",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "text": "",
+        "text_color": "#241B16",
+        "button": "Choose Your Trial Bottle",
+        "button_url": "#",
+        "button_color": "#FFF8F0",
+        "button_hover_color": "#FFF8F0",
+        "button_bg_color": "#6F4E37",
+        "button_bg_hover_color": "#5A3F2C",
+        "button_border_color": "#6F4E37",
+        "button_border_hover_color": "#5A3F2C",
+        "button_style": "non_outline",
+        "table_columns": 3,
+        "table_column_active": "1",
+        "table_radius": 18,
+        "table_border_thickness": 1,
+        "table_border_color": "#E7D8C8",
+        "first_heading": "The Moka Bottle",
+        "second_heading": "'Anti-colic' bottles",
+        "third_heading": "Standard bottles",
+        "table_active_border_color": "#6F4E37",
+        "table_heading_color": "#241B16",
+        "table_heading_active_color": "#FFF8F0",
+        "table_heading_bg_active_color": "#4A3426",
+        "table_column_active_bg_color": "#FBF4EC",
+        "table_row_heading_color": "#241B16",
+        "table_row_text_color": "#241B16",
+        "table_row_active_text_color": "#241B16",
+        "background_color": "#FFFFFF",
+        "border_color": "#FFFFFF",
         "padding_top": 52,
         "padding_bottom": 24
       }
