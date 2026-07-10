@@ -2862,6 +2862,7 @@
       "blocks": {
         "row_latch": {
           "type": "table_row",
+          "name": "Latch",
           "settings": {
             "row_heading": "Latch",
             "first_column": "Breast-shaped, 15°",
@@ -2874,6 +2875,7 @@
         },
         "row_air": {
           "type": "table_row",
+          "name": "Air in the milk",
           "settings": {
             "row_heading": "Air in the milk",
             "first_column": "Kept out by base vent",
@@ -2886,6 +2888,7 @@
         },
         "row_contact": {
           "type": "table_row",
+          "name": "Milk contact",
           "settings": {
             "row_heading": "Milk contact",
             "first_column": "Glass + silicone",
@@ -2898,6 +2901,7 @@
         },
         "row_parts": {
           "type": "table_row",
+          "name": "Parts to wash",
           "settings": {
             "row_heading": "Parts to wash",
             "first_column": "Four, no tubes",
@@ -2910,6 +2914,7 @@
         },
         "row_leaks": {
           "type": "table_row",
+          "name": "Leaks",
           "settings": {
             "row_heading": "Leaks",
             "first_column": "Leak-free",
@@ -2922,6 +2927,7 @@
         },
         "row_materials": {
           "type": "table_row",
+          "name": "Materials",
           "settings": {
             "row_heading": "Materials",
             "first_column": "Highest Quality",
