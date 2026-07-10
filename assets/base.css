@@ -26,3 +26,6 @@ html {scroll-behavior: smooth;}img, video {max-width: 100%;height: auto;vertical
 [id*="moka_compare"] [class*="comparison-item-image-"] svg{width:12px!important;height:12px!important;}
 [id*="moka_compare"] [class*="comparison-item-image-"] svg[viewBox="0 0 37 27"] path{stroke:#6B5240;}
 [id*="moka_compare"] [class*="comparison-item-image-"] svg[viewBox="0 0 49 49"] path{stroke:#8D6E59;}
+/* moka comparison: one rounded outer frame around whole table, no inner grid lines (target grid's direct-child cells only, not icon circles) */
+[id*="moka_compare"] [class*="comparison-grid-"]>[class*="comparison-item-"]{border:0!important;border-radius:0!important;}
+[id*="moka_compare"] [class*="comparison-table-"]{border:1px solid #E7D8C8!important;border-radius:18px;overflow:hidden;}

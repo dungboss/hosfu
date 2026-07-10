@@ -2979,7 +2979,10 @@
         "background_color": "#FFFFFF",
         "border_color": "#FFFFFF",
         "padding_top": 52,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "table_row_text_size": 16,
+        "table_row_text_size_mobile": 14,
+        "table_heading_size": 18
       }
     },
     "moka_guarantee": {
