@@ -15,7 +15,7 @@
         "slide_4CCQyx": {
           "type": "slide",
           "settings": {
-            "desktop_bg_image": "shopify://shop_images/aac40a35-89f9-40f3-8d55-73c6e1430f12_8ba70e0a-fc9e-4c84-8bfa-dad204bfbd2c.png",
+            "desktop_bg_image": "shopify://shop_images/cb28d6c3-d0ba-40a2-84e2-e92a70d18fcf.png",
             "desktop_overlay_color": "#000000",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_color": "#000000",
@@ -29,8 +29,8 @@
             "heading_suffix": "",
             "heading_prefix_size": "h4",
             "text": "",
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/redlight-ems-corebelt",
+            "button_label_1": "",
+            "button_link_1": "",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -447,7 +447,7 @@
         "row_frqit4": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Real table-like resistance</strong>",
+            "benefit": "<strong>High-borosilicate glass</strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -457,7 +457,7 @@
         "row_GjV8G3": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Adjustable levels</strong>",
+            "benefit": "<strong>15° breast-shaped nipple</strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -467,7 +467,7 @@
         "row_NAEbjV": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Premium beechwood frame</strong>",
+            "benefit": "<strong>BPA-free PPSU components</strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -477,17 +477,17 @@
         "row_wmaGHC": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Comfort elbow pad</strong>",
+            "benefit": "<strong>Fits standard warmers</strong>",
             "us": true,
             "others": false,
             "others_2": false,
             "others_3": false
           }
         },
-        "row_i77Mq8": {
+        "row_mtbCFK": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Train solo anytime</strong>",
+            "benefit": "<strong>Five nipple flow options</strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -497,7 +497,7 @@
         "row_a9Qa8J": {
           "type": "row",
           "settings": {
-            "benefit": "<strong>Grip & forearm power</strong>",
+            "benefit": "<strong>Lead-free tested materials</strong>",
             "us": true,
             "others": false,
             "others_2": false,
@@ -510,7 +510,7 @@
         "row_GjV8G3",
         "row_NAEbjV",
         "row_wmaGHC",
-        "row_i77Mq8",
+        "row_mtbCFK",
         "row_a9Qa8J"
       ],
       "settings": {
@@ -554,7 +554,7 @@
         "heading_size": "h1",
         "custom_desktop_size": 39,
         "custom_mobile_size": 28,
-        "text": "<p>Built for real arm wrestling practice — not just basic grip training.</p>",
+        "text": "<p>Designed with premium materials, thoughtful engineering, and everyday simplicity — so every feed feels a little easier.</p>",
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
@@ -592,19 +592,19 @@
         "others_3_mobile_logo_width": 60,
         "checkmark_style": "regular",
         "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#b41e42",
+        "checkmark_bg_color": "#C46A3A",
         "x_style": "regular",
         "x_color": "#ffffff",
         "x_bg_color": "#dbdbdb",
         "opposite_icon_colors": "original",
         "highlighted_color_scheme": "custom",
-        "custom_colors_highlighted_background": "#b41e42",
+        "custom_colors_highlighted_background": "#804733",
         "custom_colors_highlighted_text": "#ffffff",
         "highlighted_separator_opacity": 0,
         "highlighted_overlay_opacity": 0,
         "other_cells_color_scheme": "custom",
         "custom_colors_others_background": "#f3e7de",
-        "custom_colors_others_text": "#6e6058",
+        "custom_colors_others_text": "#866C5D",
         "regular_separator_opacity": 10,
         "regular_overlay_opacity": 0,
         "minimalistic_border_opacity": 16,
@@ -767,7 +767,7 @@
         "custom_colors_background": "#f3e7de",
         "custom_gradient_background": "",
         "custom_colors_text": "#201b19",
-        "custom_colors_solid_button_background": "#ab243f",
+        "custom_colors_solid_button_background": "#A6583D",
         "custom_colors_solid_button_text": "#ffffff",
         "success_icon": "check_circle",
         "success_icon_filled": false,
