@@ -155,7 +155,8 @@ body:has(.hf-adv) .section-header {
 
 .hf-adv .lede { padding: 32px 0 8px; }
 .hf-adv .lede p { margin: 0 0 19px; color: var(--ink); }
-.hf-adv .lede .drop::first-letter {
+.hf-adv .lede .drop::first-letter,
+.hf-adv .lede > p:first-child::first-letter {
   float: left;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 62px;
@@ -301,9 +302,11 @@ body:has(.hf-adv) .section-header {
 .hf-adv .doesnt li::before { content: '\2013'; color: var(--rose-dark); }
 
 .hf-adv .parent-notes { margin: 48px 0; }
+.hf-adv .block-heading { margin: 48px 0 4px; }
 .hf-adv .parent-notes h2,
 .hf-adv .faq h2,
-.hf-adv .close h2 {
+.hf-adv .close h2,
+.hf-adv .block-heading h2 {
   margin: 0 0 12px;
   text-align: center;
   font-size: clamp(26px, 4vw, 36px);

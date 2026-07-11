@@ -38,257 +38,142 @@
       </div>
     </header>
 
-    <section class="lede reveal">
-      <p class="drop">Most parents already do the careful things. They sterilise the bottle. They warm the feed. They choose &ldquo;BPA-free.&rdquo; They read the label twice. The uncomfortable part is that the most common bottle material &mdash; polypropylene plastic &mdash; was the same material studied when researchers measured high microplastic release during normal formula-preparation steps.</p>
-      <p>The point is not to panic. Regulators have not concluded that these detected levels cause specific harm. But many parents are asking a simpler question: <strong>if the exposure can be reduced by changing the material that touches the milk, why not make that switch?</strong></p>
-      <p>Here is the practical breakdown: what the research found, why &ldquo;BPA-free&rdquo; and some &ldquo;glass&rdquo; bottles may not fully solve the issue, and why Hosfu was built around the milk-contact surface &mdash; not just the outside of the bottle.</p>
-    </section>
+    {% for block in section.blocks %}
+      {% case block.type %}
 
-    <div class="source-box reveal">
-      <b>Research note:</b> The core bottle-shedding data comes from Li et al., <em>Nature Food</em> 2020, which reported microplastic release from polypropylene infant feeding bottles under formula-preparation conditions. For ad-safety and accuracy, this page avoids claiming that microplastics cause a specific disease. References: <a href="https://www.nature.com/articles/s43016-020-00171-y" target="_blank" rel="noopener">Nature Food study</a>, <a href="https://www.fda.gov/food/environmental-contaminants-food/microplastics-and-nanoplastics-foods" target="_blank" rel="noopener">FDA position</a>, <a href="https://www.who.int/publications/i/item/9789241516198" target="_blank" rel="noopener">WHO report</a>.
-    </div>
+        {% when 'lede' %}
+          <section class="lede reveal" {{ block.shopify_attributes }}>{{ block.settings.body }}</section>
 
-    <section class="list">
-      <article class="reason reveal">
-        <div class="num">1</div>
-        <h2>Your baby&rsquo;s bottle may be releasing microplastics into warm feeds</h2>
-        <p>In 2020, researchers at Trinity College Dublin studied polypropylene infant feeding bottles &mdash; the plastic many baby bottles are made from. Following standard formula-preparation style conditions, they found releases reaching <strong>up to around 16 million microplastic particles per litre</strong>.</p>
-        <p>That number sounds extreme, but the mechanism is simple: plastic, heat and repeated use do not stay perfectly unchanged forever. The more parents understand the material, the less &ldquo;BPA-free&rdquo; feels like the whole answer.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/1_47b5be25-87fb-4713-994e-fd2ffca3d153.png?v=1783484878" alt="Microplastics concern in baby bottle feeding" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'source_box' %}
+          <div class="source-box reveal" {{ block.shopify_attributes }}>{{ block.settings.body }}</div>
 
-      <article class="reason reveal">
-        <div class="num">2</div>
-        <h2>Hot water, sterilising and shaking are exactly the trigger points</h2>
-        <p>The study found that temperature was one of the biggest drivers. When water got hotter, particle release increased sharply. That matters because feeding routines often include hot water, bottle warmers, sterilising, shaking and cleaning.</p>
-        <p>In other words, the steps parents use to keep feeds clean can also be the steps that stress the plastic most. This is why the material touching the milk matters more than the marketing label on the front.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/2_d71b52a4-80a9-4b31-b786-74d32d017945.png?v=1783484878" alt="Hot water and sterilising can stress plastic bottles" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'reason' %}
+          <article class="reason reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.number != blank %}<div class="num">{{ block.settings.number }}</div>{% endif %}
+            <h2>{{ block.settings.title }}</h2>
+            {{ block.settings.body }}
+          </article>
+          {% if block.settings.image != blank %}
+            <figure class="reason-media reveal">
+              <img src="{{ block.settings.image }}" alt="{{ block.settings.image_alt | escape }}" width="1254" height="1254" loading="lazy">
+            </figure>
+          {% endif %}
 
-      <article class="reason reveal">
-        <div class="num">3</div>
-        <h2>&ldquo;BPA-free&rdquo; was never the same as &ldquo;plastic-free&rdquo;</h2>
-        <p>BPA-free means one specific chemical &mdash; Bisphenol A &mdash; is not present. That is useful, but it does <strong>not</strong> mean the bottle is free from plastic, nor does it say anything about tiny particles physically shedding when plastic is heated, scrubbed or shaken.</p>
-        <p>For years, &ldquo;BPA-free&rdquo; gave parents peace of mind. Now more parents are realising it answered only one question, not the whole bottle-safety question.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/3_62c08158-4806-43ba-8c52-635d9c9f4e04.png?v=1783484878" alt="BPA-free does not mean plastic-free baby bottle" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'cta' %}
+          <section class="cta-strip reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h3>{{ block.settings.heading }}</h3>{% endif %}
+            {% if block.settings.text != blank %}<p>{{ block.settings.text }}</p>{% endif %}
+            <a class="cta" href="{{ block.settings.button_link | default: product_link }}">{{ block.settings.button_label | default: 'Shop now' }}</a>
+            {% if block.settings.microcopy != blank %}<p class="microcopy">{{ block.settings.microcopy }}</p>{% endif %}
+          </section>
 
-      <section class="cta-strip reveal">
-        <h3>Want the simpler fix?</h3>
-        <p>Hosfu is built around one practical rule: keep ordinary plastic away from the milk-contact path wherever possible.</p>
-        <a class="cta" href="{{ product_link }}">See How Hosfu Fixes It</a>
-        <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
-      </section>
+        {% when 'proof_grid' %}
+          <section class="proof-grid reveal" aria-label="Material highlights" {{ block.shopify_attributes }}>
+            {% if block.settings.card1_title != blank %}<div class="proof-card"><b>{{ block.settings.card1_title }}</b><span>{{ block.settings.card1_text }}</span></div>{% endif %}
+            {% if block.settings.card2_title != blank %}<div class="proof-card"><b>{{ block.settings.card2_title }}</b><span>{{ block.settings.card2_text }}</span></div>{% endif %}
+            {% if block.settings.card3_title != blank %}<div class="proof-card"><b>{{ block.settings.card3_title }}</b><span>{{ block.settings.card3_text }}</span></div>{% endif %}
+          </section>
 
-      <article class="reason reveal">
-        <div class="num">4</div>
-        <h2>It is not just one feed. It can repeat with daily washing and sterilising.</h2>
-        <p>A bottle is not used once. It is washed, sterilised, warmed, cooled, packed, dropped, scrubbed and reused again. Tiny scratches and repeated heat exposure are exactly why parents are starting to think beyond &ldquo;is this bottle new?&rdquo; and ask &ldquo;what is this bottle made of?&rdquo;</p>
-        <p>Plastic may look clean after every wash. But clean-looking and inert are not the same thing.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/4_15b19733-c416-450a-9d2e-45308f304c8a.png?v=1783484878" alt="Daily washing and sterilising baby bottles" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'comparison' %}
+          <section class="compare reveal" {{ block.shopify_attributes }}>
+            <table>
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th class="hosfu">{{ block.settings.us_label }}</th>
+                  <th>{{ block.settings.col_a_label }}</th>
+                  <th>{{ block.settings.col_b_label }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in (1..6) %}
+                  {% assign f = 'row' | append: i | append: '_feature' %}
+                  {% assign u = 'row' | append: i | append: '_us' %}
+                  {% assign a = 'row' | append: i | append: '_a' %}
+                  {% assign b = 'row' | append: i | append: '_b' %}
+                  {% assign feature = block.settings[f] %}
+                  {% if feature != blank %}
+                    {% assign us = block.settings[u] %}
+                    {% assign ca = block.settings[a] %}
+                    {% assign cb = block.settings[b] %}
+                    <tr>
+                      <td>{{ feature }}</td>
+                      <td class="hosfu{% if us == '✓' %} yes{% endif %}">{{ us }}</td>
+                      <td{% if ca == '✗' %} class="no"{% elsif ca == '✓' %} class="yes"{% endif %}>{{ ca }}</td>
+                      <td{% if cb == '✗' %} class="no"{% elsif cb == '✓' %} class="yes"{% endif %}>{{ cb }}</td>
+                    </tr>
+                  {% endif %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </section>
 
-      <article class="reason reveal">
-        <div class="num">5</div>
-        <h2>Even some &ldquo;glass&rdquo; bottles still put plastic where it counts</h2>
-        <p>Switching to glass feels like the obvious answer &mdash; until you look at the full milk path. Some bottles have a glass body, but still use plastic collars, vents, rings or bases that can sit near warm milk or steam during feeding and sterilising.</p>
-        <p>That is why Hosfu focuses on the entire system, not just the bottle body. A safer-feeling material on the outside does not help much if the feed still passes through ordinary plastic parts.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/5_ef7f9eee-cb3d-4694-9a5a-75b44d15c0a1.png?v=1783484878" alt="Glass bottle comparison with plastic parts" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'material_box' %}
+          <section class="material-box reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h3>{{ block.settings.heading }}</h3>{% endif %}
+            {% for i in (1..6) %}
+              {% assign t = 'item' | append: i | append: '_title' %}
+              {% assign x = 'item' | append: i | append: '_text' %}
+              {% if block.settings[t] != blank %}
+                <div class="material"><b>{{ block.settings[t] }}</b><span>{{ block.settings[x] }}</span></div>
+              {% endif %}
+            {% endfor %}
+          </section>
 
-      <article class="reason reveal">
-        <div class="num">6</div>
-        <h2>Hosfu was designed around the milk-contact path</h2>
-        <p>Most bottle pages talk about shape, size and cute colours. Hosfu starts with a more serious question: <strong>what touches the milk when the bottle is warm?</strong></p>
-        <p>The Hosfu design is built around borosilicate glass and soft silicone for the surfaces that matter most, with heat-resistant components selected for daily sterilising routines. The goal is not to make feeding complicated &mdash; it is to remove the material guesswork from a routine parents repeat every day.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/6_61353016-18f1-4e83-a3d0-2fc686ec4d21.png?v=1783484879" alt="Hosfu bottle materials and components overview" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'truth_box' %}
+          <section class="truth-box reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h3>{{ block.settings.heading }}</h3>{% endif %}
+            <div class="cols">
+              <div class="does">
+                {% if block.settings.col1_heading != blank %}<h4>{{ block.settings.col1_heading }}</h4>{% endif %}
+                <ul>
+                  {% assign items1 = block.settings.col1_items | newline_to_br | split: '<br />' %}
+                  {% for item in items1 %}{% assign line = item | strip %}{% if line != blank %}<li>{{ line }}</li>{% endif %}{% endfor %}
+                </ul>
+              </div>
+              <div class="doesnt">
+                {% if block.settings.col2_heading != blank %}<h4>{{ block.settings.col2_heading }}</h4>{% endif %}
+                <ul>
+                  {% assign items2 = block.settings.col2_items | newline_to_br | split: '<br />' %}
+                  {% for item in items2 %}{% assign line = item | strip %}{% if line != blank %}<li>{{ line }}</li>{% endif %}{% endfor %}
+                </ul>
+              </div>
+            </div>
+          </section>
 
-      <section class="cta-strip reveal">
-        <h3>Glass where it matters. Silicone where baby latches.</h3>
-        <p>Make the switch without turning every feed into a science project.</p>
-        <a class="cta" href="{{ product_link }}">Shop Hosfu Glass Bottle</a>
-        <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
-      </section>
+        {% when 'heading' %}
+          <section class="block-heading reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h2>{{ block.settings.heading }}</h2>{% endif %}
+            {% if block.settings.subtext != blank %}<p class="center-copy">{{ block.settings.subtext }}</p>{% endif %}
+          </section>
 
-      <article class="reason reveal">
-        <div class="num">7</div>
-        <h2>What touches the milk is glass and silicone, not ordinary polypropylene</h2>
-        <p>This is the main difference careful parents are looking for. Hosfu uses a borosilicate glass body for the milk chamber and a soft silicone nipple for feeding, so the parts parents think about most are made from materials chosen for warm-feeding routines.</p>
-        <p>Parents do not need to memorise material science. They just need a bottle that makes the better material choice obvious.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/7_42abcc33-e818-48bf-9a2c-543dc68eb5a2.png?v=1783484878" alt="Warm milk poured into a Hosfu glass bottle" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'note' %}
+          <div class="note reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.show_stars %}<div class="stars">★★★★★</div>{% endif %}
+            {% if block.settings.heading != blank %}<h3>{{ block.settings.heading }}</h3>{% endif %}
+            {% if block.settings.text != blank %}<p>{{ block.settings.text }}</p>{% endif %}
+          </div>
 
-      <article class="reason reveal">
-        <div class="num">8</div>
-        <h2>Built so your baby can actually use it, not just so it sounds safer</h2>
-        <p>A bottle only works if the baby accepts it. That is why the nipple feel, flow comfort, grip and cleaning experience matter. Hosfu is positioned as a practical daily bottle: soft silicone latch, clear glass milk chamber, easy cleaning and a premium feel parents can trust during tired 3am feeds.</p>
-        <p>The goal is simple: a safer-feeling material choice without making feeding feel complicated.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/8.png?v=1783484878" alt="Baby feeding with soft silicone nipple bottle" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'faq' %}
+          <details class="reveal" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.question }}</summary>
+            {{ block.settings.answer }}
+          </details>
 
-      <article class="reason reveal">
-        <div class="num">9</div>
-        <h2>The honest part: it is not the cheapest option</h2>
-        <p>Cheap plastic is cheap for a reason. Borosilicate glass, silicone and better heat-resistant materials cost more &mdash; and that is the point. Hosfu is for parents who would rather buy based on material quality than keep replacing cloudy, scratched or questionable bottles.</p>
-        <p>No bottle can remove every worry from early parenthood. But choosing what touches your baby&rsquo;s milk is one decision you can make deliberately.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/9.png?v=1783484878" alt="Premium Hosfu bottle setup and packaging" width="1254" height="1254" loading="lazy">
-      </figure>
+        {% when 'close' %}
+          <section class="close reveal" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h2>{{ block.settings.heading }}</h2>{% endif %}
+            {% if block.settings.text != blank %}<p>{{ block.settings.text }}</p>{% endif %}
+            <a class="cta" href="{{ block.settings.button_link | default: product_link }}">{{ block.settings.button_label | default: 'Shop now' }}</a>
+            {% if block.settings.microcopy != blank %}<p class="microcopy">{{ block.settings.microcopy }}</p>{% endif %}
+          </section>
 
-      <section class="cta-strip reveal">
-        <h3>Check current stock &amp; pricing</h3>
-        <p>Start with one bottle, or build a small rotation for home, night feeds and travel.</p>
-        <a class="cta" href="{{ product_link }}">Check Hosfu Availability</a>
-        <p class="microcopy">Bundle options may be available at checkout.</p>
-      </section>
+      {% endcase %}
+    {% endfor %}
 
-      <article class="reason reveal">
-        <div class="num">10</div>
-        <h2>More parents are making the switch for peace of mind</h2>
-        <p>The parents most drawn to Hosfu are not trying to be perfect. They are simply reading the research, checking the material list and choosing the option that makes warm feeds feel less questionable.</p>
-        <p>Use it, wash it, sterilise it and see how it fits your routine. If Hosfu is not the easiest feeding upgrade you have made, your 90-day guarantee keeps the decision simple.</p>
-      </article>
-      <figure class="reason-media reveal">
-        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/10.png?v=1783484879" alt="Parent and baby with Hosfu bottle for peace of mind" width="1254" height="1254" loading="lazy">
-      </figure>
-    </section>
-
-    <section class="proof-grid reveal" aria-label="Hosfu material highlights">
-      <div class="proof-card"><b>Glass milk chamber</b><span>Borosilicate glass is the main surface holding the warm milk.</span></div>
-      <div class="proof-card"><b>Soft silicone latch</b><span>Designed for a comfortable feed without ordinary plastic at the nipple.</span></div>
-      <div class="proof-card"><b>Built for routines</b><span>Made for washing, warming and sterilising cycles parents repeat daily.</span></div>
-    </section>
-
-    <section class="compare reveal">
-      <table>
-        <thead>
-          <tr>
-            <th>&nbsp;</th>
-            <th class="hosfu">Hosfu</th>
-            <th>Plastic bottle</th>
-            <th>Glass body + plastic parts</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Borosilicate glass milk chamber</td><td class="hosfu yes">&#10003;</td><td class="no">&#10007;</td><td>Usually</td></tr>
-          <tr><td>Designed to avoid ordinary plastic in the milk path</td><td class="hosfu yes">&#10003;</td><td class="no">&#10007;</td><td>Varies</td></tr>
-          <tr><td>Soft silicone nipple</td><td class="hosfu yes">&#10003;</td><td>Varies</td><td>Varies</td></tr>
-          <tr><td>Built for repeated warm-feeding routines</td><td class="hosfu yes">&#10003;</td><td class="no">Material stress concern</td><td>Depends on parts</td></tr>
-          <tr><td>Simple material choice for parents</td><td class="hosfu yes">&#10003;</td><td class="no">BPA-free only</td><td>Needs closer checking</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="material-box reveal">
-      <h3>What is inside Hosfu &mdash; and what is not</h3>
-      <div class="material"><b>Borosilicate glass body</b><span>The milk chamber is built around glass instead of ordinary polypropylene plastic.</span></div>
-      <div class="material"><b>Soft silicone nipple</b><span>A gentle feeding surface designed for latch comfort and daily use.</span></div>
-      <div class="material"><b>Heat-conscious construction</b><span>Designed for the warming, washing and sterilising routines parents repeat every day.</span></div>
-      <div class="material"><b>Practical everyday handling</b><span>A premium bottle should feel easy to hold, easy to clean and simple to keep in rotation.</span></div>
-    </section>
-
-    <section class="truth-box reveal">
-      <h3>What the research does &mdash; and does not &mdash; prove</h3>
-      <div class="cols">
-        <div class="does">
-          <h4>What is established</h4>
-          <ul>
-            <li>Polypropylene bottles can release microplastics</li>
-            <li>Heat and repeated preparation can increase release</li>
-            <li>&ldquo;BPA-free&rdquo; is not the same as &ldquo;plastic-free&rdquo;</li>
-            <li>Glass and silicone are not polypropylene plastic</li>
-          </ul>
-        </div>
-        <div class="doesnt">
-          <h4>What is not proven</h4>
-          <ul>
-            <li>That detected levels cause a specific disease</li>
-            <li>That every plastic bottle is unsafe</li>
-            <li>That switching bottles guarantees health outcomes</li>
-            <li>That parents should ignore pediatric feeding advice</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="parent-notes reveal">
-      <h2>Why careful parents are drawn to Hosfu</h2>
-      <p class="center-copy">These are the priorities parents usually care about when they move away from plastic feeding bottles.</p>
-
-      <div class="note">
-        <h3>&ldquo;I wanted glass, but I did not want a complicated bottle.&rdquo;</h3>
-        <p>That is the main Hosfu idea: premium materials, simple daily use and fewer questions about what warm milk is touching.</p>
-      </div>
-      <div class="note">
-        <h3>&ldquo;BPA-free was not enough information for me anymore.&rdquo;</h3>
-        <p>Parents are becoming more specific: not just what chemical is absent, but what material is present in the feed path.</p>
-      </div>
-      <div class="note">
-        <h3>&ldquo;I just wanted one less thing to worry about.&rdquo;</h3>
-        <p>That is the emotional reason this switch makes sense: the baby may never notice the upgrade, but parents do.</p>
-      </div>
-    </section>
-
-    <section class="faq reveal">
-      <h2>Questions parents ask before switching</h2>
-
-      <details>
-        <summary>Is BPA-free plastic already safe enough?</summary>
-        <p>BPA-free removes one specific chemical, which is good. But the bottle may still be polypropylene plastic, and the microplastic research is about physical particle release during heating and preparation &mdash; not BPA specifically.</p>
-      </details>
-
-      <details>
-        <summary>Does this mean plastic bottles are dangerous?</summary>
-        <p>No. This page does not claim that plastic bottles cause a specific disease or that every plastic bottle is unsafe. The honest point is that microplastic release has been measured, the health question is still being studied, and many parents prefer to reduce avoidable plastic contact where they can.</p>
-      </details>
-
-      <details>
-        <summary>How is Hosfu different from a normal glass bottle?</summary>
-        <p>Hosfu is positioned around the full feeding system &mdash; not only the glass body. The goal is to make the material choice clearer for parents who do not want warm milk sitting in ordinary plastic.</p>
-      </details>
-
-      <details>
-        <summary>Will my baby accept the nipple?</summary>
-        <p>Every baby is different, but Hosfu is designed around a soft silicone feeding feel and a simple daily-use experience. Start slowly, use the flow option that matches your baby&rsquo;s stage, and give your baby time to adjust.</p>
-      </details>
-
-      <details>
-        <summary>Can I sterilise and warm it?</summary>
-        <p>Follow the care instructions included with your Hosfu bottle. As with any baby-feeding product, inspect parts regularly and replace nipples or components if they show wear.</p>
-      </details>
-
-      <details>
-        <summary>What if it does not work for us?</summary>
-        <p>Hosfu is backed by a 90-day money-back guarantee. Use it in your real routine and decide based on your baby, your feeding setup and your comfort level.</p>
-      </details>
-    </section>
-
-    <section class="close reveal">
-      <h2>Make the switch your baby will never know they needed</h2>
-      <p>You cannot control everything in the early months. But you can choose what touches your baby&rsquo;s milk.</p>
-      <a class="cta" href="{{ product_link }}">Shop Hosfu Glass Bottle</a>
-      <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
-    </section>
-
-    <footer class="foot">{{ section.settings.footer_html }}</footer>
+    {% if section.settings.footer_html != blank %}
+      <footer class="foot">{{ section.settings.footer_html }}</footer>
+    {% endif %}
   </div>
 </div>
 
@@ -318,6 +203,7 @@
   "name": "Microplastics Switch",
   "tag": "section",
   "class": "microplastics-switch-section",
+  "max_blocks": 50,
   "settings": [
     {
       "type": "header",
@@ -370,13 +256,13 @@
     },
     {
       "type": "header",
-      "content": "Call to action"
+      "content": "Call to action default"
     },
     {
       "type": "url",
       "id": "product_link",
-      "label": "Hosfu product link",
-      "info": "Used by every CTA button on the page. Defaults to /products/hosfu-glass-baby-bottle."
+      "label": "Default product link for CTA buttons",
+      "info": "Used by any CTA / Close block with an empty button link. Defaults to /products/hosfu-glass-baby-bottle."
     },
     {
       "type": "header",
@@ -385,13 +271,234 @@
     {
       "type": "html",
       "id": "footer_html",
-      "label": "Footer disclaimer",
-      "default": "<p>This page is for general information only and is not medical advice. The microplastics research referenced here measured particle release from polypropylene infant feeding bottles; it did not establish that these levels cause harm in babies. The FDA states that current scientific evidence does not demonstrate that levels of microplastics or nanoplastics detected in foods pose a risk to human health, and WHO has noted remaining research gaps. Talk to your pediatrician about feeding choices for your baby.</p>"
+      "label": "Footer disclaimer"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "lede",
+      "name": "Lede (intro)",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Intro paragraphs",
+          "info": "First paragraph gets a drop cap."
+        }
+      ]
+    },
+    {
+      "type": "source_box",
+      "name": "Source / research box",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "html",
+          "id": "body",
+          "label": "Research note",
+          "info": "Supports links with target/rel."
+        }
+      ]
+    },
+    {
+      "type": "reason",
+      "name": "Reason",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        },
+        {
+          "type": "url",
+          "id": "image",
+          "label": "Image URL"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "CTA strip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Shop Hosfu Glass Bottle"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link (defaults to section product link)"
+        },
+        {
+          "type": "text",
+          "id": "microcopy",
+          "label": "Microcopy under button"
+        }
+      ]
+    },
+    {
+      "type": "proof_grid",
+      "name": "Proof grid (3 cards)",
+      "limit": 2,
+      "settings": [
+        { "type": "text", "id": "card1_title", "label": "Card 1 title" },
+        { "type": "text", "id": "card1_text", "label": "Card 1 text" },
+        { "type": "text", "id": "card2_title", "label": "Card 2 title" },
+        { "type": "text", "id": "card2_text", "label": "Card 2 text" },
+        { "type": "text", "id": "card3_title", "label": "Card 3 title" },
+        { "type": "text", "id": "card3_text", "label": "Card 3 text" }
+      ]
+    },
+    {
+      "type": "comparison",
+      "name": "Comparison table",
+      "limit": 2,
+      "settings": [
+        { "type": "header", "content": "Column headers" },
+        { "type": "text", "id": "us_label", "label": "Your column", "default": "Hosfu" },
+        { "type": "text", "id": "col_a_label", "label": "Column A", "default": "Plastic bottle" },
+        { "type": "text", "id": "col_b_label", "label": "Column B", "default": "Glass body + plastic parts" },
+        { "type": "header", "content": "Rows", "info": "Type ✓ or ✗ for coloured cells. Empty feature = row hidden." },
+        { "type": "text", "id": "row1_feature", "label": "Row 1 feature" },
+        { "type": "text", "id": "row1_us", "label": "Row 1 · your cell" },
+        { "type": "text", "id": "row1_a", "label": "Row 1 · column A" },
+        { "type": "text", "id": "row1_b", "label": "Row 1 · column B" },
+        { "type": "text", "id": "row2_feature", "label": "Row 2 feature" },
+        { "type": "text", "id": "row2_us", "label": "Row 2 · your cell" },
+        { "type": "text", "id": "row2_a", "label": "Row 2 · column A" },
+        { "type": "text", "id": "row2_b", "label": "Row 2 · column B" },
+        { "type": "text", "id": "row3_feature", "label": "Row 3 feature" },
+        { "type": "text", "id": "row3_us", "label": "Row 3 · your cell" },
+        { "type": "text", "id": "row3_a", "label": "Row 3 · column A" },
+        { "type": "text", "id": "row3_b", "label": "Row 3 · column B" },
+        { "type": "text", "id": "row4_feature", "label": "Row 4 feature" },
+        { "type": "text", "id": "row4_us", "label": "Row 4 · your cell" },
+        { "type": "text", "id": "row4_a", "label": "Row 4 · column A" },
+        { "type": "text", "id": "row4_b", "label": "Row 4 · column B" },
+        { "type": "text", "id": "row5_feature", "label": "Row 5 feature" },
+        { "type": "text", "id": "row5_us", "label": "Row 5 · your cell" },
+        { "type": "text", "id": "row5_a", "label": "Row 5 · column A" },
+        { "type": "text", "id": "row5_b", "label": "Row 5 · column B" },
+        { "type": "text", "id": "row6_feature", "label": "Row 6 feature" },
+        { "type": "text", "id": "row6_us", "label": "Row 6 · your cell" },
+        { "type": "text", "id": "row6_a", "label": "Row 6 · column A" },
+        { "type": "text", "id": "row6_b", "label": "Row 6 · column B" }
+      ]
+    },
+    {
+      "type": "material_box",
+      "name": "Material box",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "text", "id": "item1_title", "label": "Item 1 title" },
+        { "type": "text", "id": "item1_text", "label": "Item 1 text" },
+        { "type": "text", "id": "item2_title", "label": "Item 2 title" },
+        { "type": "text", "id": "item2_text", "label": "Item 2 text" },
+        { "type": "text", "id": "item3_title", "label": "Item 3 title" },
+        { "type": "text", "id": "item3_text", "label": "Item 3 text" },
+        { "type": "text", "id": "item4_title", "label": "Item 4 title" },
+        { "type": "text", "id": "item4_text", "label": "Item 4 text" },
+        { "type": "text", "id": "item5_title", "label": "Item 5 title" },
+        { "type": "text", "id": "item5_text", "label": "Item 5 text" },
+        { "type": "text", "id": "item6_title", "label": "Item 6 title" },
+        { "type": "text", "id": "item6_text", "label": "Item 6 text" }
+      ]
+    },
+    {
+      "type": "truth_box",
+      "name": "Truth box (2 columns)",
+      "limit": 2,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "text", "id": "col1_heading", "label": "Left column heading", "default": "What is established" },
+        { "type": "textarea", "id": "col1_items", "label": "Left column items", "info": "One item per line." },
+        { "type": "text", "id": "col2_heading", "label": "Right column heading", "default": "What is not proven" },
+        { "type": "textarea", "id": "col2_items", "label": "Right column items", "info": "One item per line." }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Section heading",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "subtext", "label": "Sub-text (optional)" }
+      ]
+    },
+    {
+      "type": "note",
+      "name": "Parent note",
+      "settings": [
+        { "type": "checkbox", "id": "show_stars", "label": "Show stars", "default": false },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "text", "label": "Text" }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question" },
+        { "type": "richtext", "id": "answer", "label": "Answer" }
+      ]
+    },
+    {
+      "type": "close",
+      "name": "Closing CTA",
+      "limit": 2,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "text", "label": "Text" },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Hosfu Glass Bottle" },
+        { "type": "url", "id": "button_link", "label": "Button link (defaults to section product link)" },
+        { "type": "text", "id": "microcopy", "label": "Microcopy under button" }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Microplastics Switch"
+      "name": "Microplastics Switch",
+      "blocks": [
+        { "type": "lede" },
+        { "type": "source_box" },
+        { "type": "reason" },
+        { "type": "reason" },
+        { "type": "cta" },
+        { "type": "proof_grid" },
+        { "type": "comparison" },
+        { "type": "heading" },
+        { "type": "faq" },
+        { "type": "faq" },
+        { "type": "close" }
+      ]
     }
   ],
   "enabled_on": {
