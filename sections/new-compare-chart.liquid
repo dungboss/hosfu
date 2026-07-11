@@ -790,7 +790,8 @@
               <div class="comparison-item-{{ section.id }} {% if table_column_active == "1" %}active{% endif %}">
                 {% if first_heading_image != blank %}
                     <img src="{{ first_heading_image | image_url }}" alt="{{ first_heading_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
-                  {% else %}
+                  {% endif %}
+                  {% if first_heading != blank %}
                     <h3>{{ first_heading }}</h3>
                   {% endif %}
               </div>
@@ -799,7 +800,8 @@
               <div class="comparison-item-{{ section.id }} {% if table_column_active == "2" %}active{% endif %}">
                 {% if second_heading_image != blank %}
                     <img src="{{ second_heading_image | image_url }}" alt="{{ second_heading_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
-                  {% else %}
+                  {% endif %}
+                  {% if second_heading != blank %}
                     <h3>{{ second_heading }}</h3>
                   {% endif %}
               </div>
@@ -808,7 +810,8 @@
               <div class="comparison-item-{{ section.id }} {% if table_column_active == "3" %}active{% endif %}">
                 {% if third_heading_image != blank %}
                   <img src="{{ third_heading_image | image_url }}" alt="{{ third_heading_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
-                {% else %}
+                {% endif %}
+                {% if third_heading != blank %}
                   <h3>{{ third_heading }}</h3>
                 {% endif %}
               </div>
@@ -817,7 +820,8 @@
               <div class="comparison-item-{{ section.id }} {% if table_column_active == "3" %}active{% endif %}">
                 {% if four_heading_image != blank %}
                   <img src="{{ four_heading_image | image_url }}" alt="{{ four_heading_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
-                {% else %}
+                {% endif %}
+                {% if four_heading != blank %}
                   <h3>{{ four_heading }}</h3>
                 {% endif %}
               </div>

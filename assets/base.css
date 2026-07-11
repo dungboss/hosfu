@@ -19,6 +19,9 @@ html {scroll-behavior: smooth;}img, video {max-width: 100%;height: auto;vertical
 [id*="moka_compare"] [class*="comparison-grid-header-"]>[class*="comparison-item-"]:nth-child(2)::before{background-image:url("https://mokababy.co/cdn/shop/files/hf_20260602_142614_20971555-330d-4c7a-92cd-f795a940840d.png?v=1781686074");}
 [id*="moka_compare"] [class*="comparison-grid-header-"]>[class*="comparison-item-"]:nth-child(3)::before{background-image:url("https://mokababy.co/cdn/shop/files/ChatGPT_Image_Jun_17_2026_07_40_47_PM.png?v=1781691111");}
 [id*="moka_compare"] [class*="comparison-grid-header-"]>[class*="comparison-item-"]:nth-child(4)::before{background-image:url("https://mokababy.co/cdn/shop/files/hf_20260617_100320_8aeebc8d-54f7-4cea-a0a4-ec16125d892b.png?v=1781691115");}
+/* moka comparison: uploaded heading image REPLACES the decorative ::before photo (hide it) and fills the same square slot */
+[id*="moka_compare"] [class*="comparison-grid-header-"]>[class*="comparison-item-"]:has(img)::before{display:none!important;}
+[id*="moka_compare"] [class*="comparison-grid-header-"]>[class*="comparison-item-"] img{width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:1/1;object-fit:cover!important;border-radius:12px;display:block;}
 /* moka comparison: reference icon style — left-aligned icon+text, thin tan-outlined circle, brown check / brown cross */
 [id*="moka_compare"] [class*="comparison-grid-rows-"]>[class*="comparison-item-"]:not(:first-child){display:flex!important;flex-direction:row;align-items:center;justify-content:flex-start;gap:11px;text-align:left;}
 [id*="moka_compare"] [class*="comparison-item-text-"]{text-align:left!important;margin:0!important;}
