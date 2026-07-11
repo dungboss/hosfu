@@ -20,7 +20,7 @@
         "flip_horizontal": false,
         "flip_vertical": false,
         "shape_color": "custom",
-        "custom_shape_color": "#ab243f",
+        "custom_shape_color": "#000000",
         "background_color": "background-1",
         "custom_background_color": "#ffffff",
         "padding_top": 0,
