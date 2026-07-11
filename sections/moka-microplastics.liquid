@@ -1,0 +1,173 @@
+{{ 'section-moka-microplastics.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign heading = section.settings.heading
+  if heading == blank and article.title != blank
+    assign heading = article.title | escape
+  endif
+  assign cta_link = section.settings.cta_link | default: '/'
+%}
+
+<main class="objection-page">
+  {% if section.settings.brand_logo != blank %}
+    <header class="objection-page__topbar">
+      <div class="objection-page__topbar-inner">
+        <a class="objection-page__brand-link" href="{{ section.settings.brand_link | default: '/' }}" aria-label="Home">
+          <img src="{{ section.settings.brand_logo }}" alt="Brand logo" width="310" height="80" loading="lazy">
+        </a>
+      </div>
+    </header>
+  {% endif %}
+
+  <div class="objection-page__inner">
+    <section class="objection-page__hero">
+      <div class="objection-page__hero-grid">
+        <div>
+          {% if section.settings.eyebrow != blank %}<p class="objection-page__eyebrow">{{ section.settings.eyebrow }}</p>{% endif %}
+          <h1>{{ heading }}</h1>
+          {% if section.settings.dek != blank %}<p class="objection-page__dek">{{ section.settings.dek }}</p>{% endif %}
+          {% if section.settings.byline_html != blank %}
+            <div class="objection-page__byline">
+              {% if section.settings.byline_photo != blank %}
+                <div class="objection-page__byline-photo"><img src="{{ section.settings.byline_photo }}" alt="Author" width="42" height="42" loading="lazy"></div>
+              {% endif %}
+              <div>{{ section.settings.byline_html }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+
+        {% when 'image' %}
+          <figure class="objection-page__media-slot" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.image }}" alt="{{ block.settings.alt | escape }}" width="1200" height="900" loading="lazy">
+            {% if block.settings.caption != blank %}<figcaption class="objection-page__media-label">{{ block.settings.caption }}</figcaption>{% endif %}
+          </figure>
+
+        {% when 'reason' %}
+          <section class="objection-page__reason" {{ block.shopify_attributes }}>
+            <div class="objection-page__num">{{ block.settings.number }}</div>
+            <div>
+              <h2>{{ block.settings.title }}</h2>
+              {{ block.settings.body }}
+            </div>
+          </section>
+
+        {% when 'cta' %}
+          <div class="objection-page__cta-band" {{ block.shopify_attributes }}>
+            <a class="objection-page__cta" href="{{ block.settings.link | default: cta_link }}">{{ block.settings.label | default: 'Shop now' }}</a>
+          </div>
+
+        {% when 'offer' %}
+          <section class="objection-page__offer objection-page__offer-cta" {{ block.shopify_attributes }}>
+            {% if block.settings.heading != blank %}<h2>{{ block.settings.heading }}</h2>{% endif %}
+            <a class="objection-page__cta" href="{{ block.settings.button_link | default: cta_link }}">{{ block.settings.button_label | default: 'Shop now' }}</a>
+          </section>
+
+        {% when 'reviews' %}
+          <section class="objection-page__judgeme" id="reviews" {{ block.shopify_attributes }}>
+            <div class="objection-page__judgeme-inner">
+              <div class="objection-page__judgeme-head">
+                {% if block.settings.heading != blank %}<h2>{{ block.settings.heading }}</h2>{% endif %}
+                {% if block.settings.intro != blank %}<p class="objection-page__judgeme-intro">{{ block.settings.intro }}</p>{% endif %}
+              </div>
+              {% if block.settings.note != blank %}
+                <div class="objection-page__judgeme-widget">
+                  <div class="objection-page__judgeme-fallback">{{ block.settings.note }}</div>
+                </div>
+              {% endif %}
+            </div>
+          </section>
+
+      {% endcase %}
+    {% endfor %}
+  </div>
+</main>
+
+{% schema %}
+{
+  "name": "Moka Microplastics",
+  "tag": "section",
+  "class": "moka-microplastics-section",
+  "max_blocks": 50,
+  "settings": [
+    { "type": "header", "content": "Top bar" },
+    { "type": "text", "id": "brand_logo", "label": "Brand logo image URL" },
+    { "type": "url", "id": "brand_link", "label": "Brand logo link" },
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow (optional)" },
+    { "type": "text", "id": "heading", "label": "Headline (falls back to article title)" },
+    { "type": "inline_richtext", "id": "dek", "label": "Sub-headline / dek" },
+    { "type": "text", "id": "byline_photo", "label": "Author photo URL" },
+    { "type": "html", "id": "byline_html", "label": "Byline text", "info": "Supports <strong> and <br>." },
+    { "type": "header", "content": "Call to action default" },
+    { "type": "url", "id": "cta_link", "label": "Default CTA link", "info": "Used by CTA / offer buttons with an empty link." }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "text", "id": "image", "label": "Image URL" },
+        { "type": "text", "id": "alt", "label": "Alt text" },
+        { "type": "text", "id": "caption", "label": "Caption (hidden by default)" }
+      ]
+    },
+    {
+      "type": "reason",
+      "name": "Reason",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number" },
+        { "type": "text", "id": "title", "label": "Heading" },
+        { "type": "richtext", "id": "body", "label": "Body" }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "CTA button",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Button label", "default": "Shop now" },
+        { "type": "url", "id": "link", "label": "Button link (defaults to section CTA link)" }
+      ]
+    },
+    {
+      "type": "offer",
+      "name": "Offer band",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop now" },
+        { "type": "url", "id": "button_link", "label": "Button link (defaults to section CTA link)" }
+      ]
+    },
+    {
+      "type": "reviews",
+      "name": "Reviews band",
+      "limit": 2,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "textarea", "id": "intro", "label": "Intro" },
+        { "type": "richtext", "id": "note", "label": "Placeholder note", "info": "Replace with your review app embed when going live." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Moka Microplastics",
+      "blocks": [
+        { "type": "image" },
+        { "type": "reason" },
+        { "type": "cta" },
+        { "type": "offer" },
+        { "type": "reviews" }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["article", "page"]
+  }
+}
+{% endschema %}
