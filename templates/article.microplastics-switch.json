@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "microplastics-switch",
+      "settings": {
+        "top_bar_text": "Free shipping this week · 90-day money-back guarantee",
+        "eyebrow": "Baby Feeding Safety · Parent Guide",
+        "hero_title": "10 Reasons Parents Are Switching From <em>“BPA-Free” Plastic Baby Bottles</em> to Hosfu Glass",
+        "hero_dek": "A 2020 <em>Nature Food</em> study found that polypropylene baby bottles can release millions of microplastic particles into warm formula. Most parents were told to look for “BPA-free” — but not what happens when hot milk, sterilising, shaking and plastic meet every day.",
+        "author_avatar": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/4851e766-6e7e-4194-bf04-892f4ffed52f.png?v=1779943214",
+        "byline_html": "Reviewed by <strong>Dr. Adrian Keller, PhD</strong><br>Last updated July 2026 · 6 min read · Checked against publicly available research",
+        "product_link": "/products/hosfu-glass-baby-bottle",
+        "footer_html": "<p>This page is for general information only and is not medical advice. The microplastics research referenced here measured particle release from polypropylene infant feeding bottles; it did not establish that these levels cause harm in babies. The FDA states that current scientific evidence does not demonstrate that levels of microplastics or nanoplastics detected in foods pose a risk to human health, and WHO has noted remaining research gaps. Talk to your pediatrician about feeding choices for your baby. Sources: <a href=\"https://www.nature.com/articles/s43016-020-00171-y\" target=\"_blank\" rel=\"noopener\">Nature Food 2020</a>; <a href=\"https://www.tcd.ie/news_events/articles/high-levels-of-microplastics-released-from-infant-feeding-bottles-during-formula-prep/\" target=\"_blank\" rel=\"noopener\">Trinity College Dublin summary</a>; <a href=\"https://www.fda.gov/food/environmental-contaminants-food/microplastics-and-nanoplastics-foods\" target=\"_blank\" rel=\"noopener\">FDA</a>; <a href=\"https://www.who.int/publications/i/item/9789241516198\" target=\"_blank\" rel=\"noopener\">WHO</a>.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}

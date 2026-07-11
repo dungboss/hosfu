@@ -1,0 +1,401 @@
+{{ 'section-microplastics-switch.css' | asset_url | stylesheet_tag }}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+{% liquid
+  assign root_id = 'hf-adv-' | append: section.id
+
+  assign hero_title = section.settings.hero_title
+  if hero_title == blank and article.title != blank
+    assign hero_title = article.title | escape
+  endif
+
+  assign hero_dek = section.settings.hero_dek
+  if hero_dek == blank and article.excerpt != blank
+    assign hero_dek = article.excerpt | strip_html
+  endif
+
+  assign product_link = section.settings.product_link | default: '/products/hosfu-glass-baby-bottle'
+%}
+
+<div class="hf-adv" id="{{ root_id }}">
+  {% if section.settings.top_bar_text != blank %}
+    <div class="topbar">{{ section.settings.top_bar_text }}</div>
+  {% endif %}
+
+  <div class="wrap">
+    <header class="hero reveal">
+      {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{% endif %}
+      <h1>{{ hero_title }}</h1>
+      {% if hero_dek != blank %}<p class="dek">{{ hero_dek }}</p>{% endif %}
+      <div class="byline">
+        {% if section.settings.author_avatar != blank %}
+          <div class="avatar"><img src="{{ section.settings.author_avatar }}" alt="Reviewer avatar" width="42" height="42" loading="lazy"></div>
+        {% endif %}
+        <div>{{ section.settings.byline_html }}</div>
+      </div>
+    </header>
+
+    <section class="lede reveal">
+      <p class="drop">Most parents already do the careful things. They sterilise the bottle. They warm the feed. They choose &ldquo;BPA-free.&rdquo; They read the label twice. The uncomfortable part is that the most common bottle material &mdash; polypropylene plastic &mdash; was the same material studied when researchers measured high microplastic release during normal formula-preparation steps.</p>
+      <p>The point is not to panic. Regulators have not concluded that these detected levels cause specific harm. But many parents are asking a simpler question: <strong>if the exposure can be reduced by changing the material that touches the milk, why not make that switch?</strong></p>
+      <p>Here is the practical breakdown: what the research found, why &ldquo;BPA-free&rdquo; and some &ldquo;glass&rdquo; bottles may not fully solve the issue, and why Hosfu was built around the milk-contact surface &mdash; not just the outside of the bottle.</p>
+    </section>
+
+    <div class="source-box reveal">
+      <b>Research note:</b> The core bottle-shedding data comes from Li et al., <em>Nature Food</em> 2020, which reported microplastic release from polypropylene infant feeding bottles under formula-preparation conditions. For ad-safety and accuracy, this page avoids claiming that microplastics cause a specific disease. References: <a href="https://www.nature.com/articles/s43016-020-00171-y" target="_blank" rel="noopener">Nature Food study</a>, <a href="https://www.fda.gov/food/environmental-contaminants-food/microplastics-and-nanoplastics-foods" target="_blank" rel="noopener">FDA position</a>, <a href="https://www.who.int/publications/i/item/9789241516198" target="_blank" rel="noopener">WHO report</a>.
+    </div>
+
+    <section class="list">
+      <article class="reason reveal">
+        <div class="num">1</div>
+        <h2>Your baby&rsquo;s bottle may be releasing microplastics into warm feeds</h2>
+        <p>In 2020, researchers at Trinity College Dublin studied polypropylene infant feeding bottles &mdash; the plastic many baby bottles are made from. Following standard formula-preparation style conditions, they found releases reaching <strong>up to around 16 million microplastic particles per litre</strong>.</p>
+        <p>That number sounds extreme, but the mechanism is simple: plastic, heat and repeated use do not stay perfectly unchanged forever. The more parents understand the material, the less &ldquo;BPA-free&rdquo; feels like the whole answer.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/1_47b5be25-87fb-4713-994e-fd2ffca3d153.png?v=1783484878" alt="Microplastics concern in baby bottle feeding" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">2</div>
+        <h2>Hot water, sterilising and shaking are exactly the trigger points</h2>
+        <p>The study found that temperature was one of the biggest drivers. When water got hotter, particle release increased sharply. That matters because feeding routines often include hot water, bottle warmers, sterilising, shaking and cleaning.</p>
+        <p>In other words, the steps parents use to keep feeds clean can also be the steps that stress the plastic most. This is why the material touching the milk matters more than the marketing label on the front.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/2_d71b52a4-80a9-4b31-b786-74d32d017945.png?v=1783484878" alt="Hot water and sterilising can stress plastic bottles" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">3</div>
+        <h2>&ldquo;BPA-free&rdquo; was never the same as &ldquo;plastic-free&rdquo;</h2>
+        <p>BPA-free means one specific chemical &mdash; Bisphenol A &mdash; is not present. That is useful, but it does <strong>not</strong> mean the bottle is free from plastic, nor does it say anything about tiny particles physically shedding when plastic is heated, scrubbed or shaken.</p>
+        <p>For years, &ldquo;BPA-free&rdquo; gave parents peace of mind. Now more parents are realising it answered only one question, not the whole bottle-safety question.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/3_62c08158-4806-43ba-8c52-635d9c9f4e04.png?v=1783484878" alt="BPA-free does not mean plastic-free baby bottle" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <section class="cta-strip reveal">
+        <h3>Want the simpler fix?</h3>
+        <p>Hosfu is built around one practical rule: keep ordinary plastic away from the milk-contact path wherever possible.</p>
+        <a class="cta" href="{{ product_link }}">See How Hosfu Fixes It</a>
+        <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
+      </section>
+
+      <article class="reason reveal">
+        <div class="num">4</div>
+        <h2>It is not just one feed. It can repeat with daily washing and sterilising.</h2>
+        <p>A bottle is not used once. It is washed, sterilised, warmed, cooled, packed, dropped, scrubbed and reused again. Tiny scratches and repeated heat exposure are exactly why parents are starting to think beyond &ldquo;is this bottle new?&rdquo; and ask &ldquo;what is this bottle made of?&rdquo;</p>
+        <p>Plastic may look clean after every wash. But clean-looking and inert are not the same thing.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/4_15b19733-c416-450a-9d2e-45308f304c8a.png?v=1783484878" alt="Daily washing and sterilising baby bottles" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">5</div>
+        <h2>Even some &ldquo;glass&rdquo; bottles still put plastic where it counts</h2>
+        <p>Switching to glass feels like the obvious answer &mdash; until you look at the full milk path. Some bottles have a glass body, but still use plastic collars, vents, rings or bases that can sit near warm milk or steam during feeding and sterilising.</p>
+        <p>That is why Hosfu focuses on the entire system, not just the bottle body. A safer-feeling material on the outside does not help much if the feed still passes through ordinary plastic parts.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/5_ef7f9eee-cb3d-4694-9a5a-75b44d15c0a1.png?v=1783484878" alt="Glass bottle comparison with plastic parts" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">6</div>
+        <h2>Hosfu was designed around the milk-contact path</h2>
+        <p>Most bottle pages talk about shape, size and cute colours. Hosfu starts with a more serious question: <strong>what touches the milk when the bottle is warm?</strong></p>
+        <p>The Hosfu design is built around borosilicate glass and soft silicone for the surfaces that matter most, with heat-resistant components selected for daily sterilising routines. The goal is not to make feeding complicated &mdash; it is to remove the material guesswork from a routine parents repeat every day.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/6_61353016-18f1-4e83-a3d0-2fc686ec4d21.png?v=1783484879" alt="Hosfu bottle materials and components overview" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <section class="cta-strip reveal">
+        <h3>Glass where it matters. Silicone where baby latches.</h3>
+        <p>Make the switch without turning every feed into a science project.</p>
+        <a class="cta" href="{{ product_link }}">Shop Hosfu Glass Bottle</a>
+        <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
+      </section>
+
+      <article class="reason reveal">
+        <div class="num">7</div>
+        <h2>What touches the milk is glass and silicone, not ordinary polypropylene</h2>
+        <p>This is the main difference careful parents are looking for. Hosfu uses a borosilicate glass body for the milk chamber and a soft silicone nipple for feeding, so the parts parents think about most are made from materials chosen for warm-feeding routines.</p>
+        <p>Parents do not need to memorise material science. They just need a bottle that makes the better material choice obvious.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/7_42abcc33-e818-48bf-9a2c-543dc68eb5a2.png?v=1783484878" alt="Warm milk poured into a Hosfu glass bottle" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">8</div>
+        <h2>Built so your baby can actually use it, not just so it sounds safer</h2>
+        <p>A bottle only works if the baby accepts it. That is why the nipple feel, flow comfort, grip and cleaning experience matter. Hosfu is positioned as a practical daily bottle: soft silicone latch, clear glass milk chamber, easy cleaning and a premium feel parents can trust during tired 3am feeds.</p>
+        <p>The goal is simple: a safer-feeling material choice without making feeding feel complicated.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/8.png?v=1783484878" alt="Baby feeding with soft silicone nipple bottle" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <article class="reason reveal">
+        <div class="num">9</div>
+        <h2>The honest part: it is not the cheapest option</h2>
+        <p>Cheap plastic is cheap for a reason. Borosilicate glass, silicone and better heat-resistant materials cost more &mdash; and that is the point. Hosfu is for parents who would rather buy based on material quality than keep replacing cloudy, scratched or questionable bottles.</p>
+        <p>No bottle can remove every worry from early parenthood. But choosing what touches your baby&rsquo;s milk is one decision you can make deliberately.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/9.png?v=1783484878" alt="Premium Hosfu bottle setup and packaging" width="1254" height="1254" loading="lazy">
+      </figure>
+
+      <section class="cta-strip reveal">
+        <h3>Check current stock &amp; pricing</h3>
+        <p>Start with one bottle, or build a small rotation for home, night feeds and travel.</p>
+        <a class="cta" href="{{ product_link }}">Check Hosfu Availability</a>
+        <p class="microcopy">Bundle options may be available at checkout.</p>
+      </section>
+
+      <article class="reason reveal">
+        <div class="num">10</div>
+        <h2>More parents are making the switch for peace of mind</h2>
+        <p>The parents most drawn to Hosfu are not trying to be perfect. They are simply reading the research, checking the material list and choosing the option that makes warm feeds feel less questionable.</p>
+        <p>Use it, wash it, sterilise it and see how it fits your routine. If Hosfu is not the easiest feeding upgrade you have made, your 90-day guarantee keeps the decision simple.</p>
+      </article>
+      <figure class="reason-media reveal">
+        <img src="https://cdn.shopify.com/s/files/1/0979/5082/6776/files/10.png?v=1783484879" alt="Parent and baby with Hosfu bottle for peace of mind" width="1254" height="1254" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="proof-grid reveal" aria-label="Hosfu material highlights">
+      <div class="proof-card"><b>Glass milk chamber</b><span>Borosilicate glass is the main surface holding the warm milk.</span></div>
+      <div class="proof-card"><b>Soft silicone latch</b><span>Designed for a comfortable feed without ordinary plastic at the nipple.</span></div>
+      <div class="proof-card"><b>Built for routines</b><span>Made for washing, warming and sterilising cycles parents repeat daily.</span></div>
+    </section>
+
+    <section class="compare reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th class="hosfu">Hosfu</th>
+            <th>Plastic bottle</th>
+            <th>Glass body + plastic parts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Borosilicate glass milk chamber</td><td class="hosfu yes">&#10003;</td><td class="no">&#10007;</td><td>Usually</td></tr>
+          <tr><td>Designed to avoid ordinary plastic in the milk path</td><td class="hosfu yes">&#10003;</td><td class="no">&#10007;</td><td>Varies</td></tr>
+          <tr><td>Soft silicone nipple</td><td class="hosfu yes">&#10003;</td><td>Varies</td><td>Varies</td></tr>
+          <tr><td>Built for repeated warm-feeding routines</td><td class="hosfu yes">&#10003;</td><td class="no">Material stress concern</td><td>Depends on parts</td></tr>
+          <tr><td>Simple material choice for parents</td><td class="hosfu yes">&#10003;</td><td class="no">BPA-free only</td><td>Needs closer checking</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="material-box reveal">
+      <h3>What is inside Hosfu &mdash; and what is not</h3>
+      <div class="material"><b>Borosilicate glass body</b><span>The milk chamber is built around glass instead of ordinary polypropylene plastic.</span></div>
+      <div class="material"><b>Soft silicone nipple</b><span>A gentle feeding surface designed for latch comfort and daily use.</span></div>
+      <div class="material"><b>Heat-conscious construction</b><span>Designed for the warming, washing and sterilising routines parents repeat every day.</span></div>
+      <div class="material"><b>Practical everyday handling</b><span>A premium bottle should feel easy to hold, easy to clean and simple to keep in rotation.</span></div>
+    </section>
+
+    <section class="truth-box reveal">
+      <h3>What the research does &mdash; and does not &mdash; prove</h3>
+      <div class="cols">
+        <div class="does">
+          <h4>What is established</h4>
+          <ul>
+            <li>Polypropylene bottles can release microplastics</li>
+            <li>Heat and repeated preparation can increase release</li>
+            <li>&ldquo;BPA-free&rdquo; is not the same as &ldquo;plastic-free&rdquo;</li>
+            <li>Glass and silicone are not polypropylene plastic</li>
+          </ul>
+        </div>
+        <div class="doesnt">
+          <h4>What is not proven</h4>
+          <ul>
+            <li>That detected levels cause a specific disease</li>
+            <li>That every plastic bottle is unsafe</li>
+            <li>That switching bottles guarantees health outcomes</li>
+            <li>That parents should ignore pediatric feeding advice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="parent-notes reveal">
+      <h2>Why careful parents are drawn to Hosfu</h2>
+      <p class="center-copy">These are the priorities parents usually care about when they move away from plastic feeding bottles.</p>
+
+      <div class="note">
+        <h3>&ldquo;I wanted glass, but I did not want a complicated bottle.&rdquo;</h3>
+        <p>That is the main Hosfu idea: premium materials, simple daily use and fewer questions about what warm milk is touching.</p>
+      </div>
+      <div class="note">
+        <h3>&ldquo;BPA-free was not enough information for me anymore.&rdquo;</h3>
+        <p>Parents are becoming more specific: not just what chemical is absent, but what material is present in the feed path.</p>
+      </div>
+      <div class="note">
+        <h3>&ldquo;I just wanted one less thing to worry about.&rdquo;</h3>
+        <p>That is the emotional reason this switch makes sense: the baby may never notice the upgrade, but parents do.</p>
+      </div>
+    </section>
+
+    <section class="faq reveal">
+      <h2>Questions parents ask before switching</h2>
+
+      <details>
+        <summary>Is BPA-free plastic already safe enough?</summary>
+        <p>BPA-free removes one specific chemical, which is good. But the bottle may still be polypropylene plastic, and the microplastic research is about physical particle release during heating and preparation &mdash; not BPA specifically.</p>
+      </details>
+
+      <details>
+        <summary>Does this mean plastic bottles are dangerous?</summary>
+        <p>No. This page does not claim that plastic bottles cause a specific disease or that every plastic bottle is unsafe. The honest point is that microplastic release has been measured, the health question is still being studied, and many parents prefer to reduce avoidable plastic contact where they can.</p>
+      </details>
+
+      <details>
+        <summary>How is Hosfu different from a normal glass bottle?</summary>
+        <p>Hosfu is positioned around the full feeding system &mdash; not only the glass body. The goal is to make the material choice clearer for parents who do not want warm milk sitting in ordinary plastic.</p>
+      </details>
+
+      <details>
+        <summary>Will my baby accept the nipple?</summary>
+        <p>Every baby is different, but Hosfu is designed around a soft silicone feeding feel and a simple daily-use experience. Start slowly, use the flow option that matches your baby&rsquo;s stage, and give your baby time to adjust.</p>
+      </details>
+
+      <details>
+        <summary>Can I sterilise and warm it?</summary>
+        <p>Follow the care instructions included with your Hosfu bottle. As with any baby-feeding product, inspect parts regularly and replace nipples or components if they show wear.</p>
+      </details>
+
+      <details>
+        <summary>What if it does not work for us?</summary>
+        <p>Hosfu is backed by a 90-day money-back guarantee. Use it in your real routine and decide based on your baby, your feeding setup and your comfort level.</p>
+      </details>
+    </section>
+
+    <section class="close reveal">
+      <h2>Make the switch your baby will never know they needed</h2>
+      <p>You cannot control everything in the early months. But you can choose what touches your baby&rsquo;s milk.</p>
+      <a class="cta" href="{{ product_link }}">Shop Hosfu Glass Bottle</a>
+      <p class="microcopy">Free shipping this week &middot; 90-day money-back guarantee</p>
+    </section>
+
+    <footer class="foot">{{ section.settings.footer_html }}</footer>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ root_id }}');
+    if (!root) { return; }
+    var els = root.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Microplastics Switch",
+  "tag": "section",
+  "class": "microplastics-switch-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Announcement bar"
+    },
+    {
+      "type": "text",
+      "id": "top_bar_text",
+      "label": "Top bar text",
+      "default": "Free shipping this week · 90-day money-back guarantee"
+    },
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Baby Feeding Safety · Parent Guide"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "hero_title",
+      "label": "Headline (falls back to article title)",
+      "info": "Wrap words in <em>…</em> to accent them in rose italic.",
+      "default": "10 Reasons Parents Are Switching From <em>“BPA-Free” Plastic Baby Bottles</em> to Hosfu Glass"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "hero_dek",
+      "label": "Sub-headline / dek (falls back to article excerpt)",
+      "default": "A 2020 <em>Nature Food</em> study found that polypropylene baby bottles can release millions of microplastic particles into warm formula. Most parents were told to look for “BPA-free” — but not what happens when hot milk, sterilising, shaking and plastic meet every day."
+    },
+    {
+      "type": "header",
+      "content": "Author byline"
+    },
+    {
+      "type": "url",
+      "id": "author_avatar",
+      "label": "Reviewer avatar image URL"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "byline_html",
+      "label": "Byline text",
+      "info": "Supports <strong> and <br>.",
+      "default": "Reviewed by <strong>Dr. Adrian Keller, PhD</strong><br>Last updated July 2026 · 6 min read · Checked against publicly available research"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "url",
+      "id": "product_link",
+      "label": "Hosfu product link",
+      "info": "Used by every CTA button on the page. Defaults to /products/hosfu-glass-baby-bottle."
+    },
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_html",
+      "label": "Footer disclaimer",
+      "default": "<p>This page is for general information only and is not medical advice. The microplastics research referenced here measured particle release from polypropylene infant feeding bottles; it did not establish that these levels cause harm in babies. The FDA states that current scientific evidence does not demonstrate that levels of microplastics or nanoplastics detected in foods pose a risk to human health, and WHO has noted remaining research gaps. Talk to your pediatrician about feeding choices for your baby.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Microplastics Switch"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["article", "page"]
+  }
+}
+{% endschema %}
