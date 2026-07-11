@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "moka-feeding-mistakes",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-foaming-latch.png?v=111290166737290194981783477675",
+            "alt": "Baby losing milk and foam at the mouth during bottle feeding",
+            "caption": "Baby losing milk and foam at the mouth during bottle feeding"
+          }
+        },
+        "reason-1": {
+          "type": "reason",
+          "settings": {
+            "number": "1",
+            "title": "Why breastfed babies struggle",
+            "body": "<p><strong>A mother's breast isn't fixed.</strong> It softens, compresses, changes shape, and meets your baby's mouth as they feed.</p><p>A bottle nipple doesn't do any of that.</p><p>It doesn't soften around your baby's mouth. It doesn't adjust when they pull, pause, or change pressure. It just sits there: same shape, same angle, same flow.</p><p>So when the nipple is too long, too narrow, or sitting awkwardly in the mouth, your baby has to work around the bottle.</p><p>That's when a normal feed can start looking wrong fast. <strong>The latch slips. Milk runs down the side.</strong> And a hungry baby suddenly looks like they're fighting the bottle.</p>"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-bottle-brands-4x3.jpg?v=31056735189360816431783477672",
+            "alt": "Table of popular baby bottle brands used in trial and error",
+            "caption": "Table of popular baby bottle brands used in trial and error"
+          }
+        },
+        "reason-2": {
+          "type": "reason",
+          "settings": {
+            "number": "2",
+            "title": "Why the \"best\" anti-colic bottles can still feel wrong",
+            "body": "<p>For years, the bottle industry treated <strong>air bubbles like the main villain.</strong></p><p>So the big innovations became vents, tubes, valves, leak systems, and flow parts. Anything that made the bottle look more \"anti-colic.\"</p><p>But those designs are based on an older way of thinking from 30 years ago: move the milk cleaner, get the air out, stop the leaks. Useful at the time, but incomplete.</p><p>Because when a breastfed baby struggles with a bottle, the problem often starts before air ever reaches their stomach. It starts with how the nipple sits in their mouth.</p><p>That's why parents can buy the \"best\" anti-colic bottle and still feel like something is off. <strong>The bottle is solving for bubbles, while their baby is struggling with latch.</strong></p>"
+          }
+        },
+        "cta-1": {
+          "type": "cta",
+          "settings": {
+            "label": "See How Moka Supports Latch",
+            "link": "/?from=moka_latch"
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-lab-testing-4x3.jpg?v=37321869051312854511783477676",
+            "alt": "Two researchers testing Moka bottle shape and nipple measurements",
+            "caption": "Two researchers testing Moka bottle shape and nipple measurements"
+          }
+        },
+        "reason-3": {
+          "type": "reason",
+          "settings": {
+            "number": "3",
+            "title": "The one nipple shape parents are missing",
+            "body": "<p>Moka wasn't built by adding another vent to an old bottle shape.</p><p>The team tested <strong>dozens of nipple shapes, widths, angles, and flow variations</strong> to find the version that helped babies hold the most stable latch. Not just the one that looked closest to a breast on a product page.</p><p>The final design uses <strong>platinum-cured silicone, a wider base, and a 15-degree natural feeding angle</strong> so the nipple sits closer to the way the breast meets a baby's mouth.</p><p>That angle matters. Instead of a long, straight nipple pushing into the mouth, Moka helps the baby <strong>draw the nipple in, seal around the base, and keep the feed moving</strong> without constantly slipping off rhythm.</p><p>The 5 unique flow stages then work with the latch, not against it. Babies get the pace that fits their stage, while the nipple shape helps them latch deeply enough to feed naturally.</p>"
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-milk-contact-4x3.jpg?v=154653621867768967221783477678",
+            "alt": "Milk touching the glass Moka bottle and feeding components",
+            "caption": "Milk touching the glass Moka bottle and feeding components"
+          }
+        },
+        "reason-4": {
+          "type": "reason",
+          "settings": {
+            "number": "4",
+            "title": "Where \"premium quality\" actually matters",
+            "body": "<p>Moka is a premium, limited-run bottle; not another \"anti-colic\" bottle dressed up with better marketing.</p><p><strong>Where milk touches, Moka uses real borosilicate glass, heat-resistant PPSU, and platinum-cured silicone.</strong> Not cheap plastic that starts feeling questionable once it's being sterilised every day.</p><p>That matters because baby bottles don't live gentle lives. They get boiled, steamed, washed, dropped, packed, reheated, and grabbed half-asleep at 3am.</p><p>Budget materials are cheaper for a reason. <strong>They warp. Scratch. Cloud. Hold smells. Start leaking.</strong> Then they end up at the back of the cupboard.</p><p>Moka was designed for the way parents actually use bottles, not the way bottles look on a shelf.</p>"
+          }
+        },
+        "cta-2": {
+          "type": "cta",
+          "settings": {
+            "label": "Check Current Stock & Pricing",
+            "link": "/?from=moka_latch"
+          }
+        },
+        "image-5": {
+          "type": "image",
+          "settings": {
+            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-parent-relief-4x3.jpg?v=11466215577215627181783477679",
+            "alt": "Parent and baby after a calm feed with the Moka bottle",
+            "caption": "Parent and baby after a calm feed with the Moka bottle"
+          }
+        },
+        "reason-5": {
+          "type": "reason",
+          "settings": {
+            "number": "5",
+            "title": "How thousands of babies learnt to stay on the bottle",
+            "body": "<p>It started with parents near the first lab in Switzerland who got early access to the prototypes.</p><p>Then the same feedback kept coming in. Babies who used to <strong>gag on long nipples, click through feeds, arch away, or pull off halfway through</strong> were finally staying on long enough to finish within days.</p><p>For mothers trying to protect breastfeeding, that kind of change matters. Less stopping. Less repositioning. Less watching milk run down their baby's chin while wondering if the bottle is making everything worse.</p><p>Moka gave them a cleaner answer: not another vague \"anti-colic\" promise, but a bottle built around the latch symptoms they were actually seeing.</p><p>For over 4,247 mothers and counting, Moka became the point where feeds stopped feeling like weeks of trial and error, and finally started feeling like <strong>something their baby could settle into.</strong></p>"
+          }
+        },
+        "offer": {
+          "type": "offer",
+          "settings": {
+            "heading": "Ready for a Bottle Built Around Better Latch?",
+            "button_label": "Check Stock Availability",
+            "button_link": "/?from=moka_latch"
+          }
+        },
+        "reviews": {
+          "type": "reviews",
+          "settings": {
+            "heading": "What Moka parents are saying",
+            "intro": "Real product feedback from families who have tried Moka.",
+            "note": "<p>Connect your review app (Judge.me, Loox, etc.) here to show live product reviews.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "reason-1",
+        "image-2",
+        "reason-2",
+        "cta-1",
+        "image-3",
+        "reason-3",
+        "image-4",
+        "reason-4",
+        "cta-2",
+        "image-5",
+        "reason-5",
+        "offer",
+        "reviews"
+      ],
+      "settings": {
+        "brand_logo": "https://mokababy.co/cdn/shop/t/12/assets/moka-the-review-logo.png?v=133045393715241146831783477692",
+        "brand_link": "/?from=moka_latch",
+        "heading": "5 Bottle-Feeding Mistakes Most Parents Are Never Taught To Look For",
+        "byline_photo": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-author-adrian-keller.jpg?v=163473772750822948491783477671",
+        "byline_html": "<strong>Dr. Adrian Keller, PhD</strong><br>Swiss infant-feeding researcher · Reviewed July 10, 2026",
+        "cta_link": "/?from=moka_latch"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
