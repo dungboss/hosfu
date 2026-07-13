@@ -7,9 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/*
- * Auto-generated article template.
- */
 {
   "sections": {
     "main": {
@@ -241,11 +238,11 @@
         "reviews"
       ],
       "settings": {
-        "brand_logo": "https://kswzw0-4e.myshopify.com/cdn/shop/files/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo__4_-removebg-preview_37f996dc-8e6f-4296-a546-82ca458c6b13.png?v=1780400984&amp;width=500",
+        "brand_logo": "https://kswzw0-4e.myshopify.com/cdn/shop/files/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo__4_-removebg-preview_37f996dc-8e6f-4296-a546-82ca458c6b13.png?v=1780400984&width=500",
         "brand_link": "https://mokababy.co/",
-        "heading": "10 Reasons Parents Are Switching From \"BPA-Free\" Plastic Baby Bottles to Swiss-Engineered Glass",
         "eyebrow": "",
-        "dek": "A 2020 study in Nature Food found a single polypropylene bottle can release up to 16 million microplastic particles into one liter of warm formula. Most parents have never been told. Here's what the research shows, why \"BPA-free\" and even \"glass\" bottles don't fully solve it, and the Swiss bottle 4,000+ parents switched to.",
+        "heading": "10 Reasons Parents Are Switching From \"BPA-Free\" Plastic Baby Bottles to Swiss-Engineered Glass",
+        "dek": "A 2020 study published in <em>Nature Food</em> found that a single polypropylene baby bottle could release as many as 16 million microplastic particles into one liter of warm formula—yet most parents have never heard about it. Here’s what the research reveals, why “BPA-free” plastics and even traditional glass bottles may not completely eliminate the concern, and why more than 4,000 parents have made the switch to this Swiss-designed bottle.",
         "byline_photo": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-author-adrian-keller.jpg?v=163473772750822948491783477671",
         "byline_html": "<strong>Dr. Adrian Keller, PhD</strong><br>Swiss infant-feeding materials researcher · Reviewed July 10, 2026",
         "cta_link": "https://mokababy.co/"
