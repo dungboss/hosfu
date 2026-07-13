@@ -141,7 +141,7 @@
         "image-8": {
           "type": "image",
           "settings": {
-            "image": "",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_34_54_13_thg_7_2026_800x800.png?v=1783935314",
             "alt": "Baby feeding and Moka vent system placeholder",
             "caption": "Close-up of the Moka bottom vent and airflow direction"
           }
@@ -180,7 +180,7 @@
         "image-10": {
           "type": "image",
           "settings": {
-            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-parent-relief-4x3.jpg?v=11466215577215627181783477679",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_39_10_13_thg_7_2026_800x800.png?v=1783935562",
             "alt": "Parent holding a settled baby beside a clean Moka setup",
             "caption": "Parent holding a settled baby beside a clean four-piece Moka setup"
           }
