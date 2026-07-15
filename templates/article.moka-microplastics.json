@@ -79,14 +79,14 @@
           "type": "reason",
           "settings": {
             "number": "4",
-            "title": "Even \"glass\" bottles usually aren't fully glass",
-            "body": "<p>A bottle marketed as \"glass\" sounds like the obvious fix — until you look at what actually touches the milk. On many popular glass bottles, the collar, internal vent, and tubing are still molded from polypropylene. The glass is often just the outer chamber; the parts in the most repeated contact with hot milk frequently aren't glass at all.</p>"
+            "title": "Yes, Hosfu Costs More—and There’s an Honest Reason",
+            "body": "<p>Hosfu was not created to compete with the cheapest plastic bottle on the shelf.</p><p>The borosilicate glass body stays clear and resists the cloudiness and warping commonly associated with heavily used plastic bottles. The soft silicone nipple supports a deeper, more natural latch, while the bottom vent helps reduce vacuum buildup and unnecessary air intake.</p><p>That material quality costs more upfront, but it is designed for repeated use rather than frequent replacement.</p><p>After buying bottles that leak, nipples your baby refuses, and anti-colic systems you hate cleaning, one thoughtfully designed bottle may cost less than continuing the search.</p>"
           }
         },
         "image-5": {
           "type": "image",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_15_2026_03_16_23_PM_800x800.png?v=1784103402",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_39_10_13_thg_7_2026_800x800.png?v=1783935562",
             "alt": "Polypropylene contact parts in common glass baby bottle designs",
             "caption": "Comparison showing polypropylene parts that contact hot milk in common glass bottle designs"
           }
@@ -95,40 +95,15 @@
           "type": "reason",
           "settings": {
             "number": "5",
-            "title": "What we built Hosfu's milk path out of instead",
-            "body": "<p>Hosfu's milk-contact surfaces are <strong>borosilicate glass</strong> and <strong>medical-grade silicone</strong> — nothing else touches your baby's milk. The bottle's structural collar uses <strong>PPSU</strong>, a high-performance plastic chosen specifically because it holds up to repeated sterilization without degrading the way polypropylene does. Every batch is independently lab-tested.</p>"
+            "title": "Thousands of Parents Are Finally Done Searching",
+            "body": "<p>Hosfu began with parents who wanted more than another “BPA-free” label. They wanted to understand what actually touched their baby’s milk, without sacrificing feeding performance or creating more work at the sink.</p><p>The same experiences began appearing repeatedly: babies feeding at a steadier pace, parents spending less time cleaning small parts, and families finally removing the unused bottles from their cupboards.</p><p>Hosfu cannot promise that your baby will never experience gas, spit-up, or fussiness. Babies still need burping, and every child feeds differently.</p><p>What Hosfu offers is something simpler: thoughtfully selected materials, smoother airflow, fewer frustrating parts, and one less thing for tired parents to worry about.</p>"
           }
         },
-        "image-6": {
-          "type": "image",
+        "cta_REdGy6": {
+          "type": "cta",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/cb28d6c3-d0ba-40a2-84e2-e92a70d18fcf_800x800.png?v=1783757612",
-            "alt": "",
-            "caption": ""
-          }
-        },
-        "reason-6": {
-          "type": "reason",
-          "settings": {
-            "number": "6",
-            "title": "Built for the actual feed, not just the safety label",
-            "body": "<p>A safer bottle doesn't help if your baby won't feed well from it. Hosfu uses a <strong>bottom-vent anti-colic system</strong> designed to reduce the air your baby swallows during a feed, paired with a <strong>soft silicone nipple</strong> shaped for a deeper, more natural latch and <strong>age-appropriate flow rates</strong>. Most babies adjust within a few days to a week.</p>"
-          }
-        },
-        "image-10": {
-          "type": "image",
-          "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_39_10_13_thg_7_2026_800x800.png?v=1783935562",
-            "alt": "Parent holding a settled baby beside a clean setup",
-            "caption": "Parent holding a settled baby beside a clean four-piece setup"
-          }
-        },
-        "reason-10": {
-          "type": "reason",
-          "settings": {
-            "number": "7",
-            "title": "More than 3,000 parents have already made the switch.",
-            "body": "<p>It began with parents near the Dutch lab—people who studied the research, questioned conventional bottles, and wanted a safer alternative. As more families shared their experience, the word spread. Today, <strong>more than 3,000 parents have left positive reviews</strong>, while many others have embraced <strong>Hosfu’s safer-feeding philosophy</strong>. They can feed their babies with greater peace of mind, knowing the bottle is no longer another source of worry. Every Hosfu bottle also comes with a <strong>90-day money-back guarantee</strong>. Use it, wash it, and sterilize it at home. If it doesn’t feel like one of the simplest upgrades you’ve made for your baby, return it for a <strong>full refund</strong>.</p>"
+            "label": "See How Hosfu Is Different →",
+            "link": "shopify://products/hosfu-glass-baby-bottle"
           }
         },
         "offer": {
@@ -152,10 +127,7 @@
         "reason-4",
         "image-5",
         "reason-5",
-        "image-6",
-        "reason-6",
-        "image-10",
-        "reason-10",
+        "cta_REdGy6",
         "offer"
       ],
       "settings": {
