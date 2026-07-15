@@ -24,14 +24,14 @@
           "type": "reason",
           "settings": {
             "number": "1",
-            "title": "It might not \"just be colic\"",
-            "body": "<p>You've tried burping mid-feed, switching formula, slower-flow nipples — and your baby still seems uncomfortable after most feeds. Most parents assume it's just \"normal baby stuff\" that they have to wait out.</p><p>What rarely comes up: the bottle itself — both the material and how much air the design lets your baby swallow — can be part of what's making feeds harder than they need to be. It's worth ruling out before assuming it's something you just have to live with.</p>"
+            "title": "You’ve Tried Different Bottles, but Feeding Still Feels Exhausting",
+            "body": "<p>You’ve changed nipple flows, switched formulas, stopped mid-feed to burp, and bought bottles that all promised calmer feeding. Yet your baby may still click, gulp, pull away, or become uncomfortable afterward.</p><p>Meanwhile, your cupboard keeps filling with bottles you no longer use.</p><p>Parents often assume they just haven’t found the right brand yet. But sometimes the real problem is the bottle itself—how it controls airflow, what materials touch the milk, and how many frustrating pieces it adds to your routine.</p>"
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_15_2026_03_11_37_PM_800x800.png?v=1784103116",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_11_2026_02_04_10_PM_b26aebc0-4861-4b61-a078-88480dfbb269_800x800.png?v=1784109849",
             "alt": "",
             "caption": ""
           }
@@ -56,8 +56,8 @@
           "type": "reason",
           "settings": {
             "number": "3",
-            "title": "\"BPA-free\" was never a plastic-free promise",
-            "body": "<p>\"BPA-free\" means exactly one thing: the bottle doesn't contain Bisphenol A. It says nothing about whether the plastic sheds particles when heated.</p><p>In 2024, parents filed class-action lawsuits against several major baby bottle makers — including the companies behind Philips Avent, Dr. Brown's, Nuk, and Tommee Tippee — alleging they never warned customers that heating their \"BPA-free\" polypropylene bottles could release microplastics. Courts have allowed some of these failure-to-warn claims to proceed. The label was never the full picture.</p>"
+            "title": "Why Hosfu Takes a Different Approach",
+            "body": "<p>Many bottles labeled “BPA-free” are still made primarily from polypropylene plastic. Even some bottles marketed as glass continue to use plastic vents or internal parts where hot milk can make repeated contact.</p><p>Hosfu uses borosilicate glass and soft silicone along the milk-contact pathway, with a durable PPSU collar designed to withstand repeated everyday sterilization.</p><p>Instead of placing a long vent tube inside the bottle, Hosfu uses a streamlined bottom-air system. It helps balance pressure as your baby drinks, supporting a steadier flow without adding a collection of tiny internal parts.</p><p>Four simple components. No complicated vent straw. No special cleaning routine.</p>"
           }
         },
         "cta-3": {
@@ -70,7 +70,7 @@
         "image-4": {
           "type": "image",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_13_2026_03_51_20_PM_800x800.png?v=1783932697",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_11_2026_03_42_43_PM_800x800.png?v=1783760053",
             "alt": "Selection of common plastic and BPA-free baby bottles",
             "caption": "Selection of common plastic and BPA-free baby bottle designs"
           }
@@ -162,7 +162,7 @@
         "brand_logo": "https://kswzw0-4e.myshopify.com/cdn/shop/files/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo__4_-removebg-preview_37f996dc-8e6f-4296-a546-82ca458c6b13.png?v=1780400984&width=500",
         "brand_link": "shopify://products/hosfu-glass-baby-bottle",
         "eyebrow": "",
-        "heading": "7 Reasons Parents Are Quietly Switching From \"BPA-Free\" Plastic Bottles This Year",
+        "heading": "5 Reasons Thousands of Parents Are Switching Their “Anti-Colic” Bottles for Hosfu",
         "dek": "About 82% of baby bottles sold worldwide are made from polypropylene. A 2020 study published in <em>Nature Food</em> found that when these bottles are prepared exactly the way the WHO recommends — hot water, sterilizing, shaking — they can release up to 16 million microplastic particles per liter. Here's what that research found, why \"BPA-free\" doesn't mean what most parents assume, and why some parents are switching bottles entirely.",
         "byline_photo": "",
         "byline_html": "<strong> Reviewed by the Hosfu Product &amp; Safety Team, PhD</strong><br> July 10, 2026",
