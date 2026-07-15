@@ -24,8 +24,8 @@
           "type": "reason",
           "settings": {
             "number": "1",
-            "title": "Your baby's bottle could be releasing millions of microplastic particles into every single feeding.",
-            "body": "<p>In 2020, researchers from Trinity College Dublin published a study in <em>Nature Food</em> examining polypropylene, the plastic used in most baby bottles. After following the WHO’s standard formula-preparation guidelines, they found that a single bottle could release up to 16 million microplastic particles per liter, along with trillions of much smaller nanoplastic particles. The researchers estimated that a bottle-fed baby could ingest more than one million of these particles every day. Since polypropylene accounts for around 82% of baby bottles sold worldwide, millions of parents may be exposing their babies without ever being warned.</p>"
+            "title": "It might not \"just be colic\"",
+            "body": "<p>You've tried burping mid-feed, switching formula, slower-flow nipples — and your baby still seems uncomfortable after most feeds. Most parents assume it's just \"normal baby stuff\" that they have to wait out.</p><p>What rarely comes up: the bottle itself — both the material and how much air the design lets your baby swallow — can be part of what's making feeds harder than they need to be. It's worth ruling out before assuming it's something you just have to live with.</p>"
           }
         },
         "image-2": {
@@ -40,8 +40,8 @@
           "type": "reason",
           "settings": {
             "number": "2",
-            "title": "Microscopic doesn't mean harmless. It means it gets everywhere.",
-            "body": "<p>What most parents are never told is that these particles may not simply pass through the body. Some are small enough to move beyond the gut, and microplastics have already been detected in human blood, breast milk, and placental tissue. Because an infant’s organs and immune system are still developing, researchers are especially concerned about repeated exposure during the earliest and most vulnerable months of life. Studies continue to investigate possible links to inflammation, oxidative stress, and hormone disruption while the brain, organs, and endocrine system are still forming. Tiny was never the same as harmless.</p>"
+            "title": "The study that changed how researchers look at plastic bottles",
+            "body": "<p>In 2020, researchers at Trinity College Dublin published a peer-reviewed study in <em>Nature Food</em> testing polypropylene baby bottles — the plastic used in roughly 82% of bottles sold worldwide — under the WHO's own recommended sterilizing-and-mixing steps.</p><p>The result: bottles released as much as 16.2 million microplastic particles per liter, with release rising sharply as water temperature climbed toward boiling. The same team estimated that some bottle-fed infants could be exposed to more than a million particles a day.</p>"
           }
         },
         "image-3": {
@@ -56,15 +56,15 @@
           "type": "reason",
           "settings": {
             "number": "3",
-            "title": "It’s not a one-time problem. Every wash and every round of sterilization makes it worse.",
-            "body": "<p>The same study found that the problem builds with every use. Heat and friction are what cause polypropylene to break down, and both are part of nearly every feeding routine: hot water, sterilizing, shaking, and scrubbing. Each cycle can wear down the bottle’s surface and release even more particles. When the water temperature increased from the recommended 158°F to near boiling, particle release rose from roughly 6 million to 55 million per liter. In other words, the bottle you sterilize to make safer may be shedding more plastic because of the very process meant to keep it clean.</p>"
+            "title": "\"BPA-free\" was never a plastic-free promise",
+            "body": "<p>\"BPA-free\" means exactly one thing: the bottle doesn't contain Bisphenol A. It says nothing about whether the plastic sheds particles when heated.</p><p>In 2024, parents filed class-action lawsuits against several major baby bottle makers — including the companies behind Philips Avent, Dr. Brown's, Nuk, and Tommee Tippee — alleging they never warned customers that heating their \"BPA-free\" polypropylene bottles could release microplastics. Courts have allowed some of these failure-to-warn claims to proceed. The label was never the full picture.</p>"
           }
         },
         "cta-3": {
           "type": "cta",
           "settings": {
-            "label": "See How Hosfu Solves the Problem",
-            "link": "https://mokababy.co/"
+            "label": "See How Hosfu Is Different →",
+            "link": "shopify://products/hosfu-glass-baby-bottle"
           }
         },
         "image-4": {
@@ -79,8 +79,8 @@
           "type": "reason",
           "settings": {
             "number": "4",
-            "title": "\"BPA-free\" was never the same as plastic-free.",
-            "body": "<p>The baby bottle industry has relied heavily on the phrase “BPA-free” because it sounds reassuring—but it only tells part of the story. The label simply means the bottle does not contain Bisphenol A, one specific chemical. It does not mean the plastic cannot break down or release microscopic particles when exposed to heat. A 2025 federal court ruling reinforced that distinction, finding that “BPA-free” only guarantees the absence of BPA, not the absence of microplastics. Parents were given a comforting label while the underlying plastic material remained largely unchanged.</p>"
+            "title": "Even \"glass\" bottles usually aren't fully glass",
+            "body": "<p>A bottle marketed as \"glass\" sounds like the obvious fix — until you look at what actually touches the milk. On many popular glass bottles, the collar, internal vent, and tubing are still molded from polypropylene. The glass is often just the outer chamber; the parts in the most repeated contact with hot milk frequently aren't glass at all.</p>"
           }
         },
         "image-5": {
@@ -95,8 +95,8 @@
           "type": "reason",
           "settings": {
             "number": "5",
-            "title": "Even most “glass” bottles still let polypropylene touch your baby’s milk.",
-            "body": "<p>Switching to glass may seem like the obvious solution—until you examine how many popular bottles are actually built. Brands such as Dr. Brown’s, Philips Avent, and Comotomo may use a genuine glass body, while collars, vents, and other parts exposed to warm milk are still often made from polypropylene—the same plastic examined in the study. Lawsuits filed in 2024 have accused several major brands, including Philips Avent and Dr. Brown’s, of failing to warn parents about microplastic release when polypropylene bottles are heated. Nuk and Tommee Tippee have faced similar allegations. A bottle labeled “glass” can still place plastic exactly where it matters most.</p>"
+            "title": "What we built Hosfu's milk path out of instead",
+            "body": "<p>Hosfu's milk-contact surfaces are <strong>borosilicate glass</strong> and <strong>medical-grade silicone</strong> — nothing else touches your baby's milk. The bottle's structural collar uses <strong>PPSU</strong>, a high-performance plastic chosen specifically because it holds up to repeated sterilization without degrading the way polypropylene does. Every batch is independently lab-tested.</p>"
           }
         },
         "image-6": {
@@ -111,86 +111,31 @@
           "type": "reason",
           "settings": {
             "number": "6",
-            "title": "Hosfu was engineered in Netherlands to fix exactly this",
-            "body": "<p>Hosfu is a Dutch-engineered bottle built around the question major brands overlooked: what if nothing touching your baby’s milk had to be a compromise? Rather than modifying an old plastic design, its engineers and designers developed the bottle from the ground up with infant safety in mind.<strong> Every material was selected to withstand heat, sterilization, and daily use without shedding into the feed.</strong> A safer switch, without the guesswork.</p>"
-          }
-        },
-        "cta-6": {
-          "type": "cta",
-          "settings": {
-            "label": "See How Hosfu Solves the Problem",
-            "link": "https://mokababy.co/"
-          }
-        },
-        "image-7": {
-          "type": "image",
-          "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_10_2026_09_42_24_AM_800x800.png?v=1783651354",
-            "alt": "Warm milk being poured into the Moka glass bottle",
-            "caption": "Warm milk being poured into the Moka glass bottle beside its silicone nipple"
-          }
-        },
-        "reason-7": {
-          "type": "reason",
-          "settings": {
-            "number": "7",
-            "title": "Only borosilicate glass and medical-grade silicone touch the milk—never polypropylene.",
-            "body": "<p>That is the difference. Hosfu’s milk-contact surfaces are made from <strong>borosilicate glass </strong>and <strong>medical-grade silicone</strong>—materials chosen for their stability under heat. The bottle’s rigid structural components use PPSU, a high-performance material designed to withstand repeated sterilization without degrading like ordinary polypropylene. Every batch is independently lab-tested and verified, so you know exactly what is touching your baby’s milk. You are paying for safer, more durable materials that cheaper bottles often leave out.</p>"
-          }
-        },
-        "image-8": {
-          "type": "image",
-          "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_34_54_13_thg_7_2026_800x800.png?v=1783935314",
-            "alt": "Baby feeding and Moka vent system placeholder",
-            "caption": "Close-up of the Moka bottom vent and airflow direction"
-          }
-        },
-        "reason-8": {
-          "type": "reason",
-          "settings": {
-            "number": "8",
-            "title": "Built for the way babies feed—not just for safety.",
-            "body": "<p>A safe bottle means little if your baby won’t drink from it, which is why Hosfu<strong>’s team</strong> focused on more than just materials. They developed a <strong>bottom-vent anti-colic system</strong> designed to reduce <strong>air entering the milk</strong>, while helping keep the feed away from heated rigid components. The <strong>soft silicone nipple</strong> is shaped to encourage a <strong>deeper, more natural latch</strong>, with <strong>age-appropriate flow rates</strong> to match each stage of feeding. Backed by careful <strong>research and product development</strong>, many babies adapt within <strong>a few days to one week</strong>, avoiding the exhausting cycle of trying bottle after bottle.</p>"
-          }
-        },
-        "image-9": {
-          "type": "image",
-          "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_10_2026_09_59_54_AM_800x800.png?v=1783652414",
-            "alt": "Moka bottle presented in its retail packaging",
-            "caption": "Moka bottle presented in its complete retail packaging"
-          }
-        },
-        "reason-9": {
-          "type": "reason",
-          "settings": {
-            "number": "9",
-            "title": "The honest truth: it isn't the cheapest option.",
-            "body": "<p>We won’t pretend otherwise: <strong>Hosfu is a premium bottle</strong>, and its price reflects that. <strong>Borosilicate glass, medical-grade silicone, and PPSU</strong> cost more than ordinary polypropylene, while ongoing <strong>third-party testing and product development</strong> add to that investment. The difference is durability: the materials were designed and tested in Switzerland to last up to <strong>five times longer than conventional bottles</strong> without the same risk of microplastic shedding. As parents, we believe knowing exactly what touches your baby’s milk brings real peace of mind. Whether that added reassurance is worth it is ultimately your decision.</p>"
-          }
-        },
-        "cta-9": {
-          "type": "cta",
-          "settings": {
-            "label": "Check Current Stock & Pricing",
-            "link": "shopify://products/hosfu-glass-baby-bottle"
+            "title": "Built for the actual feed, not just the safety label",
+            "body": "<p>A safer bottle doesn't help if your baby won't feed well from it. Hosfu uses a <strong>bottom-vent anti-colic system</strong> designed to reduce the air your baby swallows during a feed, paired with a <strong>soft silicone nipple</strong> shaped for a deeper, more natural latch and <strong>age-appropriate flow rates</strong>. Most babies adjust within a few days to a week.</p>"
           }
         },
         "image-10": {
           "type": "image",
           "settings": {
             "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_39_10_13_thg_7_2026_800x800.png?v=1783935562",
-            "alt": "Parent holding a settled baby beside a clean Moka setup",
-            "caption": "Parent holding a settled baby beside a clean four-piece Moka setup"
+            "alt": "Parent holding a settled baby beside a clean setup",
+            "caption": "Parent holding a settled baby beside a clean four-piece setup"
           }
         },
         "reason-10": {
           "type": "reason",
           "settings": {
-            "number": "10",
+            "number": "7",
             "title": "More than 3,000 parents have already made the switch.",
             "body": "<p>It began with parents near the Dutch lab—people who studied the research, questioned conventional bottles, and wanted a safer alternative. As more families shared their experience, the word spread. Today, <strong>more than 4,000 parents have left positive reviews</strong>, while many others have embraced <strong>Hosfu’s safer-feeding philosophy</strong>. They can feed their babies with greater peace of mind, knowing the bottle is no longer another source of worry. Every Hosfu bottle also comes with a <strong>90-day money-back guarantee</strong>. Use it, wash it, and sterilize it at home. If it doesn’t feel like one of the simplest upgrades you’ve made for your baby, return it for a <strong>full refund</strong>.</p>"
+          }
+        },
+        "cta-6": {
+          "type": "cta",
+          "settings": {
+            "label": "See How Hosfu Solves the Problem",
+            "link": "shopify://products/hosfu-glass-baby-bottle"
           }
         },
         "offer": {
@@ -216,27 +161,20 @@
         "reason-5",
         "image-6",
         "reason-6",
-        "cta-6",
-        "image-7",
-        "reason-7",
-        "image-8",
-        "reason-8",
-        "image-9",
-        "reason-9",
-        "cta-9",
         "image-10",
         "reason-10",
+        "cta-6",
         "offer"
       ],
       "settings": {
         "brand_logo": "https://kswzw0-4e.myshopify.com/cdn/shop/files/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo__4_-removebg-preview_37f996dc-8e6f-4296-a546-82ca458c6b13.png?v=1780400984&width=500",
-        "brand_link": "https://mokababy.co/",
+        "brand_link": "shopify://products/hosfu-glass-baby-bottle",
         "eyebrow": "",
-        "heading": "10 Reasons Parents Are Switching From \"BPA-Free\" Plastic Baby Bottles to Swiss-Engineered Glass",
-        "dek": "A 2020 study published in <em>Nature Food</em> found that a single polypropylene baby bottle could release as many as 16 million microplastic particles into one liter of warm formula—yet most parents have never heard about it. Here’s what the research reveals, why “BPA-free” plastics and even traditional glass bottles may not completely eliminate the concern, and why more than 4,000 parents have made the switch to this Swiss-designed bottle.",
-        "byline_photo": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-author-adrian-keller.jpg?v=163473772750822948491783477671",
+        "heading": "7 Reasons Parents Are Quietly Switching From \"BPA-Free\" Plastic Bottles This Year",
+        "dek": "About 82% of baby bottles sold worldwide are made from polypropylene. A 2020 study published in <em>Nature Food</em> found that when these bottles are prepared exactly the way the WHO recommends — hot water, sterilizing, shaking — they can release up to 16 million microplastic particles per liter. Here's what that research found, why \"BPA-free\" doesn't mean what most parents assume, and why some parents are switching bottles entirely.",
+        "byline_photo": "",
         "byline_html": "<strong>Dr. Adrian Keller, PhD</strong><br>Swiss infant-feeding materials researcher · Reviewed July 10, 2026",
-        "cta_link": "https://mokababy.co/"
+        "cta_link": "shopify://products/hosfu-glass-baby-bottle"
       }
     }
   },
