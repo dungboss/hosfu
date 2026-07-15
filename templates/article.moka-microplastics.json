@@ -128,14 +128,7 @@
           "settings": {
             "number": "7",
             "title": "More than 3,000 parents have already made the switch.",
-            "body": "<p>It began with parents near the Dutch lab—people who studied the research, questioned conventional bottles, and wanted a safer alternative. As more families shared their experience, the word spread. Today, <strong>more than 4,000 parents have left positive reviews</strong>, while many others have embraced <strong>Hosfu’s safer-feeding philosophy</strong>. They can feed their babies with greater peace of mind, knowing the bottle is no longer another source of worry. Every Hosfu bottle also comes with a <strong>90-day money-back guarantee</strong>. Use it, wash it, and sterilize it at home. If it doesn’t feel like one of the simplest upgrades you’ve made for your baby, return it for a <strong>full refund</strong>.</p>"
-          }
-        },
-        "cta-6": {
-          "type": "cta",
-          "settings": {
-            "label": "See How Hosfu Solves the Problem",
-            "link": "shopify://products/hosfu-glass-baby-bottle"
+            "body": "<p>It began with parents near the Dutch lab—people who studied the research, questioned conventional bottles, and wanted a safer alternative. As more families shared their experience, the word spread. Today, <strong>more than 3,000 parents have left positive reviews</strong>, while many others have embraced <strong>Hosfu’s safer-feeding philosophy</strong>. They can feed their babies with greater peace of mind, knowing the bottle is no longer another source of worry. Every Hosfu bottle also comes with a <strong>90-day money-back guarantee</strong>. Use it, wash it, and sterilize it at home. If it doesn’t feel like one of the simplest upgrades you’ve made for your baby, return it for a <strong>full refund</strong>.</p>"
           }
         },
         "offer": {
@@ -163,7 +156,6 @@
         "reason-6",
         "image-10",
         "reason-10",
-        "cta-6",
         "offer"
       ],
       "settings": {
