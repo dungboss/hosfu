@@ -12,26 +12,26 @@
     "main": {
       "type": "moka-feeding-mistakes",
       "blocks": {
-        "image-1": {
+        "image_jwTfjN": {
           "type": "image",
           "settings": {
-            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-foaming-latch.png?v=111290166737290194981783477675",
-            "alt": "Baby losing milk and foam at the mouth during bottle feeding",
-            "caption": "Baby losing milk and foam at the mouth during bottle feeding"
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_17_2026_03_02_29_PM_800x800.png?v=1784275361",
+            "alt": "",
+            "caption": ""
           }
         },
         "reason-1": {
           "type": "reason",
           "settings": {
             "number": "1",
-            "title": "Why Breastfed Babies Often Struggle With Bottles",
-            "body": "<p>A mother’s breast is constantly changing. It <strong>softens, compresses, and adapts</strong> to your baby’s mouth throughout every feeding.</p><p>A standard bottle nipple can’t do that.</p><p>It keeps the same <strong>shape, angle, and flow</strong>, no matter how your baby sucks, pauses, or changes pressure.</p><p>When a nipple is <strong>too long, too firm, or doesn’t fit comfortably</strong>, your baby has to work around the bottle instead of feeding naturally.</p><p>That’s when problems start. <strong>The latch slips. Milk leaks from the corners of the mouth.</strong> A baby who was ready to eat suddenly seems frustrated by the bottle itself.</p>"
+            "title": "The leaking isn't something you're doing wrong",
+            "body": "<p>Most anti-colic bottles work fine for the first few weeks. Then, without warning, milk starts finding its way out around the collar. You tighten it, loosen it, reseat the vent — it holds for a feed or two, then leaks again.</p><p>That's not an assembly problem. When a bottle depends on several plastic parts fitting together with precision, it only takes one part changing shape slightly for the whole seal to fail. Every trip through boiling water or a steriliser softens plastic just enough that it stops springing back to its original shape — so the \"sweet spot\" you're chasing keeps moving, feed after feed.</p>"
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_13_2026_03_51_20_PM_800x800.png?v=1783932697",
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/4d072213-e292-4556-9702-7d3d974b0082_800x800.png?v=1784275038",
             "alt": "Table of popular baby bottle brands used in trial and error",
             "caption": "Table of popular baby bottle brands used in trial and error"
           }
@@ -40,47 +40,40 @@
           "type": "reason",
           "settings": {
             "number": "2",
-            "title": "Why Even the \"Best\" Anti-Colic Bottles Don't Always Work",
-            "body": "<p>For years, the bottle industry treated <strong>air bubbles as the main problem</strong>.</p><p>That led to more vents, tubes, valves, and flow-control parts—anything that made a bottle appear more “anti-colic.”</p><p>But most of those designs come from an older idea: improve milk flow, reduce trapped air, and prevent leaks.</p><p>Helpful, but not the full picture.</p><p>For many breastfed babies, the struggle begins <strong>before air ever reaches the stomach</strong>. It starts with <strong>how the nipple fits and sits inside the mouth</strong>.</p><p>That’s why parents can buy a highly rated anti-colic bottle and still feel something is wrong.</p><p>The bottle may be designed to solve <strong>air and bubbles</strong>, while the baby is actually struggling with <strong>latch and nipple shape</strong>.</p>"
-          }
-        },
-        "cta-1": {
-          "type": "cta",
-          "settings": {
-            "label": "See How Hosfu Supports Latch",
-            "link": "shopify://products/hosfu-glass-baby-bottle"
+            "title": "What \"BPA-free\" doesn't tell you",
+            "body": "<p>\"BPA-free\" only means one specific chemical was removed. It says nothing about whether the plastic itself sheds particles during normal use — that's a separate issue entirely.</p><p>A peer-reviewed 2020 study in <em>Nature Food</em>, from a team at Trinity College Dublin, tested polypropylene infant bottles using standard sterilizing and formula-prep guidelines. It found releases as high as 16.2 million microplastic particles per litre under normal conditions, climbing to 55 million per litre as the water got closer to boiling. In plain terms: heat is what causes plastic to shed — and sterilizing is the exact step meant to keep a bottle safe.</p><p>Source: Li et al., \"Microplastic release from the degradation of polypropylene feeding bottles during infant formula preparation,\" <em>Nature Food</em>, 2020.</p>"
           }
         },
         "image-3": {
           "type": "image",
           "settings": {
-            "image": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-lab-testing-4x3.jpg?v=37321869051312854511783477676",
-            "alt": "Two researchers testing Moka bottle shape and nipple measurements",
-            "caption": "Two researchers testing Moka bottle shape and nipple measurements"
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/5886f11e-42c5-4a4d-8ab9-d4c619785c07_800x800.png?v=1784275037",
+            "alt": "",
+            "caption": ""
           }
         },
         "reason-3": {
           "type": "reason",
           "settings": {
             "number": "3",
-            "title": "The One Bottle Nipple Feature Most Parents Never Think About",
-            "body": "<p>Hosfu wasn’t created by simply adding <strong>another vent to a traditional bottle design</strong>.</p><p>Its team tested dozens of <strong>nipple shapes, widths, angles, and flow rates</strong> to find the combination that helped babies maintain a more stable latch—not just the one that looked most like a breast in product photos.</p><p>The final nipple uses <strong>platinum-cured silicone</strong>, a <strong>wider base</strong>, and a <strong>15-degree natural feeding angle</strong> to sit more comfortably in the way a baby’s mouth naturally meets the breast.</p><p>That angle makes a real difference.</p><p>Instead of a long, straight nipple pressing awkwardly into the mouth, Moka helps babies <strong>draw the nipple in, seal around the base, and stay in rhythm</strong> without repeatedly slipping off.</p><p>Its <strong>five flow stages</strong> are designed to support that latch rather than work against it.</p><p>Babies get a feeding pace suited to their stage, while the nipple shape helps them <strong>latch more deeply and feed more naturally</strong>.</p>"
+            "title": "Most \"anti-colic\" systems are the same old design in a new box",
+            "body": "<p>Many well-known anti-colic bottles still rely on the same basic idea: a plastic tube running down the middle to vent swallowed air. It's a real fix for a real problem, but it means more individual parts to sterilise, more joints that have to stay perfectly seated, and more surface area for a leak to start.</p><p>It also means more total plastic in repeated contact with hot milk and hot water — the exact condition that accelerates particle release. And even bottles marketed as \"glass\" often only swap the chamber. The tube, valve, collar and nipple — the parts closest to hot milk and most likely to warp — are frequently still ordinary polypropylene underneath.</p>"
           }
         },
         "image-4": {
           "type": "image",
           "settings": {
-            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_13_2026_03_56_31_PM_800x800.png?v=1783933014",
-            "alt": "Milk touching the glass Moka bottle and feeding components",
-            "caption": "Milk touching the glass Moka bottle and feeding components"
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_Jul_13_2026_03_51_20_PM_800x800.png?v=1783932697",
+            "alt": "",
+            "caption": ""
           }
         },
         "reason-4": {
           "type": "reason",
           "settings": {
             "number": "4",
-            "title": "Where \"premium quality\" actually matters",
-            "body": "<p>Moka is a <strong>premium, limited-run bottle</strong>—not another “anti-colic” option relying on clever marketing.</p><p>Where milk makes contact, Moka uses <strong>borosilicate glass, heat-resistant PPSU, and platinum-cured silicone</strong> instead of low-cost plastic that becomes harder to trust after repeated sterilization.</p><p>That matters because baby bottles go through a lot.</p><p>They are <strong>boiled, steamed, washed, dropped, reheated, packed, and handled half-asleep at 3 a.m.</strong></p><p>Cheaper materials often show the strain. They can <strong>warp, scratch, turn cloudy, absorb odors, and begin to leak</strong> before eventually being pushed to the back of the cupboard.</p><p>Hosfu was designed for <strong>real daily use</strong>, not simply to look good on a store shelf.</p>"
+            "title": "Why Hosfu didn't just swap the chamber",
+            "body": "<p>Hosfu was designed around the whole feeding path, not just the bottle body. Milk sits in high-borosilicate glass and flows through a soft, breast-shaped nipple angled at 15° for a more natural latch — the only two surfaces milk ever touches. The collar and other components are BPA-free PPSU, chosen because it holds its shape through repeated sterilising instead of gradually softening the way standard polypropylene does. Every material is lead-free tested.</p><p>Instead of a tube running through the milk, air returns through a vent built into the base — no straw to mis-seat, no tiny brush needed, no reservoir piece to lose. Fewer parts means fewer joints that can drift out of alignment over time. Hosfu also fits standard bottle warmers and comes with five nipple flow options, so it grows with your baby instead of needing to be replaced.</p>"
           }
         },
         "cta-2": {
@@ -102,8 +95,23 @@
           "type": "reason",
           "settings": {
             "number": "5",
-            "title": "How thousands of babies learnt to stay on the bottle",
+            "title": "What parents notice after switching",
             "body": "<p>It began with parents near the original Dutch lab, who were given <strong>early access to the first prototypes</strong>.</p><p>Then the same feedback kept appearing.</p><p>Babies who had previously <strong>gagged on long nipples, clicked during feeds, arched away, or pulled off halfway through</strong> were finally staying latched long enough to finish—often within just a few days.</p><p>For mothers trying to protect breastfeeding, that difference matters.</p><p><strong>Less stopping. Less repositioning. Less milk running down the chin</strong> while wondering whether the bottle itself is making feeding harder.</p><p>Moka offered a clearer solution.</p><p>Not another vague <strong>“anti-colic” promise</strong>, but a bottle designed around the <strong>real latch problems parents were already seeing</strong>.</p><p>For <strong>more than 3,618 mothers and counting</strong>, Hosfu became the point where feeding stopped feeling like weeks of trial and error—and finally became something their baby could settle into.</p>"
+          }
+        },
+        "cta-1": {
+          "type": "cta",
+          "settings": {
+            "label": "See How Hosfu Supports Latch",
+            "link": "shopify://products/hosfu-glass-baby-bottle"
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/0979/5082/6776/files/ChatGPT_Image_16_39_10_13_thg_7_2026_800x800.png?v=1783935562",
+            "alt": "",
+            "caption": ""
           }
         },
         "offer": {
@@ -116,11 +124,10 @@
         }
       },
       "block_order": [
-        "image-1",
+        "image_jwTfjN",
         "reason-1",
         "image-2",
         "reason-2",
-        "cta-1",
         "image-3",
         "reason-3",
         "image-4",
@@ -128,15 +135,18 @@
         "cta-2",
         "image-5",
         "reason-5",
+        "cta-1",
+        "image-1",
         "offer"
       ],
+      "name": "5 Reasons Parents Are Ditching Leaky Plastic Bottles for Hosfu",
       "settings": {
-        "brand_logo": "https://mokababy.co/cdn/shop/t/12/assets/moka-the-review-logo.png?v=133045393715241146831783477692",
-        "brand_link": "/?from=moka_latch",
-        "heading": "",
-        "byline_photo": "https://mokababy.co/cdn/shop/t/12/assets/moka-listicle-author-adrian-keller.jpg?v=163473772750822948491783477671",
-        "byline_html": "<strong>Dr. Adrian Keller, PhD</strong><br>Swiss infant-feeding researcher · Reviewed July 10, 2026",
-        "cta_link": "/?from=moka_latch"
+        "brand_logo": "",
+        "brand_link": "shopify://products/hosfu-glass-baby-bottle",
+        "heading": "5 Reasons Parents Are Ditching Leaky Plastic Bottles for Hosfu",
+        "byline_photo": "",
+        "byline_html": "<strong>Hosfu Research Team</strong><br>Infant-feeding researcher · Reviewed July 10, 2026",
+        "cta_link": "shopify://products/hosfu-glass-baby-bottle"
       }
     }
   },
